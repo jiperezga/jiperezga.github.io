@@ -1,4 +1,4 @@
-.post-content h1:before,.post-content h2:before,.post-content h3:before,.post-content h4:before,.post-content h5:before,.tag-title:before{display:block;content:" ";margin-top:-60px;height:75px;visibility:hidden}
+﻿.post-content h1:before,.post-content h2:before,.post-content h3:before,.post-content h4:before,.post-content h5:before,.tag-title:before{display:block;content:" ";margin-top:-60px;height:75px;visibility:hidden}
 
 .post{position:relative;top:14.25rem;background:#002240}
 
@@ -66,7 +66,7 @@
 
 figure{margin:1em 380px}
 
-.highlight{margin-right:570px;  margin-left: 190px;}
+.highlight{margin-left: auto; margin-right: auto; width: 80%}
 .highlight pre{background-color:#000000}
 @media only screen and (min-width:37.5rem){.highlight{word-wrap:break-word}}
 .highlight .hll{background-color:#333}
