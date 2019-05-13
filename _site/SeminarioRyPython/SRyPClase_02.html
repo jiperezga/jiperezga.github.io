@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/BlogPosting" class="post-practica">
+    <head>
+    <meta charset=utf-8>
+    <meta name=viewport content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel=icon href=/assets/images/favicons/logo.png>
+    <meta name=Description content="Cursos de estadística y programación">
+    <meta name=keywords content="R, R project, Python, Programación, Series de Tiempo, Muestreo">
+    <meta property=og:title content="Jorge Iván Pérez Blog">
+    <meta property=og:url content="/">
+    <meta property=og:site_name content="Jorge Iván Pérez Blog">
+    <meta property=og:type content=website>
+    <meta property=og:description content="Cursos de estadística y programación">
+    <meta property=og:author content="Jorge Iván Pére">
+    <meta property=og:image content=/assets/images/SeminarioRyPython.jpg>
+    <meta property=fb:app_id content=222225015360700>
+    <title>Jorge Iván Pérez | Blog</title>
+    <link rel=stylesheet href=/assets/css/bootstrap.min.css integrity=sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T crossorigin=anonymous>
+    <link rel=stylesheet href=https://use.fontawesome.com/releases/v5.6.3/css/all.css integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin=anonymous>
+    <link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel=stylesheet>
+    <link href=/assets/css/screen.css rel=stylesheet>
+    <link href=/assets/css/main.css rel=stylesheet>
+    <link href=/assets/css/cajitas.css rel=stylesheet>
+    <link href=/assets/css/post.css rel=stylesheet>
+
+    <link rel="canonical" href="http://localhost:4000/SeminarioRyPython/SRyPClase_02.html">
+    <link rel="alternate" type="application/rss+xml" title="Página principal" href="http://localhost:4000/feed.xml" />
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/assets/img/icons/favicon.ico" type="image/x-icon" />
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="/assets/img/icons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/icons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/icons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/icons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/icons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/icons/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/icons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/icons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/icons/apple-touch-icon-152x152.png" />
+    <!-- Windows 8 Tile Icons -->
+    <meta name="application-name" content="jiperezga Blog">
+    <meta name="msapplication-TileColor" content="#0562DC">
+    <meta name="msapplication-square70x70logo" content="smalltile.png" />
+    <meta name="msapplication-square150x150logo" content="mediumtile.png" />
+    <meta name="msapplication-wide310x150logo" content="widetile.png" />
+    <meta name="msapplication-square310x310logo" content="largetile.png" />
+    <!-- Android Lolipop Theme Color -->
+    <meta name="theme-color" content="">
+
+</head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-cobalt fixed-top mediumnavigation nav-down">
+      <div class="container pr-0">
+        <a class=navbar-brand>
+          <img src=/assets/images/logo.png alt="Jorge Iván Pérez Blog"> Jorge Iván Pérez Blog
+        </a>
+        <button class=navbar-toggler type=button data-toggle=collapse data-target=#navbarMediumish aria-controls=navbarMediumish aria-expanded=false aria-label="Toggle navigation">
+          <span class=navbar-toggler-icon></span>
+          </button>
+          <div class="collapse navbar-collapse" id=navbarMediumish>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class=nav-link href=/index.html>
+                  <i class="fas fa-home"></i>&nbsp;&nbsp;Página principal
+                </a>
+              </li>
+              <li class=nav-item>
+                <a class=nav-link href="javascript:history.back()">
+                  <i class="fas fa-laptop-code"></i>&nbsp;&nbsp;Página curso
+                </a>
+              </li>
+              <li class=nav-item>
+                <a class=nav-link href=/paginadeinteres.html>
+                  <i class="far fa-file-alt"></i>&nbsp;&nbsp;Páginas de interés
+                </a>
+              </li>
+              </li>
+              <li class=nav-item>
+                <a class=nav-link href=/acercade>
+                  <i class="fas fa-user"></i>&nbsp;&nbsp;Acerca de
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href=# id=navbarDropdown role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+                  <i class="far fa-address-card"></i>&nbsp;&nbsp;Contacto
+                </a>
+                <div class=dropdown-menu aria-labelledby=navbarDropdown>
+                  <a target=_blank class=nav-link href=mailto:jivan.perez@udea.edu.co>
+                    <i class="fas fa-envelope"></i>&nbsp;&nbsp;Correo
+                  </a>
+                  <div class=dropdown-divider></div>
+                  <a target=_blank class=nav-link href="https://github.com/jiperezga/">
+                    <i class="fab fa-github"></i>&nbsp;&nbsp;GitHub
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+      </div>
+    </nav>
+
+<header class="header-post" role="banner">
+     <div class="content">
+        <h1 class="post-title" itemprop="name">Practica 01</h1>
+        <p itemprop="description" class="subtitle"></p>
+    </div>
+</header>
+        
+        <section class="post">
+            
+
+            <article role="article" id="post" class="post-content" itemprop="articleBody">
+                <h2 id="introdução">Introdução</h2>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">IC.wc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">conf.level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.95</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="n">p</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">x</span><span class="o">/</span><span class="n">n</span><span class="w">
+    </span><span class="n">q</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">p</span><span class="w">
+    </span><span class="n">alpha</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">conf.level</span><span class="w">
+    </span><span class="n">z</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">qnorm</span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">alpha</span><span class="o">/</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">lower.tail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span><span class="w">
+    </span><span class="n">const1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nf">sqrt</span><span class="p">(</span><span class="n">z</span><span class="o">^</span><span class="m">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">1</span><span class="o">/</span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="p">))</span><span class="w">
+    </span><span class="n">const2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nf">sqrt</span><span class="p">(</span><span class="n">z</span><span class="o">^</span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">1</span><span class="o">/</span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">1</span><span class="p">))</span><span class="w">
+    </span><span class="n">L</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">z</span><span class="o">^</span><span class="m">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">const1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">z</span><span class="o">^</span><span class="m">2</span><span class="p">))</span><span class="w">
+    </span><span class="n">U</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">z</span><span class="o">^</span><span class="m">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">const2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">z</span><span class="o">^</span><span class="m">2</span><span class="p">))</span><span class="w">
+    </span><span class="nf">c</span><span class="p">(</span><span class="n">L</span><span class="p">,</span><span class="w"> </span><span class="n">U</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span><span class="n">rbind</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     [,1]
+[1,]    2
+[2,]    3
+</code></pre></div></div>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cbind</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     [,1] [,2]
+[1,]    1    2
+</code></pre></div></div>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">IC.wc</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">35</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">50</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1] 0.5521660 0.8171438
+</code></pre></div></div>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">prop.test</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">35</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">50</span><span class="p">,</span><span class="w"> </span><span class="n">correct</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="o">$</span><span class="n">conf.int</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1] 0.5521660 0.8171438
+attr(,"conf.level")
+[1] 0.95
+</code></pre></div></div>
+
+<p>BLA BLA BLA BLA</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">## Python code
+</span><span class="nb">sum</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>15
+</code></pre></div></div>
+
+            </article>
+            <footer class=footer>
+        <div class=container>
+          <div class=row>
+            <div class="col-md-6 col-sm-6 text-center text-lg-left" >Copyright © 2019 Jorge Iván Pérez
+            </div>
+          </div>
+        </div>
+      </footer>
+        </section>
+        
+    </body>
+</html>

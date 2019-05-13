@@ -1,0 +1,62 @@
+---
+layout: post
+title: "Clase 01"
+main-class: 'clase'
+permalink: /SeminarioRyPython/SRyP:title.html
+tags:
+- prueba1
+- dos
+- :oooo
+introduction: "exto de prueba."
+output:
+  md_document:
+    variant: markdown_strict+backtick_code_blocks+autolink_bare_uris
+    preserve_yaml: TRUE
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding,
+  output_dir = "../../_posts/", output_format = "all"  ) })
+---
+
+```{r knitr_init, echo=FALSE, cache=FALSE}
+library(knitr)
+## Global options
+opts_chunk$set(echo=TRUE,
+               cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE,
+               fig.path = paste0("../../SeminarioRyPython/", Sys.Date()),
+               cache.path = "../../SeminarioRyPython/cache/")
+```
+
+## Introdução
+
+
+```{r}
+set.seed(1823)
+## R code
+x <- rnorm(10, 3, 1)
+e <- rnorm(10, 0, 3)
+y <- 1 + 3 *x + e
+plot(y~x)
+## R code
+sd <- function(x){
+  mean(x)
+}
+
+m = "hola"
+```
+
+BLA BLA BLA BLA
+
+```{python}
+## Python code
+sum([1, 2, 3, 4, 5])
+```
+
+
+
+
+Estou aqui de novo para mais uma **#dicarapida** sobre um assunto que é bastante importante, mas muita gente esquece ou não faz de forma correta, que são as Meta Tags Sociais.

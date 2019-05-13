@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-cobalt fixed-top mediumnavigation nav-down">
+      <div class="container pr-0">
+        <a class=navbar-brand>
+          <img src=/assets/images/logo.png alt="Jorge Iván Pérez Blog"> Jorge Iván Pérez Blog
+        </a>
+        <button class=navbar-toggler type=button data-toggle=collapse data-target=#navbarMediumish aria-controls=navbarMediumish aria-expanded=false aria-label="Toggle navigation">
+          <span class=navbar-toggler-icon></span>
+          </button>
+          <div class="collapse navbar-collapse" id=navbarMediumish>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class=nav-link href=/index.html>
+                  <i class="fas fa-home"></i>&nbsp;&nbsp;Página principal
+                </a>
+              </li>
+              <li class=nav-item>
+                <a class=nav-link href="javascript:history.back()">
+                  <i class="fas fa-laptop-code"></i>&nbsp;&nbsp;Página curso
+                </a>
+              </li>
+              <li class=nav-item>
+                <a class=nav-link href=/paginadeinteres.html>
+                  <i class="far fa-file-alt"></i>&nbsp;&nbsp;Páginas de interés
+                </a>
+              </li>
+              </li>
+              <li class=nav-item>
+                <a class=nav-link href=/acercade>
+                  <i class="fas fa-user"></i>&nbsp;&nbsp;Acerca de
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href=# id=navbarDropdown role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>
+                  <i class="far fa-address-card"></i>&nbsp;&nbsp;Contacto
+                </a>
+                <div class=dropdown-menu aria-labelledby=navbarDropdown>
+                  <a target=_blank class=nav-link href=mailto:jivan.perez@udea.edu.co>
+                    <i class="fas fa-envelope"></i>&nbsp;&nbsp;Correo
+                  </a>
+                  <div class=dropdown-divider></div>
+                  <a target=_blank class=nav-link href="https://github.com/jiperezga/">
+                    <i class="fab fa-github"></i>&nbsp;&nbsp;GitHub
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+      </div>
+    </nav>
+
+<header class="header-post" role="banner">
+     <div class="content">
+        <h1 class="post-title" itemprop="name">{{ page.title }}</h1>
+        <p itemprop="description" class="subtitle">{{ page.description }}</p>
+    </div>
+</header>
