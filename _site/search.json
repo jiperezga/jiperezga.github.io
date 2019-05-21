@@ -2,18 +2,10 @@
   
     {
       "title"    : "Clase 01",
-      "tags"     : "prueba1, dos, and :oooo",
+      "tags"     : "",
       "categories"     : "clase",
-      "url"      : "/SeminarioRyPython/SRyPClase_01.html",
-      "date"     : "13 Jun 2009"
-    } ,
-  
-    {
-      "title"    : "Practica 01",
-      "tags"     : "nofunciona:c, dos, and :oooo",
-      "categories"     : "practica",
-      "url"      : "/SeminarioRyPython/SRyPClase_02.html",
-      "date"     : "12 Jun 2009"
+      "url"      : "/MuestreoySeriesdeTiempo/MySTClase_01.html",
+      "date"     : "30 Jun 2009"
     } 
   
 ]

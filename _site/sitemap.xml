@@ -10,6 +10,22 @@
         </url>
     
         <url>
+            <loc>http://localhost:4000/SeminarioRyPython/SRyP:title.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://localhost:4000/SeminarioRyPython/SRyP:title.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://localhost:4000/MuestreoySeriesdeTiempo/MyST:title.html</loc>
+        </url>
+    
+        <url>
+            <loc>http://localhost:4000/MuestreoySeriesdeTiempo/</loc>
+        </url>
+    
+        <url>
             <loc>http://localhost:4000/SeminarioRyPython/</loc>
         </url>
     
@@ -35,11 +51,7 @@
     
     
         <url>
-            <loc>http://localhost:4000/SeminarioRyPython/SRyPClase_01.html</loc>
-        </url>
-  
-        <url>
-            <loc>http://localhost:4000/SeminarioRyPython/SRyPClase_02.html</loc>
+            <loc>http://localhost:4000/MuestreoySeriesdeTiempo/MySTClase_01.html</loc>
         </url>
   
 </urlset>

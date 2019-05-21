@@ -1,7 +1,7 @@
 .mainheading{padding:1rem 0}
 a{color:#00ab6b;-webkit-transition:all .2s;transition:all .2s}
 a:hover{color:#038252;text-decoration:none}
-pre{-webkit-box-sizing:border-box;box-sizing:border-box;margin:0 0 1.75em;border:1px solid #e3edf3;width:100%;padding:10px;font-family:monospace,sans-serif;font-size:14px;white-space:pre;overflow:auto;background:#f7fafb;border-radius:3px}
+pre{-webkit-box-sizing:border-box;box-sizing:border-box;margin:0 0 1.75em;width:100%;padding:10px;font-family:monospace,sans-serif;font-size:14px;white-space:pre;overflow:auto;border-radius:3px}
 .mediumnavigation{background:hsla(0,0%,100%,.97);-webkit-box-shadow:0 2px 2px -2px rgba(0,0,0,.15);box-shadow:0 2px 2px 1px #FFFFFF;-webkit-transition:top .2s ease-in-out;transition:top .2s ease-in-out}
 .main-content{min-height:300px}
 .site-content{min-height:60vh;padding-top:1.5rem;margin-top:57px;-webkit-transition:all .4s;transition:all .4s}
