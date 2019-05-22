@@ -14,7 +14,6 @@
 
 .post-content p,.post-content li{color: #FFF;text-align:justify}
 
-.post-content p code,.post-content li code{color:#005f97;word-wrap:break-word;}
 
 .post-content a{color:#005f97; font-family:'Open Sans',sans-serif;font-weight:300;font-style:normal;text-decoration:none;transition:all .3s;}
 
@@ -94,3 +93,4 @@ pre{color:#FFFFFF; font-weight:bold}
 .js-plotly-plot{margin: auto;}
 
 tt{font-size:2rem;}
+.MathJax_Display{text-align:center!important}

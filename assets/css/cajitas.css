@@ -21,7 +21,6 @@
 .post-clase .post-content a{color:#ff9d00;}
 .post-clase .post-content a:hover{background-color:#0088FF;color:#fff}
 .post-clase .post-content strong{color:#0088FF}
-.post-clase .post-content p code,.post-clase .post-content li code{color:#0088FF}
 .post-clase .post-content blockquote{border-left:.313rem solid #0088FF}
 .post-clase .header-post,.post-clase .header-site{background-color:#0088FF;}
 .post-clase .header-post h1,.post-clase .header-site h1{text-shadow:3px 3px #005199}
@@ -42,7 +41,6 @@
 .post-practica .post-content a{color:#ff9d00;}
 .post-practica .post-content a:hover{background-color:#b31917;color:#fff}
 .post-practica .post-content strong{color:#b31917}
-.post-practica .post-content p code,.post-practica .post-content li code{color:#b31917}
 .post-practica .post-content blockquote{border-left:.313rem solid #b31917}
 .post-practica .header-post,.post-practica .header-site{background-color:#b31917;}
 .post-practica .header-post h1,.post-practica .header-site h1{text-shadow:3px 3px #8f1412}
@@ -63,7 +61,6 @@
 .post-presentacion .post-content a{color:#ff9d00;}
 .post-presentacion .post-content a:hover{background-color:#808080;color:#fff}
 .post-presentacion .post-content strong{color:#808080}
-.post-presentacion .post-content p code,.post-presentacion .post-content li code{color:#808080}
 .post-presentacion .post-content blockquote{border-left:.313rem solid #808080}
 .post-presentacion .header-post,.post-presentacion .header-site{background-color:#808080;}
 .post-presentacion .header-post h1,.post-presentacion .header-site h1{text-shadow:3px 3px #545454}

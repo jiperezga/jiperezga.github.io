@@ -8,7 +8,7 @@
     </button>
     <div class="collapse navbar-collapse" id=navbarMediumish>
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class=nav-link href=/index.html>
             <i class="fas fa-home"></i>&nbsp;&nbsp;Página principal
           </a>
@@ -69,12 +69,12 @@ code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inher
       },
       styles: { ".MathJax": { color: "#FFFFFF" } }
   });
-  MathJax.Hub.Queue(function() {
-      var all = MathJax.Hub.getAllJax(), i;
-      for(i = 0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-      }
-  });
+  MathJax.Hub.Queue( 
+    ["setRenderer",MathJax.Hub,"HTML-CSS"], 
+    ["Typeset",MathJax.Hub,"id-for-html-css"], 
+    ["setRenderer",MathJax.Hub,"SVG"], 
+    ["Typeset",MathJax.Hub,"id-for-SVG"] 
+  ); 
   </script>
   <script type="text/javascript" src="/assets/js/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   {% include plotly.html %}
