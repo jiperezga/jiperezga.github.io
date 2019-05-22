@@ -28,11 +28,13 @@
 
 @media only screen and (min-width:37.5rem){.post-content h1{font-size:2.813rem}}
 
-.post-content h2{font-size:1.375rem;line-height:2rem;text-shadow:0px 0px 1px #FFFFFF}
+.post-content h2{font-size:1.375rem;line-height:2rem; text-shadow:1px 1px 3px #FFFFFF}
 @media only screen and (min-width:37.5rem){.post-content h2{font-size:2.188rem}}
 
-.post-content h3{font-size:1.125rem;line-height:1.4;}
+.post-content h3{font-size:1.125rem;line-height:1.4; text-shadow:1px 1px 1px #FFFFFF}
 @media only screen and (min-width:37.5rem){.post-content h3{font-size:1.563rem}}
+
+.post-content h4{text-shadow:1px 1px 1px #FFFFFF}
 
 .post-content ul,.post-content ol{padding-left:2.5rem}
 
@@ -57,10 +59,12 @@
 
 .post-content hr:after{clear:both}
 
-.post-content > table{margin:3.125rem auto;}
+.post-content > table{margin:3.125rem auto; color:#FFFFFF}
 @media only screen and (max-width:37.5rem){.post-content > table{display:none}}
 
-.post-content > table th,.post-content > table td{border:.125rem solid #ccc;padding:.313rem}
+.post-content > table th,.post-content > table td{background-color: rgba(59,165,255,.60);border:.125rem solid #ccc;padding:.313rem}
+
+.table-striped tbody tr:nth-of-type(odd){background-color: rgba(84,84,84,.60)}
 
 .post-content td > pre{padding:0;margin:0}.post-content td.gutter.gl{padding-right:1.563rem;line-height:1.5rem}
 
@@ -89,3 +93,4 @@ figure{margin:1em 380px}
 pre{color:#FFFFFF; font-weight:bold}
 .js-plotly-plot{margin: auto;}
 
+tt{font-size:2rem;}

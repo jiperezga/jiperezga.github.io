@@ -60,7 +60,7 @@ layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4))
 ```
 </pre>
 
-el material particulado `$PM_{10}$` y `$PM_{2.5}$` en la ciudad de Medellín (por hora) para los meses de enero-mayo en el año 2019
+o el material particulado `$PM_{10}$` y `$PM_{2.5}$` en la ciudad de Medellín (por hora) para el mes de mayo en el año 2019
 
 <pre>
 ```{r echo=FALSE}
