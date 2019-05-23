@@ -74,7 +74,7 @@ Las medición de un conjunto de observaciones puede realizarse por medio de cuat
 Estas medidas tienen por objetivo buscar valores que muestren el lugar en el cual se encuentra centrado un conjunto de observaciones. Si se define `$x_1, x_2, \ldots, x_n$` como un conjunto de `$n$` observaciones, entonces 
 
 #### Media
-Es el promedio numérico de las `$n$` observaciones. tal que
+Es el promedio numérico de las `$n$` observaciones.
 `\begin{align*}
   \bar{X}=\sum_{i=1}^n\frac{x_i}{n}=\frac{x_1+x_2+\ldots+x_n}{n}
 \end{align*}`
@@ -89,88 +89,29 @@ donde `$x_{\left[j\right]}$` representa a la `$j$`-ésima observación ordenada.
 #### Moda
 Es el valor que ocurre con mayor frecuencia en un conjunto de datos, es decir, el dato que más se repite. Es de anotar que en una muestra puede haber más de una moda.
 
-### Medidas de tendencia localización
+### Medidas de localización
 Estas medidas tienen por objetivo dividir un conjunto de datos ordenado en partes iguales, entendidas estas como intervalos que contienen la misma proporción de observaciones. Si se define `$x_{[1]}, x_{[2]}, \ldots, x_{[n]}$` como un conjunto de `$n$` observaciones ordenadas, entonces 
 
 #### Cuartil
-Son los tres valores que dividen a un conjunto de datos ordenados en cuatro partes iguales
+Son los tres valores que dividen a un conjunto de datos ordenados en cuatro partes iguales.
 `\begin{align*}
   C_j=x_{\left[\frac{j(n+1)}{4}\right]} \quad \quad j=1,2,3
 \end{align*}`
 
 #### Quintil
-Son los cuatro valores que dividen a un conjunto de datos ordenado en cinco partes iguales
+Son los cuatro valores que dividen a un conjunto de datos ordenado en cinco partes iguales.
 `\begin{align*}
   Q_j=x_{\left[\frac{j(n+1)}{5}\right]} \quad \quad j=1,2,3,4
 \end{align*}`
 
 #### Decil
-Son los nueve valores que dividen a un conjunto de datos ordenado en diez partes iguales
+Son los nueve valores que dividen a un conjunto de datos ordenado en diez partes iguales.
 `\begin{align*}
   D_j=x_{\left[\frac{j(n+1)}{10}\right]} \quad \quad j=1,2,\dots,9
 \end{align*}`
 
 #### Percentil
-Son los noventa y nueve valores que dividen a un conjunto de datos ordenado en cien partes iguales
+Son los noventa y nueve valores que dividen a un conjunto de datos ordenado en cien partes iguales.
 `\begin{align*}
   P_j=x_{\left[\frac{j(n+1)}{100}\right]} \quad \quad j=1,2,\dots,99
 \end{align*}`
-
-### Medidas de variabilidad
-Estas medidas tienen por objetivo determinar la dispersión o variabilidad de un conjunto de datos alrededor de la media o la mediana. Si se define `$x_1, x_2, \ldots, x_n$` como un conjunto de `$n$` observaciones, entonces 
-
-#### Varianza
-Es la distancia media al cuadrado del conjunto de datos respecto a la media
-`\begin{align*}
-  S^2=\frac{1}{n-1}\sum_{i=1}^n{(x_i-\bar{X})^2}
-\end{align*}` <!--el n-1 se conoce como corrección de Bessel, y se realiza para corregir el sesgo del estimador-->
-
-#### Desviación estándar
-Es la raíz cuadrada de la distancia media del conjunto de datos respeto a la media
-`\begin{align*}
-  S=\sqrt{S^2}
-\end{align*}`
-
-#### Rango
-Es la distancia que hay entre el valor máximo y el valor mínimo del conjunto de datos
-`\begin{align*}
-  R = x_{max}-x_{min}
-\end{align*}`
-
-#### Rango intercuartílico
-Es la distancia que hay entre el 50% de datos centrales de un conjunto de datos. Esta medida puede ser tomada como una medida de variabilidad para la mediana.
-`\begin{align*}
-  IQR = Q_3 - Q_1
-\end{align*}`
-
-#### Coeficiente de variación
-Es la desviación estándar como un porcentaje de la media aritmética de un conjunto de datos
-`\begin{align*}
-  CV = \frac{S}{|\bar{X}|}
-\end{align*}`
-
-### Medidas de forma
-Estas medidas tienen por objetivo evidenciar si el conjunto de datos tiene o no una forma simétrica y observar su nivel de concentración.
-
-#### Coeficiente de asimetría
-Este valor permite identificar si el conjunto de datos se distribuye uniformemente alrededor de las medidas de tendencia central. 
-`\begin{align*}
-  \gamma_1 = \frac{1}{n}\frac{\sum_{i=1}^n{(x_i-\bar{X})^3}}{S^3} \quad \quad -\infty<\gamma_1<\infty
-\end{align*}`
-El signo de `$\gamma_1$` indica la dirección de la asimetría.
-
-* `$\gamma_1>0$` indica asimetría positiva, es decir, las observaciones se reúnen más en la parte izquierda de las medidas de tendencia central.
-* `$\gamma_1<0$` indica asimetría negativa, es decir, las observaciones se reúnen más en la parte derecha de las medidas de tendencia central.
-* `$\gamma_1\sim0$` indica simetría, es decir, existe aproximadamente la misma cantidad de observaciones a los dos lados de las medidas de tendencia central.
-
-#### Coeficiente de curtosis
-Este valor permite observar el grado de concentración del conjunto de datos
-`\begin{align*}
-  \gamma_2 = \frac{1}{n}\frac{\sum_{i=1}^n{(x_i-\bar{X})^4}}{S^4}-3 \quad \quad -2<\gamma_2<\infty
-\end{align*}`
-
-El signo de `$\gamma_2$` indica el nivel de concentración.
-
-* `$\gamma_2>0$` indica leptocurtosis, es decir, la forma de los datos es más en punta y posee colas menos anchas.
-* `$\gamma_2<0$` indica platicurtosis, es decir, la forma de los datos es más plana y posee colas más anchas.
-* `$\gamma_2\sim0$` indica mesocurtosis, es decir, tanto la punta como las colas son similares a la distribución normal.

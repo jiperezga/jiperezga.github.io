@@ -1,0 +1,153 @@
+---
+layout: post
+title: "Clase 01"
+main-class: 'clase'
+permalink: /MuestreoySeriesdeTiempo/MyST:title.html
+tags:
+
+introduction: |
+  Tipos de métodos de pronóstico <br/>
+  Factores a tener en cuenta en la selección de métodos de pronósticos <br/>
+  Componentes de una serie de tiempo <br/>
+  Funciones de pérdida<br/>
+header-includes:
+   - \usepackage{amsmath,amssymb,amsthm,amsfonts}
+   - \usepackage[sectionbib]{natbib}
+   - \usepackage[hidelinks]{hyperref}
+output:
+  md_document:
+    variant: markdown_strict+backtick_code_blocks+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash
+    preserve_yaml: TRUE
+always_allow_html: yes   
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding,
+  output_dir = "../../MuestreoySeriesdeTiempo/_posts/", output_format = "all"  ) })
+bibliography: "../../referencias.bib"
+csl: "../../apa.csl"
+link-citations: yes
+---
+
+```{r knitr_init, echo=FALSE, cache=FALSE}
+library(knitr)
+## Global options
+opts_chunk$set(echo=TRUE,
+               cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE,
+               fig.path = paste0("../../MuestreoySeriesdeTiempo/images/", "Clase01"),
+               cache.path = "../../MuestreoySeriesdeTiempo/cache/")
+```
+
+
+## Introducción
+
+Una serie de tiempo es una secuencia de observaciones registradas y ordenadas de forma periódica, en intervalos de tiempo igualmente espaciados, tales como, días, meses, semestres, años, entre otros. Estas observaciones son caracterizadas por una variable aleatoria `$Y_t$`, la cual depende del tiempo `$t=1,2,\ldots,N$`, y donde el objetivo es modelar el comportamiento de `$Y_t$` contra `$t$`, siendo `$N$`el número total de observaciones que se tenga en la serie de tiempo.
+
+Un ejemplo de ésto, se presenta a continuación donde se muestra el `$PIB$` per capita de Colombia (% anual), para un intervalo de tiempo anual que va desde 1961 hasta 2017
+
+<pre>
+```{r echo=FALSE}
+library(plotly)
+library(htmltools)
+library(tidyverse)
+# https://datos.bancomundial.org/indicador/NY.GDP.PCAP.KD.ZG
+PIBcol <- ts(c(1.983183392, 2.292595551, 0.231792643, 3.033555246, 0.557370132, 2.156500316, 1.110445303, 2.924696885, 3.209951184, 3.462385145, 3.379791618, 5.181404836, 4.344116951, 3.415242062, 0.054377114, 2.385808489, 1.819540279, 6.026298262, 3.003067413, 1.744317806, -0.023027616, -1.316171395, -0.683991606, 1.09300722, 0.907423685, 3.625085068, 3.235271842, 2.009085124, 1.418335593, 2.312929483, 0.116795606, 2.166679144, 3.53222506, 4.009005561, 3.4647784, 0.427584131, 1.834165369, -0.939121717, -5.611912127, 1.43545282, 0.226857288, 1.065060726, 2.489228212, 3.922772027, 3.34837565, 5.439446434, 5.551168521, 2.045206544, 0.058604955, 3.206963611, 6.232264851, 2.850694341, 3.547537302, 3.744554111, 2.023519393, 1.072527479, 0.934070318), start = 1961)
+fechas1 <- seq(from = 1961, length.out = length(PIBcol))
+plot_ly(x = ~fechas1, y = ~PIBcol, mode = 'lines+markers', text = paste("PIB =", round(PIBcol, 3)), width = 700, height = 300, name = "Crecimiento del PIB per cápita (% anual)") %>% layout(title="Crecimiento del PIB per cápita (% anual)", xaxis = list(title ="Año"), yaxis = list(title = "PIB (% anual)")) %>% 
+layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4), height = 300)
+```
+</pre>
+
+Otro ejemplo, se presenta para el material particulado `$PM_{10}$` y `$PM_{2.5}$` en la ciudad de Medellín para el mes de abril del año 2019, el cual se registra en intervalos de una hora
+
+<pre style="height:610px">
+```{r echo=FALSE}
+library(readxl)
+aire <- read_xlsx("../../Dataset/calidadaireabril2019.xlsx")
+pm25 <- unclass(aire$pm25)
+pm10 <- unclass(aire$pm10)
+fechas2 <- aire$Fecha_Hora
+# https://siata.gov.co/siata_nuevo/index.php/mapa/
+### Extracció de Atípicos y gráfico pm25
+lim25 <- quantile(pm25,probs = c(0.25,0.75))+c(-1.5*IQR(pm25),1.5*IQR(pm25))
+SApm25 <- pm25[dplyr::between(pm25,lim25[1],lim25[2])]
+fpm25 <- fechas2[dplyr::between(pm25,lim25[1],lim25[2])]
+plotpm25 <- plot_ly(x = ~fpm25, y = ~SApm25, mode = 'lines+markers', text = paste("PM2.5 =", SApm25), width = 700, height = 300, name = "PM2.5")
+
+### Extracció de Atípicos y gráfico pm25
+lim10 <- quantile(pm10,probs = c(0.25,0.75))+c(-1.5*IQR(pm10),1.5*IQR(pm10))
+SApm10 <- pm10[dplyr::between(pm10,lim10[1],lim10[2])]
+fpm10 <- fechas2[dplyr::between(pm10,lim10[1],lim10[2])]
+plotpm10 <- plot_ly(x = ~fpm10, y = ~SApm10, mode = 'lines+markers', text = paste("PM10 =", SApm10), width = 700, height = 300, name = "PM10") 
+subplot(plotpm25, plotpm10, nrows = 2, margin = 0.08) %>% 
+  layout(title = "Materia particulada 2.5 y 10",
+         yaxis = list(title = "PM2.5"),
+         yaxis2 = list(title = "PM10"),
+         xaxis2 = list(title = "Días"),
+         margin = list(r=60, l=60, t=60, b=60, pad = 4), height = 600)
+
+```
+</pre>
+
+El estudio de la series de tiempo requiere de procedimientos estadísticos diferentes a los análisis empleados tradicionalmente, debido a la dependencia o correlación existente entre los diferentes puntos observados en el tiempo, la cual no permite suponer que el conjunto de datos sea independiente e idénticamente distribuido, y en consecuencia, se hace necesario el empleo de modelos estadísticos que permitan explicar el comportamiento de variables aleatorias que dependan del tiempo, para así poder realizar inferencia sobre éstas.
+
+Entre los principales objetivos del análisis de series de tiempo, se destaca el comprender, describir e identificar patrones en el comportamiento de las series, evidenciar el efecto de acciones o decisiones pasadas (intervenciones)<!-- conocidas como intervenciones hechas sobre la serie. Estas intervenciones pueden tener un efecto moment´aneo o bien un efecto permanente que modifica la estructura de la serie de tiempo intervenida. -->, realizar pronósticos que contribuyan al proceso de toma de decisiones, entre otros.
+
+## Clases de pronóstico
+
+Un pronóstico es una predicción de algún evento futuros, a partir de los datos pasados que se conocen sobre el suceso específico. Éstos se emplean para la toma de decisiones, dependiendo de la ventana temporal que se desee utilizar. @Montgomery2015[, p.2] señalan que los pronósticos puede ser clasificados en tres horizontes de tiempo
+
+* **Corto plazo**: son aquellos que buscan predecir eventos futuros en un horizonte de tiempo pequeño, es decir, días, semanas o meses, y son empleados generalmente para diseñar estrategias o tomar decisiones inmedianta.
+* **Mediano plazo**: son predicciones que se realizan en un horizonte de tiempo un poco más amplio, el cual abarca estimaciones entre 1 y 2 años en el futuro, y se utiliza en general para diseñar presupuestos o procesos de producción y planeación de variables operativas.
+* **Largo plazo**: son aquellos pronosticos que se extienen a horizontes de tiempo mucho más grandes, puesto que éstos pueden extenderse a muchos años en el futuro, y se emplean en procesos de planificación, programación y proyección de proyectos.
+
+## Métodos de pronóstico
+
+Una vez se selecciona el horizonte de tiempo, otro factor importante de los pronósticos es el método de pronóstico que se va a emplear. Según lo planteado por @Chase2009[, pp. 469-470], los pronósticos pueden ser clasificados en cuatro tipos diferentes, los cuales se definen como técnicas cualitativas, análisis de series de tiempo, relaciones causales o econométricas y modelos de simulación.
+
+### Técnicas cualitativas
+Los pronósticos cualitativos son basados en opiniones subjetivas, en donde, la información empleada para realizar el pronóstico, se obtiene mediante el juicio de un grupo de expertos en el tema, con amplia experiencia en el área de interés, el cual entrega valores o rango de valores sobre el comportamiento futuro de la variable de estudio. Usualmente este método se emplea cuando la información que se tiene de la variable de interés, es escasa, no puede ser cuantificada o es poco confiable.
+
+Entre las técnicas empleadas para realizar pronósticos subjetivos se destacan
+
+* Técnicas acumulativas <!-- Deriva un pronóstico a través de la compilación de las entradas de aquellos que se encuentran al final de la jerarquía y que tratan con lo que se pronostica. Por ejemplo, un pronóstico general de las ventas se puede derivar combinando
+las entradas de cada uno de los vendedores que están más cerca de su territorio. -->
+* Investigación de mercados <!-- Se establece para recopilar datos de varias formas (encuestas, entrevistas, etc.) con el fin de comprobar hipótesis acerca del mercado. Por lo general, se usa para pronosticar ventas a largo plazo y de nuevos productos -->
+* Grupos de consenso <!-- Intercambio libre en las juntas. La idea es que la discusión en grupo produzca mejores pronósticos que cualquier individuo. Los participantes pueden ser ejecutivos, vendedores o clientes. -->
+* Analogía histórica <!-- Relaciona lo pronosticado con un artículo similar. Es importante al planear nuevos productos en los que las proyecciones se pueden derivar mediante el uso del historial de un producto similar. -->
+* Método Delphi <!-- Un grupo de expertos responde un cuestionario. Un moderador recopila los resultados y formula un cuestionario nuevo que se presenta al grupo. Por lo tanto, existe un proceso de aprendizaje para el grupo mientras recibe información nueva y no existe ninguna influencia por la presión del grupo o individuos dominantes. -->
+
+### Pronósticos basados en técnicas cualitativas
+
+
+
+
+## Factores a tener en cuenta en la selección de métodos de pronósticos
+
+## Componentes de una serie de tiempo
+
+## Funciones de pérdida
+
+### ME
+
+### MAE
+
+### SSE
+
+### MSE
+
+### SDE
+
+### MAPE
+
+
+
+
+
+
+## Bibliografía
+
+
