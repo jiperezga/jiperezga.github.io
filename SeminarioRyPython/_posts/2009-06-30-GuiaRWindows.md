@@ -34,7 +34,7 @@ Instalación de R-Project
 Para la descarga de la última versión del programa R-project en Windows,
 haga click en el siguiente enlace [(Descargar
 R-project)](https://cloud.r-project.org/bin/windows/base/){:target="\_blank"}.
-Una vez realizado click en el enlace, se abrirá la siguiente venta
+Una vez realizado click en el enlace, se abrirá la siguiente ventana
 
 ![](../../SeminarioRyPython/images/GuiaR1Windows.png) Haga click en el
 recuadro rojo que aparece en la imagen anterior e iniciará la descarga
