@@ -21,7 +21,7 @@
 .post-clase .post-content a{color:#ff9d00;}
 .post-clase .post-content a:hover{background-color:#0088FF;color:#fff}
 .post-clase .post-content strong{color:#0088FF}
-.post-clase .post-content blockquote{border-left:.313rem solid #0088FF}
+.post-clase .post-content blockquote{border-left:.313rem solid #0088FF; background:rgba(255,255,255,0.15);}
 .post-clase .header-post,.post-clase .header-site{background-color:#0088FF;}
 .post-clase .header-post h1,.post-clase .header-site h1{text-shadow:3px 3px #005199}
 .post-clase .bar-header .logo a{color:#0088FF}
@@ -75,6 +75,24 @@
 .post-presentacion .ribbon span:before{border-left:3px solid #545454;border-top:3px solid #545454}
 .post-presentacion .ribbon span:after{border-right:3px solid #545454;border-top:3px solid #545454}
 
+.post-guia .title-category{color:#eb7728; text-shadow:2px 2px 3px #FFFFFF}
+.post-guia .post-content h1,.post-guia .post-content h2,.post-guia .post-content h3,.post-guia .post-content h4{color:#eb7728}
+.post-guia .post-content a{color:#ff9d00;}
+.post-guia .post-content a:hover{background-color:#eb7728;color:#fff}
+.post-guia .post-content strong{color:#eb7728}
+.post-guia .post-content blockquote{border-left:.313rem solid #eb7728}
+.post-guia .header-post,.post-guia .header-site{background-color:#eb7728;}
+.post-guia .header-post h1,.post-guia .header-site h1{text-shadow:3px 3px #545454}
+.post-guia .bar-header .logo a{color:#eb7728}
+.post-guia .author .email,.post-guia .author .github{color:#eb7728} .post-guia .share a:hover svg{fill:#eb7728}@media only screen and (max-width:37.5rem){.post-guia body.search-overlay:after{background-color:#eb7728}}
+.post-guia .icon-menu{fill:#eb7728}.post-guia .box-body h2{color:#eb7728}
+.post-guia .box-body .tags a{color:#eb7728;border:1px solid #eb7728;}
+.post-guia .box-body .tags a:hover{color:#fff;background:#eb7728}
+.post-guia aside{background-color:#eb7728;}
+.post-guia aside nav li a:hover{color:#eb7728}
+.post-guia .ribbon span{background-color:#eb7728;}
+.post-guia .ribbon span:before{border-left:3px solid #b05110;border-top:3px solid #b05110}
+.post-guia .ribbon span:after{border-right:3px solid #b05110;border-top:3px solid #b05110}
 
 
 

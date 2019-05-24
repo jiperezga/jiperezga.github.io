@@ -10,7 +10,7 @@
 
 .post-content p:before,.post-content h1:before,.post-content h2:before,.post-content h3:before,.post-content h4:before,.post-content ul:before,.post-content ol:before,.post-content .tags:before,.post-content iframe:before,.post-content .button-post:before,.post-content p:after,.post-content h1:after,.post-content h2:after,.post-content h3:after,.post-content h4:after,.post-content ul:after,.post-content ol:after,.post-content .tags:after,.post-content iframe:after,.post-content .button-post:after{content:'';display:table;}
 
-.post-content p:after,.post-content h1:after,.post-content h2:after,.post-content h3:after,.post-content h4:after,.post-content ul:after,.post-content ol:after,.post-content .tags:after,.post-content iframe:after,.post-content .button-post:after{clear:both}@media only screen and (min-width:37.5rem){.post-content p,.post-content h1,.post-content h2,.post-content h3,.post-content h4,.post-content ul,.post-content ol,.post-content .tags,.post-content iframe,.post-content .button-post{font-size:1.25rem}}.post-content li{padding:.625rem 0;ulmargin-bottom:0;}
+.post-content p:after,.post-content h1:after,.post-content h2:after,.post-content h3:after,.post-content h4:after,.post-content ul:after,.post-content ol:after,.post-content .tags:after,.post-content iframe:after,.post-content .button-post:after{clear:both}@media only screen and (min-width:37.5rem){.post-content p,.post-content h1,.post-content h2,.post-content h3,.post-content h4,.post-content ul,.post-content ol,.post-content .tags,.post-content iframe,.post-content .button-post{font-size:1.25rem}}.post-content li{margin-bottom:0;}
 
 .post-content p,.post-content li{color: #FFF;text-align:justify}
 
@@ -49,7 +49,7 @@
 .post-content blockquote:after{clear:both}
 @media only screen and (max-width:37.5rem){.post-content blockquote{width:90%}}
 
-.post-content blockquote p{color:rgba(0,0,0,0.6);margin:0;}
+.post-content blockquote p{margin:0;}
 @media only screen and (max-width:37.5rem){.post-content blockquote p{font-size:1.125rem;line-height:1.5;padding:0}}
 
 .post-content hr{*zoom:1;width:auto;max-width:47.5rem;float:none;display:block;margin-right:auto;margin-left:auto;padding-left:0;padding-right:0;border:1px solid #f2f2f2;margin:50px auto}
@@ -75,7 +75,7 @@ figure{margin:1em 380px}
 .highlight .hll{background-color:#333}
 .highlight .c,.highlight .cm,.highlight .cp,.highlight .cs{color:#75715e}
 .highlight .c1{color:#0088ff}
-.highlight .err{color:#960050;background-color:#1e0010}
+.highlight .err{background-color:#1e0010}
 .highlight .k,.highlight .kc,.highlight .kd,.highlight .kp,.highlight .kr,.highlight .kt,.highlight .no{color:#ff9d00}
 .highlight .l,.highlight .mf,.highlight .mh,.highlight .mi,.highlight .mo,.highlight .se,.highlight .il{color:#ae81ff}
 .highlight .p{color:#FFFFFF; font-weight:bold}
@@ -92,5 +92,4 @@ figure{margin:1em 380px}
 pre{color:#FFFFFF; font-weight:bold}
 .js-plotly-plot{margin: auto;}
 
-tt{font-size:130%;}
 .MathJax_Display{text-align:center!important}
