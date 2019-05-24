@@ -44,9 +44,9 @@ opts_chunk$set(echo=TRUE,
 
 ## Introducción
 
-Una serie de tiempo es una secuencia de observaciones registradas y ordenadas de forma periódica, en intervalos de tiempo igualmente espaciados, tales como, días, meses, semestres, años, entre otros. Estas observaciones son caracterizadas por una variable aleatoria `$Y_t$`, la cual depende del tiempo `$t=1,2,\ldots,N$`, y donde el objetivo es modelar el comportamiento de `$Y_t$` contra `$t$`, siendo `$N$`el número total de observaciones que se tenga en la serie de tiempo.
+Una serie de tiempo es una secuencia de observaciones registradas y ordenadas de forma periódica, en intervalos de tiempo igualmente espaciados, tales como, días, meses, semestres, años, entre otros. Estas observaciones son caracterizadas por una variable aleatoria `$Y_t$`, la cual depende del tiempo `$t=1,2,\ldots,N$`, y donde el objetivo es modelar el comportamiento de `$Y_t$` contra `$t$`, siendo `$N$` el número total de observaciones que se tenga en la serie de tiempo.
 
-Un ejemplo de ésto, se presenta a continuación donde se muestra el `$PIB$` per capita de Colombia (% anual), para un intervalo de tiempo anual que va desde 1961 hasta 2017
+Un ejemplo de una serie temporal, se presenta a continuación donde se muestra el % anual del `$PIB$` per capita de Colombia, para un intervalo de tiempo anual que va desde 1961 hasta 2017
 
 <pre>
 ```{r echo=FALSE}
@@ -92,7 +92,7 @@ subplot(plotpm25, plotpm10, nrows = 2, margin = 0.08) %>%
 ```
 </pre>
 
-El estudio de la series de tiempo requiere de procedimientos estadísticos diferentes a los análisis empleados tradicionalmente, debido a la dependencia o correlación existente entre los diferentes puntos observados en el tiempo, la cual no permite suponer que el conjunto de datos sea independiente e idénticamente distribuido, y en consecuencia, se hace necesario el empleo de modelos estadísticos que permitan explicar el comportamiento de variables aleatorias que dependan del tiempo, para así poder realizar inferencia sobre éstas.
+Es de anotar que, para el estudio de series de tiempo, se requiere de procedimientos estadísticos diferentes a los análisis empleados tradicionalmente, debido a la dependencia o correlación existente entre los diferentes puntos observados en el tiempo, la cual no permite suponer que el conjunto de datos sea independiente e idénticamente distribuido, y en consecuencia, se hace necesario el empleo de modelos estadísticos que permitan explicar el comportamiento de variables aleatorias que dependan del tiempo, para así poder realizar inferencia sobre éstas.
 
 Entre los principales objetivos del análisis de series de tiempo, se destaca el comprender, describir e identificar patrones en el comportamiento de las series, evidenciar el efecto de acciones o decisiones pasadas (intervenciones)<!-- conocidas como intervenciones hechas sobre la serie. Estas intervenciones pueden tener un efecto moment´aneo o bien un efecto permanente que modifica la estructura de la serie de tiempo intervenida. -->, realizar pronósticos que contribuyan al proceso de toma de decisiones, entre otros.
 

@@ -42,7 +42,7 @@ La mayoría de los datos disponibles en la amplia gama de áreas del conocimient
 
 ## Objetivo general
 
-Que el estudiante adquiera los elementos básicos de la teoría de la probabilidad y sus aplicaciones. Que desarrolle las técnicas de la estadística descriptiva por el medio de manejo de calculadora y el paquete estadístico <tt>R</tt> en el computador. Lo anterior servirá como base para desarrollar posteriormente en la estadística II, la estadística inferencial (estimación, prueba de hipótesis, predicción) y de algunas técnicas usadas en el muestreo estadístico.
+Que el estudiante adquiera los elementos básicos de la teoría de la probabilidad y sus aplicaciones. Que desarrolle las técnicas de la estadística descriptiva por el medio de manejo de calculadora y el paquete estadístico <code>R</code> en el computador. Lo anterior servirá como base para desarrollar posteriormente en la estadística II, la estadística inferencial (estimación, prueba de hipótesis, predicción) y de algunas técnicas usadas en el muestreo estadístico.
 
 ## Objetivo específico
 * Trabajar la estadística descriptiva por medio de las distribuciones de frecuencias y de gráficos. Utilizar el computador y la calculadora como herramientas adicionales y a la vez saber interpretar los resultados que estos instrumentos arrojan.

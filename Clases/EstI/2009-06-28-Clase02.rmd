@@ -97,3 +97,103 @@ El signo de `$\gamma_2$` indica el nivel de concentración.
 * `$\gamma_2>0$` indica leptocurtosis, es decir, la forma de los datos es más en punta y posee colas menos anchas.
 * `$\gamma_2<0$` indica platicurtosis, es decir, la forma de los datos es más plana y posee colas más anchas.
 * `$\gamma_2\sim0$` indica mesocurtosis, es decir, tanto la punta como las colas son similares a la distribución normal.
+
+## Introducción a R
+
+<code>R</code> es un lenguaje de programación orientado a objetos junto con un sistema de ventanas, que permite una interacción directa e intuitiva con el tipo de programación realizada. Este tipo de programación, posee una notable cercanía con la forma en que se expresarían las cosas en la vida real, ya que trabaja sobre objetos visibles que poseen determinadas caraterística, lo cual hace que puedan ser empleados para la realización de acciones específicas. 
+
+Para entender cómo se crean o manipulan objetos en <code>R</code>, es necesario introducir inicialmente el lenguaje de programación, y para ello lo primero que debe hacerse, es entender la estructura de asignación, los tipos de datos, las clases de los objetos y los tipos de operadores 
+
+### Estructura de asignación
+La estructura de asignación del lenguaje <code>R</code> puede llevarse a cabo mediante cuatro formas diferentes, cada una de ellas lleva al mismo resultado
+
+```{r, eval=FALSE}
+<variable> <- <objeto>       # Primero método
+<objeto> -> <variable>       # Segundo método
+<variable> = <objeto>        # Tercer método
+assign(<variable>, <objeto>) # Cuarto método
+```
+
+De estos cuatro métodos de asignación presentados, el primero y el segundo poseen la misma estructura, la diferencia entre ellos radica en que, el primero realiza la asignación a la derecha y el segundo a la izquierda. Esto depende de la dirección hacia donde apunte la flecha.
+
+El tercer método, a pesar de realizar la asignación al igual que los dos primeros métodos, éste **no** es el operador habitual de asignación, pues éste se reserva para otros propósitos, tales como darle valores a una variable dentro de una función. El cuarto método, es una forma de asignación equivalente a las anteriores, pero requiere de "más esfuerzo" para llevarse acabo.
+
+Por lo tanto, se recomienda emplear el primer método de asignación. Es de anotar que el simbolo <code><-</code> puede escribirse de dos formas, presionando la tecla <code><</code> seguida de la tecla <code>-</code>, o alternativamente, presionando de forma simultanea las teclas <code>Alt</code> y la tecla <code>-</code>.
+
+También se señala que el carácter <code>#</code>, se emplea para comentar el código o una línea específica, lo cual implica que posterior a <code>#</code>, no se ejecutará ningún tipo de código en la linea específica en la cual se encuentre <code>#</code>.
+
+### Tipos de datos
+El lenguaje <code>R</code> admite tres tipos básico de datos, a saber
+  * **Numericos:** Entero, Real o Complejo.
+  * **Alfanuméricos:** Carácter o Sarta.
+  * **Booleano:** Lógicos y Faltantes.
+ 
+```{r}
+a <- c(1, 22, 98)                    # Entero
+b <- c(12.41, 64.123, 2.01)          # Real
+c <- c(-3i, -12i, 74.23i)            # Complejo
+d <- c("a", "3", "#")                # Carácter
+e <- c("Quiero", "un", "tinto", "!") # Sarta
+f <- c(F,FALSE,TRUE, T)              # Lógico
+g <- c(NA, NaN, NA_real_)            # Faltantes
+```
+
+la función <code>c(datos)<code> se usa para concatenar objetos, es decir, crear un vector de objetos. Además, las funciones <code>mode(objeto)</code> permiten observar el tipo de objeto que se está usando.
+
+```{r}
+mode(a)
+```
+
+mientras que la función <code>str(objeto)</code> permite observar todos los atributos que posee el objeto.
+
+```{r}
+str(d)
+```
+
+### Clases de objetos
+Adicionalmente, con el fin de organizar los datos, se presentan algunas de las clases de objetos más comúnmente usados en <code>R</code> 
+
+* **Vector:** este objeto admite datos númericos, carácteres, complejos o lógicos, pero solo permite un solo tipo de dato a la vez. Puede construirse mediante la función <code>c()</code>.
+* **Matriz:** este objeto admite datos númericos, carácteres, complejos o lógicos, pero solo permite un solo tipo de dato a la vez. Puede construirse mediante la función <code>matrix()</code>.
+* **Arreglos:** Permite datos numericos, carácteres, complejos o lógicos, pero solo permite un solo tipo de dato a la vez. Puede construirse mediante la función <code>array()</code>.
+* **Data frame:** Permite datos numericos, carácteres, complejos o lógicos, además de permitir multiples tipos por objeto a la vez. Puede construirse mediante la función <code>data.frame()</code>
+* **Listas:** Permite datos numericos, carácteres, complejos, lógicos, funciones, expresiones, etc, además de permitir multiples tipos por objetos a la vez. Puede construirse mediante la función <code>list()</code>.
+* **Factores:** Permite datos numericos o carácteres, pero permite un solo tipo por objeto a la vez. Puede construirse mediante la función <code>factor()</code>.
+
+ME FALTA PONER CÓDIGO DE EJEMPLO D:
+
+### Tipos de operaciones y precedencia de operaciones
+Una vez conocidos los tipos de datos, y clase de objetos, con éstos pueden realizarse diferentes operaciones matemáticas y logícas, las cuales se encuentran ordenadas por niveles, dependiendo de su prioridad en las operaciones
+
+1. Potencia (<code>^</code>)
+2. Producto (<code>*</code>), división (<code>/</code>), división entera (<code>%/%</code>) y módulo (<code>%%</code>)
+3. Suma (<code>+</code>) y Diferencia (<code>-</code>)
+4. Relaciones de comparación
+   * Mayor qué (<code>></code>)
+   * Mayor o igual qué (<code>>=</code>)
+   * Menor qué (<code><</code>)
+   * Menor o igual qué (<code><=</code>)
+   * Igual (<code>==</code>)
+   * Diferente (<code>!=</code>)
+5. Conjunción y Disyunción
+   * Conjunción (<code>&</code>) o (<code>&&</code>)
+   * Disyunción (<code>|</code>) o (<code>||</code>)
+6. Negación (<code>!</code>)
+7. Asignación. (<code><-</code>)
+
+Como se observa, existen operadores que poseen el mismo nivel de prioridad, y por tanto éstos se ejecuta de izquierda a derecha. Para evitar problemas en los cálculos para operadores del mismo nivel de precedencia, se aconseja emplear el paréntesis, con el fin de modificar el orden de las operaciones.
+
+Adicionalmente se presentan algunas de las funciones matemáticas más usadas
+
+* Exponencial <code>exp()</code>
+* Logaritmo <code>log()</code>, por defecto, calcula el logaritmo natural.
+* Raíz cuadrada <code>sqrt()</code>
+* Valor absoluto <code>abs()</code>
+* Seno <code>sin()</code> y Arcoseno <code>asin()</code>
+* Coseno <code>cos()</code> y Arcocoseno <code>acos()</code>
+* Tangente <code>tan()</code> y Arcotangente <code>atan()</code>
+
+ME FALTA PONER CÓDIGO DE EJEMPLO D:
+
+
+
