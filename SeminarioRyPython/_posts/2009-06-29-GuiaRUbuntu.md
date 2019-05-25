@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Guía Ubuntu"
+title: "Guía Instalación para Ubuntu"
 main-class: 'guia'
 permalink: /SeminarioRyPython/SRyP:title.html
 tags:
@@ -39,7 +39,7 @@ lineas de código
     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
     sudo apt update
 
-![](../../SeminarioRyPython/images/GuiaR1Ubuntu.png)
+![](../../SeminarioRyPython/images/GuiaU1.png)
 
 en caso de tener problemas con la segunda linea de código, probar con
 
@@ -50,7 +50,7 @@ siguiente línea de código
 
     sudo apt install r-base r-base-core r-recommended
 
-![](../../SeminarioRyPython/images/GuiaR2Ubuntu.png)
+![](../../SeminarioRyPython/images/GuiaU2.png)
 
 Cuando se le pregunte si desea continuar, escriba la tecla S, presione
 la tecla Enter y espere hasta que termine la instalación. Para iniciar
@@ -59,7 +59,7 @@ linea de código
 
     R
 
-![](../../SeminarioRyPython/images/GuiaR3Ubuntu.png)
+![](../../SeminarioRyPython/images/GuiaU3.png)
 
 Instalación RStudio
 -------------------
@@ -70,28 +70,28 @@ RStudio)](https://www.rstudio.com/products/rstudio/download/#download){:target="
 
 Una vez realizado click en el enlace, se abrirá la siguiente venta
 
-![](../../SeminarioRyPython/images/GuiaRStudio1Ubuntu.png)
+![](../../SeminarioRyPython/images/GuiaU4.png)
 
 Haga click sobre la versión de Rstudio que sea compatible con su sistema
 operativo para que comience la descarga.
 
-![](../../SeminarioRyPython/images/GuiaRStudio2Ubuntu.png)
+![](../../SeminarioRyPython/images/GuiaU5.png)
 
 Una vez completada la descarga, vaya a la carpeta de descargas y haga
 doble click sobre el instalador para que ésta inicie
 
-![](../../SeminarioRyPython/images/GuiaRStudio3Ubuntu.png)
+![](../../SeminarioRyPython/images/GuiaU6.png)
 
 En la ventana emergente, presione el botón de Instalar para que inicie
 la descarga
 
-![](../../SeminarioRyPython/images/GuiaRStudio4Ubuntu.png)
+![](../../SeminarioRyPython/images/GuiaU7.png)
 
 Esto generará una ventana de autenticación, ingrese la contraseña del
 usuario correspondiente a la sección en donde va a realizar la
 instalación
 
-![](../../SeminarioRyPython/images/GuiaRStudio5Ubuntu.png)
+![](../../SeminarioRyPython/images/GuiaU8.png)
 
 Luego de ésto, comenzará la instalación, espere a que el proceso termine
 y con ésto concluirá la instalación del programa.
