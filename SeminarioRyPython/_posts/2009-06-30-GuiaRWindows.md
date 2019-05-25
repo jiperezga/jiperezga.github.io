@@ -44,7 +44,7 @@ versión del programa que se está descargando.
 Una vez completada la descarga, haga doble click sobre el instalador
 para que éste inicie
 
-![](../../SeminarioRyPython/images/GuiaW2.png)
+![](../../SeminarioRyPython/images/GuiaW2.jpg)
 
 En la ventana de idioma, seleccione idioma Español, o el idioma de su
 preferencia y haga click en Aceptar
