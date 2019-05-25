@@ -36,7 +36,7 @@ haga click en el siguiente enlace [(Descargar
 R-project)](https://cloud.r-project.org/bin/windows/base/){:target="\_blank"}.
 Una vez realizado click en el enlace, se abrirá la siguiente venta
 
-![](../../SeminarioRyPython/images/GuiaW1.png) Haga click en el recuadro
+![](../../SeminarioRyPython/images/GuiaW1.jpg) Haga click en el recuadro
 rojo que aparece en la imagen anterior e iniciará la descarga de un
 archivo con nombre R-3.x.x-win.exe donde x.x hace referencia a la
 versión del programa que se está descargando.
@@ -49,12 +49,12 @@ para que éste inicie
 En la ventana de idioma, seleccione idioma Español, o el idioma de su
 preferencia y haga click en Aceptar
 
-![](../../SeminarioRyPython/images/GuiaW3.png)
+![](../../SeminarioRyPython/images/GuiaW3.jpg)
 
 En la ventana de información, puede leer puede leer la información allí
 presentado si es de su interes, y de click en el botón siguiente
 
-![](../../SeminarioRyPython/images/GuiaW4.png)
+![](../../SeminarioRyPython/images/GuiaW4.jpg)
 
 En la ventana de selección de carpeta de destino, puede presionar el
 botón examinar y seleccionar otra ubicación para la instalación del
@@ -62,35 +62,35 @@ programa R, aunque esto no es recomendado puesto que en ocasiones, ésto
 puede generar problemas en la instalación o lectura de librerías.
 Seguidamente, presione el botón siguiente
 
-![](../../SeminarioRyPython/images/GuiaW5.png)
+![](../../SeminarioRyPython/images/GuiaW5.jpg)
 
 En la ventana de selección de componentes, escoja una de las dos
 versiones de R dependiendo del sistema operativo que tiene instalado
 
-![](../../SeminarioRyPython/images/GuiaW6.png)
+![](../../SeminarioRyPython/images/GuiaW6.jpg)
 
 La versión del sistema operativo puede ser consultada, al presionar las
 teclas <tt>Windows + Pausa</tt>. En este caso, el sistema operativo es
 de 64bits, y por tanto se selecciona la opción “64 bits Files”, y se da
 click en el botón siguiente del instalador.
 
-![](../../SeminarioRyPython/images/GuiaW7.png)
+![](../../SeminarioRyPython/images/GuiaW7.jpg)
 
 En la ventana de opciones de configuración, se deja seleccionada la
 opción “No” y se da click en siguiente
 
-![](../../SeminarioRyPython/images/GuiaW8.png)
+![](../../SeminarioRyPython/images/GuiaW8.jpg)
 
 En la ventana de tareas adicionales, puede seleccionar “Crear un icono
 en el escritorio” y/o “Crear un icono en Inicio Rápido”, y de click en
 siguiente
 
-![](../../SeminarioRyPython/images/GuiaW9.png)
+![](../../SeminarioRyPython/images/GuiaW9.jpg)
 
 Esto hará que aparezca la ventana de instalación, espere un par de
 minutos mientras el proceso finaliza.
 
-![](../../SeminarioRyPython/images/GuiaW10.png)
+![](../../SeminarioRyPython/images/GuiaW10.jpg)
 
 Finalmente haga click en de botón Finalizar, y con ésto concluirá la
 instalación del programa.
@@ -104,7 +104,7 @@ RStudio)](https://www.rstudio.com/products/rstudio/download/#download){:target="
 
 Una vez realizado click en el enlace, se abrirá la siguiente venta
 
-![](../../SeminarioRyPython/images/GuiaW11.png)
+![](../../SeminarioRyPython/images/GuiaW11.jpg)
 
 Haga click sobre la versión de Rstudio que sea compatible con su sistema
 operativo para que comience la descarga.
@@ -112,11 +112,11 @@ operativo para que comience la descarga.
 Una vez completada la descarga, haga doble click sobre el instalador
 para que éste inicie
 
-![](../../SeminarioRyPython/images/GuiaW12.png)
+![](../../SeminarioRyPython/images/GuiaW12.jpg)
 
 En la ventana de bienvenida, seleccione siguiente
 
-![](../../SeminarioRyPython/images/GuiaW13.png)
+![](../../SeminarioRyPython/images/GuiaW13.jpg)
 
 En la ventana de selección de carpeta de destino, puede presionar el
 botón examinar y seleccionar otra ubicación para la instalación del
@@ -124,17 +124,17 @@ programa RStudio, aunque esto no es recomendado puesto que en ocasiones,
 ésto puede generar problemas en la instalación o lectura de librerías o
 compatibilidad con <tt>R</tt>. Seguidamente, presione el botón siguiente
 
-![](../../SeminarioRyPython/images/GuiaW14.png)
+![](../../SeminarioRyPython/images/GuiaW14.jpg)
 
 En la ventana de selección de carpeta del Menú Inicio, presione el botón
 instalar, para que inicie el proceso de instalación
 
-![](../../SeminarioRyPython/images/GuiaW15.png)
+![](../../SeminarioRyPython/images/GuiaW15.jpg)
 
 En la ventana de instalación, espere a que el proceso termine. Una vez
 completado se presentará la siguiente ventana
 
-![](../../SeminarioRyPython/images/GuiaW16.png)
+![](../../SeminarioRyPython/images/GuiaW16.jpg)
 
 Finalmente haga click en el botón Terminar, y con ésto concluirá la
 instalación del programa.
