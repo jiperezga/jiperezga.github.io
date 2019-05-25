@@ -36,7 +36,7 @@ haga click en el siguiente enlace [(Descargar
 R-project)](https://cloud.r-project.org/bin/windows/base/){:target="\_blank"}.
 Una vez realizado click en el enlace, se abrirá la siguiente venta
 
-![](../../SeminarioRyPython/images/GuiaW1.png) Haga click en el recuadro
+![](../../SeminarioRyPython/images/GuiaU1.png) Haga click en el recuadro
 rojo que aparece en la imagen anterior e iniciará la descarga de un
 archivo con nombre R-3.x.x-win.exe donde x.x hace referencia a la
 versión del programa que se está descargando.
