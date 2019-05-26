@@ -1,5 +1,5 @@
 /* Cajitas */
-.box-item{-ms-flex:1 0 300px;flex:1 0 300px;margin:0 .938rem 3.125rem;display:inline-block;border:1px solid #eee;border-radius:5px;min-height:17.813rem;transition:all .3s;position:relative;cursor:pointer; background-color: #FFFFFF; opacity: 0.8}
+.box-item{-ms-flex:1 0 300px;flex:1 0 300px;margin:0 .938rem 3.125rem;display:inline-block;border:1px solid #eee;border-radius:5px;min-height:15rem;transition:all .3s;position:relative;cursor:pointer; background-color: #FFFFFF; opacity: 0.8}
 .box-item:hover{box-shadow:1px 2px 10px #eee; background-color: #FFFFFF; border-color: #b2b2b2; opacity: 1}
 .box-item a{text-decoration:none}
 .box-item a:hover .box-item{box-shadow:10px 10px 10px #eee}
@@ -81,7 +81,7 @@
 .post-guia .post-content a:hover{background-color:#eb7728;color:#fff}
 .post-guia .post-content strong{color:#eb7728}
 .post-guia .post-content blockquote{border-left:.313rem solid #eb7728}
-.post-guia .header-post,.post-guia .header-site{background-color:#eb7728;}
+.post-guia .header-post,.post-guia .header-site{background-color:#eb7728;padding: 0rem 0 3.25rem}
 .post-guia .header-post h1,.post-guia .header-site h1{text-shadow:3px 3px #545454}
 .post-guia .bar-header .logo a{color:#eb7728}
 .post-guia .author .email,.post-guia .author .github{color:#eb7728} .post-guia .share a:hover svg{fill:#eb7728}@media only screen and (max-width:37.5rem){.post-guia body.search-overlay:after{background-color:#eb7728}}

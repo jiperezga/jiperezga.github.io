@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: tags
 title: "#Tags"
 permalink: /tags/index.html
 description: "Para facilitar la vida :D"
@@ -20,8 +20,12 @@ description: "Para facilitar la vida :D"
 </div>
 
 {% for tag in site.tags  %}
+<div class=section-title>
+  <h2>
     <span class="tag-title" id="{{ tag[0] | slugify }}">{{ tag[0] }}</span>
-    <ul class="post-list">
+  </h2>
+</div>
+<ul class="post-list">
         {% assign pages_list = tag[1] %}
         {% for post in pages_list reversed %}
             {% if post.title != null %}
@@ -32,5 +36,6 @@ description: "Para facilitar la vida :D"
         {% endfor %}
         {% assign pages_list = nil %}
         {% assign group = nil %}
+      
     </ul>
 {% endfor %}
