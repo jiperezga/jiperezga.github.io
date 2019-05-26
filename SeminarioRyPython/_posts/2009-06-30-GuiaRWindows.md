@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Guía Instalación para Windows"
+title: "Instalación R y Rstudio en Windows"
 main-class: 'guia'
 permalink: /SeminarioRyPython/SRyP:title.html
-tags:
-
+tags: Guía_Instalación
+rawtags: Guía_Instalación
 introduction: Guía detallada para la instalación de los programas R-project y Rstudio en Windows.
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
