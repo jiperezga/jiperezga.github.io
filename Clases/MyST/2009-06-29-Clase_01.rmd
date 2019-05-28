@@ -156,7 +156,7 @@ También es necesario definir la clase u horizonte de tiempo para el cual se va 
 ### Monitoreo de los pronósticos
 Los pronósticos, al igual que otros procesos, requieren de supervisión continua, ya que, de no supervisar o evaluar su calidad constantemente, éste podría salirse de control y dar resultados que erróneos. Por ello, en @Hanke2010 se establece un diagrama de flujo, en el cual se presenta los pasos operativos para el monitoreo del proceso de pronóstico
 
-![](../../MuestreoySeriesdeTiempo/images/monitoreopronostico.png)
+![](../../MuestreoySeriesdeTiempo/images/monitoreopronostico.jpg)
 
 ## Componentes de una serie de tiempo
 Para el análisis de series de tiempo, y pronostico de las mismas, es necesario realizar una adecuada selección del modelo que se va a emplear, y por ello, es fundamental hacer una precisa identificación de los componentes que conforman la serie, los cuales pueden ser divididos en los componentes de tendencia, estacionalidad, error y fluctuación cíclica.

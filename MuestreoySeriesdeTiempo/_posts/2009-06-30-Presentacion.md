@@ -64,10 +64,10 @@ Metodología
 
 El curso se desarrolla en sala de computadores, utiliza como medios
 didácticos herramientas computacionales estadísticas (específicamente se
-usa excel, el software estadístico <code>R</code> y un motor de
-encuestas) y material audiovisual. Además, se usa simulación de
-situaciones de la vida real, elaboración de proyectos y aprendizaje
-basado en problemas como estrategias de enseñanza-aprendizaje.
+usa excel, el software estadístico <tt>R</tt> y un motor de encuestas) y
+material audiovisual. Además, se usa simulación de situaciones de la
+vida real, elaboración de proyectos y aprendizaje basado en problemas
+como estrategias de enseñanza-aprendizaje.
 
 Temática detallada
 ------------------
