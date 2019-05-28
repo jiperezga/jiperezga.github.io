@@ -39,7 +39,7 @@ opts_chunk$set(echo=TRUE,
                warning=FALSE,
                fig.path = paste0("../../MuestreoySeriesdeTiempo/images/", "Clase01"),
                cache.path = "../../MuestreoySeriesdeTiempo/cache/",
-               dev = "pdf")
+               dev = "svg")
 ```
 
 
