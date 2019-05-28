@@ -39,7 +39,7 @@ opts_chunk$set(echo=TRUE,
                warning=FALSE,
                fig.path = paste0("../../MuestreoySeriesdeTiempo/images/", "Clase01"),
                cache.path = "../../MuestreoySeriesdeTiempo/cache/",
-               dev = "svg")
+               cache = FALSE)
 ```
 
 
@@ -154,7 +154,7 @@ También es necesario definir la clase u horizonte de tiempo para el cual se va 
 * **Largo plazo**: son aquellos pronósticos que se extienden a horizontes de tiempo mucho más grandes, puesto que éstos pueden extenderse a muchos años en el futuro, y se emplean en procesos de planificación, programación y proyección de proyectos.
 
 ### Monitoreo de los pronósticos
-Los pronósticos, al igual que otros procesos, requieren de supervisión continua, ya que, de no supervisar o evaluar su calidad constantemente, éste podría salirse de control y dar resultados que erróneos. Por ellos, en @Hanke2010 se establece un diagrama de flujo, en el cual se presenta los pasos operativos para el monitoreo del proceso de pronóstico
+Los pronósticos, al igual que otros procesos, requieren de supervisión continua, ya que, de no supervisar o evaluar su calidad constantemente, éste podría salirse de control y dar resultados que erróneos. Por ello, en @Hanke2010 se establece un diagrama de flujo, en el cual se presenta los pasos operativos para el monitoreo del proceso de pronóstico
 
 ![](../../MuestreoySeriesdeTiempo/images/monitoreopronostico.png)
 

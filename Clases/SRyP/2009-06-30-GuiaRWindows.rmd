@@ -33,7 +33,8 @@ opts_chunk$set(echo=TRUE,
                message=FALSE,
                warning=FALSE,
                fig.path = paste0("../../SeminarioRyPython/images/", "GuiaWindows"),
-               cache.path = "../../SeminarioRyPython/cache/")
+               cache.path = "../../SeminarioRyPython/cache/",
+               cache = FALSE)
 
 ```
 
