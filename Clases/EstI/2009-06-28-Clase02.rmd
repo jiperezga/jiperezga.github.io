@@ -3,9 +3,9 @@ layout: post
 title: "Clase 02"
 main-class: 'clase'
 permalink: /EstadisticaI/EstI:title.html
-tags:
-
-introduction: Definición de las medidas más usadas en la práctica e introducción al análisis descriptivo gráfico y tabular.
+tags: 
+rawtags: Guía Instalación
+introduction: Definición de las medidas más usadas en la práctica e introducción al lenguaje estadístico R.
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
@@ -32,7 +32,7 @@ opts_chunk$set(echo=TRUE,
                comment=NA,
                message=FALSE,
                warning=FALSE,
-               fig.path = paste0("../../EstadisticaI/images/", "Presentacion"),
+               fig.path = paste0("../../EstadisticaI/images/", "Clase02"),
                cache.path = "../../EstadisticaI/cache/")
 
 ```

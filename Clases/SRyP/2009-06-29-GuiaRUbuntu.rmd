@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Guía Instalación para Ubuntu"
+title: "Instalación R y Rstudio en Ubuntu"
 main-class: 'guia'
 permalink: /SeminarioRyPython/SRyP:title.html
-tags:
-
+tags: Guía_Instalación
+rawtags: Guía_Instalación
 introduction: Guía detallada para la instalación de los programas R-project y Rstudio en Ubuntu.
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}

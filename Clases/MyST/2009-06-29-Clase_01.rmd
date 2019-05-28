@@ -46,18 +46,16 @@ opts_chunk$set(echo=TRUE,
 
 Una serie de tiempo es una secuencia de observaciones registradas y ordenadas de forma periódica, en intervalos de tiempo igualmente espaciados, tales como, días, meses, semestres, años, entre otros. Estas observaciones son caracterizadas por una variable aleatoria `$Y_t$`, la cual depende del tiempo `$t=1,2,\ldots,N$`, y donde el objetivo es modelar el comportamiento de `$Y_t$` contra `$t$`, siendo `$N$` el número total de observaciones que se tenga en la serie de tiempo.
 
-Un ejemplo de una serie temporal, se presenta a continuación donde se muestra el % anual del `$PIB$` per capita de Colombia, para un intervalo de tiempo anual que va desde 1961 hasta 2017
+Un ejemplo de una serie temporal, se presenta a continuación donde se muestra el % anual del `$PIB$` per cápita de Colombia, para un intervalo de tiempo anual que va desde 1961 hasta 2017
 
 <pre>
 ```{r echo=FALSE}
 library(plotly)
-library(htmltools)
-library(tidyverse)
 # https://datos.bancomundial.org/indicador/NY.GDP.PCAP.KD.ZG
 PIBcol <- ts(c(1.983183392, 2.292595551, 0.231792643, 3.033555246, 0.557370132, 2.156500316, 1.110445303, 2.924696885, 3.209951184, 3.462385145, 3.379791618, 5.181404836, 4.344116951, 3.415242062, 0.054377114, 2.385808489, 1.819540279, 6.026298262, 3.003067413, 1.744317806, -0.023027616, -1.316171395, -0.683991606, 1.09300722, 0.907423685, 3.625085068, 3.235271842, 2.009085124, 1.418335593, 2.312929483, 0.116795606, 2.166679144, 3.53222506, 4.009005561, 3.4647784, 0.427584131, 1.834165369, -0.939121717, -5.611912127, 1.43545282, 0.226857288, 1.065060726, 2.489228212, 3.922772027, 3.34837565, 5.439446434, 5.551168521, 2.045206544, 0.058604955, 3.206963611, 6.232264851, 2.850694341, 3.547537302, 3.744554111, 2.023519393, 1.072527479, 0.934070318), start = 1961)
 fechas1 <- seq(from = 1961, length.out = length(PIBcol))
-plot_ly(x = ~fechas1, y = ~PIBcol, mode = 'lines+markers', text = paste("PIB =", round(PIBcol, 3)), width = 700, height = 300, name = "Crecimiento del PIB per cápita (% anual)") %>% layout(title="Crecimiento del PIB per cápita (% anual)", xaxis = list(title ="Año"), yaxis = list(title = "PIB (% anual)")) %>% 
-layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4), height = 300)
+plot_ly(x = ~fechas1, y = ~PIBcol, mode = 'lines+markers', text = paste("PIB =", round(PIBcol, 3)), width = 700, height = 400) %>% layout(title="Crecimiento del PIB per cápita (% anual)", xaxis = list(title ="Año"), yaxis = list(title = "PIB (% anual)")) %>% 
+layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4))
 ```
 </pre>
 
@@ -75,15 +73,15 @@ fechas2 <- aire$Fecha_Hora
 lim25 <- quantile(pm25,probs = c(0.25,0.75))+c(-1.5*IQR(pm25),1.5*IQR(pm25))
 SApm25 <- pm25[dplyr::between(pm25,lim25[1],lim25[2])]
 fpm25 <- fechas2[dplyr::between(pm25,lim25[1],lim25[2])]
-plotpm25 <- plot_ly(x = ~fpm25, y = ~SApm25, mode = 'lines+markers', text = paste("PM2.5 =", SApm25), width = 700, height = 300, name = "PM2.5")
+plotpm25 <- plot_ly(x = ~fpm25, y = ~SApm25, mode = 'lines+markers', text = paste("PM2.5 =", SApm25), width = 700, height = 400, name = "PM2.5")
 
 ### Extracció de Atípicos y gráfico pm25
 lim10 <- quantile(pm10,probs = c(0.25,0.75))+c(-1.5*IQR(pm10),1.5*IQR(pm10))
 SApm10 <- pm10[dplyr::between(pm10,lim10[1],lim10[2])]
 fpm10 <- fechas2[dplyr::between(pm10,lim10[1],lim10[2])]
-plotpm10 <- plot_ly(x = ~fpm10, y = ~SApm10, mode = 'lines+markers', text = paste("PM10 =", SApm10), width = 700, height = 300, name = "PM10") 
+plotpm10 <- plot_ly(x = ~fpm10, y = ~SApm10, mode = 'lines+markers', text = paste("PM10 =", SApm10), width = 700, height = 400, name = "PM10") 
 subplot(plotpm25, plotpm10, nrows = 2, margin = 0.08) %>% 
-  layout(title = "Materia particulada 2.5 y 10",
+  layout(title = "Material particulado 2.5 y 10",
          yaxis = list(title = "PM2.5"),
          yaxis2 = list(title = "PM10"),
          xaxis2 = list(title = "Días"),
@@ -94,19 +92,15 @@ subplot(plotpm25, plotpm10, nrows = 2, margin = 0.08) %>%
 
 Es de anotar que, para el estudio de series de tiempo, se requiere de procedimientos estadísticos diferentes a los análisis empleados tradicionalmente, debido a la dependencia o correlación existente entre los diferentes puntos observados en el tiempo, la cual no permite suponer que el conjunto de datos sea independiente e idénticamente distribuido, y en consecuencia, se hace necesario el empleo de modelos estadísticos que permitan explicar el comportamiento de variables aleatorias que dependan del tiempo, para así poder realizar inferencia sobre éstas.
 
-Entre los principales objetivos del análisis de series de tiempo, se destaca el comprender, describir e identificar patrones en el comportamiento de las series, evidenciar el efecto de acciones o decisiones pasadas (intervenciones)<!-- conocidas como intervenciones hechas sobre la serie. Estas intervenciones pueden tener un efecto moment´aneo o bien un efecto permanente que modifica la estructura de la serie de tiempo intervenida. -->, realizar pronósticos que contribuyan al proceso de toma de decisiones, entre otros.
+Entre los principales objetivos del análisis de series de tiempo, se destaca el comprender, describir e identificar patrones en el comportamiento de las series, evidenciar el efecto de acciones o decisiones pasadas (intervenciones)<!-- conocidas como intervenciones hechas sobre la serie. Estas intervenciones pueden tener un efecto momentáneo o bien un efecto permanente que modifica la estructura de la serie de tiempo intervenida. -->, realizar pronósticos que contribuyan al proceso de toma de decisiones, entre otros.
 
-## Clases de pronóstico
+## Pronósticos
 
-Un pronóstico es una predicción de algún evento futuros, a partir de los datos pasados que se conocen sobre el suceso específico. Éstos se emplean para la toma de decisiones, dependiendo de la ventana temporal que se desee utilizar. @Montgomery2015[, p.2] señalan que los pronósticos puede ser clasificados en tres horizontes de tiempo
-
-* **Corto plazo**: son aquellos que buscan predecir eventos futuros en un horizonte de tiempo pequeño, es decir, días, semanas o meses, y son empleados generalmente para diseñar estrategias o tomar decisiones inmedianta.
-* **Mediano plazo**: son predicciones que se realizan en un horizonte de tiempo un poco más amplio, el cual abarca estimaciones entre 1 y 2 años en el futuro, y se utiliza en general para diseñar presupuestos o procesos de producción y planeación de variables operativas.
-* **Largo plazo**: son aquellos pronosticos que se extienen a horizontes de tiempo mucho más grandes, puesto que éstos pueden extenderse a muchos años en el futuro, y se emplean en procesos de planificación, programación y proyección de proyectos.
+Un pronóstico es una predicción de algún evento futuros, que se hace a partir de los datos pasados que se conocen sobre el suceso específico. Generalmente, los pronósticos son empleados en la toma de decisiones, pues permiten disminuir la incertidumbre sobre el futuro, facilitan los procesos de planificación y control.
 
 ## Métodos de pronóstico
 
-Una vez se selecciona el horizonte de tiempo, otro factor importante de los pronósticos es el método de pronóstico que se va a emplear. Según lo planteado por @Chase2009[, pp. 469-470], los pronósticos pueden ser clasificados en cuatro tipos diferentes, los cuales se definen como técnicas cualitativas, análisis de series de tiempo, relaciones causales o econométricas y modelos de simulación.
+Un factor importante en la realización de pronósticos, es el método de pronóstico que se va a emplear. Según lo planteado por @Chase2009[, pp. 469-470], los pronósticos pueden ser clasificados en cuatro tipos diferentes, los cuales se definen como técnicas cualitativas, análisis de series de tiempo, relaciones causales o econométricas y modelos de simulación.
 
 ### Técnicas cualitativas
 Los pronósticos cualitativos son basados en opiniones subjetivas, en donde, la información empleada para realizar el pronóstico, se obtiene mediante el juicio de un grupo de expertos en el tema, con amplia experiencia en el área de interés, el cual entrega valores o rango de valores sobre el comportamiento futuro de la variable de estudio. Usualmente este método se emplea cuando la información que se tiene de la variable de interés, es escasa, no puede ser cuantificada o es poco confiable.
@@ -120,14 +114,350 @@ las entradas de cada uno de los vendedores que están más cerca de su territori
 * Analogía histórica <!-- Relaciona lo pronosticado con un artículo similar. Es importante al planear nuevos productos en los que las proyecciones se pueden derivar mediante el uso del historial de un producto similar. -->
 * Método Delphi <!-- Un grupo de expertos responde un cuestionario. Un moderador recopila los resultados y formula un cuestionario nuevo que se presenta al grupo. Por lo tanto, existe un proceso de aprendizaje para el grupo mientras recibe información nueva y no existe ninguna influencia por la presión del grupo o individuos dominantes. -->
 
-### Pronósticos basados en técnicas cualitativas
+### Análisis de series de tiempo
+Los pronósticos basados en análisis de series de tiempo, son aquellos que emplean la información histórica de una variable de interés, con el objetivo de descubrir patrones que permitan extrapolar la dicha información, para realizar proyecciones hacia el futuro.
+
+Entre las técnicas empleadas para realizar pronósticos mediante análisis de series de tiempo se destacan
+
+* Promedio móvil simple  <!-- Se calcula el promedio de un periodo que contiene varios puntos de datos dividiendo la suma de los valores de los puntos entre el número de éstos. Por lo tanto, cada uno tiene la misma influencia. -->
+* Promedio móvil ponderado <!-- Puede ser que algunos puntos específicos se ponderen más o menos que los otros, según la experiencia -->
+* Suavización exponencial <!-- Los puntos de datos recientes se ponderan más y la ponderación sufre una reducción exponencial conforme los datos se vuelven más antiguos. -->
+* Análisis de regresión <!-- Ajusta una recta a los datos pasados casi siempre en relación con el valor de los datos. La técnica de ajuste más común es la de los mínimos cuadrados. -->
+* Técnica Box Jenkins <!-- Muy complicada, pero al parecer la técnica estadística más exacta que existe. Relaciona una clase de modelos estadísticos con los datos y ajusta el modelo con las series de tiempo utilizando distribuciones bayesianas posteriores. -->
+* Series de tiempo Shiskin <!-- Un método efectivo para dividir una serie temporal en temporadas, tendencias e irregular. Necesita un historial por lo menos de 3 años. Muy eficiente para identificar los cambios, por ejemplo, en las ventas de una compañía. -->
+* Proyecciones de tendencias <!-- Ajusta una recta matemática de tendencias a los puntos de datos y la proyecta en el futuro. -->
+
+### Relaciones causales
+Los pronósticos causales, son basados en el hecho de que la serie de tiempo de interés, posee una relación de causa-efecto con una o más variables independientes, los cual permite proyectar el comportamiento de la serie de tiempo de interés dado el comportamiento que tengan las variables independientes.
+
+Entre las técnicas empleadas para realizar pronósticos mediante análisis de series de tiempo se destacan
+
+* Análisis de regresión <!-- Similar al método de los mínimos cuadrados en las series de tiempo, pero puede contener diversas variables. La base es que el pronóstico se desarrolla por la ocurrencia de otros eventos. -->
+* Modelos econométricos <!-- Intentos por describir algún sector de la economía mediante una serie de ecuaciones interdependientes. -->
+* Modelos de entrada/salida <!-- Se enfoca en las ventas de cada industria a otros gobiernos y empresas. Indica los cambios en las ventas que una industria productora puede esperar debido a los cambios en las compras por parte de otra industria. -->
+* Principales indicadores <!-- Estadísticas que se mueven en la misma dirección que la serie a pronosticar, pero antes que ésta, como un incremento en el precio de la gasolina que indica una baja futura en la venta de autos grandes. -->
+
+### Modelos de simulación
+Los pronósticos basados en modelos de simulación, son aquellos que dependen de un gran número de variables y las relaciones que poseen con factores exógenos, y por tanto, es posible realizar hacer énfasis en la estructura del modelo, mediante la suposición del comportamiento de las variables internas y el ambiente externo para observar cómo afectan éstas a los pronósticos.
 
 
+## Tipos de pronóstico
+Una vez definido el método de pronóstico que se desea emplear, es necesario decidir el tipo de pronóstico que se desea realizar, es decir, definir si se desea realizar un pronóstico **puntual**, por **intervalo** o de **densidad**.
 
 
-## Factores a tener en cuenta en la selección de métodos de pronósticos
+### Clases de pronóstico
+También es necesario definir la clase u horizonte de tiempo para el cual se va a realizar el pronostico, que depende de la frecuencia en que se tienen registrados los datos. @Montgomery2015[, p.2] señalan que los pronósticos puede ser clasificados en tres horizontes de tiempo
+
+* **Corto plazo**: son aquellos que buscan predecir eventos futuros en un horizonte de tiempo pequeño, es decir, días, semanas o meses, y son empleados generalmente para diseñar estrategias o tomar decisiones inmediata.
+* **Mediano plazo**: son predicciones que se realizan en un horizonte de tiempo un poco más amplio, el cual abarca estimaciones entre 1 y 2 años en el futuro, y se utiliza en general para diseñar presupuestos o procesos de producción y planeación de variables operativas.
+* **Largo plazo**: son aquellos pronósticos que se extienden a horizontes de tiempo mucho más grandes, puesto que éstos pueden extenderse a muchos años en el futuro, y se emplean en procesos de planificación, programación y proyección de proyectos.
+
+### Monitoreo de los pronósticos
+Los pronósticos, al igual que otros procesos, requieren de supervisión continua, ya que, de no supervisar o evaluar su calidad constantemente, éste podría salirse de control y dar resultados que erróneos. Por ellos, en @Hanke2010 se establece un diagrama de flujo, en el cual se presenta los pasos operativos para el monitoreo del proceso de pronóstico
+
+![](../../MuestreoySeriesdeTiempo/images/monitoreopronostico.png)
 
 ## Componentes de una serie de tiempo
+Para el análisis de series de tiempo, y pronostico de las mismas, es necesario realizar una adecuada selección del modelo que se va a emplear, y por ello, es fundamental hacer una precisa identificación de los componentes que conforman la serie, los cuales pueden ser divididos en los componentes de tendencia, estacionalidad, error y fluctuación cíclica.
+
+Para ilustrar el proceso de descomposición, se emplean dos conjuntos de datos. El primero corresponde a al total mensual de pasajeros de líneas aéreas internacionales, para los años 1949 a 1960, la cual se encuentra integrada en la base de <tt>R</tt>. 
+
+```{r}
+data(AirPassengers) # Carga base de datos de AirPassengers
+AP <- AirPassengers # Guarda base de datos de AirPassengers
+fechasNP <- seq(from = as.Date("1949/1/1"), length.out = length(AP), by = "months") # Crea feachas
+
+# install.packages("devtools") # Instala librería para descargar desde github
+# devtools::install_github("tidyverts/feasts") # Instala librería para realizar descomposición
+library(feasts)
+# install.packages("tsibble") # Para transformar datos a objeto tipo tsibble
+library(tsibble)
+
+# Extracción de los componentes del número de pasajeros áereos
+AP2 <- as_tsibble(AP) # Transforma el conjunto de datos a una base "tibble"
+descNP <- AP2 %>% STL(AP ~ season(window = 12)) # Realiza descomposición de la serie
+
+tendenciaNP <-  descNP$trend # Se separa componente de tendencia
+estacionalNP <-  descNP$season_year # Se separa componente estacional
+errorNP <-  descNP$remainder # Se separa componente de error
+
+# Gráfico básico
+autoplot(descNP, main="Componentes del Número de Pasajeros Aéreos entre 1949 y 1960", xlab="Fecha", ylab = "Número de Pasajeros (en miles)", col = "chocolate1", type = "o", pch = 19)
+```
+
+```{r eval=FALSE}
+# install.packages("plotly") ## Instala librería para hacer grágicos avanzados
+library(plotly)
+# Gráfico avanzado con plotly
+p1 <- plot_ly(x = ~fechasNP, y = ~AP, mode = 'lines+markers', text = paste("Número Pasajeros =", AP), width = 700, height = 400, type = "scatter", name = "Datos") 
+
+p2 <- plot_ly(x = ~fechasNP, y = ~tendenciaNP, mode = 'lines', text = paste("Tendencia =", tendenciaNP), width = 700, height = 400, type = "scatter", name = "Tendencia") 
+
+p3 <- plot_ly(x = ~fechasNP, y = ~estacionalNP, mode = 'lines', text = paste("Estacionalidad =", estacionalNP), width = 700, height = 400, type = "scatter", name = "Estacionalidad") 
+
+p4 <- plot_ly(x = ~fechasNP, y = ~errorNP, mode = 'lines', text = paste("Error =", errorNP), width = 700, height = 400, type = "scatter", name = "Error") 
+
+subplot(p1, p2, p3, p4, nrows = 4, margin = 0.03) %>% 
+  layout(title = "Componentes del Número de Pasajeros Aéreos entre 1949 y 1961",
+         yaxis = list(title = "datos"),
+         yaxis2 = list(title = TeX("T_t")),
+         yaxis3 = list(title = TeX("S_t")),
+         yaxis4 = list(title = TeX("\\varepsilon_t")),
+         xaxis4 = list(title = "Fecha"),
+         margin = list(r=60, l=60, t=60, b=60, pad = 4), height = 600) %>%
+  config(mathjax = 'cdn')
+```
+
+<pre style="height:610px">
+```{r echo=FALSE}
+# install.packages("plotly") ## Instala librería para hacer grágicos avanzados
+library(plotly)
+# Gráfico avanzado con plotly
+p1 <- plot_ly(x = ~fechasNP, y = ~AP, mode = 'lines+markers', text = paste("Número Pasajeros =", AP), width = 700, height = 400, type = "scatter", name = "Datos") %>%
+layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4))
+
+p2 <- plot_ly(x = ~fechasNP, y = ~tendenciaNP, mode = 'lines', text = paste("Tendencia =", tendenciaNP), width = 700, height = 400, type = "scatter", name = "Tendencia") %>%
+layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4))
+
+p3 <- plot_ly(x = ~fechasNP, y = ~estacionalNP, mode = 'lines', text = paste("Estacionalidad =", estacionalNP), width = 700, height = 400, type = "scatter", name = "Estacionalidad") %>%
+layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
+
+p4 <- plot_ly(x = ~fechasNP, y = ~errorNP, mode = 'lines', text = paste("Error =", errorNP), width = 700, height = 400, type = "scatter", name = "Error") %>%
+layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
+
+subplot(p1, p2, p3, p4, nrows = 4, margin = 0.03) %>% 
+  layout(title = "Componentes del Número de Pasajeros Aéreos entre 1949 y 1961",
+         yaxis = list(title = "datos"),
+         yaxis2 = list(title = TeX("T_t")),
+         yaxis3 = list(title = TeX("S_t")),
+         yaxis4 = list(title = TeX("\\varepsilon_t")),
+         xaxis4 = list(title = "Fecha"),
+         margin = list(r=60, l=60, t=60, b=60, pad = 4), height = 600) %>%
+  config(mathjax = 'cdn')
+```
+</pre>
+
+La segunda corresponde a las Importaciones anuales de bienes y servicios de Colombia como % del PIB, para los años 1960-2017.
+
+```{r}
+# install.packages("readxl") ## Instala librería para abrir archivos de Excel
+library(readxl) ## Cargar librería
+datos <- read_xlsx("../../Dataset/importacionescolombia2017.xlsx")
+impo <- ts(datos$Importaciones, start = 1960, frequency = 1) # Transforma observaciones a tipo time-series
+fechasIC <- datos$Año
+# Extracción de los componentes de las importaciones en Colombia
+impo2 <- as_tsibble(impo) # Transforma el conjunto de datos a una base "tibble"
+descIC <- impo2 %>% STL(impo) # Realiza descomposición de la serie
+
+tendenciaIC <- descIC$trend # Se separa componente de tendencia
+errorIC <-  descIC$remainder # Se separa componente de error
+
+#Gráfico básico
+autoplot(descIC, main="Componentes de Importaciones de Bienes y Servicios (% del PIB) entre 1960-2017", xlab="Año", ylab = "% del PIB", col = "chocolate1", type = "o", pch = 19)
+```
+
+```{r eval=FALSE}
+# Gráfico avanzado con plotly
+p5 <-  plot_ly(x = ~fechasIC, y = ~impo, mode = 'lines+markers', text = paste("% del PIB =", impo), width = 700, height = 400, type = "scatter", name = "Datos") 
+
+p6 <- plot_ly(x = ~fechasIC, y = ~tendenciaIC, mode = 'lines', text = paste("Tendencia =", tendenciaIC), width = 700, height = 400, type = "scatter", name = "Tendencia") 
+
+p7 <- plot_ly(x = ~fechasIC, y = ~errorIC, mode = 'lines', text = paste("Error =", errorIC), width = 700, height = 400, type = "scatter", name = "Error") 
+
+subplot(p5, p6, p7, nrows = 3, margin = 0.05) %>% 
+  layout(title = "Componentes de las Importaciones de
+Bienes y Servicios (% del PIB) entre 1960-2017",
+         yaxis = list(title = "datos"),
+         yaxis2 = list(title = TeX("T_t")),
+         yaxis3 = list(title = TeX("\\varepsilon_t")),
+         xaxis3 = list(title = "Año"),
+         margin = list(r=60, l=60, t=60, b=60, pad = 4), height = 600) %>%
+  config(mathjax = 'cdn')
+
+```
+
+<pre style="height:610px">
+```{r echo=FALSE}
+# Gráfico avanzado con plotly
+p5 <-  plot_ly(x = ~fechasIC, y = ~impo, mode = 'lines+markers', text = paste("% del PIB =", impo), width = 700, height = 400, type = "scatter", name = "Datos") %>%
+layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4))
+
+p6 <- plot_ly(x = ~fechasIC, y = ~tendenciaIC, mode = 'lines', text = paste("Tendencia =", tendenciaIC), width = 700, height = 400, type = "scatter", name = "Tendencia") %>%
+layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4))
+
+p7 <- plot_ly(x = ~fechasIC, y = ~errorIC, mode = 'lines', text = paste("Error =", errorIC), width = 700, height = 400, type = "scatter", name = "Error") %>%
+layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4))
+
+subplot(p5, p6, p7, nrows = 3, margin = 0.05) %>% 
+  layout(title = "Componentes de las Importaciones de
+Bienes y Servicios (% del PIB) entre 1960-2017",
+         yaxis = list(title = "datos"),
+         yaxis2 = list(title = TeX("T_t")),
+         yaxis3 = list(title = TeX("\\varepsilon_t")),
+         xaxis3 = list(title = "Año"),
+         margin = list(r=60, l=60, t=60, b=60, pad = 4), height = 600) %>%
+  config(mathjax = 'cdn')
+```
+</pre>
+
+### Componente de tendencia
+
+El componente de tendencia se denota `$T_t$`, es el componente de la serie que cambia más lentamente y describe el patrón suave que tiene una serie a largo plazo respecto a su nivel promedio (evolución a largo plazo de su media), el cual es caracterizado por un crecimiento o decrecimiento presistente. El comportamiento de la tendencia, puede ser explicado por el crecimiento o cambio de la población, el cambio tecnológico, el crecimiento económico, etc.
+
+Para el caso del **número de pasajeros áereos entre 1949 y 1961** se tiene que
+```{r}
+# Gráfico básico
+plot(x=fechasNP, y = tendenciaNP, main="Componente de Tendencia para Número de Pasajeros", xlab="Fecha", ylab = expression(T[t]), col = "chocolate1", type = "l", pch = 19, lwd = 2)
+```
+
+```{r eval=FALSE}
+# Gráfico avanzado con plotly
+plot_ly(x = ~fechasNP, y = ~tendenciaNP, mode = 'lines', text = paste("Tendencia =", tendenciaNP), width = 700, height = 400, type = "scatter") %>%
+  layout(title="Componente de Tendencia para Número de Pasajeros", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("T_t"))) %>% config(mathjax = 'cdn')
+```
+
+<pre>
+```{r echo=FALSE}
+# Gráfico avanzado con plotly
+plot_ly(x = ~fechasNP, y = ~tendenciaNP, mode = 'lines', text = paste("Tendencia =", tendenciaNP), width = 700, height = 400, type = "scatter") %>%
+  layout(title="Componente de Tendencia para Número de Pasajeros", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("T_t"))) %>% config(mathjax = 'cdn') %>% 
+layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
+```
+</pre>
+
+Mientras que, para el caso de las **Importaciones de bienes y servicios (% del PIB) entre 1960-2017** se tiene que
+
+```{r}
+# Gráfico básico
+plot(x=fechasIC, y = tendenciaIC, main="Componente de Tendencia para Importaciones Colombia", xlab="Año", ylab = expression(T[t]), col = "chocolate1", type = "l", pch = 19, lwd = 2)
+```
+
+```{r eval=FALSE}
+# Gráfico avanzado con plotly
+plot_ly(x = ~fechasIC, y = ~tendenciaIC, mode = 'lines', text = paste("Tendencia =", tendenciaIC), width = 700, height = 400, type = "scatter") %>%
+  layout(title="Componente de Tendencia para Importaciones Colombia", xaxis = list(title ="Año"), yaxis = list(title = TeX("T_t"))) %>% config(mathjax = 'cdn')
+```
+
+<pre>
+```{r echo=FALSE}
+# Gráfico avanzado con plotly
+plot_ly(x = ~fechasIC, y = ~tendenciaIC, mode = 'lines', text = paste("Tendencia =", tendenciaIC), width = 700, height = 400, type = "scatter") %>%
+  layout(title="Componente de Tendencia para Importaciones Colombia", xaxis = list(title ="Año"), yaxis = list(title = TeX("T_t"))) %>% config(mathjax = 'cdn') %>% 
+layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
+```
+</pre>
+
+### Componente estacional
+El componente estacional se denota como `$S_t$`, es el segundo componente de la serie que cambia más rápidamente y se describe como un patrón que se repite regularmente a través de la serie sobre una base anual. Este comportamiento es debido a factores tales como los consumos o las estaciones
+climáticas, es decir factores que ocurren con una periodicidad semanal, mensual, trimestral, o semestral.
+
+Es de anotar, que los efectos estacionales son fáciles de entender y se pueden medir explícitamente o incluso se pueden eliminar de la serie de datos, el cual es llamado desestacionalización de la serie
+
+Para el caso del **número de pasajeros áereos entre 1949 y 1961** se tiene que
+
+```{r}
+# Gráfico básico
+plot(x=fechasNP, y = estacionalNP, main="Componente Estacional para Número de Pasajeros", xlab="Fecha", ylab = expression(S[t]), col = "chocolate1", type = "l", pch = 19, lwd = 2)
+abline(h = 0)
+```
+
+```{r eval=FALSE}
+# Gráfico avanzado con plotly
+plot_ly(x = ~fechasNP, y = ~estacionalNP, mode = 'lines', text = paste("Estacionalidad =", estacionalNP), width = 700, height = 400, type = "scatter") %>%
+  layout(title="Componente Estacional para Número de Pasajeros", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("S_t"))) %>% config(mathjax = 'cdn')
+```
+
+<pre>
+```{r echo=FALSE}
+# Gráfico avanzado con plotly
+plot_ly(x = ~fechasNP, y = ~estacionalNP, mode = 'lines', text = paste("Estacionalidad =", estacionalNP), width = 700, height = 400, type = "scatter") %>%
+  layout(title="Componente Estacional para Número de Pasajeros", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("S_t"))) %>% config(mathjax = 'cdn') %>% 
+layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
+```
+</pre>
+
+Mientras que, para el caso de las **Importaciones de bienes y servicios (% del PIB) entre 1960-2017** no se observa un comportamiento estacional, y por tanto, éste no puede ser calculado.
+
+### Componente aleatorio, irregular o de error
+
+El componente de error se denota como `$\varepsilon_t$`, también llamado ruido blanco, es el componente de la serie que cambia más rápidamente y se caracteriza por presentar pequeñas fluctuaciones sobre alrededor de una media y varianza constantes sin ningún patrón aparente. Este fluctuaciones se deben generalmente, a eventos externos impredesibles que sólo ocurre fortuitamente e inciden de forma aislada en un instante del tiempo.
+
+Es de anotar, que este componente es impredecible, pero puede ser modelado como observaciones aleatorias de alguna distribución, tal como lo es, una distribución `$N(0,\sigma^2)$`.
+
+Para el caso del **número de pasajeros áereos entre 1949 y 1961** se tiene que
+
+```{r}
+# Gráfico básico
+plot(x=fechasNP, y = errorNP, main="Componente de Error para Número de Pasajeros", xlab="Fecha", ylab = expression(epsilon[t]), col = "chocolate1", type = "l", pch = 19, lwd = 2)
+abline(h = 0)
+```
+
+```{r eval=FALSE}
+# Gráfico avanzado con plotly
+plot_ly(x = ~fechasNP, y = ~errorNP, mode = 'lines', text = paste("Error =", errorNP), width = 700, height = 400, type = "scatter") %>%
+  layout(title="Componente de Error para Importaciones Colombia", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("\\varepsilon_t"))) %>% config(mathjax = 'cdn')
+```
+
+<pre>
+```{r echo=FALSE}
+# Gráfico avanzado con plotly
+plot_ly(x = ~fechasNP, y = ~errorNP, mode = 'lines', text = paste("Error =", errorNP), width = 700, height = 400, type = "scatter") %>%
+  layout(title="Componente de Error para Importaciones Colombia", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("\\varepsilon_t"))) %>% config(mathjax = 'cdn') %>% 
+layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
+```
+</pre>
+
+Mientras que, para el caso de las **Importaciones de bienes y servicios (% del PIB) entre 1960-2017** se tiene que
+
+```{r}
+# Gráfico básico
+plot(x=fechasIC, y = errorIC, main="Componente de Error para Importaciones Colombia", xlab="Fecha", ylab = expression(epsilon[t]), col = "chocolate1", type = "l", pch = 19, lwd = 2)
+abline(h = 0)
+```
+
+```{r eval=FALSE}
+# Gráfico avanzado con plotly
+plot_ly(x = ~fechasIC, y = ~errorIC, mode = 'lines', text = paste("Error =", errorIC), width = 700, height = 400, type = "scatter") %>%
+  layout(title="Componente de Error para Importaciones Colombia", xaxis = list(title ="Año"), yaxis = list(title = TeX("\\varepsilon_t"))) %>% config(mathjax = 'cdn')
+```
+
+<pre>
+```{r echo=FALSE}
+# Gráfico avanzado con plotly
+plot_ly(x = ~fechasIC, y = ~errorIC, mode = 'lines', text = paste("Error =", errorIC), width = 700, height = 400, type = "scatter") %>%
+  layout(title="Componente de Error para Importaciones Colombia", xaxis = list(title ="Año"), yaxis = list(title = TeX("\\varepsilon_t"))) %>% config(mathjax = 'cdn') %>% 
+layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
+```
+</pre>
+
+### Componente de fluctuación cíclica
+
+El componente de fluctuación cícluca se denota como `$C_t$`, es el segundo componente de la serie que cambia más lentamente y se caracteriza por presentar patrones de onda en puntos recurrentes en el tiempo con duración más de un año. Este comportamiento es debido por ejemplo a ciclos comerciales que dependen de prosperidad, depresión, recesión y recuperación.
+ 
+Es de anotar que, los ciclos son el componente más difíciles de pronosticar, debido a que éstos poseen periodos más largos y amplitudes irregulares, lo cual hace que éstos no sean fijos ni predecibles, y por tanto, éstos se mezclan son mezclados generalmente con el componente de error `$\varepsilon$`.
+
+
+Para el caso de las **Importaciones de bienes y servicios (% del PIB) entre 1960-2017** se tiene que
+
+<pre>
+```{r echo=FALSE}
+# Gráfico avanzado con plotly
+plot_ly(x = ~fechasIC, y = ~tendenciaIC, mode = 'lines', text = paste("Tendencia =", tendenciaIC), width = 700, height = 400, type = "scatter") %>%
+  layout(title="Componente de Tendencia para Importaciones Colombia", xaxis = list(title ="Año"), yaxis = list(title = TeX("T_t"))) %>% config(mathjax = 'cdn') %>% 
+layout(shapes=list(
+  list(type='line', x0=1965, x1=1965, y0=12, y1=22, line = list(dash = "dot")), 
+  list(type='line', x0=1986, x1=1986, y0=12, y1=22, line = list(dash = "dot")),
+  list(type='line', x0=2001, x1=2001, y0=12, y1=22, line = list(dash = "dot"))))  %>%
+layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
+  
+```
+</pre>
+
+
+## Modelo de descopmposición
+Dado lo anterior, el modelo de descomposición puede definirse como
+
+* Componente adivito: `$Y_t = T_t + S_t + \varepsilon_t$`
 
 ## Funciones de pérdida
 
