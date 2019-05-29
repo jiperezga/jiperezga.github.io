@@ -67,11 +67,10 @@ Es la distancia o ampluitud que hay entre el valor máximo y mínimo en un conju
 
 Entre las funciones base del programa <tt>R</tt> no hay ninguna función que calcule el rango de un conjunto de observaciones, pero éste es fácil de calcular mediante la resta del valor máximo y mínimo, o creando una función que realice el cálculo, de la forma
 
-```{r eval=FALSE}
-Rango <- function(x) {
-max(x) - min(x)
-}
+```{r, eval=FALSE}
+Rango <- function(x) max(x) - min(x)
 ```
+
 
 Una vez creada la función, puede calcularse el rango de un conjunto de observaciones mediante la función `Rango(datos)`. 
 
@@ -92,12 +91,22 @@ Es la desviación estándar como un porcentaje de la media aritmética de un con
 Entre las funciones base del programa <tt>R</tt> no hay ninguna función que calcule el coeficiente de variación de un conjunto de observaciones, pero éste es fácil de calcular mediante el cociente entre la desviación estándar `$S$` y el valor absoluto de la media `$\bar{X}$`, o creando una función que realice el cálculo, de la forma
 
 ```{r eval=FALSE}
-CV <- function(x) {
-sd(datos)/abs(mean(datos))
-}
+CV <- function(x) sd(datos) / abs(mean(datos))
 ```
 
 Una vez creada la función, puede calcularse el coeficiente de variación de un conjunto de observaciones mediante la función `CV(datos)`. 
+
+### Desviación absoluta mediana
+Es una medida de la variabilidad de un conjunto de observaciones respecto a su mediana
+
+`\begin{align*}
+  MAD=b*Me(|X_i-\tilde{X}|)
+\end{align*}`
+
+donde `$b$` es una constante definida como `$b=1/Q_{3}$`, con `$Q_{3}$` el valor del tercer cuartil de la distribución de interés y con `$Me(|X_i-\tilde{X}|)$` la mediana del valor absoluto de la diferencia `$X_i-\tilde{X}$`. Además, si la distribución es normal, entonces `$b\approx1.4826$`.
+
+En <tt>R</tt> puede calcularse la desviación absoluta mediana de un conjunto de observaciones, asumiendo que la distribución es normal, mediante la función `mad(datos)`, si no es posible asumir que la distribución es normal, entonces puede calcularse mediante la función `mad(datos, constant = b)`.
+
 
 ### Medidas de forma
 Estas medidas tienen por objetivo evidenciar si el conjunto de observaciones tiene o no una forma simétrica y observar su nivel de concentración.
@@ -134,6 +143,37 @@ El signo de `$\gamma_2$` indica el nivel de concentración.
 ![](../../EstadisticaI/images/curtosis.png)
 
 Entre las funciones base del programa <tt>R</tt> no hay ninguna función que calcule el coeficiente de exceso de curtosis de un conjunto de observaciones, pero es posible realizar el cálculo mediante la función `kurtosis(datos)` de la librería `e1071`.
+
+### Medidas de asociación
+Estas medidas tienen por objetivo estimar la magnitud con la que dos fenómenos se relacionan, en donde, entre mayor sean estas medidas, mayor será el grado de asociación que tendrán las variables. Si se define `$x_1, x_2, \ldots, x_n$` y `$y_1, y_2, \ldots, y_n$` como dos conjuntos de `$n$` observaciones, entonces 
+
+#### Covarianza
+Mide si existe o no dependencia lineal entre las variables, e indica el grado de variación conjunta de dos variables respecto a sus medias
+`\begin{align*}
+  S_{xy} = \frac{1}{n}\sum_{i=1}^n{(x_i-\bar{X})(y_i-\bar{Y})} 
+\end{align*}`
+
+El signo de `$S_{xy}$` indica el tipo de dependencia lineal que hay entre las variables.
+
+* `$S_{xy} > 0$` indica que hay dependencia lineal positiva entre las variables, es decir, cuando aumenta una variable, la otra también aumenta.
+* `$S_{xy} < 0$` indica que hay dependencia lineal negativa entre las variables, es decir, cuando aumenta una variable, la otra disminuye.
+* `$S_{xy} \approx 0$` indica que no existencia dependencia lineal entre las dos variables.
+
+En <tt>R</tt> puede calcularse la covarianza de dos conjunto de observaciones mediante la función `cov(datos1, datos2)`.
+
+#### Correlación
+Mide la fuerza de la dependencia lineal que hay entre variables, esta va entre -1 y 1
+`\begin{align*}
+  \rho_{xy} = \frac{S_{xy}}{S_{x}S_{y}} \quad \quad -1<\rho_{xy}<1
+\end{align*}`
+
+El valor de `$\rho_{xy}$` indica el tipo y fuerza de la dependencia lineal que hay entre las variables
+
+* `$\rho_{xy} = 1$` indica que existe dependencia lineal positiva exacta entre las variables, es decir, cuando aumenta una variable, la otra aumenta proporcionalmente en la misma cantidad. Este aumento es de la forma `$Y = a + bX$` con `$a y b$` dos constantes, y `$b>0$`.
+* `$\rho_{xy} = -1$` indica que existe dependencia lineal negativa exacta entre las variables, es decir, cuando aumenta una variable, la otra disminuye proporcionalmente en la misma cantidad. Este aumento es de la forma `$Y = a + bX$` con `$a y b$` dos constantes, y `$b<0$`.
+* `$\rho_{xy} = 0$` No existe dependencia lineal entre las variables.
+
+En <tt>R</tt> puede calcularse la correlación de dos conjunto de observaciones mediante la función `cor(datos1, datos2)`.
 
 ## Introducción a R
 

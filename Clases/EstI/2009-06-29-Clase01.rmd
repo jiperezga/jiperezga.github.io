@@ -83,7 +83,7 @@ Es el promedio numérico de las `$n$` observaciones.
 En <tt>R</tt>, puede calcularse el valor promedio de un conjunto de observaciones mediante la función `mean(datos)`.
 
 #### Mediana
-Es el valor que ocupa el lugar central en un conjunto de datos, es decir, el valor que divide el conjunto de observaciones en dos partes que contienen el 50% de las observaciones. Para realizar el cálculo de la mediana es necesario ordenan inicialmente el conjunto de observaciones de forma creciente.
+Es el valor que ocupa el lugar central en un conjunto de datos, es decir, el valor que divide el conjunto de observaciones en dos partes que contienen el 50% de las observaciones. Para realizar el cálculo de la mediana es necesario ordenan inicialmente el conjunto de observaciones de forma ascendente.
 `\begin{align*}
   \tilde{X}=\begin{cases}x_{\left[\frac{(n+1)}{2}\right]} & \text{si } n \text{ es impar}\\\frac{1}{2}\left(x_{\left[\frac{n}{2}\right]}+x_{\left[\frac{n}{2}+1\right]}\right) & \text{si } n \text{ es par}\end{cases}
 \end{align*}`
@@ -101,6 +101,15 @@ keys[which.max(tabulate(match(x, keys)))]
 }
 ```
 Una vez creada la función, puede calcularse la moda de un conjunto de observaciones mediante la función `Mode(datos)`. 
+
+#### Media recortada
+Es una medida similar a la media, con la diferencia de que, en este caso, se ordenan las observaciones de forma ascendente, y luego se recortan un número `$r$` observaciones superiores e inferiores, tal que `$r=n*trim$`, siendo `$trim$` un valor porcentual entre 0 y 0.5
+
+`\begin{align*}
+  \bar{X}_{trim}=\frac{1}{n-2r}\sum_{i=r}^{n-r}x_i
+\end{align*}`
+
+En <tt>R</tt>, puede calcularse el valor de la media recortada de un conjunto de observaciones mediante la función `mean(datos, trim = trim)`.
 
 ### Medidas de localización
 Estas medidas tienen por objetivo dividir un conjunto de datos ordenado en partes iguales, entendidas estas como intervalos que contienen la misma proporción de observaciones. Si se define `$x_{[1]}, x_{[2]}, \ldots, x_{[n]}$`, como un conjunto de `$n$` observaciones ordenadas en forma creciente, entonces 

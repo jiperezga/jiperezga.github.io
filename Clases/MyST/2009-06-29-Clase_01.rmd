@@ -168,7 +168,7 @@ data(AirPassengers) # Carga base de datos de AirPassengers
 AP <- AirPassengers # Guarda base de datos de AirPassengers
 fechasNP <- seq(from = as.Date("1949/1/1"), length.out = length(AP), by = "months") # Crea feachas
 
-# install.packages("devtools") # Instala librería para descargar desde github
+# install.packages("devtools") # Instala librería en github
 # devtools::install_github("tidyverts/feasts") # Instala librería para realizar descomposición
 library(feasts)
 # install.packages("tsibble") # Para transformar datos a objeto tipo tsibble
@@ -200,7 +200,7 @@ p4 <- plot_ly(x = ~fechasNP, y = ~errorNP, mode = 'lines', text = paste("Error =
 
 subplot(p1, p2, p3, p4, nrows = 4, margin = 0.03) %>% 
   layout(title = "Componentes del Número de Pasajeros Aéreos entre 1949 y 1961",
-         yaxis = list(title = "datos"),
+         yaxis = list(title = TeX("Y_t")),
          yaxis2 = list(title = TeX("T_t")),
          yaxis3 = list(title = TeX("S_t")),
          yaxis4 = list(title = TeX("\\varepsilon_t")),
@@ -228,7 +228,7 @@ layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4))
 
 subplot(p1, p2, p3, p4, nrows = 4, margin = 0.03) %>% 
   layout(title = "Componentes del Número de Pasajeros Aéreos entre 1949 y 1961",
-         yaxis = list(title = "datos"),
+         yaxis = list(title = TeX("Y_t")),
          yaxis2 = list(title = TeX("T_t")),
          yaxis3 = list(title = TeX("S_t")),
          yaxis4 = list(title = TeX("\\varepsilon_t")),
@@ -268,7 +268,7 @@ p7 <- plot_ly(x = ~fechasIC, y = ~errorIC, mode = 'lines', text = paste("Error =
 subplot(p5, p6, p7, nrows = 3, margin = 0.05) %>% 
   layout(title = "Componentes de las Importaciones de
 Bienes y Servicios (% del PIB) entre 1960-2017",
-         yaxis = list(title = "datos"),
+         yaxis = list(title = TeX("Y_t")),
          yaxis2 = list(title = TeX("T_t")),
          yaxis3 = list(title = TeX("\\varepsilon_t")),
          xaxis3 = list(title = "Año"),
@@ -292,7 +292,7 @@ layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4))
 subplot(p5, p6, p7, nrows = 3, margin = 0.05) %>% 
   layout(title = "Componentes de las Importaciones de
 Bienes y Servicios (% del PIB) entre 1960-2017",
-         yaxis = list(title = "datos"),
+         yaxis = list(title = TeX("Y_t")),
          yaxis2 = list(title = TeX("T_t")),
          yaxis3 = list(title = TeX("\\varepsilon_t")),
          xaxis3 = list(title = "Año"),
@@ -435,7 +435,7 @@ layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4))
 
 El componente de fluctuación cícluca se denota como `$C_t$`, es el segundo componente de la serie que cambia más lentamente y se caracteriza por presentar patrones de onda en puntos recurrentes en el tiempo con duración más de un año. Este comportamiento es debido por ejemplo a ciclos comerciales que dependen de prosperidad, depresión, recesión y recuperación.
  
-Es de anotar que, los ciclos son el componente más difíciles de pronosticar, debido a que éstos poseen periodos más largos y amplitudes irregulares, lo cual hace que éstos no sean fijos ni predecibles, y por tanto, éstos se mezclan son mezclados generalmente con el componente de error `$\varepsilon$`.
+Es de anotar que, los ciclos son el componente más difíciles de pronosticar, debido a que éstos poseen periodos más largos (medida en años) y amplitudes irregulares (diferencias entre altas y bajas) que están lejos de ser constantes, lo cual hace que éstos no sean fijos ni predecibles, y por tanto, las fluctuaciones cíclicas son mezcladas generalmente con el componente de error `$\varepsilon$` o se asume que cualquier cíclo es parte de la tendencia `$T_t$`.
 
 
 Para el caso de las **Importaciones de bienes y servicios (% del PIB) entre 1960-2017** se tiene que
@@ -455,10 +455,44 @@ layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4))
 </pre>
 
 
-## Modelo de descopmposición
-Dado lo anterior, el modelo de descomposición puede definirse como
+## Modelo de descomposición
+Una vez separados los componentes que conforman una serie de tiempo, es necesario analizar la forma en que se relacionan estos con la serie original, puesto que al recombinar los componentes es posible obtener una serie de tiempo completamente pronosticable.
 
-* Componente adivito: `$Y_t = T_t + S_t + \varepsilon_t$`
+Existen diferentes modelos matemáticos para expresar la serie original `$Y_t$`, en términos de los componentes de tendencia `$T_t$`, estacionalidad `$S_t$`, fluctuaciones cíclicas `$C_t$` y errores `$\varepsilon_t$`, en donde, es posible ajustar la serie original a uno solo uno de los cuatro componentes o se una combinación de todos ellos. Para combinar los componentes, se tienen dos clases básicas de modelos matemáticos 
+
+* **Modelo aditivo:** `$Y_t = T_t + S_t + C_t + \varepsilon_t$`
+* **Modelo multiplicativo:** `$Y_t = T_t * S_t * C_t * \varepsilon_t$`
+
+en donde, como se mencionó en la subsección anterior, las fluctuaciones cíclicas `$C_t$` son el componente más difíciles de pronosticar, y por tanto, son mezcladas con el componente de error `$\varepsilon$` o se asume que son parte de la tendencia `$T_t$`, entonces el modelo aditivo y multiplicativo, puede ser reescritos como
+
+* **Modelo aditivo:** `$Y_t = T_t + S_t + \varepsilon_t$`
+* **Modelo multiplicativo:** `$Y_t = T_t * S_t * \varepsilon_t$`
+
+Es anotar que en el modelo aditivo se supone que los cuatro componentes de la serie de tiempo son independientes entre sí, y es propiado cuando la magnitud de las fluctuaciones estacionales de la
+serie no varía al hacerlo la tendencia, es decir, la serie de tiempo original tiene aproximadamente la misma variabilidad a lo largo de toda la serie.
+
+Mientras que, en el modelo multiplicativo se trabaja bajo el supuesto de que los cuatro componentes de la serie de tiempo no son necesariamente independientes, y por tanto, es apropiados cuando la magnitud de las fluctuaciones estacionales de la serie crece y decrece proporcionalmente con los crecimientos y decrecimientos de la tendencia, respectivamente, es decir, los valores de la serie se dispersan conforme la tendencia aumenta, o se reúnen conforme la tendencia disminuye.
+
+Adicionalmente, se destaca que muy a menudo las series, a pesar de no tener un comportamiento aditivo, pueden ser transformadas para ser modeladas de forma aditiva. Un ejemplo de ello son los logaritmos naturales, en donde, es posible convertir el modelo multiplicativo en un modelo aditivo, ya que si
+
+`\begin{align*}
+Y_t = T_t * S_t * \varepsilon_t$
+\end{align*}`
+
+entonces
+
+`\begin{align*}
+log(Y_t) = log(T_t) + log(S_t) + log(\varepsilon_t)
+\end{align*}`
+
+y por tanto, es posible realizar los pronosticos necesarios mediante una transformación, y una vez obtenidos estos, retornar los valores a la escala multiplicativa original.
+
+Existen algunas variantes para los modelos de descomposición básicos, tales como
+
+* **Modelo mixto:** `$Y_t = T_t * S_t + \varepsilon_t$`
+* **Modelo pseudo-aditivo:** `$Y_t = T_t (S_t + \varepsilon_t - 1)$`
+
+los cuales se emplean situaciones específicas, como por ejemplo, cuando la serie original posee fluctuaciones estacionales marcadamente pronunciadas y un movimiento de ciclos de tendencia, que es extremadamente dependiente del clima, o cuando la serie original posea un mes (o trimestre) que es mucho más alto o más bajo que todos los otros meses (o trimestres), respectivamente.
 
 ## Funciones de pérdida
 
