@@ -202,6 +202,7 @@ También se señala que el carácter `#`, se emplea para comentar el código o u
 
 ### Tipos de datos
 El lenguaje <tt>R</tt> admite tres tipos básico de datos, a saber
+
   * **Numericos:** Entero, Real o Complejo.
   * **Alfanuméricos:** Carácter o Sarta.
   * **Booleano:** Lógicos y Faltantes.

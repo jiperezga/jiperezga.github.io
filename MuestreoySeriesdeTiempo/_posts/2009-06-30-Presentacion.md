@@ -271,6 +271,14 @@ Individual, Parejas, Grupal
 </tbody>
 </table>
 
+Horario Monitor
+---------------
+
+Nombre: Daniel
+
+-   Lunes: 12-2, Salón 20-339.
+-   Miércoles: 2-4, Salón 20-350.
+
 Malla curricular Programas
 --------------------------
 

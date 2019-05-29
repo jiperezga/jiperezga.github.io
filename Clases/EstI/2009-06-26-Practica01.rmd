@@ -1,0 +1,136 @@
+---
+layout: post
+title: "Práctica01"
+main-class: 'practica'
+permalink: /EstadisticaI/EstI:title.html
+tags:
+
+introduction: Ejercicio sobre estadística descriptiva.
+header-includes:
+   - \usepackage{amsmath,amssymb,amsthm,amsfonts}
+   - \usepackage[sectionbib]{natbib}
+   - \usepackage[hidelinks]{hyperref}
+output:
+  md_document:
+    variant: markdown_strict+backtick_code_blocks+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash
+    preserve_yaml: TRUE
+always_allow_html: yes   
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding,
+  output_dir = "../../EstadisticaI/_posts/", output_format = "all"  ) })
+bibliography: "../../referencias.bib"
+csl: "../../apa.csl"
+---
+
+```{r knitr_init, echo=FALSE, cache=FALSE}
+library(knitr)
+## Global options
+opts_chunk$set(echo=TRUE,
+               cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE,
+               fig.path = paste0("../../EstadisticaI/images/", "Práctica01"),
+               cache.path = "../../EstadisticaI/cache/",
+               cache = FALSE)
+
+```
+
+## Encuesta
+Las siguientes preguntas tienen como objetivo, recolectar información sobre los hábitos y preferencias de los estudiantes universitarios que cursan carreras administrativas, respecto al consumo de bebidas alcohólicas y consumo de drogas, y para ello se construye la siguiente encuesta, la cual se realiza a los estudiantes de forma anónima (No se piden datos personales).
+
+### Preguntas de la Encuesta
+1. Lugar en el que se realiza la encuesta:
+   - Poblado: <i class="far fa-square"></i> 
+   - UdeaA: <i class="far fa-square"></i> 
+   - Carlos E. Restrepo: <i class="far fa-square"></i> 
+   - Villa de Aburrá: <i class="far fa-square"></i> 
+
+2. Lugar de estudio: 
+   - Universidad EAFIT: <i class="far fa-square"></i>
+   - Instituto Tecnológico Metropolitano: <i class="far fa-square"></i>
+   - Politécnico Colombiano Jaime Isaza Cadavid: <i class="far fa-square"></i>
+   - Universidad de Antioquia: <i class="far fa-square"></i>
+   - Universidad de Medellín: <i class="far fa-square"></i>
+   - Universidad Nacional de Colombia: <i class="far fa-square"></i>
+   - Otra: <i class="far fa-square"></i>
+3. Carrera: 
+   - Administración de Empresas o afines: <i class="far fa-square"></i>
+   - Contaduría Pública: <i class="far fa-square"></i>
+   - Economía: <i class="far fa-square"></i>
+   - Ingeniería Industrial o afines: <i class="far fa-square"></i>
+   - Finanzas o afines: <i class="far fa-square"></i>
+   - Otra: <i class="far fa-square"></i>
+4. Semestre que cursa actualmente: __________________________
+5. Promedio acumulado carrera: ____
+6. Sexo: 
+   - Masculino: <i class="far fa-square"></i>
+   - Femenino: <i class="far fa-square"></i>
+7. Edad: ___
+8. Estrato socioeconómico: 
+   - 1: <i class="far fa-square"></i>
+   - 2: <i class="far fa-square"></i>
+   - 3: <i class="far fa-square"></i>
+   - 4: <i class="far fa-square"></i>
+   - 5: <i class="far fa-square"></i>
+   - 6: <i class="far fa-square"></i>
+9. Trabaja actualmente: Sí: <i class="far fa-square"></i> No: <i class="far fa-square"></i>
+10. Ingresos mensuales: __________________________
+11. Consume bebidas alcoholicas: Sí: <i class="far fa-square"></i> No: <i class="far fa-square"></i>
+<br> Si la respuesta de la pregunta 11. es "No" pase a la pregunta 15 
+12. Con qué frecuencia a la semana consume bebida alcoholicas: 
+    - 1 día o ninguno: <i class="far fa-square"></i> 
+    - 2 días: <i class="far fa-square"></i> 
+    - 3 días: <i class="far fa-square"></i> 
+    - 4 días: <i class="far fa-square"></i> 
+    - 5 o más días: <i class="far fa-square"></i>  
+13. En el siguiente listado de bebidas alcohólicas, señale la que prefiere consumir:
+    - Aguardiente: <i class="far fa-square"></i>
+    - Cerveza: <i class="far fa-square"></i>
+    - Ron: <i class="far fa-square"></i>
+    - Tequila: <i class="far fa-square"></i>
+    - Vinacho con HALLS!!!!: <i class="far fa-square"></i>
+    - Vodka: <i class="far fa-square"></i>
+    - Whisky: <i class="far fa-square"></i>
+14. Cuanto dinero gasta en promedio a al mes en el consumo de bebidas alcohólicas: ______________
+15. Consume algún tipo de droga: Sí: <i class="far fa-square"></i> No: <i class="far fa-square"></i>
+<br> Si la respuesta de la pregunta 15. es "No" pase a la pregunta 19 
+16. Con qué frecuencia a la semana consume drogas: 
+    - 1 día o ninguno: <i class="far fa-square"></i> 
+    - 2 días: <i class="far fa-square"></i> 
+    - 3 días: <i class="far fa-square"></i> 
+    - 4 días: <i class="far fa-square"></i> 
+    - 5 o más días: <i class="far fa-square"></i>  
+17. En el siguiente listado de drogas, señale la que prefiere consumir: 
+    - Batman: <i class="far fa-square"></i>
+    - Bazuco: <i class="far fa-square"></i>
+    - Cocaína: <i class="far fa-square"></i>
+    - Éxtasis: <i class="far fa-square"></i>
+    - Marihuana: <i class="far fa-square"></i>
+    - Papel: <i class="far fa-square"></i>
+    - Perico: <i class="far fa-square"></i>
+    - Popper: <i class="far fa-square"></i>
+    - Tusi: <i class="far fa-square"></i>
+18. Cuanto dinero gasta en promedio a la semana en drogas: ______________
+19. Cómo se siente cuando alguien a su alrededor consume bebídas alcohólicas:
+    - Muy Cómodo
+    - Cómodo
+    - Indiferente
+    - Incómodo
+    - Muy Incómodo
+20. Cómo se siente cuando alguien a su alrededor consume drogas:
+    - Muy Cómodo
+    - Cómodo
+    - Indiferente
+    - Incómodo
+    - Muy Incómodo
+
+### Preguntas de la Encuesta
+La encuesta se aplicó a un total de 1784 estudiantes, y los resultados obtenidos pueden ser descargados del siguiente [Link](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/SimEncuesta.xlsx){:target="_blank"}
+
+
+## Referencias
+
+

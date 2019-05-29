@@ -150,6 +150,12 @@ column_spec(5, width = "3cm")
 
 ```
 
+## Horario Monitor
+Nombre: Daniel
+
+* Lunes: 12-2, Salón 20-339.
+* Miércoles: 2-4, Salón 20-350.
+
 ## Malla curricular Programas
 
 [Ingeniería Industrial](https://sites.google.com/site/mallasingindustrial/_/rsrc/1467895226507/version-8-estudiantes-2011-1-a-201-1/Malla%20versi%C3%B3n%207%20Ing%20Industrial.png){:target="_blank"} Versión 7.
