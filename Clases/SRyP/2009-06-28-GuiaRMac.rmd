@@ -54,11 +54,11 @@ En la ventana de introducción, simplemente haga click en Continuar
 
 ![](../../SeminarioRyPython/images/GuiaM3.jpg)
 
-En la ventana Léeme, puede leer la información allí presentada si es de su interes, y de click en el botón Continuar
+En la ventana Léeme, puede leer la información allí presentada si es de su interés, y de click en el botón Continuar
 
 ![](../../SeminarioRyPython/images/GuiaM4.jpg)
 
-En la ventana de Licencia, se presenta el contraro de licencia de la aplicación, puede leer la información allí presentada si es de su interes, y de click en el botón Continuar
+En la ventana de Licencia, se presenta el contrato de licencia de la aplicación, puede leer la información allí presentada si es de su interés, y de click en el botón Continuar
 
 ![](../../SeminarioRyPython/images/GuiaM5.jpg)
 
@@ -115,8 +115,8 @@ En cuyo caso, haga simplemente click en el botón Instalar.
 
 ![](../../SeminarioRyPython/images/GuiaM16.jpg)
 
-Esto hará, que se abra una ventana con un contrato de licencia, puede leer la información allí presentada si es de su interes, y de click en el botón Acepto.
+Esto hará, que se abra una ventana con un contrato de licencia, puede leer la información allí presentada si es de su interés, y de click en el botón Acepto.
 
 ![](../../SeminarioRyPython/images/GuiaM17.jpg)
 
-Esto hará que aparezca la ventana de instalación de la herramienta para desarrolladores, espere un par de minutos mientras el proceso finaliza. Y con ésto podrá user el programa sin ningún tipo de problema.
+Esto hará que aparezca la ventana de instalación de la herramienta para desarrolladores, espere un par de minutos mientras el proceso finaliza. Y con ésto podrá usar el programa sin ningún tipo de problema.
