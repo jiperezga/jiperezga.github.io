@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Práctica01"
+title: "Práctica 01"
 main-class: 'practica'
 permalink: /EstadisticaI/EstI:title.html
 tags:

@@ -5,7 +5,7 @@ main-class: 'presentacion'
 permalink: /EstadisticaI/EstI:title.html
 tags:
 
-introduction: Presentación del curso de Estadística I y generalidades a tener en cuenta
+introduction: Presentación del curso de Estadística I y generalidades a tener en cuenta.
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
