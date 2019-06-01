@@ -60,7 +60,7 @@ layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4))
 ```
 </pre>
 
-Otro ejemplo, se presenta para el material particulado `$PM_{10}$` y `$PM_{2.5}$` en la ciudad de Medellín para el mes de abril del año 2019, el cual se registra en intervalos de una hora
+Otro ejemplo, se presenta para el material particulado `$PM_{10}$` y `$PM_{2.5}$` en la ciudad de Medellín para el mes de abril del año 2019, para el cual se realizan los registros en intervalos de una hora
 
 <pre style="height:610px">
 ```{r echo=FALSE}
@@ -104,7 +104,7 @@ Un pronóstico es una predicción de algún evento futuros, que se hace a partir
 Un factor importante en la realización de pronósticos, es el método de pronóstico que se va a emplear. Según lo planteado por @Chase2009[, pp. 469-470], los pronósticos pueden ser clasificados en cuatro tipos diferentes, los cuales se definen como técnicas cualitativas, análisis de series de tiempo, relaciones causales o econométricas y modelos de simulación.
 
 ### Técnicas cualitativas
-Los pronósticos cualitativos son basados en opiniones subjetivas, en donde, la información empleada para realizar el pronóstico, se obtiene mediante el juicio de un grupo de expertos en el tema, con amplia experiencia en el área de interés, el cual entrega valores o rango de valores sobre el comportamiento futuro de la variable de estudio. Usualmente este método se emplea cuando la información que se tiene de la variable de interés, es escasa, no puede ser cuantificada o es poco confiable.
+Los pronósticos cualitativos son basados en opiniones subjetivas, en donde, la información empleada para realizar el pronóstico, se obtiene mediante el juicio de un grupo de expertos en el tema, con amplia experiencia en el área de interés, el cual entrega valores o rangos de valores sobre el comportamiento futuro de la variable de estudio. Usualmente este método se emplea cuando la información que se tiene de la variable de interés, es escasa, no puede ser cuantificada o es poco confiable.
 
 Entre las técnicas empleadas para realizar pronósticos subjetivos se destacan
 
@@ -116,7 +116,7 @@ las entradas de cada uno de los vendedores que están más cerca de su territori
 * Método Delphi <!-- Un grupo de expertos responde un cuestionario. Un moderador recopila los resultados y formula un cuestionario nuevo que se presenta al grupo. Por lo tanto, existe un proceso de aprendizaje para el grupo mientras recibe información nueva y no existe ninguna influencia por la presión del grupo o individuos dominantes. -->
 
 ### Análisis de series de tiempo
-Los pronósticos basados en análisis de series de tiempo, son aquellos que emplean la información histórica de una variable de interés, con el objetivo de descubrir patrones que permitan extrapolar la dicha información, para realizar proyecciones hacia el futuro.
+Los pronósticos basados en análisis de series de tiempo, son aquellos que emplean la información histórica de una variable de interés, con el objetivo de descubrir patrones que permitan extrapolar dicha información, para realizar proyecciones hacia el futuro.
 
 Entre las técnicas empleadas para realizar pronósticos mediante análisis de series de tiempo se destacan
 
@@ -125,11 +125,11 @@ Entre las técnicas empleadas para realizar pronósticos mediante análisis de s
 * Suavización exponencial <!-- Los puntos de datos recientes se ponderan más y la ponderación sufre una reducción exponencial conforme los datos se vuelven más antiguos. -->
 * Análisis de regresión <!-- Ajusta una recta a los datos pasados casi siempre en relación con el valor de los datos. La técnica de ajuste más común es la de los mínimos cuadrados. -->
 * Técnica Box Jenkins <!-- Muy complicada, pero al parecer la técnica estadística más exacta que existe. Relaciona una clase de modelos estadísticos con los datos y ajusta el modelo con las series de tiempo utilizando distribuciones bayesianas posteriores. -->
-* Series de tiempo Shiskin <!-- Un método efectivo para dividir una serie temporal en temporadas, tendencias e irregular. Necesita un historial por lo menos de 3 años. Muy eficiente para identificar los cambios, por ejemplo, en las ventas de una compañía. -->
+<!-- * Series de tiempo Shiskin Un método efectivo para dividir una serie temporal en temporadas, tendencias e irregular. Necesita un historial por lo menos de 3 años. Muy eficiente para identificar los cambios, por ejemplo, en las ventas de una compañía. -->
 * Proyecciones de tendencias <!-- Ajusta una recta matemática de tendencias a los puntos de datos y la proyecta en el futuro. -->
 
 ### Relaciones causales
-Los pronósticos causales, son basados en el hecho de que la serie de tiempo de interés, posee una relación de causa-efecto con una o más variables independientes, los cual permite proyectar el comportamiento de la serie de tiempo de interés dado el comportamiento que tengan las variables independientes.
+Los pronósticos causales, son basados en el hecho de que la serie de tiempo de interés, posee una relación de causa-efecto con una o más variables independientes, que permiten proyectar el comportamiento de la serie de tiempo de interés dado el comportamiento que tengan las variables independientes.
 
 Entre las técnicas empleadas para realizar pronósticos mediante análisis de series de tiempo se destacan
 
@@ -139,29 +139,31 @@ Entre las técnicas empleadas para realizar pronósticos mediante análisis de s
 * Principales indicadores <!-- Estadísticas que se mueven en la misma dirección que la serie a pronosticar, pero antes que ésta, como un incremento en el precio de la gasolina que indica una baja futura en la venta de autos grandes. -->
 
 ### Modelos de simulación
-Los pronósticos basados en modelos de simulación, son aquellos que dependen de un gran número de variables y las relaciones que poseen con factores exógenos, y por tanto, es posible realizar hacer énfasis en la estructura del modelo, mediante la suposición del comportamiento de las variables internas y el ambiente externo para observar cómo afectan éstas a los pronósticos.
+Los pronósticos basados en modelos de simulación, son aquellos que dependen de un gran número de variables y las relaciones que poseen con factores exógenos, y por tanto, es posible hacer énfasis en la estructura del modelo, mediante la suposición del comportamiento de las variables internas y el ambiente externo para observar cómo afectan éstas a los pronósticos.
 
 
 ## Tipos de pronóstico
-Una vez definido el método de pronóstico que se desea emplear, es necesario decidir el tipo de pronóstico que se desea realizar, es decir, definir si se desea realizar un pronóstico **puntual**, por **intervalo** o de **densidad**.
+Una vez definido el método de pronóstico que se desea emplear, es necesario decidir el tipo de pronóstico que se va a realizar, es decir, definir si se desea realizar un pronóstico **puntual**, por **intervalo** o de **densidad**.
 
 
 ### Clases de pronóstico
-También es necesario definir la clase u horizonte de tiempo para el cual se va a realizar el pronostico, que depende de la frecuencia en que se tienen registrados los datos. @Montgomery2015[, p.2] señalan que los pronósticos puede ser clasificados en tres horizontes de tiempo
+También es necesario definir la clase u horizonte de tiempo para el cual se desea realizar el pronostico. @Montgomery2015[, p.2] señalan que los pronósticos puede ser clasificados en tres horizontes de tiempo
 
 * **Corto plazo**: son aquellos que buscan predecir eventos futuros en un horizonte de tiempo pequeño, es decir, días, semanas o meses, y son empleados generalmente para diseñar estrategias o tomar decisiones inmediata.
 * **Mediano plazo**: son predicciones que se realizan en un horizonte de tiempo un poco más amplio, el cual abarca estimaciones entre 1 y 2 años en el futuro, y se utiliza en general para diseñar presupuestos o procesos de producción y planeación de variables operativas.
 * **Largo plazo**: son aquellos pronósticos que se extienden a horizontes de tiempo mucho más grandes, puesto que éstos pueden extenderse a muchos años en el futuro, y se emplean en procesos de planificación, programación y proyección de proyectos.
 
 ### Monitoreo de los pronósticos
-Los pronósticos, al igual que otros procesos, requieren de supervisión continua, ya que, de no supervisar o evaluar su calidad constantemente, éste podría salirse de control y dar resultados que erróneos. Por ello, en @Hanke2010 se establece un diagrama de flujo, en el cual se presenta los pasos operativos para el monitoreo del proceso de pronóstico
+Los pronósticos, al igual que otros procesos, requieren de supervisión continua, puesto que, de no supervisar o evaluar su calidad constantemente, éste podría salirse de control y dar resultados erróneos o poco confiable.
+
+Debido a ésto, en @Hanke2010 se establece un diagrama de flujo, en el cual se presenta los pasos operativos para el monitoreo del proceso de pronóstico
 
 ![](../../MuestreoySeriesdeTiempo/images/monitoreopronostico.jpg)
 
 ## Componentes de una serie de tiempo
-Para el análisis de series de tiempo, y pronostico de las mismas, es necesario realizar una adecuada selección del modelo que se va a emplear, y por ello, es fundamental hacer una precisa identificación de los componentes que conforman la serie, los cuales pueden ser divididos en los componentes de tendencia, estacionalidad, error y fluctuación cíclica.
+Para el análisis de series de tiempo, y pronostico de las mismas, es necesario realizar una adecuada selección del modelo que se va a emplear, y por ello, es fundamental hacer una precisa identificación de los componentes que conforman la serie, los cuales pueden ser divididos en cuatro componentes, a saber, tendencia, estacionalidad, error y fluctuación cíclica.
 
-Para ilustrar el proceso de descomposición, se emplean dos conjuntos de datos. El primero corresponde a al total mensual de pasajeros de líneas aéreas internacionales, para los años 1949 a 1960, la cual se encuentra integrada en la base de <tt>R</tt>. 
+Para ilustrar el proceso de descomposición, se emplean dos conjuntos de datos. El primer conjuto de datos, se encuentra integrado en la base de <tt>R</tt> y  corresponde al **total mensual de pasajeros de líneas aéreas internacionales, para los años 1949 a 1960**. 
 
 ```{r}
 data(AirPassengers) # Carga base de datos de AirPassengers
@@ -169,7 +171,7 @@ AP <- AirPassengers # Guarda base de datos de AirPassengers
 
 descAP <- stl(AP, s.window = 12)
 
-plot(descAP, main="Componentes del Número de Pasajeros Aéreos", col = "chocolate1", lwd = 2)
+plot(descAP, main = "Componentes del total de pasajeros de líneas aéreas", col = "chocolate1", lwd = 2)
 ```
 
 <pre style="height:610px">
@@ -179,6 +181,8 @@ plot(descAP, main="Componentes del Número de Pasajeros Aéreos", col = "chocola
 library(feasts)
 # install.packages("tsibble") # Para transformar datos a objeto tipo tsibble
 library(tsibble)
+# install.packages("plotly") ## Instala librería para hacer grágicos avanzados
+library(plotly)
 
 # Extracción de los componentes del número de pasajeros áereos
 AP2 <- as_tsibble(AP) # Transforma el conjunto de datos a una base "tibble"
@@ -188,8 +192,6 @@ estacionalNP <-  descNP$season_year # Se separa componente estacional
 tendenciaNP <-  descNP$trend # Se separa componente de tendencia
 errorNP <-  descNP$remainder # Se separa componente de error
 
-# install.packages("plotly") ## Instala librería para hacer grágicos avanzados
-library(plotly)
 # Gráfico avanzado con plotly
 p1 <- plot_ly(x = ~AP2$index, y = ~AP2$value, mode = 'lines+markers', width = 700, height = 400, type = "scatter", name = "Datos") 
 
@@ -200,7 +202,7 @@ p3 <- plot_ly(x = ~AP2$index, y = ~tendenciaNP, mode = 'lines', width = 700, hei
 p4 <- plot_ly(x = ~AP2$index, y = ~errorNP, width = 700, height = 400, type = "bar", name = "Error") 
 
 subplot(p1, p2, p3, p4, nrows = 4, margin = 0.03) %>% 
-  layout(title = "Componentes del Número de Pasajeros Aéreos",
+  layout(title = "Componentes del total de pasajeros de líneas aéreas",
          yaxis = list(title = TeX("Y_t")),
          yaxis2 = list(title = TeX("S_t")),
          yaxis3 = list(title = TeX("T_t")),
@@ -211,12 +213,12 @@ subplot(p1, p2, p3, p4, nrows = 4, margin = 0.03) %>%
 ```
 </pre>
 
-La segunda corresponde a las Variaciones porcentual de los ingresos reales totales de hoteles en Colombia entre Junio 2005 y Marzo 2019.
+El segundo conjunto de datos, corresponde a las **variaciones porcentual de los ingresos reales totales de hoteles en Colombia entre Junio 2005 y Marzo 2019** [Descargar](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/ingresorealhoteles2019.xlsx){:target="_blank"}.
 
 ```{r}
 # install.packages("readxl") ## Instala librería para abrir archivos de Excel
 library(readxl) ## Cargar librería
-  datos <- read_xlsx("https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/ingresorealhoteles2019.xlsx")
+datos <- read_xlsx("../../Dataset/ingresorealhoteles2019.xlsx")
 ingH <- ts(datos$`Variacion  ingresos`, start = c(2005,7), frequency = 12) # Transforma observaciones a tipo time-series
 
 descIH <- stl(ingH, s.window = 12)
@@ -258,20 +260,21 @@ de los ingresos reales de hoteles",
 
 ### Componente de tendencia
 
-El componente de tendencia se denota `$T_t$`, es el componente de la serie que cambia más lentamente y describe el patrón suave que tiene una serie a largo plazo respecto a su nivel promedio (evolución a largo plazo de su media), el cual es caracterizado por un crecimiento o decrecimiento presistente. El comportamiento de la tendencia, puede ser explicado por el crecimiento o cambio de la población, el cambio tecnológico, el crecimiento económico, etc.
+El componente de tendencia se denota por `$T_t$`, es el componente de la serie que cambia más lentamente y describe el patrón suave que tiene una serie a largo plazo respecto a su nivel promedio (evolución a largo plazo de su media), el cual es caracterizado por un crecimiento o decrecimiento presistente. El comportamiento de la tendencia, puede ser explicado por el crecimiento o cambio de la población, el cambio tecnológico, el crecimiento económico, etc.
 
-Para el caso del **número de pasajeros áereos entre 1949 y 1961** se tiene que
+Para el caso del **total mensual de pasajeros de líneas aéreas internacionales, para los años 1949 a 1960** se tiene que
 ```{r}
 fechasAP <- seq(as.Date("1949/1/1"), length.out = length(AP), by = "month") ## Se definen fechas
 
-plot(x=fechasAP, y = descAP$time.series[, 2], main="Componente de Tendencia para Número de Pasajeros Aéreos", xlab="Fecha", ylab = expression(T[t]), col = "chocolate1", type = "l", pch = 19, lwd = 2)
+plot(x=fechasAP, y = descAP$time.series[, 2], main = "Componente de Tendencia para el total 
+de pasajeros de líneas aéreas", xlab = "Fecha", ylab = expression(T[t]), col = "chocolate1", type = "l", pch = 19, lwd = 2)
 ```
 
 <pre>
 ```{r echo=FALSE}
 # Gráfico avanzado con plotly
 plot_ly(x = ~AP2$index, y = ~tendenciaNP, mode = 'lines', width = 700, height = 400, type = "scatter") %>%
-  layout(title="Componente de Tendencia para Número de Pasajeros Aéreos", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("T_t"))) %>% config(mathjax = 'cdn') %>% 
+  layout(title = "Componente de Tendencia para el total de pasajeros de líneas aéreas", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("T_t"))) %>% config(mathjax = 'cdn') %>% 
 layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
 ```
 </pre>
@@ -289,7 +292,8 @@ de los ingresos reales de hoteles", xlab="Fecha", ylab = expression(T[t]), col =
 ```{r echo=FALSE}
 # Gráfico avanzado con plotly
 plot_ly(x = ~ingH2$index, y = ~tendenciaAH, mode = 'lines', width = 700, height = 400, type = "scatter") %>%
-  layout(title="Componente de Tendencia para variaciones porcentual de los ingresos reales totales de hoteles", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("T_t"))) %>% config(mathjax = 'cdn') %>% 
+  layout(title="Componente de Tendencia para variaciones porcentual
+de los ingresos reales totales de hoteles", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("T_t"))) %>% config(mathjax = 'cdn') %>% 
 layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
 ```
 </pre>
@@ -298,12 +302,13 @@ layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4))
 El componente estacional se denota como `$S_t$`, es el segundo componente de la serie que cambia más rápidamente y se describe como un patrón que se repite regularmente a través de la serie sobre una base anual. Este comportamiento es debido a factores tales como los consumos o las estaciones
 climáticas, es decir factores que ocurren con una periodicidad semanal, mensual, trimestral, o semestral.
 
-Es de anotar, que los efectos estacionales son fáciles de entender y se pueden medir explícitamente o incluso se pueden eliminar de la serie de datos, el cual es llamado desestacionalización de la serie
+Es de anotar, que los efectos estacionales son fáciles de entender y se pueden medir explícitamente o incluso se pueden eliminar de la serie de datos, el cual es llamado desestacionalización de la serie.
 
-Para el caso del **número de pasajeros áereos entre 1949 y 1961** se tiene que
+Para el caso del **total mensual de pasajeros de líneas aéreas internacionales, para los años 1949 a 1960** se tiene que
 
 ```{r}
-plot(x = fechasAP, y = descAP$time.series[, 1], main="Componente Estacional para Número de Pasajeros Aéreos", xlab="Fecha", ylab = expression(S[t]), col = "chocolate1", type = "l", pch = 19, lwd = 2)
+plot(x = fechasAP, y = descAP$time.series[, 1], main="Componente Estacional para para el total
+de pasajeros de líneas aéreas", xlab="Fecha", ylab = expression(S[t]), col = "chocolate1", type = "l", pch = 19, lwd = 2)
 abline(h = 0)
 ```
 
@@ -311,7 +316,8 @@ abline(h = 0)
 ```{r echo=FALSE}
 # Gráfico avanzado con plotly
 plot_ly(x = ~AP2$index, y = ~estacionalNP, mode = 'lines', width = 700, height = 400, type = "scatter") %>%
-  layout(title="Componente Estacional para Número de Pasajeros Aéreos", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("S_t"))) %>% config(mathjax = 'cdn') %>% 
+  layout(title="Componente Estacional para para el total
+de pasajeros de líneas aéreas", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("S_t"))) %>% config(mathjax = 'cdn') %>% 
 layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
 ```
 </pre>
@@ -340,18 +346,20 @@ El componente de error se denota como `$\varepsilon_t$`, también llamado ruido 
 
 Es de anotar, que este componente es impredecible, pero puede ser modelado como observaciones aleatorias de alguna distribución, tal como lo es, una distribución `$N(0,\sigma^2)$`.
 
-Para el caso del **número de pasajeros áereos entre 1949 y 1961** se tiene que
+Para el caso del **total mensual de pasajeros de líneas aéreas internacionales, para los años 1949 a 1960** se tiene que
 
 ```{r}
-plot(x = fechasAP, y = descAP$time.series[, 3], main="Componente de Error para Número de Pasajeros Aéreos", xlab="Fecha", ylab = expression(epsilon[t]), col = "chocolate1", type = "l", pch = 19, lwd = 2)
+plot(x = fechasAP, y = descAP$time.series[, 3], main="Componente de Error para el total
+de pasajeros de líneas aéreas", xlab="Fecha", ylab = expression(epsilon[t]), col = "chocolate1", type = "h", pch = 19, lwd = 2)
 abline(h = 0)
 ```
 
 <pre>
 ```{r echo=FALSE}
 # Gráfico avanzado con plotly
-plot_ly(x = ~AP2$index, y = ~errorNP, mode = 'lines', width = 700, height = 400, type = "scatter") %>%
-  layout(title="Componente de Error para Número de Pasajeros Aéreos", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("\\varepsilon_t"))) %>% config(mathjax = 'cdn') %>% 
+plot_ly(x = ~AP2$index, y = ~errorNP, width = 700, height = 400, type = "bar") %>%
+  layout(title="Componente de Error para el total
+de pasajeros de líneas aéreas", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("\\varepsilon_t"))) %>% config(mathjax = 'cdn') %>% 
 layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
 ```
 </pre>
@@ -360,14 +368,14 @@ Mientras que, para el caso de las **variaciones porcentual de los ingresos reale
 
 ```{r}
 plot(x = fechasIH, y = descIH$time.series[, 3], main="Componente de Error para variación porcentual
-de los ingresos reales de hoteles", xlab="Fecha", ylab = expression(epsilon[t]), col = "chocolate1", type = "l", pch = 19, lwd = 2)
+de los ingresos reales de hoteles", xlab="Fecha", ylab = expression(epsilon[t]), col = "chocolate1", type = "h", pch = 19, lwd = 2)
 abline(h = 0)
 ```
 
 <pre>
 ```{r echo=FALSE}
 # Gráfico avanzado con plotly
-plot_ly(x = ~ingH2$index, y = ~errorAH, mode = 'lines', width = 700, height = 400, type = "scatter") %>%
+plot_ly(x = ~ingH2$index, y = ~errorAH, width = 700, height = 400, type = "bar") %>%
   layout(title="Componente de Error para variación porcentual
 de los ingresos reales de hoteles", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("\\varepsilon_t"))) %>% config(mathjax = 'cdn') %>% 
 layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
@@ -386,37 +394,47 @@ Para el caso de las **variaciones porcentual de los ingresos reales totales de h
 <pre>
 ```{r echo=FALSE}
 # Gráfico avanzado con plotly
-plot_ly(x = ~ingH2$index, y = ~tendenciaAH, mode = 'lines', width = 700, height = 400, type = "scatter") %>%
-  layout(title="Componente de Tendencia para variación porcentual
-de los ingresos reales de hoteles", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("T_t"))) %>% config(mathjax = 'cdn') %>% 
+linear <- lm(ingH2$value ~ ingH2$index)
+
+plot_ly(x = ~ingH2$index, y = ~ingH2$value, mode = 'lines', width = 700, height = 400, type = "scatter", name = "Datos") %>%
+  layout(title="Componente cíclico para variación porcentual
+de los ingresos reales de hoteles", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("C_t"))) %>% config(mathjax = 'cdn') %>% 
 layout(shapes=list(
-  list(type='line', x0 = "2009-07-01", x1 = "2009-07-01", y0 = -6, y1 = 11, line = list(dash = "dot")), 
-  list(type='line', x0 = "2013-04-01", x1 = "2013-04-01", y0 = -6, y1 = 11, line = list(dash = "dot")),
-  list(type='line', x0 = "2017-04-01", x1 = "2017-04-01", y0 = -6, y1 = 11, line = list(dash = "dot"))))  %>%
+  list(type='line', x0 = "2007-10-01", x1 = "2007-10-01", y0 = -13, y1 = 19, line = list(dash = "dot")), 
+  list(type='line', x0 = "2010-10-01", x1 = "2010-10-01", y0 = -13, y1 = 19, line = list(dash = "dot")),
+  list(type='line', x0 = "2012-09-01", x1 = "2012-09-01", y0 = -13, y1 = 19, line = list(dash = "dot")),
+  list(type='line', x0 = "2014-04-01", x1 = "2014-04-01", y0 = -13, y1 = 19, line = list(dash = "dot")),
+  list(type='line', x0 = "2016-07-01", x1 = "2016-07-01", y0 = -13, y1 = 19, line = list(dash = "dot")),
+  list(type='line', x0 = "2018-03-01", x1 = "2018-03-01", y0 = -13, y1 = 19, line = list(dash = "dot"))))  %>% 
+add_lines(x = ~ingH2$index, y = ~tendenciaAH, name = "Tendencia") %>%
+add_lines(x = ~ingH2$index, y = ~fitted(linear), name = "Ajuste lineal") %>%
 layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
 ```
 </pre>
 
-Es de anotar, que además de tener tendencia, estacionalidad, error y fluctuación cíclica, algunas series de tiempo pueden presentar patrones de impulso, rampa o paso, pero estos efectos se escapan del alcance del curso, y por tanto, no serán tenidos en cuenta.
+### Otras componentes
+Es de anotar, que además de tener tendencia, estacionalidad, error y fluctuación cíclica, algunas series de tiempo pueden presentar patrones de impulso, rampa o paso
+
+* **Patrón de impulso:** Se observa cuando para uno o dos periodos, el proceso presenta un nivel superior o inferior al comportamiento original de la serie.
+* **Patrón de rampa:** Se observa cuando aparece un cambio de tendencia repentino en el comportamiento constante de la serie, o viceversa.
+* **Patrón de paso:** Se observa cuando hay cambio permanente en el nivel de la serie.
 
 ## Modelo de descomposición
 Una vez separados los componentes que conforman una serie de tiempo, es necesario analizar la forma en que se relacionan estos con la serie original, puesto que al recombinar los componentes es posible obtener una serie de tiempo completamente pronosticable.
 
-Existen diferentes modelos matemáticos para expresar la serie original `$Y_t$`, en términos de los componentes de tendencia `$T_t$`, estacionalidad `$S_t$`, fluctuaciones cíclicas `$C_t$` y errores `$\varepsilon_t$`, en donde, es posible ajustar la serie original a uno solo uno de los cuatro componentes o se una combinación de todos ellos. Para combinar los componentes, se tienen dos clases básicas de modelos matemáticos 
+Existen diferentes modelos matemáticos para expresar la serie original `$Y_t$`, en términos de los componentes de tendencia `$T_t$`, estacionalidad `$S_t$`, fluctuaciones cíclicas `$C_t$` y errores `$\varepsilon_t$`, en donde, es posible ajustar la serie original a uno solo uno de los cuatro componentes o se una combinación de todos ellos, para la posterior realización de pronósticos. Para combinar los componentes, se tienen dos clases básicas de modelos matemáticos 
 
 * **Modelo aditivo:** `$Y_t = T_t + S_t + C_t + \varepsilon_t$`
 * **Modelo multiplicativo:** `$Y_t = T_t * S_t * C_t * \varepsilon_t$`
 
-en donde, como se mencionó en la subsección anterior, las fluctuaciones cíclicas `$C_t$` son el componente más difíciles de pronosticar, y por tanto, son mezcladas con el componente de error `$\varepsilon$` o se asume que son parte de la tendencia `$T_t$`, entonces el modelo aditivo y multiplicativo, puede ser reescritos como
+en donde, como se mencionó en la subsección anterior, las fluctuaciones cíclicas `$C_t$` son el componente más difíciles de pronosticar, y por tanto, son mezcladas con el componente de error `$\varepsilon$` o se asume que son parte de la tendencia `$T_t$`. Entonces, el modelo aditivo y multiplicativo, puede ser reescritos como
 
 * **Modelo aditivo:** `$Y_t = T_t + S_t + \varepsilon_t$`
 * **Modelo multiplicativo:** `$Y_t = T_t * S_t * \varepsilon_t$`
 
-Es anotar que en el modelo aditivo se supone que los cuatro componentes de la serie de tiempo son independientes entre sí, y es propiado cuando la magnitud de las fluctuaciones estacionales de la serie no varía al hacerlo la tendencia, es decir, la serie de tiempo original tiene aproximadamente la misma variabilidad a lo largo de toda la serie.
+Es de anotar que en el modelo aditivo se supone que los tres componentes de la serie de tiempo son independientes entre sí, y es propiado emplearlo cuando la magnitud de las fluctuaciones estacionales de la serie no varía al hacerlo la tendencia, es decir, la serie de tiempo original tiene aproximadamente la misma variabilidad a lo largo de toda la serie.
 
-Mientras que, en el modelo multiplicativo se trabaja bajo el supuesto de que los cuatro componentes de la serie de tiempo no son necesariamente independientes, y por tanto, es apropiados cuando la magnitud de las fluctuaciones estacionales de la serie crece y decrece proporcionalmente con los crecimientos y decrecimientos de la tendencia, respectivamente, es decir, los valores de la serie se dispersan conforme la tendencia aumenta, o se reúnen conforme la tendencia disminuye.
-
-Un aspecto importante de anotar, sobre los modelos aditivos y multiplicativos es que, en el modelo aditivo siempre se asume que `$\varepsilon_t\stackrel{iid}{\sim}N(0,\sigma^2)$`, mientras que para el modelo multiplicativo, se sume que `$\varepsilon_t\stackrel{iid}{\sim}lognormal(\mu=0,\sigma^2)$`, y por tanto `$log(\varepsilon_t)\stackrel{iid}{\sim}N(0,\sigma^2)$`. Una alternativa para evaluar si los componentes de error son o no normales, es mediante los gráficos QQ-plot de la distribución Normal, y mediante la prueba Shapiro-Wilk. Éstas pueden realizarse en <tt>R</tt> mediante las funciones `qqnorm()` y `shapiro.test()`, respectivamente.
+Mientras que, en el modelo multiplicativo se trabaja bajo el supuesto de que los tres componentes de la serie de tiempo no son necesariamente independientes, y es apropiados emplearlo cuando la magnitud de las fluctuaciones estacionales de la serie crece y decrece proporcionalmente con los crecimientos y decrecimientos de la tendencia, respectivamente, es decir, los valores de la serie se dispersan conforme la tendencia aumenta, o se reúnen conforme la tendencia disminuye.
 
 Adicionalmente, se destaca que muy a menudo las series, a pesar de no tener un comportamiento aditivo, pueden ser transformadas para ser modeladas de forma aditiva. Un ejemplo de ello son los logaritmos naturales, en donde, es posible convertir el modelo multiplicativo en un modelo aditivo, ya que si
 
@@ -432,6 +450,10 @@ log(Y_t) = log(T_t) + log(S_t) + log(\varepsilon_t)
 
 y por tanto, es posible realizar los pronosticos necesarios mediante una transformación, y una vez obtenidos estos, retornar los valores a la escala multiplicativa original.
 
+Un aspecto importante, sobre los modelos aditivos y multiplicativos es que, en el modelo aditivo siempre se asume que `$\varepsilon_t\stackrel{iid}{\sim}N(0,\sigma^2)$`, mientras que para el modelo multiplicativo, se sume que `$\varepsilon_t\stackrel{iid}{\sim}lognormal(\mu=0,\sigma^2)$`, y por tanto, mediante la transformación logaritmica del modelo multiplicativo se tiene que `$log(\varepsilon_t)\stackrel{iid}{\sim}N(0,\sigma^2)$`.
+
+Una alternativa para evaluar si los componentes de error son o no normales, es mediante los gráficos QQ-plot de la distribución Normal, y mediante la prueba Shapiro-Wilk. Éstas pueden realizarse en <tt>R</tt> mediante las funciones `qqnorm()` y `shapiro.test()`, respectivamente.
+
 Existen algunas variantes para los modelos de descomposición básicos, tales como
 
 * **Modelo mixto:** `$Y_t = T_t * S_t + \varepsilon_t$`
@@ -443,7 +465,7 @@ los cuales se emplean situaciones específicas, como por ejemplo, cuando la seri
 ### Autocorrelación
 Uno de los aspectos más importantes de la series de tiempo es que sus observaciones no son independientes de sus observaciones pasadas, y por ello, debe realizarse un análisis de dependencia o correlación entre las observaciones y sus rezagos, el cual posee el nombre de análisis de autocorrelación, correlación serial o covariación. 
 
-El objetivo será entonces, usar la estructura de correlación que posee la serie temporal consigo misma, para tratar de explicar parte de su variación, identificar si existen patrones repetitivos que se encuentran enmascarados bajo el ruido y observar a partir de qué rezago deja de ser significativo el efecto que tienen éstos sobre las demás observaciones.
+El objetivo será entonces, usar la estructura de correlación que posee la serie temporal consigo misma, para tratar de explicar parte de su variación, identificar si existe de forma analítica patrones repetitivos que se encuentran enmascarados bajo el ruido y observar a partir de qué rezago deja de ser significativo el efecto que tienen éstos sobre las demás observaciones.
 
 Con tal proposito en mente, en una serie de tiempo, se define la varianza muestral de las observaciones como
 `\begin{align*}
@@ -464,9 +486,9 @@ donde `$k$` es el número de rezagos o autocorrelaciones que se desean calcular.
 
 La selección del número de autocorrelaciónes puede llevarse a cabo arbitrariamente a partir de los conocimientos del investigador, o mediante la regla empírica para el número máximo de rezagos que deben seleccionarse  `$max(k)=\frac{n}{4}$`.
 
-Para facilitar la visualización e interpretación de la autocorrelación, se hace a través del empleo del correlograma o función de autocorrelación **(ACF)**, la cual muestran la correlación que hay entre observaciones separadas por `$k$` intervalos de tiempo o "lags". 
+Para facilitar la visualización e interpretación de la autocorrelación, se emplea un gráfico conocido como correlograma o función de autocorrelación **(ACF)**, la cual muestran la correlación que hay entre observaciones separadas por `$k$` intervalos de tiempo o "lags". 
 
-A continuación se presenta el correlograma del **número de pasajeros áereos entre 1949 y 1961**
+A continuación se presenta el correlograma del **total mensual de pasajeros de líneas aéreas internacionales, para los años 1949 a 1960**
 
 ```{r}
 acf(AP, main = "Número de Pasajeros Aéreos")
@@ -475,14 +497,15 @@ acf(AP, main = "Número de Pasajeros Aéreos")
 <pre>
 ```{r echo=FALSE}
 acfAP <- AP2 %>% ACF(value) # Calcula valores de ACF
-acfCI <- function(x) qnorm((1 + 0.95)/2)/sqrt(nrow(x)) # Crea función para intervalo de confianza ACF
+acfCI <- function(x) qnorm((1 + 0.95)/2)/sqrt(sum(!is.na(x))) # Crea función para intervalo de confianza ACF
 ### Gráfico avanzado
 plot_ly(data = acfAP, width = 700, height = 400) %>%
-  layout(title="ACF para Número de Pasajeros Aéreo", xaxis = list(title ="Lags"), yaxis = list(title = "ACF")) %>% 
+  layout(title="ACF para el total
+de pasajeros de líneas aéreas", xaxis = list(title ="Lags"), yaxis = list(title = "ACF")) %>% 
 add_bars(x = ~acfAP$lag, y = ~acfAP$acf, width = 0.2, text = paste("Autocorrelación =", acfAP$acf)) %>% 
 layout(shapes=list(
-  list(type='line', x0=0, x1=nrow(acfAP), y0=acfCI(AP2), y1=acfCI(AP2), line = list(dash = "dot")),
-  list(type='line', x0=0, x1=nrow(acfAP), y0=-acfCI(AP2), y1=-acfCI(AP2), line = list(dash = "dot")))) %>%
+  list(type='line', x0=0, x1=nrow(acfAP), y0=acfCI(AP2$value), y1=acfCI(AP2$value), line = list(dash = "dot")),
+  list(type='line', x0=0, x1=nrow(acfAP), y0=-acfCI(AP2$value), y1=-acfCI(AP2$value), line = list(dash = "dot")))) %>%
 layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
 ```
 </pre>
@@ -490,7 +513,7 @@ layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4))
 Para el caso de las **variaciones porcentual de los ingresos reales totales de hoteles en Colombia entre Junio 2005 y Marzo 2019** se tiene que
 
 ```{r}
-acf(ingH, main = "variaciones porcentual de los ingresos reales totales de hoteles")
+acf(ingH, main = "ACF para variaciones porcentual ingresos reales totales de hoteles")
 ```
 
 <pre>
@@ -507,7 +530,7 @@ layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4))
 ```
 </pre>
 
-### Interpretación Correlograma
+### Interpretación correlograma e identificación de componentes
 Basados en @Rios2008, los criterios para la interpretación del correlograma están dados por
 
 * La altura de la líneas en el correlograma representa la correlación entre las observaciones que están separadas por la cantidad de unidades de tiempo que aparecen en el eje horizontal.
@@ -522,19 +545,55 @@ Basados en @Rios2008, los criterios para la interpretación del correlograma est
 * Si las autocorrelaciones decrecen linealmente, pasando por el cero, o muestra un patrón cíclico, pasando por cero varias veces, la serie **no es estacionaria**. Se tendrá que diferenciarla una o más veces antes de modelarla.
 * Si las autocorrelaciones muestran estacionalidad, o se tiene una alza cada periodo (cada 12 meses, por ejemplo), la serie **no es estacionaria** y hay que diferenciarla con un salto igual al periodo.
 
-A continuación se presenta el correlograma del **número de pasajeros áereos entre 1949 y 1961**, mediante la diferenciación de un salto igual a 12 meses.
+A continuación se presenta el correlograma de la diferenciación de un salto igual a 12 meses del **total mensual de pasajeros de líneas aéreas internacionales, para los años 1949 a 1960**.
 
 ```{r}
 AP12 <- diff(AP, lag = 12)
-acf(AP12, main = "Serie diff(NPA,12)")
-AP121 <- diff(AP12, lag = 1)
-acf(AP121, main = "Serie diif(diff(NPA, 12), 1)")
+acf(AP12, main = "ACF diff(total de pasajeros de líneas aéreas, 12)")
 ```
+
+<pre>
+```{r echo=FALSE}
+AP2 <- mutate(AP2, diff12 = difference(value, order_by = index, lag = 12))
+acfAPdiff12 <- AP2 %>% ACF(diff12)
+
+### Gráfico avanzado
+plot_ly(data = acfAPdiff12, width = 700, height = 400) %>%
+  layout(title="ACF diff(total de pasajeros de líneas aéreas, 12)", xaxis = list(title ="Lags"), yaxis = list(title = "ACF")) %>% 
+add_bars(x = ~acfAPdiff12$lag, y = ~acfAPdiff12$acf, width = 0.2, text = paste("Autocorrelación =", acfAPdiff12$acf)) %>% 
+layout(shapes=list(
+  list(type='line', x0=0, x1=nrow(acfAPdiff12), y0=acfCI(AP2$diff12), y1=acfCI(AP2$diff12), line = list(dash = "dot")),
+  list(type='line', x0=0, x1=nrow(acfAPdiff12), y0=-acfCI(AP2$diff12), y1=-acfCI(AP2$diff12), line = list(dash = "dot")))) %>%
+layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
+```
+</pre>
+
+Posteriormente se presenta el correlograma de la doble diferenciación 1 mes y de un salto igual a 12 meses para el **total mensual de pasajeros de líneas aéreas internacionales, para los años 1949 a 1960**.
+
+```{r}
+AP121 <- diff(AP12, lag = 1)
+acf(AP121, main = "Serie diif(diff(total de pasajeros de líneas aéreas, 12), 1)")
+```
+
+<pre>
+```{r, echo=FALSE}
+AP2 <- mutate(AP2, diff121 = difference(diff12, order_by = index, lag = 1))
+acfAPdiff121 <- AP2 %>% ACF(diff121)
+### Gráfico avanzado
+plot_ly(data = acfAPdiff121, width = 700, height = 400) %>%
+  layout(title="ACF diff(diff(total de pasajeros de líneas aéreas, 12), 1)", xaxis = list(title ="Lags"), yaxis = list(title = "ACF")) %>% 
+add_bars(x = ~acfAPdiff121$lag, y = ~acfAPdiff121$acf, width = 0.2, text = paste("Autocorrelación =", acfAPdiff121$acf)) %>% 
+layout(shapes=list(
+  list(type='line', x0=0, x1=nrow(acfAPdiff121), y0=acfCI(AP2$diff121), y1=acfCI(AP2$diff121), line = list(dash = "dot")),
+  list(type='line', x0=0, x1=nrow(acfAPdiff121), y0=-acfCI(AP2$diff121), y1=-acfCI(AP2$diff121), line = list(dash = "dot")))) %>%
+layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
+```
+</pre>
 
 ## Evaluación de los pronósticos (Funciones de pérdida)
 Otro aspecto de suma importancia en los pronósticos, es evaluar la precisión o eficiencia del método de pronóstico empleado, y para ello, se emplean diferentes indicadores que permiten identificar qué tan acertado o cercano es el pronostico realizado respecto a su valor original.
 
-Para aplicar dichos métodos, una alternativa es la implementación de un procedimiento conocido como *validación cruzada*, el cual consta de dividir el conjunto de observaciones de la serie en dos grupos. El primer grupo estará dado por las observaciones `$\{Y_1, Y_2, \ldots, Y_{T-m}\}$`, denotadas como datos de entrenamiento, y serán las observaciones que se emplearán para realizar la estimación del modelo. El segundo grupo estará dado por las observaciones `$\{Y_{T-m+1}, Y_{T-m+2}, \ldots, Y_{T}\}$`, denotadas como datos de validación, y serán las observaciones que se emplearán para evaluar el desempeño de los modelos.
+Para aplicar dichos métodos, una alternativa es la implementación de un procedimiento conocido como *validación cruzada*, el cual consta de dividir el conjunto de observaciones de la serie en dos grupos. El primer grupo estará dado por las observaciones `$\{Y_1, Y_2, \ldots, Y_{T-m}\}$`, denotadas como datos de entrenamiento, y serán las observaciones que se emplearán para realizar la estimación del modelo y estimación de los pronósticos. El segundo grupo estará dado por las observaciones `$\{Y_{T-m+1}, Y_{T-m+2}, \ldots, Y_{T}\}$`, denotadas como datos de validación, y serán las observaciones que se emplearán para evaluar el desempeño de los modelos.
 
 Entonces, suponga que a partir del conjunto de entrenamiento se realizan los pronósticos `$\{\hat{Y}_{T-m+1}, \hat{Y}_{T-m+2}, \ldots, \hat{Y}_{T}\}$`, entonces puede definirse el error de estimación `$e_t=\hat{varepsilon}_t$`, entre las observación real `$t$` y el valor pronosticado `$t$`, de la forma
 `\begin{align*}
@@ -626,15 +685,8 @@ Esta medida está definida como
 RMSE=\sqrt{\frac{1}{n}\sum_{t=T-m+1}^T (e_t)^2}
 \end{align*}`
 
-
-
-a que ésto permite caracterizar o registrar los pérdidas, costos o desútilidades asociadas a varios pares de previsiones y realizaciones.
-
-Para la evaluación del desempeño predictivo se emplean diferentes indicadores que cuantifican qué tan cerca está la variable pronosticada de su serie de datos correspondiente. 
-
-It is not uncommon that several adequate models can be found to represent a series. The ultimate choice of a model may depend on the goodness of fit, such as the residual mean square or criteria discussed in Chapter 7. If the main purpose of a model is to forecast future values, then alternative criteria for model selection can be based on forecast errors. Let the I-step ahead forecast error be
-
-
+* La RMSE no es más que la raíz cuadrada de la MSE calculada.
+* Todas las demás propiedades de MSE se mantienen para RMSE también.
 
 ## Bibliografía
 

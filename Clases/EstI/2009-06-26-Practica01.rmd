@@ -48,7 +48,7 @@ Es de anotar que la encuesta se hace de forma anónima, es decir, no se piden da
 ### Preguntas de la encuesta
 1. Lugar en el que se realiza la encuesta:
    - Poblado: <i class="far fa-square"></i> 
-   - UdeaA: <i class="far fa-square"></i> 
+   - UdeA: <i class="far fa-square"></i> 
    - Carlos E. Restrepo: <i class="far fa-square"></i> 
    - Villa de Aburrá: <i class="far fa-square"></i> 
 
