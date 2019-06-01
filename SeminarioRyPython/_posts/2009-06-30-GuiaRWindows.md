@@ -52,7 +52,7 @@ preferencia y haga click en Aceptar
 ![](../../SeminarioRyPython/images/GuiaW3.jpg)
 
 En la ventana de información, puede leer la información allí presentado
-si es de su interes, y de click en el botón siguiente
+si es de su interés, y de click en el botón siguiente
 
 ![](../../SeminarioRyPython/images/GuiaW4.jpg)
 

@@ -45,7 +45,7 @@ opts_chunk$set(echo=TRUE,
 
 ## Introducción
 
-Una serie de tiempo es una secuencia de observaciones registradas y ordenadas de forma periódica, en intervalos de tiempo igualmente espaciados, tales como, días, meses, semestres, años, entre otros. Estas observaciones son caracterizadas por una variable aleatoria `$Y_t$`, la cual depende del tiempo `$t=1,2,\ldots,N$`, y donde el objetivo es modelar el comportamiento de `$Y_t$` contra `$t$`, siendo `$N$` el número total de observaciones que se tenga en la serie de tiempo.
+Una serie de tiempo es una secuencia de observaciones registradas y ordenadas de forma periódica, en intervalos de tiempo igualmente espaciados, tales como, días, meses, semestres, años, entre otros. Estas observaciones son caracterizadas por una variable aleatoria `$Y_t$`, la cual depende del tiempo `$t=1,2,\ldots,T$`, y donde el objetivo es modelar el comportamiento de `$Y_t$` contra `$t$`, siendo `$T$` el número total de observaciones que se tenga en la serie de tiempo.
 
 Un ejemplo de una serie temporal, se presenta a continuación donde se muestra el % anual del `$PIB$` per cápita de Colombia, para un intervalo de tiempo anual que va desde 1961 hasta 2017
 
@@ -166,8 +166,14 @@ Para ilustrar el proceso de descomposición, se emplean dos conjuntos de datos. 
 ```{r}
 data(AirPassengers) # Carga base de datos de AirPassengers
 AP <- AirPassengers # Guarda base de datos de AirPassengers
-fechasNP <- seq(from = as.Date("1949/1/1"), length.out = length(AP), by = "months") # Crea feachas
 
+descAP <- stl(AP, s.window = 12)
+
+plot(descAP, main="Componentes del Número de Pasajeros Aéreos", col = "chocolate1", lwd = 2)
+```
+
+<pre style="height:610px">
+```{r echo=FALSE}
 # install.packages("devtools") # Instala librería en github
 # devtools::install_github("tidyverts/feasts") # Instala librería para realizar descomposición
 library(feasts)
@@ -176,61 +182,28 @@ library(tsibble)
 
 # Extracción de los componentes del número de pasajeros áereos
 AP2 <- as_tsibble(AP) # Transforma el conjunto de datos a una base "tibble"
-descNP <- AP2 %>% STL(AP ~ season(window = 12)) # Realiza descomposición de la serie
+descNP <- AP2 %>% STL(value ~ season(window = 12)) # Realiza descomposición de la serie
 
-tendenciaNP <-  descNP$trend # Se separa componente de tendencia
 estacionalNP <-  descNP$season_year # Se separa componente estacional
+tendenciaNP <-  descNP$trend # Se separa componente de tendencia
 errorNP <-  descNP$remainder # Se separa componente de error
 
-# Gráfico básico
-autoplot(descNP, main="Componentes del Número de Pasajeros Aéreos entre 1949 y 1960", xlab="Fecha", ylab = "Número de Pasajeros (en miles)", col = "chocolate1", type = "o", pch = 19)
-```
-
-```{r eval=FALSE}
 # install.packages("plotly") ## Instala librería para hacer grágicos avanzados
 library(plotly)
 # Gráfico avanzado con plotly
-p1 <- plot_ly(x = ~fechasNP, y = ~AP, mode = 'lines+markers', text = paste("Número Pasajeros =", AP), width = 700, height = 400, type = "scatter", name = "Datos") 
+p1 <- plot_ly(x = ~AP2$index, y = ~AP2$value, mode = 'lines+markers', width = 700, height = 400, type = "scatter", name = "Datos") 
 
-p2 <- plot_ly(x = ~fechasNP, y = ~tendenciaNP, mode = 'lines', text = paste("Tendencia =", tendenciaNP), width = 700, height = 400, type = "scatter", name = "Tendencia") 
+p2 <- plot_ly(x = ~AP2$index, y = ~estacionalNP, mode = 'lines', width = 700, height = 400, type = "scatter", name = "Estacionalidad") 
 
-p3 <- plot_ly(x = ~fechasNP, y = ~estacionalNP, mode = 'lines', text = paste("Estacionalidad =", estacionalNP), width = 700, height = 400, type = "scatter", name = "Estacionalidad") 
+p3 <- plot_ly(x = ~AP2$index, y = ~tendenciaNP, mode = 'lines', width = 700, height = 400, type = "scatter", name = "Tendencia") 
 
-p4 <- plot_ly(x = ~fechasNP, y = ~errorNP, mode = 'lines', text = paste("Error =", errorNP), width = 700, height = 400, type = "scatter", name = "Error") 
-
-subplot(p1, p2, p3, p4, nrows = 4, margin = 0.03) %>% 
-  layout(title = "Componentes del Número de Pasajeros Aéreos entre 1949 y 1961",
-         yaxis = list(title = TeX("Y_t")),
-         yaxis2 = list(title = TeX("T_t")),
-         yaxis3 = list(title = TeX("S_t")),
-         yaxis4 = list(title = TeX("\\varepsilon_t")),
-         xaxis4 = list(title = "Fecha"),
-         margin = list(r=60, l=60, t=60, b=60, pad = 4), height = 600) %>%
-  config(mathjax = 'cdn')
-```
-
-<pre style="height:610px">
-```{r echo=FALSE}
-# install.packages("plotly") ## Instala librería para hacer grágicos avanzados
-library(plotly)
-# Gráfico avanzado con plotly
-p1 <- plot_ly(x = ~fechasNP, y = ~AP, mode = 'lines+markers', text = paste("Número Pasajeros =", AP), width = 700, height = 400, type = "scatter", name = "Datos") %>%
-layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4))
-
-p2 <- plot_ly(x = ~fechasNP, y = ~tendenciaNP, mode = 'lines', text = paste("Tendencia =", tendenciaNP), width = 700, height = 400, type = "scatter", name = "Tendencia") %>%
-layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4))
-
-p3 <- plot_ly(x = ~fechasNP, y = ~estacionalNP, mode = 'lines', text = paste("Estacionalidad =", estacionalNP), width = 700, height = 400, type = "scatter", name = "Estacionalidad") %>%
-layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
-
-p4 <- plot_ly(x = ~fechasNP, y = ~errorNP, mode = 'lines', text = paste("Error =", errorNP), width = 700, height = 400, type = "scatter", name = "Error") %>%
-layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
+p4 <- plot_ly(x = ~AP2$index, y = ~errorNP, width = 700, height = 400, type = "bar", name = "Error") 
 
 subplot(p1, p2, p3, p4, nrows = 4, margin = 0.03) %>% 
-  layout(title = "Componentes del Número de Pasajeros Aéreos entre 1949 y 1961",
+  layout(title = "Componentes del Número de Pasajeros Aéreos",
          yaxis = list(title = TeX("Y_t")),
-         yaxis2 = list(title = TeX("T_t")),
-         yaxis3 = list(title = TeX("S_t")),
+         yaxis2 = list(title = TeX("S_t")),
+         yaxis3 = list(title = TeX("T_t")),
          yaxis4 = list(title = TeX("\\varepsilon_t")),
          xaxis4 = list(title = "Fecha"),
          margin = list(r=60, l=60, t=60, b=60, pad = 4), height = 600) %>%
@@ -238,68 +211,50 @@ subplot(p1, p2, p3, p4, nrows = 4, margin = 0.03) %>%
 ```
 </pre>
 
-La segunda corresponde a las Importaciones anuales de bienes y servicios de Colombia como % del PIB, para los años 1960-2017.
+La segunda corresponde a las Variaciones porcentual de los ingresos reales totales de hoteles en Colombia entre Junio 2005 y Marzo 2019.
 
 ```{r}
 # install.packages("readxl") ## Instala librería para abrir archivos de Excel
 library(readxl) ## Cargar librería
-datos <- read_xlsx("../../Dataset/importacionescolombia2017.xlsx")
-impo <- ts(datos$Importaciones, start = 1960, frequency = 1) # Transforma observaciones a tipo time-series
-fechasIC <- datos$Año
-# Extracción de los componentes de las importaciones en Colombia
-impo2 <- as_tsibble(impo) # Transforma el conjunto de datos a una base "tibble"
-descIC <- impo2 %>% STL(impo) # Realiza descomposición de la serie
+  datos <- read_xlsx("https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/ingresorealhoteles2019.xlsx")
+ingH <- ts(datos$`Variacion  ingresos`, start = c(2005,7), frequency = 12) # Transforma observaciones a tipo time-series
 
-tendenciaIC <- descIC$trend # Se separa componente de tendencia
-errorIC <-  descIC$remainder # Se separa componente de error
-
-#Gráfico básico
-autoplot(descIC, main="Componentes de Importaciones de Bienes y Servicios (% del PIB) entre 1960-2017", xlab="Año", ylab = "% del PIB", col = "chocolate1", type = "o", pch = 19)
-```
-
-```{r eval=FALSE}
-# Gráfico avanzado con plotly
-p5 <-  plot_ly(x = ~fechasIC, y = ~impo, mode = 'lines+markers', text = paste("% del PIB =", impo), width = 700, height = 400, type = "scatter", name = "Datos") 
-
-p6 <- plot_ly(x = ~fechasIC, y = ~tendenciaIC, mode = 'lines', text = paste("Tendencia =", tendenciaIC), width = 700, height = 400, type = "scatter", name = "Tendencia") 
-
-p7 <- plot_ly(x = ~fechasIC, y = ~errorIC, mode = 'lines', text = paste("Error =", errorIC), width = 700, height = 400, type = "scatter", name = "Error") 
-
-subplot(p5, p6, p7, nrows = 3, margin = 0.05) %>% 
-  layout(title = "Componentes de las Importaciones de
-Bienes y Servicios (% del PIB) entre 1960-2017",
-         yaxis = list(title = TeX("Y_t")),
-         yaxis2 = list(title = TeX("T_t")),
-         yaxis3 = list(title = TeX("\\varepsilon_t")),
-         xaxis3 = list(title = "Año"),
-         margin = list(r=60, l=60, t=60, b=60, pad = 4), height = 600) %>%
-  config(mathjax = 'cdn')
-
+descIH <- stl(ingH, s.window = 12)
+plot(descIH, main="Componentes de la variación porcentual de los ingresos reales de hoteles", col = "chocolate1", lwd = 2)
 ```
 
 <pre style="height:610px">
 ```{r echo=FALSE}
+# Extracción de los componentes de las importaciones en Colombia
+ingH2 <- as_tsibble(ingH) # Transforma el conjunto de datos a una base "tibble"
+descAH <- ingH2 %>% STL(value) # Realiza descomposición de la serie
+
+estacionalAH <- descAH$season_year # Se separa componente estacional
+tendenciaAH <- descAH$trend # Se separa componente de tendencia
+errorAH <-  descAH$remainder # Se separa componente de error
+
 # Gráfico avanzado con plotly
-p5 <-  plot_ly(x = ~fechasIC, y = ~impo, mode = 'lines+markers', text = paste("% del PIB =", impo), width = 700, height = 400, type = "scatter", name = "Datos") %>%
-layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4))
+p5 <-  plot_ly(x = ~ingH2$index, y = ~ingH2$value, mode = 'lines+markers', width = 700, height = 400, type = "scatter", name = "Datos")
 
-p6 <- plot_ly(x = ~fechasIC, y = ~tendenciaIC, mode = 'lines', text = paste("Tendencia =", tendenciaIC), width = 700, height = 400, type = "scatter", name = "Tendencia") %>%
-layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4))
+p6 <- plot_ly(x = ~ingH2$index, y = ~estacionalAH, mode = 'lines+markers', width = 700, height = 400, type = "scatter", name = "Estacionalidad") 
 
-p7 <- plot_ly(x = ~fechasIC, y = ~errorIC, mode = 'lines', text = paste("Error =", errorIC), width = 700, height = 400, type = "scatter", name = "Error") %>%
-layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4))
+p7 <- plot_ly(x = ~ingH2$index, y = ~tendenciaAH, mode = 'lines', width = 700, height = 400, type = "scatter", name = "Tendencia") 
 
-subplot(p5, p6, p7, nrows = 3, margin = 0.05) %>% 
-  layout(title = "Componentes de las Importaciones de
-Bienes y Servicios (% del PIB) entre 1960-2017",
+p8 <- plot_ly(x = ~ingH2$index, y = ~errorAH, width = 700, height = 400, type = "bar", name = "Error") 
+
+subplot(p5, p6, p7, p8, nrows = 4, margin = 0.03) %>% 
+  layout(title = "Componentes de la variación porcentual
+de los ingresos reales de hoteles",
          yaxis = list(title = TeX("Y_t")),
-         yaxis2 = list(title = TeX("T_t")),
-         yaxis3 = list(title = TeX("\\varepsilon_t")),
-         xaxis3 = list(title = "Año"),
+         yaxis2 = list(title = TeX("S_t")),
+         yaxis3 = list(title = TeX("T_t")),
+         yaxis4 = list(title = TeX("\\varepsilon_t")),
+         xaxis4 = list(title = "Fecha"),
          margin = list(r=60, l=60, t=60, b=60, pad = 4), height = 600) %>%
   config(mathjax = 'cdn')
 ```
 </pre>
+
 
 ### Componente de tendencia
 
@@ -307,43 +262,34 @@ El componente de tendencia se denota `$T_t$`, es el componente de la serie que c
 
 Para el caso del **número de pasajeros áereos entre 1949 y 1961** se tiene que
 ```{r}
-# Gráfico básico
-plot(x=fechasNP, y = tendenciaNP, main="Componente de Tendencia para Número de Pasajeros", xlab="Fecha", ylab = expression(T[t]), col = "chocolate1", type = "l", pch = 19, lwd = 2)
-```
+fechasAP <- seq(as.Date("1949/1/1"), length.out = length(AP), by = "month") ## Se definen fechas
 
-```{r eval=FALSE}
-# Gráfico avanzado con plotly
-plot_ly(x = ~fechasNP, y = ~tendenciaNP, mode = 'lines', text = paste("Tendencia =", tendenciaNP), width = 700, height = 400, type = "scatter") %>%
-  layout(title="Componente de Tendencia para Número de Pasajeros", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("T_t"))) %>% config(mathjax = 'cdn')
+plot(x=fechasAP, y = descAP$time.series[, 2], main="Componente de Tendencia para Número de Pasajeros Aéreos", xlab="Fecha", ylab = expression(T[t]), col = "chocolate1", type = "l", pch = 19, lwd = 2)
 ```
 
 <pre>
 ```{r echo=FALSE}
 # Gráfico avanzado con plotly
-plot_ly(x = ~fechasNP, y = ~tendenciaNP, mode = 'lines', text = paste("Tendencia =", tendenciaNP), width = 700, height = 400, type = "scatter") %>%
-  layout(title="Componente de Tendencia para Número de Pasajeros", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("T_t"))) %>% config(mathjax = 'cdn') %>% 
+plot_ly(x = ~AP2$index, y = ~tendenciaNP, mode = 'lines', width = 700, height = 400, type = "scatter") %>%
+  layout(title="Componente de Tendencia para Número de Pasajeros Aéreos", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("T_t"))) %>% config(mathjax = 'cdn') %>% 
 layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
 ```
 </pre>
 
-Mientras que, para el caso de las **Importaciones de bienes y servicios (% del PIB) entre 1960-2017** se tiene que
+Mientras que, para el caso de las **variaciones porcentual de los ingresos reales totales de hoteles en Colombia entre Junio 2005 y Marzo 2019** se tiene que
 
 ```{r}
-# Gráfico básico
-plot(x=fechasIC, y = tendenciaIC, main="Componente de Tendencia para Importaciones Colombia", xlab="Año", ylab = expression(T[t]), col = "chocolate1", type = "l", pch = 19, lwd = 2)
-```
+fechasIH <- seq(as.Date("2005/7/1"), length.out = length(ingH), by = "month") ## Se definen fechas
 
-```{r eval=FALSE}
-# Gráfico avanzado con plotly
-plot_ly(x = ~fechasIC, y = ~tendenciaIC, mode = 'lines', text = paste("Tendencia =", tendenciaIC), width = 700, height = 400, type = "scatter") %>%
-  layout(title="Componente de Tendencia para Importaciones Colombia", xaxis = list(title ="Año"), yaxis = list(title = TeX("T_t"))) %>% config(mathjax = 'cdn')
+plot(x = fechasIH, y = descIH$time.series[, 2], main="Componente de Tendencia para variación porcentual
+de los ingresos reales de hoteles", xlab="Fecha", ylab = expression(T[t]), col = "chocolate1", type = "l", pch = 19, lwd = 2)
 ```
 
 <pre>
 ```{r echo=FALSE}
 # Gráfico avanzado con plotly
-plot_ly(x = ~fechasIC, y = ~tendenciaIC, mode = 'lines', text = paste("Tendencia =", tendenciaIC), width = 700, height = 400, type = "scatter") %>%
-  layout(title="Componente de Tendencia para Importaciones Colombia", xaxis = list(title ="Año"), yaxis = list(title = TeX("T_t"))) %>% config(mathjax = 'cdn') %>% 
+plot_ly(x = ~ingH2$index, y = ~tendenciaAH, mode = 'lines', width = 700, height = 400, type = "scatter") %>%
+  layout(title="Componente de Tendencia para variaciones porcentual de los ingresos reales totales de hoteles", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("T_t"))) %>% config(mathjax = 'cdn') %>% 
 layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
 ```
 </pre>
@@ -357,27 +303,36 @@ Es de anotar, que los efectos estacionales son fáciles de entender y se pueden 
 Para el caso del **número de pasajeros áereos entre 1949 y 1961** se tiene que
 
 ```{r}
-# Gráfico básico
-plot(x=fechasNP, y = estacionalNP, main="Componente Estacional para Número de Pasajeros", xlab="Fecha", ylab = expression(S[t]), col = "chocolate1", type = "l", pch = 19, lwd = 2)
+plot(x = fechasAP, y = descAP$time.series[, 1], main="Componente Estacional para Número de Pasajeros Aéreos", xlab="Fecha", ylab = expression(S[t]), col = "chocolate1", type = "l", pch = 19, lwd = 2)
 abline(h = 0)
-```
-
-```{r eval=FALSE}
-# Gráfico avanzado con plotly
-plot_ly(x = ~fechasNP, y = ~estacionalNP, mode = 'lines', text = paste("Estacionalidad =", estacionalNP), width = 700, height = 400, type = "scatter") %>%
-  layout(title="Componente Estacional para Número de Pasajeros", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("S_t"))) %>% config(mathjax = 'cdn')
 ```
 
 <pre>
 ```{r echo=FALSE}
 # Gráfico avanzado con plotly
-plot_ly(x = ~fechasNP, y = ~estacionalNP, mode = 'lines', text = paste("Estacionalidad =", estacionalNP), width = 700, height = 400, type = "scatter") %>%
-  layout(title="Componente Estacional para Número de Pasajeros", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("S_t"))) %>% config(mathjax = 'cdn') %>% 
+plot_ly(x = ~AP2$index, y = ~estacionalNP, mode = 'lines', width = 700, height = 400, type = "scatter") %>%
+  layout(title="Componente Estacional para Número de Pasajeros Aéreos", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("S_t"))) %>% config(mathjax = 'cdn') %>% 
 layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
 ```
 </pre>
 
-Mientras que, para el caso de las **Importaciones de bienes y servicios (% del PIB) entre 1960-2017** no se observa un comportamiento estacional, y por tanto, éste no puede ser calculado.
+Mientras que, para el caso de las **variaciones porcentual de los ingresos reales totales de hoteles en Colombia entre Junio 2005 y Marzo 2019** se tiene que
+
+```{r}
+plot(x = fechasIH, y = descIH$time.series[, 1], main="Componente Estacional para variación porcentual
+de los ingresos reales de hoteles", xlab="Fecha", ylab = expression(T[t]), col = "chocolate1", type = "l", pch = 19, lwd = 2)
+```
+
+<pre>
+```{r echo=FALSE}
+# Gráfico avanzado con plotly
+plot_ly(x = ~ingH2$index, y = ~estacionalAH, mode = 'lines', width = 700, height = 400, type = "scatter") %>%
+  layout(title="Componente Estacional para variación porcentual
+de los ingresos reales de hoteles", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("T_t"))) %>% config(mathjax = 'cdn') %>% 
+layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
+```
+</pre>
+
 
 ### Componente aleatorio, irregular o de error
 
@@ -388,45 +343,33 @@ Es de anotar, que este componente es impredecible, pero puede ser modelado como 
 Para el caso del **número de pasajeros áereos entre 1949 y 1961** se tiene que
 
 ```{r}
-# Gráfico básico
-plot(x=fechasNP, y = errorNP, main="Componente de Error para Número de Pasajeros", xlab="Fecha", ylab = expression(epsilon[t]), col = "chocolate1", type = "l", pch = 19, lwd = 2)
+plot(x = fechasAP, y = descAP$time.series[, 3], main="Componente de Error para Número de Pasajeros Aéreos", xlab="Fecha", ylab = expression(epsilon[t]), col = "chocolate1", type = "l", pch = 19, lwd = 2)
 abline(h = 0)
-```
-
-```{r eval=FALSE}
-# Gráfico avanzado con plotly
-plot_ly(x = ~fechasNP, y = ~errorNP, mode = 'lines', text = paste("Error =", errorNP), width = 700, height = 400, type = "scatter") %>%
-  layout(title="Componente de Error para Importaciones Colombia", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("\\varepsilon_t"))) %>% config(mathjax = 'cdn')
 ```
 
 <pre>
 ```{r echo=FALSE}
 # Gráfico avanzado con plotly
-plot_ly(x = ~fechasNP, y = ~errorNP, mode = 'lines', text = paste("Error =", errorNP), width = 700, height = 400, type = "scatter") %>%
-  layout(title="Componente de Error para Importaciones Colombia", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("\\varepsilon_t"))) %>% config(mathjax = 'cdn') %>% 
+plot_ly(x = ~AP2$index, y = ~errorNP, mode = 'lines', width = 700, height = 400, type = "scatter") %>%
+  layout(title="Componente de Error para Número de Pasajeros Aéreos", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("\\varepsilon_t"))) %>% config(mathjax = 'cdn') %>% 
 layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
 ```
 </pre>
 
-Mientras que, para el caso de las **Importaciones de bienes y servicios (% del PIB) entre 1960-2017** se tiene que
+Mientras que, para el caso de las **variaciones porcentual de los ingresos reales totales de hoteles en Colombia entre Junio 2005 y Marzo 2019** se tiene que
 
 ```{r}
-# Gráfico básico
-plot(x=fechasIC, y = errorIC, main="Componente de Error para Importaciones Colombia", xlab="Fecha", ylab = expression(epsilon[t]), col = "chocolate1", type = "l", pch = 19, lwd = 2)
+plot(x = fechasIH, y = descIH$time.series[, 3], main="Componente de Error para variación porcentual
+de los ingresos reales de hoteles", xlab="Fecha", ylab = expression(epsilon[t]), col = "chocolate1", type = "l", pch = 19, lwd = 2)
 abline(h = 0)
-```
-
-```{r eval=FALSE}
-# Gráfico avanzado con plotly
-plot_ly(x = ~fechasIC, y = ~errorIC, mode = 'lines', text = paste("Error =", errorIC), width = 700, height = 400, type = "scatter") %>%
-  layout(title="Componente de Error para Importaciones Colombia", xaxis = list(title ="Año"), yaxis = list(title = TeX("\\varepsilon_t"))) %>% config(mathjax = 'cdn')
 ```
 
 <pre>
 ```{r echo=FALSE}
 # Gráfico avanzado con plotly
-plot_ly(x = ~fechasIC, y = ~errorIC, mode = 'lines', text = paste("Error =", errorIC), width = 700, height = 400, type = "scatter") %>%
-  layout(title="Componente de Error para Importaciones Colombia", xaxis = list(title ="Año"), yaxis = list(title = TeX("\\varepsilon_t"))) %>% config(mathjax = 'cdn') %>% 
+plot_ly(x = ~ingH2$index, y = ~errorAH, mode = 'lines', width = 700, height = 400, type = "scatter") %>%
+  layout(title="Componente de Error para variación porcentual
+de los ingresos reales de hoteles", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("\\varepsilon_t"))) %>% config(mathjax = 'cdn') %>% 
 layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
 ```
 </pre>
@@ -438,22 +381,23 @@ El componente de fluctuación cícluca se denota como `$C_t$`, es el segundo com
 Es de anotar que, los ciclos son el componente más difíciles de pronosticar, debido a que éstos poseen periodos más largos (medida en años) y amplitudes irregulares (diferencias entre altas y bajas) que están lejos de ser constantes, lo cual hace que éstos no sean fijos ni predecibles, y por tanto, las fluctuaciones cíclicas son mezcladas generalmente con el componente de error `$\varepsilon$` o se asume que cualquier cíclo es parte de la tendencia `$T_t$`.
 
 
-Para el caso de las **Importaciones de bienes y servicios (% del PIB) entre 1960-2017** se tiene que
+Para el caso de las **variaciones porcentual de los ingresos reales totales de hoteles en Colombia entre Junio 2005 y Marzo 2019** se tiene que
 
 <pre>
 ```{r echo=FALSE}
 # Gráfico avanzado con plotly
-plot_ly(x = ~fechasIC, y = ~tendenciaIC, mode = 'lines', text = paste("Tendencia =", tendenciaIC), width = 700, height = 400, type = "scatter") %>%
-  layout(title="Componente de Tendencia para Importaciones Colombia", xaxis = list(title ="Año"), yaxis = list(title = TeX("T_t"))) %>% config(mathjax = 'cdn') %>% 
+plot_ly(x = ~ingH2$index, y = ~tendenciaAH, mode = 'lines', width = 700, height = 400, type = "scatter") %>%
+  layout(title="Componente de Tendencia para variación porcentual
+de los ingresos reales de hoteles", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("T_t"))) %>% config(mathjax = 'cdn') %>% 
 layout(shapes=list(
-  list(type='line', x0=1965, x1=1965, y0=12, y1=22, line = list(dash = "dot")), 
-  list(type='line', x0=1986, x1=1986, y0=12, y1=22, line = list(dash = "dot")),
-  list(type='line', x0=2001, x1=2001, y0=12, y1=22, line = list(dash = "dot"))))  %>%
+  list(type='line', x0 = "2009-07-01", x1 = "2009-07-01", y0 = -6, y1 = 11, line = list(dash = "dot")), 
+  list(type='line', x0 = "2013-04-01", x1 = "2013-04-01", y0 = -6, y1 = 11, line = list(dash = "dot")),
+  list(type='line', x0 = "2017-04-01", x1 = "2017-04-01", y0 = -6, y1 = 11, line = list(dash = "dot"))))  %>%
 layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
-  
 ```
 </pre>
 
+Es de anotar, que además de tener tendencia, estacionalidad, error y fluctuación cíclica, algunas series de tiempo pueden presentar patrones de impulso, rampa o paso, pero estos efectos se escapan del alcance del curso, y por tanto, no serán tenidos en cuenta.
 
 ## Modelo de descomposición
 Una vez separados los componentes que conforman una serie de tiempo, es necesario analizar la forma en que se relacionan estos con la serie original, puesto que al recombinar los componentes es posible obtener una serie de tiempo completamente pronosticable.
@@ -468,10 +412,11 @@ en donde, como se mencionó en la subsección anterior, las fluctuaciones cícli
 * **Modelo aditivo:** `$Y_t = T_t + S_t + \varepsilon_t$`
 * **Modelo multiplicativo:** `$Y_t = T_t * S_t * \varepsilon_t$`
 
-Es anotar que en el modelo aditivo se supone que los cuatro componentes de la serie de tiempo son independientes entre sí, y es propiado cuando la magnitud de las fluctuaciones estacionales de la
-serie no varía al hacerlo la tendencia, es decir, la serie de tiempo original tiene aproximadamente la misma variabilidad a lo largo de toda la serie.
+Es anotar que en el modelo aditivo se supone que los cuatro componentes de la serie de tiempo son independientes entre sí, y es propiado cuando la magnitud de las fluctuaciones estacionales de la serie no varía al hacerlo la tendencia, es decir, la serie de tiempo original tiene aproximadamente la misma variabilidad a lo largo de toda la serie.
 
 Mientras que, en el modelo multiplicativo se trabaja bajo el supuesto de que los cuatro componentes de la serie de tiempo no son necesariamente independientes, y por tanto, es apropiados cuando la magnitud de las fluctuaciones estacionales de la serie crece y decrece proporcionalmente con los crecimientos y decrecimientos de la tendencia, respectivamente, es decir, los valores de la serie se dispersan conforme la tendencia aumenta, o se reúnen conforme la tendencia disminuye.
+
+Un aspecto importante de anotar, sobre los modelos aditivos y multiplicativos es que, en el modelo aditivo siempre se asume que `$\varepsilon_t\stackrel{iid}{\sim}N(0,\sigma^2)$`, mientras que para el modelo multiplicativo, se sume que `$\varepsilon_t\stackrel{iid}{\sim}lognormal(\mu=0,\sigma^2)$`, y por tanto `$log(\varepsilon_t)\stackrel{iid}{\sim}N(0,\sigma^2)$`. Una alternativa para evaluar si los componentes de error son o no normales, es mediante los gráficos QQ-plot de la distribución Normal, y mediante la prueba Shapiro-Wilk. Éstas pueden realizarse en <tt>R</tt> mediante las funciones `qqnorm()` y `shapiro.test()`, respectivamente.
 
 Adicionalmente, se destaca que muy a menudo las series, a pesar de no tener un comportamiento aditivo, pueden ser transformadas para ser modeladas de forma aditiva. Un ejemplo de ello son los logaritmos naturales, en donde, es posible convertir el modelo multiplicativo en un modelo aditivo, ya que si
 
@@ -494,22 +439,200 @@ Existen algunas variantes para los modelos de descomposición básicos, tales co
 
 los cuales se emplean situaciones específicas, como por ejemplo, cuando la serie original posee fluctuaciones estacionales marcadamente pronunciadas y un movimiento de ciclos de tendencia, que es extremadamente dependiente del clima, o cuando la serie original posea un mes (o trimestre) que es mucho más alto o más bajo que todos los otros meses (o trimestres), respectivamente.
 
-## Funciones de pérdida
+## Identificación de componentes
+### Autocorrelación
+Uno de los aspectos más importantes de la series de tiempo es que sus observaciones no son independientes de sus observaciones pasadas, y por ello, debe realizarse un análisis de dependencia o correlación entre las observaciones y sus rezagos, el cual posee el nombre de análisis de autocorrelación, correlación serial o covariación. 
 
-### ME
+El objetivo será entonces, usar la estructura de correlación que posee la serie temporal consigo misma, para tratar de explicar parte de su variación, identificar si existen patrones repetitivos que se encuentran enmascarados bajo el ruido y observar a partir de qué rezago deja de ser significativo el efecto que tienen éstos sobre las demás observaciones.
 
-### MAE
+Con tal proposito en mente, en una serie de tiempo, se define la varianza muestral de las observaciones como
+`\begin{align*}
+Var(y_t) = \hat{\gamma}(0) = \mathbb E(y_t - \bar{y})^2 = \frac{1}{T-1}\sum_{t=1}^{T}(y_t-\bar{y})^2
+\end{align*}`
 
-### SSE
+la autocovarianza muestral entre observaciones que se encuentran a `$k$` periodos de tiempo de diferencia, como
+`\begin{align*}
+Cov(y_{t+k},y_t) = \hat{\gamma}(k) = \mathbb E[(y_{t+k} - \bar{y})(y_{t} - \bar{y})] = \frac{1}{T-k-1}\sum_{t=1}^{T-k}(y_{t+k} - \bar{y})(y_{t} - \bar{y})
+\end{align*}`
 
-### MSE
+y la autocorrelación muestral entre observaciones que se encuentran a `$k$` periodos de tiempo de diferencia, como
+`\begin{align*}
+Cor(y_{t+k},y_t) = \hat{\rho(k)} = \frac{\hat{\gamma}(k)}{\hat{\gamma}(0)}
+\end{align*}`
 
-### SDE
+donde `$k$` es el número de rezagos o autocorrelaciones que se desean calcular. Por tanto, no se recomienda emplear valores de `$k$` muy altos, ya que ésto provocará que se tengan menos términos para el cálculo de las autocorrelaciones.
 
-### MAPE
+La selección del número de autocorrelaciónes puede llevarse a cabo arbitrariamente a partir de los conocimientos del investigador, o mediante la regla empírica para el número máximo de rezagos que deben seleccionarse  `$max(k)=\frac{n}{4}$`.
+
+Para facilitar la visualización e interpretación de la autocorrelación, se hace a través del empleo del correlograma o función de autocorrelación **(ACF)**, la cual muestran la correlación que hay entre observaciones separadas por `$k$` intervalos de tiempo o "lags". 
+
+A continuación se presenta el correlograma del **número de pasajeros áereos entre 1949 y 1961**
+
+```{r}
+acf(AP, main = "Número de Pasajeros Aéreos")
+```
+
+<pre>
+```{r echo=FALSE}
+acfAP <- AP2 %>% ACF(value) # Calcula valores de ACF
+acfCI <- function(x) qnorm((1 + 0.95)/2)/sqrt(nrow(x)) # Crea función para intervalo de confianza ACF
+### Gráfico avanzado
+plot_ly(data = acfAP, width = 700, height = 400) %>%
+  layout(title="ACF para Número de Pasajeros Aéreo", xaxis = list(title ="Lags"), yaxis = list(title = "ACF")) %>% 
+add_bars(x = ~acfAP$lag, y = ~acfAP$acf, width = 0.2, text = paste("Autocorrelación =", acfAP$acf)) %>% 
+layout(shapes=list(
+  list(type='line', x0=0, x1=nrow(acfAP), y0=acfCI(AP2), y1=acfCI(AP2), line = list(dash = "dot")),
+  list(type='line', x0=0, x1=nrow(acfAP), y0=-acfCI(AP2), y1=-acfCI(AP2), line = list(dash = "dot")))) %>%
+layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
+```
+</pre>
+
+Para el caso de las **variaciones porcentual de los ingresos reales totales de hoteles en Colombia entre Junio 2005 y Marzo 2019** se tiene que
+
+```{r}
+acf(ingH, main = "variaciones porcentual de los ingresos reales totales de hoteles")
+```
+
+<pre>
+```{r echo=FALSE}
+acfVH <- ingH2 %>% ACF(value) # Calcula valores de ACF
+### Gráfico avanzado
+plot_ly(data = acfVH, width = 700, height = 400) %>%
+  layout(title="ACF para variaciones porcentual de los ingresos reales totales de hoteles", xaxis = list(title ="Lags"), yaxis = list(title = "ACF")) %>% 
+add_bars(x = ~acfVH$lag, y = ~acfVH$acf, width = 0.2, text = paste("Autocorrelación =", acfVH$acf)) %>% 
+layout(shapes=list(
+  list(type='line', x0=0, x1=nrow(acfVH), y0=acfCI(ingH2), y1=acfCI(ingH2), line = list(dash = "dot")),
+  list(type='line', x0=0, x1=nrow(acfVH), y0=-acfCI(ingH2), y1=-acfCI(ingH2), line = list(dash = "dot"))))  %>%
+layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
+```
+</pre>
+
+### Interpretación Correlograma
+Basados en @Rios2008, los criterios para la interpretación del correlograma están dados por
+
+* La altura de la líneas en el correlograma representa la correlación entre las observaciones que están separadas por la cantidad de unidades de tiempo que aparecen en el eje horizontal.
+* La correlación para el primer rezago siempre es uno por lo que no deben tomarse en cuenta en las interpretaciones.
+* Una autocorrelación es significativa si ésta se encuentra por encima o por debajo de las bandas de confianza (región crítica), la cual se construye con un nivel de confianza del 95% y asumiendo normalidad, mediante la formula:
+
+`\begin{align*}
+\pm Z_{\frac{\alpha}{2}}/\sqrt{T} = \pm 1.96/\sqrt{T}
+\end{align*}`
+
+* Si ninguna de las autocorrelaciones es significativamente diferente de cero, la serie es esencialmente **ruido blanco**.
+* Si las autocorrelaciones decrecen linealmente, pasando por el cero, o muestra un patrón cíclico, pasando por cero varias veces, la serie **no es estacionaria**. Se tendrá que diferenciarla una o más veces antes de modelarla.
+* Si las autocorrelaciones muestran estacionalidad, o se tiene una alza cada periodo (cada 12 meses, por ejemplo), la serie **no es estacionaria** y hay que diferenciarla con un salto igual al periodo.
+
+A continuación se presenta el correlograma del **número de pasajeros áereos entre 1949 y 1961**, mediante la diferenciación de un salto igual a 12 meses.
+
+```{r}
+AP12 <- diff(AP, lag = 12)
+acf(AP12, main = "Serie diff(NPA,12)")
+AP121 <- diff(AP12, lag = 1)
+acf(AP121, main = "Serie diif(diff(NPA, 12), 1)")
+```
+
+## Evaluación de los pronósticos (Funciones de pérdida)
+Otro aspecto de suma importancia en los pronósticos, es evaluar la precisión o eficiencia del método de pronóstico empleado, y para ello, se emplean diferentes indicadores que permiten identificar qué tan acertado o cercano es el pronostico realizado respecto a su valor original.
+
+Para aplicar dichos métodos, una alternativa es la implementación de un procedimiento conocido como *validación cruzada*, el cual consta de dividir el conjunto de observaciones de la serie en dos grupos. El primer grupo estará dado por las observaciones `$\{Y_1, Y_2, \ldots, Y_{T-m}\}$`, denotadas como datos de entrenamiento, y serán las observaciones que se emplearán para realizar la estimación del modelo. El segundo grupo estará dado por las observaciones `$\{Y_{T-m+1}, Y_{T-m+2}, \ldots, Y_{T}\}$`, denotadas como datos de validación, y serán las observaciones que se emplearán para evaluar el desempeño de los modelos.
+
+Entonces, suponga que a partir del conjunto de entrenamiento se realizan los pronósticos `$\{\hat{Y}_{T-m+1}, \hat{Y}_{T-m+2}, \ldots, \hat{Y}_{T}\}$`, entonces puede definirse el error de estimación `$e_t=\hat{varepsilon}_t$`, entre las observación real `$t$` y el valor pronosticado `$t$`, de la forma
+`\begin{align*}
+e_t= Y_t - \hat{Y}_t
+\end{align*}`
+
+con `$t={T-m+1}, {T-m+2}, \ldots, {T}$`. A partir de los errores de estimación `$e_t$`, es posible realizar el cálculo de diferentes medidas de error que permitan cuantificar diferentes aspectos de los valores pronosticados. Con el fin de ilustrar y mejorar el entendimiento de las medidas de error, se presentarán las propiedades que posee cada uno de ellos, basados en @Adhikari2013[, p. 42].
+
+### Error medio (ME)
+Esta medida está definida como
+`\begin{align*}
+ME=\frac{1}{n}\sum_{t=T-m+1}^T e_t 
+\end{align*}`
+
+* Es una medida de la desviación promedio de los valores pronosticados respecto a los valores reales.
+* Muestra la dirección del error y, en consecuencia, el sesgo que poseen los pronóstico.
+* En el ME, los efectos de los errores positivos y negativos se cancelan y no hay forma de saber su cantidad exacta.
+* Un ME de cero no significa que los pronósticos sean perfectos o que no existan errores de pronóstico, si no que indica que los pronósticos no poseen ningún sesgo, y en consecuencia, están apuntancia hacia el objetivo correcto.
+* El ME no penaliza los errores extremos de pronóstico.
+* Depende de la escala de medición y también se ve afectada por las transformaciones de datos.
+* Para que el pronostico sea bueno, se requiere que el sesgo sea mínimo, y por tanto, es deseable que el ME sea lo más cercano a cero posible.
+
+### Porcentaje medio del error (MPE)
+Esta medida está definida como
+`\begin{align*}
+MPE=\frac{1}{n}\sum_{t=T-m+1}^T \frac{e_t}{y_t} \times 100
+\end{align*}`
+
+* Mode el porcentaje de error promedio ocurrido de los pronósticos.
+* Muestra la dirección del error y, en consecuencia, el porcentaje de sesgo que poseen los pronóstico.
+* En el MPE, los efectos de los errores positivos y negativos se cancelan mutuamente.
+* El MPE es independiente de la escala de medición, pero se ve afectado por la transformación de datos.
+* Similar al ME, el obtener valores de MPE cercanos a cero, no indican que los pronósticos sean buenos o que no existan errores de pronóstico, si no que indica que los pronosticos poseen un sesgo pequeño. 
+* Similar al ME, es deseable que el sesgo del MPE sea mínimo, es decir, que el valor del MPE sea lo más pequeño posible.
+* Al igual que el ME, el MPE no penaliza los errores extremos de pronóstico.
+
+### Error absoluto medio (MAE)
+Esta medida está definida como
+`\begin{align*}
+MAE=\frac{1}{n}\sum_{t=T-m+1}^T |e_t|
+\end{align*}`
+
+* Mide la desviación absoluta promedio de los valores pronosticados respecto a los valores reales.
+* También se denomina como la desviación absoluta media (MAD).
+* Muestra la magnitud del error general, ocurrido debido al pronóstico.
+* A diferencia del ME, en el MAE, los efectos de los errores positivos y negativos no se anulan.
+* A diferencia del ME, el MAE no proporciona ninguna idea sobre el sesgo de los pronósticos.
+* Al igual que el ME, el MAE no penaliza los errores extremos de pronóstico.
+* Al igual que el ME, el MAE también depende de la escala de medición y de las transformaciones de datos.
+* Para que el pronostico sea bueno, se requiere que el MAE obtenido sea lo más pequeño posible.
+
+### Porcentaje del error medio absoluto (MAPE)
+Esta medida está definida como
+`\begin{align*}
+MAPE=\frac{1}{n}\sum_{t=T-m+1}^T \left|\frac{e_t}{y_t}\right|\times 100
+\end{align*}`
+
+* Mide el porcentaje de error absoluto promedio ocurrido de los pronósticos.
+* A diferencia del MPE, el MAPE no proporciona ninguna idea sobre el sesgo de los pronósticos.
+* A diferencia del MPE, en el MAPE los efectos de los errores positivos y negativos no se anulan.
+* Al igual que el MPE, el MAPE no penaliza los errores extremos de pronóstico.
+* Al igual que el MPE, el MAPE también es independiente de la escala de medición, pero está afectado por la transformación de datos.
+
+### Error cuadrático medio (MSE)
+Esta medida está definida como
+`\begin{align*}
+MSE=\frac{1}{n}\sum_{t=T-m+1}^T (e_t)^2
+\end{align*}`
+
+* Mide la desviación al cuadrado promedio de los valores pronosticados respecto a los valores reales.
+* En el MSE, los errores positivos y negativos no se compensan entre si, y en consecuencia, el MSE proporciona una idea general del error ocurrido durante el pronóstico.
+* A diferencia de las otras medidas, el MSE paneliza errores extremos ocurridos al pronosticar.
+* El MSE enfatiza el hecho de que el error de pronóstico total está, de hecho, muy afectado por grandes errores individuales, es decir, los errores grandes son mucho más caros que los errores pequeños.
+* A diferencia del ME y MPE, el MSE no proporciona ninguna idea sobre la dirección del error general, es decir, del sesgo de pronóstico.
+* El MSE es sensible al cambio de escala y las transformaciones de datos.
+* Aunque el MSE es una buena medida del error de pronóstico general, pero NO es tan intuitivo y fácilmente interpretable como las otras medidas discutidas anteriormente.
+
+### Suma de cuadrados del error (SSE)
+Esta medida está definida como
+`\begin{align*}
+SSE=\sum_{t=T-m+1}^T (e_t)^2
+\end{align*}`
+
+* Posee las mismas propiedades del MSE.
+
+### Raíz cuadrada del error cuadrático medio (RMSE)
+Esta medida está definida como
+`\begin{align*}
+RMSE=\sqrt{\frac{1}{n}\sum_{t=T-m+1}^T (e_t)^2}
+\end{align*}`
 
 
 
+a que ésto permite caracterizar o registrar los pérdidas, costos o desútilidades asociadas a varios pares de previsiones y realizaciones.
+
+Para la evaluación del desempeño predictivo se emplean diferentes indicadores que cuantifican qué tan cerca está la variable pronosticada de su serie de datos correspondiente. 
+
+It is not uncommon that several adequate models can be found to represent a series. The ultimate choice of a model may depend on the goodness of fit, such as the residual mean square or criteria discussed in Chapter 7. If the main purpose of a model is to forecast future values, then alternative criteria for model selection can be based on forecast errors. Let the I-step ahead forecast error be
 
 
 

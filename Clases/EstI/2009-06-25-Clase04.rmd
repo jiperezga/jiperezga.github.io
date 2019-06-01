@@ -65,6 +65,7 @@ Los eventos pueden ser clasificados en dos tipos
 
 ## Teoría de conjuntos
 Dado que un evento puede estar compuestos por un conjunto de datos, las relaciones y resultados de la teoría de conjuntos puede ser utilizados
+
 1. El **complemento** de un evento `$A$` respecto al espacio muestral `$S$`, es denotado por `$A^c$` o `$A'$`, y se define como el subconjunto de todos los elementos de `$S$` que no están contenidos en `$A$`.
 2. La **unión** de dos eventos `$A$` y `$B$`, es denotado por `$A\cup B$`, y se define como el evento que contiene todos los elementos que pertenecen a `$A$` o `$B$` o ambos.
 3. La **intersección** de dos eventos `$A$` y `$B$`, es denotado por `$A\cap B$`, es el evento que contiene todos los elementos que son comunes en `$A$` y `$B$`.
@@ -79,18 +80,18 @@ La probabilidad es una medida asociada a la posibilidad de que ocurra un determi
 ### Axiomas de probabilidad
 Sea `$S$` el espacio muestral y `$A_1, A_2, \ldots$` eventos de `$S$`, entonces se deben cumplir los siguientes tres axiomas
 
-* **Axioma 1-** `$P(A_i)\geq0$`
-* **Axioma 2-** `$P(S)=1$`
-* **Axioma 3-** Si `$A_1, A_2, \ldots$` son eventos mutuamente excluyentes, entonces `\begin{align*} P(A_1\cup A_2\cup A_3\cup\ldots)=\sum_{i=1}^\infty P(A_i) \end{align*}`
+* **Axioma 1-** `$\mathbb P(A_i)\geq0$`
+* **Axioma 2-** `$\mathbb P(S)=1$`
+* **Axioma 3-** Si `$A_1, A_2, \ldots$` son eventos mutuamente excluyentes, entonces `\begin{align*} \mathbb P(A_1\cup A_2\cup A_3\cup\ldots)=\sum_{i=1}^\infty \mathbb P(A_i) \end{align*}`
 
 ### Propiedades de probabilidad
 Sea `$A$` y `$B$` eventos del espacio muestral `$S$`, entonces se deben cumplir las siguientes cinco propiedades
 
-1. `$0 \leq P(A) \leq 1$`
-2. `$P(\oslash) = 0$`
-3. `$P(A') = 1 - P(A)$`
-4. `$P(A\cup B) = P(A) + P(B) - P(A\cap B)$`
-5. Si `$A\subseteq B$` entonces `$P(A) \leq P(B)$`
+1. `$0 \leq \mathbb P(A) \leq 1$`
+2. `$\mathbb P(\oslash) = 0$`
+3. `$\mathbb P(A') = 1 - \mathbb P(A)$`
+4. `$\mathbb P(A\cup B) = \mathbb P(A) + \mathbb P(B) - \mathbb P(A\cap B)$`
+5. Si `$A\subseteq B$` entonces `$\mathbb P(A) \leq \mathbb P(B)$`
 
 ## Técnicas de conteo
 Las técnicas de conteo son una serie de métodos de matemáticos usados para contar el número posible de arreglos dentro de uno o varios conjuntos de eventos. 
@@ -111,7 +112,7 @@ donde el caso especial de `$0!=1$`
 
 Además, el número de formas de ordenar `$n$` objetos diferentes tomados de `$r$` objetos a la vez estará dado por
 `\begin{align*}
-P_r^n= n(n-1)(n-2)\ldots(n-r+1)=\frac{n!}{(n-r)!}\\
+_nP_r= n(n-1)(n-2)\ldots(n-r+1)=\frac{n!}{(n-r)!}\\
 \end{align*}`
 
 ### Teorema: Permutación en circulo
@@ -127,7 +128,7 @@ permutaciones distintas en `$n$` objetos, en los que `$n_1$` objetos son de una 
 ### Teorema: Combinatoria
 El número de combinaciones de `$n$` objetos, tomando `$r$` objetos a la vez, es el número de subconjuntos de tamaño `$r$`, que se pueden formar a partir de los `$n$` objetos. Entonces, el número de subconjuntos desordenados de tamaño `$r$` escogidos sin reemplazo, de un total de `$n$` objetos disponibles es
 `\begin{align*}
-C_r^n=\left(\begin{array}{c}n\\ r\end{array}\right) = \frac{n!}{r! (n-r)!}
+_nC_r=\left(\begin{array}{c}n\\ r\end{array}\right) = \frac{n!}{r! (n-r)!}
 \end{align*}`
 
 ### Teorema: Combinatoria por subconjuntos
@@ -143,7 +144,7 @@ Si se tienen `$n$` objetos de los cuales se desean tomar `$r$` a la vez, se debe
 
 #### Caso 1: Con orden, sin reemplazo
 `\begin{align*}
-P_r^n= n(n-1)(n-2)\ldots(n-r+1)=\frac{n!}{(n-r)!}\\
+_nP_r= n(n-1)(n-2)\ldots(n-r+1)=\frac{n!}{(n-r)!}\\
 \end{align*}`
 
 #### Caso 2: Con orden, con reemplazo
@@ -153,12 +154,12 @@ n^r
 
 #### Caso 3: Sin orden, sin reemplazo
 `\begin{align*}
-C_r^n = \left(\begin{array}{c}n\\ r\end{array}\right) = \frac{n!}{r! (n-r)!}
+_nC_r = \left(\begin{array}{c}n\\ r\end{array}\right) = \frac{n!}{r! (n-r)!}
 \end{align*}`
 
 #### Caso 4: sin orden con reemplazo
 `\begin{align*}
-C_r^{n+r-1} = \left(\begin{array}{c}n+r-1\\ r\end{array}\right) = \frac{n+r-1!}{r! (n-1)!}
+_{n+r-1}C_r = \left(\begin{array}{c}n+r-1\\ r\end{array}\right) = \frac{n+r-1!}{r! (n-1)!}
 \end{align*}`
 
 
