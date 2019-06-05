@@ -51,12 +51,14 @@ Un ejemplo de una serie temporal, se presenta a continuación donde se muestra e
 
 <pre>
 ```{r echo=FALSE}
+library(readxl)
 library(plotly)
 # https://datos.bancomundial.org/indicador/NY.GDP.PCAP.KD.ZG
-PIBcol <- ts(c(1.983183392, 2.292595551, 0.231792643, 3.033555246, 0.557370132, 2.156500316, 1.110445303, 2.924696885, 3.209951184, 3.462385145, 3.379791618, 5.181404836, 4.344116951, 3.415242062, 0.054377114, 2.385808489, 1.819540279, 6.026298262, 3.003067413, 1.744317806, -0.023027616, -1.316171395, -0.683991606, 1.09300722, 0.907423685, 3.625085068, 3.235271842, 2.009085124, 1.418335593, 2.312929483, 0.116795606, 2.166679144, 3.53222506, 4.009005561, 3.4647784, 0.427584131, 1.834165369, -0.939121717, -5.611912127, 1.43545282, 0.226857288, 1.065060726, 2.489228212, 3.922772027, 3.34837565, 5.439446434, 5.551168521, 2.045206544, 0.058604955, 3.206963611, 6.232264851, 2.850694341, 3.547537302, 3.744554111, 2.023519393, 1.072527479, 0.934070318), start = 1961)
-fechas1 <- seq(from = 1961, length.out = length(PIBcol))
+PIB <- read_xlsx("../../Dataset/%anualPIB2017.xlsx")
+PIBcol <- ts(PIB$PIB, start = 1961)
+fechas1 <- time(PIBcol)
 plot_ly(x = ~fechas1, y = ~PIBcol, mode = 'lines+markers', text = paste("PIB =", round(PIBcol, 3)), width = 700, height = 400) %>% layout(title="Crecimiento del PIB per cápita (% anual)", xaxis = list(title ="Año"), yaxis = list(title = "PIB (% anual)")) %>% 
-layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4))
+layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4))
 ```
 </pre>
 
@@ -64,7 +66,6 @@ Otro ejemplo, se presenta para el material particulado `$PM_{10}$` y `$PM_{2.5}$
 
 <pre style="height:610px">
 ```{r echo=FALSE}
-library(readxl)
 aire <- read_xlsx("../../Dataset/calidadaireabril2019.xlsx")
 pm25 <- unclass(aire$pm25)
 pm10 <- unclass(aire$pm10)
@@ -86,7 +87,8 @@ subplot(plotpm25, plotpm10, nrows = 2, margin = 0.08) %>%
          yaxis = list(title = "PM2.5"),
          yaxis2 = list(title = "PM10"),
          xaxis2 = list(title = "Días"),
-         margin = list(r=60, l=60, t=60, b=60, pad = 4), height = 600)
+         margin = list(r=30, l=60, t=60, b=60, pad = 4),
+         height = 600, showlegend = FALSE)
 
 ```
 </pre>
@@ -161,7 +163,7 @@ Debido a ésto, en @Hanke2010 se establece un diagrama de flujo, en el cual se p
 ![](../../MuestreoySeriesdeTiempo/images/monitoreopronostico.jpg)
 
 ## Componentes de una serie de tiempo
-Para el análisis de series de tiempo, y pronostico de las mismas, es necesario realizar una adecuada selección del modelo que se va a emplear, y por ello, es fundamental hacer una precisa identificación de los componentes que conforman la serie, los cuales pueden ser divididos en cuatro componentes, a saber, tendencia, estacionalidad, error y fluctuación cíclica.
+Para el análisis de series de tiempo, y pronostico de las mismas, es necesario realizar una adecuada selección del modelo que se va a emplear, y por ello, es fundamental hacer una precisa identificación de los componentes que conforman la serie, cuya actuación conjunta da como resultado el comportamiendo de la serie original. Estos componentes pueden ser ser divididos en cuatro, a saber, tendencia, estacionalidad, error y fluctuación cíclica.
 
 Para ilustrar el proceso de descomposición, se emplean dos conjuntos de datos. El primer conjuto de datos, se encuentra integrado en la base de <tt>R</tt> y  corresponde al **total mensual de pasajeros de líneas aéreas internacionales, para los años 1949 a 1960**. 
 
@@ -208,7 +210,7 @@ subplot(p1, p2, p3, p4, nrows = 4, margin = 0.03) %>%
          yaxis3 = list(title = TeX("T_t")),
          yaxis4 = list(title = TeX("\\varepsilon_t")),
          xaxis4 = list(title = "Fecha"),
-         margin = list(r=60, l=60, t=60, b=60, pad = 4), height = 600) %>%
+         margin = list(r=30, l=60, t=60, b=60, pad = 4), height = 600) %>%
   config(mathjax = 'cdn')
 ```
 </pre>
@@ -218,7 +220,7 @@ El segundo conjunto de datos, corresponde a las **variaciones porcentual de los 
 ```{r}
 # install.packages("readxl") ## Instala librería para abrir archivos de Excel
 library(readxl) ## Cargar librería
-datos <- read_xlsx("../../Dataset/ingresorealhoteles2019.xlsx")
+datos <- read_xlsx("../../Dataset/ingresorealhoteles2019.xlsx") # Cargar el archivo
 ingH <- ts(datos$`Variacion  ingresos`, start = c(2005,7), frequency = 12) # Transforma observaciones a tipo time-series
 
 descIH <- stl(ingH, s.window = 12)
@@ -252,7 +254,7 @@ de los ingresos reales de hoteles",
          yaxis3 = list(title = TeX("T_t")),
          yaxis4 = list(title = TeX("\\varepsilon_t")),
          xaxis4 = list(title = "Fecha"),
-         margin = list(r=60, l=60, t=60, b=60, pad = 4), height = 600) %>%
+         margin = list(r=30, l=60, t=60, b=60, pad = 4), height = 600) %>%
   config(mathjax = 'cdn')
 ```
 </pre>
@@ -275,7 +277,7 @@ de pasajeros de líneas aéreas", xlab = "Fecha", ylab = expression(T[t]), col =
 # Gráfico avanzado con plotly
 plot_ly(x = ~AP2$index, y = ~tendenciaNP, mode = 'lines', width = 700, height = 400, type = "scatter") %>%
   layout(title = "Componente de Tendencia para el total de pasajeros de líneas aéreas", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("T_t"))) %>% config(mathjax = 'cdn') %>% 
-layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
+layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)) 
 ```
 </pre>
 
@@ -294,7 +296,7 @@ de los ingresos reales de hoteles", xlab="Fecha", ylab = expression(T[t]), col =
 plot_ly(x = ~ingH2$index, y = ~tendenciaAH, mode = 'lines', width = 700, height = 400, type = "scatter") %>%
   layout(title="Componente de Tendencia para variaciones porcentual
 de los ingresos reales totales de hoteles", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("T_t"))) %>% config(mathjax = 'cdn') %>% 
-layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
+layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)) 
 ```
 </pre>
 
@@ -318,7 +320,7 @@ abline(h = 0)
 plot_ly(x = ~AP2$index, y = ~estacionalNP, mode = 'lines', width = 700, height = 400, type = "scatter") %>%
   layout(title="Componente Estacional para para el total
 de pasajeros de líneas aéreas", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("S_t"))) %>% config(mathjax = 'cdn') %>% 
-layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
+layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)) 
 ```
 </pre>
 
@@ -335,14 +337,14 @@ de los ingresos reales de hoteles", xlab="Fecha", ylab = expression(T[t]), col =
 plot_ly(x = ~ingH2$index, y = ~estacionalAH, mode = 'lines', width = 700, height = 400, type = "scatter") %>%
   layout(title="Componente Estacional para variación porcentual
 de los ingresos reales de hoteles", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("T_t"))) %>% config(mathjax = 'cdn') %>% 
-layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
+layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)) 
 ```
 </pre>
 
 
 ### Componente aleatorio, irregular o de error
 
-El componente de error se denota como `$\varepsilon_t$`, también llamado ruido blanco, es el componente de la serie que cambia más rápidamente y se caracteriza por presentar pequeñas fluctuaciones sobre alrededor de una media y varianza constantes sin ningún patrón aparente. Este fluctuaciones se deben generalmente, a eventos externos impredesibles que sólo ocurre fortuitamente e inciden de forma aislada en un instante del tiempo.
+El componente de error se denota como `$\varepsilon_t$`, también llamado **ruido blanco**, es el componente de la serie que cambia más rápidamente y se caracteriza por presentar pequeñas fluctuaciones sobre alrededor de una media y varianza constantes sin ningún patrón aparente. Este fluctuaciones se deben generalmente, a eventos externos impredesibles que sólo ocurre fortuitamente e inciden de forma aislada en un instante del tiempo.
 
 Es de anotar, que este componente es impredecible, pero puede ser modelado como observaciones aleatorias de alguna distribución, tal como lo es, una distribución `$N(0,\sigma^2)$`.
 
@@ -360,7 +362,7 @@ abline(h = 0)
 plot_ly(x = ~AP2$index, y = ~errorNP, width = 700, height = 400, type = "bar") %>%
   layout(title="Componente de Error para el total
 de pasajeros de líneas aéreas", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("\\varepsilon_t"))) %>% config(mathjax = 'cdn') %>% 
-layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
+layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)) 
 ```
 </pre>
 
@@ -378,7 +380,7 @@ abline(h = 0)
 plot_ly(x = ~ingH2$index, y = ~errorAH, width = 700, height = 400, type = "bar") %>%
   layout(title="Componente de Error para variación porcentual
 de los ingresos reales de hoteles", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("\\varepsilon_t"))) %>% config(mathjax = 'cdn') %>% 
-layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
+layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)) 
 ```
 </pre>
 
@@ -408,7 +410,7 @@ layout(shapes=list(
   list(type='line', x0 = "2018-03-01", x1 = "2018-03-01", y0 = -13, y1 = 19, line = list(dash = "dot"))))  %>% 
 add_lines(x = ~ingH2$index, y = ~tendenciaAH, name = "Tendencia") %>%
 add_lines(x = ~ingH2$index, y = ~fitted(linear), name = "Ajuste lineal") %>%
-layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
+layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)) 
 ```
 </pre>
 
@@ -432,7 +434,7 @@ en donde, como se mencionó en la subsección anterior, las fluctuaciones cícli
 * **Modelo aditivo:** `$Y_t = T_t + S_t + \varepsilon_t$`
 * **Modelo multiplicativo:** `$Y_t = T_t * S_t * \varepsilon_t$`
 
-Es de anotar que en el modelo aditivo se supone que los tres componentes de la serie de tiempo son independientes entre sí, y es propiado emplearlo cuando la magnitud de las fluctuaciones estacionales de la serie no varía al hacerlo la tendencia, es decir, la serie de tiempo original tiene aproximadamente la misma variabilidad a lo largo de toda la serie.
+Es de anotar que en el modelo aditivo se supone que los tres componentes de la serie de tiempo son independientes entre sí, y es apropiado emplearlo cuando la magnitud de las fluctuaciones estacionales de la serie no varía al hacerlo la tendencia, es decir, la serie de tiempo original tiene aproximadamente la misma variabilidad a lo largo de toda la serie.
 
 Mientras que, en el modelo multiplicativo se trabaja bajo el supuesto de que los tres componentes de la serie de tiempo no son necesariamente independientes, y es apropiados emplearlo cuando la magnitud de las fluctuaciones estacionales de la serie crece y decrece proporcionalmente con los crecimientos y decrecimientos de la tendencia, respectivamente, es decir, los valores de la serie se dispersan conforme la tendencia aumenta, o se reúnen conforme la tendencia disminuye.
 
@@ -460,6 +462,13 @@ Existen algunas variantes para los modelos de descomposición básicos, tales co
 * **Modelo pseudo-aditivo:** `$Y_t = T_t (S_t + \varepsilon_t - 1)$`
 
 los cuales se emplean situaciones específicas, como por ejemplo, cuando la serie original posee fluctuaciones estacionales marcadamente pronunciadas y un movimiento de ciclos de tendencia, que es extremadamente dependiente del clima, o cuando la serie original posea un mes (o trimestre) que es mucho más alto o más bajo que todos los otros meses (o trimestres), respectivamente.
+
+## Clasificación descriptiva de las series de tiempo
+Dadas las diferentes características que puede tener las series de tiempo, podemos clasificar su comportamiento en
+
+* Estacionaria: Una serie es estacionaria cuando posee una media y varianza constantes en el tiempo, y en consecuencia, se observará que tiene un comportamiento estable, centrado sobre su valor promedio, con oscilaciones alrededor de este valor constante.
+
+* No estacionaria: Una series es no estacionaria cuando no posee una media ni una varianza constantes, y en consecuencia, se observará que su valor promedio tendrá una tendencia creciente o decreciente a largo plazo, con un comportamiento que no oscilará alrededor de un valor constante.
 
 ## Identificación de componentes
 ### Autocorrelación
@@ -506,7 +515,7 @@ add_bars(x = ~acfAP$lag, y = ~acfAP$acf, width = 0.2, text = paste("Autocorrelac
 layout(shapes=list(
   list(type='line', x0=0, x1=nrow(acfAP), y0=acfCI(AP2$value), y1=acfCI(AP2$value), line = list(dash = "dot")),
   list(type='line', x0=0, x1=nrow(acfAP), y0=-acfCI(AP2$value), y1=-acfCI(AP2$value), line = list(dash = "dot")))) %>%
-layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
+layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)) 
 ```
 </pre>
 
@@ -526,7 +535,7 @@ add_bars(x = ~acfVH$lag, y = ~acfVH$acf, width = 0.2, text = paste("Autocorrelac
 layout(shapes=list(
   list(type='line', x0=0, x1=nrow(acfVH), y0=acfCI(ingH2), y1=acfCI(ingH2), line = list(dash = "dot")),
   list(type='line', x0=0, x1=nrow(acfVH), y0=-acfCI(ingH2), y1=-acfCI(ingH2), line = list(dash = "dot"))))  %>%
-layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
+layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)) 
 ```
 </pre>
 
@@ -541,9 +550,43 @@ Basados en @Rios2008, los criterios para la interpretación del correlograma est
 \pm Z_{\frac{\alpha}{2}}/\sqrt{T} = \pm 1.96/\sqrt{T}
 \end{align*}`
 
-* Si ninguna de las autocorrelaciones es significativamente diferente de cero, la serie es esencialmente **ruido blanco**.
-* Si las autocorrelaciones decrecen linealmente, pasando por el cero, o muestra un patrón cíclico, pasando por cero varias veces, la serie **no es estacionaria**. Se tendrá que diferenciarla una o más veces antes de modelarla.
+* Si las autocorrelaciones decrecen lentamente a cero, o muestra un patrón cíclico, pasando por cero varias veces, la serie **no es estacionaria**. Se tendrá que diferenciarla una o más veces antes de modelarla.
 * Si las autocorrelaciones muestran estacionalidad, o se tiene una alza cada periodo (cada 12 meses, por ejemplo), la serie **no es estacionaria** y hay que diferenciarla con un salto igual al periodo.
+* Si las autocorrelaciones decrece rapidamente a cero con al menos un rezago significativo, se tendrá que la serie es **estacionaria en media**.
+
+* Si ninguna de las autocorrelaciones es significativamente diferente de cero, la serie es esencialmente **ruido blanco**.
+
+```{r}
+set.seed(1613)
+par(mfrow = c(1, 2)) # Función para poner más de un gráfico
+ruido <- rnorm(100, mean = 0, sd = 1)
+plot.ts(ruido, type = "l", main = "Ejemplo Ruido Blanco", ylab = "Serie")
+acf(ruido, main = "Ejemplo ACF Ruido Blanco")
+```
+
+<pre>
+```{r echo=FALSE}
+ruido2 <- as_tsibble(as.ts(ruido))
+acfruido <- ruido2 %>% ACF(value)
+
+### Gráfico avanzado
+p9 <- plot_ly(x = ~seq(1:length(ruido)), y = ~ruido, mode = "lines", type = "scatter", name = "Serie") 
+p10 <- plot_ly(data = acfruido) %>% 
+add_bars(x = ~acfruido$lag, y = ~acfruido$acf, width = 0.2, text = paste("Autocorrelación =", acfruido$acf),  name = "ACF") %>% 
+layout(shapes=list(
+  list(type='line', x0=0, x1=nrow(acfruido), y0=acfCI(ruido2$value), y1=acfCI(ruido2$value), line = list(dash = "dot")),
+  list(type='line', x0=0, x1=nrow(acfruido), y0=-acfCI(ruido2$value), y1=-acfCI(ruido2$value), line = list(dash = "dot"))))
+subplot(p9, p10, nrows = 1, margin = 0.08) %>% 
+  layout(title = "Ejemplo Ruido Blanco y ACF Ruido Blanco",
+         yaxis = list(title = "Serie"),
+         yaxis2 = list(title = "ACF"),
+         xaxis2 = list(title = "Time"),
+         xaxis2 = list(title = "Lags"),
+         margin = list(r=30, l=60, t=60, b=60, pad = 4),
+         width = 700, height = 400 , showlegend = FALSE)
+
+```
+</pre>
 
 A continuación se presenta el correlograma de la diferenciación de un salto igual a 12 meses del **total mensual de pasajeros de líneas aéreas internacionales, para los años 1949 a 1960**.
 
@@ -564,7 +607,7 @@ add_bars(x = ~acfAPdiff12$lag, y = ~acfAPdiff12$acf, width = 0.2, text = paste("
 layout(shapes=list(
   list(type='line', x0=0, x1=nrow(acfAPdiff12), y0=acfCI(AP2$diff12), y1=acfCI(AP2$diff12), line = list(dash = "dot")),
   list(type='line', x0=0, x1=nrow(acfAPdiff12), y0=-acfCI(AP2$diff12), y1=-acfCI(AP2$diff12), line = list(dash = "dot")))) %>%
-layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
+layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)) 
 ```
 </pre>
 
@@ -586,7 +629,7 @@ add_bars(x = ~acfAPdiff121$lag, y = ~acfAPdiff121$acf, width = 0.2, text = paste
 layout(shapes=list(
   list(type='line', x0=0, x1=nrow(acfAPdiff121), y0=acfCI(AP2$diff121), y1=acfCI(AP2$diff121), line = list(dash = "dot")),
   list(type='line', x0=0, x1=nrow(acfAPdiff121), y0=-acfCI(AP2$diff121), y1=-acfCI(AP2$diff121), line = list(dash = "dot")))) %>%
-layout(margin = list(l = 60, r = 60, b = 60, t = 60, pad = 4)) 
+layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)) 
 ```
 </pre>
 

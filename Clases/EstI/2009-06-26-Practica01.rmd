@@ -147,5 +147,6 @@ A partir de los datos recolectados en la encuesta sobre hábitos y preferencias 
 2. Calcule los resumenes numéricos de las variables cuantitativas y realice una interpretación de los estadísticos que considere más destacados.
 3. Muestre si hay diferencias significativas entre el promedio de carrera, respecto a La carrera y respecto a la universidad donde estudian los encuestados. Hay evidencia para creer que dependiendo de la carrera o la universidad es más probable tener un promedio de carrera más alto?
 4. Existe relación entre la variable ingresos mensuales y las variables universidad, estrato socio económico, o si los estudiantes trabajan?
-5. Proponga otro tipo de comparaciones que le parezcan interesantes :D
-6. Continuará.... >:o
+5. De las personas que consumen bebidas alcoholicas, cuál es la bebida alcohólica con mayor preferencia entre los estudiantes?
+6. Proponga otro tipo de comparaciones que le parezcan interesantes :D
+7. Continuará.... >:o

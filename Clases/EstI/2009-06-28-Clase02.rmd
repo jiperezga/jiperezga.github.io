@@ -169,7 +169,7 @@ Mide la fuerza de la dependencia lineal que hay entre variables, esta va entre -
 
 El valor de `$\rho_{xy}$` indica el tipo y fuerza de la dependencia lineal que hay entre las variables
 
-* `$\rho_{xy} = 1$` indica que existe dependencia lineal positiva exacta entre las variables, es decir, cuando aumenta una variable, la otra aumenta proporcionalmente en la misma cantidad. Este aumento es de la forma `$Y = a + bX$` con `$a y b$` dos constantes, y `$b>0$`.
+* `$\rho_{xy} = 1$` indica que existe dependencia lineal positiva exacta entre las variables, es decir, cuando aumenta una variable, la otra aumenta proporcionalmente en la misma cantidad. Este aumento es de la forma `$Y = a + bX$`, siendo `$a$` y `$b$` dos constantes, con `$b>0$`.
 * `$\rho_{xy} = -1$` indica que existe dependencia lineal negativa exacta entre las variables, es decir, cuando aumenta una variable, la otra disminuye proporcionalmente en la misma cantidad. Este aumento es de la forma `$Y = a + bX$` con `$a y b$` dos constantes, y `$b<0$`.
 * `$\rho_{xy} = 0$` No existe dependencia lineal entre las variables.
 

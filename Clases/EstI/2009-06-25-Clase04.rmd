@@ -32,7 +32,7 @@ opts_chunk$set(echo=TRUE,
                comment=NA,
                message=FALSE,
                warning=FALSE,
-               fig.path = paste0("../../EstadisticaI/images/", "Clase03"),
+               fig.path = paste0("../../EstadisticaI/images/", "Clase04"),
                cache.path = "../../EstadisticaI/cache/",
                cache = FALSE)
 
@@ -124,42 +124,4 @@ permutaciones distintas en `$n$` objetos, en los que `$n_1$` objetos son de una 
 `\begin{align*}
 \frac{n!}{n_1! n_2! \ldots n_k!}
 \end{align*}`
-
-### Teorema: Combinatoria
-El número de combinaciones de `$n$` objetos, tomando `$r$` objetos a la vez, es el número de subconjuntos de tamaño `$r$`, que se pueden formar a partir de los `$n$` objetos. Entonces, el número de subconjuntos desordenados de tamaño `$r$` escogidos sin reemplazo, de un total de `$n$` objetos disponibles es
-`\begin{align*}
-_nC_r=\left(\begin{array}{c}n\\ r\end{array}\right) = \frac{n!}{r! (n-r)!}
-\end{align*}`
-
-### Teorema: Combinatoria por subconjuntos
-El número de maneras en que un conjunto de `$n$` objetos diferentes se puede dividir o partir en `$k$` subconjuntos de `$n_1$` objetos el primer subconjunto, `$n_2$` objetos el segundo subconjunto, `$\ldots$`, y `$n_k$` objetos el `$k$`-ésimo subconjunto es
-`\begin{align*}
-\left(\begin{array}{c}n\\ n_1, n_2, \ldots, n_k\end{array}\right) = \frac{n!}{n_1! n_2! \ldots n_k!}
-\end{align*}`
-
-siendo `$\sum_{i=1}^kn_i=n$`.
-
-### Nota
-Si se tienen `$n$` objetos de los cuales se desean tomar `$r$` a la vez, se debe hacer distinción, si el conteo se realiza con reemplazo o sin reemplazo, además, se debe determinar si los objetos deben estar ordenados o no
-
-#### Caso 1: Con orden, sin reemplazo
-`\begin{align*}
-_nP_r= n(n-1)(n-2)\ldots(n-r+1)=\frac{n!}{(n-r)!}\\
-\end{align*}`
-
-#### Caso 2: Con orden, con reemplazo
-`\begin{align*}
-n^r
-\end{align*}`
-
-#### Caso 3: Sin orden, sin reemplazo
-`\begin{align*}
-_nC_r = \left(\begin{array}{c}n\\ r\end{array}\right) = \frac{n!}{r! (n-r)!}
-\end{align*}`
-
-#### Caso 4: sin orden con reemplazo
-`\begin{align*}
-_{n+r-1}C_r = \left(\begin{array}{c}n+r-1\\ r\end{array}\right) = \frac{n+r-1!}{r! (n-1)!}
-\end{align*}`
-
 
