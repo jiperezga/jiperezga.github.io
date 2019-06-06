@@ -60,7 +60,7 @@ Es un subconjunto de los resultados del espacio muestral S. Generalmente, los ev
 
 Los eventos pueden ser clasificados en dos tipos
 
-* **Simple:** se da cuando el evento tiene más de un resultado o punto muestral.
+* **Simple:** se da cuando el evento tiene un solo resultado o punto muestral.
 * **Compuesto:** se da cuando el evento tiene más de un resultado o punto muestral. Estos resultados pueden ser dependientes o independientes.
 
 ## Teoría de conjuntos
