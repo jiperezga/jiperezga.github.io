@@ -256,7 +256,7 @@ Parejas
 Trabajo
 </td>
 <td style="text-align:left;">
-20
+20%
 </td>
 <td style="text-align:left;width: 5cm; ">
 Trabajo de muestreo

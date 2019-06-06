@@ -278,7 +278,7 @@ legend("topright", c("none", "reduced", "continuing"), fill = c("lightblue", "li
 Este gráfico es similar al grafico de barras para una sola variable cualitativa, pero con la ventaja de que presenta las frecuencias absolutas, relativas, y las frecuencias acumuladas absolutas y acumuladas relativas en el mismo gráfico. Este gráfico puede ser realizado mediante la función `pareto.chart()` de la librería `qqc`, usando como insumo, tablas de frecuencias absolutas o relativas.
 
 ```{r}
-# install.packages("qcc") # Instrala paquete qcc
+# install.packages("qcc") # Instala paquete qcc
 library(qcc) # Carga paquete qcc
 # Usando las tablas de frecuencias absolutas presentadas en el análisis tabular.
 pareto.chart(tabla1via, las = 1, main = "Gráfico Pareto para estado de medicación")
@@ -321,12 +321,12 @@ boxplot(Insurance$Claims ~ Insurance$Group, horizontal = T, xlab = "Conteo", yla
 ```
 
 #### Gráfico de medias
-Este gráfico sirve para presentar de forma visual, grupos de datos númericos a través de sus media y desviación estándar. El gráfico está compuesto por un punto que representa el valor el valor promedio del grupo de observaciones y las barras representan **una** desviación estándar de la media. Este gráfico puede ser realizado mediante la función `plotMeans` de la librería `RcmdrMisc`.
+Este gráfico sirve para presentar de forma visual, grupos de datos númericos a través de sus media y desviación estándar. El gráfico está compuesto por un punto que representa el valor promedio del grupo de observaciones y las barras representan **una** desviación estándar de la media. Este gráfico puede ser realizado mediante la función `plotMeans` de la librería `RcmdrMisc`.
 
-```{r eval=F}
+```{r}
 library(RcmdrMisc) # Carga la librería RcmdrMisc
 # recordar escribir en error.bars = "sd" porque por defecto se presenta el error estándar y no la desviacion estándar.
-plotMeans(response = Insurance$Claims, , error.bars = "sd") 
+plotMeans(response = Insurance$Claims, factor1 = Insurance$Group, error.bars = "sd")
 ```
 
 

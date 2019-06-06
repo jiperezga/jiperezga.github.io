@@ -138,7 +138,7 @@ library(kableExtra)
 library(dplyr)
 kable(cbind(data.frame(
   "Evaluación" = c("Examen No.1", "Examen No.2", "Examen No.3","Examen No.4", "Trabajo")),
-  Porcentaje = c("15%", "25%", "15%", "25%", "20"),
+  Porcentaje = c("15%", "25%", "15%", "25%", "20%"),
   Temas = c("Identificación de componentes de una serie de tiempo, ACF, funciones de pérdida y modelo de regresión lineal simple", "Métodos no-paramétricos de series temporales", "Identificación de procesos ARIMA(p,d,q)", "Modelos Box-Jenkins", "Trabajo de muestreo"),
   "Semana para Evaluación" = c("Cuarta semana", "Sexta semana", "Décima semana", "Duodécima semana", "Décimo sexta semana"),
   Modalidad = c("Individual", "Parejas", "Individual", "Parejas", "Individual, Parejas, Grupal")),
