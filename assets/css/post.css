@@ -1,3 +1,7 @@
+.table thead th, .table td{background-color: rgba(59,165,255,.60);border:.125rem solid #ccc;padding:.313rem; font-size:80%;}
+
+.table{margin:3.125rem auto; color: #FFFFFF}
+
 .post-content h1:before,.post-content h2:before,.post-content h3:before,.post-content h4:before,.post-content h5:before,.tag-title:before{display:block;content:" ";margin-top:-60px;height:75px;visibility:hidden}
 
 .post{top:14.25rem;background:#002240}
@@ -61,7 +65,7 @@
 .post-content > table{margin:3.125rem auto; color:#FFFFFF}
 @media only screen and (max-width:37.5rem){.post-content > table{display:none}}
 
-.post-content > table th,.post-content > table td{background-color: rgba(59,165,255,.60);border:.125rem solid #ccc;padding:.313rem}
+.post-content > table th,.post-content > table td{background-color: rgba(59,165,255,.60);border:.125rem solid #ccc;padding:.313rem; font-size:100%;}
 
 .table-striped tbody tr:nth-of-type(odd){background-color: rgba(84,84,84,.60)}
 
@@ -111,3 +115,4 @@ pre{color:#FFFFFF; font-weight:bold}
 
 .MathJax_Display{text-align:center!important}
 tt{font-size:130%;}
+

@@ -71,6 +71,8 @@ Dado que un evento puede estar compuestos por un conjunto de datos, las relacion
 3. La **intersección** de dos eventos `$A$` y `$B$`, es denotado por `$A\cap B$`, es el evento que contiene todos los elementos que son comunes en `$A$` y `$B$`.
 4. Los eventos `$A$` y `$B$` son **mutuamente excluyentes** cuando `$A\cap B=\oslash$`, donde `$\oslash$` se denota como el evento nulo.
 
+<!-- meter tablita de propiedades de teoría de conjuntos, conmutativa, asociativa, etc etc http://www.est.uc3m.es/esp/nueva_docencia/leganes/ing_telecomunicacion/estadistica/doc_grupo1/archivosnew/Ej_Probabilidad_ELv8.pdf -->
+
 ## Probabilidad
 La probabilidad es una medida asociada a la posibilidad de que ocurra un determinado evento, en donde, la forma forma tradicional de estimar la probabilidad es mediante el concepto de frecuencia relativa.
 `\begin{align*}
