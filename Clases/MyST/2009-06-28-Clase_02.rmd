@@ -7,8 +7,7 @@ tags:
 
 introduction: |
   Modelo de descomposición  <br/>
-  Funciones de pérdida <br/>
-  Métodos no-paramétricos de series temporales, filtros lineales, suavizamiento y medias móviles.
+  Función de Autocorrelación
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
@@ -44,12 +43,12 @@ opts_chunk$set(echo=TRUE,
 ## Modelo de descomposición
 Una vez separados los componentes que conforman una serie de tiempo, es necesario analizar la forma en que se relacionan estos con la serie original, puesto que al recombinar los componentes es posible obtener una serie de tiempo completamente pronosticable.
 
-Existen diferentes modelos matemáticos para expresar la serie original `$Y_t$`, en términos de los componentes de tendencia `$T_t$`, estacionalidad `$S_t$`, fluctuaciones cíclicas `$C_t$` y errores `$\varepsilon_t$`, en donde, es posible ajustar la serie original a uno solo uno de los cuatro componentes o se una combinación de todos ellos, para la posterior realización de pronósticos. Para combinar los componentes, se tienen dos clases básicas de modelos matemáticos 
+Existen diferentes modelos matemáticos para expresar la serie original `$Y_t$`, en términos de los componentes de tendencia `$T_t$`, estacionalidad `$S_t$`, fluctuaciones cíclicas `$C_t$` y errores `$\varepsilon_t$`, en donde, es posible ajustar la serie original a uno solo uno de los cuatro componentes o es una combinación de todos ellos, para la posterior realización de pronósticos. Para combinar los componentes, se tienen dos clases básicas de modelos matemáticos 
 
 * **Modelo aditivo:** `$Y_t = T_t + S_t + C_t + \varepsilon_t$`
 * **Modelo multiplicativo:** `$Y_t = T_t * S_t * C_t * \varepsilon_t$`
 
-en donde, como se mencionó en la subsección anterior, las fluctuaciones cíclicas `$C_t$` son el componente más difíciles de pronosticar, y por tanto, son mezcladas con el componente de error `$\varepsilon$` o se asume que son parte de la tendencia `$T_t$`. Entonces, el modelo aditivo y multiplicativo, puede ser reescritos como
+en donde, como se mencionó en la subsección anterior, las fluctuaciones cíclicas `$C_t$` son el componente más difíciles de pronosticar, y por tanto, son mezcladas con el componente de error `$\varepsilon_t$` o se asume que son parte de la tendencia `$T_t$`. Entonces, el modelo aditivo y multiplicativo, pueden ser reescritos como
 
 * **Modelo aditivo:** `$Y_t = T_t + S_t + \varepsilon_t$`
 * **Modelo multiplicativo:** `$Y_t = T_t * S_t * \varepsilon_t$`
@@ -61,7 +60,7 @@ Mientras que, en el modelo multiplicativo se trabaja bajo el supuesto de que los
 Adicionalmente, se destaca que muy a menudo las series, a pesar de no tener un comportamiento aditivo, pueden ser transformadas para ser modeladas de forma aditiva. Un ejemplo de ello son los logaritmos naturales, en donde, es posible convertir el modelo multiplicativo en un modelo aditivo, ya que si
 
 `\begin{align*}
-Y_t = T_t * S_t * \varepsilon_t$
+Y_t = T_t * S_t * \varepsilon_t
 \end{align*}`
 
 entonces
@@ -74,14 +73,14 @@ y por tanto, es posible realizar los pronosticos necesarios mediante una transfo
 
 Un aspecto importante, sobre los modelos aditivos y multiplicativos es que, en el modelo aditivo siempre se asume que `$\varepsilon_t\stackrel{iid}{\sim}N(0,\sigma^2)$`, mientras que para el modelo multiplicativo, se sume que `$\varepsilon_t\stackrel{iid}{\sim}lognormal(\mu=0,\sigma^2)$`, y por tanto, mediante la transformación logaritmica del modelo multiplicativo se tiene que `$log(\varepsilon_t)\stackrel{iid}{\sim}N(0,\sigma^2)$`.
 
-Una alternativa para evaluar si los componentes de error son o no normales, es mediante los gráficos QQ-plot de la distribución Normal, y mediante la prueba Shapiro-Wilk. Éstas pueden realizarse en <tt>R</tt> mediante las funciones `qqnorm()` y `shapiro.test()`, respectivamente.
+Una alternativa para evaluar si los componentes de error son o no normales, es mediante los gráficos `$QQ$`-plot de la distribución Normal, y mediante la prueba Shapiro-Wilk. Éstas pueden realizarse en <tt>R</tt> mediante las funciones `qqnorm()` y `shapiro.test()`, respectivamente.
 
 Existen algunas variantes para los modelos de descomposición básicos, tales como
 
 * **Modelo mixto:** `$Y_t = T_t * S_t + \varepsilon_t$`
 * **Modelo pseudo-aditivo:** `$Y_t = T_t (S_t + \varepsilon_t - 1)$`
 
-los cuales se emplean situaciones específicas, como por ejemplo, cuando la serie original posee fluctuaciones estacionales marcadamente pronunciadas y un movimiento de ciclos de tendencia, que es extremadamente dependiente del clima, o cuando la serie original posea un mes (o trimestre) que es mucho más alto o más bajo que todos los otros meses (o trimestres), respectivamente.
+los cuales se emplean en situaciones específicas, como por ejemplo, cuando la serie original posee fluctuaciones estacionales marcadamente pronunciadas y un movimiento de ciclos de tendencia, que es extremadamente dependiente del clima, o cuando la serie original posea un mes (o trimestre) que es mucho más alto o más bajo que todos los otros meses (o trimestres), respectivamente.
 
 ## Clasificación descriptiva de las series de tiempo
 Dadas las diferentes características que puede tener las series de tiempo, podemos clasificar su comportamiento en
@@ -102,12 +101,12 @@ Var(y_t) = \hat{\gamma}(0) = \mathbb E(y_t - \bar{y})^2 = \frac{1}{T-1}\sum_{t=1
 
 la autocovarianza muestral entre observaciones que se encuentran a `$k$` periodos de tiempo de diferencia, como
 `\begin{align*}
-Cov(y_{t+k},y_t) = \hat{\gamma}(k) = \mathbb E[(y_{t+k} - \bar{y})(y_{t} - \bar{y})] = \frac{1}{T-k-1}\sum_{t=1}^{T-k}(y_{t+k} - \bar{y})(y_{t} - \bar{y})
+Cov(y_{t+k},y_t) = \hat{\gamma}(k) = \mathbb E[(y_{t+k} - \bar{y})(y_{t} - \bar{y})] = \frac{1}{T-1}\sum_{t=1}^{T-k}(y_{t+k} - \bar{y})(y_{t} - \bar{y})
 \end{align*}`
 
 y la autocorrelación muestral entre observaciones que se encuentran a `$k$` periodos de tiempo de diferencia, como
 `\begin{align*}
-Cor(y_{t+k},y_t) = \hat{\rho(k)} = \frac{\hat{\gamma}(k)}{\hat{\gamma}(0)}
+Cor(y_{t+k},y_t) = \hat{\rho(k)} = \frac{\hat{\gamma}(k)}{\hat{\gamma}(0)} = \frac{\sum_{t=1}^{T-k}(y_{t+k} - \bar{y})(y_{t} - \bar{y})}{\sum_{t=1}^{T}(y_t-\bar{y})^2}
 \end{align*}`
 
 donde `$k$` es el número de rezagos o autocorrelaciones que se desean calcular. Por tanto, no se recomienda emplear valores de `$k$` muy altos, ya que ésto provocará que se tengan menos términos para el cálculo de las autocorrelaciones.
@@ -184,7 +183,6 @@ Basados en @Rios2008, los criterios para la interpretación del correlograma est
 * Si las autocorrelaciones decrecen lentamente a cero, o muestra un patrón cíclico, pasando por cero varias veces, la serie **no es estacionaria**. Se tendrá que diferenciarla una o más veces antes de modelarla.
 * Si las autocorrelaciones muestran estacionalidad, o se tiene una alza cada periodo (cada 12 meses, por ejemplo), la serie **no es estacionaria** y hay que diferenciarla con un salto igual al periodo.
 * Si las autocorrelaciones decrece rapidamente a cero con al menos un rezago significativo, se tendrá que la serie es **estacionaria en media**.
-
 * Si ninguna de las autocorrelaciones es significativamente diferente de cero, la serie es esencialmente **ruido blanco**.
 
 ```{r}
@@ -263,132 +261,6 @@ layout(shapes=list(
 layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)) 
 ```
 </pre>
-
-## Evaluación de los pronósticos (Funciones de pérdida)
-Otro aspecto de suma importancia en los pronósticos, es evaluar la precisión o eficiencia del método de pronóstico empleado, y para ello, se emplean diferentes indicadores que permiten identificar qué tan acertado o cercano es el pronostico realizado respecto a su valor original.
-
-Para aplicar dichos métodos, una alternativa es la implementación de un procedimiento conocido como *validación cruzada*, el cual consta de dividir el conjunto de observaciones de la serie en dos grupos. El primer grupo estará dado por las observaciones `$\{Y_1, Y_2, \ldots, Y_{T-m}\}$`, denotadas como datos de entrenamiento, y serán las observaciones que se emplearán para realizar la estimación del modelo y estimación de los pronósticos. El segundo grupo estará dado por las observaciones `$\{Y_{T-m+1}, Y_{T-m+2}, \ldots, Y_{T}\}$`, denotadas como datos de validación, y serán las observaciones que se emplearán para evaluar el desempeño de los modelos.
-
-Entonces, suponga que a partir del conjunto de entrenamiento se realizan los pronósticos `$\{\hat{Y}_{T-m+1}, \hat{Y}_{T-m+2}, \ldots, \hat{Y}_{T}\}$`, entonces puede definirse el error de estimación `$e_t=\hat{varepsilon}_t$`, entre las observación real `$t$` y el valor pronosticado `$t$`, de la forma
-`\begin{align*}
-e_t= Y_t - \hat{Y}_t
-\end{align*}`
-
-con `$t={T-m+1}, {T-m+2}, \ldots, {T}$`. A partir de los errores de estimación `$e_t$`, es posible realizar el cálculo de diferentes medidas de error que permitan cuantificar diferentes aspectos de los valores pronosticados. Con el fin de ilustrar y mejorar el entendimiento de las medidas de error, se presentarán las propiedades que posee cada uno de ellos, basados en @Adhikari2013[, p. 42].
-
-### Error medio (ME)
-Esta medida está definida como
-`\begin{align*}
-ME=\frac{1}{n}\sum_{t=T-m+1}^T e_t 
-\end{align*}`
-
-* Es una medida de la desviación promedio de los valores pronosticados respecto a los valores reales.
-* Muestra la dirección del error y, en consecuencia, el sesgo que poseen los pronóstico.
-* En el ME, los efectos de los errores positivos y negativos se cancelan y no hay forma de saber su cantidad exacta.
-* Un ME de cero no significa que los pronósticos sean perfectos o que no existan errores de pronóstico, si no que indica que los pronósticos no poseen ningún sesgo, y en consecuencia, están apuntancia hacia el objetivo correcto.
-* El ME no penaliza los errores extremos de pronóstico.
-* Depende de la escala de medición y también se ve afectada por las transformaciones de datos.
-* Para que el pronostico sea bueno, se requiere que el sesgo sea mínimo, y por tanto, es deseable que el ME sea lo más cercano a cero posible.
-
-### Porcentaje medio del error (MPE)
-Esta medida está definida como
-`\begin{align*}
-MPE=\frac{1}{n}\sum_{t=T-m+1}^T \frac{e_t}{y_t} \times 100
-\end{align*}`
-
-* Mode el porcentaje de error promedio ocurrido de los pronósticos.
-* Muestra la dirección del error y, en consecuencia, el porcentaje de sesgo que poseen los pronóstico.
-* En el MPE, los efectos de los errores positivos y negativos se cancelan mutuamente.
-* El MPE es independiente de la escala de medición, pero se ve afectado por la transformación de datos.
-* Similar al ME, el obtener valores de MPE cercanos a cero, no indican que los pronósticos sean buenos o que no existan errores de pronóstico, si no que indica que los pronosticos poseen un sesgo pequeño. 
-* Similar al ME, es deseable que el sesgo del MPE sea mínimo, es decir, que el valor del MPE sea lo más pequeño posible.
-* Al igual que el ME, el MPE no penaliza los errores extremos de pronóstico.
-
-### Error absoluto medio (MAE)
-Esta medida está definida como
-`\begin{align*}
-MAE=\frac{1}{n}\sum_{t=T-m+1}^T |e_t|
-\end{align*}`
-
-* Mide la desviación absoluta promedio de los valores pronosticados respecto a los valores reales.
-* También se denomina como la desviación absoluta media (MAD).
-* Muestra la magnitud del error general, ocurrido debido al pronóstico.
-* A diferencia del ME, en el MAE, los efectos de los errores positivos y negativos no se anulan.
-* A diferencia del ME, el MAE no proporciona ninguna idea sobre el sesgo de los pronósticos.
-* Al igual que el ME, el MAE no penaliza los errores extremos de pronóstico.
-* Al igual que el ME, el MAE también depende de la escala de medición y de las transformaciones de datos.
-* Para que el pronostico sea bueno, se requiere que el MAE obtenido sea lo más pequeño posible.
-
-### Porcentaje del error medio absoluto (MAPE)
-Esta medida está definida como
-`\begin{align*}
-MAPE=\frac{1}{n}\sum_{t=T-m+1}^T \left|\frac{e_t}{y_t}\right|\times 100
-\end{align*}`
-
-* Mide el porcentaje de error absoluto promedio ocurrido de los pronósticos.
-* A diferencia del MPE, el MAPE no proporciona ninguna idea sobre el sesgo de los pronósticos.
-* A diferencia del MPE, en el MAPE los efectos de los errores positivos y negativos no se anulan.
-* Al igual que el MPE, el MAPE no penaliza los errores extremos de pronóstico.
-* Al igual que el MPE, el MAPE también es independiente de la escala de medición, pero está afectado por la transformación de datos.
-
-### Error cuadrático medio (MSE)
-Esta medida está definida como
-`\begin{align*}
-MSE=\frac{1}{n}\sum_{t=T-m+1}^T (e_t)^2
-\end{align*}`
-
-* Mide la desviación al cuadrado promedio de los valores pronosticados respecto a los valores reales.
-* En el MSE, los errores positivos y negativos no se compensan entre si, y en consecuencia, el MSE proporciona una idea general del error ocurrido durante el pronóstico.
-* A diferencia de las otras medidas, el MSE paneliza errores extremos ocurridos al pronosticar.
-* El MSE enfatiza el hecho de que el error de pronóstico total está, de hecho, muy afectado por grandes errores individuales, es decir, los errores grandes son mucho más caros que los errores pequeños.
-* A diferencia del ME y MPE, el MSE no proporciona ninguna idea sobre la dirección del error general, es decir, del sesgo de pronóstico.
-* El MSE es sensible al cambio de escala y las transformaciones de datos.
-* Aunque el MSE es una buena medida del error de pronóstico general, pero NO es tan intuitivo y fácilmente interpretable como las otras medidas discutidas anteriormente.
-
-### Suma de cuadrados del error (SSE)
-Esta medida está definida como
-`\begin{align*}
-SSE=\sum_{t=T-m+1}^T (e_t)^2
-\end{align*}`
-
-* Posee las mismas propiedades del MSE.
-
-### Raíz cuadrada del error cuadrático medio (RMSE)
-Esta medida está definida como
-`\begin{align*}
-RMSE=\sqrt{\frac{1}{n}\sum_{t=T-m+1}^T (e_t)^2}
-\end{align*}`
-
-* La RMSE no es más que la raíz cuadrada de la MSE calculada.
-* Todas las demás propiedades de MSE se mantienen para RMSE también.
-
-## Introducción modelamiento
-Cómo se ha mencionado hasta ahora, uno de los aspecto más importantes en las series de tiempo, recae en la adecuada selección del modelo que se va a emplear, debido a que éste será el que refleje la estructura de la serie, y a su vez, permitirá la realización de pronósticos futuros.
-
-Entre las alternativas para el modelamiento de una serie de tiempo, se presentan modelos lineales o no lineales, los cuales se emplean dependiendo de la estructura que tenga la serie de tiempo respecto a sus observaciones pasadas.
-
-## Métodos no-paramétricos
-Como su nombre lo índica, los métodos no-paramétricos son aquellos que no poseen una estructura paramétrica, si no que sus estimaciones son basadas en algoritmos que varían en cada periodo `$t$`, sin asumir una forma paramétrica específica, y además, a diferencia de los métodos paramétricos, éstos no requieren de supuestos estadísticos para su aplicación, ni modelamiento global, lo cual en muchos casos pueden ser muy restrictivo.
-
-Es de anotar que se debe tener precaución a la hora de aplicar métodos no-paramétricos, debido a que no todos están diseñados para ser aplicados sin importar las componentes de la serie, y por tanto, dependiendo de la o las componentes de la serie de tiempo que hayan sido identificadas, se debe seleccionar el método no-paramétrico que más conveniente, a saber
-
-* **Serie con tendencia:** Medias móviles (MA) - Suavizamiento exponencial de Holt-Winters
-* **Serie estacional:** Suavizamiento exponencial de Holt-Winters aditivo - Suavizamiento exponencial de Holt-Winters multiplicativo
-* **Serie estacionaria en media:** Medias móviles simples (MMS) - Suavizamiento exponencial simple (SES) 
-
-## Filtros lineales y suavizadores
-Suavizar o filtrar una serie temporal, es similar a la idea de aplicar filtros a la música a través de un amplificador. Podemos amplificar ciertos sonidos o podemos suprimir ciertos sonidos, similarmente, también podemos suprimir (eliminar) ciertas características de una serie de tiempo como la estacionalidad, para poder modelar la tendencia de la misma. Una vez que hemos construido un modelo adecuado para la serie desestacionalizada, podemos agregar nuevamente la componente estacional a los pronósticos de nuestra serie.
-
-Entonces, un filtro lineal puede definirse como un operador que transforma una serie `$Y_t$`, a otra serie `$\bar{Y}_t$`, para `$t = 1,2, \ldots, T$` mediante la formula
-`\begin{align*}
-\bar{Y}_t=\sum_{i=-m}^{m}w_iY_{t_i}
-\end{align*}`
-
-para `$t=m+1,m+2, \ldots, T-m$` y donde los coeficientes `$w_i$` son un conjunto de pesos, tal que `$\sum_{i=-m}^{m}|w_i|<\infty$`. Además, en situaciones en los cuales se desea determinar la tendencia y reducir las fluctuaciones locales, se pueden restringir los pesos `$w_i$` de la forma `$\sum_{i=-m}^{m}w_i=1$`.
-
-
-
-## Filtro lineal
 
 
 
