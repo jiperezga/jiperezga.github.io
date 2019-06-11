@@ -5,7 +5,10 @@ main-class: 'clase'
 permalink: /MuestreoySeriesdeTiempo/MyST:title.html
 tags:
 
-introduction: Métodos no-paramétricos de series temporales, filtros lineales, suavizamiento y medias móviles.
+introduction: |
+  Modelo de descomposición  <br/>
+  Funciones de pérdida <br/>
+  Métodos no-paramétricos de series temporales, filtros lineales, suavizamiento y medias móviles.
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
@@ -38,8 +41,328 @@ opts_chunk$set(echo=TRUE,
                cache = FALSE)
 ```
 
+## Modelo de descomposición
+Una vez separados los componentes que conforman una serie de tiempo, es necesario analizar la forma en que se relacionan estos con la serie original, puesto que al recombinar los componentes es posible obtener una serie de tiempo completamente pronosticable.
 
-## Introducción
+Existen diferentes modelos matemáticos para expresar la serie original `$Y_t$`, en términos de los componentes de tendencia `$T_t$`, estacionalidad `$S_t$`, fluctuaciones cíclicas `$C_t$` y errores `$\varepsilon_t$`, en donde, es posible ajustar la serie original a uno solo uno de los cuatro componentes o se una combinación de todos ellos, para la posterior realización de pronósticos. Para combinar los componentes, se tienen dos clases básicas de modelos matemáticos 
+
+* **Modelo aditivo:** `$Y_t = T_t + S_t + C_t + \varepsilon_t$`
+* **Modelo multiplicativo:** `$Y_t = T_t * S_t * C_t * \varepsilon_t$`
+
+en donde, como se mencionó en la subsección anterior, las fluctuaciones cíclicas `$C_t$` son el componente más difíciles de pronosticar, y por tanto, son mezcladas con el componente de error `$\varepsilon$` o se asume que son parte de la tendencia `$T_t$`. Entonces, el modelo aditivo y multiplicativo, puede ser reescritos como
+
+* **Modelo aditivo:** `$Y_t = T_t + S_t + \varepsilon_t$`
+* **Modelo multiplicativo:** `$Y_t = T_t * S_t * \varepsilon_t$`
+
+Es de anotar que en el modelo aditivo se supone que los tres componentes de la serie de tiempo son independientes entre sí, y es apropiado emplearlo cuando la magnitud de las fluctuaciones estacionales de la serie no varía al hacerlo la tendencia, es decir, la serie de tiempo original tiene aproximadamente la misma variabilidad a lo largo de toda la serie.
+
+Mientras que, en el modelo multiplicativo se trabaja bajo el supuesto de que los tres componentes de la serie de tiempo no son necesariamente independientes, y es apropiados emplearlo cuando la magnitud de las fluctuaciones estacionales de la serie crece y decrece proporcionalmente con los crecimientos y decrecimientos de la tendencia, respectivamente, es decir, los valores de la serie se dispersan conforme la tendencia aumenta, o se reúnen conforme la tendencia disminuye.
+
+Adicionalmente, se destaca que muy a menudo las series, a pesar de no tener un comportamiento aditivo, pueden ser transformadas para ser modeladas de forma aditiva. Un ejemplo de ello son los logaritmos naturales, en donde, es posible convertir el modelo multiplicativo en un modelo aditivo, ya que si
+
+`\begin{align*}
+Y_t = T_t * S_t * \varepsilon_t$
+\end{align*}`
+
+entonces
+
+`\begin{align*}
+log(Y_t) = log(T_t) + log(S_t) + log(\varepsilon_t)
+\end{align*}`
+
+y por tanto, es posible realizar los pronosticos necesarios mediante una transformación, y una vez obtenidos estos, retornar los valores a la escala multiplicativa original.
+
+Un aspecto importante, sobre los modelos aditivos y multiplicativos es que, en el modelo aditivo siempre se asume que `$\varepsilon_t\stackrel{iid}{\sim}N(0,\sigma^2)$`, mientras que para el modelo multiplicativo, se sume que `$\varepsilon_t\stackrel{iid}{\sim}lognormal(\mu=0,\sigma^2)$`, y por tanto, mediante la transformación logaritmica del modelo multiplicativo se tiene que `$log(\varepsilon_t)\stackrel{iid}{\sim}N(0,\sigma^2)$`.
+
+Una alternativa para evaluar si los componentes de error son o no normales, es mediante los gráficos QQ-plot de la distribución Normal, y mediante la prueba Shapiro-Wilk. Éstas pueden realizarse en <tt>R</tt> mediante las funciones `qqnorm()` y `shapiro.test()`, respectivamente.
+
+Existen algunas variantes para los modelos de descomposición básicos, tales como
+
+* **Modelo mixto:** `$Y_t = T_t * S_t + \varepsilon_t$`
+* **Modelo pseudo-aditivo:** `$Y_t = T_t (S_t + \varepsilon_t - 1)$`
+
+los cuales se emplean situaciones específicas, como por ejemplo, cuando la serie original posee fluctuaciones estacionales marcadamente pronunciadas y un movimiento de ciclos de tendencia, que es extremadamente dependiente del clima, o cuando la serie original posea un mes (o trimestre) que es mucho más alto o más bajo que todos los otros meses (o trimestres), respectivamente.
+
+## Clasificación descriptiva de las series de tiempo
+Dadas las diferentes características que puede tener las series de tiempo, podemos clasificar su comportamiento en
+
+* **Estacionaria:** Una serie es estacionaria cuando posee una media y varianza constantes en el tiempo, y en consecuencia, se observará que tiene un comportamiento estable, centrado sobre su valor promedio, con oscilaciones alrededor de este valor constante.
+* **No estacionaria:** Una series es no estacionaria cuando no posee una media ni una varianza constantes, y en consecuencia, se observará que su valor promedio tendrá una tendencia creciente o decreciente a largo plazo, con un comportamiento que no oscilará alrededor de un valor constante.
+
+## Identificación de componentes
+### Autocorrelación
+Uno de los aspectos más importantes de la series de tiempo es que sus observaciones no son independientes de sus observaciones pasadas, y por ello, debe realizarse un análisis de dependencia o correlación entre las observaciones y sus rezagos, el cual posee el nombre de análisis de autocorrelación, correlación serial o covariación. 
+
+El objetivo será entonces, usar la estructura de correlación que posee la serie temporal consigo misma, para tratar de explicar parte de su variación, identificar si existe de forma analítica patrones repetitivos que se encuentran enmascarados bajo el ruido y observar a partir de qué rezago deja de ser significativo el efecto que tienen éstos sobre las demás observaciones.
+
+Con tal proposito en mente, en una serie de tiempo, se define la varianza muestral de las observaciones como
+`\begin{align*}
+Var(y_t) = \hat{\gamma}(0) = \mathbb E(y_t - \bar{y})^2 = \frac{1}{T-1}\sum_{t=1}^{T}(y_t-\bar{y})^2
+\end{align*}`
+
+la autocovarianza muestral entre observaciones que se encuentran a `$k$` periodos de tiempo de diferencia, como
+`\begin{align*}
+Cov(y_{t+k},y_t) = \hat{\gamma}(k) = \mathbb E[(y_{t+k} - \bar{y})(y_{t} - \bar{y})] = \frac{1}{T-k-1}\sum_{t=1}^{T-k}(y_{t+k} - \bar{y})(y_{t} - \bar{y})
+\end{align*}`
+
+y la autocorrelación muestral entre observaciones que se encuentran a `$k$` periodos de tiempo de diferencia, como
+`\begin{align*}
+Cor(y_{t+k},y_t) = \hat{\rho(k)} = \frac{\hat{\gamma}(k)}{\hat{\gamma}(0)}
+\end{align*}`
+
+donde `$k$` es el número de rezagos o autocorrelaciones que se desean calcular. Por tanto, no se recomienda emplear valores de `$k$` muy altos, ya que ésto provocará que se tengan menos términos para el cálculo de las autocorrelaciones.
+
+La selección del número de autocorrelaciónes puede llevarse a cabo arbitrariamente a partir de los conocimientos del investigador, o mediante la regla empírica para el número máximo de rezagos que deben seleccionarse  `$max(k)=\frac{n}{4}$`.
+
+Para facilitar la visualización e interpretación de la autocorrelación, se emplea un gráfico conocido como correlograma o función de autocorrelación **(ACF)**, la cual muestran la correlación que hay entre observaciones separadas por `$k$` intervalos de tiempo o "lags". 
+
+A continuación se presenta el correlograma del **total mensual de pasajeros de líneas aéreas internacionales, para los años 1949 a 1960**
+
+```{r}
+data(AirPassengers) # Carga base de datos de AirPassengers
+AP <- AirPassengers # Guarda base de datos de AirPassengers
+acf(AP, main = "Número de Pasajeros Aéreos")
+```
+
+<pre>
+```{r echo=FALSE}
+library(feasts)
+# install.packages("tsibble") # Para transformar datos a objeto tipo tsibble
+library(tsibble)
+# install.packages("plotly") ## Instala librería para hacer grágicos avanzados
+library(plotly)
+AP2 <- as_tsibble(AP)
+acfAP <- AP2 %>% ACF(value) # Calcula valores de ACF
+acfCI <- function(x) qnorm((1 + 0.95)/2)/sqrt(sum(!is.na(x))) # Crea función para intervalo de confianza ACF
+### Gráfico avanzado
+plot_ly(data = acfAP, width = 700, height = 400) %>%
+  layout(title="ACF para el total
+de pasajeros de líneas aéreas", xaxis = list(title ="Lags"), yaxis = list(title = "ACF")) %>% 
+add_bars(x = ~acfAP$lag, y = ~acfAP$acf, width = 0.2, text = paste("Autocorrelación =", acfAP$acf)) %>% 
+layout(shapes=list(
+  list(type='line', x0=0, x1=nrow(acfAP), y0=acfCI(AP2$value), y1=acfCI(AP2$value), line = list(dash = "dot")),
+  list(type='line', x0=0, x1=nrow(acfAP), y0=-acfCI(AP2$value), y1=-acfCI(AP2$value), line = list(dash = "dot")))) %>%
+layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)) 
+```
+</pre>
+
+Para el caso de las **variaciones porcentual de los ingresos reales totales de hoteles en Colombia entre Junio 2005 y Marzo 2019** se tiene que
+
+```{r}
+library(readxl) ## Cargar librería
+datos <- read_xlsx("../../Dataset/ingresorealhoteles2019.xlsx") # Cargar el archivo
+ingH <- ts(datos$`Variacion  ingresos`, start = c(2005,7), frequency = 12) #
+acf(ingH, main = "ACF para variaciones porcentual ingresos reales totales de hoteles")
+```
+
+<pre>
+```{r echo=FALSE}
+ingH2 <- as_tsibble(ingH) # Transforma el conjunto de datos a una base "tibble"
+acfVH <- ingH2 %>% ACF(value) # Calcula valores de ACF
+### Gráfico avanzado
+plot_ly(data = acfVH, width = 700, height = 400) %>%
+  layout(title="ACF para variaciones porcentual de los ingresos reales totales de hoteles", xaxis = list(title ="Lags"), yaxis = list(title = "ACF")) %>% 
+add_bars(x = ~acfVH$lag, y = ~acfVH$acf, width = 0.2, text = paste("Autocorrelación =", acfVH$acf)) %>% 
+layout(shapes=list(
+  list(type='line', x0=0, x1=nrow(acfVH), y0=acfCI(ingH2), y1=acfCI(ingH2), line = list(dash = "dot")),
+  list(type='line', x0=0, x1=nrow(acfVH), y0=-acfCI(ingH2), y1=-acfCI(ingH2), line = list(dash = "dot"))))  %>%
+layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)) 
+```
+</pre>
+
+### Interpretación correlograma e identificación de componentes
+Basados en @Rios2008, los criterios para la interpretación del correlograma están dados por
+
+* La altura de la líneas en el correlograma representa la correlación entre las observaciones que están separadas por la cantidad de unidades de tiempo que aparecen en el eje horizontal.
+* La correlación para el primer rezago siempre es uno por lo que no deben tomarse en cuenta en las interpretaciones.
+* Una autocorrelación es significativa si ésta se encuentra por encima o por debajo de las bandas de confianza (región crítica), la cual se construye con un nivel de confianza del 95% y asumiendo normalidad, mediante la formula:
+
+`\begin{align*}
+\pm Z_{\frac{\alpha}{2}}/\sqrt{T} = \pm 1.96/\sqrt{T}
+\end{align*}`
+
+* Si las autocorrelaciones decrecen lentamente a cero, o muestra un patrón cíclico, pasando por cero varias veces, la serie **no es estacionaria**. Se tendrá que diferenciarla una o más veces antes de modelarla.
+* Si las autocorrelaciones muestran estacionalidad, o se tiene una alza cada periodo (cada 12 meses, por ejemplo), la serie **no es estacionaria** y hay que diferenciarla con un salto igual al periodo.
+* Si las autocorrelaciones decrece rapidamente a cero con al menos un rezago significativo, se tendrá que la serie es **estacionaria en media**.
+
+* Si ninguna de las autocorrelaciones es significativamente diferente de cero, la serie es esencialmente **ruido blanco**.
+
+```{r}
+set.seed(1613)
+par(mfrow = c(1, 2)) # Función para poner más de un gráfico
+ruido <- rnorm(100, mean = 0, sd = 1)
+plot.ts(ruido, type = "l", main = "Ejemplo Ruido Blanco", ylab = "Serie")
+acf(ruido, main = "Ejemplo ACF Ruido Blanco")
+```
+
+<pre>
+```{r echo=FALSE}
+ruido2 <- as_tsibble(as.ts(ruido))
+acfruido <- ruido2 %>% ACF(value)
+
+### Gráfico avanzado
+p9 <- plot_ly(x = ~seq(1:length(ruido)), y = ~ruido, mode = "lines", type = "scatter", name = "Serie") 
+p10 <- plot_ly(data = acfruido) %>% 
+add_bars(x = ~acfruido$lag, y = ~acfruido$acf, width = 0.2, text = paste("Autocorrelación =", acfruido$acf),  name = "ACF") %>% 
+layout(shapes=list(
+  list(type='line', x0=0, x1=nrow(acfruido), y0=acfCI(ruido2$value), y1=acfCI(ruido2$value), line = list(dash = "dot")),
+  list(type='line', x0=0, x1=nrow(acfruido), y0=-acfCI(ruido2$value), y1=-acfCI(ruido2$value), line = list(dash = "dot"))))
+subplot(p9, p10, nrows = 1, margin = 0.08) %>% 
+  layout(title = "Ejemplo Ruido Blanco y ACF Ruido Blanco",
+         yaxis = list(title = "Serie"),
+         yaxis2 = list(title = "ACF"),
+         xaxis2 = list(title = "Time"),
+         xaxis2 = list(title = "Lags"),
+         margin = list(r=30, l=60, t=60, b=60, pad = 4),
+         width = 700, height = 400 , showlegend = FALSE)
+
+```
+</pre>
+
+A continuación se presenta el correlograma de la diferenciación de un salto igual a 12 meses del **total mensual de pasajeros de líneas aéreas internacionales, para los años 1949 a 1960**.
+
+```{r}
+AP12 <- diff(AP, lag = 12)
+acf(AP12, main = "ACF diff(total de pasajeros de líneas aéreas, 12)")
+```
+
+<pre>
+```{r echo=FALSE}
+AP2 <- mutate(AP2, diff12 = difference(value, order_by = index, lag = 12))
+acfAPdiff12 <- AP2 %>% ACF(diff12)
+
+### Gráfico avanzado
+plot_ly(data = acfAPdiff12, width = 700, height = 400) %>%
+  layout(title="ACF diff(total de pasajeros de líneas aéreas, 12)", xaxis = list(title ="Lags"), yaxis = list(title = "ACF")) %>% 
+add_bars(x = ~acfAPdiff12$lag, y = ~acfAPdiff12$acf, width = 0.2, text = paste("Autocorrelación =", acfAPdiff12$acf)) %>% 
+layout(shapes=list(
+  list(type='line', x0=0, x1=nrow(acfAPdiff12), y0=acfCI(AP2$diff12), y1=acfCI(AP2$diff12), line = list(dash = "dot")),
+  list(type='line', x0=0, x1=nrow(acfAPdiff12), y0=-acfCI(AP2$diff12), y1=-acfCI(AP2$diff12), line = list(dash = "dot")))) %>%
+layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)) 
+```
+</pre>
+
+Posteriormente se presenta el correlograma de la doble diferenciación 1 mes y de un salto igual a 12 meses para el **total mensual de pasajeros de líneas aéreas internacionales, para los años 1949 a 1960**.
+
+```{r}
+AP121 <- diff(AP12, lag = 1)
+acf(AP121, main = "Serie diif(diff(total de pasajeros de líneas aéreas, 12), 1)")
+```
+
+<pre>
+```{r, echo=FALSE}
+AP2 <- mutate(AP2, diff121 = difference(diff12, order_by = index, lag = 1))
+acfAPdiff121 <- AP2 %>% ACF(diff121)
+### Gráfico avanzado
+plot_ly(data = acfAPdiff121, width = 700, height = 400) %>%
+  layout(title="ACF diff(diff(total de pasajeros de líneas aéreas, 12), 1)", xaxis = list(title ="Lags"), yaxis = list(title = "ACF")) %>% 
+add_bars(x = ~acfAPdiff121$lag, y = ~acfAPdiff121$acf, width = 0.2, text = paste("Autocorrelación =", acfAPdiff121$acf)) %>% 
+layout(shapes=list(
+  list(type='line', x0=0, x1=nrow(acfAPdiff121), y0=acfCI(AP2$diff121), y1=acfCI(AP2$diff121), line = list(dash = "dot")),
+  list(type='line', x0=0, x1=nrow(acfAPdiff121), y0=-acfCI(AP2$diff121), y1=-acfCI(AP2$diff121), line = list(dash = "dot")))) %>%
+layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)) 
+```
+</pre>
+
+## Evaluación de los pronósticos (Funciones de pérdida)
+Otro aspecto de suma importancia en los pronósticos, es evaluar la precisión o eficiencia del método de pronóstico empleado, y para ello, se emplean diferentes indicadores que permiten identificar qué tan acertado o cercano es el pronostico realizado respecto a su valor original.
+
+Para aplicar dichos métodos, una alternativa es la implementación de un procedimiento conocido como *validación cruzada*, el cual consta de dividir el conjunto de observaciones de la serie en dos grupos. El primer grupo estará dado por las observaciones `$\{Y_1, Y_2, \ldots, Y_{T-m}\}$`, denotadas como datos de entrenamiento, y serán las observaciones que se emplearán para realizar la estimación del modelo y estimación de los pronósticos. El segundo grupo estará dado por las observaciones `$\{Y_{T-m+1}, Y_{T-m+2}, \ldots, Y_{T}\}$`, denotadas como datos de validación, y serán las observaciones que se emplearán para evaluar el desempeño de los modelos.
+
+Entonces, suponga que a partir del conjunto de entrenamiento se realizan los pronósticos `$\{\hat{Y}_{T-m+1}, \hat{Y}_{T-m+2}, \ldots, \hat{Y}_{T}\}$`, entonces puede definirse el error de estimación `$e_t=\hat{varepsilon}_t$`, entre las observación real `$t$` y el valor pronosticado `$t$`, de la forma
+`\begin{align*}
+e_t= Y_t - \hat{Y}_t
+\end{align*}`
+
+con `$t={T-m+1}, {T-m+2}, \ldots, {T}$`. A partir de los errores de estimación `$e_t$`, es posible realizar el cálculo de diferentes medidas de error que permitan cuantificar diferentes aspectos de los valores pronosticados. Con el fin de ilustrar y mejorar el entendimiento de las medidas de error, se presentarán las propiedades que posee cada uno de ellos, basados en @Adhikari2013[, p. 42].
+
+### Error medio (ME)
+Esta medida está definida como
+`\begin{align*}
+ME=\frac{1}{n}\sum_{t=T-m+1}^T e_t 
+\end{align*}`
+
+* Es una medida de la desviación promedio de los valores pronosticados respecto a los valores reales.
+* Muestra la dirección del error y, en consecuencia, el sesgo que poseen los pronóstico.
+* En el ME, los efectos de los errores positivos y negativos se cancelan y no hay forma de saber su cantidad exacta.
+* Un ME de cero no significa que los pronósticos sean perfectos o que no existan errores de pronóstico, si no que indica que los pronósticos no poseen ningún sesgo, y en consecuencia, están apuntancia hacia el objetivo correcto.
+* El ME no penaliza los errores extremos de pronóstico.
+* Depende de la escala de medición y también se ve afectada por las transformaciones de datos.
+* Para que el pronostico sea bueno, se requiere que el sesgo sea mínimo, y por tanto, es deseable que el ME sea lo más cercano a cero posible.
+
+### Porcentaje medio del error (MPE)
+Esta medida está definida como
+`\begin{align*}
+MPE=\frac{1}{n}\sum_{t=T-m+1}^T \frac{e_t}{y_t} \times 100
+\end{align*}`
+
+* Mode el porcentaje de error promedio ocurrido de los pronósticos.
+* Muestra la dirección del error y, en consecuencia, el porcentaje de sesgo que poseen los pronóstico.
+* En el MPE, los efectos de los errores positivos y negativos se cancelan mutuamente.
+* El MPE es independiente de la escala de medición, pero se ve afectado por la transformación de datos.
+* Similar al ME, el obtener valores de MPE cercanos a cero, no indican que los pronósticos sean buenos o que no existan errores de pronóstico, si no que indica que los pronosticos poseen un sesgo pequeño. 
+* Similar al ME, es deseable que el sesgo del MPE sea mínimo, es decir, que el valor del MPE sea lo más pequeño posible.
+* Al igual que el ME, el MPE no penaliza los errores extremos de pronóstico.
+
+### Error absoluto medio (MAE)
+Esta medida está definida como
+`\begin{align*}
+MAE=\frac{1}{n}\sum_{t=T-m+1}^T |e_t|
+\end{align*}`
+
+* Mide la desviación absoluta promedio de los valores pronosticados respecto a los valores reales.
+* También se denomina como la desviación absoluta media (MAD).
+* Muestra la magnitud del error general, ocurrido debido al pronóstico.
+* A diferencia del ME, en el MAE, los efectos de los errores positivos y negativos no se anulan.
+* A diferencia del ME, el MAE no proporciona ninguna idea sobre el sesgo de los pronósticos.
+* Al igual que el ME, el MAE no penaliza los errores extremos de pronóstico.
+* Al igual que el ME, el MAE también depende de la escala de medición y de las transformaciones de datos.
+* Para que el pronostico sea bueno, se requiere que el MAE obtenido sea lo más pequeño posible.
+
+### Porcentaje del error medio absoluto (MAPE)
+Esta medida está definida como
+`\begin{align*}
+MAPE=\frac{1}{n}\sum_{t=T-m+1}^T \left|\frac{e_t}{y_t}\right|\times 100
+\end{align*}`
+
+* Mide el porcentaje de error absoluto promedio ocurrido de los pronósticos.
+* A diferencia del MPE, el MAPE no proporciona ninguna idea sobre el sesgo de los pronósticos.
+* A diferencia del MPE, en el MAPE los efectos de los errores positivos y negativos no se anulan.
+* Al igual que el MPE, el MAPE no penaliza los errores extremos de pronóstico.
+* Al igual que el MPE, el MAPE también es independiente de la escala de medición, pero está afectado por la transformación de datos.
+
+### Error cuadrático medio (MSE)
+Esta medida está definida como
+`\begin{align*}
+MSE=\frac{1}{n}\sum_{t=T-m+1}^T (e_t)^2
+\end{align*}`
+
+* Mide la desviación al cuadrado promedio de los valores pronosticados respecto a los valores reales.
+* En el MSE, los errores positivos y negativos no se compensan entre si, y en consecuencia, el MSE proporciona una idea general del error ocurrido durante el pronóstico.
+* A diferencia de las otras medidas, el MSE paneliza errores extremos ocurridos al pronosticar.
+* El MSE enfatiza el hecho de que el error de pronóstico total está, de hecho, muy afectado por grandes errores individuales, es decir, los errores grandes son mucho más caros que los errores pequeños.
+* A diferencia del ME y MPE, el MSE no proporciona ninguna idea sobre la dirección del error general, es decir, del sesgo de pronóstico.
+* El MSE es sensible al cambio de escala y las transformaciones de datos.
+* Aunque el MSE es una buena medida del error de pronóstico general, pero NO es tan intuitivo y fácilmente interpretable como las otras medidas discutidas anteriormente.
+
+### Suma de cuadrados del error (SSE)
+Esta medida está definida como
+`\begin{align*}
+SSE=\sum_{t=T-m+1}^T (e_t)^2
+\end{align*}`
+
+* Posee las mismas propiedades del MSE.
+
+### Raíz cuadrada del error cuadrático medio (RMSE)
+Esta medida está definida como
+`\begin{align*}
+RMSE=\sqrt{\frac{1}{n}\sum_{t=T-m+1}^T (e_t)^2}
+\end{align*}`
+
+* La RMSE no es más que la raíz cuadrada de la MSE calculada.
+* Todas las demás propiedades de MSE se mantienen para RMSE también.
+
+## Introducción modelamiento
 Cómo se ha mencionado hasta ahora, uno de los aspecto más importantes en las series de tiempo, recae en la adecuada selección del modelo que se va a emplear, debido a que éste será el que refleje la estructura de la serie, y a su vez, permitirá la realización de pronósticos futuros.
 
 Entre las alternativas para el modelamiento de una serie de tiempo, se presentan modelos lineales o no lineales, los cuales se emplean dependiendo de la estructura que tenga la serie de tiempo respecto a sus observaciones pasadas.
@@ -62,6 +385,7 @@ Entonces, un filtro lineal puede definirse como un operador que transforma una s
 \end{align*}`
 
 para `$t=m+1,m+2, \ldots, T-m$` y donde los coeficientes `$w_i$` son un conjunto de pesos, tal que `$\sum_{i=-m}^{m}|w_i|<\infty$`. Además, en situaciones en los cuales se desea determinar la tendencia y reducir las fluctuaciones locales, se pueden restringir los pesos `$w_i$` de la forma `$\sum_{i=-m}^{m}w_i=1$`.
+
 
 
 ## Filtro lineal
