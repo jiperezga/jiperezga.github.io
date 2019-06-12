@@ -40,7 +40,7 @@ opts_chunk$set(echo=TRUE,
 
 ## Lista de ejercicios
 1. Suponga que una familia sale de vacaciones de verano en su casa rodante y que M es el evento de que sufrirán fallas mecánicas, T es el evento de que recibirán una infracción por cometer una falta de tránsito y V es el evento de que llegarán a un lugar para acampar que esté lleno. Basado en el siguiente diagráma de Venn
-![](../../EstadisticaI/images/Venn1.png)
+![](../../EstadisticaI/images/Venn1.PNG)
 liste los números y defina la notación de las regiones que representan los siguientes eventos
     * La familia no experimentará fallas mecánicas y no será multada por cometer una infracción de tránsito, pero llegará a un lugar para acampar que está lleno.
     * La familia experimentará tanto fallas mecánicas como problemas para localizar un lugar disponible para acampar, pero no será multada por cometer una infracción de tránsito.
@@ -79,7 +79,7 @@ es 1/2, y la probabilidad de seleccionar una carta de corazones y negra es 1/8.
 
 9. La proporción de personas que estudia para el examen de probabilidad es de 52%. Si la persona estudia, tiene una probabilidad de 85% de ganar el examen; si no estudia, la probabilidad de ganar el examen es de 12%. Se selecciona una persona al azar de las que presentaron el examen y resulta que lo perdió, ¿Cuál la probabilidad de que haya estudiado?   
 10. Un determinado circuito electrónico está compuesto por de nueve componentes conectados según se muestra a continuación
-![](../../EstadisticaI/images/Circuito1.png)
+![](../../EstadisticaI/images/Circuito1.PNG)
 la probabilidad de que funcione cada componente es del 0.95. El circuito funcionará si es posible encontrar un camino entre A y B. Se supone que la probabilidad de que funcione cada componente es independiente de los demás. A partir de la información anterior calcule
     * ¿Cuál es la probabilidad de que funcione el subsistema M?
     * ¿Cuál es la probabilidad de que funcione el subsistema N?
@@ -137,7 +137,7 @@ add_header_above(c("Frecuencia de" = 1, "Adquisición de Productos" = 3))
 
 23. Un banco ha comprobado que uno de cada 1000 clientes con fondos expide un cheque con fecha equivocada.  En cambio, todo cliente sin fondos pone una fecha errónea en sus cheques. El 90% de los clientes del banco tienen fondos. Se recibe hoy en caja un cheque con fecha equivocada. ¿Cuál es la probabilidad de que sea de un cliente sin fondos?
 24. Suponga una red de comunicaciones de cinco componentes conectados según se muestra a continuación
-![](../../EstadisticaI/images/Circuito2.png)		
+![](../../EstadisticaI/images/Circuito2.PNG)		
 la probabilidad de que funcione el componente C1 es de 0.98, la de C2 es 0.96, la de C3 es de 0.83, la de C4 es de 0.89 y la de C5 es de 0.90. La red funciona si entre A y B es posible encontrar un camino de componentes que funcione. Se supone que la probabilidad de funcionar cada componente es independiente de los demás. ¿Cuál es la probabilidad de que no haya comunicación entre A y B?
 25. Basado en su experiencia, un agente bursátil considera que en las condiciones económicas actuales la probabilidad de que un cliente invierta en bonos libres de impuestos es 0.6, la de que invierta en fondos comunes de inversión es 0.3 y la de que invierta en ambos es 0.15. En esta ocasión encuentre la probabilidad de que un cliente invierta
     * en bonos libres de impuestos o en fondos comunes de inversión
