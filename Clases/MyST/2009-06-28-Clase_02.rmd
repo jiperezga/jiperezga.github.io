@@ -111,7 +111,7 @@ Cor(y_{t+k},y_t) = \hat{\rho(k)} = \frac{\hat{\gamma}(k)}{\hat{\gamma}(0)} = \fr
 
 donde `$k$` es el número de rezagos o autocorrelaciones que se desean calcular. Por tanto, no se recomienda emplear valores de `$k$` muy altos, ya que ésto provocará que se tengan menos términos para el cálculo de las autocorrelaciones.
 
-La selección del número de autocorrelaciónes puede llevarse a cabo arbitrariamente a partir de los conocimientos del investigador, o mediante la regla empírica para el número máximo de rezagos que deben seleccionarse  `$max(k)=\frac{n}{4}$`.
+La selección del número de autocorrelaciónes puede llevarse a cabo arbitrariamente a partir de los conocimientos del investigador, o mediante la regla empírica para el número máximo de rezagos que deben seleccionarse  `$max(k)=\frac{T}{4}$`.
 
 Para facilitar la visualización e interpretación de la autocorrelación, se emplea un gráfico conocido como correlograma o función de autocorrelación **(ACF)**, la cual muestran la correlación que hay entre observaciones separadas por `$k$` intervalos de tiempo o "lags". 
 
