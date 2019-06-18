@@ -1,0 +1,157 @@
+---
+layout: post
+title: "Stop-Loss estimation via Single Loss Approximation (Poster)"
+main-class: 'presentacion'
+permalink: /Poster01
+tags:
+
+introduction: 
+header-includes:
+   - \usepackage{amsmath,amssymb,amsthm,amsfonts}
+   - \usepackage[sectionbib]{natbib}
+   - \usepackage[hidelinks]{hyperref}
+output:
+  md_document:
+    variant: markdown_strict+backtick_code_blocks+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash
+    preserve_yaml: TRUE
+always_allow_html: yes   
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding,
+  output_dir = "../PresentacionesyPoster/_posts/", output_format = "all"  ) })
+bibliography: "../referencias.bib"
+csl: "../apa.csl"
+---
+
+```{r knitr_init, echo=FALSE, cache=FALSE}
+library(knitr)
+## Global options
+opts_chunk$set(echo=TRUE,
+               cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE,
+               fig.path = paste0("../PresentacionesyPoster/images/", "Poster01"),
+               cache.path = "../Poster/cache/",
+               cache = FALSE)
+```
+
+```{r echo=FALSE, warning=FALSE, error=FALSE, message=FALSE, include=FALSE}
+library(plotly)
+require(gamlss)
+library(ggplot2)
+library(evmix)
+
+surgery <- read.table("../Dataset/surgery.dat", header = T)
+surgery$cost <- surgery$cost/1000000
+
+FitN_surg1 <- fitDist(y = table(surgery$year), type = "counts")
+### Estimation of second and third distribution with best fit
+FitN_surg2 <- gamlssML(formula = table(surgery$year), family = PIG)
+FitN_surg3 <- gamlssML(formula = table(surgery$year), family = GPO)
+FitN_surg4 <- gamlssML(formula = table(surgery$year), family = PO)
+
+secu <- seq(from = 0, to = 250, length.out = 100)
+DenDEL <- pDEL(secu, mu = FitN_surg1$mu, sigma = FitN_surg1$sigma,
+               nu = FitN_surg1$nu)
+DenPIG <- pPIG(secu, mu = FitN_surg2$mu, sigma = FitN_surg2$sigma)
+DenGPO <- pGPO(secu, mu = FitN_surg3$mu, sigma = FitN_surg3$sigma)
+DenPO <- pPO(secu, mu = FitN_surg4$mu)
+ecdfN <- ecdf(table(surgery$year))
+ecdfN2 <- data.frame(x = environment(ecdfN)$x, y = environment(ecdfN)$y)
+```
+
+<pre>
+```{r echo=FALSE}
+plot_ly(x = ~secu, y = ~DenDEL, mode = 'lines',
+        text = paste("Value =", round(DenDEL, 3)),
+        width = 600, height = 400, type = "scatter", name = "Delaporte") %>%
+  add_lines(x = ~secu, y = ~DenPIG, name = "Poisson-Inverse Gaussian") %>%
+  add_lines(x = ~secu, y = ~DenGPO, name = "Generalized Poisson") %>%
+  add_lines(x = ~secu, y = ~DenPO, name = "Poisson") %>% 
+  add_lines(x = 0, y = 0, mode = 'markers', name = "Empirical Cumulative Distribution", line=list(color = "black")) %>%
+  layout(title="Adjustment cumulative frequencies distribution",
+         xaxis = list(title ="Sample quantiles"),
+         yaxis = list(title = TeX("F_n(x)"))) %>% config(mathjax = 'cdn') %>% 
+  layout(legend = list(x = 0.6, y = 0.1)) %>%
+  add_markers(x = ecdfN2[1,1], y = ecdfN2[1,2], name = "ecdf", marker=list(color = "black"), showlegend = FALSE) %>%
+  add_markers(x = ecdfN2[2,1], y = ecdfN2[2,2], name = "ecdf", marker=list(color = "black"), showlegend = FALSE) %>%
+  add_markers(x = ecdfN2[3,1], y = ecdfN2[3,2], name = "ecdf", marker=list(color = "black"), showlegend = FALSE) %>%
+  add_markers(x = ecdfN2[4,1], y = ecdfN2[4,2], name = "ecdf", marker=list(color = "black"), showlegend = FALSE) %>%
+  add_markers(x = ecdfN2[5,1], y = ecdfN2[5,2], name = "ecdf", marker=list(color = "black"), showlegend = FALSE) %>%
+  add_markers(x = ecdfN2[6,1], y = ecdfN2[6,2], name = "ecdf", marker=list(color = "black"), showlegend = FALSE) %>%
+  layout(shapes=list(
+    list(type='line', x0 = 0, x1 = ecdfN2[1,1], y0 = 0, y1 = 0),
+    list(type='line', x0 = ecdfN2[1,1], x1 = ecdfN2[2,1], y0 = ecdfN2[1,2], y1 = ecdfN2[1,2]),
+    list(type='line', x0 = ecdfN2[2,1], x1 = ecdfN2[3,1], y0 = ecdfN2[2,2], y1 = ecdfN2[2,2]),
+    list(type='line', x0 = ecdfN2[3,1], x1 = ecdfN2[4,1], y0 = ecdfN2[3,2], y1 = ecdfN2[3,2]),
+    list(type='line', x0 = ecdfN2[4,1], x1 = ecdfN2[5,1], y0 = ecdfN2[4,2], y1 = ecdfN2[4,2]),
+    list(type='line', x0 = ecdfN2[5,1], x1 = ecdfN2[6,1], y0 = ecdfN2[5,2], y1 = ecdfN2[5,2]),
+    list(type='line', x0 = ecdfN2[6,1], x1 = 250, y0 = ecdfN2[6,2], y1 = ecdfN2[6,2])
+    )) %>%
+  layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4))
+```
+</pre>
+
+```{r echo = FALSE}
+FitX_surg1 <- fweibullgpd(x = surgery$cost)
+FitX_surg2 <- gamlssML(formula = surgery$cost, family = BCPEo)
+FitX_surg3 <- gamlssML(formula = surgery$cost, family = WEI)
+FitX_surg4 <- gamlssML(formula = surgery$cost, family = GG)
+FitX_surg5 <- gamlssML(formula = surgery$cost, family = GU)
+FitX_surg6 <- gamlssML(formula = surgery$cost, family = PARETO2)
+FitX_surg7 <- gamlssML(formula = surgery$cost, family = GP)
+
+FnXs <- ecdf(surgery$cost)
+sortXs <- sort(surgery$cost)
+survXs <- 1 - FnXs(sortXs)
+
+DenWP <- pweibullgpd(q = sortXs, phiu = FitX_surg1$phiu, 
+                     wshape = FitX_surg1$wshape, wscale = FitX_surg1$wscale,
+                     u = FitX_surg1$u, xi = FitX_surg1$xi,
+                     sigmau = FitX_surg1$sigmau)
+DenWP2 <- 1 - DenWP
+
+DenBCPEo <- pBCPEo(sortXs, mu = FitX_surg2$mu,
+                   sigma = FitX_surg2$sigma, nu = FitX_surg2$nu,
+                   tau = FitX_surg2$tau)
+DenBCPEo2 <- 1 - DenBCPEo
+
+DenWEI <- pWEI(sortXs, mu = FitX_surg3$mu,
+               sigma = FitX_surg3$sigma)
+DenWEI2 <- 1 - DenWEI
+
+DenGG <- pGG(sortXs, mu = FitX_surg4$mu,
+             sigma = FitX_surg4$sigma, nu = FitX_surg4$nu)
+DenGG2 <- 1 - DenGG
+
+DenGU <- pGU(sortXs, mu = FitX_surg5$mu,
+             sigma = FitX_surg5$sigma)
+DenGU2 <- 1 - DenGU
+
+DenGP <- pGP(sortXs, mu = FitX_surg7$mu,
+             sigma = FitX_surg7$sigma)
+DenGP2 <- 1 - DenGP
+```
+
+<pre>
+```{r echo = FALSE}
+plot_ly(x = ~log(sortXs), y = ~log(DenWP2), mode = 'lines',
+        text = paste("Value =", round(DenWP2, 3)),
+        width = 600, height = 400, type = "scatter",
+        name = "Normal-Generalized Pareto") %>%
+  layout(xaxis = list(zeroline = FALSE, title ="log(Sample quantiles)"),
+         yaxis = list(zeroline = FALSE, range = c(-7, 0), title = TeX("log(1- F_X(x))")),
+         title="Adjustment of log−survival severities distribution") %>%  config(mathjax = 'cdn') %>%
+  add_lines(x = ~log(sortXs), y = ~log(DenBCPEo2), name = "Box-Cox Power Exponential") %>%
+  add_lines(x = ~log(sortXs), y = ~log(DenWEI2), name = "Weibull") %>%
+  add_lines(x = ~log(sortXs), y = ~log(DenGG2), name = "Generalized Gamma") %>%
+  add_lines(x = ~log(sortXs), y = ~log(DenGU2), name = "Gumbel") %>% 
+  add_lines(x = ~log(sortXs), y = ~log(DenGP2), name = "Generalized Pareto") %>%
+  add_lines(x = 0, y = 0, mode = 'markers', name = "Empirical Log-Survival Distribution", line=list(color = "black")) %>%
+  add_trace(x = ~log(sortXs), y = ~log(survXs), line=list(color = "black"), showlegend=FALSE) %>%
+  layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4),
+         legend = list(x = 0.1, y = 0.1))
+```
+</pre>

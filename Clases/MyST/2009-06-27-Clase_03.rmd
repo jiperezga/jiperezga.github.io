@@ -6,7 +6,7 @@ permalink: /MuestreoySeriesdeTiempo/MyST:title.html
 tags:
 
 introduction: |
-  Función de pérdida
+  Evaluación de los pronósticos 
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
@@ -39,7 +39,7 @@ opts_chunk$set(echo=TRUE,
                cache = FALSE)
 ```
 
-## Evaluación de los pronósticos (Funciones de pérdida)
+## Evaluación de los pronósticos 
 Otro aspecto de suma importancia en los pronósticos, es evaluar la precisión o eficiencia del método de pronóstico empleado, y para ello, se emplean diferentes indicadores que permiten identificar qué tan acertado o cercano es el pronostico realizado respecto a su valor original.
 
 Para aplicar dichos métodos, una alternativa es la implementación de un procedimiento conocido como *validación cruzada*, el cual consta de dividir el conjunto de observaciones de la serie en dos grupos. El primer grupo estará dado por las observaciones `$\{Y_1, Y_2, \ldots, Y_{T-m}\}$`, denotadas como datos de entrenamiento, y serán las observaciones que se emplearán para realizar la estimación del modelo y estimación de los pronósticos. El segundo grupo estará dado por las observaciones `$\{Y_{T-m+1}, Y_{T-m+2}, \ldots, Y_{T}\}$`, denotadas como datos de validación, y serán las observaciones que se emplearán para evaluar el desempeño de los modelos.
