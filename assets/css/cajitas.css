@@ -81,7 +81,7 @@
 .post-guia .post-content a:hover{background-color:#eb7728;color:#fff}
 .post-guia .post-content strong{color:#eb7728}
 .post-guia .post-content blockquote{border-left:.313rem solid #eb7728}
-.post-guia .header-post,.post-guia .header-site{background-color:#eb7728;padding: 0rem 0 3.25rem}
+.post-guia .header-post,.post-guia .header-site{background-color:#eb7728;}
 .post-guia .header-post h1,.post-guia .header-site h1{text-shadow:3px 3px #545454}
 .post-guia .bar-header .logo a{color:#eb7728}
 .post-guia .author .email,.post-guia .author .github{color:#eb7728} .post-guia .share a:hover svg{fill:#eb7728}@media only screen and (max-width:37.5rem){.post-guia body.search-overlay:after{background-color:#eb7728}}
