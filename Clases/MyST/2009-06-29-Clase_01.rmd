@@ -6,9 +6,9 @@ permalink: /MuestreoySeriesdeTiempo/MyST:title.html
 tags:
 
 introduction: |
-  Tipos de métodos de pronóstico <br/>
-  Factores a tener en cuenta en la selección de métodos de pronósticos <br/>
-  Componentes de una serie de tiempo
+  Tipos de métodos de pronóstico. <br/>
+  Factores a tener en cuenta en la selección de métodos de pronósticos. <br/>
+  Componentes de una serie de tiempo.
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}

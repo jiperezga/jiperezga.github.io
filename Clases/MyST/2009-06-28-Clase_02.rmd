@@ -6,8 +6,8 @@ permalink: /MuestreoySeriesdeTiempo/MyST:title.html
 tags:
 
 introduction: |
-  Modelo de descomposición  <br/>
-  Función de Autocorrelación
+  Modelo de descomposición.  <br/>
+  Función de autocorrelación.
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}

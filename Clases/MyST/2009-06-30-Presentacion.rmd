@@ -5,7 +5,11 @@ main-class: 'presentacion'
 permalink: /MuestreoySeriesdeTiempo/MyST:title.html
 tags:
 
-introduction: Presentación del curso de Series de tiempo y muestreo, junto con la exposición de la metodología, evaluación del curso y generalidades a tener en cuenta
+introduction: |
+  Presentación del curso de Series de tiempo y muestreo. <br/>
+  Exposición de la metodología. <br/>
+  Explicación de la evaluación del curso. <br/>
+  Generalidades a tener en cuenta.
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
