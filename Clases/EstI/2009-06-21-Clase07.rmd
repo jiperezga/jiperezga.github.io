@@ -5,7 +5,11 @@ main-class: 'clase'
 permalink: /EstadisticaI/EstI:title.html
 tags:
 
-introduction: Introducción a variables aleatorias, distribuciones de probabilidad discretas y función de distribución acumulada
+introduction: |
+  Introducción a variables aleatorias <br/>
+  Distribuciones de probabilidad discretas <br/>
+  Distribuciones de probabilidad continua <br/>
+  Función de distribución acumulada
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
@@ -39,7 +43,7 @@ opts_chunk$set(echo=TRUE,
 ```
 
 ## Variables aleatorias
-Es una función que asocia un número real a cada elemento del espacio muestral S. Comúnmente las variables aleatorias se denotan por letras mayúsculas del final del alfabeto `$(X,Y,Z)$` y a los valores observados por letras minúsculas `$(x,y,z)$`.
+Es una función que asocia un número real a cada elemento del espacio muestral `$S$`. Comúnmente las variables aleatorias se denotan por letras mayúsculas del final del alfabeto `$(X,Y,Z)$` y a los valores observados por letras minúsculas `$(x,y,z)$`.
 
 Las variables aleatorias se pueden clasificar en tres tipos
 
@@ -59,7 +63,7 @@ Se dice que el conjunto de pares ordenados `$(x,p(x))$` es una función de masa 
 
 La función de distribución acumulada (*fda*) denotada por `$F(x)$`, para una variable aleatoria discreta `$X$` con distribución de probabilidad `$p(x)$` es de la forma 
 `\begin{align*}
-F(X)=P(X\leq x)=\sum_{t\leq x}p(t) \quad \quad -\infty<x<\infty
+F(x)=P(X\leq x)=\sum_{t\leq x}p(t) \quad \quad -\infty<x<\infty
 \end{align*}`
 
 para cualquier `$x$` dentro del rango de `$X$`, `$F(x)$` será la suma acumulada de todos los valores de rango de `$X$` menores a `$x$`.
@@ -75,6 +79,6 @@ La función `$f(x)$` es una función de densidad de probabilidad (*fdp*) para la
 
 La función de distribución acumulada (*fda*) denotada por `$F(x)$`, para una variable aleatoria continua `$X$` con distribución de densidad de probabilidad `$f(x)$` es de la forma 
 `\begin{align*}
-F(X)=P(X\leq x)=\int_{-\infty}^x f(t)dt \quad \quad -\infty<x<\infty
+F(x)=P(X\leq x)=\int_{-\infty}^x f(t)dt \quad \quad -\infty<x<\infty
 \end{align*}`
-para cualquier `$x$`, `$F(X)$` es el área bajo la curva de densidad a la izquierda de valor que tome `$x$`.
+para cualquier `$x$`, `$F(x)$` es el área bajo la curva de densidad a la izquierda de valor que tome `$x$`.
