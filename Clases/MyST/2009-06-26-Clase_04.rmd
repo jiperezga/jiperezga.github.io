@@ -7,7 +7,10 @@ tags:
 
 introduction: |
   Modelo no-paramétricos de series de tiempo <br/>
-  Filtros lineales, suavizamiento y medias móviles.
+  Series estacionarias en media: <br/>
+  - Promedios simples <br/>
+  - Promedios móviles unilaterales y bilaterales <br/>
+  - Suavizamiento exponencial simple
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
@@ -50,9 +53,9 @@ Como su nombre lo índica, los métodos no-paramétricos son aquellos que no pos
 
 Es de anotar que se debe tener precaución a la hora de aplicar métodos no-paramétricos, debido a que no todos están diseñados para ser aplicados sin importar las componentes de la serie, y por tanto, dependiendo de la o las componentes de la serie de tiempo que hayan sido identificadas, se debe seleccionar el método no-paramétrico que más conveniente, a saber
 
-* **Serie estacionaria en media:** Promedios simples, Promedios móviles - Suavizamiento exponencial simple
-* **Serie con tendencia:** Promedios móviles - Suavizamiento exponencial de Holt-Winters - Suavizamiento exponencial de Brown
-* **Serie estacional:** Suavizamiento exponencial de Holt-Winters aditivo - Suavizamiento exponencial de Holt-Winters multiplicativo
+* **Series estacionarias en media:** Promedios simples, Promedios móviles - Suavizamiento exponencial simple
+* **Series con tendencia:** Promedios móviles dobles - Suavizamiento exponencial de Holt - Suavizamiento exponencial de Brown
+* **Series estacionales:** Suavizamiento exponencial de Holt-Winters aditivo - Suavizamiento exponencial de Holt-Winters multiplicativo
 
 ## Filtros lineales y suavizadores
 Suavizar o filtrar una serie temporal, es similar a la idea de aplicar filtros a la música a través de un amplificador. Podemos amplificar ciertos sonidos o podemos suprimir ciertos sonidos, similarmente, también podemos suprimir (eliminar) ciertas características de una serie de tiempo como la estacionalidad, para poder modelar la tendencia de la misma. Una vez que hemos construido un modelo adecuado para la serie desestacionalizada, podemos agregar nuevamente la componente estacional a los pronósticos de nuestra serie.
@@ -66,13 +69,14 @@ Entonces, un filtro lineal puede definirse como un operador que transforma una s
 
 para `$t=k+1,k+2, \ldots, T-k$`, donde `$i=0,\pm1,\pm2,\ldots, \pm k$` es el ancho de la ventana y los coeficientes `$w_i$` son un conjunto de pesos o ponderaciones, tal que `$\sum_{i=-k}^{k}|w_i|<\infty$`. Además, en situaciones en los cuales se desea determinar la tendencia y reducir las fluctuaciones locales, se pueden restringir los pesos `$w_i$` de la forma `$\sum_{i=-k}^{k}w_i=1$`.
 
+## Series estacionarias en media
 ### Promedios simples
 Los promedios simples se basan en el hecho de que todos los `$w_i$` poseen la misma ponderación, la cual es igual a `$w_i=\frac{1}{t}$`, y a partir de éstas ponderaciones, se obtiene una ecuación de la forma
 `\begin{align*}
 PS_{t}=\frac{1}{t}\sum_{i=1}^{t}{Y_{i}}
 \end{align*}`
 
-para `$i=1,2,\ldots,t$`, con `$t=1,2,\ldots,T$` y siendo `$T$` el total de observaciones históricas de la serie de tiempo. Es de anotar que, los promedios simples son de hecho igual a la media de todo el conjunto de observaciones, y que su valor se actualiza periodicamente a medida que se van agregando nuevas observaciones al cojunto de datos, pero dado que esta medida es el promedio de todo el conjunto de datos históricos de la serie, ésta no tendrá cambios significativos cuando ingresen nuevas observaciones.
+para `$i=1,2,\ldots,t$`, con `$t=1,2,\ldots,T$` y siendo `$T$` el total de observaciones históricas de la serie de tiempo. Es de anotar que, los promedios simples son de hecho igual a la media de todo el conjunto de observaciones hasta `$t$`, y que su valor se actualiza periodicamente a medida que se van agregando nuevas observaciones al cojunto de datos. Dado que esta medida es el promedio de todo el conjunto de datos históricos de la serie, esta estimación no tendrá cambios significativos cuando se ingresan nuevas observaciones.
 
 @Hanke2010[, p. 111], señalan que, el método de promedios simples es una técnica adecuada cuando los factores que producen la serie que se va a pronosticar se han estabilizado y el ambiente en el cual se encuentra la serie generalmente permanece sin cambios, es decir, es adecuada cuando se posea una serie estacionaria en media, con variabilidad pequeña y sin ningún tipo de tendencia.
 
@@ -150,14 +154,15 @@ lo cual es equivalente a
 (1-\alpha)\hat{Y}_{t}=\alpha(1-\alpha) Y_{t-1} + \alpha(1-\alpha)^2 Y_{t-2} + \alpha(1-\alpha)^3 Y_{t-3} + \alpha(1-\alpha)^4 Y_{t-4} + \ldots 
 \end{align}`
 
+<!-- Corregir la estimación!!! a partir de lo visto en la clase 05 de suavización doble de brown -->
 y por tanto, al reemplazar (\\ref{eq:2}) en (\\ref{eq:1}), se obtiene una expresión más sencilla para el cálculo del método de suavizamiento, la cual está dada por
 `\begin{align*}
-\hat{Y}_{t+1}=\alpha Y_{t} + (1-\alpha)\hat{Y}_{t}
+SES_{t+1} = \hat{Y}_{t+1}=\alpha Y_{t} + (1-\alpha)\hat{Y}_{t}
 \end{align*}`
 
 o equivalentemente
 `\begin{align*}
-\hat{Y}_{t+1}=\hat{Y}_{t}+\alpha(Y_{t}-\hat{Y}_{t})
+SES_{t+1} = \hat{Y}_{t+1}=\hat{Y}_{t}+\alpha(Y_{t}-\hat{Y}_{t})
 \end{align*}`
 
 @Hanke2010[, p. 120] señalan que, el valor de `$\alpha$` determina el grado de influencia de las observaciones pasadas sobre el sobre el valor pronósticados, y en consecuencia, entre más cercano se encuentre el parámetro `$\alpha$` de 1, se tendrá que el valor pronosticado tendrá una mayor similaridad al valor observado más reciente, y por tanto, no se recomienda usar este método debido a que la serie resultante será similar a la serie original. 
@@ -167,7 +172,7 @@ Por el contrario, entre más cercano se encuentre el parámetro `$\alpha$` de 0,
 <!-- Puede realizarse mediante la librerías TTR con la función EMA -->
 <!-- R usa 2/(n+1) o 1/n, siendo n el total de periodos que quiere promediar inicialmente, alternativamente se puede emplear un criterio para minimizar el MSE-->
 
-Es de anotar que en la suavización exponencial simples, el ajuste de la primera observación se puede hacer de diferentes formas, entre las cuales destaca
+Es de anotar que en la suavización exponencial simples, **el ajuste de la primera observación** se puede hacer de diferentes formas, entre las cuales destaca
 
 * `$\hat{Y}_{k} = Y_{k-1}$`
 * `$\hat{Y}_{k} = \frac{1}{k}\sum_{t=1}^{k}Y_{t}$`

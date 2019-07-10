@@ -5,7 +5,9 @@ main-class: 'presentacion'
 permalink: /ProbabilidadeInferencia/PeIE:title.html
 tags:
 
-introduction: Presentación del curso de Probabilidad e inferencia estadística y generalidades a tener en cuenta.
+introduction: |
+  Presentación del curso de Probabilidad e inferencia estadística. <br/>
+  Generalidades a tener en cuenta.
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
