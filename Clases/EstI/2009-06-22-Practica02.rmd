@@ -102,7 +102,7 @@ la probabilidad de que funcione cada componente es del 0.95. El circuito funcion
     * exactamente uno de los premios?
     * ninguno de los premios?
     
-14. Un grupo asesor A contiene 3 hombres y 3 mujeres. Otro grupo asesor B contiene 3 hombres y 2 mujeres. Se selecciona al azar un grupo y de él una persona al azar, si esta persona es un hombre, se selecciona otra persona del mismo grupo. Si la persona seleccionada es mujer, se selecciona otra persona del otro grupo. Si las dos personas seleccionadas son mujeres, ¿Cuál es la probabilidad de que se haya seleccionado ambas del grupo asesor A?
+14. Un grupo asesor A contiene 3 hombres y 3 mujeres. Otro grupo asesor B contiene 3 hombres y 2 mujeres. Se selecciona al azar un grupo y de él una persona al azar, si esta persona es un hombre, se selecciona otra persona del mismo grupo. Si la persona seleccionada es mujer, se selecciona otra persona del otro grupo. Si las dos personas seleccionadas son hombres, ¿Cuál es la probabilidad de que se haya seleccionado ambas del grupo asesor A?
 15. Un estudio realizado para un supermercado clasifica los clientes en aquellos que visitan el establecimiento de una manera frecuente u ocasional, y en aquellos que adquieren regularmente, ocasionalmente o nunca productos alimenticios. La siguiente tabla presenta las proporciones correspondientes a cada uno de los seis grupos.
 ```{r echo=FALSE}
 library(kableExtra)

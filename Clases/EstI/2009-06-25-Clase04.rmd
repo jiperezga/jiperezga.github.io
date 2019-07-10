@@ -5,7 +5,11 @@ main-class: 'clase'
 permalink: /EstadisticaI/EstI:title.html
 tags:
 
-introduction: Introducción a la probabilidad, fundamentos, teoría de conjuntos y tecnicas de conteo.
+introduction:  |
+  Introducción a la probabilidad. <br/>
+  Fundamentos de probabilidad. <br/>
+  Teoría de conjuntos. <br/>
+  Tecnicas de conteo.
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}

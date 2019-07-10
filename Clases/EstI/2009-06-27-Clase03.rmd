@@ -5,7 +5,10 @@ main-class: 'clase'
 permalink: /EstadisticaI/EstI:title.html
 tags:
 
-introduction: Definición de las medidas más usadas en la práctica e introducción al análisis descriptivo gráfico y tabular.
+introduction: |
+  Resúmenes numéricos. <br/>
+  Resúmenes tabulares. <br/>
+  Resúmenes gráficos.
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
@@ -41,9 +44,9 @@ opts_chunk$set(echo=TRUE,
 ## Resumen numéricos
 Una parte importante de la estadística descriptiva, son las medidas estadísticas ya explicadas en la [Clase 01](../../EstadisticaI/EstIClase01.html){:target="_blank"} y [Clase 02](../../EstadisticaI/EstIClase02.html){:target="_blank"}, y aún más importante, es buscar la más adecuada para presentar dichas medidas.
 
-Una alternativa es mediante resumenes númericos, los cual permiten observar el comportamiento de un conjunto de observaciones mediante diferentes medidas númericas, que se presentan de forma simple y ordenada.
+Una alternativa es mediante resúmenes numéricos, los cual permiten observar el comportamiento de un conjunto de observaciones mediante diferentes medidas numéricas, que se presentan de forma simple y ordenada.
 
-Existen diferentes funciones que permiten realizar resumenes númericos en <tt>R</tt>, entre ellas se destaca la función `numSummary()` de la librería `RcmdrMisc` y la función `describe()` de la librería `psych`, que permiten realizar resumenes de variables tipo numéricas. 
+Existen diferentes funciones que permiten realizar resúmenes numéricos en <tt>R</tt>, entre ellas se destaca la función `numSummary()` de la librería `RcmdrMisc` y la función `describe()` de la librería `psych`, que permiten realizar resúmenes de variables tipo numéricas. 
 
 Para ilustrar el manejo de estas funciones, se empleara la base de datos `CO2`, integrada en la librería `datasets`, la cual contiene la información sobre un experimento que mire la tolerancia al frío de la especie de hierba Echinochloa crus-galli.
 
@@ -69,7 +72,7 @@ describe(CO2$uptake, na.rm = TRUE, interp = FALSE, skew = TRUE, ranges = TRUE, t
          type = 3, quant = c(0.25, 0.75), IQR = TRUE)
 ```
 
-También es posible realizar resumenes numérico por grupos, en donde, para la función `numSummary` es cuestión de agregar el argumento `groups`, mientras que la función `describe`, debe ser reemplazada por la función `describeBy` y agregar en ésta el argumento `group`. Es de anotar, que para realizar el resumen por grupos, la variable que se usará para realizar el agrupamiento debe ser de tipo **factor**
+También es posible realizar resúmenes numérico por grupos, en donde, para la función `numSummary` es cuestión de agregar el argumento `groups`, mientras que la función `describe`, debe ser reemplazada por la función `describeBy` y agregar en ésta el argumento `group`. Es de anotar, que para realizar el resumen por grupos, la variable que se usará para realizar el agrupamiento debe ser de tipo **factor**
 
 ```{r}
 str(CO2$Treatment)
@@ -81,9 +84,9 @@ describeBy(x = CO2$uptake, group = CO2$Treatment, na.rm = TRUE, interp = FALSE, 
 ```
 
 ## Resumen tabular
-Una alternativa para presentar resumenes de variables, cuando éstas no son númericas es mediante la construcción de tablas de frecuencias, las cuales permiten presentar de forma individual algunas de las características que poseen las variables, o permiten presentar de forma conjunta algunas de las características que comparten dichas variables.
+Una alternativa para presentar resúmenes de variables, cuando éstas no son numéricas es mediante la construcción de tablas de frecuencias, las cuales permiten presentar de forma individual algunas de las características que poseen las variables, o permiten presentar de forma conjunta algunas de las características que comparten dichas variables.
 
-Para presentar de forma individual o grupal las características de las variables, puede empleadase la función `table()` de la librería `base`, la cual agrega la información presentada en de las variables de una forma simple, que permite observar el número (frecuencia absoluta) de observaciones que comparten cierto atributo. Se aconseja que los datos usados dentro de la función `table()` sean de tipo *factor*.
+Para presentar de forma individual o grupal las características de las variables, puede emplearse la función `table()` de la librería `base`, la cual agrega la información presentada en de las variables de una forma simple, que permite observar el número (frecuencia absoluta) de observaciones que comparten cierto atributo. Se aconseja que los datos usados dentro de la función `table()` sean de tipo *factor*.
 
 Para ilustrar el manejo de esta funciones, se empleara la base de datos `KosteckiDillon`, integrada en la librería `carData`, la cual contiene un subconjunto de datos sobre tratamientos de migraña.
 
@@ -142,7 +145,7 @@ str(Insurance) # Muestra la estructura de la base de datos
 
 
 ### Gráficos para una variable cuantitativa
-Entre las gráficos básicos que permiten realizar análisis cuantitativo para una variable se tiene, al diagráma de tallo y hojas, gráfico de caja y bigotes, histograma y densidad.
+Entre las gráficos básicos que permiten realizar análisis cuantitativo para una variable se tiene, al diagrama de tallo y hojas, gráfico de caja y bigotes, histograma y densidad.
 
 #### Diagrama de tallo y hojas
 Este gráfico sirve como medida de resumen de los datos, brinda información de valores máximos, mínimos, área en donde más se centran los datos, dispersión. datos atípicos y asimetría. A pesar de toda la información que puede brindar esta gráfica, su uso es muy limitado, ya que en situaciones en las cuales el rango de la variable es muy grande, ésta no permite visualidad con claridad dichos comportamientos. Este gráfico puede ser realizado mediante la función `stem()` de la librería `graphics` de <tt>R</tt>.
@@ -153,9 +156,9 @@ stem(Insurance$Claims, scale = 2)
 ```
 
 #### Gráfico de caja y bigotes (boxplot)
-Este gráfico sirve para presentar de forma visual, datos númericos a través de sus cuartiles, además de presentar otras  características importantes, tales como la dispersión, simetría y datos potencialmente atípicos.
+Este gráfico sirve para presentar de forma visual, datos numéricos a través de sus cuartiles, además de presentar otras  características importantes, tales como la dispersión, simetría y datos potencialmente atípicos.
 
-La caja del gráfico contiene el 50% central de los datos (rango intercuartil), brinda información sobre la asimetría, `$Q_1$`, `$Q_2$` (mediana) y `$Q_3$`, el bigote inferor se calcula usualmente como `$Q_1–0.5*IQR$`,`$Q_1–IQR$`, o `$Q_1–1.5*IQR$` y el superior como `$Q3+0.5*IQR$`, `$Q3+IQR$` o `$Q3+1.5*IQR$`. Además, los valores que se encuentren por encima o debajo de los bigotes se consideran como potencialmente atípicos. Este gráfico puede ser realizado mediante la función `boxplot()` de la librería `graphics` de <tt>R</tt>.
+La caja del gráfico contiene el 50% central de los datos (rango intercuartil), brinda información sobre la asimetría, `$Q_1$`, `$Q_2$` (mediana) y `$Q_3$`, el bigote inferior se calcula usualmente como `$Q_1–0.5*IQR$`,`$Q_1–IQR$`, o `$Q_1–1.5*IQR$` y el superior como `$Q3+0.5*IQR$`, `$Q3+IQR$` o `$Q3+1.5*IQR$`. Además, los valores que se encuentren por encima o debajo de los bigotes se consideran como potencialmente atípicos. Este gráfico puede ser realizado mediante la función `boxplot()` de la librería `graphics` de <tt>R</tt>.
 
 ```{r}
 boxplot(Insurance$Claims, horizontal = T, xlab = "Conteo", main = "Número de reclamaciones", col = "lightblue")
@@ -185,7 +188,7 @@ hist(Insurance$Claims, main = "Número de reclamaciones", xlab = "conteo", col =
 ```
 
 #### Densidad
-Este gráfico funciona similar al histograma de densidades, con la diferencia de que en lugar de mostrar la distribución mediante clases (barras), éste muestra el comportamiendo de la distribución de las observaciones mediante una curva. Dicha curva, brinda mayor información que el histograma respecto al valor promedio, dispersión y asimetría. Este gráfico puede ser realizado mediante las funciones `plot(density())`, siendo `plot()` una función de la librería `graphics` y `density()` una función de la librería `stats`. Adicionalmente se presenta la función `polygon` de la librería `graphics`, la cual sirve para generar formas, o en este caso, darle color a la densidad 
+Este gráfico funciona similar al histograma de densidades, con la diferencia de que en lugar de mostrar la distribución mediante clases (barras), éste muestra el comportamiento de la distribución de las observaciones mediante una curva. Dicha curva, brinda mayor información que el histograma respecto al valor promedio, dispersión y asimetría. Este gráfico puede ser realizado mediante las funciones `plot(density())`, siendo `plot()` una función de la librería `graphics` y `density()` una función de la librería `stats`. Adicionalmente se presenta la función `polygon` de la librería `graphics`, la cual sirve para generar formas, o en este caso, darle color a la densidad 
 
 ```{r}
 plot(density(Insurance$Claims), main = "Número de reclamaciones", xlab = "conteo", lwd = 2) # gráfica la densidad
@@ -202,7 +205,7 @@ plot(x = Insurance$Holders, y = Insurance$Claims, xlab = "Número de asegurados"
      ylab = "Número de reclamaciones", main = "Seguros :D", pch = 19)
 ```
 
-#### Matríz de dispersión
+#### Matriz de dispersión
 Cuando se poseen más de dos variables cuantitativas, es posible presentar un matriz que muestre el cruce entre pares de variables, mediante cuadros con versiones simples de la función `$plot()$`. Este gráfico puede ser realizado mediante la función `pairs()` de la librería `graphics` de <tt>R</tt>.
 
 ```{r}
@@ -257,7 +260,7 @@ pairs(mvari, labels = c("Número de asegurados", "Número de reclamaciones", "Ut
 Entre las gráficos básicos que permiten realizar análisis cualitativo para variables se tiene, el gráfico de barras, gráfico pareto, gráfico de pastel, y gráfico de puntos.
 
 #### Gráfico de barras
-Sirve para resumir variables cualitativas mediante barras de frecuencias absolutas o relativas. Éste permite observar la concentración de observaciones en una o más categorias diferentes. Este gráfico puede ser realizado mediante la función `barplot()` de la librería `graphics` de <tt>R</tt>, usando como insumo, tablas de frecuencias absolutas o relativas.
+Sirve para resumir variables cualitativas mediante barras de frecuencias absolutas o relativas. Éste permite observar la concentración de observaciones en una o más categorías diferentes. Este gráfico puede ser realizado mediante la función `barplot()` de la librería `graphics` de <tt>R</tt>, usando como insumo, tablas de frecuencias absolutas o relativas.
 
 ```{r}
 # Usando las tablas de frecuencias absolutas presentadas en el análisis tabular.
@@ -275,7 +278,7 @@ legend("topright", c("none", "reduced", "continuing"), fill = c("lightblue", "li
 ```
 
 #### Gráfico de pareto
-Este gráfico es similar al grafico de barras para una sola variable cualitativa, pero con la ventaja de que presenta las frecuencias absolutas, relativas, y las frecuencias acumuladas absolutas y acumuladas relativas en el mismo gráfico. Este gráfico puede ser realizado mediante la función `pareto.chart()` de la librería `qqc`, usando como insumo, tablas de frecuencias absolutas o relativas.
+Este gráfico es similar al gráfico de barras para una sola variable cualitativa, pero con la ventaja de que presenta las frecuencias absolutas, relativas, y las frecuencias acumuladas absolutas y acumuladas relativas en el mismo gráfico. Este gráfico puede ser realizado mediante la función `pareto.chart()` de la librería `qqc`, usando como insumo, tablas de frecuencias absolutas o relativas.
 
 ```{r}
 # install.packages("qcc") # Instala paquete qcc
@@ -294,7 +297,7 @@ legend("topright", c("18.9%", "23.63%", "57.47%"), fill = rainbow(20)[c(4,13,16)
 ```
 
 #### Gráfico de puntos
-Este gráfico también es similar al grafico de barras, sirve para presentar la frecuencia de una variable cualitativa o un cruce de dos variables cualitativas, y muestra un punto que representa el conteo del total de observaciones que hay para cada variable. Este gráfico puede ser realizado mediante la función `dotchart()` de la librería `graphics` de <tt>R</tt>, usando como insumo, tablas de frecuencias absolutas o relativas.
+Este gráfico también es similar al gráfico de barras, sirve para presentar la frecuencia de una variable cualitativa o un cruce de dos variables cualitativas, y muestra un punto que representa el conteo del total de observaciones que hay para cada variable. Este gráfico puede ser realizado mediante la función `dotchart()` de la librería `graphics` de <tt>R</tt>, usando como insumo, tablas de frecuencias absolutas o relativas.
 
 ```{r}
 # Usando las tablas de frecuencias absolutas presentadas en el análisis tabular.
@@ -308,7 +311,7 @@ dotchart(tabla2vias, main = "Frecuencias absolutas de estado de medicación por 
 Entre las gráficos básicos que permiten analizar los cruces entre variables cuantitativas y cualitativas se tiene, al gráfico de caja y bigotes, gráfico de medias, histogramas, densidades, diagrama de dispersión.
 
 #### Gráfico de caja y bigotes
-Este gráfico sirve para presentar de forma visual, datos númericos por categorías a través de sus cuartiles, además de presentar otras características importantes, tales como la dispersión, simetría y datos potencialmente atípicos. Este gráfico puede ser realizado mediante la función `boxplot()` de la librería `graphics` de <tt>R</tt>.
+Este gráfico sirve para presentar de forma visual, datos numéricos por categorías a través de sus cuartiles, además de presentar otras características importantes, tales como la dispersión, simetría y datos potencialmente atípicos. Este gráfico puede ser realizado mediante la función `boxplot()` de la librería `graphics` de <tt>R</tt>.
 
 ```{r}
 boxplot(Insurance$Claims ~ Insurance$Group, horizontal = T, xlab = "Conteo", ylab = "Grupo", main = "Número de reclamaciones", col = rainbow(4), las = 1)
@@ -321,7 +324,7 @@ boxplot(Insurance$Claims ~ Insurance$Group, horizontal = T, xlab = "Conteo", yla
 ```
 
 #### Gráfico de medias
-Este gráfico sirve para presentar de forma visual, grupos de datos númericos a través de sus media y desviación estándar. El gráfico está compuesto por un punto que representa el valor promedio del grupo de observaciones y las barras representan **una** desviación estándar de la media. Este gráfico puede ser realizado mediante la función `plotMeans` de la librería `RcmdrMisc`.
+Este gráfico sirve para presentar de forma visual, grupos de datos numéricos a través de sus media y desviación estándar. El gráfico está compuesto por un punto que representa el valor promedio del grupo de observaciones y las barras representan **una** desviación estándar de la media. Este gráfico puede ser realizado mediante la función `plotMeans` de la librería `RcmdrMisc`.
 
 ```{r}
 library(RcmdrMisc) # Carga la librería RcmdrMisc
@@ -356,7 +359,7 @@ ggplot(BD, aes(x=Reclama, fill=Clase)) + geom_histogram(alpha=0.7,colour=1, posi
 Es de anotar que también puede cambiar la forma en que se agrupan los datos en cada una de las categorías, y por tanto, puede verse diferencias entre el gráfico realizado con el paquete base y el gráfico realizado con el paquete ggplot.
 
 #### Densidad
-Este gráfico muestra el comportamiendo de la distribución de las observaciones mediante una curva de densidad para cada una de las variables. Este gráfico, brinda información respecto al valor promedio, dispersión y asimetría. Este gráfico puede ser realizado mediante las funciones `plot(density())`, siendo `plot()` una función de la librería `graphics` y `density()` una función de la librería `stats`. Para realizar el segundo gráfico, se debe emplear la función `lines(density())`, siendo `lines()` una función de la librería `graphics`.
+Este gráfico muestra el comportamiento de la distribución de las observaciones mediante una curva de densidad para cada una de las variables. Este gráfico, brinda información respecto al valor promedio, dispersión y asimetría. Este gráfico puede ser realizado mediante las funciones `plot(density())`, siendo `plot()` una función de la librería `graphics` y `density()` una función de la librería `stats`. Para realizar el segundo gráfico, se debe emplear la función `lines(density())`, siendo `lines()` una función de la librería `graphics`.
 
 ```{r}
 plot(density(Insurance$Claims), main = "Número de reclamaciones", xlab = "conteo", lwd = 2) # gráfica la densidad

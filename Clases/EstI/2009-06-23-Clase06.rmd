@@ -5,7 +5,12 @@ main-class: 'clase'
 permalink: /EstadisticaI/EstI:title.html
 tags:
 
-introduction: Probabilidad condicional, regla multiplicativa, independencia entre eventos, probabilidad total y teorema de Bayes.
+introduction:  |
+  Probabilidad condicional. <br/>
+  Regla multiplicativa. <br/>
+  Independencia entre eventos. <br/>
+  Probabilidad total. <br/>
+  Teorema de Bayes.
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
