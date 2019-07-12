@@ -1,0 +1,95 @@
+---
+layout: post
+title: "Clase 08"
+main-class: 'clase'
+permalink: /EstadisticaI/EstI:title.html
+tags:
+
+introduction: |
+  Distribuciones de probabilidad conjuntas <br/>
+  Distribuciones marginales <br/>
+  Distribuciones condicionales <br/>
+  Independencia estadística
+header-includes:
+   - \usepackage{amsmath,amssymb,amsthm,amsfonts}
+   - \usepackage[sectionbib]{natbib}
+   - \usepackage[hidelinks]{hyperref}
+output:
+  md_document:
+    variant: markdown_strict+backtick_code_blocks+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash
+    preserve_yaml: TRUE
+always_allow_html: yes   
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding,
+  output_dir = "../../EstadisticaI/_posts/", output_format = "all"  ) })
+bibliography: "../../referencias.bib"
+csl: "../../apa.csl"
+---
+
+```{r knitr_init, echo=FALSE, cache=FALSE}
+library(knitr)
+## Global options
+opts_chunk$set(echo=TRUE,
+               cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE,
+               fig.path = paste0("../../EstadisticaI/images/", "Clase08"),
+               cache.path = "../../EstadisticaI/cache/",
+               cache = FALSE)
+
+```
+
+## Distribución de probabilidad conjunta
+### Caso discreto
+
+Se dice que la función `$p(x,y)$`, es una función de masa de probabilidad conjunta (*fmpc*) de las variables aleatorias discretas `$X, Y$`, si se cumple que
+
+1. `$p(x,y)\geq0$` para todo `$x,y \in$` al rango de `$X,Y$`, respectivamente.
+2. `$\sum_x\sum_y p(x,y)=1$`
+3. `$P[(X,Y)\in A] = {\sum\sum}_{(x,y)\in A}p(x,y)$` con `$A\in$` al rango de `$X,Y$`.
+
+### Caso continuo
+
+Se dice que la función `$f(x,y)$`, es una función de densidad de probabilidad conjunta (*fdpc*) de las variables aleatorias discretas `$X, Y$`, si se cumple que
+
+1. `$f(x,y)\geq0$` para todo `$x,y \in \mathbb{R}$`.
+2. `$\int_{-\infty}^{\infty}\int_{-\infty}^{\infty} f(x,y) dxdy=1$`
+3. `$P[(X,Y)\in A] = \iint_{(x,y)\in A}f(x,y)$` con `$A$` un intervalo de valores `$\in \mathbb{R}$`
+
+## Distribuciones marginales
+
+Sean `$X, Y$` dos variables aleatorias con *fmpc* `$p(x,y)$`o *fdpc* `$f(x,y)$`, entonces las distribuciones marginales solo de `$X$`, están dada por
+`\begin{align*}
+g(x)=\begin{cases} \sum_{y}p(x,y) & \text{ si } x,y \text{ son discretas} \\
+\int_{-\infty}^\infty f(x,y) dy & \text{ si } x,y \text{ son continuas} \end{cases}
+\end{align*}`
+
+Similarmente, las distribuciones marginales solo de `$Y$`, están dadas por
+`\begin{align*}
+h(y)=\begin{cases} \sum_{x}p(x,y) & \text{ si } x,y \text{ son discretas} \\
+\int_{-\infty}^\infty f(x,y) dx & \text{ si } x,y \text{ son continuas} \end{cases}
+\end{align*}`
+
+## Distribuciones condicionales
+
+Sea `$X, Y$` dos variables aleatorias con *fmpc* o *fdpc* entonces la distribución condicional de `$X$` dado `$Y$` es
+`\begin{align*}
+f(x|y)=\frac{f(x,y)}{h(y)} \text{ con } h(y)>0
+\end{align*}`
+
+Análogamente, la distribución condicional de `$Y$` dado `$X$` es
+`\begin{align*}
+f(y|x)=\frac{f(x,y)}{g(x)} \text{ con } g(x)>0
+\end{align*}`
+
+## Independencia estadística
+
+Sea `$X, Y$` dos variables aleatorias discretas con *fmpc* `$p(x,y)$` o continuas con *fdpc* `$f(x,y)$`, y con distribuciones marginales `$g(x)$` y `$h(y)$`. entonces, se dice que las variables aleatorias `$X,Y$` son estadísticamente independientes si y solo si
+`\begin{align*}
+f(x,y)=g(x)h(y)
+\end{align*}`
+
+para todo `$(x,y)$` dentro de sus rangos o planos.
