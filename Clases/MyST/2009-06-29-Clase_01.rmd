@@ -50,14 +50,15 @@ Un ejemplo de una serie temporal, se presenta a continuación donde se muestra e
 
 <pre>
 ```{r echo=FALSE}
+library(htmltools)
 library(readxl)
 library(plotly)
 # https://datos.bancomundial.org/indicador/NY.GDP.PCAP.KD.ZG
 PIB <- read_xlsx("../../Dataset/%anualPIB2017.xlsx")
 PIBcol <- ts(PIB$PIB, start = 1961)
 fechas1 <- time(PIBcol)
-plot_ly(x = ~fechas1, y = ~PIBcol, mode = 'lines+markers', text = paste("PIB =", round(PIBcol, 3)), width = 700, height = 400) %>% layout(title="Crecimiento del PIB per cápita (% anual)", xaxis = list(title ="Año"), yaxis = list(title = "PIB (% anual)")) %>% 
-layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4))
+tagList(plot_ly(x = ~fechas1, y = ~PIBcol, mode = 'lines+markers', text = paste("PIB =", round(PIBcol, 3)), width = 700, height = 400, type = "scatter") %>% layout(title="Crecimiento del PIB per cápita (% anual)", xaxis = list(title ="Año"), yaxis = list(title = "PIB (% anual)")) %>%
+layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)))
 ```
 </pre>
 
@@ -74,21 +75,20 @@ fechas2 <- aire$Fecha_Hora
 lim25 <- quantile(pm25,probs = c(0.25,0.75))+c(-1.5*IQR(pm25),1.5*IQR(pm25))
 SApm25 <- pm25[dplyr::between(pm25,lim25[1],lim25[2])]
 fpm25 <- fechas2[dplyr::between(pm25,lim25[1],lim25[2])]
-plotpm25 <- plot_ly(x = ~fpm25, y = ~SApm25, mode = 'lines+markers', text = paste("PM2.5 =", SApm25), width = 700, height = 400, name = "PM2.5")
+plotpm25 <- plot_ly(x = ~fpm25, y = ~SApm25, mode = 'lines+markers', text = paste("PM2.5 =", SApm25), width = 700, height = 400, name = "PM2.5", type = "scatter")
 
 ### Extracció de Atípicos y gráfico pm25
 lim10 <- quantile(pm10,probs = c(0.25,0.75))+c(-1.5*IQR(pm10),1.5*IQR(pm10))
 SApm10 <- pm10[dplyr::between(pm10,lim10[1],lim10[2])]
 fpm10 <- fechas2[dplyr::between(pm10,lim10[1],lim10[2])]
-plotpm10 <- plot_ly(x = ~fpm10, y = ~SApm10, mode = 'lines+markers', text = paste("PM10 =", SApm10), width = 700, height = 400, name = "PM10") 
-subplot(plotpm25, plotpm10, nrows = 2, margin = 0.08) %>% 
+plotpm10 <- plot_ly(x = ~fpm10, y = ~SApm10, mode = 'lines+markers', text = paste("PM10 =", SApm10), width = 700, height = 400, name = "PM10", type = "scatter") 
+tagList(subplot(plotpm25, plotpm10, nrows = 2, margin = 0.08) %>% 
   layout(title = "Material particulado 2.5 y 10",
          yaxis = list(title = "PM2.5"),
          yaxis2 = list(title = "PM10"),
          xaxis2 = list(title = "Días"),
          margin = list(r=30, l=60, t=60, b=60, pad = 4),
-         height = 600, showlegend = FALSE)
-
+         height = 600, showlegend = FALSE))
 ```
 </pre>
 
@@ -213,7 +213,7 @@ p3 <- plot_ly(x = ~AP2$index, y = ~tendenciaNP, mode = 'lines', width = 700, hei
 
 p4 <- plot_ly(x = ~AP2$index, y = ~errorNP, width = 700, height = 400, type = "bar", name = "Error") 
 
-subplot(p1, p2, p3, p4, nrows = 4, margin = 0.03) %>% 
+tagList(subplot(p1, p2, p3, p4, nrows = 4, margin = 0.03) %>% 
   layout(title = "Componentes del total de pasajeros de líneas aéreas",
          yaxis = list(title = TeX("Y_t")),
          yaxis2 = list(title = TeX("S_t")),
@@ -221,7 +221,7 @@ subplot(p1, p2, p3, p4, nrows = 4, margin = 0.03) %>%
          yaxis4 = list(title = TeX("\\varepsilon_t")),
          xaxis4 = list(title = "Fecha"),
          margin = list(r=30, l=60, t=60, b=60, pad = 4), height = 600) %>%
-  config(mathjax = 'cdn')
+  config(mathjax = 'cdn'))
 ```
 </pre>
 
@@ -256,7 +256,7 @@ p7 <- plot_ly(x = ~ingH2$index, y = ~tendenciaAH, mode = 'lines', width = 700, h
 
 p8 <- plot_ly(x = ~ingH2$index, y = ~errorAH, width = 700, height = 400, type = "bar", name = "Error") 
 
-subplot(p5, p6, p7, p8, nrows = 4, margin = 0.03) %>% 
+tagList(subplot(p5, p6, p7, p8, nrows = 4, margin = 0.03) %>% 
   layout(title = "Componentes de la variación porcentual
 de los ingresos reales de hoteles",
          yaxis = list(title = TeX("Y_t")),
@@ -265,7 +265,7 @@ de los ingresos reales de hoteles",
          yaxis4 = list(title = TeX("\\varepsilon_t")),
          xaxis4 = list(title = "Fecha"),
          margin = list(r=30, l=60, t=60, b=60, pad = 4), height = 600) %>%
-  config(mathjax = 'cdn')
+  config(mathjax = 'cdn'))
 ```
 </pre>
 
@@ -285,9 +285,9 @@ de pasajeros de líneas aéreas", xlab = "Fecha", ylab = expression(T[t]), col =
 <pre>
 ```{r echo=FALSE}
 # Gráfico avanzado con plotly
-plot_ly(x = ~AP2$index, y = ~tendenciaNP, mode = 'lines', width = 700, height = 400, type = "scatter") %>%
+tagList(plot_ly(x = ~AP2$index, y = ~tendenciaNP, mode = 'lines', width = 700, height = 400, type = "scatter") %>%
   layout(title = "Componente de Tendencia para el total de pasajeros de líneas aéreas", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("T_t"))) %>% config(mathjax = 'cdn') %>% 
-layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)) 
+layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)))
 ```
 </pre>
 
@@ -303,10 +303,10 @@ de los ingresos reales de hoteles", xlab="Fecha", ylab = expression(T[t]), col =
 <pre>
 ```{r echo=FALSE}
 # Gráfico avanzado con plotly
-plot_ly(x = ~ingH2$index, y = ~tendenciaAH, mode = 'lines', width = 700, height = 400, type = "scatter") %>%
+tagList(plot_ly(x = ~ingH2$index, y = ~tendenciaAH, mode = 'lines', width = 700, height = 400, type = "scatter") %>%
   layout(title="Componente de Tendencia para variaciones porcentual
 de los ingresos reales totales de hoteles", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("T_t"))) %>% config(mathjax = 'cdn') %>% 
-layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)) 
+layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)))
 ```
 </pre>
 
@@ -327,10 +327,10 @@ abline(h = 0)
 <pre>
 ```{r echo=FALSE}
 # Gráfico avanzado con plotly
-plot_ly(x = ~AP2$index, y = ~estacionalNP, mode = 'lines', width = 700, height = 400, type = "scatter") %>%
+tagList(plot_ly(x = ~AP2$index, y = ~estacionalNP, mode = 'lines', width = 700, height = 400, type = "scatter") %>%
   layout(title="Componente Estacional para para el total
 de pasajeros de líneas aéreas", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("S_t"))) %>% config(mathjax = 'cdn') %>% 
-layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)) 
+layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)))
 ```
 </pre>
 
@@ -344,10 +344,10 @@ de los ingresos reales de hoteles", xlab="Fecha", ylab = expression(T[t]), col =
 <pre>
 ```{r echo=FALSE}
 # Gráfico avanzado con plotly
-plot_ly(x = ~ingH2$index, y = ~estacionalAH, mode = 'lines', width = 700, height = 400, type = "scatter") %>%
+tagList(plot_ly(x = ~ingH2$index, y = ~estacionalAH, mode = 'lines', width = 700, height = 400, type = "scatter") %>%
   layout(title="Componente Estacional para variación porcentual
 de los ingresos reales de hoteles", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("T_t"))) %>% config(mathjax = 'cdn') %>% 
-layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)) 
+layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4))) 
 ```
 </pre>
 
@@ -369,10 +369,10 @@ abline(h = 0)
 <pre>
 ```{r echo=FALSE}
 # Gráfico avanzado con plotly
-plot_ly(x = ~AP2$index, y = ~errorNP, width = 700, height = 400, type = "bar") %>%
+tagList(plot_ly(x = ~AP2$index, y = ~errorNP, width = 700, height = 400, type = "bar") %>%
   layout(title="Componente de Error para el total
 de pasajeros de líneas aéreas", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("\\varepsilon_t"))) %>% config(mathjax = 'cdn') %>% 
-layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)) 
+layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)))
 ```
 </pre>
 
@@ -387,10 +387,10 @@ abline(h = 0)
 <pre>
 ```{r echo=FALSE}
 # Gráfico avanzado con plotly
-plot_ly(x = ~ingH2$index, y = ~errorAH, width = 700, height = 400, type = "bar") %>%
+tagList(plot_ly(x = ~ingH2$index, y = ~errorAH, width = 700, height = 400, type = "bar") %>%
   layout(title="Componente de Error para variación porcentual
 de los ingresos reales de hoteles", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("\\varepsilon_t"))) %>% config(mathjax = 'cdn') %>% 
-layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)) 
+layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)))
 ```
 </pre>
 
@@ -408,7 +408,7 @@ Para el caso de las **variaciones porcentual de los ingresos reales totales de h
 # Gráfico avanzado con plotly
 linear <- lm(ingH2$value ~ ingH2$index)
 
-plot_ly(x = ~ingH2$index, y = ~ingH2$value, mode = 'lines', width = 700, height = 400, type = "scatter", name = "Datos") %>%
+tagList(plot_ly(x = ~ingH2$index, y = ~ingH2$value, mode = 'lines', width = 700, height = 400, type = "scatter", name = "Datos") %>%
   layout(title="Componente cíclico para variación porcentual
 de los ingresos reales de hoteles", xaxis = list(title ="Fecha"), yaxis = list(title = TeX("C_t"))) %>% config(mathjax = 'cdn') %>% 
 layout(shapes=list(
@@ -420,7 +420,7 @@ layout(shapes=list(
   list(type='line', x0 = "2018-03-01", x1 = "2018-03-01", y0 = -13, y1 = 19, line = list(dash = "dot"))))  %>% 
 add_lines(x = ~ingH2$index, y = ~tendenciaAH, name = "Tendencia") %>%
 add_lines(x = ~ingH2$index, y = ~fitted(linear), name = "Ajuste lineal") %>%
-layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)) 
+layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)))
 ```
 </pre>
 

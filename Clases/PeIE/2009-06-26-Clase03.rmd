@@ -9,7 +9,7 @@ introduction: |
   Introducción a variables aleatorias. <br/>
   Distribuciones de probabilidad discretas. <br/>
   Función de distribución acumulada. <br/>
-  Valor esperado y varianza.
+  Esperanza matemática y varianza.
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
