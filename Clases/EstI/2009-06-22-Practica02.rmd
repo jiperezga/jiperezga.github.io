@@ -160,7 +160,7 @@ la probabilidad de que funcione el componente C1 es de 0.98, la de C2 es 0.96, l
 27. La probabilidad de sobrevivir a una cierta operación de trasplante es 0.55. Si un paciente sobrevive la operación, la probabilidad que su cuerpo rechace el trasplante en menos de un mes es 0.20. ¿Cuál es la probabilidad de que sobreviva a estas etapas críticas?
 28. Un dado balanceado se tira seis veces y cada vez se registra el número de su cara superior, ¿Cuál es la
 probabilidad de que los números registrados sean 1, 2, 3, 4, 5 y 6 en cualquier orden?
-29. Se sabe que 2/3 de los reclusos en cierta prisión federal son menores de 25 años de edad. También se sabe que 3/5 de los reos son hombres y que 5/8 son mujeres de 25 años de edad o mayores. ¿Cuál es la probabilidad de que un prisionero seleccionado al azar de esta prisión sea mujer y tenga al menos 25 años de edad?
+29. Se sabe que 2/3 de los reclusos en cierta prisión federal son menores de 25 años de edad. También se sabe que 3/5 de los reos son hombres y que 5/8 son mujeres de 25 años de edad o mayores. ¿Cuál es la probabilidad de que un prisionero seleccionado al azar de esta prisión sea mujer o tenga al menos 25 años de edad?
 30. Un alergólogo afirma que 50% de los pacientes que examina son alérgicos a algún tipo de hierba. ¿Cuál es la probabilidad de que… 
     * exactamente 3 de sus 4 pacientes siguientes sean alérgicos a hierbas?
     * ninguno de sus 4 pacientes siguientes sea alérgico a hierbas?
@@ -174,7 +174,6 @@ liste los números de las regiones que representan los siguientes eventos
     * La familia no llegará a un lugar para acampar lleno.
 
 32. Una flota de nueve taxis se ha de despachar a tres aeropuertos en forma tal que tres vayan al aeropuerto A, cinco al aeropuerto B y uno al aeropuerto C. ¿En cuántas formas distintas se puede lograr esto?
-
 33. En un grupo de 100 estudiantes de bachillerato que están cursando el último año, 42 cursaron matemáticas, 68 psicología, 54 historia, 22 matemáticas e historia, 25 matemáticas y psicología, 7 historia pero ni matemáticas ni psicología, 10 las tres materias y 8 no cursaron ninguna de las tres. Seleccione al azar a un estudiante de este grupo y calcule la probabilidad de los siguientes eventos:
     * Una persona inscrita en psicología y cursa las tres materias
     * Una persona que no está inscrita en psicología y esté cursando historia y matemáticas.
@@ -184,6 +183,7 @@ liste los números de las regiones que representan los siguientes eventos
     * en ninguna de esas ciudades?
     
 35. Un testigo de un accidente automovilístico le dijo a la policía que la matrícula del culpable, que huyó, contenía las letras RLH seguidas por 3 dígitos, de los cuales el primero era un 5. Si el testigo no recuerda los 2 últimos dígitos, pero está seguro de que los 3 eran distintos, calcule la cantidad máxima de registros de automóviles que la policía tendría que revisar.
+36. Resuelva
     * ¿De cuántas maneras se pueden formar 6 personas para abordar un autobús?
     * ¿Cuántas maneras son posibles si, de las 6, 3 personas específicas insisten en formarse una después de la otra?
     * ¿De cuántas maneras se pueden formar si, de las 6, 2 personas específicas se rehúsan a formarse una detrás de la otra?
