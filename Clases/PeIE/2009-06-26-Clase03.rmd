@@ -6,10 +6,10 @@ permalink: /ProbabilidadeInferencia/PeIE:title.html
 tags:
 
 introduction: |
-  Introducción a variables aleatorias. <br/>
-  Distribuciones de probabilidad discretas. <br/>
-  Función de distribución acumulada. <br/>
-  Esperanza matemática y varianza.
+  Introducción a la estadística descriptiva. <br/>
+  Tipos de datos. <br/>
+  Escala de medición. <br/>
+  Medidas estadísticas. 
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
@@ -43,64 +43,110 @@ opts_chunk$set(echo=TRUE,
 ```
 
 
-## Variables aleatorias
-Es una función que asocia un número real a cada elemento del espacio muestral `$S$`. Comúnmente las variables aleatorias se denotan por letras mayúsculas del final del alfabeto `$(X,Y,Z)$` y a los valores observados por letras minúsculas `$(x,y,z)$`.
+## Introducción
 
-Las variables aleatorias se pueden clasificar en tres tipos
+La estadística es una ciencia derivada de la matemática, que se encarga de recolectar, analizar y presentar información tanto numérica como categórica de una población de interés, con el fin de establecer conclusiones acerca de la misma población, o de alguno de los parámetros que la conforman. Debido a ésto, es que la estadística es empleada en gran variedad de áreas, tales como economía, administración, ingeniería, biología, medicina, hidrología, ciencias sociales, negocios, finanzas, etc.
 
-* **Variables Bernoulli:** Cualquier variable aleatoria cuyos posibles valores sean 0 o 1.
-* **Variables discretas:** Son aquellas que tienen un número finito de posibilidades o una serie interminable de elementos como números enteros existentes (es enumerable).
-* **Variables continuas:** Son aquellas que contienen un número infinito de posibilidades, o igual número de puntos que un segmento de recta.
+El análisis estadístico puede dividirse en dos partes:
 
-## Distribución de probabilidad discreta
+* **Estadística descriptiva**: se encarga de la descripción, visualización y resumen de un conjunto de datos de interés, con el objetivo de facilitar la presentación y entendimiento de los mismos.
+* **Inferencia estadística**: se encarga de la inferencias, modelamiento y predicción para la obtención de conclusiones y toma de decisiones a partir de un conjunto de datos experimentales.
 
-Se dice que el conjunto de pares ordenados `$(x,p(x))$` es una función de masa de probabilidad (*fmp*) de la variable aleatoria discreta `$X$`, si para cualquier resultado posible de `$X$` se cumple que
+## Estadística descriptiva
 
-1. `$p(x)\geq0$` para todo `$x \in$` al rango de `$X$`
-2. `$\sum_x p(x)=1$`
-3. `$p(x)=\mathbb P(X=x)$`
+La estadística descriptiva se puede definir como un conjunto de técnicas que se emplean para recolectar, organizar, analizar e interpretar un conjunto de datos ya sea muestral o poblacional, con el fin de presentar de forma apropiada las diversas características que posee la información suministrada.
 
-## Función de distribución acumulada caso discreto
+Usualmente, la estadística descriptiva se encarga de resumir la información suministrada mediante el empleo de tablas, gráficas y medidas numéricas, junto con la interpretación de las mismas.
 
-La función de distribución acumulada (*fda*) denotada por `$F(x)$`, para una variable aleatoria discreta `$X$` con distribución de probabilidad `$p(x)$` es de la forma 
+## Tipos de datos
+En términos generales, los datos son cualquier pieza de información recolectada del fenómeno que se pretende analizar, y que, dependiendo de las características que posean, deben clasificarse dentro de una determinada categoría.
+
+* **Cuantitativos**: Son datos que pueden ser medidos o cuantificados. Estos se subdividen en dos categorías:
+  * **Datos cuantitativos discretos**: Son aquellos datos que provienen de procesos que involucran conteos, y por tanto, solo pueden tomar valores enteros. Por ejemplo: *Edad de una persona, número de semestres que tardar un estudiante para graduarse, cantidad de profesores que dictan Estadística I*
+  - **Datos cuantitativos continuos**: Son aquellos datos que provienen de procesos que involucran mediciones, y por tanto, solo pueden tomar cualquier valor real dentro de un intervalo. Por ejemplo: *Temperatura actual, tiempo que dura una clase, ganancias o pérdidas diarias de un negocio.*
+* **Cualitativos**: Son datos asociados a una cualidad o propiedad, y por tanto, no pueden representarse numéricamente, a pesar de poder caracterizarse alfanúmericamente. Por ejemplo: *Estrato socioeconómico, tipo de animales en una granja, nivel de satisfacción con el método planteado para dictar el curso.*
+* **Lógicos**: Son datos asociados a valores de lógica binaria, usualmente denotados como Verdadero y Falso, o Éxito y Fracaso. Por ejemplo: *Tipo de Sexo, cara de una moneda, probar si un artículo es defectuoso.*
+
+## Escala de medición
+Las medición de un conjunto de observaciones puede realizarse por medio de cuatro escalas de medición.
+
+* **Nominal**: Son aquellos factores que establecen etiquetas o categorías a los datos, sin estar sujetos a un orden específico.
+* **Ordinal**: Son aquellos factores que establecen etiquetas o categorías a los datos, junto a una estructura jerárquica.
+* **Intervalo**: Son aquellas mediciones cuantitativas que establecen la distancia entre una medida y otra, en términos de una unidad de medición fija, donde el cero no indica ausencia del tributo.
+* **Razón**: Son aquellas mediciones cuantitativas que establece la distancia exacta de una categoría debido a que el cero es absoluto, e indica ausencia del atributo, es decir, no hay ningún valor numérico negativo.
+
+## Medidas estadísticas
+### Medidas de tendencia central
+Estas medidas tienen por objetivo buscar valores que muestren el lugar en el cual se encuentra el centro de un conjunto de observaciones. Si se define `$x_1, x_2, \ldots, x_n$` como un conjunto de `$n$` observaciones, entonces 
+
+#### Media
+Es el promedio numérico de las `$n$` observaciones.
 `\begin{align*}
-F(x)=P(X\leq x)=\sum_{t\leq x}p(t) \quad \quad -\infty<x<\infty
+  \bar{X}=\sum_{i=1}^n\frac{x_i}{n}=\frac{x_1+x_2+\ldots+x_n}{n}
 \end{align*}`
 
-para cualquier `$x$` dentro del rango de `$X$`, `$F(x)$` será la suma acumulada de todos los valores de rango de `$X$` menores a `$x$`.
+En <tt>R</tt>, puede calcularse el valor promedio de un conjunto de observaciones mediante la función `mean(datos)`.
 
-## Esperanza matemática caso discreto
-
-Si `$x$` es una variable aleatoria con *fmp* `$p(x)$`, entonces la media o valor esperado de la variable aleatoria se denota por `$\mathbb{E}(X)$` o `$\mu$` está dada por
+#### Mediana
+Es el valor que ocupa el lugar central en un conjunto de datos, es decir, el valor que divide el conjunto de observaciones en dos partes que contienen el 50% de las observaciones. Para realizar el cálculo de la mediana es necesario ordenar inicialmente el conjunto de observaciones de forma ascendente.
 `\begin{align*}
-\mathbb{E}(X)=\sum_{x}xp(x)
+  \tilde{X}=\begin{cases}x_{\left[\frac{(n+1)}{2}\right]} & \text{si } n \text{ es impar}\\\frac{1}{2}\left(x_{\left[\frac{n}{2}\right]}+x_{\left[\frac{n}{2}+1\right]}\right) & \text{si } n \text{ es par}\end{cases}
 \end{align*}`
+donde `$x_{\left[j\right]}$` representa la `$j$`-ésima observación ordenada. En <tt>R</tt> puede calcularse la mediana de un conjunto de observaciones mediante la función `median(datos)`.
 
-### Propiedades de la esperanza matemática
-Sea `$a$` y `$b$` dos números constantes (reales) y `$X$` una variable aleatoria, entonces se tiene que
+#### Moda
+Es el valor que ocurre con mayor frecuencia en un conjunto de datos, es decir, es la observación que se repite con mayor frecuencia. Es de anotar que en un conjunto de observaciones, se puede tener más de una moda, en cuyo caso se dirá que el conjunto de datos es bimodal, trimodal o multimodal.
 
-* `$\mathbb{E}(a)$`
-* `$\mathbb{E}(aX+b)=a\mathbb{E}(X)+b$`
-* si `$g(X)$` es una función de `$X$`, entonces
+Entre las funciones base del programa <tt>R</tt> no hay ninguna función que calcule la moda de un conjunto de observaciones, y por tanto, debe crearse una función que realice el cálculo, de la forma
 
-`\begin{align*}
-\mathbb{E}(g(X))=\sum_xg(x)p(x)
-\end{align*}`
+```{r eval=FALSE}
+Moda <- function(x) {
+keys <- na.omit(unique(x))
+keys[which.max(tabulate(match(x, keys)))]
+}
+```
+Una vez creada la función, puede calcularse la moda de un conjunto de observaciones mediante la función `Mode(datos)`. 
 
-## Varianza caso discreto
-
-Sea `$X$` una variable aleatoria con *fmp* `$p(x)$`, entonces si `$g(X) = (X - \mathbb{E}(X))$`, se tendrá que la varianza de `$X$` que se denota `$Var(X)$` o `$\sigma^2$` estará dada por
-`\begin{align*}
-Var(X) = \mathbb{E}\left[\left(X-\mathbb{E}(X)\right)^2\right]=\sum_x(x-\mathbb{E}(X))^2p(x)
-\end{align*}`
-
-Una alternativa para el cálculo de la `$Var(X)$`, la cual puede ser demostrada a partir de la ecuación anterior es
+#### Media recortada
+Es una medida similar a la media, con la diferencia de que, en este caso, se ordenan las observaciones de forma ascendente, y luego se recortan un número `$r$` observaciones superiores e inferiores, tal que `$r=n*trim$`, siendo `$trim$` un valor porcentual entre 0 y 0.5
 
 `\begin{align*}
-Var(X) = \mathbb{E}(X^2) - \mathbb{E}(X)^2
+  \bar{X}_{trim}=\frac{1}{n-2r}\sum_{i=r}^{n-r}x_i
 \end{align*}`
 
-además, la raíz cuadrada de la varianza de `$X$` se llama desviación estándar de `$X$`, se denota por `$Sd(X)$` o `$\sigma$` y se define como
+En <tt>R</tt>, puede calcularse el valor de la media recortada de un conjunto de observaciones mediante la función `mean(datos, trim = trim)`.
+
+### Medidas de localización
+Estas medidas tienen por objetivo dividir un conjunto de datos ordenado en partes iguales, entendidas estas como intervalos que contienen la misma proporción de observaciones. Si se define `$x_{[1]}, x_{[2]}, \ldots, x_{[n]}$`, como un conjunto de `$n$` observaciones ordenadas en forma creciente, entonces 
+
+#### Cuartil
+Son los **tres valores** que dividen a un conjunto de datos ordenados en **cuatro partes** iguales.
 `\begin{align*}
-Sd(X) = \sqrt{Var(X)}
+  C_j=x_{\left[\frac{j(n+1)}{4}\right]} \quad \quad j=1,2,3
 \end{align*}`
+
+En <tt>R</tt> puede calcularsen los cuartiles de un conjunto de observaciones mediante la función `quantile(datos, c(0.25, 0.5, 0.75))`.
+
+#### Quintil
+Son los **cuatro valores** que dividen a un conjunto de datos ordenado en **cinco partes** iguales.
+`\begin{align*}
+  Q_j=x_{\left[\frac{j(n+1)}{5}\right]} \quad \quad j=1,2,3,4
+\end{align*}`
+
+En <tt>R</tt> pueden calcularse los quintiles de un conjunto de observaciones mediante la función `quantile(datos, c(0.2, 0.4, 0.6, 0.8))`.
+
+#### Decil
+Son los **nueve valores** que dividen a un conjunto de datos ordenado en **diez partes** iguales.
+`\begin{align*}
+  D_j=x_{\left[\frac{j(n+1)}{10}\right]} \quad \quad j=1,2,\dots,9
+\end{align*}`
+
+En <tt>R</tt> pueden calcularse los deciles de un conjunto de observaciones mediante la función `quantile(datos, seq(0.1, 0.9, 0.1))`.
+
+#### Percentil
+Son los **noventa y nueve valores** que dividen a un conjunto de datos ordenado en **cien partes** iguales.
+`\begin{align*}
+  P_j=x_{\left[\frac{j(n+1)}{100}\right]} \quad \quad j=1,2,\dots,99
+\end{align*}`
+
+En <tt>R</tt> pueden calcularse los percentiles de un conjunto de observaciones mediante la función `quantile(datos, seq(0.01, 0.99, 0.01))`.
