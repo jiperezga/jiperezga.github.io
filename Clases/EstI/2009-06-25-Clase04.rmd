@@ -99,3 +99,35 @@ Sea `$A$` y `$B$` eventos del espacio muestral `$S$`, entonces se deben cumplir 
 4. `$\mathbb P(A\cup B) = \mathbb P(A) + \mathbb P(B) - \mathbb P(A\cap B)$`
 5. Si `$A\subseteq B$` entonces `$\mathbb P(A) \leq \mathbb P(B)$`
 
+## Técnicas de conteo
+Las técnicas de conteo son una serie de métodos de matemáticos usados para contar el número posible de arreglos dentro de uno o varios conjuntos de eventos. 
+La razón del empleo de las técnicas de conteo se debe a que en muchos casos es necesario resolver un problema de probabilidad mediante el conteo del número de puntos en un espacio muestral, sin listar realmente cada uno de los elementos perteneciente a un evento determinado.
+
+### Teorema: Regla multiplicativa
+Si una operación consiste en `$k$` tareas, donde la `$i$`-ésima tarea puede realizarse de `$n_i$` formas distintas, con `$i=1,2,\ldots,k$`, entonces la operación completa se puede realizar de `$(n_1)(n_2)(n_3)\ldots(n_k)$` formas distintas.
+
+### Teorema: Permutación
+Para cualquier número entero no negativo `$n$`, se tiene que el número de permutaciones o arreglos ordenados de `$n$` objetos diferentes es
+`\begin{align*}
+n! &= n(n-1)! \\
+n! &= n(n-1)(n-2)! \\
+n! &= n(n-1)(n-2)\ldots(3)(2)(1) \\
+\end{align*}`
+donde el caso especial de `$0!=1$`
+
+Además, el número de formas de ordenar `$n$` objetos diferentes tomados de `$r$` objetos a la vez estará dado por
+`\begin{align*}
+_nP_r= n(n-1)(n-2)\ldots(n-r+1)=\frac{n!}{(n-r)!}\\
+\end{align*}`
+
+### Teorema: Permutación en circulo
+El número de permutaciones de `$n$` objetos ordenados en forma circular es de `$(n-1)!$`
+
+### Teorema: Permutación por clases
+El número de 
+permutaciones distintas en `$n$` objetos, en los que `$n_1$` objetos son de una clase, `$n_2$` objetos de una segunda clase, `$\ldots$`, y `$n_k$` objetos de una `$k$`-ésima clase es
+`\begin{align*}
+\frac{n!}{n_1! n_2! \ldots n_k!}
+\end{align*}`
+
+
