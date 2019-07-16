@@ -66,7 +66,7 @@ Otro ejemplo, se presenta para el material particulado `$PM_{10}$` y `$PM_{2.5}$
 
 <pre style="height:610px">
 ```{r echo=FALSE}
-aire <- read_xlsx("../../Dataset/calidadaireabril2019.xlsx")
+aire <- read_xlsx("../../Dataset/calidadaireabril2019.xlsx") 
 pm25 <- unclass(aire$pm25)
 pm10 <- unclass(aire$pm10)
 fechas2 <- aire$Fecha_Hora
@@ -228,9 +228,19 @@ tagList(subplot(p1, p2, p3, p4, nrows = 4, margin = 0.03) %>%
 El segundo conjunto de datos, corresponde a las **variaciones porcentual de los ingresos reales totales de hoteles en Colombia entre Junio 2005 y Marzo 2019** [Descargar](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/ingresorealhoteles2019.xlsx){:target="_blank"}.
 
 ```{r}
-# install.packages("readxl") ## Instala librería para abrir archivos de Excel
-library(readxl) ## Cargar librería
-datos <- read_xlsx("../../Dataset/ingresorealhoteles2019.xlsx") # Cargar el archivo
+### Instalar y cargar librerías
+# install.packages(c("readxl", "XLConnect"), dependencies = T) # Instala librerías
+library(readxl) # Carga librería
+library(XLConnect) # Para descargar archivos online de forma temporal
+
+### Crea archivo temporal para cargar archivo online
+temp <- tempfile(fileext = ".xlsx") 
+dataURL <- "https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/ingresorealhoteles2019.xlsx"
+download.file(dataURL, destfile=temp, mode='wb')
+
+datos <- read_xlsx(temp) # Cargar el archivo
+# datos <- read_xlsx(file.choose()) # para buscar archivo guardado en el PC
+
 ingH <- ts(datos$`Variacion  ingresos`, start = c(2005,7), frequency = 12) # Transforma observaciones a tipo time-series
 
 descIH <- stl(ingH, s.window = 12)
