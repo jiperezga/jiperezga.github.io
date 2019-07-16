@@ -181,7 +181,7 @@ En <tt>R</tt> puede calcularse la correlación de dos conjunto de observaciones 
 
 <tt>R</tt> es un lenguaje de programación orientado a objetos junto con un sistema de ventanas, que permite una interacción directa e intuitiva con el tipo de programación realizada. Este tipo de programación, posee una notable cercanía con la forma en que se expresarían las cosas en la vida real, ya que trabaja sobre objetos visibles que poseen determinadas caraterística, lo cual hace que puedan ser empleados para la realización de acciones específicas. 
 
-Para entender cómo se crean o manipulan objetos en <tt>R</tt>, es necesario introducir inicialmente el lenguaje de programación, y para ello lo primero que debe hacerse, es entender la estructura de asignación, los tipos de datos, las clases de los objetos y los tipos de operadores 
+Para entender cómo se crean o manipulan objetos en <tt>R</tt>, es necesario introducir inicialmente el lenguaje de programación, y para ello lo primero que debe hacerse, es entender la estructura de asignación, los tipos de datos, las clases de los objetos y los tipos de operadores.
 
 ### Estructura de asignación
 La estructura de asignación del lenguaje <tt>R</tt> puede llevarse a cabo mediante cuatro formas diferentes, donde, cada una de ellas lleva al mismo resultado
@@ -195,7 +195,7 @@ assign(<variable>, <objeto>) # Cuarto método
 
 De estos cuatro métodos de asignación presentados, el primero y el segundo poseen la misma estructura, la diferencia entre ellos radica en que, el primero realiza la asignación a la izquierda y el segundo a la derecha, lo cual depende de la dirección hacia donde apunte la flecha.
 
-El tercer método, a pesar de realizar la asignación al igual que los dos primeros métodos, éste **no** es el operador habitual de asignación, pues éste se encuentra reservado para otros propósitos, tales como darle valores a una variable dentro de una función. El cuarto método, es una forma de asignación equivalente a las dos primeras, pero requiere de "más esfuerzo" para llevarse acabo la asignación.
+El tercer método, a pesar de realizar la asignación al igual que el primer método, éste **no** es el operador habitual de asignación, pues éste se encuentra reservado para otros propósitos, tales como darle valores a una variable dentro de una función. El cuarto método, es una forma de asignación equivalente a las dos primeras, pero requiere de "más esfuerzo" para llevarse acabo la asignación.
 
 Por lo tanto, se recomienda emplear el primer método de asignación. Es de anotar que el simbolo `<-` puede escribirse de dos formas, presionando la tecla `<` seguida de la tecla `-`, o alternativamente, presionando de forma simultanea las teclas `Alt` y la tecla `-`.
 
@@ -212,7 +212,7 @@ El lenguaje <tt>R</tt> admite tres tipos básico de datos, a saber
 ```{r}
 a <- c(1, 22, 98)                    # Entero
 b <- c(12.41, 64.123, 2.01)          # Real
-c <- c(-3i, -12i, 74.23i)            # Complejo
+c <- c(-3i, -1+12i, 3+74.23i)            # Complejo
 d <- c("a", "3", "#")                # Carácter
 e <- c("Quiero", "un", "tinto", "!") # Sarta
 f <- c(F,FALSE,TRUE, T)              # Lógico

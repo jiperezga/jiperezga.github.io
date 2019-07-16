@@ -62,13 +62,13 @@ Usualmente, la estadística descriptiva se encarga de resumir la información su
 En términos generales, los datos son cualquier pieza de información recolectada del fenómeno que se pretende analizar, y que, dependiendo de las características que posean, deben clasificarse dentro de una determinada categoría.
 
 * **Cuantitativos**: Son datos que pueden ser medidos o cuantificados. Estos se subdividen en dos categorías:
-  * **Datos cuantitativos discretos**: Son aquellos datos que provienen de procesos que involucran conteos, y por tanto, solo pueden tomar valores enteros. Por ejemplo: *Edad de una persona, número de semestres que tardar un estudiante para graduarse, cantidad de profesores que dictan Estadística I*
+  * **Datos cuantitativos discretos**: Son aquellos datos que provienen de procesos que involucran conteos, y por tanto, solo pueden tomar valores enteros. Por ejemplo: *Edad de una persona, número de semestres que tardar un estudiante para graduarse, cantidad de profesores que dictan Probabilidad e Inferencia*
   - **Datos cuantitativos continuos**: Son aquellos datos que provienen de procesos que involucran mediciones, y por tanto, solo pueden tomar cualquier valor real dentro de un intervalo. Por ejemplo: *Temperatura actual, tiempo que dura una clase, ganancias o pérdidas diarias de un negocio.*
 * **Cualitativos**: Son datos asociados a una cualidad o propiedad, y por tanto, no pueden representarse numéricamente, a pesar de poder caracterizarse alfanúmericamente. Por ejemplo: *Estrato socioeconómico, tipo de animales en una granja, nivel de satisfacción con el método planteado para dictar el curso.*
 * **Lógicos**: Son datos asociados a valores de lógica binaria, usualmente denotados como Verdadero y Falso, o Éxito y Fracaso. Por ejemplo: *Tipo de Sexo, cara de una moneda, probar si un artículo es defectuoso.*
 
 ## Escala de medición
-Las medición de un conjunto de observaciones puede realizarse por medio de cuatro escalas de medición.
+Además de clasificar el conjunto de observaciones en tres tipos (Cuantitativo, Cualitativo y Logico), éstos pueden ser clasificados en cuatro escalas de medición las cuales están dadas por 
 
 * **Nominal**: Son aquellos factores que establecen etiquetas o categorías a los datos, sin estar sujetos a un orden específico.
 * **Ordinal**: Son aquellos factores que establecen etiquetas o categorías a los datos, junto a una estructura jerárquica.

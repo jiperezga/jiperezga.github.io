@@ -42,33 +42,46 @@ opts_chunk$set(echo=TRUE,
 ```
 
 ## Resumen numéricos
-Una parte importante de la estadística descriptiva, son las medidas estadísticas ya explicadas en la [Clase 01](../../EstadisticaI/EstIClase01.html){:target="_blank"} y [Clase 02](../../EstadisticaI/EstIClase02.html){:target="_blank"}, y aún más importante, es buscar la más adecuada para presentar dichas medidas.
+Una parte importante de la estadística descriptiva, son las medidas estadísticas ya explicadas en la [Clase 03](../../ProbabilidadeInferencia/PeIEClase03.html){:target="_blank"} y [Clase 04](../../ProbabilidadeInferencia/PeIEClase04.html){:target="_blank"}, y aún más importante, es buscar la más adecuada para presentar dichas medidas.
 
 Una alternativa es mediante resúmenes numéricos, los cual permiten observar el comportamiento de un conjunto de observaciones mediante diferentes medidas numéricas, que se presentan de forma simple y ordenada.
 
 Existen diferentes funciones que permiten realizar resúmenes numéricos en <tt>R</tt>, entre ellas se destaca la función `numSummary()` de la librería `RcmdrMisc` y la función `describe()` de la librería `psych`, que permiten realizar resúmenes de variables tipo numéricas. 
 
-Para ilustrar el manejo de estas funciones, se empleara la base de datos `CO2`, integrada en la librería `datasets`, la cual contiene la información sobre un experimento que mire la tolerancia al frío de la especie de hierba Echinochloa crus-galli.
+Para ilustrar el manejo de estas funciones, se empleara la base de datos de [Agricultura de India](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/AgriculturaIndia.xlsx){:target="_blank"}, la cual contiene la información sobre la producción de cultivos agrícolas en la India. La base de datos contiene el tipo de cultivo, el estado en el cual se realiza el cultivo, los costos y la producción obtenida.
 
 ```{r}
-data() # Muestra todas las bases da datos integradas en los diferentes paquetes de R
-data(CO2) # Carga la base de datos CO2
-head(CO2) # Muestra el encabezado de la base de datos
-str(CO2) # Muestra la estructura de la base de datos
+### Instalar y cargar librerías
+# install.packages(c("readxl", "XLConnect"), dependencies = T) # Instala librerías
+library(readxl) # Carga librería
+library(XLConnect) # Para descargar archivos online de forma temporal
+
+### Crea archivo temporal para cargar archivo online
+temp <- tempfile(fileext = ".xlsx") 
+dataURL <- "https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/AgriculturaIndia.xlsx"
+download.file(dataURL, destfile=temp, mode='wb')
+
+### Carga archivo
+datos <- read_xlsx(temp) # Carga la base de datos
+# datos <- read_xlsx(file.choose()) # para buscar archivo guardado en el PC
+
+### Hacer resúmenes
+head(datos) # Muestra el encabezado de la base de datos
+str(datos) # Muestra la estructura de la base de datos
 
 # install.packages("RcmdrMisc") # Instala librería RcmdrMisc
 library(RcmdrMisc) # Carga librería RcmdrMisc
 
 # Forma básica numSummary 
-numSummary(CO2$uptake) 
+numSummary(datos$`Yield (Quintal/ Hectare)`) 
 # Forma avanzada numSummary
-numSummary(CO2$uptake, statistics = c("mean", "sd", "se", "IQR", "quantiles", "cv", "skewness", "kurtosis"), type = "3", quantiles = c(0, .25, .5, .75, 1)) 
+numSummary(datos$`Cost of Production (/ Quintal) C2`, statistics = c("mean", "sd", "se", "IQR", "quantiles", "cv", "skewness", "kurtosis"), type = "3", quantiles = c(0, .25, .5, .75, 1)) 
 
 library(psych) # Carga librería pysch
 # Forma básica pysch
-describe(CO2$uptake)
+describe(datos$`Yield (Quintal/ Hectare)`)
 # Forma avanzada pysch
-describe(CO2$uptake, na.rm = TRUE, interp = FALSE, skew = TRUE, ranges = TRUE, trim = 0.2,
+describe(datos$`Cost of Production (/ Quintal) C2`, na.rm = TRUE, interp = FALSE, skew = TRUE, ranges = TRUE, trim = 0.2,
          type = 3, quant = c(0.25, 0.75), IQR = TRUE)
 ```
 
