@@ -48,7 +48,7 @@ Este método de suavización es una extensión del método de suavización expon
 
 Este método también es conocido como suavizamiento exponencial triple, y se basa en la aplicación del procedimiento de suavizamiento exponencial, a tres de las componentes de la serie de tiempo, a saber, nivel, tendencia y estacionalidad. 
 
-La suavización exponencial de Holt-Winters, puede ser empleado cuando la variación estacional es constante o no constante. En el primer caso, cuando la variación estacional de la serie es constante, se emplea el método de suavización exponencial Holt-Winters aditivo, mientras que, en el segundo caso, cuando la variación estacional de la serie no es constante, se emplea el método de suavización exponencial Holt-Winters multiplicativo.
+La suavización exponencial de Holt-Winters, puede ser empleada cuando la variación estacional es constante o no constante. En el primer caso, cuando la variación estacional de la serie es constante, se emplea el método de suavización exponencial Holt-Winters aditivo, mientras que, en el segundo caso, cuando la variación estacional de la serie no es constante, se emplea el método de suavización exponencial Holt-Winters multiplicativo.
 
 ## Suavizamiento exponencial de Holt-Winters aditivo
 Para la aplicación de este método para el caso aditivo es necesario estimar las siguientes cuatro ecuaciones
@@ -74,7 +74,7 @@ S_t=\gamma (Y_t-a_t) + (1 - \gamma) S_{t-s}
 * El modelo a estimar
 
 `\begin{align*}
-\hat{Y}_{t+p}=(a_t + b_t p)S_{t-s+p}
+\hat{Y}_{t+p}=a_t + b_t p + S_{t-s+p}
 \end{align*}`
 
 donde `$a_t$` es la estimación del intercepto o del nuevo nivel del conjunto de observaciones en el periodo `$t$`, `$\alpha$` es la constante de suavización para el intercepto, tal que `$0<\alpha<1$`, `$b_t$` es la estimación de la tendencia en el periodo `$t$`, `$\beta$` es la constante de suavización para la tendencia, tal que `$0<\beta<1$`, `$S_t$` es el estimado de la estacionalidad, `$\gamma$` es la constante de suavización para el estimado de estacionalidad, tal que `$0<\gamma<1$`, y `$p=1,2,\ldots$` es el número de periodos que se desean estimar o pronosticar.
@@ -98,7 +98,7 @@ Una vez definido el método para la selección del valor inicial, puede realizar
 mientras que, el ajuste de pronósticos se hace de la forma
 
 `\begin{align*}
-\hat{Y}_{T+h}=(a_T + b_T h) S_{Y-s+H}
+\hat{Y}_{T+h}=a_T + b_T h + S_{Y-s+h}
 \end{align*}`
 
 siendo `$h$` el número de periodos a pronosticar.
@@ -151,7 +151,7 @@ Una vez definido el método para la selección del valor inicial, puede realizar
 mientras que, el ajuste de pronósticos se hace de la forma
 
 `\begin{align*}
-\hat{Y}_{T+h}=(a_T + b_T h) S_{Y-s+H}
+\hat{Y}_{T+h}=(a_T + b_T h) S_{Y-s+h}
 \end{align*}`
 
 siendo `$h$` el número de periodos a pronosticar.
