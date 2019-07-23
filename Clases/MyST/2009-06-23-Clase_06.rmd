@@ -138,7 +138,9 @@ Además, para la selección de los valores iniciales de `$a_s$`, `$b_s$` y `$S_i
 
 * `$a_s = Y_1$`, `$b_s = 0$` y `$S_i = 1$`.
 * `$a_s = \frac{1}{s}\sum_{i=1}^{s}Y_i$`, `$b_s = \bar{y}_{2,s} - \bar{y}_{1,s}$` y `$S_i = \frac{Y_i}{a_s} $`.
-* Regresión lineal con variables indicadoras por estacionalidad, para luego usar la constante de esta ecuación como el estimado del nivel, la pendiente de la regresión como el estimado de la tendencia y los coeficientes de las variables indicadoras como los estimados de la estacionalidad.
+* Regresión lineal con variables indicadoras por estacionalidad, para luego usar la constante de esta ecuación como el estimado del nivel, la pendiente de la regresión como el estimado de la tendencia y los coeficientes de las variables indicadoras como los estimados de la estacionalidad. 
+
+<!-- Usar función season(datos), de la librería TSA para extraer la seasonalidad para la regresión -->
 
 con `$i = 1,\ldots, s$`, siendo `$s$` el índice de estacionalidad.
 

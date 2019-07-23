@@ -119,7 +119,7 @@ mientras que, para la estimación de la pendiente (`$b_t$`) se emplea la siguien
 b_{t}= \frac{\alpha}{1-\alpha}(SES_t - SEB_t)
 \end{align*}`
 
-donde, similar al caso de suavización exponencial simple, la constante de suavización `$\alpha$` pueden seleccionarse subjetivamente o generarse minimizando una medida de error de pronóstico como las presentadas en la [Clase 03](../../MuestreoySeriesdeTiempo/MySTClase_05.html){:target="_blank"}.
+donde, similar al caso de suavización exponencial simple, la constante de suavización `$\alpha$` pueden seleccionarse subjetivamente o generarse minimizando una medida de error de pronóstico como las presentadas en la [Clase 03](../../MuestreoySeriesdeTiempo/MySTClase_03.html){:target="_blank"}.
 
 Para la selección de la primera observación asociada a `$SES_1$` y `$SEB_1$`, usualmente se selecciona la primera obseración real, es decir
 `\begin{align*}
