@@ -1,16 +1,15 @@
 ---
 layout: post
-title: "Clase 09"
+title: "Clase 10"
 main-class: 'clase'
 permalink: /EstadisticaI/EstI:title.html
 tags:
 
 introduction: |
-  Esperanza matemática <br/>
-  Propiedades de la esperanza matemática <br/>
-  Esperanza condicional <br/>
-  Varianza <br/>
-  Covarianza
+  Varianza. <br/>
+  Covarianza. <br/>
+  Independencia. <br/>
+  Propiedades de la varianza y la covarianza.
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
@@ -37,51 +36,11 @@ opts_chunk$set(echo=TRUE,
                comment=NA,
                message=FALSE,
                warning=FALSE,
-               fig.path = paste0("../../EstadisticaI/images/", "Clase09"),
+               fig.path = paste0("../../EstadisticaI/images/", "Clase10"),
                cache.path = "../../EstadisticaI/cache/",
                cache = FALSE)
 
 ```
-
-## Esperanza matemática
-
-### Caso univariado
-Sea `$X$` una variable aleatoria con *fmp* dada por `$p(x)$` o *fdp* dada por `$f(x)$`, entonces la media o valor esperado de `$X$`, denotado por `$\mathbb{E}(x)$` o `$\mu$` está dado por
-`\begin{align*}
-\mathbb{E}(x) = \mu =\begin{cases} \sum_{x}xp(x) & \text{ si } X \text{ es discreta}  \\
-\int_{-\infty}^\infty xf(x) dx & \text{ si } X \text{ es continua} \end{cases}
-\end{align*}`
-
-### Propiedades de la esperanza matemática
-Sea `$a$` y `$b$` números reales (constantes) y `$X$` una variable aleatoria con *fmp* dada por `$p(x)$` o *fdp* dada por `$f(x)$`, entonces
-1. `$\mathbb{E}(a) = a$`
-2. `$\mathbb{E}(bX) = b\mathbb{E}(X)$`
-3. `$\mathbb{E}(a+bX) = a+ b\mathbb{E}(X)$`
-4. Si `$m(x)$` es una función de `$X$`, entonces
-`\begin{align*}
-\mathbb{E}(m(X))=\begin{cases} \sum_{x}m(x)p(x) & \text{ si } X \text{ es discreta}  \\
-\int_{-\infty}^\infty m(x)f(x) dx & \text{ si } X \text{ es continua} \end{cases}
-\end{align*}`
-
-### Caso multivariado
-Sea `$X, Y$` variables aleatorias con *fmpc* dada por `$p(x,y)$` o *fdpc* dada por `$f(x,y)$`, entonces el valor esperado de una función `$m(x,y)$` es de la forma
-`\begin{align*}
-\mathbb{E}(m(X,y))=\begin{cases} \sum_{y}\sum_{x}m(x,y)p(x,y) & \text{ si } X,Y \text{ son discretas}  \\
-\int_{-\infty}^\infty \int_{-\infty}^\infty m(x,y)f(x,y) dxdy & \text{ si } X,Y \text{ son continuas} \end{cases}
-\end{align*}`
-
-## Esperanza matemática condicional
-Sean `$X,Y$` variables aleatorias con *fmpc* dada por `$p(x,y)$` o *fdpc* dada por `$f(x,y)$`, entonces la esperanza condicional de `$Y$` dado `$X$` se define como
-`\begin{align*}
-\mathbb{E}(Y|X)=\begin{cases} \sum_{y}yp(y|x) & \text{ si } X,Y \text{ son discretas}  \\
-\int_{-\infty}^\infty yf(y|x) dy & \text{ si } X,Y \text{ son continuas} \end{cases}
-\end{align*}`
-
-Analogamente, la esperanza condicional de `$X$` dado `$Y$` se define como
-`\begin{align*}
-\mathbb{E}(X|Y)=\begin{cases} \sum_{x}xp(x|y) & \text{ si } X,Y \text{ son discretas}  \\
-\int_{-\infty}^\infty xf(x|y) dx & \text{ si } X,Y \text{ son continuas} \end{cases}
-\end{align*}`
 
 ## Varianza
 
