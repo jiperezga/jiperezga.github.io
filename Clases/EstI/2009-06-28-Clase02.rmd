@@ -77,9 +77,9 @@ Rango <- function(x) max(x) - min(x)
 Una vez creada la función, puede calcularse el rango de un conjunto de observaciones mediante la función `Rango(datos)`. 
 
 #### Rango intercuartílico
-Es la distancia o amplitud que hay entre el tercer cuartil `$Q_3$` y el primer cuartil `$Q_1$`, de un conjunto de datos. Éste muestra la amplitud del 50% de los datos centrales de un conjunto de observaciones. Esta medida puede ser tomada como una medida de variabilidad para la mediana.
+Es la distancia o amplitud que hay entre el tercer cuartil `$C_3$` y el primer cuartil `$C_1$`, de un conjunto de datos. Éste muestra la amplitud del 50% de los datos centrales de un conjunto de observaciones. Esta medida puede ser tomada como una medida de variabilidad para la mediana.
 `\begin{align*}
-  IQR = Q_3 - Q_1
+  IQR = C_3 - C_1
 \end{align*}`
 
 En <tt>R</tt> puede calcularse el rango intercuartílico de un conjunto de observaciones mediante la función `IQR(datos)`.
@@ -93,7 +93,7 @@ Es la desviación estándar como un porcentaje de la media aritmética de un con
 Entre las funciones base del programa <tt>R</tt> no hay ninguna función que calcule el coeficiente de variación de un conjunto de observaciones, pero éste es fácil de calcular mediante el cociente entre la desviación estándar `$S$` y el valor absoluto de la media `$\bar{X}$`, o creando una función que realice el cálculo, de la forma
 
 ```{r eval=FALSE}
-CV <- function(x) sd(datos) / abs(mean(datos))
+CV <- function(x) sd(x) / abs(mean(x))
 ```
 
 Una vez creada la función, puede calcularse el coeficiente de variación de un conjunto de observaciones mediante la función `CV(datos)`. 
@@ -105,7 +105,7 @@ Es una medida de la variabilidad de un conjunto de observaciones respecto a su m
   MAD=b*Me(|X_i-\tilde{X}|)
 \end{align*}`
 
-donde `$b$` es una constante definida como `$b=1/Q_{3}$`, con `$Q_{3}$` el valor del tercer cuartil de la distribución de interés y con `$Me(|X_i-\tilde{X}|)$` la mediana del valor absoluto de la diferencia `$X_i-\tilde{X}$`. Además, si la distribución es normal, entonces `$b\approx1.4826$`.
+donde `$b$` es una constante definida como `$b=1/C_{3}$`, con `$C_{3}$` el valor del tercer cuartil de la distribución de interés y con `$Me(|X_i-\tilde{X}|)$` la mediana del valor absoluto de la diferencia `$X_i-\tilde{X}$`. Además, si la distribución es normal, entonces `$b\approx1.4826$`.
 
 En <tt>R</tt> puede calcularse la desviación absoluta mediana de un conjunto de observaciones, asumiendo que la distribución es normal, mediante la función `mad(datos)`, si no es posible asumir que la distribución es normal, entonces puede calcularse mediante la función `mad(datos, constant = b)`.
 
