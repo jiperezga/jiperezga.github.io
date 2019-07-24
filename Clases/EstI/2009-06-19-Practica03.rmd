@@ -123,7 +123,29 @@ A partir de esta ecuación, calcule
 `\begin{align*}
 F(x)=\begin{cases}0 & x<0 \\ 0.12 & 0\leq x<2 \\ 0.28 & 2\leq x< 3 \\ 0.48 & 3\leq x< 5\\ 0.74 & 5\leq x< 6 \\ 1 & x\geq 8\end{cases}
 \end{align*}`
-9. Sea `$X$` la variable aleatoria que determina el número de clientes que llega a una centro comercial en un periodo de una hora. Si la distribución acumulada de $X$ está dada por:
+<ol type ="a">
+<li> Encuentre la función de masa de probabilidad de la variable aleatoria $X$. </li>
+<li> Calcule la probabilidad de que $X$ sea mayor a 4. </li>
+<li> Calcule la probabilidad de que la variable aleatoria se encuentre entre 2 y 5, inclusive. </li>
+</ol>
+9. Suponga que cierto tipo de pequeñas empresas de procesamiento de datos están tan especializadas que algunas tienen dificultades para obtener utilidades durante su primer año de operación. La función de densidad de probabilidad que caracteriza la proporción `$X$` de utilidades que obtiene una pequeña empresa durante su primer año está dada por
+`\begin{align*}
+f(x)=\begin{cases}kx^4(1-x)^3 & 0\leq x \leq 1,\\0 & \text{en otro caso}\end{cases} 
+\end{align*}`
+<ol type ="a">
+<li> ¿Cuál es el valor de $k$ que hace de la anterior una función de densidad válida? </li>
+<li> Calcule la probabilidad de que al menos $50\%$ de las empresas tenga utilidades durante el primer año. </li>
+<li> Calcule la probabilidad de que al menos $80\%$, pero no más de $90\%$ de las empresas tenga utilidades durante el primer año. </li>
+</ol>
+10. Suponga que a partir de una gran cantidad de datos históricos, se sabe que `$X$` representa el número de automóviles que llegan a una intersección específica durante un periodo de 20 segundos, la cual puede ser determinada mediante la siguiente función de probabilidad discreta
+`\begin{align*}
+f(x)=\frac{e^{-6} 6^x}{x!} \text{  para  } x=0,1,2,\dots
+\end{align*}`
+<ol type ="a">
+<li> Calcule la probabilidad de que en un periodo específico de 20 segundos más de 8 automóviles lleguen a la intersección. </li>
+<li> Calcule la probabilidad de que sólo lleguen 2 automóviles. </li>
+</ol>
+11. Sea `$X$` la variable aleatoria que determina el número de clientes que llega a una centro comercial en un periodo de una hora. Si la distribución acumulada de $X$ está dada por:
 `\begin{align*}
 			F(x) =\begin{cases}0 & x < 0\\0.03 & 0\leq x < 1 \\ 0.12 & 1\leq x < 2 \\ 0.21 & 2\leq x < 3\\ 0.33 & 3\leq x < 4\\ 0.52 & 4\leq x < 5\\ 0.74 & 5\leq x < 6 \\ 0.89 & 6\leq x < 7 \\ 0.96 & 7\leq x < 8 \\ 1.00 & 8\geq x\end{cases} 
 \end{align*}`
@@ -133,23 +155,6 @@ F(x)=\begin{cases}0 & x<0 \\ 0.12 & 0\leq x<2 \\ 0.28 & 2\leq x< 3 \\ 0.48 & 3\l
 <li> Calcule la probabilidad de que el número de clientes que llega al centro comercial se encuentre entre 3 y 7, inclusive. </li>
 <li> Calcule la probabilidad de que el número de clientes que llega al centro comercial sea mayor a 4 pero como máximo de 8. </li>
 <li> Calcule la probabilidad de que llegue un número diferente de 5 clientes al centro comercial. </li>
-</ol>
-10. Suponga que cierto tipo de pequeñas empresas de procesamiento de datos están tan especializadas que algunas tienen dificultades para obtener utilidades durante su primer año de operación. La función de densidad de probabilidad que caracteriza la proporción `$X$` de utilidades que obtiene una pequeña empresa durante su primer año está dada por
-`\begin{align*}
-f(x)=\begin{cases}kx^4(1-x)^3 & 0\leq x \leq 1,\\0 & \text{en otro caso}\end{cases} 
-\end{align*}`
-<ol type ="a">
-<li> ¿Cuál es el valor de $k$ que hace de la anterior una función de densidad válida? </li>
-<li> Calcule la probabilidad de que al menos $50\%$ de las empresas tenga utilidades durante el primer año. </li>
-<li> Calcule la probabilidad de que al menos $80\%$, pero no más de $90\%$ de las empresas tenga utilidades durante el primer año. </li>
-</ol>
-11. Suponga que a partir de una gran cantidad de datos históricos, se sabe que `$X$` representa el número de automóviles que llegan a una intersección específica durante un periodo de 20 segundos, la cual puede ser determinada mediante la siguiente función de probabilidad discreta
-`\begin{align*}
-f(x)=\frac{e^{-6} 6^x}{x!} \text{  para  } x=0,1,2,\dots
-\end{align*}`
-<ol type ="a">
-<li> Calcule la probabilidad de que en un periodo específico de 20 segundos más de 8 automóviles lleguen a la intersección. </li>
-<li> Calcule la probabilidad de que sólo lleguen 2 automóviles. </li>
 </ol>
 12. Se sabe por ley que la vida máxima de la patente para un nuevo medicamento es de 17 años. Si restamos el tiempo requerido por la FDA para someter a pruebas y aprobar el medicamento, se obtiene la vida real de la patente para el medicamento, es decir, el tiempo que la compañía tiene para recuperar los costos de investigación y desarrollo, para obtener una utilidad. La distribución de los tiempos de vida reales de las patentes para nuevos medicamentos se da a continuación:
 ```{r echo=FALSE}
