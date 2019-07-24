@@ -46,7 +46,7 @@ Una parte importante de la estadística descriptiva, son las medidas estadístic
 
 Una alternativa es mediante resúmenes numéricos, los cual permiten observar el comportamiento de un conjunto de observaciones mediante diferentes medidas numéricas, que se presentan de forma simple y ordenada.
 
-Existen diferentes funciones que permiten realizar resúmenes numéricos en <tt>R</tt>, entre ellas se destaca la función `numSummary()` de la librería `RcmdrMisc` y la función `describe()` de la librería `psych`, que permiten realizar resúmenes de variables tipo numéricas. 
+Entre las diferentes funciones que permiten realizar resúmenes numéricos en <tt>R</tt>, se destaca la función `numSummary(datos)` de la librería `RcmdrMisc` y la función `describe(datos)` de la librería `psych`, que presentan el resúmen de variables tipo numéricas. 
 
 Para ilustrar el manejo de estas funciones, se empleara la base de datos de [Agricultura de India](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/AgriculturaIndia.xlsx){:target="_blank"}, la cual contiene la información sobre la producción de cultivos agrícolas en la India. La base de datos contiene el tipo de cultivo, el estado en el cual se realiza el cultivo, los costos y la producción obtenida.
 
@@ -63,11 +63,13 @@ download.file(dataURL, destfile=temp, mode='wb')
 
 ### Carga archivo
 datos <- read_xlsx(temp) # Carga la base de datos
-# datos <- read_xlsx(file.choose()) # para buscar archivo guardado en el PC
+# datos <- read_xlsx(file.choose()) # para buscar archivo xlsx guardado en el PC
 
-### Hacer resúmenes
-head(datos) # Muestra el encabezado de la base de datos
 str(datos) # Muestra la estructura de la base de datos
+
+### Transformar variables
+datos$Crop <- factor(datos$Crop)
+datos$State <- factor(datos$State)
 
 # install.packages("RcmdrMisc") # Instala librería RcmdrMisc
 library(RcmdrMisc) # Carga librería RcmdrMisc
@@ -75,46 +77,42 @@ library(RcmdrMisc) # Carga librería RcmdrMisc
 # Forma básica numSummary 
 numSummary(datos$`Yield (Quintal/ Hectare)`) 
 # Forma avanzada numSummary
-numSummary(datos$`Cost of Production (/ Quintal) C2`, statistics = c("mean", "sd", "se", "IQR", "quantiles", "cv", "skewness", "kurtosis"), type = "3", quantiles = c(0, .25, .5, .75, 1)) 
+numSummary(datos$`Yield (Quintal/ Hectare)`, statistics = c("mean", "sd", "se", "IQR", "quantiles", "cv", "skewness", "kurtosis"), type = "3", quantiles = c(0, .25, .5, .75, 1)) 
 
 library(psych) # Carga librería pysch
 # Forma básica pysch
 describe(datos$`Yield (Quintal/ Hectare)`)
 # Forma avanzada pysch
-describe(datos$`Cost of Production (/ Quintal) C2`, na.rm = TRUE, interp = FALSE, skew = TRUE, ranges = TRUE, trim = 0.2,
-         type = 3, quant = c(0.25, 0.75), IQR = TRUE)
+describe(datos$`Yield (Quintal/ Hectare)`, ranges = TRUE, trim = 0.2, type = 3, quant = c(0.25, 0.75), IQR = TRUE)
 ```
 
 También es posible realizar resúmenes numérico por grupos, en donde, para la función `numSummary` es cuestión de agregar el argumento `groups`, mientras que la función `describe`, debe ser reemplazada por la función `describeBy` y agregar en ésta el argumento `group`. Es de anotar, que para realizar el resumen por grupos, la variable que se usará para realizar el agrupamiento debe ser de tipo **factor**
 
 ```{r}
-str(CO2$Treatment)
 # Forma avanzada numSummary por grupos
-numSummary(data = CO2$uptake, groups = CO2$Treatment, statistics = c("mean", "sd", "se", "IQR", "quantiles", "cv", "skewness", "kurtosis"), type = "3", quantiles = c(0, .25, .5, .75, 1)) 
+numSummary(data = datos$`Yield (Quintal/ Hectare)`, groups = datos$Crop, statistics = c("mean", "sd", "se", "IQR", "quantiles", "cv", "skewness", "kurtosis"), type = "3", quantiles = c(0, .25, .5, .75, 1)) 
 
 # Forma avanzada pysch por grupos
-describeBy(x = CO2$uptake, group = CO2$Treatment, na.rm = TRUE, interp = FALSE, skew = TRUE, ranges = TRUE, trim = 0.2, type = 3, quant = c(0.25, 0.75), IQR = TRUE)
+describeBy(x = datos$`Yield (Quintal/ Hectare)`, group = datos$Crop, ranges = TRUE, trim = 0.2, type = 3, quant = c(0.25, 0.75), IQR = TRUE)
 ```
 
 ## Resumen tabular
-Una alternativa para presentar resúmenes de variables, cuando éstas no son numéricas es mediante la construcción de tablas de frecuencias, las cuales permiten presentar de forma individual algunas de las características que poseen las variables, o permiten presentar de forma conjunta algunas de las características que comparten dichas variables.
+Una forma convencional de presentar resúmenes de variables cualitativas, es mediante la construcción de tablas de frecuencias, las cuales permiten presentar de forma individual algunas de las características que poseen las variables cualitativas, o permiten presentar de forma conjunta algunas de las características que comparten dichas variables.
 
-Para presentar de forma individual o grupal las características de las variables, puede emplearse la función `table()` de la librería `base`, la cual agrega la información presentada en de las variables de una forma simple, que permite observar el número (frecuencia absoluta) de observaciones que comparten cierto atributo. Se aconseja que los datos usados dentro de la función `table()` sean de tipo *factor*.
+Para presentar de forma individual o grupal las características de las variables, puede emplearse la función `table(datos)` de la librería `base`, la cual agrega la información presentada en de las variables de una forma simple, que permite observar el número (frecuencia absoluta) de observaciones que comparten cierto atributo. Se aconseja que los datos usados dentro de la función `table(datos)` sean de tipo *factor*.
 
-Para ilustrar el manejo de esta funciones, se empleara la base de datos `KosteckiDillon`, integrada en la librería `carData`, la cual contiene un subconjunto de datos sobre tratamientos de migraña.
+Para ilustrar el manejo de esta funciones, se continua trabajando con la base de datos de [Agricultura de India](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/AgriculturaIndia.xlsx){:target="_blank".
 
 ```{r}
-data(KosteckiDillon) # Carga la base de datos KosteckiDillon
-head(KosteckiDillon) # Muestra el encabezado de la base de datos
-str(KosteckiDillon) # Muestra la estructura de la base de datos
-
 #  Creación de tabla de frecuencias absolutas en una vía
 ## Si el conjunto de observaciones tiene valores faltantes agregar el comando useNA = "ifany"
-tabla1via <- table(KosteckiDillon$medication) 
+tabla1via <- table(datos$State) 
 tabla1via
 
+# Crear nueva variable
+datos$catproduccion <- ifelse(datos$`Yield (Quintal/ Hectare)`<30, "Baja", "Alta")
 #  Creación de tabla de frecuencias absolutas en dos vía
-tabla2vias <- table(KosteckiDillon$medication, KosteckiDillon$sex)
+tabla2vias <- table(datos$catproduccion, datos$State)
 tabla2vias
 
 # Agrega las sumas totales a la tabla de frecuencias absolutas por fila y/o columna
