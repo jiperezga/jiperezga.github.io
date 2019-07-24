@@ -49,7 +49,7 @@ opts_chunk$set(echo=TRUE,
 ## Lista de ejercicios
 1. Suponga una función de distribución de la forma
 `\begin{align*}
-p(x)=\begin{cases}k(x^2+4) & x=0,1,2,3 \\ 0 & en otro caso\end{cases}
+p(x)=\begin{cases}k(x^2+4) & x=0,1,2,3 \\ 0 & \text{en otro caso}\end{cases}
 \end{align*}`
 <ol type ="a">
 <li> Encuentre el valor $k$ que hace que la función presentada, sea una función de masa de probabilidad </li>
@@ -99,7 +99,7 @@ kable_styling("striped", full_width = F)
 </ol>
 6. Las mediciones en los sistemas científicos siempre están sujetas a variación, algunas veces más que otras. Hay muchas estructuras para los errores de medición y los estadísticos pasan mucho tiempo modelándolos. Suponga que el error de medición `$X$` de cierta cantidad física es determinado por la siguiente función de densidad:
 `\begin{align*}
-f(x) =\begin{cases}k(3-x^2), & -1\leq x \leq 1\\ 0, & e.o.c \end{cases} 
+f(x) =\begin{cases}k(3-x^2), & -1\leq x \leq 1\\ 0, & \text{en otro caso} \end{cases} 
 \end{align*}`
 <ol type ="a">
 <li> Determine $k$, que hace que $f(x)$, sea una función de densidad válida. </li>
@@ -109,7 +109,7 @@ f(x) =\begin{cases}k(3-x^2), & -1\leq x \leq 1\\ 0, & e.o.c \end{cases}
 </ol>
 7. Suponga una función de densidad de probabilidad conjunta de las variables aleatorias `$X$`, `$Y$` y `$Z$`, la cual se define como
 `\begin{align*}
-f(x,y,z)=\begin{cases}kxyz^2; 0< x,y <1; 0< z<3 \\0 & e.o.c\end{cases}
+f(x,y,z)=\begin{cases}kxyz^2; 0< x,y <1; 0< z<3 \\0 & \text{en otro caso}\end{cases}
 \end{align*}`
 A partir de esta ecuación, calcule
 <ol type ="a">
@@ -136,7 +136,7 @@ F(x)=\begin{cases}0 & x<0 \\ 0.12 & 0\leq x<2 \\ 0.28 & 2\leq x< 3 \\ 0.48 & 3\l
 </ol>
 10. Suponga que cierto tipo de pequeñas empresas de procesamiento de datos están tan especializadas que algunas tienen dificultades para obtener utilidades durante su primer año de operación. La función de densidad de probabilidad que caracteriza la proporción `$X$` de utilidades que obtiene una pequeña empresa durante su primer año está dada por
 `\begin{align*}
-f(x)=\begin{cases}kx^4(1-x)^3 & 0\leq x \leq 1,\\0 & e.o.c\end{cases} 
+f(x)=\begin{cases}kx^4(1-x)^3 & 0\leq x \leq 1,\\0 & \text{en otro caso}\end{cases} 
 \end{align*}`
 <ol type ="a">
 <li> ¿Cuál es el valor de $k$ que hace de la anterior una función de densidad válida? </li>
