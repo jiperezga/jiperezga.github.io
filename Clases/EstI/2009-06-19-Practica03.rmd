@@ -47,4 +47,124 @@ opts_chunk$set(echo=TRUE,
 ```
 
 ## Lista de ejercicios
-1. 
+1. Suponga una función de distribución de la forma
+`\begin{align*}
+p(x)=\begin{cases}k(x^2+4) & x=0,1,2,3 \\ 0 & en otro caso\end{cases}
+\end{align*}`
+<ol type ="a">
+<li> Encuentre el valor $k$ que hace que la función presentada, sea una función de masa de probabilidad </li>
+<li> Encuentre la función de distribución acumulada. </li>
+<li> Encuentre la probabilidad de que $X$ sea a lo más de 2. </li>
+<li> Encuentre la probabilidad de que $X$ se al menos de 1, pero no más de 2. </li>
+<li> Encuentre $F(1.2)$. </li>
+</ol>
+2. Suponga que se tiene un total de tres cajas exactamente iguales, donde cada una de las cajas contiene un animal encerrado, a saber, un conejo, un hamster y una cobaya. Si se trata de adivinar qué clase de animal hay en cada caja, siendo `$X$` la variable aleatoria que representa el numero de aciertos. Escriba la función de masa de probabilidad de la variable aleatoria `$X$`, su función de distribución acumulada y calcule la probabilidad de que acierte al menos 2 animales.
+3. Sean `$X$` y `$Y$` dos variables aleatorias discretas las cuales pueden tomar como posibles valores -1, 0, y 1. En la siguiente tabla se dan las probabilidades conjuntas para todos los posibles valores de `$X$` y `$Y$`.
+```{r echo=FALSE}
+library(kableExtra)
+tabla1 <- data.frame(c("$\\mathbf{Y}$", "-1", "1/16", "3/16", "1/16"),
+              c("$\\mathbf{Y}$", "0", "3/16", "0", "3/16"),
+              c("$\\mathbf{Y}$", "1", "1/16", "3/16", "1/16"))
+tabla1 <- data.frame(t(tabla1))
+colnames(tabla1) <- c("$\\mathbf{p(x,y)}$", "$\\mathbf{X}$", "-1", "0", "1")
+
+kable(tabla1, align = c("c", "l", "l", "l", "l"),
+  format = "html", booktabs = T, row.names = FALSE) %>%
+kable_styling("striped", full_width = F) %>%
+collapse_rows(columns = 1, valign = "middle")
+```
+<ol type ="a">
+<li> Obtenga las funciones de probabilidad marginales de $X$ y de $Y$. </li>
+<li> Pruebe si las variables aleatorias $X$ y $Y$ son independientes. </li>
+<li> Calcule la $P(X=1|Y\leq 0)$. </li>
+4. Sea `$X$` una variable aleatoria con distribución de probabilidades `$p(x)$` dada por:
+```{r echo=FALSE}
+tabla2 <- rbind("$x$" = c(1, 3, 4, 5, 7),
+              "$p(x)$" = c(0.31, "k", 0.15, 0.18, 0.23))
+
+kable(data.frame(tabla2),
+  format = "html", booktabs = T, col.names = NULL) %>%
+kable_styling("striped", full_width = F)
+```
+<ol type ="a">
+<li> Encuentre el valor $k$ que tal que $p(x)$ sea una función de masa de probabilidad bien especificada. </li>
+<li> Calcule la función de distribución acumulada $F(X)$.</li>
+<li> Encuentre $P(X>3)$.</li>
+</ol>
+5. 	Determine el valor $k$ de modo que la función `$f(x)=k\binom{2}{x}\binom{3}{3-x}$`, para `$x=0,1,2$`, sirva como distribución de probabilidad de la variable aleatoria `$X$` y calcule
+<ol type ="a">	
+  <li> La función de distribución acumulada $F(X)$. </li>
+  <li> Realice el gráfico de la función de distribución acumulada $F(X)$. </li>
+  <li> La probabilidad de que la variable aleatoria `$X$` se de a lo más 1.</li>
+</ol>
+6. Las mediciones en los sistemas científicos siempre están sujetas a variación, algunas veces más que otras. Hay muchas estructuras para los errores de medición y los estadísticos pasan mucho tiempo modelándolos. Suponga que el error de medición `$X$` de cierta cantidad física es determinado por la siguiente función de densidad:
+`\begin{align*}
+f(x) =\begin{cases}k(3-x^2), & -1\leq x \leq 1\\ 0, & e.o.c \end{cases} 
+\end{align*}`
+<ol type ="a">
+<li> Determine $k$, que hace que $f(x)$, sea una función de densidad válida. </li>
+<li> Calcule la función de distribución acumulada $F(X)$.</li>
+<li> Calcule la probabilidad de que un error aleatorio en la medición sea menor que $\frac{1}{2}$.</li>
+<li> Para esta medición específica, resulta indeseable si la magnitud del error (es decir, $|x|$) es mayor que $0.8$. ¿Cuál es la probabilidad de que esto ocurra? </li>
+</ol>
+7. Suponga una función de densidad de probabilidad conjunta de las variables aleatorias `$X$`, `$Y$` y `$Z$`, la cual se define como
+`\begin{align*}
+f(x,y,z)=\begin{cases}kxyz^2; 0< x,y <1; 0< z<3 \\0 & e.o.c\end{cases}
+\end{align*}`
+A partir de esta ecuación, calcule
+<ol type ="a">
+<li> El valor $k$ que hace que la función $f(x,y,z)$, sea una función de densidad válida. </li>
+<li> La función de densidad marginal conjunta de $Y$ y $Z$. </li>
+<li> La densidad marginal de $Y$.</li>
+<li> $P(\frac{1}{4}< X < \frac{1}{2}, Y > \frac{1}{3}, 1 < Z < 2)$ </li>
+<li> $P(0 < X < \frac{1}{2}| Y = \frac{1}{4} , Z = 2)$ </li>
+</ol>
+8. Suponga la siguiente función de distribución acumulada
+`\begin{align*}
+F(x)=\begin{cases}0 & x<0 \\ 0.12 & 0\leq x<2 \\ 0.28 & 2\leq x< 3 \\ 0.48 & 3\leq x< 5\\ 0.74 & 5\leq x< 6 \\ 1 & x\geq 8\end{cases}
+\end{align*}`
+9. Sea `$X$` la variable aleatoria que determina el número de clientes que llega a una centro comercial en un periodo de una hora. Si la distribución acumulada de $X$ está dada por:
+`\begin{align*}
+			F(x) =\begin{cases}0 & x < 0\\0.03 & 0\leq x < 1 \\ 0.12 & 1\leq x < 2 \\ 0.21 & 2\leq x < 3\\ 0.33 & 3\leq x < 4\\ 0.52 & 4\leq x < 5\\ 0.74 & 5\leq x < 6 \\ 0.89 & 6\leq x < 7 \\ 0.96 & 7\leq x < 8 \\ 1.00 & 8\geq x\end{cases} 
+\end{align*}`
+<ol type ="a">
+<li> Encuentre la función de masa de probabilidad de la variable aleatoria $X$. </li>
+<li> Calcule la probabilidad de que el número de clientes que llega al centro comercial sea mayor a 4. </li>
+<li> Calcule la probabilidad de que el número de clientes que llega al centro comercial se encuentre entre 3 y 7, inclusive. </li>
+<li> Calcule la probabilidad de que el número de clientes que llega al centro comercial sea mayor a 4 pero como máximo de 8. </li>
+<li> Calcule la probabilidad de que llegue un número diferente de 5 clientes al centro comercial. </li>
+</ol>
+10. Suponga que cierto tipo de pequeñas empresas de procesamiento de datos están tan especializadas que algunas tienen dificultades para obtener utilidades durante su primer año de operación. La función de densidad de probabilidad que caracteriza la proporción `$X$` de utilidades que obtiene una pequeña empresa durante su primer año está dada por
+`\begin{align*}
+f(x)=\begin{cases}kx^4(1-x)^3 & 0\leq x \leq 1,\\0 & e.o.c\end{cases} 
+\end{align*}`
+<ol type ="a">
+<li> ¿Cuál es el valor de $k$ que hace de la anterior una función de densidad válida? </li>
+<li> Calcule la probabilidad de que al menos $50\%$ de las empresas tenga utilidades durante el primer año. </li>
+<li> Calcule la probabilidad de que al menos $80\%$, pero no más de $90\%$ de las empresas tenga utilidades durante el primer año. </li>
+</ol>
+11. Suponga que a partir de una gran cantidad de datos históricos, se sabe que `$X$` representa el número de automóviles que llegan a una intersección específica durante un periodo de 20 segundos, la cual puede ser determinada mediante la siguiente función de probabilidad discreta
+`\begin{align*}
+f(x)=\frac{e^{-6} 6^x}{x!} \text{  para  } x=0,1,2,\dots
+\end{align*}`
+<ol type ="a">
+<li> Calcule la probabilidad de que en un periodo específico de 20 segundos más de 8 automóviles lleguen a la intersección. </li>
+<li> Calcule la probabilidad de que sólo lleguen 2 automóviles. </li>
+</ol>
+12. Se sabe por ley que la vida máxima de la patente para un nuevo medicamento es de 17 años. Si restamos el tiempo requerido por la FDA para someter a pruebas y aprobar el medicamento, se obtiene la vida real de la patente para el medicamento, es decir, el tiempo que la compañía tiene para recuperar los costos de investigación y desarrollo, para obtener una utilidad. La distribución de los tiempos de vida reales de las patentes para nuevos medicamentos se da a continuación:
+```{r echo=FALSE}
+tabla3 <- rbind("$x$ (en años)" = c(3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13),
+              "$p(x)$" = c(0.03, 0.05, 0.07, 0.10, 0.14, 0.20, 0.18, 0.12, 0.07, 0.03, 0.01))
+tabla3[1,] <- formatC(as.matrix(tabla3[1,]),digits=0,format="f")
+
+kable(data.frame(tabla3),
+  format = "html", booktabs = T, col.names = NULL) %>%
+kable_styling("striped", full_width = F)
+```
+<ol type ="a">	
+  <li> Encuentre la función de distribución acumulada $F(X)$. </li>
+  <li> Realice el gráfico de la función de distribución acumulada $F(X)$. </li>
+  <li>  Calcule la probabilidad de que el tiempo de vida en años sea a lo más 9 años.</li>
+  <li>  Calcule la probabilidad de que el tiempo de vida en años sea más de 8 años, pero no más de 11.</li>
+</ol>
+
