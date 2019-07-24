@@ -46,7 +46,7 @@ Una parte importante de la estadística descriptiva, son las medidas estadístic
 
 Una alternativa es mediante resúmenes numéricos, los cual permiten observar el comportamiento de un conjunto de observaciones mediante diferentes medidas numéricas, que se presentan de forma simple y ordenada.
 
-Entre las diferentes funciones que permiten realizar resúmenes numéricos en <tt>R</tt>, se destaca la función `numSummary(datos)` de la librería `RcmdrMisc` y la función `describe(datos)` de la librería `psych`, que presentan el resúmen de variables tipo numéricas. 
+Entre las diferentes funciones que permiten realizar resúmenes numéricos en <tt>R</tt>, se destaca la función `numSummary()` de la librería `RcmdrMisc` y la función `describe()` de la librería `psych`, que presentan el resúmen de variables tipo numéricas. 
 
 Para ilustrar el manejo de estas funciones, se empleara la base de datos de [Agricultura de India](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/AgriculturaIndia.xlsx){:target="_blank"}, la cual contiene la información sobre la producción de cultivos agrícolas en la India. La base de datos contiene el tipo de cultivo, el estado en el cual se realiza el cultivo, los costos y la producción obtenida.
 
@@ -99,18 +99,18 @@ describeBy(x = datos$`Yield (Quintal/ Hectare)`, group = datos$Crop, ranges = TR
 ## Resumen tabular
 Una forma convencional de presentar resúmenes de variables cualitativas, es mediante la construcción de tablas de frecuencias, las cuales permiten presentar de forma individual algunas de las características que poseen las variables cualitativas, o permiten presentar de forma conjunta algunas de las características que comparten dichas variables.
 
-Para presentar de forma individual o grupal las características de las variables, puede emplearse la función `table(datos)` de la librería `base`, la cual agrega la información presentada en de las variables de una forma simple, que permite observar el número (frecuencia absoluta) de observaciones que comparten cierto atributo. Se aconseja que los datos usados dentro de la función `table(datos)` sean de tipo *factor*.
+Para presentar de forma individual o grupal las características de las variables, puede emplearse la función `table()` de la librería `base`, la cual agrega la información presentada en de las variables de una forma simple, que permite observar el número (frecuencia absoluta) de observaciones que comparten cierto atributo. Se aconseja que los datos usados dentro de la función `table()` sean de tipo *factor*.
 
 Para ilustrar el manejo de esta funciones, se continua trabajando con la base de datos de [Agricultura de India](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/AgriculturaIndia.xlsx){:target="_blank".
 
 ```{r}
 #  Creación de tabla de frecuencias absolutas en una vía
 ## Si el conjunto de observaciones tiene valores faltantes agregar el comando useNA = "ifany"
-tabla1via <- table(datos$State) 
+tabla1via <- table(datos$Crop) 
 tabla1via
 
 # Crear nueva variable
-datos$catproduccion <- ifelse(datos$`Yield (Quintal/ Hectare)`<30, "Baja", "Alta")
+datos$catproduccion <- factor(ifelse(datos$`Yield (Quintal/ Hectare)` < 30, "Baja", "Alta"))
 #  Creación de tabla de frecuencias absolutas en dos vía
 tabla2vias <- table(datos$catproduccion, datos$State)
 tabla2vias
@@ -141,19 +141,10 @@ El análisis gráfico, puede ser dividido en diferentes clases
 
 * Gráficos para una variable cuantitativa
 * Gráficos para varias variables cuantitativas
-* Gráficos para variables cualitativas
+* Gráficos para una o más variables cualitativas
 * Gráficos para variables cuantitativas y cualitativas
 
-Para ilustrar el manejo de los diferentes gráficos, se empleara la base de datos `Insurance`, integrada en la librería `MASS`, la cual contiene la información sobre el número de asegurados que estuvieron expuestos a un riesgo determinado y el número de reclamaciones de seguros de automóviles realizadas por dichos asegurados. También se empleara la base de datos `KosteckiDillon`, integrada en la librería `carData`, la cual contiene un subconjunto de datos sobre tratamientos de migraña.
-
-
-```{r}
-library(MASS) # Carga librería MASS para poder cargar la base de datos
-data(Insurance) # Carga la base de datos Insurance
-head(Insurance) # Muestra el encabezado de la base de datos
-str(Insurance) # Muestra la estructura de la base de datos
-```
-
+Para ilustrar el manejo de los diferentes gráficos, la base de datos de [Agricultura de India](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/AgriculturaIndia.xlsx){:target="_blank"}, la cual contiene la información sobre la producción de cultivos agrícolas en la India.
 
 ### Gráficos para una variable cuantitativa
 Entre las gráficos básicos que permiten realizar análisis cuantitativo para una variable se tiene, al diagrama de tallo y hojas, gráfico de caja y bigotes, histograma y densidad.
@@ -162,17 +153,17 @@ Entre las gráficos básicos que permiten realizar análisis cuantitativo para u
 Este gráfico sirve como medida de resumen de los datos, brinda información de valores máximos, mínimos, área en donde más se centran los datos, dispersión. datos atípicos y asimetría. A pesar de toda la información que puede brindar esta gráfica, su uso es muy limitado, ya que en situaciones en las cuales el rango de la variable es muy grande, ésta no permite visualidad con claridad dichos comportamientos. Este gráfico puede ser realizado mediante la función `stem()` de la librería `graphics` de <tt>R</tt>.
 
 ```{r}
-stem(Insurance$Claims)
-stem(Insurance$Claims, scale = 2)
+stem(datos$`Cost of Production (/ Quintal) C2`)
+stem(datos$`Cost of Production (/ Quintal) C2`, scale = 4)
 ```
 
 #### Gráfico de caja y bigotes (boxplot)
 Este gráfico sirve para presentar de forma visual, datos numéricos a través de sus cuartiles, además de presentar otras  características importantes, tales como la dispersión, simetría y datos potencialmente atípicos.
 
-La caja del gráfico contiene el 50% central de los datos (rango intercuartil), brinda información sobre la asimetría, `$Q_1$`, `$Q_2$` (mediana) y `$Q_3$`, el bigote inferior se calcula usualmente como `$Q_1–0.5*IQR$`,`$Q_1–IQR$`, o `$Q_1–1.5*IQR$` y el superior como `$Q3+0.5*IQR$`, `$Q3+IQR$` o `$Q3+1.5*IQR$`. Además, los valores que se encuentren por encima o debajo de los bigotes se consideran como potencialmente atípicos. Este gráfico puede ser realizado mediante la función `boxplot()` de la librería `graphics` de <tt>R</tt>.
+La caja del gráfico contiene el 50% central de los datos (rango intercuartil), brinda información sobre la asimetría, `$Q_1$`, `$Q_2$` (mediana) y `$Q_3$`, el bigote inferior se calcula usualmente como `$Q_1–0.5*IQR$`,`$Q_1–IQR$`, o `$Q_1–1.5*IQR$` y el superior como `$Q3+0.5*IQR$`, `$Q3+IQR$` o `$Q3+1.5*IQR$`. Además, los valores que se encuentren por encima o debajo de los bigotes se consideran como potencialmente atípicos. Este gráfico puede ser realizado mediante la función `boxplot()` de la librería `graphics` de la base del <tt>R</tt>.
 
 ```{r}
-boxplot(Insurance$Claims, horizontal = T, xlab = "Conteo", main = "Número de reclamaciones", col = "lightblue")
+boxplot(datos$`Cost of Production (/ Quintal) C2`, horizontal = T, xlab = "Costo", main = "Boxplot de Costo de Producción", col = "lightblue")
 ```
 
 También puede agregarse el argumento `notch = TRUE`, lo cual hace que se grafique una muesca en cada lado de la caja, alrededor de la mediana. @Mcgill1978 señala que las muescas muestran un intervalo del 95% de confianza alrededor de la mediana, y que son construidas a partir de la ecuación
@@ -188,46 +179,45 @@ s=\frac{1.25*IQR}{1.35*\sqrt{n}}
 y siendo `$C=1.7$` una constante, la cual es una selección empírica realizada por los autores.
 
 ```{r}
-boxplot(Insurance$Claims, horizontal = T, xlab = "Conteo", main = "Número de reclamaciones", col = "lightgreen", notch = T)
+boxplot(datos$`Cost of Production (/ Quintal) C2`, horizontal = T, xlab = "Costo", main = "Boxplot de Costo de Producción con Bandas de Confianza ", col = "lightgreen", notch = T)
 ```
 
 #### Histograma
-Este gráfico muestra la distribución de frecuencia o densidades del grupo de observaciones, brinda información sobre el valor más probables, la dispersión, la asimetría y valores extremos. Adicionalmente, tiene la ventaja de que su interpretación es muy intuitiva y por tanto es de los gráficos más preferidos para resumir información.  Este gráfico puede ser realizado mediante la función `hist()` de la librería `graphics` de <tt>R</tt>.
+Este gráfico muestra la distribución de frecuencia o densidades del grupo de observaciones, brinda información sobre el valor más probables, la dispersión, la asimetría y valores extremos. Adicionalmente, tiene la ventaja de que su interpretación es muy intuitiva y por tanto es de los gráficos más preferidos para resumir información. Este gráfico puede ser realizado mediante la función `hist()` de la librería `graphics` de la base del <tt>R</tt>.
 
 ```{r}
-hist(Insurance$Claims, main = "Número de reclamaciones", xlab = "conteo", col = "lightblue", freq = T) # Para gráfico con valor de densidades escribir freq = FALSE
+hist(datos$`Cost of Production (/ Quintal) C2`, main = "Histograma de Costos de Producción", xlab = "Costos", col = "lightblue", freq = T) # Para gráfico con valor de densidades escribir freq = FALSE
 ```
 
 #### Densidad
 Este gráfico funciona similar al histograma de densidades, con la diferencia de que en lugar de mostrar la distribución mediante clases (barras), éste muestra el comportamiento de la distribución de las observaciones mediante una curva. Dicha curva, brinda mayor información que el histograma respecto al valor promedio, dispersión y asimetría. Este gráfico puede ser realizado mediante las funciones `plot(density())`, siendo `plot()` una función de la librería `graphics` y `density()` una función de la librería `stats`. Adicionalmente se presenta la función `polygon` de la librería `graphics`, la cual sirve para generar formas, o en este caso, darle color a la densidad 
 
 ```{r}
-plot(density(Insurance$Claims), main = "Número de reclamaciones", xlab = "conteo", lwd = 2) # gráfica la densidad
-polygon(density(Insurance$Claims), col = "lightblue") # Colorea la densidad
+plot(density(datos$`Cost of Production (/ Quintal) C2`), main = "Densidad de Costos de Producción", xlab = "Costos", lwd = 2) # gráfica la densidad
+polygon(density(datos$`Cost of Production (/ Quintal) C2`), col = "lightblue") # Colorea la densidad
 ```
 
 ### Gráficos para varias variables cuantitativa
 Entre las gráficos básicos que permiten realizar análisis cuantitativo para varias variables se tiene, el gráfico de dispersión cuando se tienen solo dos variables y la matriz de dispersión cuando se tienen más de dos variables.
 
 #### Gráfico de dispersión
-Este gráfico se emplea para hacer cruces entre dos variables cuantitativas, y sirve para ver tendencias y relaciones entre dos variables cuantitativas, además de permitir apreciar donde se centra el total de observaciones dados dos atributos cuantitativos. Este gráfico puede ser realizado mediante la función `plot()` de la librería `graphics` de <tt>R</tt>.
+Este gráfico se emplea para hacer cruces entre dos variables cuantitativas, y sirve para ver tendencias y relaciones entre dos variables cuantitativas, además de permitir apreciar donde se centra el total de observaciones dados dos atributos cuantitativos. Este gráfico puede ser realizado mediante la función `plot()` de la librería `graphics` de la base del <tt>R</tt>.
 ```{r}
-plot(x = Insurance$Holders, y = Insurance$Claims, xlab = "Número de asegurados",
-     ylab = "Número de reclamaciones", main = "Seguros :D", pch = 19)
+plot(x = datos$`Cost of Cultivation (/ Hectare) C2`, y = datos$`Yield (Quintal/ Hectare)`, xlab = "Costos de Cultivo",
+     ylab = "Producción", main = "Gráfica de interés :D", pch = 19)
 ```
 
 #### Matriz de dispersión
-Cuando se poseen más de dos variables cuantitativas, es posible presentar un matriz que muestre el cruce entre pares de variables, mediante cuadros con versiones simples de la función `$plot()$`. Este gráfico puede ser realizado mediante la función `pairs()` de la librería `graphics` de <tt>R</tt>.
+Cuando se poseen más de dos variables cuantitativas, es posible presentar un matriz que muestre el cruce entre pares de variables, mediante cuadros con versiones simples de la función `plot()`. Este gráfico puede ser realizado mediante la función `pairs()` de la librería `graphics` de la base de <tt>R</tt>.
 
 ```{r}
 ### Se crea nueva variable para observar el comportamiento de la función pairs
 set.seed(1532) # Crea una semilla que permite replicar la simulación de valores de rnorm
-utilidad <- 140 * Insurance$Holders - 500 * Insurance$Claims * rgamma(n = 64, shape = 54, rate = 26)
+utilidad <- 140 * datos$`Yield (Quintal/ Hectare)` - 10 * datos$`Cost of Production (/ Quintal) C2` * rgamma(n = 63, shape = 54, rate = 26)
 
 ### Se crea matriz de variables a gráficar
-mvari <- cbind(Insurance$Holders, Insurance$Claims, utilidad)
-pairs(mvari, labels = c("Número de asegurados", "Número de reclamaciones", "Utilidad"))
-
+mvari <- cbind(datos$`Yield (Quintal/ Hectare)`, datos$`Cost of Production (/ Quintal) C2`, utilidad)
+pairs(mvari, labels = c("Producción", "Costos de Producción", "Utilidad"))
 ```
 
 Funciones complementarias pueden ser desarrolladas para mejorar la visualización los pares de variables. En el libro de @Hernandez2018[, pp. 40-49], se presentan diferentes funciones que pueden ser implementadas. Entre ellas
@@ -261,7 +251,7 @@ panel.cor <- function(x, y, digits=2, prefix="", cex.cor)
   text(0.5, 0.5, txt, cex = cex * r)
 }
 
-pairs(mvari, labels = c("Número de asegurados", "Número de reclamaciones", "Utilidad"),
+pairs(mvari, labels = c("Producción", "Costos de Producción", "Utilidad"),
       upper.panel = panel.reg,
       diag.panel = panel.hist,
       lower.panel = panel.cor)
@@ -275,17 +265,17 @@ Sirve para resumir variables cualitativas mediante barras de frecuencias absolut
 
 ```{r}
 # Usando las tablas de frecuencias absolutas presentadas en el análisis tabular.
-barplot(tabla1via, main = "Frecuencias absolutas de estado de medicación", col = rainbow(3)) 
-barplot(prop1via, main = "Frecuencias relativas de estado de medicación", col = rainbow(20)[c(1,5,12)])
+barplot(tabla1via, main = "Frecuencias absolutas de los Estados", col = rainbow(10)) 
+barplot(prop1via, main = "Frecuencias relativas de los Estados", col = rainbow(20))
 ```
 
 Este gráfico también puede ser empleado para realizar el cruce de dos o más variables cualitativas
 
 ```{r}
 # Usando las tablas cruzadas de frecuencias absolutas presentadas en el análisis tabular.
-barplot(tabla2vias, main = "Frecuencias absolutas de estado de medicación por sexo", col = c("lightblue", "lightgreen", "lightblue4")) 
-barplot(prop2vias, main = "Frecuencias relativas de estado de medicación por sexo", col = c("lightblue", "lightgreen", "lightblue4"), beside = T)
-legend("topright", c("none", "reduced", "continuing"), fill = c("lightblue", "lightgreen", "lightblue4")) 
+barplot(tabla2vias, main = "Frecuencias absolutas categorías de producción por Estado", col = c("lightblue", "lightgreen"), las = 2) 
+barplot(prop2vias, main = "Frecuencias relativa categorías de producción por Estado", col = c("lightblue", "lightgreen"), beside = T, las = 2)
+legend("topright", rownames(prop2vias), fill = c("lightblue", "lightgreen")) 
 ```
 
 #### Gráfico de pareto
@@ -295,7 +285,7 @@ Este gráfico es similar al gráfico de barras para una sola variable cualitativ
 # install.packages("qcc") # Instala paquete qcc
 library(qcc) # Carga paquete qcc
 # Usando las tablas de frecuencias absolutas presentadas en el análisis tabular.
-pareto.chart(tabla1via, las = 1, main = "Gráfico Pareto para estado de medicación")
+pareto.chart(tabla1via, las = 2, main = "Gráfico Pareto para los Estados")
 ```
 
 #### Gráfico de pastel
@@ -303,8 +293,8 @@ Este gráfico también sirve para representar gráficamente las tablas de frecue
 
 ```{r}
 # Usando las tablas de frecuencias relativas presentadas en el análisis tabular.
-pie(prop1via, main = "Estado de medicación", col = rainbow(20)[c(4,13,16)])
-legend("topright", c("18.9%", "23.63%", "57.47%"), fill = rainbow(20)[c(4,13,16)])
+pie(prop1via, main = "Frecuencia Relativa por Estados", col = rainbow(20))
+legend("topleft", legend = round(prop1via,4), fill = rainbow(20))
 ```
 
 #### Gráfico de puntos
@@ -313,9 +303,9 @@ Este gráfico también es similar al gráfico de barras, sirve para presentar la
 ```{r}
 # Usando las tablas de frecuencias absolutas presentadas en el análisis tabular.
 ## Gráfico para una sola variable cualitativa
-dotchart(tabla1via, main = "Frecuencias absolutas de estado de medicación")
+dotchart(tabla1via, main = "Frecuencias absolutas de Estados")
 ## Gráfico para el cruce de dos variables cualitativas
-dotchart(tabla2vias, main = "Frecuencias absolutas de estado de medicación por sexo")
+dotchart(tabla2vias, main = "Frecuencias absolutas de categorías de producción por Estados")
 ```
 
 ### Gráficos para variables cuantitativas y cualitativas
@@ -325,22 +315,22 @@ Entre las gráficos básicos que permiten analizar los cruces entre variables cu
 Este gráfico sirve para presentar de forma visual, datos numéricos por categorías a través de sus cuartiles, además de presentar otras características importantes, tales como la dispersión, simetría y datos potencialmente atípicos. Este gráfico puede ser realizado mediante la función `boxplot()` de la librería `graphics` de <tt>R</tt>.
 
 ```{r}
-boxplot(Insurance$Claims ~ Insurance$Group, horizontal = T, xlab = "Conteo", ylab = "Grupo", main = "Número de reclamaciones", col = rainbow(4), las = 1)
+boxplot(datos$`Cost of Production (/ Quintal) C2` ~ datos$Crop, horizontal = T, xlab = "Costos", ylab = "", main = "Costos de Producción por tipo de cosecha", col = rainbow(10), las = 1)
 ```
 
 También puede agregarse el argumento `notch = TRUE`, lo cual hace que se grafique una muesca en cada lado de la caja, alrededor de la mediana. Además, si las muescas de dos parcelas no se superponen, entonces se tendrá evidencia sólida respecto a que la mediana de los grupos es diferente [@Chambers1983, p. 62].
 
 ```{r}
-boxplot(Insurance$Claims ~ Insurance$Group, horizontal = T, xlab = "Conteo", ylab = "Grupo", main = "Número de reclamaciones", col = rainbow(4), las = 1, notch = T)
+boxplot(datos$`Cost of Production (/ Quintal) C2` ~ datos$Crop, horizontal = T, xlab = "Costos", ylab = "", main = "Costos de Producción por tipo de cosecha", col = rainbow(10), las = 1, notch = T)
 ```
 
 #### Gráfico de medias
-Este gráfico sirve para presentar de forma visual, grupos de datos numéricos a través de sus media y desviación estándar. El gráfico está compuesto por un punto que representa el valor promedio del grupo de observaciones y las barras representan **una** desviación estándar de la media. Este gráfico puede ser realizado mediante la función `plotMeans` de la librería `RcmdrMisc`.
+Este gráfico sirve para presentar de forma visual, grupos de datos numéricos a través de sus media y desviación estándar. El gráfico está compuesto por un punto que representa el valor promedio del grupo de observaciones y las barras representan **una** desviación estándar de la media. Este gráfico puede ser realizado mediante la función `plotMeans()` de la librería `RcmdrMisc`.
 
 ```{r}
 library(RcmdrMisc) # Carga la librería RcmdrMisc
 # recordar escribir en error.bars = "sd" porque por defecto se presenta el error estándar y no la desviacion estándar.
-plotMeans(response = Insurance$Claims, factor1 = Insurance$Group, error.bars = "sd")
+plotMeans(response = datos$`Cost of Production (/ Quintal) C2`, factor1 = datos$Crop, error.bars = "sd", xlab = "Costos de Producción", ylab = "Cosecha")
 ```
 
 
@@ -348,12 +338,11 @@ plotMeans(response = Insurance$Claims, factor1 = Insurance$Group, error.bars = "
 Este gráfico muestra la distribución de frecuencia o densidades de dos o más grupos de observaciones, brinda información sobre de los valores más probables, las dispersiones, las asimetrías y valores extremos. Este gráfico puede ser realizado mediante la función `hist()` de la librería `graphics` de <tt>R</tt>. Para agregar más histograma en la misma gráfico, es necesario agregar el argumento `add = TRUE`.
 
 ```{r}
-# Supongamos otra compaía de seguros con su propia variable de reclamaciones
-set.seed(6321) # Se establece semilla para replicar los resultados simulados
-reclamaciones <- rexp(n = 64, rate = 1/74) # Se crea variable nueva
-
-hist(Insurance$Claims, main = "Número de reclamaciones", xlab = "conteo", col = "lightblue", freq = T, breaks = 30) 
-hist(reclamaciones, col = "lightblue4", freq = T, add = T, breaks = 30) 
+mini <- min(datos$`Cost of Cultivation (/ Hectare) C2`)
+maxi <- max(datos$`Cost of Cultivation (/ Hectare) C2`)
+hist(datos$`Cost of Cultivation (/ Hectare) C2`[datos$Crop == "ARHAR"], main = "Costos de Cultivo por Tipo de Cultivo", xlab = "Costos de Cultivo", col = "lightblue", freq = T, breaks = 6, xlim = c(10000, 30000)) 
+hist(datos$`Cost of Cultivation (/ Hectare) C2`[datos$Crop == "GRAM"], col = "lightblue4", freq = T, add = T, breaks = 6) 
+legend("topleft", legend = c("ARHAR", "GRAM"), fill = c("lightblue", "lightblue4"))
 ```
 
 dado que no es posible observar bien la diferencia entre variables con el histograma, cuando se emplea el paquete base, es posible usar librerías que permitan gráficos más avanzados, tales como los creados mediante la función `ggplot` de la librería `ggplot2`.
@@ -362,9 +351,9 @@ dado que no es posible observar bien la diferencia entre variables con el histog
 # install.packages("ggplot2") # instala paquete ggplot2
 library(ggplot2)
 # Se organiza base de datos para poder ser leida
-BD <- data.frame(Reclama = c(Insurance$Claims, reclamaciones), Clase = as.factor(rep(x = 1:2, each = 64)))
+BD <- data.frame(Costos = c(datos$`Cost of Cultivation (/ Hectare) C2`[datos$Crop == "ARHAR"], datos$`Cost of Cultivation (/ Hectare) C2`[datos$Crop == "GRAM"]), Clase = c(rep("ARHAR", 10), rep ("GRAM", 8)))
 
-ggplot(BD, aes(x=Reclama, fill=Clase)) + geom_histogram(alpha=0.7,colour=1, position="identity") + theme_bw()+ylab("Frecuencia") + xlab("Conteo") + ggtitle("Número de reclamaciones")
+ggplot(BD, aes(x=Costos, fill=Clase)) + geom_histogram(alpha=0.7,colour=1, bins = 6, position="identity") + theme_bw()+ylab("Frecuencia") + xlab("Costos de Cultivo") + ggtitle("Costos de Cultivo por Categoría de Producción")
 ```
 
 Es de anotar que también puede cambiar la forma en que se agrupan los datos en cada una de las categorías, y por tanto, puede verse diferencias entre el gráfico realizado con el paquete base y el gráfico realizado con el paquete ggplot.
@@ -373,20 +362,20 @@ Es de anotar que también puede cambiar la forma en que se agrupan los datos en 
 Este gráfico muestra el comportamiento de la distribución de las observaciones mediante una curva de densidad para cada una de las variables. Este gráfico, brinda información respecto al valor promedio, dispersión y asimetría. Este gráfico puede ser realizado mediante las funciones `plot(density())`, siendo `plot()` una función de la librería `graphics` y `density()` una función de la librería `stats`. Para realizar el segundo gráfico, se debe emplear la función `lines(density())`, siendo `lines()` una función de la librería `graphics`.
 
 ```{r}
-plot(density(Insurance$Claims), main = "Número de reclamaciones", xlab = "conteo", lwd = 2) # gráfica la densidad
-lines(density(reclamaciones), col = "red", lwd = 2)
-legend("topright", legend = c("clase1", "clase2"), col = c("black", "red"), lwd = 2)
+plot(density(datos$`Cost of Production (/ Quintal) C2`[datos$Crop == "GRAM"]), main = "Costos de Producción", xlab = "Costos", lwd = 2, xlim = c(1000, 4500)) # gráfica la densidad
+lines(density(datos$`Cost of Production (/ Quintal) C2`[datos$Crop == "ARHAR"]), col = "red", lwd = 2)
+legend("topright", legend = c("GRAM", "ARHAR"), col = c("black", "red"), lwd = 2)
 ```
 
 #### Gráfico de dispersión
 Este gráfico se emplea para hacer cruces entre dos variables cuantitativas y diferenciarlas por una cualitativa. Este sirve para ver tendencias, diferencias entre clases, relaciones entre dos variables cuantitativas, y permite apreciar donde se centra el total de observaciones dados dos atributos cuantitativos. Este gráfico puede ser realizado mediante la función `plot()` de la librería `graphics` de <tt>R</tt>.
 
 ```{r}
-plot(x = Insurance$Holders, y = Insurance$Claims, xlab = "Número de asegurados",
-     ylab = "Número de reclamaciones", main = "Seguros por grupo :D", pch = 19, col = Insurance$Group)
-legend("bottomright", legend = levels(Insurance$Group), col = 1:4, pch = 19)
+plot(x = datos$`Yield (Quintal/ Hectare)`, y = datos$`Cost of Cultivation (/ Hectare) C2`, xlab = "Producción",
+     ylab = "Costos de Cultivo", main = "Poriducción vs Costos de Cultivo", pch = 19, col = datos$catproduccion)
+legend("bottomright", legend = levels(datos$catproduccion), col = 1:4, pch = 19)
 ```
 
-## Referencias
+## Bibliografía
 
 
