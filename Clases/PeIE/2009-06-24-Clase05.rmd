@@ -52,6 +52,7 @@ Para ilustrar el manejo de estas funciones, se empleara la base de datos de [Agr
 
 ```{r}
 ### Instalar y cargar librerías
+
 # install.packages(c("readxl", "XLConnect"), dependencies = T) # Instala librerías
 library(readxl) # Carga librería
 library(XLConnect) # Para descargar archivos online de forma temporal
@@ -101,7 +102,7 @@ Una forma convencional de presentar resúmenes de variables cualitativas, es med
 
 Para presentar de forma individual o grupal las características de las variables, puede emplearse la función `table()` de la librería `base`, la cual agrega la información presentada en de las variables de una forma simple, que permite observar el número (frecuencia absoluta) de observaciones que comparten cierto atributo. Se aconseja que los datos usados dentro de la función `table()` sean de tipo *factor*.
 
-Para ilustrar el manejo de esta funciones, se continua trabajando con la base de datos de [Agricultura de India](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/AgriculturaIndia.xlsx){:target="_blank".
+Para ilustrar el manejo de esta funciones, se continua trabajando con la base de datos de [Agricultura de India](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/AgriculturaIndia.xlsx){:target="_blank"}.
 
 ```{r}
 #  Creación de tabla de frecuencias absolutas en una vía

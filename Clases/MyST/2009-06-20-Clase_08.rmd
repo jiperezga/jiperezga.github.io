@@ -68,7 +68,7 @@ B_p(L)(Y_t) & = (\beta_0I+\beta_1L+\beta_2L^2+\ldots+\beta_pL^p)(Y_t) \\
 \end{align*}`
 
 ## Modelos de medias móviles (MA)
-@Guerrero2003[, pp. 80-81]  se introduce a los modelos de medias móviles como un proceso estocástico `$\{Yt\}$`, cuyos valores pueden ser dependientes unos de otros, como una suma finita ponderada de choques aleatorios independientes \{\varepsilon_t\}. En donde, el término de medias móviles parece sugerir que el modelo se obtiene como un promedio de los choques aleatorios que intervienen, pero no es así, puesto que los parámetros no tienen que ser necesariamente positivos, ni su suma debe ser la unidad, como requeriría un promedio poderado.
+@Guerrero2003[, pp. 80-81]  se introduce a los modelos de medias móviles como un proceso estocástico `$\{Yt\}$`, cuyos valores pueden ser dependientes unos de otros, como una suma finita ponderada de choques aleatorios independientes `$\{\varepsilon_t\}$`. En donde, el término de medias móviles parece sugerir que el modelo se obtiene como un promedio de los choques aleatorios que intervienen, pero no es así, puesto que los parámetros no tienen que ser necesariamente positivos, ni su suma debe ser la unidad, como requeriría un promedio poderado.
 
 ### Proceso de media móvil de orden 1 o MA(1)
 <!-- Una forma de entender los procesos de media móvil, es mediante el concepto de **juego de suma cero**. Suponga un juego que involucra lanzar una moneda, si sale cara se obtiene una ganancia de `$G$`, mientras que si sale sello se obtiene una pérdida de `$G$`, es decir, el mismo monto. Dado esto, se tendrá que la ganancia promedio del juego será igual a `$0$`, y por tanto, la ganancia a obtener puede ser representada mediante un ruido blanco (`$\varepsilon_t$`) con media `$0$` y varianza `$\sigma^2$`. -->
@@ -250,7 +250,7 @@ Var(\widetilde{Y}_t) & = \gamma(0) = \sigma^2_{\varepsilon}(1+\theta_1^2+\theta_
 Cov(\widetilde{Y}_t, \widetilde{Y}_{t+k}) & = \gamma(k) = \begin{cases} \sigma_\varepsilon^2 \sum_{j=0}^{q-k}\theta_j\theta_{j+k} & 0\leq k\leq q \\ 0 & k\geq q+1\end{cases}
 \end{align*}`
 
-con \theta_0 = 1 y donde se observa que `$Var(\widetilde{Y}_t)>Var(\varepsilon_t)=\sigma_\varepsilon^2$`. Por consiguiente, se tendrá que **todo proceso MA(q) será un proceso estacionario**, pero para ser invertible, se requiere que la raíz del polinomio de rezagos `$(\Theta_1 (L))$` caiga fuera del circulo unitario. Además, el proceso MA(q) tendrá una **memoria limitada a q periodos**, ya que, para rezagos `$k$` mayores a q, la autocorrelaciones serán iguales a 0.
+con `$\theta_0 = 1$` y donde se observa que `$Var(\widetilde{Y}_t)>Var(\varepsilon_t)=\sigma_\varepsilon^2$`. Por consiguiente, se tendrá que **todo proceso MA(q) será un proceso estacionario**, pero para ser invertible, se requiere que la raíz del polinomio de rezagos `$(\Theta_1 (L))$` caiga fuera del circulo unitario. Además, el proceso MA(q) tendrá una **memoria limitada a q periodos**, ya que, para rezagos `$k$` mayores a q, la autocorrelaciones serán iguales a 0.
 
 En @Guerrero2003[, p. 81]  el autor define a los procesos MA como un proceso en equilibrio, en donde las fluctuaciones alrededor del punto de equilibrio, `${\widetilde{Y}_t}_{t≥1}$`, son causadas por choques asociados a eventos inesperados. Tales choques no necesariamente se asimilan de manera instantánea, sino que pueden seguir causando efectos aún después de transcurrido cierto número de períodos y además la intensidad del choque se refleja en el valor de su ponderación `$\theta_j$`.
 
@@ -369,7 +369,7 @@ layout(shapes=list(
 layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4))
 
 tagList(subplot(plotacfsim6, plotpacfsim6, nrows = 1, margin = 0.08) %>% 
-  layout(title = "ACF y PACF de un proceso MA(1)",
+  layout(title = "ACF y PACF de un proceso MA(4)",
          yaxis = list(title = "ACF"),
          yaxis2 = list(title = "PACF"),
          xaxis2 = list(title = "Lags"),
