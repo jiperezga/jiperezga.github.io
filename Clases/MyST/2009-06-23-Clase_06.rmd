@@ -56,7 +56,7 @@ Para la aplicación de este método para el caso aditivo es necesario estimar la
 * La serie suavizada exponencialmente o nivel actual estimado
 
 `\begin{align*}
-a_t=\alpha (Y_t-S_t) + (1 - \alpha) (a_{t-1} + b_{t-1})
+a_t=\alpha (Y_t-S_{t-s}) + (1 - \alpha) (a_{t-1} + b_{t-1})
 \end{align*}`
 
 * La estimación de la tendencia
@@ -84,7 +84,7 @@ donde `$a_t$` es la estimación del intercepto o del nuevo nivel del conjunto de
 Para la selección de los primeros valores asociados a `$a_1$`, `$b_1$` y `$S_t$`, es necesario inicializar después de completado un período estacional `$s$`, y seleccionando uno de los tres métodos siguientes 
 
 * `$a_s = Y_1$`, `$b_s = 0$` y `$S_i = 1$`.
-* `$a_s = \frac{1}{s}\sum_{i=1}^{s}Y_i$`, `$b_s = \bar{y}_{2,s} - \bar{y}_{1,s}$` y `$S_i = Y_i - a_s$`.
+* `$a_s = \frac{1}{s}\sum_{i=1}^{s}Y_i$`, `$b_s = \bar{Y}_{2,s} - \bar{Y}_{1,s}$` y `$S_i = Y_i - a_s$`.
 * Regresión lineal con variables indicadoras por estacionalidad, para luego usar la constante de esta ecuación como el estimado del nivel, la pendiente de la regresión como el estimado de la tendencia y los coeficientes de las variables indicadoras como los estimados de la estacionalidad.
 
 con `$i = 1,\ldots, s$`, siendo `$s$` el índice de estacionalidad.
@@ -92,13 +92,13 @@ con `$i = 1,\ldots, s$`, siendo `$s$` el índice de estacionalidad.
 Una vez definido el método para la selección del valor inicial, puede realizarse el ajuste de las observaciones para la suavización de Holt-winters aditivo de la forma
 
 `\begin{align*}
-\hat{Y}_{t+1}=(a_t + b_t) S_{t-s+1}
+\hat{Y}_{t+1}=a_t + b_t + S_{t-s+1}
 \end{align*}`
 
 mientras que, el ajuste de pronósticos se hace de la forma
 
 `\begin{align*}
-\hat{Y}_{T+h}=a_T + b_T h + S_{Y-s+h}
+\hat{Y}_{T+h}=a_T + b_T h + S_{T-s+h}
 \end{align*}`
 
 siendo `$h$` el número de periodos a pronosticar.
@@ -109,7 +109,7 @@ Similar al caso aditivo, para el multiplicativo, es necesario estimar las siguie
 * La serie suavizada exponencialmente o nivel actual estimado
 
 `\begin{align*}
-a_t=\alpha \left(\frac{Y_t}{S_t}\right) + (1 - \alpha) (a_{t-1} + b_{t-1})
+a_t=\alpha \left(\frac{Y_t}{S_{t-s}}\right) + (1 - \alpha) (a_{t-1} + b_{t-1})
 \end{align*}`
 
 * La estimación de la tendencia
@@ -137,7 +137,7 @@ Igual al caso aditivo, se presenta lo señalado por @Hanke2010[, p. 132] señala
 Además, para la selección de los valores iniciales de `$a_s$`, `$b_s$` y `$S_i$`, es necesario inicializar la estimación después de completar un período estacional `$s$`, para luego seleccionar uno de los tres métodos siguientes 
 
 * `$a_s = Y_1$`, `$b_s = 0$` y `$S_i = 1$`.
-* `$a_s = \frac{1}{s}\sum_{i=1}^{s}Y_i$`, `$b_s = \bar{y}_{2,s} - \bar{y}_{1,s}$` y `$S_i = \frac{Y_i}{a_s} $`.
+* `$a_s = \frac{1}{s}\sum_{i=1}^{s}Y_i$`, `$b_s = \bar{Y}_{2,s} - \bar{Y}_{1,s}$` y `$S_i = \frac{Y_i}{a_s} $`.
 * Regresión lineal con variables indicadoras por estacionalidad, para luego usar la constante de esta ecuación como el estimado del nivel, la pendiente de la regresión como el estimado de la tendencia y los coeficientes de las variables indicadoras como los estimados de la estacionalidad. 
 
 <!-- Usar función season(datos), de la librería TSA para extraer la seasonalidad para la regresión -->

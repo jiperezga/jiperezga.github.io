@@ -82,7 +82,7 @@ para `$i=1,2,\ldots,t$`, con `$t=1,2,\ldots,T$` y siendo `$T$` el total de obser
 
 Adicionalmente, en los promedios simples, el ajuste de las observaciones se hace de la forma
 `\begin{align*}
-\hat{Y}_{t}=PS_t
+\hat{Y}_{t+1}=PS_t
 \end{align*}`
 
 mientras que, el ajuste de pronósticos se hace de la forma
@@ -115,7 +115,7 @@ Por tanto, es más deseable un **orden pequeño** cuando existen cambios repenti
 
 Es de anotar que en los promedios móviles simples, el ajuste de las observaciones se hace de la forma
 `\begin{align*}
-\hat{Y}_{t}=
+\hat{Y}_{t+1}=
 \begin{cases}
 PMU_t & \text{ en el caso de promedios móviles unilaterales} \\
 PMB_t & \text{ en el caso de promedios móviles bilaterales}
