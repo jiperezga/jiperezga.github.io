@@ -89,7 +89,7 @@ f(x) = \frac{e^{-\lambda}\lambda^x}{x!} \quad \quad x=0,1,\ldots
 donde $\lambda$ es el parámetro de la distribución y representa el número promedio de sucesos por unidad de tiempo o región específica.
 
 ### Teorema
-Si `$X\simP(\lambda)$`entonces se puede probar que su media y su varianza están dadas por
+Si `$X\sim P(\lambda)$`entonces se puede probar que su media y su varianza están dadas por
 `\begin{align*}
 \mathbb{E}(X)=\lambda \quad \quad Var(X)=\lambda
 \end{align*}`
