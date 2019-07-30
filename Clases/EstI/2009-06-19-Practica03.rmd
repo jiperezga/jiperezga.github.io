@@ -95,7 +95,7 @@ kable_styling("striped", full_width = F)
 <ol type ="a">	
   <li> La función de distribución acumulada $F(X)$. </li>
   <li> Realice el gráfico de la función de distribución acumulada $F(X)$. </li>
-  <li> La probabilidad de que la variable aleatoria `$X$` se de a lo más 1.</li>
+  <li> La probabilidad de que la variable aleatoria $X$ se de a lo más 1.</li>
 </ol>
 6. Las mediciones en los sistemas científicos siempre están sujetas a variación, algunas veces más que otras. Hay muchas estructuras para los errores de medición y los estadísticos pasan mucho tiempo modelándolos. Suponga que el error de medición `$X$` de cierta cantidad física es determinado por la siguiente función de densidad:
 `\begin{align*}
@@ -109,7 +109,7 @@ f(x) =\begin{cases}k(3-x^2), & -1\leq x \leq 1\\ 0, & \text{en otro caso} \end{c
 </ol>
 7. Suponga una función de densidad de probabilidad conjunta de las variables aleatorias `$X$`, `$Y$` y `$Z$`, la cual se define como
 `\begin{align*}
-f(x,y,z)=\begin{cases}kxyz^2; 0< x,y <1; 0< z<3 \\0 & \text{en otro caso}\end{cases}
+f(x,y,z)=\begin{cases}kxyz^2 & 0< x,y <1; 0< z<3 \\0 & \text{en otro caso}\end{cases}
 \end{align*}`
 A partir de esta ecuación, calcule
 <ol type ="a">
@@ -121,7 +121,7 @@ A partir de esta ecuación, calcule
 </ol>
 8. Suponga la siguiente función de distribución acumulada
 `\begin{align*}
-F(x)=\begin{cases}0 & x<0 \\ 0.12 & 0\leq x<2 \\ 0.28 & 2\leq x< 3 \\ 0.48 & 3\leq x< 5\\ 0.74 & 5\leq x< 6 \\ 1 & x\geq 8\end{cases}
+F(x)=\begin{cases}0 & x<0 \\ 0.12 & 0\leq x<2 \\ 0.28 & 2\leq x< 3 \\ 0.48 & 3\leq x< 5\\ 0.74 & 5\leq x< 8 \\ 1 & x\geq 8\end{cases}
 \end{align*}`
 <ol type ="a">
 <li> Encuentre la función de masa de probabilidad de la variable aleatoria $X$. </li>
