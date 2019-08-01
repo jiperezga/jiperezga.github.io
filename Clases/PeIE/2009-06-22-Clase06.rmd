@@ -88,7 +88,7 @@ Sea `$a$` y `$b$` dos números constantes (reales) y `$X$` una variable aleatori
 \end{align*}`
 
 ## Varianza caso discreto
-Sea `$X$` una variable aleatoria con *fmp* `$p(x)$`, entonces si `$g(X) = (X - \mathbb{E}(X))^2$`, se tendrá que la varianza de `$X$` que se denota `$Var(X)$` o `$\sigma^2$` estará dada por
+Sea `$X$` una variable aleatoria con *fmp* `$p(x)$`, entonces si `$m(X) = (X - \mathbb{E}(X))^2$`, se tendrá que la varianza de `$X$` que se denota `$Var(X)$` o `$\sigma^2$` estará dada por
 `\begin{align*}
 Var(X) = \mathbb{E}\left[\left(X-\mathbb{E}(X)\right)^2\right]=\sum_x(x-\mathbb{E}(X))^2p(x)
 \end{align*}`
