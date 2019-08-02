@@ -9,7 +9,8 @@ introduction: |
   Varianza. <br/>
   Covarianza. <br/>
   Independencia. <br/>
-  Propiedades de la varianza y la covarianza.
+  Propiedades de la varianza y la covarianza. <br/>
+  Teorema de Chebyshev
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
@@ -104,8 +105,7 @@ El valor de `$\rho_{xy}$` indica el tipo y fuerza de la dependencia lineal que h
 * `$\rho_{xy} = 0$` No existe dependencia lineal entre las variables.
 
 ## Independencia
-Las variables aleatorias `$X, Y$` son independientes, si y solo si se cumple que
-`\begin{align*}
+Si las variables aleatorias `$X, Y$` son independientes, entonces se debe cumplir que `\begin{align*}
 \mathbb{E}(XY) = \mathbb{E}(X)\mathbb{E}(Y)
 \end{align*}`
 
@@ -113,6 +113,8 @@ y por tanto se tendrá que
 `\begin{align*}
 Cov(X,Y) = 0
 \end{align*}`
+
+**Nota:** La situación opuesta, sin embargo, no se cumple por lo general, es decir, existen situaciones en las cuales las variables aleatorias tienen covarianza cero pese a que no son independientes.
 
 ### Propiedades de la varianza y la covarianza
 Sea `$a$` y `$b$` números reales (constantes) y `$X$` y `$Y$` dos variables aleatorias discretas o continuas, entonces
@@ -126,3 +128,24 @@ Sea `$a$` y `$b$` números reales (constantes) y `$X$` y `$Y$` dos variables ale
 7. Si `$X, Y$` son independientes entonces `$Var(X-Y) = Var(X) + Var(Y)$`
 8. `$Cov(aX,bX) = abCov(X,Y)$`
 9. Si `$X, Y$` son independientes entonces `$Cov(aX,bX) = 0$`
+
+## Desigualdad de Chebyshev
+### Desigualdad de Markov
+Sea `$q(x)$` una función no negativa de la variable aleatoria `$X$`. Entonces, si `$\mathbb{E}(q(x))$` existe, se tendrá que para todo `$\tau>0$`
+`\begin{align*}
+\mathbb{P}(q(x)\geq \tau)\leq \frac{\mathbb{E}(q(X))}{\tau}
+\end{align*}`
+
+### Desigualdad de Chebyshev
+Sea `$X$` una variable aleatoria que tiene una distribución de probabilidad para la cual solo se supone que existe la varianza `$\sigma^2$`. Entonces, si `$\tau = k^2$` y `$q(x)=(x-\mu)^2/\sigma^2$`, donde `$\mu=\mathbb{E}(X)$` y `$\sigma^2=Var(X)$`, se tendrá que
+`\begin{align*}
+\mathbb{P}\left(\frac{(x-\mu)^2}{\sigma^2}\geq k^2\right) \leq \frac{1}{k^2}\mathbb{E}\left(\frac{(x-\mu)^2}{\sigma^2}\right)
+\end{align*}`
+
+en donde, puede demostrarse que la expresión anterior es igual a 
+`\begin{align*}
+\mathbb{P}\left(\mu - k\sigma \leq x \leq \mu + k\sigma \right) \geq 1 - \frac{1}{k^2}
+\end{align*}`
+
+
+
