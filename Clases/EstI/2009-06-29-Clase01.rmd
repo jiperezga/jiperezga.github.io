@@ -104,7 +104,7 @@ keys <- na.omit(unique(x))
 keys[which.max(tabulate(match(x, keys)))]
 }
 ```
-Una vez creada la función, puede calcularse la moda de un conjunto de observaciones mediante la función `Mode(datos)`. 
+Una vez creada la función, puede calcularse la moda de un conjunto de observaciones mediante la función `Moda(datos)`. 
 
 #### Media recortada
 Es una medida similar a la media, con la diferencia de que, en este caso, se ordenan las observaciones de forma ascendente, y luego se recortan un número `$r$` observaciones superiores e inferiores, tal que `$r=n*trim$`, siendo `$trim$` un valor porcentual entre 0 y 0.5
