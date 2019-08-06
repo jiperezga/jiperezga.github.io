@@ -8,7 +8,7 @@ tags:
 introduction: |
   Operador de rezagos <br/>
   Representación de un proceso lineal infinito AR y MA. <br/>
-  Condiciones d eEstacionariedad e invertibilidad. 
+  Condiciones de Estacionariedad e invertibilidad. 
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
@@ -534,11 +534,11 @@ con `$\varepsilon_t\sim R.B(0, \sigma_{\varepsilon}^2)$` independiente de `$\wid
 
 Adicionalmente, para garantizar que el modelo AR(p) sea estacionario, **se requiere que el polinomio de rezagos `$(\Phi_p L)=0$`**, con el fin de que su modulo caiga fuera del circulo unitario. Por otro lado, se tiene que **todo proceso AR(p) es invertible**.
 
-La media, varianza y autocovarianza del proceso AR(p), bajo la condición de estacionaridad, se obtienen mediante las euaciones
+La media, varianza y autocovarianza del proceso AR(p), bajo la condición de estacionaridad, se obtienen mediante las ecuaciones
 `\begin{align*}
 \mathbb{E}(\widetilde{Y}_t) & = 0 \\
 Var(\widetilde{Y}_t) & =\gamma(0) = \sum_{k=1}^p \phi_k \gamma(k) + \gamma_\varepsilon^2 & \text { para } k  = 0, \pm 1, \pm 2, \ldots \\
-Cov(\widetilde{Y}_t, \widetilde{Y}_{t+k}) & = \mathbb{E}(Y_tY_{t-k}) & \text { para } k  = 0, \pm 1, \pm 2, \ldots
+Cov(\widetilde{Y}_t, \widetilde{Y}_{t+k}) & = \mathbb{E}(Y_tY_{t-k}) & \text{ para } k  = 0, \pm 1, \pm 2, \ldots
 \end{align*}`
 
 Para la identificación de un proceso AR(p) es posible analizar las funciones ACF y PACF, y observar si se cumplen o no los siguientes comportamientos
@@ -725,7 +725,7 @@ En general, Se dice que `$\{Y_t\}_{t≥1}$` es un proceso de autoregresivo de me
 
 donde `$\Phi_p(z) = 1 - \sum_{j=1}^p=\phi_j z^j$` y `$\Theta_q(z) = 1 + \sum_{j=1}^q=\theta_j z^j$` son los polinomios de rezagos autorregresivo y de medias móviles, respectivamente.
 
-Adicionalmente, dado que el modelo ARMA(p,q) se construye a partir de un modelo AR(p) y un modelo MA(q), se asume que **las condiciones de estacionariedad de la parte AR(p) y de invertibilidad de la parte MA(q) se cumplen para el modelo ARMA(p,q)**, es decir, se tendrá que las raíces de los polinomios `$\Phi_p(z)=0$` y `$\Theta_q(z)=0$` se encuentran por fuera del circulo unitario (es decir, tienen módulo mayor a uno). También, se asume que los dos polinomios no tienen raíces en común. <!-- si estas dos condiciones se cumplen, se tendrá que el proceso ARMA(p,q) es identificable y estacionario. -->
+Adicionalmente, dado que el modelo ARMA(p,q) se construye a partir de un modelo AR(p) y un modelo MA(q), se asume que **las condiciones de estacionariedad de la parte AR(p) y de invertibilidad de la parte MA(q) se cumplen para el modelo ARMA(p,q)**, es decir, se tendrá que las raíces de los polinomios `$\Phi_p(z)=0$` y `$\Theta_q(z)=0$` se encuentran por fuera del circulo unitario (es decir, tienen módulo mayor a uno). También, se asume que los dos polinomios no tienen raíces en común. Si estas dos condiciones se cumplen, se tendrá que el proceso ARMA(p,q) es identificable y estacionario. 
 
 Para la identificación de un proceso AR(p) es posible analizar las funciones ACF y PACF, y observar si se cumplen o no los siguientes comportamientos
 
