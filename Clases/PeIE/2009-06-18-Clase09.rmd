@@ -117,7 +117,7 @@ Representa la probabilidad de falla instantanea, dado que el componente funciona
 `\begin{align*} 
 h(t) & = \lim_{\Delta t\to0}\frac{\mathbb{P}(t<T<t+\Delta t|T>t)}{\Delta t} \\
      & = \lim_{\Delta t\to0}\frac{1}{\Delta t}\frac{F(t+\Delta t) - F(t)}{R(t)} \\
-     & = \frac{F'(t)}{R(t)}
+     & = \frac{F(t)^'}{R(t)} \\
      & = \frac{f(t)}{1 - F(t)}
 \end{align*}`
 
