@@ -42,9 +42,9 @@ opts_chunk$set(echo=TRUE,
 ```
 
 ## Identificación y ajuste de modelos ARMA 
-Como se señaló previamente, es posible identificar el orden del proceso estocástico que mejor ajusta a una serie de tiempo, mediante el análisis de las funciones de autocorrelación y autocorrelación parcial muestral obtenida a partir de la serie. En donde, como se presentó en la [Clase 08](https://jiperezga.github.io/MuestreoySeriesdeTiempo/MySTClase_08.html){:target="_blank"}, es posible identificar el orden p de un proceso AR(p) mediante su PACF, mientras que el orden q de un proceso MA(q) mediante su ACF. Sin embargo, en el caso de un proceso ARMA(p,q), no es posible identificar los valores p y q por inspección directa de las gráficas de la ACF y PACF muestrales, debido a que el patrón esperado en ambas gráficas posee una forma decreciente.
+Como se señaló previamente, **es posible identificar el orden del proceso estocástico que mejor ajusta a una serie de tiempo, mediante el análisis de las funciones de autocorrelación y autocorrelación parcial muestral** obtenida a partir de la serie. En donde, como se presentó en la [Clase 08](https://jiperezga.github.io/MuestreoySeriesdeTiempo/MySTClase_08.html){:target="_blank"}, es posible identificar el orden p de un proceso AR(p) mediante su PACF, mientras que el orden q de un proceso MA(q) mediante su ACF. **Sin embargo, en el caso de un proceso ARMA(p,q), no es posible identificar los valores p y q por inspección directa de las gráficas de la ACF y PACF muestrales, debido a que el patrón esperado en ambas gráficas posee una forma decreciente**.
 
-Ahora bien, cabe señalar que no siempre es posible identificar correctamente el orden p y q de los modelos AR, MA o ARMA mediante el empleo de la ACF y PACF muestral,  y por tanto, el interés se centra en restringir el conjunto de todos los posibles modelos ARMA, a un subconjunto de modelos que en principio pueden representar los rasgos principales de la serie.
+Adicionalmente, **cabe señalar que no siempre es posible identificar correctamente el orden p y q de los modelos** AR, MA o ARMA mediante el empleo de la ACF y PACF muestral,  y por tanto, el interés se centra en restringir el conjunto de todos los posibles modelos ARMA, a un subconjunto de modelos que en principio pueden representar los rasgos principales de la serie.
 
 Dado lo anterior, a continuación se señalan algunos aspectos a tener en cuenta a la hora de realizar el proceso de identificación:
 
@@ -52,14 +52,23 @@ Dado lo anterior, a continuación se señalan algunos aspectos a tener en cuenta
 * Cuando el proceso sigue un modelo MA(q), se observa que la PACF muestral presenta un patrón de cola decreciente, con decaimiento exponencial y/o sinusoidal, mientras que la ACF muestral presenta un patrón de corte, el cual indica el orden de media móvil q.
 * Es conveniente proponer modelos simples que expliquen los rasgos obvios del
 proceso en su ACF y PACF, comenzando con modelos AR y MA preferiblemente de orden bajo, buscando evitar la identificación inicial de modelos tipo ARMA, ya que, si p`$\geq$`q`$\geq$`1, la ACF y la PACF no tienen un patrón general.
-* Una alternativa para identificar la pareja de órdenes (p, q) de un modelo ARMA, consiste en buscar dentro de un rango inicial, por ejemplo p, q = 0, 1, . . . , 10, que minimice alguna función de `$\hat{\varepsilon}^2$, como por ejemplo el AIC, BIC o AICC, o mediante la función de autocorrelación extendida (EACF). 
+* Una alternativa para identificar la pareja de órdenes (p, q) de un modelo ARMA, consiste en buscar dentro de un rango inicial, por ejemplo p, q = 0, 1, . . . , 10, que minimice alguna función de `$\hat{\varepsilon}^2$`, como por ejemplo el AIC, BIC o AICC, o mediante la función de autocorrelación extendida (EACF). 
 
 ## Métodos en minimización de criterios de información
-Como su nombre lo indica, los métodos de minimización de criterios de información, consisten en tratar de identificar el verdadero orden p y q de los modelos ARMA, a partir de la estimación de diferentes modelos y la minimización de los criterios de información AIC, BIC o AICC.
+Como su nombre lo indica, los métodos de minimización de criterios de información, consisten en **tratar de identificar el verdadero orden p y q de los modelos ARMA, a partir de la estimación de diferentes modelos** y la minimización de los criterios de información AIC, BIC o AICC.
 
-Estos críterios son calculados a partir de los residuales obtenidos en el ajuste de los modelos. Además, cuando el modelo ARMA verdadero es de orden finito, se tendrá que el orden p y q usando el criterio BIC serán consistentes, es decir, a medida que aumenta el tamaño de la serie, éstos se aproximarán a los ordenes p y q verdaderos. Mientras que, si el modelo ARMA verdadero no es de orden finitos, entonces el AIC, o el AICC será el criterio que conduzca a los ordenes p y q más próximo al verdadero proceso dentro de todos los modelos bajo estudio.
+Estos críterios son calculados a partir de los residuales obtenidos en el ajuste de los modelos. Además, **cuando el modelo ARMA verdadero es de orden finito, se tendrá que el orden p y q usando el criterio BIC serán consistentes**, es decir, a medida que aumenta el tamaño de la serie, éstos se aproximarán a los ordenes p y q verdaderos. Mientras que, **si el modelo ARMA verdadero no es de orden finitos, entonces el AIC, o el AICC será el criterio que conduzca a los ordenes p y q más próximo al verdadero proceso dentro de todos los modelos bajo estudio.**
 
-Para la estimación de un modelo ARMA en <tt>R</tt>, puede emplearse las función `arima()` y `Arima()` de la librería `stats` y `forecast`, respectivamente, mientras que, para la estimación de un modelo ARMA en <tt>R</tt> mediante la minimización del criterio de información e Akaike (AIC), criterio de información Bayesiana (BIC) y/o el criterio de información de Akaike corregido (AICC), es posible emplear la función `auto.arima()` de la librería `forecast`.
+A saber, para el cálculo del AIC, BIC y AICC se tienen las siguientes ecuaciones
+`\begin{align*}
+AIC & = 2k - 2\text{ ln}(\hat{L}) \\
+BIC & = ln(n)k-2ln(\hat{L})\\
+AICC & = 2k - 2\text{ ln}(\hat{L}) + \frac{2k^2 + 2k}{n-k-1}
+\end{align*}`
+
+donde, `$\hat{L}$` es el valor que maximiza la función de verosimilitud del modelo estimado, `$k$` es el número de parámetros en el modelo, `$n$` es el número de observaciones.
+
+Para la estimación de un modelo ARMA en <tt>R</tt>, puede emplearse las función `arima()` y `Arima()` de la librería `stats` y `forecast`, respectivamente, mientras que, para la estimación de un modelo ARMA en <tt>R</tt> mediante la minimización del criterio de información e Akaike (AIC), criterio de información Bayesiana (BIC) y/o el criterio de información de Akaike corregido (AICC), es posible emplear la función `auto.arima()` y `armasubsets` de la librería `forecast` y `TSA`, respectivamente.
 
 ## Método de identificación basado en la función de autocorrelación extendida (EACF)
 Una alternativa para la identificación de un modelo ARMA, es mediante la función de autocorrelación extendida, la cual posee un desempeño relativamente bueno, cuando el tamaño de la serie de tiempo es grande. Esta función usa el hecho de que si la parte AR de un ARMA fuese conocida, entonces al filtrar de la serie esta componente mediante regresión, se obtendría un proceso MA puro con la propiedad de patrón de corte en su ACF. 
@@ -86,7 +95,7 @@ Este procedimiento se repite indefinidamente hasta que no se halle más informac
 W_{t}^{(j)} = (1 - \hat{\phi}_1^{(j)}L-\ldots- \hat{\phi}_m^{(j)}L^m)\widetilde{Y}_{t}
 \end{align*}`
 
-Con el fin de resumir las autocorrelaciones obtenidas mediante `$\widetilde{W}{t}^{(j)}$` por las diferentes combinaciones de `$j$` y `$m$`, se presenta una tabla donde el elemento en la fila `$m$` y columna `$j$` toma el valor del símbolo `$\times$` si la autocorrelación muestral de `$W$` de orden `$j$`, `$\hat{\rho}_j^{(m)}$`es significativamente diferente de cero, **es decir, si la autocorrelación para la combinación `$m,j$` no muestra un comportamiento de ruido blando** y toma el valor de `$0$` en caso contrario.
+Con el fin de resumir las autocorrelaciones obtenidas mediante `$W{t}^{(j)}$` por las diferentes combinaciones de `$j$` y `$m$`, se presenta una tabla donde el elemento en la fila `$m$` y columna `$j$` toma el valor del símbolo `$\times$` si la autocorrelación muestral de `$W$` de orden `$j$`, `$\hat{\rho}_j^{(m)}$`es significativamente diferente de cero, **es decir, si la autocorrelación para la combinación `$m,j$` no muestra un comportamiento de ruido blando** y toma el valor de `$0$` en caso contrario.
 
 **Teóricamente, los órdenes p,q del modelo ARMA tendrán un comportamiento de tríangulo de ceros, con vértice superior izquierdo indicando los correspondientes órdenes del proceso ARMA.**, aunque en la práctica ésto pocas veces ocurre. Para la estimación de la EACF en <tt>R</tt>, es posible emplear la función `eacf()` de la librería `TSA`.
 

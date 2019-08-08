@@ -41,6 +41,8 @@ opts_chunk$set(echo=TRUE,
                cache = FALSE)
 ```
 
+<!-- AGREGAR FORMULAS PARA PRONÓSTICO ROMARIO SECCIÓN 6!!! -->
+
 ## Operador de rezagos
 El operador de rezagos es un término usado en series de tiempo, para operar la serie de tiempo de interés, y obtener una serie rezagada o retardada un periodo hacia atrás, en donde al aplicar dicho operador varias veces, es posible obtener la serie rezagada o retardada `$p$` periodos hacia atrás.
 
