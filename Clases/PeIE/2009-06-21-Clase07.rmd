@@ -52,7 +52,7 @@ Un proceso Bernoulli es aquel que cumple
 4. Los ensayos repetidos son independientes entre si.
 
 ### Ensayo de Bernoulli
-Si la probabilidad de éxito de un experimento es `$p$`, entonces la probabilidad de fallo debe ser `$1-p$` y la función de probabilidad de la variable aleatoria `$X\sim Be(p)$` para un ensayo Beroulli será
+Si la probabilidad de éxito de un experimento es `$p$`, entonces la probabilidad de fallo debe ser `$1-p$` y la función de probabilidad de la variable aleatoria `$X\sim Be(p)$` para un ensayo Bernoulli será
 `\begin{align*}
 f(x) = p^x(1-p)^{1-x} \quad \quad x=0,1
 \end{align*}`
@@ -77,7 +77,7 @@ Si `$X\sim b(n,p)$`, entonces se puede probar que la media y varianza de la vari
 \mathbb{E}(X)=np \quad \quad Var(X)=np(1-p)
 \end{align*}`
 
-### Proseso Poisson
+### Proceso Poisson
 Un proceso Poisson es aquel que cumple
 
 1. El número de resultados que ocurren en un intervalo o región específica es independiente del número que ocurre en cualquier otro intervalo de tiempo o región del espacio disjunto.
