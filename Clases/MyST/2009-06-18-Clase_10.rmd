@@ -41,6 +41,9 @@ opts_chunk$set(echo=TRUE,
                cache = FALSE)
 ```
 
+
+<!-- Hay que mejorar esta clase, mirar el programa del curso para agregar los estadísticos allí planteados -->
+
 ## Ajuste de modelos
 Para el ajuste y estimación de modelos ARMA(p,q) **no es conveniente emplear métodos de estimación de regresión lineal múltiple ordinarios**, tales como los presentados en la [Clase 09](https://jiperezga.github.io/MuestreoySeriesdeTiempo/MySTClase_09.html){:target="_blank"}, para la identificación de los ordenes p y q mediante el método propuesto por @Tsay1984, ya que las ecuaciones de minimización resultantes no son necesariamente lineales en los parámetros desconocidos, y por tanto, para el ajuste de lo modelos ARMA(p,q) **es más adecuado emplear métodos basados en máxima verosimilitud**, ya que permiten obtener resultados asintóticos cuando los tamaños de la serie son grandes.
 
