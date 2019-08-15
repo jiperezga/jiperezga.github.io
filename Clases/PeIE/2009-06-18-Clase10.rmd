@@ -9,9 +9,6 @@ introduction: |
   Distribuciones de probabilidad continua: <br/>
   - Distribución Normal <br/>
   - Distribución Normal Estándar <br/>
-  Teoremas de Aproximación: <br/>
-  - Binomial a Poisson <br/>
-  - Binomial a Normal
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
@@ -65,43 +62,10 @@ f(z) = \begin{cases} \frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}} & -\infty<x<\infty 
 \end{align*}`
 
 ### Propiedades
-Si `$X\sim N(\mu, \sigma^2$`, se tendrá que `$Z=\frac{x-\mu}{\sigma}\sim N(0,1)$`, y por tanto, si `$a$` y `$b$` son constantes, entonces 
+Si `$X\sim N(\mu, \sigma^2)$`, se tendrá que `$Z=\frac{x-\mu}{\sigma}\sim N(0,1)$`, y por tanto, si `$a$` y `$b$` son constantes, entonces 
 
 1. `$\mathbb{P}(Z\leq a) = \mathbb{P}(Z\geq -a)$`
 2. `$\mathbb{P}(Z\geq a) = \mathbb{P}(Z\leq -a) = 1- \mathbb{P}(Z\leq a)$`
 3. `$\mathbb{P}(a\leq Z\leq b) = \mathbb{P}(Z\leq b) - \mathbb{P}(Z< a)$`
 4. Si `$a = - b$` entonces `$\mathbb{P}(a\leq Z\leq b) = \mathbb{P}(-b\leq Z\leq b) =2\mathbb{P}(Z\leq b) - 1$`
 5. `$Z_\alpha$` es el valor de la variable aleatoria `$Z\sim N(0,1)$` tal que `$\mathbb{P}(Z\geq Z_\alpha)=\alpha$`, y `$\mathbb{P}(Z\leq Z_\alpha)=1 - \alpha$`
-
-## Teoremas de Aproximación
-### Teoremas de Aproximación Binomial a Poisson
-Si `$X\sim b(n,p)$` con `$n$` grande `$(n\geq 100)$` y `$p$` pequeña `$(p\leq 0.01)$` entonces se dice que `$X\stackrel{a}{\sim}P(\lambda)$` donde `$\lambda = np$`
-
-### Teoremas de Aproximación Binomial a Normal
-Si `$X\sim b(n,p)$` con `$n$` grande `$(n\geq 30)$` y `$p$` cercano a 0.5 `$(p\approx 0.5)$` entonces se dice que `$X\stackrel{a}{\sim}N(\mu,\sigma^2)$` donde `$\mu = np$` y `$\sigma^2 = np(1-p)$`.
-
-Además, se tendrá que `$Z\stackrel{a}{\sim}N(0,1)$`, tal que
-`\begin{align*}
-Z=\frac{x-np}{\sqrt{np(1-p)}}\stackrel{a}{\sim}N(0,1)
-\end{align*}`
-
-La aproximación será buena si `$np$` y `$n(1-p)>5$`.
-
-**Nota:** 
-Para realizar la aproximación de binomial a normal, se debe usar un factor de corrección de continuaidad de 0.5, así
-`\begin{align*} 
-\text{Binomial} & & & & \text{Normal} \quad \quad \quad \quad \quad \\
-\mathbb{P}(X\leq a) & & & & \mathbb{P}(X\leq a + 0.5) \quad \quad \quad \quad \; \\
-\mathbb{P}(X<a) & & & & \mathbb{P}(X\leq a - 0.5) \quad \quad \quad \quad \; \\
-\mathbb{P}(X\geq a) & & & & \mathbb{P}(X\geq a - 0.5) \quad \quad \quad \quad \; \\
-\mathbb{P}(X>a) & & & & \mathbb{P}(X\geq a + 0.5) \quad \quad \quad \quad \; \\
-\mathbb{P}(X=a) & & & & \mathbb{P}(a - 0.5 \leq X\leq a + 0.5)
-\end{align*}`
-
-
-
-
-
-
-
-
