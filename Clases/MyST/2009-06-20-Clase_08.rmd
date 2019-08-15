@@ -7,7 +7,7 @@ tags:
 
 introduction: |
   Operador de rezagos <br/>
-  Representación de un proceso lineal infinito AR y MA. <br/>
+  Representación de un proceso lineal AR, MA y ARMA. <br/>
   Condiciones de Estacionariedad e invertibilidad. 
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
@@ -394,7 +394,7 @@ Se dice que `$\{Y_t\}_{t≥1}$` sigue un proceso de autorregresivo de orden 1 co
 \widetilde{Y}_t & = \phi_1 \widetilde{Y}_{t-1} + \varepsilon_t
 \end{align*}`
 
-con `$\varepsilon_t\sim R.B(0, \sigma_{\varepsilon}^2)$` independiente de `$\widetilde{Y}_{t+k}$` para todo `$k>0$`. De la ecuación anterior, se observa que se tiene una estructura de regresión entre `$\widetilde{Y}_t$` y `$\widetilde{Y}_{t-1}$`, lo cual indica **existe una relación lineal entre las observaciones y los valores de la misma rezagadas un periodo**, siendo el parámetro `$\phi_1$` el parámetro del modelo.
+con `$\varepsilon_t\sim RB(0, \sigma_{\varepsilon}^2)$` independiente de `$\widetilde{Y}_{t+k}$` para todo `$k>0$`. De la ecuación anterior, se observa que se tiene una estructura de regresión entre `$\widetilde{Y}_t$` y `$\widetilde{Y}_{t-1}$`, lo cual indica **existe una relación lineal entre las observaciones y los valores de la misma rezagadas un periodo**, siendo el parámetro `$\phi_1$` el parámetro del modelo.
 
 Además, se puede probar que la media, varianza y autocovarianza del proceso AR(1), bajo el supuesto `$|\phi_1|<1$` están dados por
 `\begin{align*}
@@ -722,10 +722,10 @@ De lo anterior, se tiene que un proceso ARMA(p,q) se define como un modelo que c
 
 En general, Se dice que `$\{Y_t\}_{t≥1}$` es un proceso de autoregresivo de media móvil de ordenes (p,q), si podemos expresar a `$\widetilde{Y}_t = Y_t - \mu$` en términos de un proceso estacionario de media cero, tal que
 `\begin{align*}
-(\Phi_p (L))\widetilde{Y}_t = (\Theta_q (L))\varepsilon_t
+\Phi_p (L)\widetilde{Y}_t = \Theta_q (L)\varepsilon_t
 \end{align*}`
 
-donde `$\Phi_p(z) = 1 - \sum_{j=1}^p=\phi_j z^j$` y `$\Theta_q(z) = 1 + \sum_{j=1}^q=\theta_j z^j$` son los polinomios de rezagos autorregresivo y de medias móviles, respectivamente.
+donde `$\Phi_p(z) = 1 - \sum_{j=1}^p\phi_j z^j$` y `$\Theta_q(z) = 1 + \sum_{j=1}^q\theta_j z^j$` son los polinomios de rezagos autorregresivo y de medias móviles, respectivamente.
 
 Adicionalmente, dado que el modelo ARMA(p,q) se construye a partir de un modelo AR(p) y un modelo MA(q), se asume que **las condiciones de estacionariedad de la parte AR(p) y de invertibilidad de la parte MA(q) se cumplen para el modelo ARMA(p,q)**, es decir, se tendrá que las raíces de los polinomios `$\Phi_p(z)=0$` y `$\Theta_q(z)=0$` se encuentran por fuera del circulo unitario (es decir, tienen módulo mayor a uno). También, se asume que los dos polinomios no tienen raíces en común. Si estas dos condiciones se cumplen, se tendrá que el proceso ARMA(p,q) es identificable y estacionario. 
 
