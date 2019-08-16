@@ -9,9 +9,7 @@ introduction: |
   Distribuciones de probabilidad discreta: </br>
   - Distribución Binomial </br>
   - Distribución Hipergeométrica </br>
-  - Distribución Geométrica </br>
-  - Distribución Binomial Negativa
-  
+  - Distribución Geométrica
   
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
@@ -109,36 +107,4 @@ g(p) = p(1-p)^{x-1} \quad \quad x = 1,2,\ldots
 Si `$X\sim g(p)$`, entonces se puede probar que la media y varianza de la variable aleatoria `$X$` están dadas por
 `\begin{align*}
 \mathbb{E}(X)=\frac{1}{p} \quad \quad Var(X)=\frac{1-p}{p^2}
-\end{align*}`
-
-### Distribución Binomial Negativa
-Sea `$X$` el número de ensayos necesarios para generar `$k$` éxitos en un experimento Binomial Negativo, entonces se dice que `$X\sim b^*(k,p)$` si su función de probabilidad es de la forma
-`\begin{align*}
-b^*(p) = \left(\begin{array}{c}x-1\\ k-1\end{array}\right)p^k(1-p)^{x-k} \quad \quad x=k, k+1, \ldots
-\end{align*}`
-
-#### Teorema
-Si `$X\sim b^*(k,p)$`, entonces se puede probar que la media y varianza de la variable aleatoria `$X$` están dadas por
-`\begin{align*}
-\mathbb{E}(X)=\frac{k}{p} \quad \quad Var(X)=k\frac{(1-p)}{p^2}
-\end{align*}`
-
-### Proceso Poisson
-Un proceso Poisson es aquel que cumple
-
-1. El número de resultados que ocurren en un intervalo o región específica es independiente del número que ocurre en cualquier otro intervalo de tiempo o región del espacio disjunto.
-2. La probabilidad de que ocurra un solo resultado durante un intervalo de tiempo corto o región pequeña es proporcional a la longitud del intervalo o al tamaño de la región, y no depende del número de resultados que ocurren por fuera de este intervalo de tiempo o región.
-3. La probabilidad de que ocurra más de un resultado en tal intervalo o región pequeña es insignificante.
-
-### Distribución Poisson
-El número de sucesos que ocurren en un intervalo de tiempo o región específica, es una variable aleatoria `$X$` con distribución de probabilidad Poisson, tal que
-`\begin{align*}
-f(x) = \frac{e^{-\lambda}\lambda^x}{x!} \quad \quad x=0,1,\ldots
-\end{align*}`
-donde `$\lambda$` es el parámetro de la distribución y representa el número promedio de sucesos por unidad de tiempo o región específica.
-
-#### Teorema
-Si `$X\sim P(\lambda)$` entonces se puede probar que la media y varianza de la variable aleatoria `$X$` están dadas por
-`\begin{align*}
-\mathbb{E}(X)=\lambda \quad \quad Var(X)=\lambda
 \end{align*}`
