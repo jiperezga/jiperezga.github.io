@@ -1,0 +1,183 @@
+---
+layout: post
+title: "Práctica 04"
+main-class: 'practica'
+permalink: /EstadisticaI/EstI:title.html
+tags:
+
+introduction: | 
+              Ejercicios sobre: <br/>
+              - Esperanza matemática <br/>
+              - Esperanza condicional <br/>
+              - Varianza <br/>
+              - Teorema de Chebyshev <br/>
+              - Distribución Binomial <br/>
+              - Distribución Hipergeométrica <br/>
+              - Distribución Geométrica <br/>
+              - Distribución Binomial Negativa <br/>
+              - Distribución Poisson <br/>
+              - Teoremas de Aproximación
+              
+header-includes:
+   - \usepackage{amsmath,amssymb,amsthm,amsfonts}
+   - \usepackage[sectionbib]{natbib}
+   - \usepackage[hidelinks]{hyperref}
+output:
+  md_document:
+    variant: markdown_strict+backtick_code_blocks+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash
+    preserve_yaml: TRUE
+always_allow_html: yes   
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding,
+  output_dir = "../../EstadisticaI/_posts/", output_format = "all"  ) })
+bibliography: "../../referencias.bib"
+csl: "../../apa.csl"
+---
+
+```{r knitr_init, echo=FALSE, cache=FALSE}
+library(knitr)
+## Global options
+opts_chunk$set(echo=TRUE,
+               cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE,
+               fig.path = paste0("../../EstadisticaI/images/", "Práctica04"),
+               cache.path = "../../EstadisticaI/cache/",
+               cache = FALSE)
+
+```
+
+## Lista de ejercicios
+1. Suponga que por Ley, la vida máxima de la patente para un nuevo medicamento es 17 años. Si restamos el tiempo requerido por la FDA para someter a pruebas y aprobar el medicamento, se obtiene la vida real de la patente para el medicamento, es decir, el tiempo que la compañía tiene para recuperar los costos de investigación, desarrollo y obtener una utilidad. La distribución de los tiempos de vida reales de las patentes para nuevos medicamentos se da a continuación:
+```{r echo=FALSE}
+library(kableExtra)
+tabla1 <- data.frame(c("Años, $x$", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"),
+              c("$f(x)$", "0.03", "0.05", "0.07", "0.10", "0.14", "0.20", "0.18", "0.12", "0.07", "0.04"))
+tabla1 <- data.frame(t(tabla1))
+
+kable(tabla1, align = c("c", "l", "l", "l", "l"),
+  format = "html", booktabs = T, row.names = FALSE, col.names = NULL) %>%
+kable_styling("striped", full_width = F)
+```
+<ol type ="a">
+<li> Encuentre el tiempo de vida real promedio de las patentes para nuevos medicamentos. </li>
+<li> Encuentre la probabilidad de que el tiempo de vida real de las patentes se encuentre al menos a una desviación estándar de la vida real promedio, y compare este resultado con el obtenido con el teorema de Chebyshev. </li>
+</ol>
+2. Suponga una variable aleatoria discreta `$X$` con función de masa de probabilidad dada 
+`\begin{align*}
+f(x)=\frac{(x^2+4)}{30} \quad \quad x=0,1,2,3  
+\end{align*}`
+<ol type ="a">
+<li> Calcule el valor promedio de la variable aleatoria $X$. </li>
+<li> Calcule la desviación estándar de la variable aleatoria $X$. </li>
+<li> Encuentre la probabilidad de que la variable aleatoria $X$, se encuentre a lo más a 1.5 desviaciones estándar de su media y compare el resultado obtenido con el teorema de Chebyshev. </li>
+</ol>
+3.	La función de densidad de probabilidad conjunta de las variables aleatorias `$X$`, `$Y$` y `$Z$` está dada por
+`\begin{align*}
+	f(x,y,z)=\begin{cases}4xyz^2; &0< x,y <1; 0< z<3 \\0 & \text{en otro caso}\end{cases}
+\end{align*}`
+Calcule
+<ol type ="a">
+<li> la correlación de $X$ y $Y$. </li>
+<li> la correlación de $X$ y $Z$. </li>
+<li> la correlación de $Y$ y $Z$. </li>
+</ol>
+4. Sea `$X$` una variable aleatoria continua con distribución de probabilidades `$f(x)$` dada por
+`\begin{align*}
+	f(x)=\begin{cases}kx^2 & -5 \leq x \leq 3, \\0 & \text{en otro caso}\end{cases} 
+\end{align*}`
+<ol type ="a">
+<li> Encuentre el valor de $k$ que haga a $f(x)$ una función densidad de probabilidad. </li>
+<li> Calcule la media y la varianza de la variable aleatoria $Y=X^2$. </li>
+<li> Encuentre la probabilidad de que la variable aleatoria $Y$, se encuentre a lo más a 1.5 desviaciones estándar de su media y compare el resultado obtenido con el teorema de Chebyshev. </li>
+</ol>		
+5. Suponga que se tiene un total de tres cajas exactamente iguales, donde cada una contiene un animal encerrado, un conejo, un hamster y una cobaya. Si se trata de adivinar qué clase de animal hay en cada caja y `$X$` representa la variable aleatoria discreta del numero de aciertos. Escriba la función de masa de probabilidad de la variable aleatoria `$X$` y calcule la esperanza y varianza de `$Z= X-3X^2$`.
+6. 	Si `$X$` y `$Y$` son variables aleatorias discretas con función de probabilidad dada por: 
+`\begin{align*}
+f(x,y)=k\left(\frac{x+y}{xy}\right) \quad \quad x = 1,2,3; y = 2,3
+\end{align*}`
+<ol type ="a">
+<li> Calcule el valor $k$ que hacer a la función una función de masa de probabilidad. </li>
+<li> Encuentre la correlación entre $X$ y $Y$ donde $Y = 6X$. </li>
+</ol>			
+7. Sea `$X$` una variable aleatoria discreta con distribución de probabilidades `$f(x)$` dada por:
+```{r echo=FALSE}
+tabla2 <- data.frame(c("$x$", "1", "3", "4", "5", "7"),
+              c("$f(x)$", "0.31", "0.13", "0.15", "0.18", "0.23"))
+tabla2 <- data.frame(t(tabla2))
+
+kable(tabla2, align = c("c", "l", "l", "l", "l"),
+  format = "html", booktabs = T, row.names = FALSE, col.names = NULL) %>%
+kable_styling("striped", full_width = F)
+```
+Encuentre el coeficiente de asimetría, el cuál está dado por 
+`\begin{align*}
+\gamma_{1}= \mathbb{E}\left[\left({\frac{X-\mu}{\sigma}}\right)^{3}\right]={\frac{\mu_{3}}{\sigma^{3}}}={\frac{\mathbb{E}\left[(X-\mu)^{3}\right]}{(\mathbb{E}\left[(X-\mu)^{2}\right])^{3/2}}}
+\end{align*}`
+8. Suponga que cierto tipo de pequeñas empresas de procesamiento de datos están tan especializadas que algunas tienen dificultades para obtener utilidades durante su primer año de operación. La función de densidad de probabilidad que caracteriza la proporción `$Y$` que obtiene utilidades está dada por
+`\begin{align*}
+		f(y)=\begin{cases}ky^4(1-y)^3 & 0\leq y \leq 1,\\0 & \text{en otro caso}\end{cases} 
+\end{align*}`
+<ol type ="a">
+<li> ¿Cuál es el valor de $k$ que hace de la anterior una función de densidad válida? </li>
+<li> Calcule la varianza de la variable aleatoria $Z=3Y-4$. </li>
+</ol>			
+9. Si la variable aleatoria discreta `$X$` tiene una función de masa de probabilidad dada por 
+`\begin{align*}
+	f(x)=\frac{\binom{2}{x}\binom{3}{3-x}}{\binom{5}{3}} \quad \quad \text{ para }x=0,1,2
+\end{align*}`
+Calcule el coeficiente de curtosis, el cual está dado por 
+`\begin{align*}
+	\gamma_{2}= \mathbb{E}\left[\left({\frac{X-\mu}{\sigma}}\right)^{4}\right]={\frac{\mu_{4}}{\sigma^{4}}}={\frac{\mathbb{E}\left[(X-\mu)^{4}\right]}{(\mathbb{E}\left[(X-\mu)^{2}\right])^{4/2}}}
+\end{align*}`
+10. Suponga que el tiempo medido en unidades de 100 horas, que se usa una licuadora en un hogar durante un año es una variable aleatoria continua `$X$` con función de densidad de probabilidad dada por:
+`\begin{align*}
+	f(x) =\begin{cases}x & 0< x < 1 \\ 2-x & 1\leq x < 2 \\ 0 & \text{en otro caso} \end{cases} 
+\end{align*}`
+<ol type ="a">
+<li> Calcule la media y varianza de la variable aleatoria $X$ </li>
+<li> Calcule la varianza de la variable aleatoria $Y=2X+3$. </li>
+<li> Calcule la covarianza entre $X$ y $Y$. </li>
+</ol>	
+11. Calcule la covarianza de las variables aleatorias `$X$` y `$Y$` que tienen la siguiente función de densidad de probabilidad conjunta
+`\begin{align*}
+	f(x,y)=\begin{cases}x+y & 0<x<1,\quad 0<y<1,\\0 & \text{en otro caso}\end{cases} 
+\end{align*}`
+12. \item Sea `$X$` el número de veces que fallará cierta máquina de control numérico: 1, 2 o 3 veces en un día dado, y `$Y$` denota el número de veces que se llama a un técnico para una emergencia. Suponga que su distribución de probabilidad conjunta estará dada como
+```{r echo=FALSE}
+tabla3 <- data.frame(c("", "1", "0.05", "0.05", "0.10"),
+              c("$\\mathbf{Y}$", "3", "0.05", "0.10", "0.35"),
+              c(" ", "5", "k", "0.20", "0.10"))
+tabla3 <- data.frame(t(tabla3))
+colnames(tabla3) <- c("$\\mathbf{p(x,y)}$", "$\\mathbf{X}$", "1", "2", "3")
+
+kable(tabla3, align = c("l", "l", "l", "l", "l"),
+  format = "html", booktabs = T, row.names = FALSE) %>%
+kable_styling("striped", full_width = F) %>%
+collapse_rows(columns = 1, valign = "middle")
+```
+Calcule el `$Corr(X,Y^2)$`.
+13. Una moneda se lanza dos veces. Sea `$X$` el número de caras en el primer lanzamiento y `$Y$` el número	total de caras en los 2 lanzamientos. Si la moneda no está balanceada y la probabilidad de sello es dos veces la probabilidad de cara, calcule
+<ol type ="a">
+<li> la media y varianza de $X$ y $Y$ </li>
+<li> el coeficiente de asimetría de $X$ y $Y$ </li>
+<li> la correlación de $3X$ y $2Y$ </li>
+</ol>	
+14. Un sistema químico que surge de una reacción química tiene dos componentes importantes, entre otros, en una mezcla. La distribución conjunta que describe las proporciones `$X$` y `$Y$` de estos dos componentes está dada por
+<ol type ="a">
+<li> Determine la esperanza condicional $\mathbb{E}(Y | X)$ </li>
+<li> Determine la esperanza condicional $\mathbb{E}(X | Y)$ </li>
+</ol>	
+15. Considere la siguiente función de densidad de probabilidad
+`\begin{align*}
+	f(x) =\begin{cases}\frac{3}{2}\sqrt{x}, & 0< x < 1\\ 0, & \text{en otro caso} \end{cases} 
+\end{align*}`
+<ol type ="a">
+<li> Calcule la esperanza de $1/X$. </li>
+<li> Calcule la esperanza de $2/X^2$ </li>
+</ol>	
+
+
