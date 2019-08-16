@@ -42,10 +42,10 @@ opts_chunk$set(echo=TRUE,
 ```
 
 ## Teoremas de Aproximación
-### Teoremas de Aproximación Binomial a Poisson
+### Teorema de Aproximación Binomial a Poisson
 Si `$X\sim b(n,p)$` con `$n$` grande `$(n\geq 100)$` y `$p$` pequeña `$(p\leq 0.01)$` entonces se dice que `$X\stackrel{a}{\sim}P(\lambda)$` donde `$\lambda = np$`
 
-### Teoremas de Aproximación Binomial a Normal
+### Teorema de Aproximación Binomial a Normal
 Si `$X\sim b(n,p)$` con `$n$` grande `$(n\geq 30)$` y `$p$` cercano a 0.5 `$(p\approx 0.5)$` entonces se dice que `$X\stackrel{a}{\sim}N(\mu,\sigma^2)$` donde `$\mu = np$` y `$\sigma^2 = np(1-p)$`.
 
 Además, se tendrá que `$Z\stackrel{a}{\sim}N(0,1)$`, tal que
