@@ -84,7 +84,7 @@ Si `$X$` es el número de éxitos de una muestra completamente aleatoria de tama
 h(N,M,n)=\frac{\left(\begin{array}{c}M\\ x\end{array}\right) \left(\begin{array}{c}N-M\\ n-x\end{array}\right)}{\left(\begin{array}{c}N\\ n\end{array}\right)}
 \end{align*}`
 
-con `$x$` un entero que satisface la condición max`$\{0, M-(N-n)\leq x \leq$`min`${M,n}\}$`.
+con `$x$` un entero que satisface la condición `$max\{0, M-(N-n)\} \leq x \leq min\{M,n}\}$`.
 
 **Nota:** Esta distribución es usada cuando se realiza muestreo **sin reemplazo**, en poblaciones finitas donde hay `$M$` éxitos de un total de `$N$` objetos, de los cuales se seleccionan `$n$` objetos a la vez.
 

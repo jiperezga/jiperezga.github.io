@@ -8,7 +8,8 @@ tags:
 introduction: |
   Introducción a modelos ARIMA. </br>
   Operador de diferencias.</br>
-  Procesos integrados
+  Procesos integrados. </br>
+  Raíces unitarias.
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
@@ -111,14 +112,14 @@ De acuerdo a lo anterior, se podrán derivar dos casos particulares de los model
 ### Raices unitarias
 Suponga un modelo ARMA(p,q) tal que 
 `\begin{align*}
-(\Phi_p (L))\widetilde{Y}_t = (\Theta_q (L))\varepsilon_t
+\Phi_p (L)\widetilde{Y}_t = \Theta_q (L)\varepsilon_t
 \end{align*}`
 
-con `$\varepsilon_t \sim RB(0, \sigma_{\varepsilon}^2)$`, entonces, si una de las `$p$` raicez de la ecuación `$\Phi_p(z) = 1 - \sum_{j=1}^p=\phi_j z^j = 0$` es `$z = 1$` entonces se tendrá que `$Y_t$` tiene una raíz unitaria.
+con `$\varepsilon_t \sim RB(0, \sigma_{\varepsilon}^2)$`, entonces, si una de las `$p$` raices de la ecuación `$\Phi_p(z) = 1 - \sum_{j=1}^p=\phi_j z^j = 0$` es `$z = 1$` entonces se tendrá que `$Y_t$` tiene una raíz unitaria.
 
 En dicho caso, podremos factorizar el polinomio `$\Phi_p(z)$` como `$\Phi_p(z) = (1-z)\Phi_{p-1}(z)$`, un polinomio de grado `$p-1$`, obteniendo con ello
 `\begin{align*}
-(\Phi_{p-1}(L))(1-L)\widetilde{Y}_t = (\Theta_q (L))\varepsilon_t
+\Phi_{p-1}(L)(1-L)\widetilde{Y}_t = \Theta_q (L)\varepsilon_t
 \end{align*}`
 
 Entonces, si `$Y_t\sim ARMA(p,q)$` con una raíz unitaria, entonces se tendrá que `$\Delta Y_t\sim ARMA(p-1,q)$` o equivalentemente `$Y_t\sim ARIMA(p,1,q)$`, siendo `$d=1$`.
@@ -133,7 +134,7 @@ el primer tipo, es un modelo lineal con media cero y sin tendencia lineal con re
 \Delta Y_t = \gamma Y_{t-1} + \sum_{j=2}^p \phi_j \Delta Y_{T-j+1} + \varepsilon_t
 \end{align*}`
 
-con `$\gamma = \phi_1 - 1$`. Entonces is hay raices unitarias se cumplirá que `$\phi_1 = 0$` o equivalentemente `$\gamma=0$`.
+con `$\gamma = \phi_1 - 1$`. Entonces is hay raices unitarias se cumplirá que `$\phi_1 = 1$` o equivalentemente `$\gamma=0$`.
 
 El segundo tipo, es un modelo lineal con media diferente de cero y sin tendencia lineal respecto al tiempo.
 `\begin{align*}
@@ -173,6 +174,6 @@ La prueba Dickey-Fuller puede realizarse en <tt>R</tt>, mediante la función `ad
 ## Ajuste de modelo ARIMA
 Una vez identificado el orden apropiado de diferenciación, d, asociado a la serie de tiempo `$Y_t$`, se realiza el mismo procedimiento explicado en la [Clase 09](https://jiperezga.github.io/MuestreoySeriesdeTiempo/MySTClase_09.html){:target="_blank"} para identificar el orden p y q que posee la serie de diferencias. 
 
-**Finalmente, identificados satisfactoriamente los ordenes p,d,q del modelo ARIMA, es posible realizar la estimación del modelo ARIMA(p,d,q) para la serie original**, mediante el procedimiento explicado en la [Clase 09](https://jiperezga.github.io/MuestreoySeriesdeTiempo/MySTClase_09.html){:target="_blank"}, junto con la validación de los correspondientes supuestos que debe cumplir el modelo ajustado, los cuales se fueron explicados en la [Clase 09](https://jiperezga.github.io/MuestreoySeriesdeTiempo/MySTClase_09.html){:target="_blank"}.
+**Finalmente, identificados satisfactoriamente los ordenes p,d,q del modelo ARIMA, es posible realizar la estimación del modelo ARIMA(p,d,q) para la serie original**, mediante el procedimiento explicado en la [Clase 09](https://jiperezga.github.io/MuestreoySeriesdeTiempo/MySTClase_09.html){:target="_blank"}, junto con la validación de los correspondientes supuestos que debe cumplir el modelo ajustado, los cuales se fueron explicados en la [Clase 10](https://jiperezga.github.io/MuestreoySeriesdeTiempo/MySTClase_10.html){:target="_blank"}.
 
 ## Bibliografía

@@ -99,7 +99,7 @@ Si `$X\sim Unif{1,2,\ldots,m}.$` entonces se puede probar que la media y varianz
 <!-- \end{align*}` -->
 
 ## Teoremas de Aproximación
-### Teorema de Aproximación Binomial a Poisson
+### Teorema de Aproximación Hipergeométrica a Binomial
 Si `$X\sim h(N,M,n)$` con `$n$` pequeña en comparación con `$N$` (`$n/N <0.05$`) entonces se dice que `$X\stackrel{a}{\sim}b(n,p)$` con `$p = M/N$`.
 
 ### Teorema de Aproximación Binomial a Poisson
