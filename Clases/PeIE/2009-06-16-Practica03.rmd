@@ -52,7 +52,7 @@ kable_styling("striped", full_width = F)
 <ol type ="a">
 <li> Encuentre el tiempo de vida real promedio de las patentes para nuevos medicamentos. </li>
 <li> Encuentre la función de distribución acumulada $F(X)$. </li>
-<li> Calcule la probabilidad de que el tiempo de vida en años de la patente sea a lo más `$9$` años. </li>
+<li> Calcule la probabilidad de que el tiempo de vida en años de la patente sea a lo más $9$ años. </li>
 </ol>
 2. Sea `$X$` la variable aleatoria del número de clientes que llegan a un centro comercial en un periodo de una hora. Si la distribución acumulada de `$X$` es:
 `\begin{align*}
@@ -72,21 +72,21 @@ kable_styling("striped", full_width = F)
 <ol type ="a">
 <li> Encuentre el valor de $k$ para que $f(x)$ sea una función de densidad de probabilidad bien definida. </li>
 <li> Calcule la función de distribución acumulada $F(x)$ y utilice el resultado para calcular $P(0.24 < X < 0.63)$. </li>
-<li> Calcule el valor promedio y desviación estándar de la función de densidad. </li>
+<li> Calcule el valor promedio y desviación estándar de la variable aleatoria $X$. </li>
 </ol>
 4. Suponga que el tiempo medido en unidades de `$100$` horas, en las cuales, se usa una licuadora en un hogar durante un año, es una variable aleatoria continua `$X$` con función de densidad de probabilidad dada por:
 `\begin{align*}
 	f(x) =\begin{cases}x & 0< x < 1 \\ 2-x & 1\leq x < 2 \\ 0 & \text{En otro caso}\end{cases} 
 \end{align*}`
 <ol type ="a">
-<li> Pruebe si efectivamente es una función de densidad de probabilidad, de no serlo, multiplique la función por una constante $k$ que hace $f(x)$ esté bien definida. </li>
+<li> Pruebe si efectivamente es una función de densidad de probabilidad bien definida, de no serlo, multiplique la función por una constante $k$ que hace a $f(x)$ estar bien definida. </li>
 <li> Calcule la función de distribución acumulada $F(x)$. </li>
-<li> Calcule la probabilidad de que en un año una familia use la licuadora entre 65 y 100 horas. </li>
-<li> Calcule la media y la varianza del tiempo de uso de la licuadora, medido en unidades de 100 horas. </li>
+<li> Calcule la probabilidad de que en un año una familia use la licuadora entre $65$ y $100$ horas. </li>
+<li> Calcule la media y la varianza del tiempo de uso de la licuadora, medido en unidades de $100$ horas. </li>
 </ol>
 5. El tiempo que pasa, en horas, para que un radar detecte entre conductores sucesivos a los que exceden los límites de velocidad es una variable aleatoria continua con una función de distribución acumulativa
 `\begin{align*}
-	F(x) =\begin{cases}0, & 0< x\\ 1-e^{-10x}, & x \geq 0 \end{cases} 
+	F(x) =\begin{cases}0, & 0< x\\ 1-e^{-x/10}, & x \geq 0 \end{cases} 
 \end{align*}`
 Calcule la probabilidad de que el tiempo que pase para que el radar detecte entre conductores sucesivos a los que exceden los límites de velocidad sea menor de `$12$` minutos
 <ol type ="a">
