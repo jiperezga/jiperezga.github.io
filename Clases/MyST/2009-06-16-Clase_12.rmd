@@ -68,7 +68,7 @@ Siendo `$D$` el parámetro que indica el número de diferencias estacionales. Ah
 ## Modelos autorregresivos integrados de media móvil estacionales (SARIMA)
 Se dice que una serie de tiempo `$\widetilde{Y}_t=Y_t-\mu$` posee una estructura SARIMA(p,d,q)(P,D,Q)[s] si se cumple que
 `\begin{align*}
-\Phi_{p_s} (L^s) \Phi_p (L) \Delta^D_s \Delta^d \widetilde{Y}_t = \Theta_{q_s} (L^s) \Theta_q (L)\varepsilon_t
+\Phi_{P} (L^s) \Phi_p (L) \Delta^D_s \Delta^d \widetilde{Y}_t = \Theta_{Q} (L^s) \Theta_q (L)\varepsilon_t
 \end{align*}`
 
 con `$\varepsilon_t \sim RB(0, \sigma_{\varepsilon}^2)$` y donde
@@ -79,28 +79,31 @@ con `$\varepsilon_t \sim RB(0, \sigma_{\varepsilon}^2)$` y donde
 
 son los polinomios de rezagos autorregresivos y de medias móviles, regulares, respectivamente, **sin raíces comúnes y cada uno con módulo mayor a 1**, y `$\Delta^d=(1-L)^d$` es el operador de diferencias, con `$L$` el operador de rezagos. Además, 
 `\begin{align*}
-\Phi_{p_s}(z^s) = 1 - \sum_{j=1}^{p_s}\phi_{s,j} z^{js} \\
-\Theta_{q_s}(z^s) = 1 + \sum_{j=1}^{q_s}\theta_{s,j} z^{js}
+\Phi_{P}(z^s) = 1 - \sum_{j=1}^{P}\phi_{s,j} z^{js} \\
+\Theta_{Q}(z^s) = 1 + \sum_{j=1}^{Q}\theta_{s,j} z^{js}
 \end{align*}`
 
-ambos polinomios de rezagos autorregresivos y de medias móviles, estacionales, respectivamente, **sin raíces comunes y con módulo mayor a 1**, y `$\Delta^d=(1-L^s)^D$` es el operador de diferencias estacionales.
+ambos polinomios de rezagos autorregresivos y de medias móviles, estacionales, respectivamente, **sin raíces comunes y con módulo mayor a 1**, y `$\Delta^D_s=(1-L^s)^D$` es el operador de diferencias estacionales.
 
 Además, se podrán derivar varios casos particulares de los modelos SARIMA(p,d,q)(P,D,Q)[s]. Uno de ellos es el modelo ARIMA puramente estacional, los cuales corresponden a los casos SARIMA(0,0,0)(P,D,Q)[s] = SARIMA(P,D,Q)[s], con ecuación
 `\begin{align*}
-\Phi_{p_s} (L^s) \Delta^D_s \widetilde{Y}_t = \Theta_{q_s}(L^s) \varepsilon_t
+\Phi_{P} (L^s) \Delta^D_s \widetilde{Y}_t = \Theta_{Q}(L^s) \varepsilon_t
 \end{align*}`
 
 si `$D=0, Q=0$` se tendrá un modelo AR(P)[s], donde
 `\begin{align*}
-\Phi_{p_s} (L^s) \widetilde{Y}_t & = \varepsilon_t \\
-                                 & = \phi_0 + \phi_{1,s}Y_{t-s} + \phi_{2,s}Y_{t-2s} + \ldots + \phi_{P,s}Y_{t-Ps} + \varepsilon_t
+\Phi_{P}(L^s) \widetilde{Y}_t & = \varepsilon_t \\
+\left(1 - \sum_{j=1}^{P}\phi_{s,j} L^{js}\right) \widetilde{Y}_t & = \varepsilon_t \\
+\widetilde{Y}_t & = \sum_{j=1}^{P}\phi_{s,j} L^{js} \widetilde{Y}_t + \varepsilon_t \\
+                                 & = \phi_{1,s}\widetilde{Y}_{t-s} + \phi_{2,s}\widetilde{Y}_{t-2s} + \ldots + \phi_{P,s}\widetilde{Y}_{t-Ps} + \varepsilon_t
 \end{align*}`
 
 en este caso se tendrá un modelo autorregresivo estacional de orden `$P$`, AR(P)[s]. **En este modelo se puede observar que la PACF tendrá autocorrelaciones parciales significativas en los rezagos `$s, 2s, \ldots, Ps$`, y una ACF que decae sinusoidalmente o exponencialmente en sus rezagos estacionales**.
 
 si `$P=0, D=0$` se tendrá un modelo MA(Q)[s], donde
 `\begin{align*}
-\widetilde{Y}_t & = \Theta_{q_s}(L^s) \varepsilon_t \\
+\widetilde{Y}_t & = \Theta_{Q}(L^s) \varepsilon_t \\
+\widetilde{Y}_t & = \sum_{j=1}^{Q}\theta_{s,j} L^{js} \varepsilon_t \\
                                  & = \varepsilon_t - \theta_{1,s} \varepsilon_{t-s} - \theta_{2,s} \varepsilon_{t-2s} - \ldots - \theta_{Q,s} \varepsilon_{t-Qs}
 \end{align*}`
 
@@ -108,12 +111,12 @@ en este caso se tendrá un modelo de media móvil estacional de orden `$Q$`, SMA
 
 Otro de los modelos son aquellos donde `$d=D=0$`, lo cual genera un modelo ARIMA(p,0,q)(P,0,Q)[s] = ARMA(p,q)(P,Q)[s] el cual está dado por
 `\begin{align*}
-\Phi_{p_s} (L^s) \Phi_p (L) \widetilde{Y}_t = \Theta_{q_s}(L^s) \Theta_q (L)\varepsilon_t
+\Phi_{P} (L^s) \Phi_p (L) \widetilde{Y}_t = \Theta_{Q}(L^s) \Theta_q (L)\varepsilon_t
 \end{align*}`
-con `$\Phi_{p_s} (z^s)$` y `$\Phi_p (z)$` los polinomios de rezago autorregresivo regular y estacional, cada uno **sin raíces unitarias en `$z$` y `$z^s$`**, respectivamente.
+con `$\Phi_{P} (z^s)$` y `$\Phi_p (z)$` los polinomios de rezago autorregresivo regular y estacional, cada uno **sin raíces unitarias en `$z$` y `$z^s$`**, respectivamente.
 
 ### Raices unitarias estacionales
-Comos se señala en @Guerrero2003[, p. 216], existen diferentes métodos de evitar los efectos estacionales en las series de tiempo, pero estas pueden generar que las pruebas de raíces unitarias se vean sesgadas hacia el no rechazo de la hipótesis nula de raíz unitaria. 
+Como se señala en @Guerrero2003[, p. 216], existen diferentes métodos de evitar los efectos estacionales en las series de tiempo, pero estas pueden generar que las pruebas de raíces unitarias se vean sesgadas hacia el no rechazo de la hipótesis nula de raíz unitaria. 
 
 Debido a esto, @Guerrero2003[, p. 216] recomienda trabajar la serie sin ningún ajuste estacional, tratando de incorporar la componente estacional como un elemento adicional del modelo de la serie, y para hacerlo, es necesario contar con una metodología que permita probar la existencia de raíces unitarias estacionales.
 
@@ -153,9 +156,9 @@ posible de raíces unitarias.
 La prueba Canova-Hansen puede realizarse en <tt>R</tt>, mediante la función `ch.test()` de la librería `uroot`. Se recomienda que para aplicar el test Canova-Hansen se elimine la tendencia de la serie en caso de existir, lo cual puede hacerse eliminando la componente de tendencia estimada `$T_t$` mediante la función `stl()` vista en la [Clase 01](https://jiperezga.github.io/MuestreoySeriesdeTiempo/MySTClase_01.html){:target="_blank"} y aplicamos el test sobre `$W_t = Y_t − T_t = S_t + \varepsilon_t$`, con los argumentos `lag1=FALSE`, `pvalue = "raw"`.
 
 ### Prueba OCSB
-En @Giraldo2018[, pp. 304-305] se presenta la prueba de raíces unitarias estacionales de pruebaOsborn,Chui, Smith, y Birchenhall, la cual se basa en una prueba de regresión dada por
+En @Giraldo2018[, pp. 304-305] se presenta la prueba de raíces unitarias estacionales de prueba Osborn,Chui, Smith, y Birchenhall, la cual se basa en una prueba de regresión dada por
 `\begin{align*}
-\Delta\Delta_sY_t = \beta_1\Delta_sY_{t-1} + \beta_2 Y_{n-s} + Z_t
+\Delta\Delta_sY_t = \beta_1\Delta_sY_{t-1} + \beta_2 Y_{t-s} + \varepsilon_t
 \end{align*}`
 utilizando la identidad
 `\begin{align*}
@@ -168,7 +171,7 @@ se tiene que
 
 entonces, al reemplazar en la primera ecuación se tiene que la regresión de interés estará dada por
 `\begin{align*}
-\Delta\Delta_sY_t = \beta_1 (I+L+\ldots+L^{s-1})\Delta Y_{t-1} + \beta_2\Delta Y_{n-s} + Z_t
+\Delta\Delta_sY_t = \beta_1 (I+L+\ldots+L^{s-1})\Delta Y_{t-1} + \beta_2\Delta Y_{t-s} + \varepsilon_t
 \end{align*}`
 
 A partir de esta regresión se trata de probar el siguiente juego de hipótesis
