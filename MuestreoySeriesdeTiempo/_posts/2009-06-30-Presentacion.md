@@ -123,9 +123,6 @@ Temática detallada
     -   El valor de lambda (transformación de potencia)
     -   El valor de d (operador diferencia)
     -   Orden del modelo (p,q)
-
-### Muestreo
-
 -   Estimación del modelo
     -   Métodos de estimación de parámetros
     -   Estimación de los parámetros del modelo
@@ -144,6 +141,9 @@ Temática detallada
     -   Estimación del modelo
     -   Validación de los supuestos del modelo
     -   Cálculo de los Pronósticos
+
+### Muestreo
+
 -   Diseño de un cuestionario:
     -   Contenido de las preguntas
     -   Estructura del cuestionario
