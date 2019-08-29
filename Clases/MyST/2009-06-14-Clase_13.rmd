@@ -7,7 +7,7 @@ tags:
 
 introduction: |
   Definición de encuesta y sus tipos. </br>
-  Por qué hacer encuestas?. </br>
+  Por qué hacer encuestas? </br>
   Etapas en el análisis de encuestas. </br>
   Diseño de un cuestionario.
 
@@ -155,7 +155,7 @@ Existen diferentes tipos de preguntas que pueden realizarse en una encuesta, ent
 * **Preguntas de intención:** Para conocer la intención de los encuestados.
 * **Preguntas de opinión:** Para conocer la opinión de los encuestados.
 
-Además, en el diseño del cuestionario es fundamental
+
 
 <!-- Para tener una muestra verdaderamente representativa. Se, de la cual se debe estar seguro de que todos los miembros del grupo a encuestar tengan la misma probabilidad de estar en la muestra, y/o se debe tener una muestra bastante grande. Además, es importante asegurarse de que el tamaño de la muestra que se escoja es adecuado y no excesivamente grande o pequeño. Si es muy grande, podría ser imposible encuestar a todos eficazmente y quedarse dentro del presupuesto asignado. Una regla general es que entre más grande sea la muestra, más exacto será el reflejo de la totalidad. -->
 
