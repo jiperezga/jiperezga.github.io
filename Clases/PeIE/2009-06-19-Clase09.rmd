@@ -7,7 +7,7 @@ tags:
 
 introduction: |
   Distribuciones de probabilidad continua: <br/>
-  - Distribución Normal: <br/>
+  - Distribución Exponencial: <br/>
   &nbsp * Relación con la distribución Poisson. <br/>
   &nbsp * Propiedad de Carencia de Memoria. <br/>
   - Distribución Weibull. <br/>

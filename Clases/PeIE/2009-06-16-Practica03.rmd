@@ -108,7 +108,7 @@ Calcule la probabilidad de que el tiempo que pase para que el radar detecte entr
 	f(x)=\begin{cases}6-|7-x| & x = 2,3,\ldots,12 ,\\0 & \text{En otro caso}\end{cases} 
 \end{align*}`
 <ol type ="a">
-<li> Compruebe si es efectivamente $f(x)$ es una función de masa de probabilidad y de no serlo, encuentre el valor $k$ que haría a $f(x)$ bien definida. </li>
+<li> Compruebe si $f(x)$ es es efectivamente una función de masa de probabilidad bien definida. De no serlo, encuentre el valor $k$ que haría a $f(x)$ bien definida. </li>
 <li> Calcule la función de distribución acumulada, $F(x)$. </li>
 <li> Calcule la probabilidad de que la suma de las caras se encuentren entre 5 y 9 inclusive. </li>
 <li> Calcule la probabilidad de que la suma de las caras sean mayores que 7 o a lo más 4. </li>
