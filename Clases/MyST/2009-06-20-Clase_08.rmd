@@ -733,7 +733,7 @@ Para la identificación de un proceso AR(p) es posible analizar las funciones AC
 
 ```{r echo=FALSE}
 library(kableExtra)
-tabla1 <- rbind(c("ARMA(p,q)", "Comportamiento irregular en los primeros rezagos (1, ... , q) con q picos. Convergencia a cero para k>q.", "Decrece (aproximadamente con exponenciales atenuados y ondas sinusoidales). No cae rápidamente a cero"))
+tabla1 <- rbind(c("ARMA(p,q)", "Decrece a 0 luego del q-ésimo rezago (aproximadamente de forma exponencial atenuada y/o con ondas sinusoidales). El decaimiento a cero no sucede de forma rápida", "Decrece a 0 luego del q-ésimo rezago (aproximadamente de forma exponencial atenuada y/o con ondas sinusoidales). El decaimiento a cero no sucede de forma rápida"))
 colnames(tabla1) = c("Proceso", "Función de autocorrelación (ACF)", "Función de autocorrelación parcial (PACF)")
 
 kable(tabla1,
