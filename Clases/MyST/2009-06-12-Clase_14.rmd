@@ -53,7 +53,7 @@ Para la selección del método de muestreo más conveniente, existen diferentes 
 ### Métodos no probabilísticos
 Los método de muestreo no probabilístico son una serie de técicas de muestreo en la cual **NO** se brinda a todos los individuos de la población la misma probabilidad de ser seleccionados, haciendo que los individuos seleccionados no provengan de un proceso de selección aleatoria.
 
-Por tanto, en los métodos no probabilísticos, se dice que los sujetos en la muestra, son seleccionados generalmente en función de su accesibilidad, criterio personal y conocimientos del investigador sobre la población en específico, debido a que se desconoce la probabilidad de que un individuo concreto de la población sea incluido en la muestra
+Por tanto, en los métodos no probabilísticos, se dice que los sujetos en la muestra, son seleccionados generalmente en función de su accesibilidad, criterio personal y conocimientos del investigador sobre la población en específico, debido a que se desconoce la probabilidad de que un individuo concreto de la población sea incluido en la muestra.
 
 #### Muestreo por cuotas
 Es una técnica que consiste en reunir muestras compuestas por la misma proporción de individuos de toda la población en grupos, con respecto a un fenómeno, característica o rasgo conocido. Esta técnica, se basa en el conocimiento de las diferentes clases o estratos que componen la población, o en su defecto, de los individuos más representativos o adecuados para los fines de la investigación.
@@ -74,5 +74,3 @@ El método de muestreo de bola de nieve consiste en la localización de un indiv
 El muestreo discrecional o intencional, es una técnica de muestreo no probabilístico que consta de elegir individuos por el investigador, dado prioridad a unos individuos sobre otros, debido a que en este método, el investigador puede creer que algunos sujetos son mas adecuados que otros para la investigación, y por esta razón ellos son elegidor de forma deliberada como los individuos del muestreo.
 
 
-
-## Referencias
