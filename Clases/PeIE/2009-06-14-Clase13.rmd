@@ -105,7 +105,7 @@ t_c = \frac{\bar{X}-\mu}{S/\sqrt{n}} \sim t_{n-1}
 
 tiene una distribución `$t$` con `$(n-1)$` grados de libertad.
 
-### Distribución muestral `$F$` de Fisher
+### Distribución muestral `$F$` de Fisher-Snedecor
 Sea `$W_1$` una variable aleatoria `$\chi^2_{v_1}$` y `$W_2$` una variable aleatoria `$\chi^2_{v_2}$`, entonces si `$W_1$` y `$W_2$` son independientes.
 `\begin{align*}
 F_c = \frac{W_1/v_1}{W_2/v_2}\sim F_{v_1, v_2}
