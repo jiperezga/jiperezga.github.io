@@ -110,7 +110,7 @@ Calcule el coeficiente de curtosis, el cual está dado por
 `\begin{align*}
 	\gamma_{2}= \mathbb{E}\left[\left({\frac{X-\mu}{\sigma}}\right)^{4}\right]={\frac{\mu_{4}}{\sigma^{4}}}={\frac{\mathbb{E}\left[(X-\mu)^{4}\right]}{(\mathbb{E}\left[(X-\mu)^{2}\right])^{4/2}}}
 \end{align*}`
-11. Dado que ya hemos lanzado al aire una moneda balanceada diez veces y no obtuvimos caras, ¿cuál es la probabilidad de que debemos lanzarla al menos dos veces más para obtener la primera cara? 
+11. Dado que ya hemos lanzado al aire una moneda balanceada diez veces y no obtuvimos caras, ¿cuál es la probabilidad de que debamos lanzar la moneda al menos dos veces más, para obtener la primera cara? 
 12. Sea `$X$` el número de veces que fallará cierta máquina de control numérico: 1, 2 o 3 veces en un día dado, y `$Y$` denota el número de veces que se llama a un técnico para una emergencia. Suponga que su distribución de probabilidad conjunta estará dada como
 ```{r echo=FALSE}
 tabla3 <- data.frame(c("", "1", "0.05", "0.05", "0.10"),
