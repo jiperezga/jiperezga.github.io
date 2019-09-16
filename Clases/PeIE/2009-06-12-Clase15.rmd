@@ -7,9 +7,9 @@ tags:
 
 introduction: |
   Estimación por intervalos. <br>
-  - Intervalos de confianza para diferencia de medias.<br>
+  - Intervalos de confianza para diferencia de medias. <br>
   - Intervalos de confianza para una proporción. <br>
-  - Intervalos de confianza para razón de varianzas. 
+  - Intervalos de confianza para razón de varianzas.
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
