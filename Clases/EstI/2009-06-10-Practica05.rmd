@@ -98,9 +98,7 @@ Calcule el segundo momento central.
 	f(x) = \frac{1}{k} \text{  para  } x = 1,2, \ldots, k
 \end{align*}`
 <ol type = "a">
-<li> Encuentre su función generadora de momentos de la variable aleatoria $X$. </li>
-<li> Encuentre la asimetría de la variable aleatoria $X$ mediante la función generadora de momentos. </li>
-</ol>
+Encuentre su función generadora de momentos de la variable aleatoria $X$.
 11. El sistema de puntuación Elo es un método matemático empleado para calcular la habilidad relativa de los jugadores en algunos deportes tales como el Ajedrez. Suponga que el puntaje Elo promedio de los jugadores de cierta categoría es de 1556 con una desviación estándar de 14. Si pruebas estadísticas han sugerido que el rendimiento de los ajedrecistas se distribuye normalmente. ¿Cuál es la probabilidad de que un ajedrecista de dicha categoría tenga un puntaje Elo superior a 1603?.
 12. La función generadora de momentos de cierta variable aleatoria de Poisson X es dada por
 `\begin{align*}
@@ -114,5 +112,5 @@ Calcule `$\mathbb{P}(\mu - 1.3\sigma<X< \mu + 2.3\sigma)$`.
 \end{align*}`
 <ol = type = "a">
 <li> Encuentre su función generadora de momentos de la variable aleatoria $X$. </li>
-<li> Encuentre la media, varianza, asimetría y curtosis de la variable aleatoria $X$ mediante la función generadora de momentos. </li>
+<li> Encuentre la media, varianza, de la variable aleatoria $X$ mediante la función generadora de momentos. </li>
 </ol>
