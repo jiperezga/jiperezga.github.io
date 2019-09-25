@@ -90,15 +90,17 @@ Calcule el segundo momento central.
 7. El tiempo entre arribos de taxis al acopio de una estación del metro tiene una media de 60 segundos. ¿Cuál es la probabilidad de que la llegada del próximo taxi sea en al menos 40 segundos?
 8. Demuestre que el `$r$`-ésimo momento respecto al origen de la distribución gamma es
 `\begin{align*}
-	\mu^´_r=\frac{\beta^r\Gamma(\alpha + \beta)}{\Gamma(\alpha)}
+	\mu^´_r=\frac{\beta^r\Gamma(\alpha + r)}{\Gamma(\alpha)}
 \end{align*}`
 9. Se sabe que los resultados en cierto examen de estadística, tienen una distribución normal, con media `$3.1$` y varianza `$0.1225$`. ¿Cuál es la probabilidad de que un estudiante obtenga una nota entre `$3$` y `$3.5$`?
 10. Una variable aleatoria `$X$` tiene la siguiente distribución uniforme discreta
 `\begin{align*}
 	f(x) = \frac{1}{k} \text{  para  } x = 1,2, \ldots, k
 \end{align*}`
+<ol type = "a">
 <li> Encuentre su función generadora de momentos de la variable aleatoria $X$. </li>
 <li> Encuentre la asimetría de la variable aleatoria $X$ mediante la función generadora de momentos. </li>
+</ol>
 11. El sistema de puntuación Elo es un método matemático empleado para calcular la habilidad relativa de los jugadores en algunos deportes tales como el Ajedrez. Suponga que el puntaje Elo promedio de los jugadores de cierta categoría es de 1556 con una desviación estándar de 14. Si pruebas estadísticas han sugerido que el rendimiento de los ajedrecistas se distribuye normalmente. ¿Cuál es la probabilidad de que un ajedrecista de dicha categoría tenga un puntaje Elo superior a 1603?.
 12. La función generadora de momentos de cierta variable aleatoria de Poisson X es dada por
 `\begin{align*}
