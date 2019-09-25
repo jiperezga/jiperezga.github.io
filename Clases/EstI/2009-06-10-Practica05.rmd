@@ -71,7 +71,7 @@ kable_styling("striped", full_width = F)
 \end{align*}`
 <ol type ="a">
 <li> Encuentre su función generadora de momentos de la variable aleatoria $X$. </li>
-<li> Encuentre la media, varianza, asimetría y curtosis de la variable aleatoria $X$ mediante la función generadora de momentos. </li>
+<li> Encuentre la media, varianza y asimetría de la variable aleatoria $X$ mediante la función generadora de momentos. </li>
 </ol>
 4. Suponga que el número de llamadas telefónicas que entran a un conmutador  particular siguen un proceso de Poisson con un promedio de `$5$` llamadas entrantes por minuto. ¿Cuál es la probabilidad de que transcurra hasta un minuto en el momento en que han entrado `$3$` llamadas al conmutador? 
 5. Sea `$X$` una variable aleatoria con función de masa de probabilidad dada por 
@@ -80,14 +80,14 @@ kable_styling("striped", full_width = F)
 \end{align*}`
 <ol type ="a">
 <li> Encuentre su función generadora de momentos de la variable aleatoria $X$. </li>
-<li> Encuentre la media. varianza, asimetría y curtosis de la variable aleatoria $X$ mediante la función generadora de momentos. </li>
+<li> Encuentre la varianza de la variable aleatoria $X$ mediante la función generadora de momentos. </li>
 </ol>
 6. Considere a `$X$` la variable aleatoria que representa la suma de las caras para el lanzamiento de dos dados, con función de masa de probabilidad dada por
 `\begin{align*}
 	f(x)=\frac{6-|7-x|}{36} \text{  para  } x = 2,3,\ldots,12 
 \end{align*}`
 Calcule el segundo momento central.
-7.El tiempo entre arribos de taxis al acopio de una estación del metro tiene una media de 60 segundos. ¿Cuál es la probabilidad de que la llegada del próximo taxi sea en al menos 40 segundos?
+7. El tiempo entre arribos de taxis al acopio de una estación del metro tiene una media de 60 segundos. ¿Cuál es la probabilidad de que la llegada del próximo taxi sea en al menos 40 segundos?
 8. Demuestre que el `$r$`-ésimo momento respecto al origen de la distribución gamma es
 `\begin{align*}
 	\mu^´_r=\frac{\beta^r\Gamma(\alpha + \beta)}{\Gamma(\alpha)}
@@ -97,6 +97,8 @@ Calcule el segundo momento central.
 `\begin{align*}
 	f(x) = \frac{1}{k} \text{  para  } x = 1,2, \ldots, k
 \end{align*}`
+<li> Encuentre su función generadora de momentos de la variable aleatoria $X$. </li>
+<li> Encuentre la asimetría de la variable aleatoria $X$ mediante la función generadora de momentos. </li>
 11. El sistema de puntuación Elo es un método matemático empleado para calcular la habilidad relativa de los jugadores en algunos deportes tales como el Ajedrez. Suponga que el puntaje Elo promedio de los jugadores de cierta categoría es de 1556 con una desviación estándar de 14. Si pruebas estadísticas han sugerido que el rendimiento de los ajedrecistas se distribuye normalmente. ¿Cuál es la probabilidad de que un ajedrecista de dicha categoría tenga un puntaje Elo superior a 1603?.
 12. La función generadora de momentos de cierta variable aleatoria de Poisson X es dada por
 `\begin{align*}
