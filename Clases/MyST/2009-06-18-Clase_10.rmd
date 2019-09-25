@@ -143,7 +143,7 @@ y un P-valor de la forma
 \text{P-valor} = \mathbb{P}(\chi^2_{h}>Q_{BP})
 \end{align*}`
 
-La prueba de incorrelación de Box-Pierce puede realizarse en <tt>R</tt>, mediante la función `Box.test()` de la librería `stats` de la base del <tt>R</tt>, con el argumento `type = "Box-Pierce`.
+La prueba de incorrelación de Box-Pierce puede realizarse en <tt>R</tt>, mediante la función `Box.test()` de la librería `stats` de la base del <tt>R</tt>, con el argumento `type = "Box-Pierce"`.
 
 #### Prueba de independencia Ljung-Box
 Posteriormente, a partir del trabajo propuesto por @Box1970, los autores George Box y Greta Ljung, deciden proponer una nueva prueba de independencia en su artículo @Ljung1978 la cual ofrece mejores resultados que la prueba Box-Pierce.
@@ -224,7 +224,7 @@ Para probar si los residuales del modelo ajustado cumplen el supuesto de homoced
 `\begin{align*}
 \begin{split}
 H_0: Var(\varepsilon_t) = \sigma^2 \\
-H_1: Var(\varepsilon_t) \not\sim \sigma^2
+H_1: Var(\varepsilon_t) \neq \sigma^2
 \end{split} 
 \quad \quad \text{ para todo } t
 \end{align*}`
@@ -249,7 +249,7 @@ siendo `$T$` el total de observaciones que se poseen. Además, el P-valor asocia
 \text{P-valor} = \mathbb{P}(BP<BP_\alpha)
 \end{align*}`
 
-La prueba Breusch-Pagan puede realizarse en <tt>R</tt>, mediante la función `bp.test()` de la librería `lmtest`, o su versión mejorada conocida como la prueba Cook-Weisberg, que puede realizarse mediante la función `ncvTest()` de la librería `lmtest`.
+La prueba Breusch-Pagan puede realizarse en <tt>R</tt>, mediante la función `bptest()` de la librería `lmtest`, o su versión mejorada conocida como la prueba Cook-Weisberg, que puede realizarse mediante la función `ncvTest()` de la librería `car`.
 
 #### Prueba de Goldfeld-Quandt
 Similar a la prueba Breusch-Pagan, esta prueba que tiene por objetivo comprobar si los residuales de un modelo de regresión lineal son o no heterocedásticos. Para tal propósito, la prueba consiste en dividir el total de observaciones en dos grupos, para luego comprobar si la varianza de los dos grupos es o no significativamente diferente.
@@ -269,7 +269,7 @@ y un P-valor
 \text{P-valor} = (2\mathbb{P}(F_{df_1,df_2}>F_c) \wedge 2\mathbb{P}(F_{df_1,df_2}<F_c) 
 \end{align*}`
 
-donde `$(a\wedge b) = min(a,b)$`. La prueba Goldfeld-Quandt puede realizarse en <tt>R</tt>, mediante la función `gq.test()` de la librería `lmtest`.
+donde `$(a\wedge b) = min(a,b)$`. La prueba Goldfeld-Quandt puede realizarse en <tt>R</tt>, mediante la función `gqtest()` de la librería `lmtest`.
 
 
 ## Bibliografía

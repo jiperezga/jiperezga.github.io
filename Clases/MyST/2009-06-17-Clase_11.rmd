@@ -45,6 +45,8 @@ opts_chunk$set(echo=TRUE,
 ## Introducción a modelos ARIMA
 En alguno casos, cuandos nos enfrentamos a diferentes series temporales puede ocurrir situaciones en las cuales la serie de interés no posee un comportamiento estacionario en covarianza, debido a que éstas pueden poseer estructuras de tendencia, estacionalidad o variabilidad no constante, que hacen que los métodos de ajuste de modelos ARMA no sea adecuado.
 
+<!-- Hay que meter transformación log y box-cox, mediante las funciones lambda = BoxCox.lambda(BD$GasEspaña) y BoxCox(BD$GasEspaña, lambda = lambda)  de la librería forecast-->
+
 Debido a lo anterior, en ocasiones la respuesta a tales estructuras, **es emplear transformaciones** que permitan llevar a la serie temporal a una estructura estacionaria, para así poder modelarla.
 
 ## Operador de diferencias
@@ -159,6 +161,7 @@ H_1: \gamma < 0
 \end{align*}`
 
 El estadístico de prueba, se define entonces como
+`\begin{align*}
 \tau = \frac{\hat{\gamma}}{se(\hat{\gamma})}
 \end{align*}`
 
@@ -170,6 +173,9 @@ con un P-valor dado por
 \end{align*}`
 
 La prueba Dickey-Fuller puede realizarse en <tt>R</tt>, mediante la función `adf.test()` de la librería `tseries` o de la librería `aTSA`.
+
+<!-- Agregar prueba dickey-fuller mediante la función adfTest() de la librería fUnitRoots y tal vez la función nsdiffs() de la librería forecast-->
+
 
 ## Ajuste de modelo ARIMA
 Una vez identificado el orden apropiado de diferenciación, d, asociado a la serie de tiempo `$Y_t$`, se realiza el mismo procedimiento explicado en la [Clase 09](https://jiperezga.github.io/MuestreoySeriesdeTiempo/MySTClase_09.html){:target="_blank"} para identificar el orden p y q que posee la serie de diferencias. 
