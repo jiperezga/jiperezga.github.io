@@ -112,5 +112,7 @@ Calcule `$\mathbb{P}(\mu - 1.3\sigma<X< \mu + 2.3\sigma)$`.
 `\begin{align*}
 	f(x) = \frac{1}{2^{\nu/2}\Gamma(\nu/2)}x^{\frac{\nu}{2}-1}e^{-\frac{x}{2}} \text{  para  } x>0
 \end{align*}`
+<ol = type = "a">
 <li> Encuentre su función generadora de momentos de la variable aleatoria $X$. </li>
 <li> Encuentre la media, varianza, asimetría y curtosis de la variable aleatoria $X$ mediante la función generadora de momentos. </li>
+</ol>
