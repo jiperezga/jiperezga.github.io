@@ -90,7 +90,7 @@ Calcule el segundo momento central.
 7. El tiempo entre arribos de taxis al acopio de una estación del metro tiene una media de 60 segundos. ¿Cuál es la probabilidad de que la llegada del próximo taxi sea en al menos 40 segundos?
 8. Demuestre que el `$r$`-ésimo momento respecto al origen de la distribución gamma es
 `\begin{align*}
-	\mu^´_r=\frac{\beta^r\Gamma(\alpha + r)}{\Gamma(\alpha)}
+	\mu'_r=\frac{\beta^r\Gamma(\alpha + r)}{\Gamma(\alpha)}
 \end{align*}`
 9. Se sabe que los resultados en cierto examen de estadística, tienen una distribución normal, con media `$3.1$` y varianza `$0.1225$`. ¿Cuál es la probabilidad de que un estudiante obtenga una nota entre `$3$` y `$3.5$`?
 10. Una variable aleatoria `$X$` tiene la siguiente distribución uniforme discreta
