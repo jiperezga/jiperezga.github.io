@@ -9,7 +9,11 @@ introduction: |
   Prueba de hipótesis. <br>
   - Componentes de una prueba de hipótesis. <br>
   - Errores tipo I, II y potencia de la prueba. <br>
-  - Prueba de hipótesis para una media
+  - Prueba de hipótesis para una media <br>
+  - Prueba de hipótesis para diferencia de medias <br>
+  - Prueba de hipótesis para una proporción <br>
+  - Prueba de hipótesis para diferencia de proporciones <br>
+  - Prueba de hipótesis para el cociente de varianzas
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
