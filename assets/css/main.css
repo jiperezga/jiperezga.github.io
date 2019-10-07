@@ -13,7 +13,7 @@ audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:n
 .bar-header .logo a:after{transition:all .4s;content:'</> AD';}@media only screen and (min-width:37.5rem){.bar-header .logo a:after{content:'</> Anon Developer'}}
 
 
-.header-post{min-height:13rem;width:100%;background:#BBA32C}
+.header-post{width:100%;background:#BBA32C}
 .header-post .content{width:95%;text-align:center;padding:8.75rem 0 0 0}
 .header-post h1{font-size:1.875rem;margin:-60px 0 0px 0;text-shadow:3px 3px #88720C;}
 
@@ -24,7 +24,7 @@ audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:n
 .header-post .date{font-family:'Open Sans',sans-serif;font-weight:300;font-style:normal;font-size:1rem}
 @media only screen and (min-width:37.5rem){.header-post h1{font-size:3.75rem}}
 .header-post .subtitle{font-family:'Open Sans',sans-serif;font-weight:300;font-style:normal;font-size:1.25rem}
-.header-post h1,.header-post .subtitle,.header-post .date{color:#fff;text-align:center;text-shadow: 2px 2px #88720C}
+.header-post h1,.header-post .subtitle,.header-post .date{min-height:1rem; color:#fff;text-align:center;text-shadow: 2px 2px #88720C}
 .header-post a,.header-post p{color:#fff;text-decoration:none;font-family:'Open Sans',sans-serif;font-weight:300;font-style:normal;font-size:1.125rem}
 
 main{padding-top:6.25rem}
