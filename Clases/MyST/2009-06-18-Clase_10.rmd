@@ -41,6 +41,7 @@ opts_chunk$set(echo=TRUE,
                cache = FALSE)
 ```
 
+<br>
 
 <!-- Hay que mejorar esta clase, mirar el programa del curso para agregar los estadísticos allí planteados -->
 
@@ -163,7 +164,7 @@ y un P-valor
 \text{P-valor} = \mathbb{P}(\chi^2_{h}>Q_{LB})
 \end{align*}`
 
-En <tt>R</tt>, pueden realizarse la prueba de incorrelación Ljung-Box mediante la función `Box.test()` de la librería `stats` de la base del <tt>R</tt>, con el argumento `type = "Ljung-Box`.
+En <tt>R</tt>, pueden realizarse la prueba de incorrelación Ljung-Box mediante la función `Box.test()` de la librería `stats` de la base del <tt>R</tt>, con el argumento `type = "Ljung-Box"`.
 
 ### Prueba de normalidad
 Con el fin de probar si los residuales del modelo ajustado cumplen el supuesto de normalidad, es necesario probar el siguiente juego de hipótesis
