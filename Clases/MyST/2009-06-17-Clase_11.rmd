@@ -42,6 +42,8 @@ opts_chunk$set(echo=TRUE,
                cache = FALSE)
 ```
 
+<br>
+
 ## Introducción a modelos ARIMA
 En alguno casos, cuandos nos enfrentamos a diferentes series temporales puede ocurrir situaciones en las cuales la serie de interés no posee un comportamiento estacionario en covarianza, debido a que éstas pueden poseer estructuras de tendencia, estacionalidad o variabilidad no constante, que hacen que los métodos de ajuste de modelos ARMA no sea adecuado.
 
@@ -172,10 +174,21 @@ con un P-valor dado por
 \text{P-valor} = \mathbb{P}(\tau<\tau_\alpha)
 \end{align*}`
 
-La prueba Dickey-Fuller puede realizarse en <tt>R</tt>, mediante la función `adf.test()` de la librería `tseries` o de la librería `aTSA`.
+La prueba Dickey-Fuller puede realizarse en <tt>R</tt>, mediante la función `adf.test()` de la librería `aTSA` o la función `adfTest()` de la librería `fUnitRoots` o la función `adf.test()` de la librería `tseries`.
 
-<!-- Agregar prueba dickey-fuller mediante la función adfTest() de la librería fUnitRoots y tal vez la función nsdiffs() de la librería forecast-->
+Alternativamente, puede observarse el número de diferencias recomendadas <tt>R</tt> mediante la función `ndiffs` de la librería `forecast` con argumento `test="adf"`.
 
+## Prueba Phillips-Perron 
+
+La prueba Phillips-Perron puede realizarse en <tt>R</tt>, mediante la función `pp.test` de la librería `aTSA`.
+
+Alternativamente, puede observarse el número de diferencias recomendadas <tt>R</tt> mediante la función `ndiffs` de la librería `forecast` con argumento `test="pp"`.
+
+## Prueba Kwiatkowski-Phillips-Schmidt-Shin
+
+La prueba Kwiatkowski-Phillips-Schmidt-Shin puede realizarse en <tt>R</tt>, mediante la función `kpss.test` de la librería `aTSA`.
+
+Alternativamente, puede observarse el número de diferencias recomendadas <tt>R</tt> mediante la función `ndiffs` de la librería `forecast` con argumento `test="kpss"`.
 
 ## Ajuste de modelo ARIMA
 Una vez identificado el orden apropiado de diferenciación, d, asociado a la serie de tiempo `$Y_t$`, se realiza el mismo procedimiento explicado en la [Clase 09](https://jiperezga.github.io/MuestreoySeriesdeTiempo/MySTClase_09.html){:target="_blank"} para identificar el orden p y q que posee la serie de diferencias. 
