@@ -42,6 +42,8 @@ opts_chunk$set(echo=TRUE,
                cache = FALSE)
 ```
 
+<br>
+
 ## Introducción a modelos SARIMA
 En situaciones en las cuales se observa que la serie temporal presenta un componente estacional, **se tendrá que la serie de tiempo no es estacionaria**, lo cual hace que los métodos anteriormente presentados para modelar las series no sea apropiada.
 
@@ -133,6 +135,7 @@ estacionalmente.
 
 La prueba HEGY puede realizarse en <tt>R</tt>, mediante la función `hegy.test()` de la librería `uroot`.
 
+Alternativamente, puede observarse el número de diferencias estacionales recomendadas <tt>R</tt> mediante la función `nsdiffs` de la librería `forecast` con argumento `test="hegy"`.
 <!-- Completar! -->
 
 ### Prueba Canova-Hansen
@@ -153,7 +156,9 @@ El estadístico de la prueba denominado `$L$` sugerido por Canova y Hansen no
 tiene una distribución estándar (como la t-Student, la normal estándar, la F-Fisher) pero tiene `$p$` grados de libertad, donde `$p$` se deriva del número
 posible de raíces unitarias.
 
-La prueba Canova-Hansen puede realizarse en <tt>R</tt>, mediante la función `ch.test()` de la librería `uroot`. Se recomienda que para aplicar el test Canova-Hansen se elimine la tendencia de la serie en caso de existir, lo cual puede hacerse eliminando la componente de tendencia estimada `$T_t$` mediante la función `stl()` vista en la [Clase 01](https://jiperezga.github.io/MuestreoySeriesdeTiempo/MySTClase_01.html){:target="_blank"} y aplicamos el test sobre `$W_t = Y_t − T_t = S_t + \varepsilon_t$`, con los argumentos `lag1=FALSE`, `pvalue = "raw"`.
+La prueba Canova-Hansen puede realizarse en <tt>R</tt>, mediante la función `ch.test()` de la librería `uroot`. Para aplicar el test Canova-Hansen **es necesario eliminar** la tendencia de la serie en caso de existir, lo cual puede hacerse eliminando la componente de tendencia estimada `$T_t$` mediante las funciones `stl()` o `decompose()`, vistas en la [Clase 01](https://jiperezga.github.io/MuestreoySeriesdeTiempo/MySTClase_01.html){:target="_blank"} y aplicamos el test sobre `$W_t = Y_t − T_t = S_t + \varepsilon_t$`, con los argumentos `lag1=FALSE`, `pvalue = "raw"`.
+
+Alternativamente, puede observarse el número de diferencias estacionales recomendadas <tt>R</tt> mediante la función `nsdiffs` de la librería `forecast` con argumento `test="ch"`.
 
 ### Prueba OCSB
 En @Giraldo2018[, pp. 304-305] se presenta la prueba de raíces unitarias estacionales de prueba Osborn,Chui, Smith, y Birchenhall, la cual se basa en una prueba de regresión dada por
@@ -176,18 +181,18 @@ entonces, al reemplazar en la primera ecuación se tiene que la regresión de in
 
 A partir de esta regresión se trata de probar el siguiente juego de hipótesis
 `\begin{align*}
-H_0: Y_t \sim I(1,1) \\ 
-H_1: Y_t \sim I(0,0) \vee I(0,1) \vee I(1,0)
+H_0: Y_t \sim I(1,1) \quad \text{vs} \quad H_1: Y_t \sim I(0,0) \vee I(0,1) \vee I(1,0)
 \end{align*}`
 
 El estadístico de la prueba se define similar al de la prueba Dickey-Fuller aumentada, pero en donde, los valores críticos de la prueba Dickey-Fuller aumentada no son estrictamente válidos para ésta prueba, y por tanto, para la prueba OCSB se requieren valores críticos sean calculados mediante simulación.
 La hipótesis equivale en este caso a la prueba de cola izquierda será de la forma
 `\begin{align*}
-H_0: \beta_2 = 0
-H_1: \beta_2 < 0
+H_0: \beta_2 = 0 \quad \text{vs} \quad H_1: \beta_2 < 0
 \end{align*}`
 
-La prueba OCSB puede realizarse en <tt>R</tt>, mediante la función `ocsb.test()` de la librería `forecast`, y cálcula solamente el estadístico de prueba asociado al parámetro `$\beta_2$`, junto al valor crítico para el nivel de significación de `$5\%$`. En donde, si el estadísitico de prueba ae por debajo del valor crítico se rechaza la hipótesis nula a favor de alguna de sus alternativas.
+La prueba OCSB puede realizarse en <tt>R</tt>, mediante la función `ocsb.test()` de la librería `forecast`, y cálcula solamente el estadístico de prueba asociado al parámetro `$\beta_2$`, junto al valor crítico para el nivel de significación de `$5\%$`. En donde, **si el estadísitico de prueba cae por debajo del valor crítico** se rechaza la hipótesis nula a favor de alguna de sus alternativas.
+
+Alternativamente, puede observarse el número de diferencias estacionales recomendadas <tt>R</tt> mediante la función `nsdiffs` de la librería `forecast` con argumento `test="ocsb"`.
 
 ## Ajuste del modelo SARIMA
 Para el proceso de identificación de los modelos SARIMA o ARIMA estacionales, se emplean los mismos procedimientos vistos en la [Clase 09](https://jiperezga.github.io/MuestreoySeriesdeTiempo/MySTClase_09.html){:target="_blank"}, aunque su identificación es un poco más complicada debido a que el número de modelos posibles que pueden ser ajustados para una serie de tiempo es considerablemente grande.
