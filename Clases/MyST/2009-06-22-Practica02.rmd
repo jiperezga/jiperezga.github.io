@@ -42,6 +42,8 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
+<br>
+
 ## Lista de ejercicios
 
 Suponga las siguientes series de tiempo suministradas en el archivo de los siguientes enlaces

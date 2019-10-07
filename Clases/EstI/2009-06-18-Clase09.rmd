@@ -41,6 +41,8 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
+<br>
+
 ## Esperanza matemática
 
 ### Caso univariado

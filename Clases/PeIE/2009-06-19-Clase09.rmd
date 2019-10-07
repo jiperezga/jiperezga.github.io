@@ -45,6 +45,8 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
+<br>
+
 ## Distribuciones de probabilidad continua
 ## Distribución Exponencial
 Se dice que la variable aleatoria `$X$` tiene una distribución Exponencial con parámetro `$\beta$`, si su función de densidad de probabilidad es de la forma

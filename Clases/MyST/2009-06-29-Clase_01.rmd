@@ -41,6 +41,7 @@ opts_chunk$set(echo=TRUE,
                cache = FALSE)
 ```
 
+<br>
 
 ## Introducción
 

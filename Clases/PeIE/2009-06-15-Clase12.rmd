@@ -43,6 +43,8 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
+<br>
+
 ## Inferencia estadística
 La inferencia estadística es la obtención de conclusiones basadas en datos experimentales. Para entender la naturaleza de la inferencia estadística, se debe entender primero la diferencia entre "población" y "muestra".
 

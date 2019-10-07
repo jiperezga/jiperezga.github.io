@@ -41,6 +41,8 @@ opts_chunk$set(echo=TRUE,
                cache = FALSE)
 ```
 
+<br>
+
 <!-- AGREGAR FORMULAS PARA PRONÓSTICO ROMARIO SECCIÓN 6!!! -->
 
 ## Operador de rezagos

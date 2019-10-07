@@ -43,6 +43,8 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
+<br>
+
 ## Distribuciones de probabilidad discretas
 ### Proceso Bernoulli
 Un proceso Bernoulli es aquel que cumple

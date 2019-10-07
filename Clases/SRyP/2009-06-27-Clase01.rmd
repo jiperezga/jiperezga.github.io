@@ -38,6 +38,8 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
+<br>
+
 ## Introducción a R
 
 <code>R</code> es un lenguaje y ambiente de alto nivel para el análisis de datos y gráficos. Está altamente relacionado con los lenguajes <code>S</code> y <code>Scheme</code>. Es un lenguaje de programación interpretado, de distribución libre, bajo licencia GNU, que puede correr en distintas plataformas Linux, Windows, MacOS e incluso PlayStation 3.

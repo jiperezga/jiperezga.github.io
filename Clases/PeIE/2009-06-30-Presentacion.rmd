@@ -39,6 +39,7 @@ opts_chunk$set(echo=TRUE,
                cache = FALSE)
 ```
 
+<br>
 
 ## Descripción general del curso
 Los ingenieros industriales se enfrentan a múltiples problemas en los que deben tomar decisiones que pueden llegar a ser trascendentales en algunos procesos. Puesto que la aleatoriedad es una de las características principales de la información, el análisis estadístico de datos se convierte en el argumento más importante a la hora de verificar una hipótesis de interés.

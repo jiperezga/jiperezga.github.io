@@ -38,6 +38,8 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
+<br>
+
 ## Lista de ejercicios
 1. Suponga que una familia sale de vacaciones de verano en su casa rodante y que M es el evento de que sufrirán fallas mecánicas, T es el evento de que recibirán una infracción por cometer una falta de tránsito y V es el evento de que llegarán a un lugar para acampar que esté lleno. Basado en el siguiente diagráma de Venn
 ![](../../EstadisticaI/images/Venn1.PNG)

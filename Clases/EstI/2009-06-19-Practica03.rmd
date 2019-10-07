@@ -46,6 +46,8 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
+<br>
+
 ## Lista de ejercicios
 1. Suponga una función de distribución de la forma
 `\begin{align*}

@@ -48,6 +48,8 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
+<br>
+
 ## Distribuciones de probabilidad discretas
 ### Distribución Binomial Negativa
 Sea `$X$` el número de ensayos necesarios para generar `$k$` éxitos en un experimento Binomial Negativo, entonces se dice que `$X\sim b^*(k,p)$` si su función de probabilidad es de la forma

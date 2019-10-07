@@ -42,6 +42,8 @@ opts_chunk$set(echo=TRUE,
                cache = FALSE)
 ```
 
+<br>
+
 ## Series estacionales
 ### Suavizamiento exponencial de Holt-Winters.
 Este método de suavización es una extensión del método de suavización exponencial de Holt, el cual permite representar mejor los datos y reducir el error de pronóstico, cuando la serie de interés posee un componente estacional.

@@ -38,5 +38,7 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
+<br>
+
 ## Lista de ejercicios
 En construcción D: D: (Se los mandé al correo :D)

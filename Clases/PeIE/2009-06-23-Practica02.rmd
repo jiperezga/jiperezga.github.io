@@ -38,6 +38,8 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
+<br>
+
 ## Enunciado encuesta
 Las siguientes preguntas tienen como objetivo, recolectar información sobre los hábitos y preferencias de los estudiantes universitarios que cursan carreras económicas y administrativas, respecto al consumo de bebidas alcohólicas y drogas. 
 

@@ -42,6 +42,8 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
+<br>
+
 ## Descripción general del curso
 Este curso abarca dos temáticas. Por un lado se presenta el tema de pronósticos que se estudia a través de modelos paramétricos y no parámetricos de series de tiempo. Por otro lado, se expone el tema de muestreo, el cual se enfoca en la elaboración de encuestas y construcción de planes de muestreo, debido a que en ocasiones la estimación de la demanda debe realizarse a través de estudios de muestreo.
 

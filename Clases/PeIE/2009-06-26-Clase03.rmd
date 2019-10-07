@@ -42,6 +42,7 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
+<br>
 
 ## Introducción
 

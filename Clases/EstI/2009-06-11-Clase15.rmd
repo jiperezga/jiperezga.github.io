@@ -41,6 +41,8 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
+<br>
+
 ## Momentos
 Se define al `$r$`-ésimo momento **alrededor del origen** de una variable aleatoria `$X$` de la forma
 `\begin{align*}

@@ -45,6 +45,8 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
+<br>
+
 ## Distribuciones de probabilidad continuas
 ### Distribución Normal
 Se dice que la variable aleatoria `$X$` tiene una distribución Normal con parámetros `$\mu$` y `$\sigma^2)$`, si su función de densidad de probabilidad es de la forma

@@ -41,6 +41,8 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
+<br>
+
 ## Funciones de probabilidad continuas
 
 Se dice que la función `$f(x)$` es una función de densidad de probabilidad (*fdp*) de la variable aleatoria continua `$X$`, definida en el conjunto de números reales si

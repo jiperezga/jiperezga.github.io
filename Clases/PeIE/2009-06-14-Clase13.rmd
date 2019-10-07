@@ -43,6 +43,8 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
+<br>
+
 ## Distribuciones muestrales
 ### Distribución muestral para proporciones `$p$`
 Sea `$X_1, X_2, \ldots, X_n$` una muestra aleatoria *iid* de tamaño `$n$`, tal que `$X\sim b(n,p)$`. Entonces si `$n$` es suficientemente grande, y la proporción `$p$` no está muy cercana a `$0$` o a `$1$`, tal que `$np$` y `$n(1-p)>5$`, entonces se puede probar que

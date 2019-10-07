@@ -41,6 +41,8 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
+<br>
+
 ## Resumen numéricos
 Una parte importante de la estadística descriptiva, son las medidas estadísticas ya explicadas en la [Clase 03](../../ProbabilidadeInferencia/PeIEClase03.html){:target="_blank"} y [Clase 04](../../ProbabilidadeInferencia/PeIEClase04.html){:target="_blank"}, y aún más importante, es buscar la más adecuada para presentar dichas medidas.
 

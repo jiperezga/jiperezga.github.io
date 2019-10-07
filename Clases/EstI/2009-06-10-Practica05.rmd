@@ -47,6 +47,8 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
+<br>
+
 ## Lista de ejercicios
 1. Suponga que por Ley, la vida máxima de la patente para un nuevo medicamento es `$17$` años. Si restamos el tiempo requerido por la FDA para someter a pruebas y aprobar el medicamento, se obtiene la vida real de la patente para el medicamento, es decir, el tiempo que la compañía tiene para recuperar los costos de investigación, desarrollo y obtener una utilidad. La distribución de los tiempos de vida reales de las patentes para nuevos medicamentos se da a continuación:
 ```{r echo=FALSE}

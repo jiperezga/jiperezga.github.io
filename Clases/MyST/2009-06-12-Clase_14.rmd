@@ -45,6 +45,8 @@ opts_chunk$set(echo=TRUE,
                cache = FALSE)
 ```
 
+<br>
+
 ## Métodos de muestreo
 Los métodos de muestreo son aquellas estrategias que poseen una correspondencia directa con el tipo de muestra que se requiere seleccionar, ya sea debido a los objetivos del trabajo o el tipo de estudio. 
 

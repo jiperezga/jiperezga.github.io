@@ -41,6 +41,8 @@ opts_chunk$set(echo=TRUE,
                cache = FALSE)
 ```
 
+<br>
+
 ## Identificación y ajuste de modelos ARMA 
 Como se señaló previamente, **es posible identificar el orden del proceso estocástico que mejor ajusta a una serie de tiempo, mediante el análisis de las funciones de autocorrelación y autocorrelación parcial muestral** obtenida a partir de la serie. En donde, como se presentó en la [Clase 08](https://jiperezga.github.io/MuestreoySeriesdeTiempo/MySTClase_08.html){:target="_blank"}, es posible identificar el orden p de un proceso AR(p) mediante su PACF, mientras que el orden q de un proceso MA(q) mediante su ACF. **Sin embargo, en el caso de un proceso ARMA(p,q), no es posible identificar los valores p y q por inspección directa de las gráficas de la ACF y PACF muestrales, debido a que el patrón esperado en ambas gráficas posee una forma decreciente**.
 

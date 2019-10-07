@@ -43,6 +43,8 @@ opts_chunk$set(echo=TRUE,
                cache = FALSE)
 ```
 
+<br>
+
 ## Introducción a la metodología Box-Jenkins
 
 Hasta ahora se ha venido trabajando y analizando series de tiempo desde el punto de vista determinístico o clásico, y a partir de ahora, el objetivo será, analizar las series de tiempo desde un punto de vista estocástico o moderno, que utiliza métodos más complejos y en general, requiere de series más largas para su aplicación (se recomienda tener como mínimo 50 observaciones).

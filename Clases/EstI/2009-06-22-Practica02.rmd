@@ -42,6 +42,8 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
+<br>
+
 ## Lista de ejercicios
 1. Un fabricante de neumáticos quiere determinar el diámetro interior de un neumático de cierto grado de calidad, en donde, sabe que idealmente el diámetro debería ser de 570 mm. Suponga que el fabricante tiene los siguientes datos: 
 `\begin{align*}
