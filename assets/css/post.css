@@ -27,9 +27,8 @@
 
 .post-content #twitter-widget-0,.post-content .instagram-media{margin:auto !important}.post-content h1,.post-content h2,.post-content h3,.post-content h4,.post-content h5{font-family:'Open Sans',sans-serif;font-weight:700;font-style:normal;}
 
-.post-content h1{font-size:1.875rem;line-height:1.4;}
-
-@media only screen and (min-width:37.5rem){.post-content h1{font-size:2.813rem}}
+.post-content h1{font-size:1.875rem;line-height:1.4;text-shadow:1px 1px 3px #FFFFFF}
+@media only screen and (min-width:37.5rem){.post-content h1{font-size:2.413rem}}
 
 .post-content h2{font-size:1.375rem;line-height:2rem; text-shadow:1px 1px 3px #FFFFFF}
 @media only screen and (min-width:37.5rem){.post-content h2{font-size:2.188rem}}
@@ -115,4 +114,16 @@ pre{color:#FFFFFF; font-weight:bold}
 
 .MathJax_Display{text-align:center!important}
 tt{font-size:130%;}
+
+/* Botoncitos */
+body {padding:auto;}
+
+.Hide1, .Hide2, .Hide3, .Hide4, .Hide5, .Hide6, .Hide7, .Hide8, .Hide9, .Hide10, .Hide11, .Hide12, .Hide13, .Hide14, .Hide15, .Hide16, .Hide17, .Hide18, .Hide19, .Hide20, .Hide21, .Hide22, .Hide23, .Hide24, .Hide25, .Hide26, .Hide27, .Hide28, .Hide29, .Hide30, .Hide31, .Hide32, .Hide33, .Hide34, .Hide35, .Hide36, .Hide37, .Hide38, .Hide39, .Hide40{display:none; color:#000; background-color:#FFF; max-width: 300px; margin: auto;}
+
+
+.Show1, .Show2, .Show3, .Show4, .Show5, .Show6, .Show7, .Show8, .Show9, .Show10, .Show11, .Show12, .Show13, .Show14, .Show15, .Show16, .Show17, .Show18, .Show19, .Show20, .Show21, .Show22, .Show23, .Show24, .Show25, .Show26, .Show27, .Show28, .Show29, .Show30, .Show31, .Show32, .Show33, .Show34, .Show35, .Show36, .Show37, .Show38, .Show39, .Show40{color:#000; background-color:#FFF; max-width: 300px; margin: auto;}
+
+/* display: block;  en show paracentrar */
+
+#botoncito1, #botoncito2, #botoncito3, #botoncito4, #botoncito5, #botoncito6, #botoncito7, #botoncito8, #botoncito9, #botoncito10, #botoncito11, #botoncito12, #botoncito13, #botoncito14, #botoncito15, #botoncito16, #botoncito17, #botoncito18, #botoncito19, #botoncito20, #botoncito21, #botoncito22, #botoncito23, #botoncito24, #botoncito25, #botoncito26, #botoncito27, #botoncito28, #botoncito29, #botoncito30, #botoncito31, #botoncito32, #botoncito33, #botoncito34, #botoncito35, #botoncito36, #botoncito37, #botoncito38, #botoncito39, #botoncito40 {background:#002240; width:auto; height:auto; max-width:50rem; margin-right: auto; margin-left: auto; padding-left: 0; padding-right: 0; padding: 0 1.25rem; margin: 0 auto 1.875rem; font-family: 'Open Sans',sans-serif; font-weight: 300; font-style: normal; letter-spacing: .01rem; display:none;}
 
