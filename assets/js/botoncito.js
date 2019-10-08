@@ -477,4 +477,4 @@ $('.Hide40').click(function() {
     $('#botoncito40').hide(500);
     $('.Show40').show(0);
     $('.Hide40').hide(0);
-})
+});
