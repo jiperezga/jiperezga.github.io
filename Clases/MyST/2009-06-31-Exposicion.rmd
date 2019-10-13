@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Exposicion SARIMA"
+title: "Exposición SARIMA"
 main-class: 'guia'
 permalink: /MuestreoySeriesdeTiempo/MyST:title.html
 tags:
@@ -95,7 +95,7 @@ Serie1 <- sim_sarima(n=108, model=list(ar=c(-0.89, -0.9),
                      xintercept = 0, n.start = 1050) + 250
 Serie1 <- ts(Serie1, start = c(1995,3), frequency = 12)
 fechas1 <- time(Serie1)
-tagList(plot_ly(x = ~fechas1, y = ~Serie1, mode = 'lines', text = paste("Valor =", round(Serie1, 3)), width = 700, height = 400, type = "scatter") %>% layout(title="Producción mensual de juguetes", xaxis = list(title ="Mes"), yaxis = list(title = "Producción mensual")) %>%
+tagList(plot_ly(x = ~fechas1, y = ~Serie1, mode = 'lines', text = paste("Valor =", round(Serie1, 3)), type = "scatter") %>% layout(title="Producción mensual de juguetes", xaxis = list(title ="Mes"), yaxis = list(title = "Producción mensual")) %>%
 layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)))
 ```
 </pre>
