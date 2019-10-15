@@ -148,7 +148,7 @@ Si se realiza el segundo esfuerzo o muestreo doble sobre el **estrato 2**, se te
 
 A partir de este resultado, será posible calcular un estimador insesgado para la media poblacional obtenida mediante el muestreo doble, de tal forma que
 `\begin{align*}
-\bar{y}_d = \frac{n_1'}{n'} \bar{y}_1 + \frac{n_2}{n'} \bar{y}_1
+\bar{y}_d = \frac{n_1'}{n'} \bar{y}_1 + \frac{n_2}{n'} \bar{y}_2
 \end{align*}`
 
 Además, una expresión para la varianza será obtenida mediante la expresión

@@ -145,17 +145,17 @@ el valor `$n$` con el cual se garantiza con un nivel de confianza `$1-\alpha$` q
 
 dicha expresión puede ser reescrita como
 `\begin{align*}
-\lceil n\rceil = \frac{1}{\frac{1}{N}+\frac{N-1}{N}\frac{1}{n_0}} \quad \text{ con }\quad n_0 = \frac{Z_{\frac{\alpha}{2}}\sigma^2}{B^2}
+\lceil n\rceil = \frac{1}{\frac{1}{N}+\frac{N-1}{N}\frac{1}{n_0}} \quad \text{ con }\quad n_0 = \frac{Z_{\frac{\alpha}{2}}^2\sigma^2}{B^2}
 \end{align*}`
 
 donde: <br>
 `$N$` es el número de individuos en la población <br>
 `$\sigma^2$` es la varianza poblacional de la variable de interés <br>
-`$B$` es el límite del error de estimación para la media poblacional
+`$B$` es el límite del error de estimación para la media poblacional <br>
 `$1-\alpha$` es el nivel de confianza, tal que `$\mathbb{P}(|\hat{\mu}-\mu|\leq B)= 1-\alpha$` <br>
 `$n_0$` es el tamaño de la muestra cuando la población es infinita.
 
-De no conocerse la varianza poblacional `$\sigma^2$`, ésta puede ser reemplazada por su estimador `$\hat{\sigma}^2y=\frac{N-1}{N}S^2$`.
+De no conocerse la varianza poblacional `$\sigma^2$`, ésta puede ser reemplazada por su estimador `$\hat{\sigma}^2=\frac{N-1}{N}S^2$`.
 
 #### Estimación del total poblacional `$\tau$`
 Por su parte, para el cálculo de un estimador para el valor total de la población, el cuál está relacionado con `$\mu$`, se tendrá que
@@ -207,13 +207,13 @@ es posible despejar la ecuación para `$n$`, con la cual se puede garantizar que
 
 dicha expresión puede ser reescrita como
 `\begin{align*}
-\lceil n\rceil = \frac{1}{\frac{1}{N}+\frac{N-1}{N^3}\frac{1}{n_0}} \quad \quad n_0 = \frac{Z_{\frac{\alpha}{2}}\sigma^2}{B^2}
+\lceil n\rceil = \frac{1}{\frac{1}{N}+\frac{N-1}{N^3}\frac{1}{n_0}} \quad \quad n_0 = \frac{Z_{\frac{\alpha}{2}^2}\sigma^2}{B^2}
 \end{align*}`
 
 donde: <br>
 `$N$` es el número de individuos en la población. <br>
 `$\sigma^2$` es la varianza poblacional de la variable de interés. <br>
-`$B$` es el límite del error de estimación para el total poblacional.
+`$B$` es el límite del error de estimación para el total poblacional. <br>
 `$1-\alpha$` es el nivel de confianza, tal que  `$\mathbb{P}(|\hat{\mu}-\mu|\leq B)= 1-\alpha$`. <br>
 `$n_0$` es el tamaño de la muestra cuando la población es infinita.
 
@@ -269,8 +269,8 @@ De lo anterior se obtiene entonces que el tamaño de mustra `$n$` que permite ga
 donde: <br>
 `$N$` es el número de individuos en la población. <br>
 `$p$` es la proporción poblacional de individuos que cumplen con el atributo de interés. <br>
-`$B$` es el límite del error de estimación para la proporción poblacional.
+`$B$` es el límite del error de estimación para la proporción poblacional. <br>
 `$1-\alpha$` es el nivel de confianza, tal que  `$\mathbb{P}(|\hat{\mu}-\mu|\leq B)= 1-\alpha$` <br>
 `$n_0$` es el tamaño de la muestra cuando la población es infinita.
 
-De no conocerse la varianza poblacional `$p$`, ésta puede ser reemplazada por su estimador `$\hat{p}$`.
+De no conocerse la proporción poblacional `$p$`, ésta puede ser reemplazada por su estimador `$\hat{p}$`.
