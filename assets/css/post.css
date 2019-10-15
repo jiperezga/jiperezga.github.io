@@ -89,28 +89,7 @@
 
 figure{margin:1em 380px}
 
-.highlight{margin-left: auto; margin-right: auto; width: 80%}
-.highlight pre{background-color:#000000; border:1px solid #e3edf3}
-@media only screen and (min-width:37.5rem){.highlight{word-wrap:break-word}}
-.highlight .hll{background-color:#333}
-.highlight .c,.highlight .cm,.highlight .cp,.highlight .cs{color:#75715e}
-.highlight .c1{color:#0088ff}
-.highlight .err{background-color:#1e0010}
-.highlight .k,.highlight .kc,.highlight .kd,.highlight .kp,.highlight .kr,.highlight .kt,.highlight .no{color:#ff9d00}
-.highlight .l,.highlight .mf,.highlight .mh,.highlight .mi,.highlight .mo,.highlight .se,.highlight .il{color:#ae81ff}
-.highlight .p{color:#FFFFFF; font-weight:bold}
-.highlight .m{color:#ff628c}
-.highlight .nb,.highlight .ni,.highlight .nl,.highlight .nn,.highlight .py,.highlight .nv,.highlight .w,.highlight .bp,.highlight .vc,.highlight .vg,.highlight .vi{color:#d90000}
-.highlight .n{color:#FFFFFF; font-weight:bold}
-.highlight .kn,.highlight .nt,.highlight .ow{color:#f92672}
-.highlight .ge{font-style:italic}
-.highlight .gs{font-weight:bold}
-.highlight .ld,.highlight .s,.highlight .sb,.highlight .sc,.highlight .sd,.highlight .sh,.highlight .si,.highlight .sx,.highlight .sr,.highlight .s1,.highlight .ss{color:#e6db74}
-.highlight .na,.highlight .nc,.highlight .nd,.highlight .ne,.highlight .nf,.highlight .nx{color:#a6e22e}
-.highlight .s2{color:#3ad900}
-.highlight .o{color:#A8A8A8}
-pre{color:#FFFFFF; font-weight:bold}
-.js-plotly-plot{margin: auto;}
+/* MathJax */
 
 .MathJax_Display{text-align:center!important}
 tt{font-size:130%;}
@@ -118,12 +97,48 @@ tt{font-size:130%;}
 /* Botoncitos */
 body {padding:auto;}
 
-.Hide1, .Hide2, .Hide3, .Hide4, .Hide5, .Hide6, .Hide7, .Hide8, .Hide9, .Hide10, .Hide11, .Hide12, .Hide13, .Hide14, .Hide15, .Hide16, .Hide17, .Hide18, .Hide19, .Hide20, .Hide21, .Hide22, .Hide23, .Hide24, .Hide25, .Hide26, .Hide27, .Hide28, .Hide29, .Hide30, .Hide31, .Hide32, .Hide33, .Hide34, .Hide35, .Hide36, .Hide37, .Hide38, .Hide39, .Hide40{display:none; color:#000; background-color:#FFF; max-width: 300px; margin: auto;}
+#Hide1, #Hide2, #Hide3, #Hide4, #Hide5, #Hide6, #Hide7, #Hide8, #Hide9, #Hide10, #Hide11, #Hide12, #Hide13, #Hide14, #Hide15, #Hide16, #Hide17, #Hide18, #Hide19, #Hide20, #Hide21, #Hide22, #Hide23, #Hide24, #Hide25, #Hide26, #Hide27, #Hide28, #Hide29, #Hide30, #Hide31, #Hide32, #Hide33, #Hide34, #Hide35, #Hide36, #Hide37, #Hide38, #Hide39, #Hide40{display:none; max-width: 300px; margin: auto; margin-right: auto; margin-left: auto; box-shadow: 1px 2px 10px #eee;border-color: #FFF;}
 
+#Show1, #Show2, #Show3, #Show4, #Show5, #Show6, #Show7, #Show8, #Show9, #Show10, #Show11, #Show12, #Show13, #Show14, #Show15, #Show16, #Show17, #Show18, #Show19, #Show20, #Show21, #Show22, #Show23, #Show24, #Show25, #Show26, #Show27, #Show28, #Show29, #Show30, #Show31, #Show32, #Show33, #Show34, #Show35, #Show36, #Show37, #Show38, #Show39, #Show40{max-width: 300px; margin: auto; margin-right: auto; margin-left: auto; display: block; box-shadow: 1px 2px 10px #eee;border-color: #FFF;}
 
-.Show1, .Show2, .Show3, .Show4, .Show5, .Show6, .Show7, .Show8, .Show9, .Show10, .Show11, .Show12, .Show13, .Show14, .Show15, .Show16, .Show17, .Show18, .Show19, .Show20, .Show21, .Show22, .Show23, .Show24, .Show25, .Show26, .Show27, .Show28, .Show29, .Show30, .Show31, .Show32, .Show33, .Show34, .Show35, .Show36, .Show37, .Show38, .Show39, .Show40{color:#000; background-color:#FFF; max-width: 300px; margin: auto;}
+#botoncito1, #botoncito2, #botoncito3, #botoncito4, #botoncito5, #botoncito6, #botoncito7, #botoncito8, #botoncito9, #botoncito10, #botoncito11, #botoncito12, #botoncito13, #botoncito14, #botoncito15, #botoncito16, #botoncito17, #botoncito18, #botoncito19, #botoncito20, #botoncito21, #botoncito22, #botoncito23, #botoncito24, #botoncito25, #botoncito26, #botoncito27, #botoncito28, #botoncito29, #botoncito30, #botoncito31, #botoncito32, #botoncito33, #botoncito34, #botoncito35, #botoncito36, #botoncito37, #botoncito38, #botoncito39, #botoncito40 {width:auto; height:auto; max-width:50rem; margin-right: auto; margin-left: auto; padding-left: 0; padding-right: 0; padding: 0 1.25rem; margin: 0 auto 1.875rem; font-family: 'Open Sans',sans-serif; font-weight: 300; font-style: normal; letter-spacing: .01rem; display:none;border-color: #FFF;}
 
-/* display: block;  en show paracentrar */
+/*Gráficos plotly */
+.js-plotly-plot{margin: auto;}
+.plotlyCuadrito{max-width: 50rem; margin-right: auto; margin-left: auto;}
 
-#botoncito1, #botoncito2, #botoncito3, #botoncito4, #botoncito5, #botoncito6, #botoncito7, #botoncito8, #botoncito9, #botoncito10, #botoncito11, #botoncito12, #botoncito13, #botoncito14, #botoncito15, #botoncito16, #botoncito17, #botoncito18, #botoncito19, #botoncito20, #botoncito21, #botoncito22, #botoncito23, #botoncito24, #botoncito25, #botoncito26, #botoncito27, #botoncito28, #botoncito29, #botoncito30, #botoncito31, #botoncito32, #botoncito33, #botoncito34, #botoncito35, #botoncito36, #botoncito37, #botoncito38, #botoncito39, #botoncito40 {background:#002240; width:auto; height:auto; max-width:50rem; margin-right: auto; margin-left: auto; padding-left: 0; padding-right: 0; padding: 0 1.25rem; margin: 0 auto 1.875rem; font-family: 'Open Sans',sans-serif; font-weight: 300; font-style: normal; letter-spacing: .01rem; display:none;}
+/* Tabla de contenidos */
+div .col-sm-9{margin-left: -40px} /* Espacio entre tabla de contenido y letras*/
+
+.nav.navbar-nav {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 0
+}
+
+nav[data-toggle="toc"] {
+  top: 80px!important;
+  display: block;
+}
+
+/* small screens */
+@media(max-width: 768px) {
+  /* override stickyness so that the navigation does not follow scrolling */
+  nav[data-toggle="toc"] {
+    margin-bottom: 42px;
+    position: static;
+  }
+
+  /* PICK ONE */
+  /* don't expand nested items, which pushes down the rest of the page when navigating */
+  nav[data-toggle="toc"] .nav .active .nav {
+    display: none;
+  }
+  /* alternatively, if you *do* want the second-level navigation to be shown (as seen on this page on mobile), use this */
+  /*
+  nav[data-toggle='toc'] .nav .nav {
+    display: block;
+  }
+  */
+}
 

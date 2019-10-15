@@ -16,6 +16,8 @@
 .ribbon span:after{content:"";position:absolute;right:0;top:100%;z-index:-1;border-left:3px solid transparent;border-right:3px solid #005f97;border-bottom:3px solid transparent;border-top:3px solid #005f97}
 
 /* Color Banda y recuadritos tags */
+
+/* Clase Clases */
 .post-clase .title-category{color:#0088FF; text-shadow:2px 2px 3px #FFFFFF}
 .post-clase .post-content h1,.post-clase .post-content h2,.post-clase .post-content h3,.post-clase .post-content h4{color:#0088FF}
 .post-clase .post-content a{color:#ff9d00;}
@@ -34,8 +36,12 @@
 .post-clase .ribbon span{background-color:#0088FF;}
 .post-clase .ribbon span:before{border-left:3px solid #455565;border-top:3px solid #455565}
 .post-clase .ribbon span:after{border-right:3px solid #455565;border-top:3px solid #455565}
+.post-clase nav[data-toggle=toc] .nav-link, .post-clase nav[data-toggle=toc] .nav-link:focus, .post-clase nav[data-toggle=toc] .nav-link:hover {color: #FFF; background-color: transparent}
+.post-clase nav[data-toggle=toc] .nav>li>a:focus, .post-clase nav[data-toggle=toc] .nav>li>a:hover{padding-left:19px;color:#0088FF;text-decoration:none;background-color:transparent;border-left:1px solid #0088FF}
+.post-clase nav[data-toggle=toc] .nav-link.active, .post-clase nav[data-toggle=toc] .nav-link.active:focus, .post-clase nav[data-toggle=toc] .nav-link.active:hover {padding-left: 18px; font-weight: 800; color: #0088FF; background-color: transparent; border-left: 2px solid #0088FF;}
 
 
+/* Clase Practicas */
 .post-practica .title-category{color:#b31917; text-shadow:2px 2px 3px #FFFFFF}
 .post-practica .post-content h1,.post-practica .post-content h2,.post-practica .post-content h3,.post-practica .post-content h4{color:#b31917}
 .post-practica .post-content a{color:#ff9d00;}
@@ -54,8 +60,12 @@
 .post-practica .ribbon span{background-color:#b31917;}
 .post-practica .ribbon span:before{border-left:3px solid #7d1210;border-top:3px solid #7d1210}
 .post-practica .ribbon span:after{border-right:3px solid #7d1210;border-top:3px solid #7d1210}
+.post-practica nav[data-toggle=toc] .nav-link, .post-practica nav[data-toggle=toc] .nav-link:focus, .post-practica nav[data-toggle=toc] .nav-link:hover {color: #FFF; background-color: transparent}
+.post-practica nav[data-toggle=toc] .nav>li>a:focus, .post-practica nav[data-toggle=toc] .nav>li>a:hover{padding-left:19px;color:#b31917;text-decoration:none;background-color:transparent;border-left:1px solid #b31917}
+.post-practica nav[data-toggle=toc] .nav-link.active, .post-practica nav[data-toggle=toc] .nav-link.active:focus, .post-practica nav[data-toggle=toc] .nav-link.active:hover {padding-left: 18px; font-weight: 800; color: #b31917; background-color: transparent; border-left: 2px solid #b31917;}
 
 
+/* Clase Presentaciones */
 .post-presentacion .title-category{color:#808080; text-shadow:2px 2px 3px #FFFFFF}
 .post-presentacion .post-content h1,.post-presentacion .post-content h2,.post-presentacion .post-content h3,.post-presentacion .post-content h4{color:#808080}
 .post-presentacion .post-content a{color:#ff9d00;}
@@ -74,7 +84,11 @@
 .post-presentacion .ribbon span{background-color:#808080;}
 .post-presentacion .ribbon span:before{border-left:3px solid #545454;border-top:3px solid #545454}
 .post-presentacion .ribbon span:after{border-right:3px solid #545454;border-top:3px solid #545454}
+.post-presentacion nav[data-toggle=toc] .nav-link, .post-presentacion nav[data-toggle=toc] .nav-link:focus, .post-presentacion nav[data-toggle=toc] .nav-link:hover {color: #FFF; background-color: transparent}
+.post-presentacion nav[data-toggle=toc] .nav>li>a:focus, .post-presentacion nav[data-toggle=toc] .nav>li>a:hover{padding-left:19px;color:#808080;text-decoration:none;background-color:transparent;border-left:1px solid #808080}
+.post-presentacion nav[data-toggle=toc] .nav-link.active, .post-presentacion nav[data-toggle=toc] .nav-link.active:focus, .post-clase nav[data-toggle=toc] .nav-link.active:hover {padding-left: 18px; font-weight: 800; color: #808080; background-color: transparent; border-left: 2px solid #808080;}
 
+/* Clase Guias */
 .post-guia .title-category{color:#eb7728; text-shadow:2px 2px 3px #FFFFFF}
 .post-guia .post-content h1,.post-guia .post-content h2,.post-guia .post-content h3,.post-guia .post-content h4{color:#eb7728}
 .post-guia .post-content a{color:#ff9d00;}
@@ -93,7 +107,9 @@
 .post-guia .ribbon span{background-color:#eb7728;}
 .post-guia .ribbon span:before{border-left:3px solid #b05110;border-top:3px solid #b05110}
 .post-guia .ribbon span:after{border-right:3px solid #b05110;border-top:3px solid #b05110}
-
+.post-guia nav[data-toggle=toc] .nav-link, .post-guia nav[data-toggle=toc] .nav-link:focus, .post-guia nav[data-toggle=toc] .nav-link:hover {color: #FFF; background-color: transparent}
+.post-guia nav[data-toggle=toc] .nav>li>a:focus, .post-guia nav[data-toggle=toc] .nav>li>a:hover{padding-left:19px;color:#eb7728;text-decoration:none;background-color:transparent;border-left:1px solid #eb7728}
+.post-guia nav[data-toggle=toc] .nav-link.active, .post-guia nav[data-toggle=toc] .nav-link.active:focus, .post-guia nav[data-toggle=toc] .nav-link.active:hover {padding-left: 18px; font-weight: 800; color: #eb7728; background-color: transparent; border-left: 2px solid #eb7728;}
 
 
 
