@@ -46,7 +46,10 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
-<br>
+```{python}
+print('hello')
+```
+
 
 # Introducción a modelos SARIMA
 Existen situaciones en las que es posible enfrentarse a series temporales que poseen entre sus componentes, un comportamiento estacional, lo cual hace que tanto la media como otras estadísticas dadas en un periodo **no sean estacionarias a lo largo del tiempo**. Y a causa de ello, se tendrá que los métodos de modelación presentados hasta el momento no resulten ser apropiados para el ajuste del conjunto de observaciones asociados a la serie de interés.
@@ -59,8 +62,8 @@ La periodicidad de la componente estacional es usualmente denotada por la letra 
 Suponga que la siguiente serie temporal está dada por la producción mensual de juguetes para niños (en millones), de una empresa ubicada en el municipio de Itagüi, para el periodo marzo de 1995 hasta febrero de 2004.
 
 <!-- puse en width 100% en 3 partes-->
-<button class="Show1">Mostrar código R</button>
-<button class="Hide1">Ocultar código R</button>
+<button id="Show1" class="btn btn-secondary">Mostrar código R</button>
+<button id="Hide1" class="btn btn-info">Ocultar código R</button>
 <main id="botoncito1"> 
 <section class="language-r highlighter-rouge" style="width: 100%;"><section class="highlight" style="width: 100%;"><pre class="highlight" style="width: 100%;">
 <code><span class="n">library</span><span class="p">(</span><span class="n">plotly</span><span class="p">)</span><span class="w">
@@ -82,7 +85,7 @@ Suponga que la siguiente serie temporal está dada por la producción mensual de
 </span></code></pre></section></section>
 </main>
 
-<pre>
+<pre class="plotlyCuadrito">
 ```{r echo=FALSE}
 library(htmltools)
 library(plotly)
@@ -162,8 +165,8 @@ H_0: Y_t \text{ posee raíces unitarias estacionales} \\H_1: Y_t \text{ no posee
 
 En donde, **para rechazar** la hipótesis nula, se tendrá que el estadístico de prueba deberá ser menor al valór de la región crítica calculado a un `$5\%$` de significancia.
 
-<button class="Show2">Mostrar código R</button>
-<button class="Hide2">Ocultar código R</button>
+<button id="Show2" class="btn btn-secondary">Mostrar código R</button>
+<button id="Hide2" class="btn btn-info">Ocultar código R</button>
 <main id="botoncito2"> 
 <section class="language-r highlighter-rouge" style="width: 100%;"><section class="highlight" style="width: 100%;"><pre class="highlight" style="width: 100%;">
 <code><span class="n">library</span><span class="p">(</span><span class="n">forecast</span><span class="p">)</span><span class="w">
@@ -182,8 +185,8 @@ Por tanto, se concluye que la serie temporal posee una raíz unitaria estacional
 
 Para realizar la eliminación de la raíz unitaria estacional encontrada anteriormente, se emplea la función `diff()` con argumento `lag = 12`, seguido de la aplicación de la prueba OCSB, para observar si existen todavía raíces unitarias estacionales.
 
-<button class="Show3">Mostrar código R</button>
-<button class="Hide3">Ocultar código R</button>
+<button id="Show3" class="btn btn-secondary">Mostrar código R</button>
+<button id="Hide3" class="btn btn-info">Ocultar código R</button>
 <main id="botoncito3"> 
 <section class="language-r highlighter-rouge" style="width: 100%;"><section class="highlight" style="width: 100%;"><pre class="highlight" style="width: 100%;">
 <code><span class="n">dSerie1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">diff</span><span class="p">(</span><span class="n">Serie1</span><span class="p">,</span><span class="w"> </span><span class="n">lag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12</span><span class="p">)</span><span class="w">
@@ -208,8 +211,8 @@ H_0: Y_t \text{ posee raíces unitarias regulares} \\H_1: Y_t \text{ no posee ra
 
 En donde, **para rechazar** la hipótesis nula, será necesario que el P-valor obtenido por la prueba sea menor al `$5\%$`, el cual es el nivel de significancia que estamos empleando para las pruebas.
 
-<button class="Show4">Mostrar código R</button>
-<button class="Hide4">Ocultar código R</button>
+<button id="Show4" class="btn btn-secondary">Mostrar código R</button>
+<button id="Hide4" class="btn btn-info">Ocultar código R</button>
 <main id="botoncito4"> 
 <section class="language-r highlighter-rouge" style="width: 100%;"><section class="highlight" style="width: 100%;"><pre class="highlight" style="width: 100%;">
 <code><span class="n">library</span><span class="p">(</span><span class="n">tseries</span><span class="p">)</span><span class="w">
@@ -234,8 +237,8 @@ Un método clásico para la identificación es el de realizar los gráficos de l
 
 Para ello se emplea las funciones `acf()` y `pacf()`, con el argumento `lag.max = 30`, ésto con el objetivo de poder visualizar al menos dos periodos estacionales, ya que tenemos que la periodicidad de la serie `$s=12$`.
 
-<button class="Show5">Mostrar código R</button>
-<button class="Hide5">Ocultar código R</button>
+<button id="Show5" class="btn btn-secondary">Mostrar código R</button>
+<button id="Hide5" class="btn btn-info">Ocultar código R</button>
 <main id="botoncito5"> 
 <section class="language-r highlighter-rouge" style="width: 100%;"><section class="highlight" style="width: 100%;"><pre class="highlight" style="width: 100%;">
 <code><span class="c1"># Gráfico básico</span><span class="w">
@@ -275,7 +278,7 @@ Para ello se emplea las funciones `acf()` y `pacf()`, con el argumento `lag.max 
 </pre></section></section>
 </main>
 
-<pre>
+<pre class="plotlyCuadrito">
 ```{r echo=FALSE}
 library(feasts)
 library(tsibble)
@@ -338,8 +341,8 @@ add_header_above(c("MA" = 6))
 
 Se procede entonces a realizar la estimación de la EACF, la serie de datos de producción mensual de juguetes para niños. Para realizar la estimación de la EACF en <tt>R</tt> se emplean la función `eacf()` de la librería `TSA`. Es de anotar que este método no es muy útil para observar comportamiento estacional.
 
-<button class="Show6">Mostrar código R</button>
-<button class="Hide6">Ocultar código R</button>
+<button id="Show6" class="btn btn-secondary">Mostrar código R</button>
+<button id="Hide6" class="btn btn-info">Ocultar código R</button>
 <main id="botoncito6"> 
 <section class="language-r highlighter-rouge" style="width: 100%;"><section class="highlight" style="width: 100%;"><pre class="highlight" style="width: 100%;">
 <code><span class="n">library</span><span class="p">(</span><span class="n">TSA</span><span class="p">)</span><span class="w">
@@ -359,8 +362,8 @@ Otra alternativa propuesta para la identificación de un modelo adecuado, es med
 
 Se realiza entonces la estimación del gráfico, aplicando los argumentos `nar = 25` y `nma = 25` para tener encuenta al menos dos periodos estacionales en la estimación. Además, se debe emplear el argumento `really.big = T` debido a que el total de rezagos que se va a estimar es muy grande y se requiere de este argumento para poder realizar la estimación.
 
-<button class="Show7">Mostrar código R</button>
-<button class="Hide7">Ocultar código R</button>
+<button id="Show7" class="btn btn-secondary">Mostrar código R</button>
+<button id="Hide7" class="btn btn-info">Ocultar código R</button>
 <main id="botoncito7"> 
 <section class="language-r highlighter-rouge" style="width: 100%;"><section class="highlight" style="width: 100%;"><pre class="highlight" style="width: 100%;">
 <code><span class="n">plot</span><span class="p">(</span><span class="n">armasubsets</span><span class="p">(</span><span class="n">dSerie1</span><span class="p">,</span><span class="w"> </span><span class="n">nar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">25</span><span class="p">,</span><span class="w"> </span><span class="n">nma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">25</span><span class="p">,</span><span class="w"> </span><span class="n">really.big</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">))</span><span class="w"></span></code>
@@ -382,8 +385,8 @@ Para la aplicación de la función `auto.arima` se recomienda emplear el argumen
 
 Para la serie en diferencias se tendrá que
 
-<button class="Show8">Mostrar código R</button>
-<button class="Hide8">Ocultar código R</button>
+<button id="Show8" class="btn btn-secondary">Mostrar código R</button>
+<button id="Hide8" class="btn btn-info">Ocultar código R</button>
 <main id="botoncito8"> 
 <section class="language-r highlighter-rouge" style="width: 100%;"><section class="highlight" style="width: 100%;"><pre class="highlight" style="width: 100%;">
 <code><span class="n">auto.arima</span><span class="p">(</span><span class="n">dSerie1</span><span class="p">,</span><span class="w"> </span><span class="n">ic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"bic"</span><span class="p">)</span><span class="w"></span></code>
@@ -396,8 +399,8 @@ auto.arima(dSerie1, ic = "bic")
 
 mientras que para la serie original se tendrá que
 
-<button class="Show9">Mostrar código R</button>
-<button class="Hide9">Ocultar código R</button>
+<button id="Show9" class="btn btn-secondary">Mostrar código R</button>
+<button id="Hide9" class="btn btn-info">Ocultar código R</button>
 <main id="botoncito9"> 
 <section class="language-r highlighter-rouge" style="width: 100%;"><section class="highlight" style="width: 100%;"><pre class="highlight" style="width: 100%;">
 <code><span class="n">auto.arima</span><span class="p">(</span><span class="n">Serie1</span><span class="p">,</span><span class="w"> </span><span class="n">ic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"bic"</span><span class="p">)</span><span class="w"></span></code>
@@ -418,8 +421,8 @@ Vamos a mostrar como se realizaría la estimación de uno de los posibles modelo
 
 Para ello empleamos la función `arima`, empleando la serie original.
 
-<button class="Show10">Mostrar código R</button>
-<button class="Hide10">Ocultar código R</button>
+<button id="Show10" class="btn btn-secondary">Mostrar código R</button>
+<button id="Hide10" class="btn btn-info">Ocultar código R</button>
 <main id="botoncito10"> 
 <section class="language-r highlighter-rouge" style="width: 100%;"><section class="highlight" style="width: 100%;"><pre class="highlight" style="width: 100%;">
 <code><span class="n">SARIMA_303_110</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">Arima</span><span class="p">(</span><span class="n">Serie1</span><span class="p">,</span><span class="w"> </span><span class="n">order</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">),</span><span class="w"> </span><span class="n">seasonal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">order</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> 
@@ -471,8 +474,8 @@ Y finalmente, el P-valor asociado a cada uno de los estadísticos de prueba esta
 
 Para realizar el cálculo anterior, en <tt>R</tt> es necesario extraer tanto los coeficientes estimados como los errores estándar de los coeficientes, hacer la división, y posteriormente comparar el estadístico de prueba con la región crítica, o calcular el P-valor asociado a cada uno de los estadísticos de prueba.
 
-<button class="Show11">Mostrar código R</button>
-<button class="Hide11">Ocultar código R</button>
+<button id="Show11" class="btn btn-secondary">Mostrar código R</button>
+<button id="Hide11" class="btn btn-info">Ocultar código R</button>
 <main id="botoncito11"> 
 <section class="language-r highlighter-rouge" style="width: 100%;"><section class="highlight" style="width: 100%;"><pre class="highlight" style="width: 100%;">
 <code><span class="n">tc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">SARIMA_303_110</span><span class="o">$</span><span class="n">coef</span><span class="o">/</span><span class="nf">sqrt</span><span class="p">(</span><span class="n">diag</span><span class="p">(</span><span class="n">SARIMA_303_110</span><span class="o">$</span><span class="n">var.coef</span><span class="p">))</span><span class="w">
@@ -522,8 +525,8 @@ en donde, **si no se rechaza** `$H_0$` para todo `$h = max(k) = \left\lceil\frac
 
 Existen dos formas de probar si los residuales son incorrelacionados o no, el primero es mediante análisis gráfico, el segundo mediante la aplicación de pruebas estadísticas. Para el análisis gráfico se tiene la ACF y la PACF, mientras que para pruebas estadísticas se tiene las pruebas Box-Ljung y Box-Pierce, las cuales pueden realizarse mediante la función `Box-test` de la librería `stats` con el argumento `type = "Ljung-Box"` y `type = "Box-Pierce"`, respectivamente.
 
-<button class="Show12">Mostrar código R</button>
-<button class="Hide12">Ocultar código R</button>
+<button id="Show12" class="btn btn-secondary">Mostrar código R</button>
+<button id="Hide12" class="btn btn-info">Ocultar código R</button>
 <main id="botoncito12"> 
 <section class="language-r highlighter-rouge" style="width: 100%;"><section class="highlight" style="width: 100%;"><pre class="highlight" style="width: 100%;">
 <code><span class="c1"># Se extraen residuales</span><span class="w">
@@ -563,7 +566,7 @@ Existen dos formas de probar si los residuales son incorrelacionados o no, el pr
 </pre></section></section>
 </main>
 
-<pre>
+<pre class="plotlyCuadrito">
 ```{r echo=FALSE}
 res <- resid(SARIMA_303_110)
 
@@ -601,8 +604,8 @@ De los gráfcos de la ACF y PACF para los residuales, podría pensarse que los r
 
 Al aplicar el estadístico Ljung-Box tenemos el siguiente resultado
 
-<button class="Show13">Mostrar código R</button>
-<button class="Hide13">Ocultar código R</button>
+<button id="Show13" class="btn btn-secondary">Mostrar código R</button>
+<button id="Hide13" class="btn btn-info">Ocultar código R</button>
 <main id="botoncito13"> 
 <section class="language-r highlighter-rouge" style="width: 100%;"><section class="highlight" style="width: 100%;"><pre class="highlight" style="width: 100%;">
 <code><span class="n">Box.test</span><span class="p">(</span><span class="n">res</span><span class="p">)</span><span class="w"></span></code>
@@ -626,8 +629,8 @@ H_1: \varepsilon_t \not\sim Normal
 
 Similar a la prueba de incorrelación, existen dos formas de probar si los residuales se distribuyen o no normalmente, el primero el análisis del gráfico cuantil-cuantil (QQ-Plot), mientras que el segundo es mediante la aplicación de pruebas estadísticas tales como, la prueba Shapiro-Wilk, Kolmogorov-Smirnov, Kuiper, etc. Para la realización del QQ-Plot, se emplea la función `qqPlot()` de la librería `car`, mientras que para la prueba estadística, se emplea la función `shapiro.test()` de la librería `stats`.
 
-<button class="Show14">Mostrar código R</button>
-<button class="Hide14">Ocultar código R</button>
+<button id="Show14" class="btn btn-secondary">Mostrar código R</button>
+<button id="Hide14" class="btn btn-info">Ocultar código R</button>
 <main id="botoncito14"> 
 <section class="language-r highlighter-rouge" style="width: 100%;"><section class="highlight" style="width: 100%;"><pre class="highlight" style="width: 100%;">
 <code><span class="n">library</span><span class="p">(</span><span class="n">car</span><span class="p">)</span><span class="w">
@@ -642,8 +645,8 @@ qqPlot(res)
 
 Del QQ-plot para los residuales, se aprecia que solo dos observaciones ubicadas en la parte superior izquierda se encuentran por fuera de las bandas de confianza. Pero que, al estar tan cercanas a las bandas, no es seguro que los datos no se distribuyan aproximadamente normal. Por ello se procede a aplicar la prueba Shapiro-Wilk
 
-<button class="Show15">Mostrar código R</button>
-<button class="Hide15">Ocultar código R</button>
+<button id="Show15" class="btn btn-secondary">Mostrar código R</button>
+<button id="Hide15" class="btn btn-info">Ocultar código R</button>
 <main id="botoncito15"> 
 <section class="language-r highlighter-rouge" style="width: 100%;"><section class="highlight" style="width: 100%;"><pre class="highlight" style="width: 100%;">
 <code><span class="n">shapiro.test</span><span class="p">(</span><span class="n">res</span><span class="p">)</span><span class="w"></span></code>
@@ -670,8 +673,8 @@ en donde, **si no se rechaza** `$H_0$` se tendrá evidencia para concluir que **
 
 Similar a los dos casos anteriores, se tiene tanto análisis gráfico como pruebas estadísticas para probar si los residuales del modelo poseen o no variabilidad contante. Para observar si la variabilidad es constante de forma gráfica simplemente es cuestión de realizar el gráfico de los residuales del modelo, mientras que para la prueba estadística, se pueden emplear la prueba Breusch-Pagan mediante la función `bptest()` de la librería `lmtest`, o la prueba Goldfeld-Quandt mediante la función `gqtest()` de la librería `lmtest`.
 
-<button class="Show16">Mostrar código R</button>
-<button class="Hide16">Ocultar código R</button>
+<button id="Show16" class="btn btn-secondary">Mostrar código R</button>
+<button id="Hide16" class="btn btn-info">Ocultar código R</button>
 <main id="botoncito16"> 
 <section class="language-r highlighter-rouge" style="width: 100%;"><section class="highlight" style="width: 100%;"><pre class="highlight" style="width: 100%;">
 <code><span class="c1"># Gráfico básico</span><span class="w">
@@ -686,7 +689,7 @@ Similar a los dos casos anteriores, se tiene tanto análisis gráfico como prueb
 </pre></section></section>
 </main>
 
-<pre>
+<pre class="plotlyCuadrito">
 ```{r echo=FALSE}
 fechas2 <- time(res)
 tagList(plot_ly(x = ~fechas2, y = ~res, mode = 'lines', text = paste("Valor =", round(res, 3)), width = 700, height = 400, type = "scatter") %>% layout(title="Residuales del modelo SARIMA(3,0,3)(1,1,0)[12]", xaxis = list(title ="Mes"), yaxis = list(title = "Residuales")) %>%
@@ -696,8 +699,8 @@ layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)))
 
 Del gráfico de la serie de residuales, se aprecia que éstos se encuentran dentro de unos límites definidos, y éstos no aumentan o disminuyen con el tiempo, por lo cual podría pensarse que los residuales poseen variabilidad constante. Al realizar la prueba Breusch-Pagan se obtiene el siguiente resultado.
 
-<button class="Show17">Mostrar código R</button>
-<button class="Hide17">Ocultar código R</button>
+<button id="Show17" class="btn btn-secondary">Mostrar código R</button>
+<button id="Hide17" class="btn btn-info">Ocultar código R</button>
 <main id="botoncito17"> 
 <section class="language-r highlighter-rouge" style="width: 100%;"><section class="highlight" style="width: 100%;"><pre class="highlight" style="width: 100%;">
 <code><span class="n">library</span><span class="p">(</span><span class="n">lmtest</span><span class="p">)</span><span class="w">
@@ -717,8 +720,8 @@ De la prueba anterior, se aprecia que el P-valor asociado a la prueba Breusch-Pa
 ## Pronóstico del modelo
 Dado que el objetivo princial de trabajar con series de tiempo es poder realizar pronósticos de la serie, se procede a calcular los mismos para dos años en el futuro. Para ello se emplea la función `forecast` de la librería `forecast`.
 
-<button class="Show18">Mostrar código R</button>
-<button class="Hide18">Ocultar código R</button>
+<button id="Show18" class="btn btn-secondary">Mostrar código R</button>
+<button id="Hide18" class="btn btn-info">Ocultar código R</button>
 <main id="botoncito18"> 
 <section class="language-r highlighter-rouge" style="width: 100%;"><section class="highlight" style="width: 100%;"><pre class="highlight" style="width: 100%;">
 <code><span class="c1">## Gráfico Básico</span><span class="w">
@@ -732,7 +735,7 @@ Dado que el objetivo princial de trabajar con series de tiempo es poder realizar
 </pre></section></section>
 </main>
 
-<pre style="position: relative; width: 700px; margin: auto;">
+<pre class="plotlyCuadrito">
 ```{r echo=FALSE}
 library(TSplotly)
 tagList(TSplot(origin_t = 48,SARIMA_303_110,X_new,title_size = 8,ts_original = "Original time series", ts_forecast = "Predicted time series"))
