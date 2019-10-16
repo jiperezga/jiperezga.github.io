@@ -42,8 +42,6 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
-<br>
-
 ## Variables aleatorias
 Es una función que asocia un número real a cada elemento del espacio muestral `$S$`. Comúnmente las variables aleatorias se denotan por letras mayúsculas del final del alfabeto `$(X,Y,Z)$` y a los valores observados por letras minúsculas `$(x,y,z)$`.
 

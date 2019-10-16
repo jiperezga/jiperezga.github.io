@@ -43,8 +43,6 @@ opts_chunk$set(echo=TRUE,
                cache = FALSE)
 ```
 
-<br>
-
 ## Métodos de muestreo
 
 ### Muestreo por conglomerados

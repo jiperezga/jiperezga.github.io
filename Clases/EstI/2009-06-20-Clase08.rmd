@@ -42,8 +42,6 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
-<br>
-
 ## Distribución de probabilidad conjunta
 ### Caso discreto
 

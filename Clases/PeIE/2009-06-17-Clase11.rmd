@@ -41,8 +41,6 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
-<br>
-
 ## Teoremas de Aproximación
 ### Teorema de Aproximación Binomial a Poisson
 Si `$X\sim b(n,p)$` con `$n$` grande `$(n\geq 100)$` y `$p$` pequeña `$(p\leq 0.01)$` entonces se dice que `$X\stackrel{a}{\sim}P(\lambda)$` donde `$\lambda = np$`

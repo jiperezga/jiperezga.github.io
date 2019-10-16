@@ -45,9 +45,7 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
-<br>
-
-## Lista de ejercicios
+# Lista de ejercicios
 A partir de las series A partir de las series de tiempo suministradas en el archivo de los siguientes enlaces
 
 * [Generación CO2](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/CO2.xlsx){:target="_blank"}

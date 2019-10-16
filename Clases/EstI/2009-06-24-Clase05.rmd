@@ -38,8 +38,6 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
-<br>
-
 ## Continuación técnicas de conteo
 ### Teorema: Combinatoria
 El número de combinaciones de `$n$` objetos, tomando `$r$` objetos a la vez, es el número de subconjuntos de tamaño `$r$`, que se pueden formar a partir de los `$n$` objetos. Entonces, el número de subconjuntos desordenados de tamaño `$r$` escogidos sin reemplazo, de un total de `$n$` objetos disponibles es

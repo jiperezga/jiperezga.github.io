@@ -43,8 +43,6 @@ opts_chunk$set(echo=TRUE,
                cache = FALSE)
 ```
 
-<br>
-
 ## Qué es una encuesta
 La encuesta es un método de investigación y recopilación de datos que consta de una serie de preguntas estandarizadas hechas a una muestra representativa de la población de la que buscamos obtener informacion sobre diversos temas. Éstas poseen una gran variedad de propósitos y pueden llevarse a cabo de muchas maneras dependiendo de la metodología elegida y los objetivos que se deseen alcanzar.
 

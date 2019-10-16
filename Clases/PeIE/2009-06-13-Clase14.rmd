@@ -42,8 +42,6 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
-<br>
-
 ### Distribución de una combinación lineal
 Sean `$X_1$` y `$X_2$` dos variables aleatorias normalmente distribuidas con media `$\mu$` y varianza `$\sigma^2$`. Y si `$Y$` es una combinación lineal de `$X_1$` y `$X_2$`, tal que
 `\begin{align*}

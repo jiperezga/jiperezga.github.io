@@ -43,8 +43,6 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
-<br>
-
 ## Varianza
 
 ### Caso univariado

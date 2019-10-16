@@ -40,8 +40,6 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
-<br>
-
 ## Continuación de medidas estadísticas
 
 ### Medidas de dispersión

@@ -28,8 +28,6 @@ csl: "../../apa.csl"
 
 
 
-<br>
-
 Instalación de R-Project
 ------------------------
 

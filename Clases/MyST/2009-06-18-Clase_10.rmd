@@ -41,8 +41,6 @@ opts_chunk$set(echo=TRUE,
                cache = FALSE)
 ```
 
-<br>
-
 <!-- Hay que mejorar esta clase, mirar el programa del curso para agregar los estadísticos allí planteados -->
 
 ## Ajuste de modelos

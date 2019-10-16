@@ -41,8 +41,6 @@ opts_chunk$set(echo=TRUE,
                cache = FALSE)
 ```
 
-<br>
-
 ## Introducción
 
 Una serie de tiempo es una secuencia de observaciones registradas y ordenadas de forma periódica, en intervalos de tiempo igualmente espaciados, tales como, días, meses, semestres, años, entre otros. Estas observaciones son caracterizadas por una variable aleatoria `$Y_t$`, la cual depende del tiempo `$t=1,2,\ldots,T$`, y donde el objetivo es modelar el comportamiento de `$Y_t$` contra `$t$`, siendo `$T$` el número total de observaciones que se tenga en la serie de tiempo.

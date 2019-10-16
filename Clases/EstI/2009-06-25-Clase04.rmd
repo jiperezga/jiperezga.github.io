@@ -42,8 +42,6 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
-<br>
-
 ## Fundamentos de probabilidad
 ### Noción de aleatoriedad
 La aleatoriedad está asociada a todo proceso cuyo resultado no puede ser determinado antes de que éste se produzca, debido a que los resultados de dicho proceso no contiene patrones reconocibles o regulares, que permitan pronosticar un resultado futuro.

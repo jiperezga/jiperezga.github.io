@@ -40,8 +40,6 @@ opts_chunk$set(echo=TRUE,
                cache = FALSE)
 ```
 
-<br>
-
 ## Modelo de descomposición
 Una vez separados los componentes que conforman una serie de tiempo, es necesario analizar la forma en que se relacionan estos con la serie original, puesto que al recombinar los componentes es posible obtener una serie de tiempo completamente pronosticable.
 

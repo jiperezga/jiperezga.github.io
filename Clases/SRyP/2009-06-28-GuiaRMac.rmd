@@ -38,8 +38,6 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
-<br>
-
 ## Instalación de R-Project
 Para la descarga de la última versión del programa R-project en Mac OS X, haga click en el siguiente enlace [(Descargar R-project)](https://cloud.r-project.org/bin/macosx/){:target="_blank"}.
 Una vez realizado click en el enlace, se abrirá la siguiente venta

@@ -39,8 +39,6 @@ opts_chunk$set(echo=TRUE,
                cache = FALSE)
 ```
 
-<br>
-
 ## Descripción general del curso
 Los ingenieros industriales se enfrentan a múltiples problemas en los que deben tomar decisiones que pueden llegar a ser trascendentales en algunos procesos. Puesto que la aleatoriedad es una de las características principales de la información, el análisis estadístico de datos se convierte en el argumento más importante a la hora de verificar una hipótesis de interés.
 El curso de Probabilidad e Inferencia Estadística se desarrolla en torno a tres ejes de interés. Como herramienta, la inferencia estadística, le ayudará al ingeniero en la toma de decisiones al permitirle validar ciertas hipótesis basadas en la evidencia (datos muestrales). Previo a esta validación, siempre será de utilidad emplear el análisis exploratorio de los datos como base fundamental para el planteamiento de dichas hipótesis. Los conceptos de probabilidad y las funciones de distribución serán la base para fundamentar la teoría del trabajo inferencial.

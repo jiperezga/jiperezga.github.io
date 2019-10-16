@@ -45,7 +45,6 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
-<br>
 ## Prueba de hipótesis para la media `$\mu$`
 Sea `$X_1, X_2, \ldots, X_n$` una muestra aleatoria *iid* de tamaño `$n$` con media desconocida `$\mathbb{E}(X)=\mu$`, y varianza `$Var(X)=\sigma^2<\infty$`, entonces dependiendo de las condiciones, se tendrán los siguientes pruebas de hipótesis para la media `$\mu$`.
 

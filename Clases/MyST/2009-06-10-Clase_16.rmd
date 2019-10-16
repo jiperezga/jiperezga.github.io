@@ -46,8 +46,6 @@ opts_chunk$set(echo=TRUE,
                cache = FALSE)
 ```
 
-<br>
-
 ## Métodos de muestreo
 ### Muestreo aleatorio estratificado (MAE)
 Es una técnica de muestreo mediante la cual se obtiene una

@@ -43,8 +43,6 @@ opts_chunk$set(echo=TRUE,
                cache = FALSE)
 ```
 
-<br>
-
 ## Series con tendencia
 ### Promedios móviles dobles
 Este método se basa en aplicar el procedimiento de promedios móviles por segunda vez a una serie de tiempo, es decir, se calcula un primer conjunto de promedios móviles de la serie original y luego se calcula un segundo conjunto promedios móviles a partir del primer conjunto calculado, para luego hacer un ajuste por nivel y por pendiente. 

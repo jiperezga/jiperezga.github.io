@@ -42,8 +42,6 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
-<br>
-
 ## Introducción
 
 La estadística es una ciencia derivada de la matemática, que se encarga de recolectar, analizar y presentar información tanto numérica como categórica de una población de interés, con el fin de establecer conclusiones acerca de la misma población, o de alguno de los parámetros que la conforman. Debido a ésto, es que la estadística es empleada en gran variedad de áreas, tales como economía, administración, ingeniería, biología, medicina, hidrología, ciencias sociales, negocios, finanzas, etc.

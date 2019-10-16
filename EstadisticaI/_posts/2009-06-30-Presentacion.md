@@ -28,8 +28,6 @@ csl: "../../apa.csl"
 
 
 
-<br>
-
 Descripción general del curso
 -----------------------------
 

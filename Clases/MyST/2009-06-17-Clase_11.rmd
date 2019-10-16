@@ -42,8 +42,6 @@ opts_chunk$set(echo=TRUE,
                cache = FALSE)
 ```
 
-<br>
-
 ## Introducción a modelos ARIMA
 En alguno casos, cuandos nos enfrentamos a diferentes series temporales puede ocurrir situaciones en las cuales la serie de interés no posee un comportamiento estacionario en covarianza, debido a que éstas pueden poseer estructuras de tendencia, estacionalidad o variabilidad no constante, que hacen que los métodos de ajuste de modelos ARMA no sea adecuado.
 

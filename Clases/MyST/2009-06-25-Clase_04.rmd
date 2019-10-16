@@ -43,8 +43,6 @@ opts_chunk$set(echo=TRUE,
                cache = FALSE)
 ```
 
-<br>
-
 ## Introducción al modelamiento de series de tiempo
 Cómo se ha mencionado hasta ahora, uno de los aspecto más importantes en las series de tiempo, recae en la adecuada selección del modelo que se va a emplear, debido a que éste será el que refleje la estructura de la serie, y a su vez, permitirá la realización de pronósticos futuros.
 

@@ -43,8 +43,6 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
-<br>
-
 ## Probabilidad Condicional
 Es la probabilidad de que ocurra un evento `$A$`, cuando se sabe que ya ocurrió un evento `$B$`, se denota por `$\mathbb P(A|B)$` y se define como
 `\begin{align*}

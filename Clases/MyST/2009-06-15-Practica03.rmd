@@ -45,9 +45,7 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
-<br>
-
-## Lista de ejercicios
+# Lista de ejercicios
 
 1. Suponga las siguientes series de tiempo suministradas en los archivos de los siguientes enlaces
 [Serie 5](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/MySTSim5.xlsx){:target="_blank"}, [Serie 6](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/MySTSim6.xlsx){:target="_blank"}, [Serie 7](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/MySTSim7.xlsx){:target="_blank"}, [Serie 8](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/MySTSim8.xlsx){:target="_blank"}, [Serie 9](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/MySTSim9.xlsx){:target="_blank"}, [Serie 10](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/MySTSim10.xlsx){:target="_blank"}, y con cada una de ellas

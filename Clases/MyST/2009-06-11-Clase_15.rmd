@@ -48,8 +48,6 @@ opts_chunk$set(echo=TRUE,
                cache = FALSE)
 ```
 
-<br>
-
 ## Métodos de muestreo
 ### Métodos probabilísticos
 Los métodos de muestreo probabilísticos son aquellos que se basan en el principio de equiprobabilidad. Es decir, aquellos en los que todos los individuos tienen la misma probabilidad de ser elegidos para formar parte de una muestra y, consiguientemente, todas las posibles muestras de tamaño `$n$` tienen la misma probabilidad de ser seleccionadas. **Sólo estos métodos de muestreo probabilísticos nos aseguran la representatividad de la muestra extraída** y son, por tanto, los más recomendables. 

@@ -39,8 +39,6 @@ opts_chunk$set(echo=TRUE,
                cache = FALSE)
 ```
 
-<br>
-
 ## Evaluación de los pronósticos 
 Otro aspecto de suma importancia en los pronósticos, es evaluar la precisión o eficiencia del método de pronóstico empleado, y para ello, se emplean diferentes indicadores que permiten identificar qué tan acertado o cercano es el pronostico realizado respecto a su valor original.
 
