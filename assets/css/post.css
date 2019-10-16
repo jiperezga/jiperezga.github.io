@@ -10,7 +10,7 @@
 
 .post-content img{max-width:100%;margin:auto;display:block}
 
-.post-content p,.post-content h1,.post-content h2,.post-content h3,.post-content h4,.post-content ul,.post-content ol,.post-content .tags,.post-content iframe,.post-content .button-post{*zoom:1;width:auto;max-width:50rem;float:none;display:block;margin-right:auto;margin-left:auto;padding-left:0;padding-right:0;padding:0 1.25rem;margin:0 auto 1.875rem;font-family:'Open Sans',sans-serif;font-weight:300;font-style:normal;font-size:1.125rem;letter-spacing:.01rem;}
+.post-content p,.post-content h1,.post-content h2,.post-content h3,.post-content h4,.post-content ul,.post-content ol,.post-content .tags,.post-content iframe,.post-content .button-post{*zoom:1;width:auto;float:none;display:block;margin-right:auto;margin-left:auto;padding-left:0;padding-right:0;padding:0 1.25rem;margin:0 auto 1.875rem;font-family:'Open Sans',sans-serif;font-weight:300;font-style:normal;font-size:1.125rem;letter-spacing:.01rem;}
 
 .post-content p:before,.post-content h1:before,.post-content h2:before,.post-content h3:before,.post-content h4:before,.post-content ul:before,.post-content ol:before,.post-content .tags:before,.post-content iframe:before,.post-content .button-post:before,.post-content p:after,.post-content h1:after,.post-content h2:after,.post-content h3:after,.post-content h4:after,.post-content ul:after,.post-content ol:after,.post-content .tags:after,.post-content iframe:after,.post-content .button-post:after{content:'';display:table;}
 
@@ -74,7 +74,7 @@
 .post-content .tags a{font-size:1rem;color:#005f97;display:inline-block;border:1px solid #005f97;border-radius:.313rem;padding:.25rem .625rem;margin-right:.125rem;text-decoration:none;background: #FFFFFF;opacity: 0.8}
 .post-content .tags a:hover{color:#00395b;border:1px solid #00395b;background:#fff;opacity: 1}
 
-.tag-title{font-family:'Open Sans',sans-serif;font-weight:700;font-style:normal;font-size:2.25rem;*zoom:1;width:auto;max-width:50rem;float:none;display:block;margin-right:auto;margin-left:auto;padding-left:0;padding-right:0;color:#BBA32C; text-shadow: 1px 1px 3px #FFFFFF}
+.tag-title{font-family:'Open Sans',sans-serif;font-weight:700;font-style:normal;font-size:2.25rem;*zoom:1;width:auto;float:none;display:block;margin-right:auto;margin-left:auto;padding-left:0;padding-right:0;color:#BBA32C; text-shadow: 1px 1px 3px #FFFFFF}
 
 .tag-title:before,.tag-title:after{content:'';display:table}
 .tag-title:after{clear:both}
@@ -101,44 +101,19 @@ body {padding:auto;}
 
 #Show1, #Show2, #Show3, #Show4, #Show5, #Show6, #Show7, #Show8, #Show9, #Show10, #Show11, #Show12, #Show13, #Show14, #Show15, #Show16, #Show17, #Show18, #Show19, #Show20, #Show21, #Show22, #Show23, #Show24, #Show25, #Show26, #Show27, #Show28, #Show29, #Show30, #Show31, #Show32, #Show33, #Show34, #Show35, #Show36, #Show37, #Show38, #Show39, #Show40{max-width: 300px; margin: auto; margin-right: auto; margin-left: auto; display: block; box-shadow: 1px 2px 10px #eee;border-color: #FFF;}
 
-#botoncito1, #botoncito2, #botoncito3, #botoncito4, #botoncito5, #botoncito6, #botoncito7, #botoncito8, #botoncito9, #botoncito10, #botoncito11, #botoncito12, #botoncito13, #botoncito14, #botoncito15, #botoncito16, #botoncito17, #botoncito18, #botoncito19, #botoncito20, #botoncito21, #botoncito22, #botoncito23, #botoncito24, #botoncito25, #botoncito26, #botoncito27, #botoncito28, #botoncito29, #botoncito30, #botoncito31, #botoncito32, #botoncito33, #botoncito34, #botoncito35, #botoncito36, #botoncito37, #botoncito38, #botoncito39, #botoncito40 {width:auto; height:auto; max-width:50rem; margin-right: auto; margin-left: auto; padding-left: 0; padding-right: 0; padding: 0 1.25rem; margin: 0 auto 1.875rem; font-family: 'Open Sans',sans-serif; font-weight: 300; font-style: normal; letter-spacing: .01rem; display:none;border-color: #FFF;}
+#botoncito1, #botoncito2, #botoncito3, #botoncito4, #botoncito5, #botoncito6, #botoncito7, #botoncito8, #botoncito9, #botoncito10, #botoncito11, #botoncito12, #botoncito13, #botoncito14, #botoncito15, #botoncito16, #botoncito17, #botoncito18, #botoncito19, #botoncito20, #botoncito21, #botoncito22, #botoncito23, #botoncito24, #botoncito25, #botoncito26, #botoncito27, #botoncito28, #botoncito29, #botoncito30, #botoncito31, #botoncito32, #botoncito33, #botoncito34, #botoncito35, #botoncito36, #botoncito37, #botoncito38, #botoncito39, #botoncito40 {width:auto; height:auto;  margin-right: auto; margin-left: auto; padding-left: 0; padding-right: 0; padding: 0 1.25rem; margin: 0 auto 1.875rem; font-family: 'Open Sans',sans-serif; font-weight: 300; font-style: normal; letter-spacing: .01rem; display:none;border-color: #FFF;}
 
 /*Gráficos plotly */
 .js-plotly-plot{margin: auto;}
-.plotlyCuadrito{max-width: 50rem; margin-right: auto; margin-left: auto;}
+.plotlyCuadrito{margin-right: auto; margin-left: auto;}
 
-/* Tabla de contenidos */
-div .col-sm-9{margin-left: -40px} /* Espacio entre tabla de contenido y letras*/
+/* Tabla de contenidos dudas mirar  https://afeld.github.io/bootstrap-toc/#headings */
+.nav.navbar-nav {padding-left: 0; padding-right: 0; margin-bottom: 0}
 
-.nav.navbar-nav {
-    padding-left: 0;
-    padding-right: 0;
-    margin-bottom: 0
-}
+nav[data-toggle="toc"] {top: 80px!important; display: block;}
 
-nav[data-toggle="toc"] {
-  top: 80px!important;
-  display: block;
-}
-
-/* small screens */
 @media(max-width: 768px) {
-  /* override stickyness so that the navigation does not follow scrolling */
-  nav[data-toggle="toc"] {
-    margin-bottom: 42px;
-    position: static;
-  }
-
-  /* PICK ONE */
-  /* don't expand nested items, which pushes down the rest of the page when navigating */
-  nav[data-toggle="toc"] .nav .active .nav {
-    display: none;
-  }
-  /* alternatively, if you *do* want the second-level navigation to be shown (as seen on this page on mobile), use this */
-  /*
-  nav[data-toggle='toc'] .nav .nav {
-    display: block;
-  }
-  */
+  nav[data-toggle="toc"] {margin-bottom: 42px; position: static;}
+  nav[data-toggle="toc"] .nav .active .nav {display: none;}
 }
 
