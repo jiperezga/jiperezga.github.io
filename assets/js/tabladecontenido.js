@@ -1,3 +1,10 @@
+/* Elimina clase h1 de tabla de contenido */
+$(document).ready(function () {
+	$('.content h1').each(function (i, el) {
+		$(el).replaceWith('<h1 data-toc-skip>' + $(el).html() +'</h1>')
+  });
+}); 
+
 /* Tabla de contenido dinámica */
 $(function() { 
 Toc.init({
@@ -6,9 +13,4 @@ Toc.init({
   });
 });
 
-/* Elimina clase h1 de tabla de contenido */
-$(document).ready(function () {
-	$('.content h1').each(function (i, el) {
-		$(el).replaceWith('<h1 data-toc-skip>' + $(el).html() +'</h1>')
-  });
-}); 
+
