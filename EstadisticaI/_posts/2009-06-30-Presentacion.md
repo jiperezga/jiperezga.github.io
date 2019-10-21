@@ -39,15 +39,17 @@ obtener conclusiones, realizar contrastes de hipótesis, hacer
 predicciones, tomar decisiones óptimas, entre muchas otras. No obstante,
 para poder afrontar dichos fines es necesario conocer y familiarizarse
 primero con los conceptos provistos por la teoría de la probabilidad y
-la estadística matemática. En este sentido, este curso está diseñado
-para proveer al estudiante con un sólido y bien balanceado entendimiento
-de estos conceptos, tales como las nociones de probabilidad clásica,
-condicionamiento, independencia, variables aleatorias, funciones de
-distribución, esperanza matemática, entre otras. Aunque, el curso se
-concentra principalmente en los conceptos más que en los detalles
-matemáticos, los resultados teóricos son presentados en la manera más
-precisa y rigurosa posible. El curso contiene numerosos ejemplos de
-aplicaciones, tanto teóricas como con datos reales.
+la estadística matemática.
+
+En este sentido, este curso está diseñado para proveer al estudiante con
+un sólido y bien balanceado entendimiento de estos conceptos, tales como
+las nociones de probabilidad clásica, condicionamiento, independencia,
+variables aleatorias, funciones de distribución, esperanza matemática,
+entre otras. Aunque, el curso se concentra principalmente en los
+conceptos más que en los detalles matemáticos, los resultados teóricos
+son presentados en la manera más precisa y rigurosa posible. El curso
+contiene numerosos ejemplos de aplicaciones, tanto teóricas como con
+datos reales.
 
 Objetivo general
 ----------------
@@ -82,7 +84,7 @@ Unidades detalladas
 -   Medidas de tendencia central
 -   Medidas de localización
 -   Medidas de variabilidad
--   Medidas de forma
+-   Medidas de asimetría
 -   Métodos gráficos y tabular en estadística descriptiva
 
 ### Unidad No.2: Probabilidad
