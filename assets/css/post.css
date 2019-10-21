@@ -91,7 +91,7 @@ figure{margin:1em 380px}
 
 /* MathJax */
 
-.MathJax_Display{text-align:center!important}
+.MathJax_Display{text-align:center!important; overflow: auto; overflow-y: hidden}
 tt{font-size:130%;}
 
 /* Botoncitos */

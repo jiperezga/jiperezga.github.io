@@ -70,7 +70,8 @@ code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inher
       skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'], // removed 'code' entry
       processEscapes: true
       },
-      styles: { ".MathJax": { color: "#FFFFFF" } }
+      styles: { ".MathJax": { color: "#FFFFFF" } },
+      MMLorHTML: { prefer: { Firefox: "HTML" } } // Para mejorar la visualización de Firefox
   });
   MathJax.Hub.Queue( 
     ["setRenderer",MathJax.Hub,"HTML-CSS"], 

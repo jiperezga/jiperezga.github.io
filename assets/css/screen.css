@@ -5,7 +5,7 @@ pre{-webkit-box-sizing:border-box;box-sizing:border-box;margin:0 0 1.75em;width:
 .mediumnavigation{background:hsla(0,0%,100%,.97);-webkit-box-shadow:0 2px 2px -2px rgba(0,0,0,.15);box-shadow:0 2px 2px 1px #FFFFFF;-webkit-transition:top .2s ease-in-out;transition:top .2s ease-in-out}
 .main-content{min-height:300px}
 .site-content{min-height:60vh;padding-top:1.5rem;margin-top:57px;-webkit-transition:all .4s;transition:all .4s}
-section{margin-bottom:20px}
+/*section{margin-bottom:20px} */
 section.recent-posts{margin-bottom:0}
 .section-title h2{border-bottom:2px solid #FFFFFF;font-weight:700;font-size:1.4rem;margin-bottom:27px}
 .section-title span{border-bottom:0.01px solid rgba(0,0,0,.44);display:inline-block;padding-bottom:20px;margin-bottom:-1px}
