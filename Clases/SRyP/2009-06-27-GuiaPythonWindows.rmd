@@ -5,7 +5,7 @@ main-class: 'guia'
 permalink: /SeminarioRyPython/SRyP:title.html
 tags: Guía_Instalación
 rawtags: Guía_Instalación
-introduction: Guía detallada para la instalación de los programas R-project y Rstudio en Windows.
+introduction: Guía detallada para la instalación del programa Python - Anaconda en Windows.
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}

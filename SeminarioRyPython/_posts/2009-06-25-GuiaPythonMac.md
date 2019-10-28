@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Instalación R y Rstudio en Mac OS X"
+title: "Instalación Python - Anaconda en Mac OS X"
 main-class: 'guia'
 permalink: /SeminarioRyPython/SRyP:title.html
 tags: Guía_Instalación
 rawtags: Guía_Instalación
-introduction: Guía detallada para la instalación de los programas R-project y Rstudio en Mac OS X.
+introduction: Guía detallada para la instalación del programa Python - Anaconda en Mac OS X.
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
