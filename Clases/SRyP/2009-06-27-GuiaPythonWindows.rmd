@@ -2,7 +2,7 @@
 layout: post
 title: "Instalación Python - Anaconda en Windows"
 main-class: 'guia'
-permalink: /SeminarioRyPython/SRyP:title.html
+permalink: /SemilleroRyPython/SRyP:title.html
 tags: Guía_Instalación
 rawtags: Guía_Instalación
 introduction: Guía detallada para la instalación del programa Python - Anaconda en Windows.
@@ -17,7 +17,7 @@ output:
 always_allow_html: yes   
 knit: (function(inputFile, encoding) {
   rmarkdown::render(inputFile, encoding = encoding,
-  output_dir = "../../SeminarioRyPython/_posts/", output_format = "all"  ) })
+  output_dir = "../../SemilleroRyPython/_posts/", output_format = "all"  ) })
 bibliography: "../../referencias.bib"
 csl: "../../apa.csl"
 ---
@@ -32,8 +32,8 @@ opts_chunk$set(echo=TRUE,
                comment=NA,
                message=FALSE,
                warning=FALSE,
-               fig.path = paste0("../../SeminarioRyPython/images/", "GuiaWindows"),
-               cache.path = "../../SeminarioRyPython/cache/",
+               fig.path = paste0("../../SemilleroRyPython/images/", "GuiaWindows"),
+               cache.path = "../../SemilleroRyPython/cache/",
                cache = FALSE)
 
 ```
@@ -42,51 +42,51 @@ opts_chunk$set(echo=TRUE,
 Para la descarga de la última versión de Python - Anaconda en Windows, haga click en el siguiente enlace [(Descargar Python-Anaconda)](https://www.anaconda.com/distribution/#windows){:target="_blank"}.
 Una vez realizado click en el enlace, se abrirá la siguiente venta
 
-![](../../SeminarioRyPython/images/GuiaW17.jpg)
+![](../../SemilleroRyPython/images/GuiaW17.jpg)
 Haga click en el recuadro rojo que aparece en la imagen anterior, dependiendo si su sistema operativo es de 64-bits o 32-bits, e iniciará la descarga de un archivo con nombre Anaconda3-XXXX.XX-Windows-x86_64.exe en el caso de 64 bits o Anaconda3-XXXX.XX-Windows-x86.exe en el caso de 32 bits, donde **XXXX.XX** hace referencia al año y al mes de la última actualización, por ejemplo, *Anaconda3-2019.10-Linux-x86_64.sh*.
 
 Para consultar la versión del sistema operativo, puede presionar las teclas <tt>Windows + Pausa</tt>, obteniendo la siguiente imagen.
 
-![](../../SeminarioRyPython/images/GuiaW6.jpg)
+![](../../SemilleroRyPython/images/GuiaW6.jpg)
 
 En este caso, el sistema operativo es de 64bits, y por tanto se selecciona la opción "64-Bit Graphical Installer", en el momento de seleccionar la versión a descargar.
 
 Una vez completada la descarga, haga doble click sobre el instalador para que éste inicie y muestre la siguiente ventana
 
-![](../../SeminarioRyPython/images/GuiaW18.jpg)
+![](../../SemilleroRyPython/images/GuiaW18.jpg)
 
 En la ventana de bienvenida, haga click en __Next >__ para que el instalador continúe 
 
-![](../../SeminarioRyPython/images/GuiaW19.jpg)
+![](../../SemilleroRyPython/images/GuiaW19.jpg)
 
 En la ventana de licencia del programa, puede leer la información allí presentada si es de su interés, y de click en el botón __I Agree__
 
-![](../../SeminarioRyPython/images/GuiaW20.jpg)
+![](../../SemilleroRyPython/images/GuiaW20.jpg)
 
 En la ventana de de selección del tipo de instalación, presione "Just Me" o "All Users" y luego presione el botón __Next >__. La selección de "Just Me" o "All Users" dependerá si en el equipo se tienen más de una sesión y se desea instalar solo en la sesión propia o en todas las existentes.
 
-![](../../SeminarioRyPython/images/GuiaW21.jpg)
+![](../../SemilleroRyPython/images/GuiaW21.jpg)
 
 En la ventana de selección de carpeta de destino, puede presionar el botón __Borwse...__ y seleccionar otra ubicación para la instalación del programa (Se recomienda hacer la instalación en un directorio que no posea espacios o caracteres unicode). Seguidamente, presione el botón __Next >__
 
 
-![](../../SeminarioRyPython/images/GuiaW22.jpg)
+![](../../SemilleroRyPython/images/GuiaW22.jpg)
 
 En la ventana de opciones avanzadas, se deja seleccionada las opciones predeterminadas y haga click en el botón __Install__. (Se recomienda no seleccionar "Add Anaconda to my PATH enviroment variable" debido a que esto puede generar interferencias con otros software)
 
-![](../../SeminarioRyPython/images/GuiaW23.jpg)
+![](../../SemilleroRyPython/images/GuiaW23.jpg)
 
 Esto hará que aparezca la ventana de instalación, espere un par de minutos mientras el proceso finaliza.
 
-![](../../SeminarioRyPython/images/GuiaW24.jpg)
+![](../../SemilleroRyPython/images/GuiaW24.jpg)
 
 Una vez se completa la instalación, pueden observar los detalles de la instalación presionando el botón __Show details__ o simplemente presionar el botón __Next >__
 
-![](../../SeminarioRyPython/images/GuiaW25.jpg)
+![](../../SemilleroRyPython/images/GuiaW25.jpg)
 
 Como instalación opcional aparecerá una ventana sugiriendo la IDE PyCharm, la cual se podrá descargar desde el link [www.anaconda.com/pycharm](www.anaconda.com/pycharm){:target="_blank"}, presione en el link si desea descargarla, o en otro lugar, presione simplemente el botón __Next >__
 
-![](../../SeminarioRyPython/images/GuiaW26.jpg)
+![](../../SemilleroRyPython/images/GuiaW26.jpg)
 
 Finalmente aparecerá la ventana de agradecimiento, presione el botón __Finish__, y con ésto concluirá la instalación del programa.
 

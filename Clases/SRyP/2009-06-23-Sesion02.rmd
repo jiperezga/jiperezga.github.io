@@ -2,7 +2,7 @@
 layout: post
 title: "Sesión 02"
 main-class: 'clase'
-permalink: /SeminarioRyPython/SRyP:title.html
+permalink: /SemilleroRyPython/SRyP:title.html
 tags:
 
 introduction: |
@@ -26,7 +26,7 @@ output:
 always_allow_html: yes   
 knit: (function(inputFile, encoding) {
   rmarkdown::render(inputFile, encoding = encoding,
-  output_dir = "../../SeminarioRyPython/_posts/", output_format = "all"  ) })
+  output_dir = "../../SemilleroRyPython/_posts/", output_format = "all"  ) })
 bibliography: "../../referencias.bib"
 csl: "../../apa.csl"
 link-citations: yes
@@ -42,8 +42,8 @@ opts_chunk$set(echo=TRUE,
                comment=NA,
                message=FALSE,
                warning=FALSE,
-               fig.path = paste0("../../SeminarioRyPython/images/", "Sesion02"),
-               cache.path = "../../SeminarioRyPython/cache/",
+               fig.path = paste0("../../SemilleroRyPython/images/", "Sesion02"),
+               cache.path = "../../SemilleroRyPython/cache/",
                cache = FALSE)
 
 ```

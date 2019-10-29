@@ -5,11 +5,11 @@ layout: default
 <main class="home" id="post" role="main" itemprop="mainContentOfPage" itemscope="itemscope" itemtype="http://schema.org/Blog">
     <div class=section-title>
         <h2>
-            <span>Seminario de R y Python</span>
+            <span>Semillero de R y Python</span>
         </h2>
     </div>
     <div id="grid" class="row flex-grid">
-    {% for post in site.categories.SeminarioRyPython %}
+    {% for post in site.categories.SemilleroRyPython %}
         <article class="box-item post-{{post.main-class}}" itemscope="itemscope" itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
             <span class="ribbon">
                 <a href="{{ post.url | prepend: site.baseurl }}"><span>{{post.main-class}}</span></a>
