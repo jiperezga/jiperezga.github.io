@@ -2,7 +2,7 @@
 layout: post
 title: "Instalación R y Rstudio en Ubuntu"
 main-class: 'guia'
-permalink: /SeminarioRyPython/SRyP:title.html
+permalink: /SemilleroRyPython/SRyP:title.html
 tags: Guía_Instalación
 rawtags: Guía_Instalación
 introduction: Guía detallada para la instalación de los programas R-project y Rstudio en Ubuntu.
@@ -17,7 +17,7 @@ output:
 always_allow_html: yes   
 knit: (function(inputFile, encoding) {
   rmarkdown::render(inputFile, encoding = encoding,
-  output_dir = "../../SeminarioRyPython/_posts/", output_format = "all"  ) })
+  output_dir = "../../SemilleroRyPython/_posts/", output_format = "all"  ) })
 bibliography: "../../referencias.bib"
 csl: "../../apa.csl"
 ---
@@ -39,7 +39,7 @@ lineas de código
     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
     sudo apt update
 
-![](../../SeminarioRyPython/images/GuiaU1.png)
+![](../../SemilleroRyPython/images/GuiaU1.png)
 
 en caso de tener problemas con la segunda linea de código, probar con
 
@@ -50,7 +50,7 @@ siguiente línea de código
 
     sudo apt install r-base r-base-core r-recommended
 
-![](../../SeminarioRyPython/images/GuiaU2.png)
+![](../../SemilleroRyPython/images/GuiaU2.png)
 
 Cuando se le pregunte si desea continuar, escriba la tecla S, presione
 la tecla Enter y espere hasta que termine la instalación. Para iniciar
@@ -59,7 +59,7 @@ linea de código
 
     R
 
-![](../../SeminarioRyPython/images/GuiaU3.png)
+![](../../SemilleroRyPython/images/GuiaU3.png)
 
 Instalación RStudio
 -------------------
@@ -70,28 +70,28 @@ RStudio)](https://www.rstudio.com/products/rstudio/download/#download){:target="
 
 Una vez realizado click en el enlace, se abrirá la siguiente venta
 
-![](../../SeminarioRyPython/images/GuiaU4.png)
+![](../../SemilleroRyPython/images/GuiaU4.png)
 
 Haga click sobre la versión de Rstudio que sea compatible con su sistema
 operativo para que comience la descarga.
 
-![](../../SeminarioRyPython/images/GuiaU5.png)
+![](../../SemilleroRyPython/images/GuiaU5.png)
 
 Una vez completada la descarga, vaya a la carpeta de descargas y haga
 doble click sobre el instalador para que ésta inicie
 
-![](../../SeminarioRyPython/images/GuiaU6.png)
+![](../../SemilleroRyPython/images/GuiaU6.png)
 
 En la ventana emergente, presione el botón de Instalar para que inicie
 la descarga
 
-![](../../SeminarioRyPython/images/GuiaU7.png)
+![](../../SemilleroRyPython/images/GuiaU7.png)
 
 Esto generará una ventana de autenticación, ingrese la contraseña del
 usuario correspondiente a la sección en donde va a realizar la
 instalación
 
-![](../../SeminarioRyPython/images/GuiaU8.png)
+![](../../SemilleroRyPython/images/GuiaU8.png)
 
 Luego de ésto, comenzará la instalación, espere a que el proceso termine
 y con ésto concluirá la instalación del programa.

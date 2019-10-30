@@ -2,7 +2,7 @@
 layout: post
 title: "Instalación Python - Anaconda en Mac OS X"
 main-class: 'guia'
-permalink: /SeminarioRyPython/SRyP:title.html
+permalink: /SemilleroRyPython/SRyP:title.html
 tags: Guía_Instalación
 rawtags: Guía_Instalación
 introduction: Guía detallada para la instalación del programa Python - Anaconda en Mac OS X.
@@ -17,7 +17,7 @@ output:
 always_allow_html: yes   
 knit: (function(inputFile, encoding) {
   rmarkdown::render(inputFile, encoding = encoding,
-  output_dir = "../../SeminarioRyPython/_posts/", output_format = "all"  ) })
+  output_dir = "../../SemilleroRyPython/_posts/", output_format = "all"  ) })
 bibliography: "../../referencias.bib"
 csl: "../../apa.csl"
 ---

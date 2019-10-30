@@ -2,7 +2,7 @@
 layout: post
 title: "Instalación Python - Anaconda en Ubuntu"
 main-class: 'guia'
-permalink: /SeminarioRyPython/SRyP:title.html
+permalink: /SemilleroRyPython/SRyP:title.html
 tags: Guía_Instalación
 rawtags: Guía_Instalación
 introduction: Guía detallada para la instalación del programa Python - Anaconda en Ubuntu.
@@ -17,7 +17,7 @@ output:
 always_allow_html: yes   
 knit: (function(inputFile, encoding) {
   rmarkdown::render(inputFile, encoding = encoding,
-  output_dir = "../../SeminarioRyPython/_posts/", output_format = "all"  ) })
+  output_dir = "../../SemilleroRyPython/_posts/", output_format = "all"  ) })
 bibliography: "../../referencias.bib"
 csl: "../../apa.csl"
 ---
@@ -36,7 +36,7 @@ haga click en el siguiente enlace [(Descargar
 Python-Anaconda)](https://www.anaconda.com/distribution/#linux){:target="\_blank"}.
 Una vez realizado click en el enlace, se abrirá la siguiente venta
 
-![](../../SeminarioRyPython/images/GuiaU9.png)
+![](../../SemilleroRyPython/images/GuiaU9.png)
 
 Haga click en el botón de descarga que aparece en la imagen anterior,
 para que inicie la descarga de un archivo con nombre
@@ -52,7 +52,7 @@ escribiremos las siguientes lineas de código
 
 obteniendo la siguiente salida
 
-![](../../SeminarioRyPython/images/GuiaU10.png)
+![](../../SemilleroRyPython/images/GuiaU10.png)
 
 donde la carpeta Descargas es el lugar donde se realizan las descargas
 por defecto. Si usted realiza las descargas en un directorio diferente,
@@ -68,27 +68,27 @@ bash
 una vez ejecutado el script anterior en la terminal se obtendrá la
 siguiente salida
 
-![](../../SeminarioRyPython/images/GuiaU11.png)
+![](../../SemilleroRyPython/images/GuiaU11.png)
 
 El recuadro le mostrará un mensaje de bienvenida para la instalación de
 Anaconda. En donde, para comenzar la instalación será necesario aceptar
 el acuerdo de licencia presionando la tecla *Enter*, lo cual hará que le
 muestren el contrato de instalación
 
-![](../../SeminarioRyPython/images/GuiaU12.png)
+![](../../SemilleroRyPython/images/GuiaU12.png)
 
 En este caso podrá leer el contrato si es de su interés, y para avanzar
 será cuestión de presionar la barra espaciadora varias veces hasta
 llegar al final del acuerdo, en donde se encontrará con la siguiente
 pantalla
 
-![](../../SeminarioRyPython/images/GuiaU13.png)
+![](../../SemilleroRyPython/images/GuiaU13.png)
 
 Escriba en la terminal *yes* seguido de la tecla *Enter* para comenzar
 con el proceso de instalación. Después de aceptar los términos de la
 licencia, aparecerá el siguiente mensaje
 
-![](../../SeminarioRyPython/images/GuiaU14.png)
+![](../../SemilleroRyPython/images/GuiaU14.png)
 
 El cual te pedirá que ingreses el directorio donde deseas instalar
 Anaconda Python. Te dan tres opciones, pero se recomienda dejar la
@@ -96,12 +96,12 @@ ubicación predeterminada, así que solo será cuestión de presionar la
 tecla *Enter*. Esto provocará que comience al proceso de extracción de
 la información, tal como se muestra en la siguiente ventana
 
-![](../../SeminarioRyPython/images/GuiaU15.png)
+![](../../SemilleroRyPython/images/GuiaU15.png)
 
 El proceso de instalación puede tardar varios minutos. Una vez
 finalizado el proceso de instalación se tendrá la siguiente mensaje
 
-![](../../SeminarioRyPython/images/GuiaU16.png)
+![](../../SemilleroRyPython/images/GuiaU16.png)
 
 En éste se pregunta si se desea incluir la ubicación de instalación de
 Anaconda Python en la ruta de tu Ubuntu 18.04 como se resaltó
@@ -118,7 +118,7 @@ siguientes lineas de código
 y con ésto aparecerá la siguiente ventana, la cual permitirá acceder a
 Spyder u a otros programas asociados a Anaconda.
 
-![](../../SeminarioRyPython/images/GuiaU17.png)
+![](../../SemilleroRyPython/images/GuiaU17.png)
 
 Una vez terminado de usar el programa, escribir en la terminal
 
@@ -156,7 +156,7 @@ siguiente linea de código
 
 tal como se muestra el la siguiente ventana
 
-![](../../SeminarioRyPython/images/GuiaU18.png)
+![](../../SemilleroRyPython/images/GuiaU18.png)
 
 presiona *Enter* y comenzará la instalación. Es posible que la terminal
 te pida ingresar la clave de usuario. De ser el caso, ingresa la
@@ -166,7 +166,7 @@ Con ello comenzará la descarga de Spyder, lo cual puede tardar unos
 minutos. Una vez realizada toda la descarga aparecerá la siguiente linea
 de código
 
-![](../../SeminarioRyPython/images/GuiaU19.png)
+![](../../SemilleroRyPython/images/GuiaU19.png)
 
 Escribe *S* y presiona *Enter* y ya será cuestión de esperar a que el
 proceso de instalación concluya. Una vez concluido el proceso de

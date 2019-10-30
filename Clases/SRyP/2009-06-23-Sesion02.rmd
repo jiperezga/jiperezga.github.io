@@ -48,4 +48,4 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
-En contrucción :D
+En construcción :D
