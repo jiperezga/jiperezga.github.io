@@ -621,7 +621,7 @@ $$\begin{align*}\rho_{xy} = \frac{0.2655556}{(0.7121954)(1.273839)} = 0.2927127\
 
 ## Introducción a R
 
-<tt>R</tt> es un lenguaje de programación orientado a objetos junto con un sistema de ventanas, que permite una interacción directa e intuitiva con el tipo de programación realizada. Este tipo de programación, posee una notable cercanía con la forma en que se expresarían las cosas en la vida real, ya que trabaja sobre objetos visibles que poseen determinadas caraterística, lo cual hace que puedan ser empleados para la realización de acciones específicas. 
+<tt>R</tt> **es un lenguaje de programación interpretado orientado a objetos** junto con un sistema de ventanas, que permite una interacción directa e intuitiva con el tipo de programación realizada. Este tipo de programación, posee una notable cercanía con la forma en que se expresarían las cosas en la vida real, ya que trabaja sobre objetos visibles que poseen determinadas caraterística, lo cual hace que puedan ser empleados para la realización de acciones específicas. 
 
 Para entender cómo se crean o manipulan objetos en <tt>R</tt>, es necesario introducir inicialmente el lenguaje de programación, y para ello lo primero que debe hacerse, es entender la estructura de asignación, los tipos de datos, las clases de los objetos y los tipos de operadores 
 
@@ -635,14 +635,13 @@ La estructura de asignación del lenguaje <tt>R</tt> puede llevarse a cabo media
 assign(<variable>, <objeto>) # Cuarto método
 ```
 
-De estos cuatro métodos de asignación presentados, el primero y el segundo poseen la misma estructura, la diferencia entre ellos radica en que, el primero realiza la asignación a la izquierda y el segundo a la derecha, lo cual depende de la dirección hacia donde apunte la flecha.
+De estos cuatro métodos de asignación presentados, **el primero y el segundo poseen la misma estructura**, la diferencia entre ellos radica en que, el primero realiza la asignación a la izquierda y el segundo a la derecha, lo cual depende de la dirección hacia donde apunte la flecha.
 
-El tercer método, a pesar de realizar la asignación al igual que los dos primeros métodos, éste **no** es el operador habitual de asignación, pues éste se encuentra reservado para otros propósitos, tales como darle valores a una variable dentro de una función. El cuarto método, es una forma de asignación equivalente a las dos primeras, pero requiere de "más esfuerzo" para llevarse acabo la asignación.
+El **tercer método**, a pesar de realizar la asignación al igual que los dos primeros métodos, éste **no es el operador habitual de asignación**, pues éste se encuentra reservado para otros propósitos, tales como darle valores a una variable dentro de una función. El **cuarto método**, es una forma de asignación equivalente a las dos primeras, pero **requiere de "más esfuerzo"** para llevarse acabo la asignación.
 
-Por lo tanto, se recomienda emplear el primer método de asignación. Es de anotar que el simbolo `<-` puede escribirse de dos formas, presionando la tecla `<` seguida de la tecla `-`, o alternativamente, presionando de forma simultanea las teclas `Alt` y la tecla `-`.
+Por lo tanto, se **recomienda emplear el primer método de asignación**. Es de anotar que el simbolo `<-` puede escribirse de dos formas, presionando la tecla `<` seguida de la tecla `-`, o alternativamente, presionando de forma simultanea las teclas `Alt` y la tecla `-`.
 
-También se señala que el carácter `#`, se emplea para comentar el código o una línea específica, lo cual implica que posterior a `#`, no se ejecutará ningún tipo de código en la linea específica en la cual se encuentre `#`.
-
+También se señala que **el carácter `#`, se emplea para comentar el código** o una línea específica, lo cual implica que posterior a `#`, no se ejecutará ningún tipo de código en la linea específica en la cual se encuentre `#`.
 
 ### Tipos de datos
 El lenguaje <tt>R</tt> admite tres tipos básico de datos, a saber
@@ -712,6 +711,9 @@ Adicionalmente, con el fin de organizar los datos, se presentan algunas de las c
 
 * **Vector:** este objeto admite datos númericos, carácteres, complejos o lógicos, pero solo permite un solo tipo de dato a la vez. Puede construirse mediante la función `c()`.
 
+<h4 align="center"> Representación de un Vector </h4>
+![](../../EstadisticaI/images/vector.jpg){ width=60% }
+
 <button id="Show24" class="btn btn-secondary">Mostrar Ejemplos de <tt>R</tt></button>
 <button id="Hide24" class="btn btn-info">Ocultar Ejemplos de <tt>R</tt></button>
 <main id="botoncito24"> 
@@ -725,6 +727,9 @@ Adicionalmente, con el fin de organizar los datos, se presentan algunas de las c
 </main>
 
 * **Matriz:** este objeto admite datos númericos, carácteres, complejos o lógicos, pero solo permite un solo tipo de dato a la vez. Puede construirse mediante la función `matrix()`.
+
+<h4 align="center"> Representación de un Matriz </h4>
+![](../../EstadisticaI/images/matrix.jpg){ width=60% }
 
 <button id="Show25" class="btn btn-secondary">Mostrar Ejemplos de <tt>R</tt></button>
 <button id="Hide25" class="btn btn-info">Ocultar Ejemplos de <tt>R</tt></button>
@@ -741,7 +746,27 @@ Adicionalmente, con el fin de organizar los datos, se presentan algunas de las c
 
 </main>
 
+* **Marco de Datos:** Permite datos numericos, carácteres, complejos o lógicos, además de permitir multiples tipos por objeto a la vez. Puede construirse mediante la función `data.frame()`.
+
+<h4 align="center"> Representación de un Marco de Datos </h4>
+![](../../EstadisticaI/images/dataframe.jpg){ width=60% }
+
+<button id="Show27" class="btn btn-secondary">Mostrar Ejemplos de <tt>R</tt></button>
+<button id="Hide27" class="btn btn-info">Ocultar Ejemplos de <tt>R</tt></button>
+<main id="botoncito27"> 
+<h3 data-toc-skip> Solución en <tt>R</tt> </h3> 
+
+<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="n">dataf</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">cbind</span><span class="p">(</span><span class="n">vecN</span><span class="p">,</span><span class="w"> </span><span class="n">vecC</span><span class="p">,</span><span class="w"> </span><span class="n">vecL</span><span class="p">))</span><span class="w">
+</span><span class="c1"># Las funciones cbind() y rbind() combinan vectores, matrices o data-frame</span><span class="w">
+</span><span class="c1"># por columna o fila, respectivamente.</span><span class="w">
+</span></code></pre></section></section>
+
+</main>
+
 * **Arreglos:** Permite datos numericos, carácteres, complejos o lógicos, pero solo permite un solo tipo de dato a la vez. Puede construirse mediante la función `array()`.
+
+<h4 align="center"> Representación de un Arreglo </h4>
+![](../../EstadisticaI/images/array.jpg){ width=60% }
 
 <button id="Show26" class="btn btn-secondary">Mostrar Ejemplos de <tt>R</tt></button>
 <button id="Hide26" class="btn btn-info">Ocultar Ejemplos de <tt>R</tt></button>
@@ -757,21 +782,10 @@ Adicionalmente, con el fin de organizar los datos, se presentan algunas de las c
 
 </main>
 
-* **Data frame:** Permite datos numericos, carácteres, complejos o lógicos, además de permitir multiples tipos por objeto a la vez. Puede construirse mediante la función `data.frame()`.
-
-<button id="Show27" class="btn btn-secondary">Mostrar Ejemplos de <tt>R</tt></button>
-<button id="Hide27" class="btn btn-info">Ocultar Ejemplos de <tt>R</tt></button>
-<main id="botoncito27"> 
-<h3 data-toc-skip> Solución en <tt>R</tt> </h3> 
-
-<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="n">dataf</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">cbind</span><span class="p">(</span><span class="n">vecN</span><span class="p">,</span><span class="w"> </span><span class="n">vecC</span><span class="p">,</span><span class="w"> </span><span class="n">vecL</span><span class="p">))</span><span class="w">
-</span><span class="c1"># Las funciones cbind() y rbind() combinan vectores, matrices o data-frame</span><span class="w">
-</span><span class="c1"># por columna o fila, respectivamente.</span><span class="w">
-</span></code></pre></section></section>
-
-</main>
-
 * **Listas:** Permite datos numericos, carácteres, complejos, lógicos, funciones, expresiones, etc, además de permitir multiples tipos por objetos a la vez. Puede construirse mediante la función `list()`.
+
+<h4 align="center"> Representación de listas </h4>
+![](../../EstadisticaI/images/list.jpg)
 
 <button id="Show28" class="btn btn-secondary">Mostrar Ejemplos de <tt>R</tt></button>
 <button id="Hide28" class="btn btn-info">Ocultar Ejemplos de <tt>R</tt></button>
@@ -779,22 +793,6 @@ Adicionalmente, con el fin de organizar los datos, se presentan algunas de las c
 <h3 data-toc-skip> Solución en <tt>R</tt> </h3> 
 
 <section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="n">listica</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">dataf</span><span class="p">,</span><span class="w"> </span><span class="n">matN</span><span class="p">,</span><span class="w"> </span><span class="nf">expression</span><span class="p">(</span><span class="n">beta</span><span class="p">))</span><span class="w">
-</span></code></pre></section></section>
-
-</main>
-
-* **Factores:** Permite datos numericos o carácteres, pero permite un solo tipo por objeto a la vez. Puede construirse mediante la función `factor()`.
-
-<button id="Show29" class="btn btn-secondary">Mostrar Ejemplos de <tt>R</tt></button>
-<button id="Hide29" class="btn btn-info">Ocultar Ejemplos de <tt>R</tt></button>
-<main id="botoncito29"> 
-<h3 data-toc-skip> Solución en <tt>R</tt> </h3> 
-
-<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1"># Nominal</span><span class="w">
-</span><span class="n">carrera</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">factor</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"A"</span><span class="p">,</span><span class="w"> </span><span class="s2">"E"</span><span class="p">,</span><span class="w"> </span><span class="s2">"C"</span><span class="p">,</span><span class="w"> </span><span class="s2">"C"</span><span class="p">,</span><span class="w"> </span><span class="s2">"C"</span><span class="p">,</span><span class="w"> </span><span class="s2">"E"</span><span class="p">,</span><span class="w"> </span><span class="s2">"A"</span><span class="p">,</span><span class="w"> </span><span class="s2">"A"</span><span class="p">))</span><span class="w">
-</span><span class="c1"># Ordinal</span><span class="w">
-</span><span class="n">satis</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">factor</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Poca"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Mucha"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Neutral"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Mucha"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Mucha"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Neutral"</span><span class="p">,</span><span class="w"> 
-    </span><span class="s2">"Poca"</span><span class="p">),</span><span class="w"> </span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Poca"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Neutral"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Mucha"</span><span class="p">),</span><span class="w"> </span><span class="n">ordered</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
 </span></code></pre></section></section>
 
 </main>
@@ -829,3 +827,4 @@ Adicionalmente se presentan algunas de las funciones matemáticas más usadas
 * Seno `sin()` y Arcoseno `asin()`
 * Coseno `cos()` y Arcocoseno `acos()`
 * Tangente `tan()` y Arcotangente `atan()`
+* factorial `factorial()`
