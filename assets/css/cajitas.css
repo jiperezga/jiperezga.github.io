@@ -88,6 +88,29 @@
 .post-presentacion nav[data-toggle=toc] .nav>li>a:focus, .post-presentacion nav[data-toggle=toc] .nav>li>a:hover{padding-left:19px;color:#808080;text-decoration:none;background-color:transparent;border-left:1px solid #808080}
 .post-presentacion nav[data-toggle=toc] .nav-link.active, .post-presentacion nav[data-toggle=toc] .nav-link.active:focus, .post-clase nav[data-toggle=toc] .nav-link.active:hover {padding-left: 18px; font-weight: 800; color: #808080; background-color: transparent; border-left: 2px solid #808080;}
 
+/* Clase Presentaciones */
+.post-presentaciones .title-category{color:#28c74c; text-shadow:2px 2px 3px #FFFFFF}
+.post-presentaciones .post-content h1,.post-presentaciones .post-content h2,.post-presentaciones .post-content h3,.post-presentaciones .post-content h4{color:#28c74c}
+.post-presentaciones .post-content a{color:#ff9d00;}
+.post-presentaciones .post-content a:hover{background-color:#28c74c;color:#fff}
+.post-presentaciones .post-content strong{color:#28c74c}
+.post-presentaciones .post-content blockquote{border-left:.313rem solid #28c74c}
+.post-presentaciones .header-post,.post-presentaciones .header-site{background-color:#28a745;}
+.post-presentaciones .header-post h1,.post-presentaciones .header-site h1{text-shadow:3px 3px #545454}
+.post-presentaciones .bar-header .logo a{color:#28c74c}
+.post-presentaciones .author .email,.post-presentaciones .author .github{color:#28c74c} .post-presentaciones .share a:hover svg{fill:#28c74c}@media only screen and (max-width:37.5rem){.post-presentaciones body.search-overlay:after{background-color:#28c74c}}
+.post-presentaciones .icon-menu{fill:#28c74c}.post-presentaciones .box-body h2{color:#28c74c}
+.post-presentaciones .box-body .tags a{color:#28c74c;border:1px solid #28c74c;}
+.post-presentaciones .box-body .tags a:hover{color:#fff;background:#28c74c}
+.post-presentaciones aside{background-color:#28c74c;}
+.post-presentaciones aside nav li a:hover{color:#28c74c}
+.post-presentaciones .ribbon span{background-color:#28c74c;}
+.post-presentaciones .ribbon span:before{border-left:3px solid #b05110;border-top:3px solid #b05110}
+.post-presentaciones .ribbon span:after{border-right:3px solid #b05110;border-top:3px solid #b05110}
+.post-presentaciones nav[data-toggle=toc] .nav-link, .post-presentaciones nav[data-toggle=toc] .nav-link:focus, .post-presentaciones nav[data-toggle=toc] .nav-link:hover {color: #FFF; background-color: transparent}
+.post-presentaciones nav[data-toggle=toc] .nav>li>a:focus, .post-presentaciones nav[data-toggle=toc] .nav>li>a:hover{padding-left:19px;color:#28c74c;text-decoration:none;background-color:transparent;border-left:1px solid #28c74c}
+.post-presentaciones nav[data-toggle=toc] .nav-link.active, .post-presentaciones nav[data-toggle=toc] .nav-link.active:focus, .post-presentaciones nav[data-toggle=toc] .nav-link.active:hover {padding-left: 18px; font-weight: 800; color: #28c74c; background-color: transparent; border-left: 2px solid #28c74c;}
+
 /* Clase Guias */
 .post-guia .title-category{color:#eb7728; text-shadow:2px 2px 3px #FFFFFF}
 .post-guia .post-content h1,.post-guia .post-content h2,.post-guia .post-content h3,.post-guia .post-content h4{color:#eb7728}
