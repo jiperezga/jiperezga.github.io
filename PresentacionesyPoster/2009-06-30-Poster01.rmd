@@ -1,7 +1,7 @@
 ---
-layout: post
+layout: presentation
 title: "Stop-Loss estimation via Single Loss Approximation (Poster)"
-main-class: 'guia'
+main-class: 'presentaciones'
 permalink: /Poster01
 tags:
 
@@ -87,6 +87,7 @@ library(plotly)
 require(gamlss)
 library(ggplot2)
 library(evmix)
+library(htmltools)
 
 surgery <- read.table("../Dataset/surgery.dat", header = T)
 surgery$cost <- surgery$cost/1000000
@@ -112,9 +113,9 @@ ecdfN <- ecdf(table(surgery$year))
 ecdfN2 <- data.frame(x = environment(ecdfN)$x, y = environment(ecdfN)$y)
 ```
 
-<pre>
+<pre class="plotlyCuadrito">
 ```{r echo=FALSE}
-plot_ly(x = ~secu, y = ~DenDEL, mode = 'lines',
+tagList(plot_ly(x = ~secu, y = ~DenDEL, mode = 'lines',
         text = paste("Value =", round(DenDEL, 3)),
         width = 600, height = 400, type = "scatter", name = "Delaporte (DEL)") %>%
   add_lines(x = ~secu, y = ~DenPIG, name = "Poisson-Inverse Gaussian (PIG)") %>%
@@ -142,7 +143,7 @@ plot_ly(x = ~secu, y = ~DenDEL, mode = 'lines',
     list(type='line', x0 = ecdfN2[5,1], x1 = ecdfN2[6,1], y0 = ecdfN2[5,2], y1 = ecdfN2[5,2]),
     list(type='line', x0 = ecdfN2[6,1], x1 = 250, y0 = ecdfN2[6,2], y1 = ecdfN2[6,2])
   )) %>%
-  layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4))
+  layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4)))
 ```
 </pre>
 
@@ -216,9 +217,9 @@ DenGP <- pGP(sortXs, mu = FitX_surg6$mu,
 DenGP2 <- 1 - DenGP
 ```
 
-<pre>
+<pre class="plotlyCuadrito">
 ```{r echo = FALSE}
-plot_ly(x = ~log(sortXs), y = ~log(DenWP2), mode = 'lines',
+tagList(plot_ly(x = ~log(sortXs), y = ~log(DenWP2), mode = 'lines',
         text = paste("Value =", round(DenWP2, 3)),
         width = 600, height = 400, type = "scatter",
         name = "Weibull-Generalized Pareto (W-GP)") %>%
@@ -233,7 +234,7 @@ plot_ly(x = ~log(sortXs), y = ~log(DenWP2), mode = 'lines',
   add_lines(x = 0, y = 0, mode = 'markers', name = "Empirical Log-Survival Distribution", line=list(color = "black")) %>%
   add_trace(x = ~log(sortXs), y = ~log(survXs), line=list(color = "black"), name = "Empirical Log-Survival Distribution", showlegend=FALSE) %>%
   layout(margin = list(l = 60, r = 30, b = 60, t = 60, pad = 4),
-         legend = list(x = 0.1, y = 0.1))
+         legend = list(x = 0.1, y = 0.1)))
 ```
 </pre>
 
