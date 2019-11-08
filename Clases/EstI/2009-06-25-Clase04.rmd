@@ -44,38 +44,112 @@ opts_chunk$set(echo=TRUE,
 
 ## Fundamentos de probabilidad
 ### Noción de aleatoriedad
-La aleatoriedad está asociada a todo proceso cuyo resultado no puede ser determinado antes de que éste se produzca, debido a que los resultados de dicho proceso no contiene patrones reconocibles o regulares, que permitan pronosticar un resultado futuro.
+La aleatoriedad está asociada a **todo proceso cuyo resultado no puede ser determinado antes de que éste se produzca**, debido a que los resultados de dicho proceso no contiene patrones reconocibles o regulares, que permitan pronosticar un resultado futuro.
 
 ### Experimento aleatorio
-Es aquel experimento que, a pesar de controlar las condiciones iniciales bajo las cuales se realiza, no es posible garantizar los mismos resultados que se obtienen inicialmente, debido a que su resultado es determinado por el azar.
+Es aquel experimento que, a pesar de controlar las condiciones iniciales bajo las cuales se realiza, lo resultados obtenidos no son esencialmente los mismos, es decir, **no es posible garantizar los mismos resultados que se obtienen inicialmente**, debido a que su resultado es determinado por el azar.
 
 ### Experimento estadístico
-Es cualquier acción o proceso que proporciona un conjunto de resultados, ya sean numérico o no numéricos. Éstos deben cumplir ciertas características:
+Es cualquier acción o proceso que se puede llevar a cabo bajo ciertas condiciones, de modo que en **cada realización se presente un resultado**, ya sea númerico o no numérico. Éstos deben cumplir ciertas características:
 
 * No es posible predecir el resultado exacto del experimento, en cualquiera de sus ejecuciones.
 * Es posible conocer todos los posibles resultados del experimento, previo a las realizaciones del mismo.
 * Es posible repetir el experimento bajo condiciones idénticas o similares.
 
 ### Espacio muestral
-Es el conjunto de todos los posibles resultados de un experimento estadístico. Generalmente, el espacio muestral se denota por la letra `$S$` o la letra griega `$\Omega$`.
+Es el conjunto de **todos los posibles resultados de un experimento estadístico**. estos espacios pueden dividirse en espacios muestrales discretos y continuos. Generalmente, el espacio muestral se denota por la letra `$S$` o la letra griega `$\Omega$`.
+
+#### Espacio muestral discreto
+Es aquel que **posee un número finito de posibilidades** o una serie interminable con tantos elementos como números enteros existentes.
+
+#### Ejercicio
+Considere el experimento de lanzar un dado convencional de `$6$` caras. Escriba el espacio muestral asociado a este experimento.
+
+<button id="Show1" class="btn btn-secondary">Mostrar Solución </button>
+<button id="Hide1" class="btn btn-info">Ocultar Solución </button>
+<main id="botoncito1"> 
+<h3 data-toc-skip> Solución manual </h3> 
+<p>Dado que el dado es un dado convencional de $6$ caras, se tendrá que al lanzarlo, solo será posible obtener un $1, 2, 3, 4, 5$ o $6$, y por tanto se tendrá que 
+$$\begin{align*}
+S =\{1, 2, 3, 4, 5, 6\}
+\end{align*}$$</p>
+</main>
+
+#### Espacio muestral continuo
+Es aquel que **posee un número infinito de posibilidades** igual al numéro de puntos en un segmento de linea.
+
+#### Ejercicio
+Considere el experimento de espera el tiempo que pasa hasta que el decano de ciencias económicas salga de la oficina a comprar un tinto en burbuja. Escriba el espacio muestral asociado a este experimento.
+
+<button id="Show2" class="btn btn-secondary">Mostrar Solución </button>
+<button id="Hide2" class="btn btn-info">Ocultar Solución </button>
+<main id="botoncito2"> 
+<h3 data-toc-skip> Solución manual </h3> 
+<p>Dado que el tiempo que puede tardar el decano en salir de la oficina para comprar un tinto puede ser, $0$ minutos, $1.2$ minutos, $3$ horas, $20$ días, etc, etc, se tendrá que el espacio muestral será de la forma.
+$$\begin{align*}
+S =\{\mathbb{t \in R^+ | t \geq 0}\}
+\end{align*}$$
+
+siendo $t$ el <strong>tiempo en minutos</strong> que tarda el decano en salir de la oficina para comprar un tinto en la burbuja.</p>
+</main>
 
 ### Evento de un espacio muestral
-Es un subconjunto de los resultados del espacio muestral S. Generalmente, los eventos se denotan por las primeras letras del abecedario de la forma `$A, B, C$` o `$A_1, A_2, A_3$`.
+Es un **subconjunto de resultados del espacio muestral** `$S$`. Generalmente, los eventos se denotan por las primeras letras del abecedario de la forma `$A, B, C$` o `$A_1, A_2, A_3$`.
 
 Los eventos pueden ser clasificados en dos tipos
 
-* **Simple:** se da cuando el evento tiene un solo resultado o punto muestral.
+* **Simple:** se da cuando el evento tiene un solo resultado o punto muestral. 
 * **Compuesto:** se da cuando el evento tiene más de un resultado o punto muestral. Estos resultados pueden ser dependientes o independientes.
+* **Imposible:** se da cuando el evento no puede ocurrir dentro del espacio muestral. El evento se denota entonces por el simbolo `$\phi$` que representa al conjunto vacío. 
+
+#### Ejercicio
+
+1. Considere el experimento de lanzar un dado convencional de `$6$` caras. Escriba el evento en el cual se saca un número primo en el dado.
+2. Considere el experimento de espera el tiempo que pasa hasta que el decano de ciencias económicas salga de la oficina a comprar un tinto en burbuja. Escriba el evento en el cual el decano sale de la oficina en menos de `$1$` hora para comprar tinto en la burbuja.
+
+<button id="Show3" class="btn btn-secondary">Mostrar Solución </button>
+<button id="Hide3" class="btn btn-info">Ocultar Solución </button>
+<main id="botoncito3"> 
+<h3 data-toc-skip> Solución manual </h3> 
+<ol type = "1">
+<li> Dado que los números primos entre el $1$ y el $6$ están dados por $2, 3, 5$, entones se tendrá que el evento $A$ estará dado por
+$$\begin{align*}
+A = \{2, 3, 5\}
+\end{align*}$$
+</li>
+<li> Dado que nos están restringiendo el tiempo en el cual puede salir el decano de la oficina a menos de $1$ hora, entonces se tendrá que el evengo $B$ estará dado por
+$$\begin{align*}
+S =\{\mathbb{t \in R^+ | 0 \leq t < 60}\}
+\end{align*}$$
+
+siendo $t$ el <strong>tiempo en minutos</strong> que tarda el decano en salir de la oficina para comprar un tinto en la burbuja.
+</li>
+</ol>
+</main>
 
 ## Teoría de conjuntos
-Dado que un evento puede estar compuestos por un conjunto de datos, las relaciones y resultados de la teoría de conjuntos puede ser utilizados
+Dado que un evento puede estar compuestos por un conjunto de datos, las relaciones y resultados de la teoría de conjuntos, pueden ser utilizados para solucionar problemas de probabilidad. Por ello definimos a
 
 1. El **complemento** de un evento `$A$` respecto al espacio muestral `$S$`, es denotado por `$A^c$` o `$A'$`, y se define como el subconjunto de todos los elementos de `$S$` que no están contenidos en `$A$`.
 2. La **unión** de dos eventos `$A$` y `$B$`, es denotado por `$A\cup B$`, y se define como el evento que contiene todos los elementos que pertenecen a `$A$` o `$B$` o ambos.
 3. La **intersección** de dos eventos `$A$` y `$B$`, es denotado por `$A\cap B$`, es el evento que contiene todos los elementos que son comunes en `$A$` y `$B$`.
 4. Los eventos `$A$` y `$B$` son **mutuamente excluyentes** cuando `$A\cap B=\oslash$`, donde `$\oslash$` se denota como el evento nulo.
 
-<!-- meter tablita de propiedades de teoría de conjuntos, conmutativa, asociativa, etc etc http://www.est.uc3m.es/esp/nueva_docencia/leganes/ing_telecomunicacion/estadistica/doc_grupo1/archivosnew/Ej_Probabilidad_ELv8.pdf -->
+### Propiedades de teoría de conjuntos
+
+```{r echo = FALSE}
+library(kableExtra)
+datos <- cbind(data.frame(
+  " " = c("Conmutativa", "Asociativa", "Idempotente","Simplificación", "Distributiva", "Elemento Neutro", "Absorción")),
+  Union = c("$A\\cup B = B \\cup A$", "$(A \\cup B) \\cup C = A \\cup (B \\cup C)$", "$A \\cup A = A$", "$A \\cup (B \\cap A) = A$", "$A \\cup (B \\cap C) = (A \\cup B) \\cap (A \\cup C)$", "$A \\cup \\phi = A$" , "$A \\cup S = S$"),
+  Interseccion = c("$A \\cap B = B \\cap A$", "$(A \\cap B) \\cap C = A \\cap (B \\cap C)$", "$A \\cap A = A$", "$A \\cap (B \\cup A) = A$", "$A \\cap (B \\cup C) = (A \\cap B) \\cup (A \\cap C)$", "$A \\cap S = A$", "$A \\cap \\phi = \\phi$"))  
+
+colnames(datos) <- c(" ", "Unión", "Intersección")
+
+datos %>% 
+  kable(format = "html", booktabs = T) %>%
+  kable_styling("striped", full_width = F) 
+```
 
 ## Probabilidad
 La probabilidad es una medida asociada a la posibilidad de que ocurra un determinado evento, en donde, la forma forma tradicional de estimar la probabilidad es mediante el concepto de frecuencia relativa.
