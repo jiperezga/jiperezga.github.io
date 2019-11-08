@@ -21,6 +21,7 @@ knit: (function(inputFile, encoding) {
   output_dir = "../PresentacionesyPoster/_posts/", output_format = "all"  ) })
 bibliography: "../referencias.bib"
 csl: "../apa.csl"
+link-citations: yes
 ---
 
 ```{r knitr_init, echo=FALSE, cache=FALSE}
@@ -48,7 +49,7 @@ El DataCleaning o limpieza de datos, es **uno de los aspectos más importantes**
 
 El objetivo principal de la limpieza de datos, es el **asegurar la calidad de la información** que se usará en los análisis, además de minimizar el riesgo en la toma de decisiones, en base a información perdida, poco precisa, duplicada, contradictoria, errónea o incompleta, ya qué ésta podría influir significativamente en los resultados estadísticos y conclusiones. 
 
-Los procedimientos de limpieza de la información, se realizarse **para mantener los datos, indicadores y reportes lo más precisos, consistentes y confiables de como sea posible**, ya que en muchas situaciones, es frecuente encontrar que en el proceso de recolección y almacenamiento de la información pueden surgir diversos problemas, que terminan generando datos erróneos, ya sea por la falta de capacitación, falta de honestidad o errores involuntarios de los responsables de levantar y registrar la información, entre otros problemas.
+Los procedimientos de limpieza de la información, se realizan **para mantener los datos, indicadores y reportes lo más precisos, consistentes y confiables de como sea posible**, ya que en muchas situaciones, es frecuente encontrar que en el proceso de recolección y almacenamiento de la información pueden surgir diversos problemas, que terminan generando datos erróneos, ya sea por la falta de capacitación, falta de honestidad o errores involuntarios de los responsables de levantar y registrar la información, entre otros problemas.
 
 Es por ello, que realizar un buen pre-procesamiento de la información permite **tomar mejores decisiones** y asegurar que los resultados obtenidos se asemejen a la realidad del objeto de estudio.
 
@@ -90,14 +91,14 @@ library(VIM) # Posee funciones que permite realizar imputaciones.
 ```
 
 ### Operador pipe de continuidad %>%
-Este operador es una función de adición, el cual va tomando los elementos de izquierda a derecha y los va ejecutando en orden. Suponga a un conjunto de datos `$x$`, una función `$f()$`, una función `$g()$` y una función `$h()$`.
+Este operador es una función de adición, el cual va tomando los elementos de izquierda a derecha y los va ejecutando en orden. Para entender el funcionamiento del operador, suponga un conjunto de datos `$x$` y las funciones `$f()$`, `$g()$` y `$h()$`.
 
 Suponga además, que se desea realizar la siguiente operación
 `\begin{align*}
 f(g(h(x)))
 \end{align*}`
 
-entonces, es posible realizar el siguiente procedimiento, en donde se presenta su equivalencia de mediante el operador `$%>%$`.
+entonces, es posible realizar el siguiente procedimiento, en donde se presenta su equivalencia mediante el operador `$\%>\%$`.
 
 <h6 align="center"> Ilustración Operador pipe de continuidad </h6> 
 ![](../PresentacionesyPoster/images/PipeForward.jpg)
@@ -106,7 +107,7 @@ entonces, es posible realizar el siguiente procedimiento, en donde se presenta s
 <button id="Hide2" class="btn btn-info">Ocultar ejemplo para %>%</button>
 <main id="botoncito2"> 
 <h3 data-toc-skip> Ejemplo en <tt>R</tt></h3> 
-<p> Suponga que $x$ es un vector compuesto por $c(0.3, 3, 0.9)$, sea una función $f() = exp()$, una función $g()=abs()$ y una función $h() = log()$. Entonces si se desea calcular la función $f(g(h(x)))$ se tendrá que </p>
+<p> Suponga que $x$ es un vector compuesto por los números $0.3, 3, 0.9$, sea una función $f() = exp()$, una función $g()=abs()$ y una función $h() = log()$. Entonces si se desea calcular la función $f(g(h(x)))$ se tendrá que </p>
 
 <section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1">### Definimos a una variable X</span><span class="w">
 </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0.3</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">0.9</span><span class="p">)</span><span class="w">
@@ -133,7 +134,7 @@ x <- c(0.3, 3, 0.9)
 ```
 
 ### Operador pipe de asignación compuesta %<>%
-Este operador funciona de forma similar al pipe de continuidad, pero con la diferencia, de que luego de realizar las operaciones éste reemplaza la variable `$x$` original, por la secuencia de funciones que se le aplican a la misma variable `$x$`.
+Este operador funciona de forma similar al pipe de continuidad `$\%>\%$`, pero con la diferencia, de que luego de realizar las operaciones deseadas, éste reemplaza la variable `$x$` original, por el resultado obtenido mediante la secuencia de funciones que se le aplican a la misma variable `$x$`.
 
 <h6 align="center"> Ilustración operador pipe de asignación compuesta </h6> 
 ![](../PresentacionesyPoster/images/PipeAssignment.jpg)
@@ -142,7 +143,7 @@ Este operador funciona de forma similar al pipe de continuidad, pero con la dife
 <button id="Hide3" class="btn btn-info">Ocultar ejemplo para %<>%</button>
 <main id="botoncito3"> 
 <h3 data-toc-skip> Ejemplo en <tt>R</tt></h3> 
-<p> Suponga al igual que en el ejemplo anterior, que $x$ es un vector compuesto por $c(0.3, 3, 0.9)$, función $f() = exp()$, una función $g()=abs()$ y una función $h() = log()$. Entonces si se desea calcular la función $f(g(h(x)))$ y almacenarla en $x$. </p>
+<p> Suponga al igual que en el ejemplo anterior, $x$ es un vector compuesto por los números $0.3, 3, 0.9$, las funciones $f() = exp()$, $g()=abs()$ y $h() = log()$. Entonces si se desea calcular la función $f(g(h(x)))$ y almacenarla en $x$. </p>
 
 <section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1">### Se presenta la variable X sin modificar</span><span class="w">
 </span><span class="n">x</span><span class="w">
@@ -164,11 +165,11 @@ Este operador funciona de forma similar al pipe de continuidad, pero con la dife
 </main>
 
 ## Datos sin procesar a Datos técnicamente correctos
-Los archivos de datos sin procesar, son generalmente bases de datos que pueden **carecer de encabezados**, contener codificación de **caracteres especiales** en los nombres, tener **errores en la clasificación** del tipos de datos, poseer **ordenes incorrecto** en dentro de sus categorías, entre otros.
+Los archivos de datos sin procesar, son generalmente bases de datos que pueden **carecer de encabezados**, contener codificación de **caracteres especiales** en los nombres o entradas, tener **errores en la clasificación** del tipos de datos, poseer **ordenes incorrecto** dentro de sus categorías, entre otros.
 
-Estos problemas puede generar inconvenientes al momento de realizar la lectura de los datos, manipulación de la información, o de realizarse análisis con estos datos, podrían arrojar resultados que no son consistentes con la realidad. Por ello se hace necesario usar alguna herramienta que permita **corregir dichos problemas**.
+Estos problemas puede generar inconvenientes al momento de realizar la lectura de los datos, manipular la información, o aplicar análisis estadísticos, podrían arrojar resultados que no son consistentes con la realidad. Por ello se hace necesario usar alguna herramienta que permita **corregir dichos problemas**.
 
-Con el fin de presenta los métodos para solucionar dichos problemas, suponga la siguiente base de datos, conformada por 10 columnas y 11 filas.
+Para presenta procedimientos que permitan solucionar dichos problemas, se emplea la siguiente base de datos, conformada por 10 columnas y 11 filas.
 
 <pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -3rem; margin-top: -3rem;">
 <table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto; font-size: 90%;"><thead><tr><th style="text-align:left;">Fecha</th>
@@ -201,7 +202,7 @@ datos %>%
   column_spec(1, width = "3cm")
 ```
 
-Las variables anteriores son:
+Las variables contenidas en la base de datos anterior son:
 
 * **<tt>Fecha</tt>:** Hace referencia a la fecha en la cual se recolectó la información.
 * **<tt>ID</tt>:** Hace referencia a un número de identificación de la persona.
@@ -214,7 +215,7 @@ Las variables anteriores son:
 * **<tt>% pagado</tt>:** Hace referencia al porcentaje del costo total pagado de la vivienda.
 * **<tt>muni</tt>:** Variable duplicada, hace referencia al municipio en donde se encuentra radicada la persona.
 
-Los datos anteriores, pueden ser descargados desde el siguiente [Link](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/EjemploLimpieza.xlsx){:target="_blank"}.
+Los base de datos presentada, pueden ser descargada desde el siguiente [Link](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/EjemploLimpieza.xlsx){:target="_blank"}.
 
 ### Lectura de datos y pre-visualización de encabezados
 Para realizar el proceso de tratamiento de encabezados, <tt>R</tt> **posee diferentes librerías y funciones que permiten corregir estos errores**, entre ellas, la librería <code>dplyr</code> la cual provee una serie de funciones para la manipulación de bases de datos, la librería <code>lubridate</code> para tratar fechas, la librería <code>janitor</code> la cual posee una serie de funciones que sirven para el proceso de limpieza de datos, entre otras.
@@ -260,7 +261,7 @@ En la salida anterior, se observa que dentro de los nombres de la base de datos 
 
 ### Establecer encabezados faltantes
 
-Para corregir los problemas encontrados en los encabezados, iniciamos con el **establecer o renombrar** aquellas variables que poseen nombres faltantes, y para ello empleamos la función <tt>rename</tt> de la librería <code>dplyr</code>.
+Para corregir los problemas encontrados en los encabezados, iniciamos **estableciendo o renombrando** aquellas variables que poseen nombres faltantes, y para ello empleamos la función <tt>rename</tt> de la librería <code>dplyr</code>.
 
 ```{r}
 datos %<>% rename(ingresos = "...6") # renombra columna en la base de datos
@@ -269,12 +270,12 @@ datos %>% names()
 
 ### Eliminar caracteres especiales
 
-Para **corregir aquellos caracteres especiales, espacios, guiones y letras mayúsculas**, se emplea la función <tt>clean_names()</tt> de la librería <code>janitor</code>, la cual permite:
+Para **corregir los caracteres especiales, espacios, guiones y letras mayúsculas**, se emplea la función <tt>clean_names()</tt> de la librería <code>janitor</code>, la cual entre sus funciones permite:
 
 * Analizar las mayúsculas y minúsculas y separadores a un formato consistente.
 * Maneja caracteres y espacios especiales.
 * Agrega números a nombres duplicados.
-* Convierte "%" en "percent" y "#" en "number" para conservar el significado.
+* Convierte "%" en "percent" y "#" en "number" para conservar el significado de la variable.
 
 ```{r}
 datos %<>% clean_names() # limpia los nombres nombre de la base de datos
@@ -286,15 +287,15 @@ El tipo y clase de los datos juega un papel importante en el tratamiento de dato
 
 La razón de ésto se debe a que podrían haber dentro de la base de datos, **variables numéricas tratadas como factores, factores tratadas como numéricas, variables ordinales tratadas como si fueran nominales, etc**. Lo cual haría que pueda aplicarse análisis a las variables de forma indebida, por ejemplo, realizar un análisis numérico a una variable que realmente es tipo factor, como es al número de teléfono. 
 
-Para observa las clases que poseen los datos, podemos emplear la función <tt>str()</tt>, o la función <tt>glimpse()</tt> de la librería <code>dplyr</code>.
+Para observa las clases que poseen los datos, podemos emplear la función <tt>str()</tt> de la base de <tt>R</tt>, o la función <tt>glimpse()</tt> de la librería <code>dplyr</code>.
 
 ```{r}
 datos %>% glimpse() # muestra las clases que poseen los datos
 ```
 
-De la salida anterior, vemos que solo las variables <tt>municipio</tt>, <tt>deuda_de_vivienda</tt> y <tt>muni</tt> poseen una categoría adecuada, aunque esta variable también podría ser recodificada a tipo factor.
+De la salida anterior, vemos que solo las variables <tt>municipio</tt>, <tt>deuda_de_vivienda</tt> y <tt>muni</tt> poseen una categoría adecuada, aunque estas variables también podrían ser recodificada a tipo factor.
 
-La variable <tt>fecha</tt> aparece como tipo carácter (character) cuando debería ser tipo fecha (date). Por su parte, las variables <tt>id</tt>, number_de_telefono</tt> y <tt>estrato</tt> es clasificada como tipo numérica (double) pero éstas representan una cualidad, y por tanto, dichas variables deberían ser de tipo carácter (character).
+La variable <tt>fecha</tt> aparece como tipo carácter (character) cuando debería ser tipo fecha (date). Por su parte, las variables <tt>id</tt>, <tt>number_de_telefono</tt> y <tt>estrato</tt> es clasificada como tipo numérica (double) pero éstas representan una cualidad, y por tanto, dichas variables deberían ser de tipo carácter (character).
 
 Similarmente, las variables <tt>ingresos</tt>, <tt>costo_vivienda</tt> y <tt>percent_pagado</tt> aparecen en la salida como de tipo carácter (character) cuando realmente éstas variables son de tipo numérica (double). Lo anterior es causado debido a que entre la información contenida dentro de las variables numéricas, se encuentran valores tales como <code style="color: #ff628c!important">NA</code> y <code style="color: #ff628c!important">NaN</code> los cuales son tomados como valores especiales por el <tt>R</tt> y otros valores tales como <code style="color: #ff628c!important">No responde</code> y <code style="color: #ff628c!important">Na</code>.
 
@@ -306,10 +307,11 @@ Similarmente, las variables <tt>ingresos</tt>, <tt>costo_vivienda</tt> y <tt>per
 * **<tt>as.factor()</tt>:** Convierte una variable a tipo factor.
 * **<tt>as.character()</tt>:** Convierte una variable a tipo carácter (character).
 * **<tt>as.ordered()</tt>:** Convierte una variable a tipo factor asumiendo un orden o jerarquía entre los niveles.
+* **<tt>as.Date()</tt>:** Convierte una variable a tipo fecha.
 
-Cada una de estas funciones toma un objeto <tt>R</tt> e intenta convertirlo a la clase especificada detrás del "as.", en donde, aquellos valores que no se pueden convertir al tipo especificado, <tt>R</tt> los convertirá por defecto a un <code style="color: #ff628c!important">NA</code>.
+Cada una de estas funciones toma un objeto <tt>R</tt> e intenta convertirlo a la clase especificada detrás del "as.", en donde, aquellos valores que no se pueden convertir al tipo especificado, <tt>R</tt> los convertirá por defecto a un valor <code style="color: #ff628c!important">NA</code>.
 
-Para corregir la clase de las variables, usaremos la función <tt>mutate()</tt> de la librería <tt>dplyr</tt>, de la forma
+Para corregir la clase de las variables, usaremos la función <tt>mutate()</tt> de la librería <tt>dplyr</tt>, junto a las funciones <tt>as.factor()</tt> y <tt>as.numeric()</tt> de la base de <tt>R</tt> para realizar la conversión de las variables.
 
 ```{r}
 ### Transformar variables a tipo factor
@@ -319,18 +321,25 @@ datos %<>% mutate_at(vars(id, number_telefono, estrato, municipio, deuda_viviend
 datos %<>% mutate_at(vars(ingresos, costo_vivienda, percent_pagado), as.numeric) %>% glimpse()
 ```
 
-Ahora, para **transformar la variable 'fecha' a tipo fecha (date)**, se pueden emplear las funciones <tt>dmy()</tt> (día-mes-año), <tt>mdy()</tt> (mes-día-año), <tt>myd()</tt> (mes-año-día), <tt>ymd()</tt> (año-mes-día), <tt>ydm()</tt> (año-día-mes) o <tt>dym()</tt> (día-año-mes) de la librería <code>lubridate</code>, dependiendo del orden de como se encuentre registrada la fecha. 
+Ahora, para **transformar la variable 'fecha' a tipo fecha (date)**, no usaremos la función <tt>as.Date()</tt> de la base de <tt>R</tt> si no que usaremos la librería `lubridate`, dependiendo de la estructura de como se encuentren registradas las fechas.
 
-La ventaja que tiene usar estas variable sobre la función base **<tt>as.Date</tt>** del <tt>R</tt>, pues dichas funciones transforma las fechas almacenadas en vectores numéricos y de caracteres en objetos tipo (date), aunque éstas contengan caracteres adicionales a las de fecha.
+* **<tt>dmy():</tt>** día-mes-año
+* **<tt>mdy():</tt>** mes-día-año
+* **<tt>myd():</tt>** mes-año-día
+* **<tt>ymd():</tt>** año-mes-día
+* **<tt>ydm():</tt>** año-día-mes
+* **<tt>dym():</tt>** día-año-mes 
 
-Dado que al observar las entradas que hay en la variable fecha son del tipo (día-mes-año), se emplea la función <tt>dmy()</tt> de la librería <code>lubridate</code>.
+La ventaja que tiene usar las funciones de la librería `lubridate` respecto a la función <tt>as.Date()</tt>, radica en que dichas funciones transforma las fechas almacenadas en vectores numéricos y de caracteres en objetos tipo (date), sin importar que éstas contengan caracteres adicionales a las de fecha planteada.
+
+Al analizar las entradas que hay en la variable <tt>fecha</tt>, evidenciamos que éstas poseen la estructura día-mes-año, por tanto se debe emplear la función <tt>dmy()</tt> de la librería `lubridate` para realizar la transformación. Además empleamos la función <tt>mutate_at</tt> de la librería `dplyr`.
 
 ```{r}
 ### Transformar variables a tipo fecha (date)
 datos %<>% mutate_at(vars(fecha), dmy) %>% glimpse()
 ```
 
-De la salida anterior, se aprecia que ya todas las variables se encuentran debidamente codificadas, logrando así, junto con los procedimientos anteriores **obtener un conjunto de datos es técnicamente correcto**. Dichos datos quedan estructurados de la forma
+De la salida anterior, se aprecia que ya todas las variables se encuentran debidamente codificadas, logrando así, junto con los procedimientos anteriores **obtener un conjunto de datos técnicamente correcto**.
 
 <pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -3rem; margin-top: -3rem;">
 <table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto; font-size: 90%;"><thead><tr><th style="text-align:left;">fecha</th>
@@ -338,7 +347,7 @@ De la salida anterior, se aprecia que ya todas las variables se encuentran debid
 
 ## Datos técnicamente correctos a datos consistentes
 
-Los datos consistentes **son la etapa en la que el conjunto de observaciones están listos** para la realización de inferencia estadística. Éstos datos son los que asumen como punto de partida en la mayoría de las teorías estadísticas, aunque **en la práctica no siempre se emplean éstos**, si no que usan datos sin procesar o técnicamente correctos.
+Los datos consistentes **son la etapa en la que el conjunto de observaciones están listos** para la realización de inferencia estadística. Éstos datos son los que se asumen como punto de partida en la mayoría de las teorías estadísticas, aunque **en la práctica no siempre se emplean éstos**, si no que usan datos sin procesar o técnicamente correctos.
 
 Aunque es posible emplear datos sin procesar o técnicamente correcto para realizar inferencia estadística, el evadir el paso de llevar los datos a su forma consistente, puede tener una seria influencia en los resultados estadísticos, puesto que **la detección, verificación, corrección e imputación de datos, puede brindar información valiosa** en los análisis realizados o en la interpretación de los mismos.
 
@@ -349,7 +358,7 @@ La detección de datos faltantes radica en localizar para cada variable, si se e
 * **<code style="color: #ff628c!important">NaN</code> (Not a number):** Es un carácter especial para datos de clase numérica, para indicar un valor asociado a un cálculo cuyo resultado es desconocido, el cual seguramente no es un número. Este puede obtenerse mediante operaciones tales como `$0/0$`, `$Inf/Inf$`, `$Inf-Inf$`. Éstos pueden ser detectados en <tt>R</tt> mediante la función <tt>is.nan()</tt>, aunque también son detectados por la función <tt>is.na()</tt>.
 * **<code style="color: #ff628c!important">NULL</code>:** Es un carácter especial para indicar valores indefinidos o indicar la no existencia de valor dentro de la base de datos o de una entrada de la misma. Éstos pueden ser detectados en <tt>R</tt> mediante la función <tt>is.null()</tt>.
 
-Para detectar aquellas filas que se encuentren faltantes dentro de una base de datos, podemos usar una combinación entre las funciones <tt>apply()</tt>, <tt>which()</tt>, tal como se hizo en la salida anterior, adicionando las funciones <tt>is.na()</tt> e <tt>is.null()</tt>, dentro de la función <tt>which()</tt>.
+Para detectar aquellas filas que se encuentren faltantes dentro de una base de datos, podemos usar una combinación entre las funciones <tt>apply()</tt>, <tt>which()</tt>, tal como se muestra en la siguiente linea de código, adicionando las funciones <tt>is.na()</tt> e <tt>is.null()</tt>, dentro de la función <tt>which()</tt>.
 
 ```{r}
 ## Detectar NA, NaN y NULL dentro de la base de datos
@@ -359,7 +368,7 @@ faltantes <- apply(X = datos, MARGIN = 2, FUN = function(x) which(is.na(x) | is.
 faltantes
 ```
 
-De la salida anterior se observa que en todas las variables aparece con valores faltantes la fila número `$10$`. Adicionalmente, se aprecian para las variables <tt>municipio</tt>, <tt>ingresos</tt>, <tt>deuda_vivienda</tt>, <tt>costo_vivienda</tt>, <tt>percent_pagado</tt> y <tt>muni</tt>, celdas similares son encontradas en el proceso de verificación de datos. 
+De la salida anterior se observa que en todas las variables aparece con valores faltantes la fila número `$10$`. Adicionalmente, se aprecian valores `$NA$` para las variables <tt>municipio</tt>, <tt>ingresos</tt>, <tt>deuda_vivienda</tt>, <tt>costo_vivienda</tt>, <tt>percent_pagado</tt> y <tt>muni</tt>, en donde celdas similares se encontrarán en el proceso de verificación de datos. 
 
 <pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -3rem; margin-top: -3rem;">
 <table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto; font-size: 90%;"><thead><tr><th style="text-align:left;">fecha</th>
@@ -378,7 +387,7 @@ Por tanto, se hace necesario **localizar por columna**, los valores que presente
 * **<tt>percent_pagado</tt>:** Es una variable numérica, sus valores deben encontrarse entre 0 y 1.
 * **<tt>muni</tt>:** Es una variable categórica, sus valores están restringidos a los municipios del Valle de Aburrá. 
 
-Para realizar tal proceso de verificación se debe realizar la localización de aquellos valores que presenten inconsistencias, en donde, pueden emplearse las funciones <tt>editset()</tt> y <tt>violatedEdits()</tt> de la librería <code>editrules</code>
+Para realizar tal proceso de verificación se debe realizar la localización de aquellos valores que presenten inconsistencias, en donde, **inicialmente deben establecerse las restricciones** que posee la base de datos, y para ellos pueden emplearse las funciones <tt>editset()</tt> y <tt>violatedEdits()</tt> de la librería <code>editrules</code>
 
 ```{r}
 ## Creamos conjunto de condiciones que deben cumplirse
@@ -408,17 +417,17 @@ plot(Errores)
 
 ![](../PresentacionesyPoster/images/Presentacion01unnamed-chunk-13-1.jpg)
 
-En la imagen anterior se presentan dos gráficos. El gráfico superior muestra **cuales son las condiciones que más se están violando**, en donde se aprecia que la condición <tt>dat1</tt>, es la que tiene una mayor porcentaje de errores, con un poco más del `$35\%$` de las violaciones de la base de datos. Cabe anotar que en el caso de variables categóricas, **los <code style="color: #ff628c!important">NA</code> son contados como una violación**. En el gráfico inferior muestra **cuantas filas contienen <code style="color: #ff628c!important">NA</code>, <code style="color: #ff628c!important">NaN</code> o violaciones a las condiciones establecidas**, y señala cuantas filas no poseen ningún tipo de violación.
+En la imagen anterior se presentan dos gráficos. El gráfico superior muestra **cuales son las condiciones que más se están violando**, en donde se aprecia que la condición <tt>dat1</tt>, es la que tiene una mayor porcentaje de errores, con un poco más del `$35\%$` de las violaciones de la base de datos. Cabe anotar que en el caso de variables categóricas, **los <code style="color: #ff628c!important">NA</code> son contados como una violación** debido a que éstas son tomadas como una categoría y no como un valor faltante. En el gráfico inferior muestra **cuantas filas contienen <code style="color: #ff628c!important">NA</code>, <code style="color: #ff628c!important">NaN</code> o violaciones a las condiciones establecidas**, y señala cuantas filas no poseen ningún tipo de violación.
 
 Para localizar la fila en donde se realizan violaciones en cada variable, podemos emplear la función <tt>localizeErrors()</tt> de la librería <code>editrules</code> seguida de una combinación entre las funciones <tt>apply()</tt> y <tt>which()</tt>, de la forma
 
 ```{r}
 # Localiza y muestra por variable las violaciones
-loc <- localizeErrors(c(CondC, CondN), datos)$adapt
+loc <- localizeErrors(c(CondC, CondN), datos) %$% adapt
 apply(X = loc, MARGIN = 2, FUN = function(x) which(x == TRUE))
 ```
 
-De la salida anterior, observamos que hay violaciones en la entrada `$5$` y `$10$` de la variable <tt>estrato</tt>, en las entradas `$4, 9$` y `$10$` de la variable <tt>municipio</tt>, etc, etc, etc. Es de anotar que todos los valores faltantes también son detectados por el proceso de verificación de datos.
+De la salida anterior, observamos que hay violaciones en la entrada `$5$` y `$10$` de la variable <tt>estrato</tt>, en las entradas `$4, 9$` y `$10$` de la variable <tt>municipio</tt>, etc, etc, etc. Cabe anotar que todos los valores faltantes también son detectados por el proceso de verificación de datos.
 
 <pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -3rem; margin-top: -3rem;">
 <table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto; font-size: 90%;"><thead><tr><th style="text-align:left;">fecha</th>
@@ -431,7 +440,7 @@ Similarmente, existen diferentes metodologías para determinar datos atípicos, 
 
 En el caso en el cual no se conoce las distribuciones de probabilidad, pero se observa que **los datos son más o menos unimodales y distribuidos simétricamente**, puede emplearse el método de caja y bigotes de @Tukey1978 para detección de datos atípicos.
 
-Éste método emplea estadísticos de orden no paramétricos, para calcular un gráfico de caja y bigotes, con el fin de visualizar los datos atípicos que se encuentren por encima y por debajo de `$1.5$` veces el rango intercuartílico.
+En este método se emplean estadísticos de orden no paramétricos, para calcular un gráfico de caja y bigotes, con el fin de visualizar los datos atípicos que se encuentren por encima y por debajo de `$1.5$` veces el rango intercuartílico.
 
 <h6 align="center"> Gráfico de caja y bigotes </h6> 
 ![](../PresentacionesyPoster/images/BoxPlot.jpg)
@@ -441,6 +450,7 @@ En <tt>R</tt> dicho gráfico puede realizarse mediante la función <tt>boxplot()
 <button id="Hide5" class="btn btn-info">Ocultar función Outliers</button>
 <main id="botoncito5"> 
 <h3 data-toc-skip> Creación de función Outliers</h3> 
+<p> Creo la función ya que no encontré una función que lo hiciera :D </p>
 <section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1"># Función para extraer valores atípicos de variables numéricas</span><span class="w">
 </span><span class="n">Outliers</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
     </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">require</span><span class="p">(</span><span class="n">magrittr</span><span class="p">))</span><span class="w"> 
@@ -491,7 +501,7 @@ Outliers <- function(data, row = TRUE){
 datos %>% Outliers(row = FALSE)
 ```
 
-de la salida anterior, se aprecia que la observación atípica de la variable <tt>ingresos</tt> corresponde a un salario de `$630700$` pesos, mientras que, para la variable <tt>costo_vivienda</tt> corresponde a un costo de vivienda de `$3838$` millones de pesos, y para la variable <tt>percent_pagado</tt> lo porcentajes de `$0.05$` y `$0.75$`.
+De la salida anterior, se aprecia que la observación atípica de la variable <tt>ingresos</tt> corresponde a un salario de `$630700$` pesos, mientras que, para la variable <tt>costo_vivienda</tt> corresponde a un costo de vivienda de `$3838$` millones de pesos, y para la variable <tt>percent_pagado</tt> lo porcentajes de `$0.05$` y `$0.75$`.
 
 Es de anotar que de estos datos, solo el valor atípico de <tt>costo_vivienda</tt> es el único que parece tener un valor excesivo, pues se cree que se agregó un `$0$` de más.
 
@@ -500,12 +510,12 @@ Es de anotar que de estos datos, solo el valor atípico de <tt>costo_vivienda</t
 <th style="text-align:right;">id</th><th style="text-align:right;">number_telefono</th><th style="text-align:right;">estrato</th><th style="text-align:right;">municipio</th><th style="text-align:right;">ingresos</th><th style="text-align:right;">deuda_vivienda</th><th style="text-align:right;">costo_vivienda</th><th style="text-align:right;">percent_pagado</th><th style="text-align:right;">muni</th></tr></thead><tbody><tr><td style="text-align:right;">2013-02-15</td><td style="text-align:right;">1035869</td><td style="text-align:right;">3124751231</td><td style="text-align:right;">2</td><td style="text-align:right;">La Estrella</td><td style="text-align:right;">NA</td><td style="text-align:right;">No</td><td style="text-align:right;">NaN</td><td style="text-align:right;">NaN</td><td style="text-align:right;">La Estrella</td></tr><tr><td style="text-align:right;">2013-05-01</td><td style="text-align:right;">1035857</td><td style="text-align:right;">1192334</td><td style="text-align:right;">3</td><td style="text-align:right;">Bello</td><td style="text-align:right;">3114800</td><td style="text-align:right;">Sí</td><td style="text-align:right;">728753400</td><td style="text-align:right;">0.29</td><td style="text-align:right;">Bello</td></tr><tr><td style="text-align:right;">2014-03-07</td><td style="text-align:right;">1007306</td><td style="text-align:right;">3434589</td><td style="text-align:right;">3</td><td style="text-align:right;">La Estrella</td><td style="text-align:right;">3083500</td><td style="text-align:right;">Sí</td><td style="text-align:right;">405147000</td><td style="text-align:right;">0.31</td><td style="text-align:right;">La Estrella</td></tr><tr><td style="text-align:right;">2013-01-12</td><td style="text-align:right;">3935563</td><td style="text-align:right;">7005931</td><td style="text-align:right;">4</td><td style="text-align:right;">Hola! :D</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">630700</span></td><td style="text-align:right;">NA</td><td style="text-align:right;">-62708000</td><td style="text-align:right;">0.18</td><td style="text-align:right;">Hola! :D</td></tr><tr><td style="text-align:right;">2013-05-01</td><td style="text-align:right;">1035857</td><td style="text-align:right;">1192334</td><td style="text-align:right;">3</td><td style="text-align:right;">Bello</td><td style="text-align:right;">3114800</td><td style="text-align:right;">Sí</td><td style="text-align:right;">728753400</td><td style="text-align:right;">0.29</td><td style="text-align:right;">Bello</td></tr><tr><td style="text-align:right;">2013-02-15</td><td style="text-align:right;">2222985</td><td style="text-align:right;">8660538</td><td style="text-align:right;">10</td><td style="text-align:right;">Sabaneta</td><td style="text-align:right;">NA</td><td style="text-align:right;">Si</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">3.838e+09</span></td><td style="text-align:right;">NA</td><td style="text-align:right;">Sabaneta</td></tr><tr><td style="text-align:right;">2014-09-23</td><td style="text-align:right;">3488986</td><td style="text-align:right;">5625266</td><td style="text-align:right;">2</td><td style="text-align:right;">Caldas</td><td style="text-align:right;">3356600</td><td style="text-align:right;">Sí</td><td style="text-align:right;">186855000</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">0.75</span></td><td style="text-align:right;">Caldas</td></tr><tr><td style="text-align:right;">2014-06-02</td><td style="text-align:right;">1022146</td><td style="text-align:right;">3979642</td><td style="text-align:right;">2</td><td style="text-align:right;">Caldas</td><td style="text-align:right;">2204800</td><td style="text-align:right;">No responde</td><td style="text-align:right;">NA</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">0.05</span></td><td style="text-align:right;">Caldas</td></tr><tr><td style="text-align:right;">2015-12-15</td><td style="text-align:right;">39359318</td><td style="text-align:right;">2304725</td><td style="text-align:right;">1</td><td style="text-align:right;">Itagüi</td><td style="text-align:right;">3428900</td><td style="text-align:right;">Sí</td><td style="text-align:right;">539641705</td><td style="text-align:right;">NA</td><td style="text-align:right;">Itagüi</td></tr><tr><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td></tr><tr><td style="text-align:right;">2013-02-06</td><td style="text-align:right;">32321157</td><td style="text-align:right;">39522101</td><td style="text-align:right;">3</td><td style="text-align:right;">La Estrella</td><td style="text-align:right;">NA</td><td style="text-align:right;">Sí</td><td style="text-align:right;">169451000</td><td style="text-align:right;">0.22</td><td style="text-align:right;">La Estrella</td></tr></tbody></table></pre>
 
 #### Corrección de datos
-La métodos de corrección tienen por objetivo tratar revisar aquellas observaciones en las que se encontraron inconsistencias, removiendo filas o columnas vacías, eliminando filas o columnas duplicadas, corrección deductiva e imputando datos.
+La métodos de corrección tienen por objetivo revisar en lo posible, aquellas observaciones en las que se encontraron inconsistencias, removiendo filas o columnas vacías, eliminando filas o columnas duplicadas, corrección deductiva e imputando datos.
 
 #### Remover filas o columnas vacías
 Para asegurarnos que las celdas faltantes detectadas con "NA", "Na", "NaN", "999", etc, en la subsección [Detección de datos faltantes](https://jiperezga.github.io/Presentacion01#detección-de-datos-faltantes){:target="_blank"}, se transformen a <code style="color: #ff628c!important">NA</code>, pueden emplearse las funciones <tt>na_if()</tt> o <tt>convert_to_NA()</tt> de las librerías `dplyr` y `janitor`, respectivamente. 
 
-<tt>na_if()</tt> **se emplea cuando no existan variables de tipo <tt>date</tt>** en la base de datos, mientras que, <tt>convert_to_NA()</tt> **se emplea cuando existan variables tipo <tt>date</tt>** en la base de datos.
+<tt>na_if()</tt> **se emplea cuando no existan variables de tipo <tt>date</tt>** en la base de datos, ya que ésta genera errores cuando trata de realizar la transformación, mientras que, <tt>convert_to_NA()</tt> **se emplea cuando existan variables tipo <tt>date</tt>** en la base de datos.
 
 ```{r}
 # Reemplaza valores "NA", "NaN" y "Na" dentro de variables tipo factor
@@ -519,7 +529,7 @@ Como puede ocurrir que al eliminar los "NA" de las variables tipo <tt>factor</tt
 datos %<>% droplevels()
 ```
 
-Finalmente, para **eliminar aquellas filas o columnas poseen solo valores <code style="color: #ff628c!important">NA</code>** dentro de una base de datos, es posible usar la función <tt>remove_empty()</tt> de la librería `janitor`, la cual verifica todas las filas y todas las columnas, para observar en cuales de ellas contienen solo valores <code style="color: #ff628c!important">NA</code>.
+Finalmente, para **eliminar aquellas filas o columnas poseen solo valores <code style="color: #ff628c!important">NA</code>** dentro de una base de datos, es posible usar la función <tt>remove_empty()</tt> de la librería `janitor`, la cual verifica todas las filas y todas las columnas, para observar en cuales de ellas se presentan solo valores <code style="color: #ff628c!important">NA</code>.
 
 ```{r}
 # Elimina filas y columnas que poseen solo valores NA
@@ -546,7 +556,7 @@ datos %<>% select_if(!duplicated(as.list(.)))
 <th style="text-align:right;">id</th><th style="text-align:right;">number_telefono</th><th style="text-align:right;">estrato</th><th style="text-align:right;">municipio</th><th style="text-align:right;">ingresos</th><th style="text-align:right;">deuda_vivienda</th><th style="text-align:right;">costo_vivienda</th><th style="text-align:right;">percent_pagado</th></tr></thead><tbody><tr><td style="text-align:right;">2013-02-15</td><td style="text-align:right;">1035869</td><td style="text-align:right;">3124751231</td><td style="text-align:right;">2</td><td style="text-align:right;">La Estrella</td><td style="text-align:right;">NA</td><td style="text-align:right;">No</td><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td></tr><tr><td style="text-align:right;">2013-05-01</td><td style="text-align:right;">1035857</td><td style="text-align:right;">1192334</td><td style="text-align:right;">3</td><td style="text-align:right;">Bello</td><td style="text-align:right;">3114800</td><td style="text-align:right;">Sí</td><td style="text-align:right;">728753400</td><td style="text-align:right;">0.29</td></tr><tr><td style="text-align:right;">2014-03-07</td><td style="text-align:right;">1007306</td><td style="text-align:right;">3434589</td><td style="text-align:right;">3</td><td style="text-align:right;">La Estrella</td><td style="text-align:right;">3083500</td><td style="text-align:right;">Sí</td><td style="text-align:right;">405147000</td><td style="text-align:right;">0.31</td></tr><tr><td style="text-align:right;">2013-01-12</td><td style="text-align:right;">3935563</td><td style="text-align:right;">7005931</td><td style="text-align:right;">4</td><td style="text-align:right;">Hola! :D</td><td style="text-align:right;">630700</td><td style="text-align:right;">NA</td><td style="text-align:right;">-62708000</td><td style="text-align:right;">0.18</td></tr><tr><td style="text-align:right;">2013-02-15</td><td style="text-align:right;">2222985</td><td style="text-align:right;">8660538</td><td style="text-align:right;">10</td><td style="text-align:right;">Sabaneta</td><td style="text-align:right;">NA</td><td style="text-align:right;">Si</td><td style="text-align:right;">3.838e+09</td><td style="text-align:right;">NA</td></tr><tr><td style="text-align:right;">2014-09-23</td><td style="text-align:right;">3488986</td><td style="text-align:right;">5625266</td><td style="text-align:right;">2</td><td style="text-align:right;">Caldas</td><td style="text-align:right;">3356600</td><td style="text-align:right;">Sí</td><td style="text-align:right;">186855000</td><td style="text-align:right;">0.75</td></tr><tr><td style="text-align:right;">2014-06-02</td><td style="text-align:right;">1022146</td><td style="text-align:right;">3979642</td><td style="text-align:right;">2</td><td style="text-align:right;">Caldas</td><td style="text-align:right;">2204800</td><td style="text-align:right;">No responde</td><td style="text-align:right;">NA</td><td style="text-align:right;">0.05</td></tr><tr><td style="text-align:right;">2015-12-15</td><td style="text-align:right;">39359318</td><td style="text-align:right;">2304725</td><td style="text-align:right;">1</td><td style="text-align:right;">Itagüi</td><td style="text-align:right;">3428900</td><td style="text-align:right;">Sí</td><td style="text-align:right;">539641705</td><td style="text-align:right;">NA</td></tr><tr><td style="text-align:right;">2013-02-06</td><td style="text-align:right;">32321157</td><td style="text-align:right;">39522101</td><td style="text-align:right;">3</td><td style="text-align:right;">La Estrella</td><td style="text-align:right;">NA</td><td style="text-align:right;">Sí</td><td style="text-align:right;">169451000</td><td style="text-align:right;">0.22</td></tr></tbody></table></pre>
 
 ### Corrección deductiva
-Esta fase es la más complicada del todo del procedimiento, debido a que es necesario **revisar detalladamente** la información obtenida en las fases de [Verificación de datos](https://jiperezga.github.io/Presentacion01#verificación-de-datos){:target="_blank"} y [Identificación de Outliers](https://jiperezga.github.io/Presentacion01#identificación-de-outlier){:target="_blank"}, ya que **es necesario revisar las casillas en las que se encontraron violaciones** y tratar de transformar dichos valores no válidos, basados en información de valores válidos.
+Esta fase es la más complicada de todo del procedimiento de limpieza, debido a que es necesario **revisar detalladamente junto a un experto en el tema**, la información obtenida en las fases de [Verificación de datos](https://jiperezga.github.io/Presentacion01#verificación-de-datos){:target="_blank"} y [Identificación de Outliers](https://jiperezga.github.io/Presentacion01#identificación-de-outlier){:target="_blank"}, ya que **es necesario revisar las casillas en las que se encontraron violaciones** y tratar de transformar dichos valores no válidos, basados en información de valores válidos.
 
 Para realizar tal procedimiento, podemos usar las funciones <tt>mutate</tt> de la librería `dplyr`,
 en combinación con las funciones <tt>if_else()</tt> de la librería `dplyr`, <tt>fct_recode()</tt> de la librería `forcats` y <tt>droplevels()</tt> de la base de <tt>R</tt>, para establecer condiciones que permitan modificar las otras variables.
@@ -580,19 +590,19 @@ datos %<>% mutate(deuda_vivienda = if_else(costo_vivienda > 0 | percent_pagado >
 <th style="text-align:right;">id</th><th style="text-align:right;">number_telefono</th><th style="text-align:right;">estrato</th><th style="text-align:right;">municipio</th><th style="text-align:right;">ingresos</th><th style="text-align:right;">deuda_vivienda</th><th style="text-align:right;">costo_vivienda</th><th style="text-align:right;">percent_pagado</th></tr></thead><tbody><tr><td style="text-align:right;">2013-02-15</td><td style="text-align:right;">1035869</td><td style="text-align:right;">3124751231</td><td style="text-align:right;">2</td><td style="text-align:right;">La Estrella</td><td style="text-align:right;">NA</td><td style="text-align:right;">No</td><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td></tr><tr><td style="text-align:right;">2013-05-01</td><td style="text-align:right;">1035857</td><td style="text-align:right;">1192334</td><td style="text-align:right;">3</td><td style="text-align:right;">Bello</td><td style="text-align:right;">3114800</td><td style="text-align:right;">Sí</td><td style="text-align:right;">728753400</td><td style="text-align:right;">0.29</td></tr><tr><td style="text-align:right;">2014-03-07</td><td style="text-align:right;">1007306</td><td style="text-align:right;">3434589</td><td style="text-align:right;">3</td><td style="text-align:right;">La Estrella</td><td style="text-align:right;">3083500</td><td style="text-align:right;">Sí</td><td style="text-align:right;">405147000</td><td style="text-align:right;">0.31</td></tr><tr><td style="text-align:right;">2013-01-12</td><td style="text-align:right;">3935563</td><td style="text-align:right;">7005931</td><td style="text-align:right;">4</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">NA</span></td><td style="text-align:right;">630700</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">Sí</span></td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">62708000</span></td><td style="text-align:right;">0.18</td></tr><tr><td style="text-align:right;">2013-02-15</td><td style="text-align:right;">2222985</td><td style="text-align:right;">8660538</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">NA</span></td><td style="text-align:right;">Sabaneta</td><td style="text-align:right;">NA</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">Sí</span></td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">383800000</span></td><td style="text-align:right;">NA</td></tr><tr><td style="text-align:right;">2014-09-23</td><td style="text-align:right;">3488986</td><td style="text-align:right;">5625266</td><td style="text-align:right;">2</td><td style="text-align:right;">Caldas</td><td style="text-align:right;">3356600</td><td style="text-align:right;">Sí</td><td style="text-align:right;">186855000</td><td style="text-align:right;">0.75</td></tr><tr><td style="text-align:right;">2014-06-02</td><td style="text-align:right;">1022146</td><td style="text-align:right;">3979642</td><td style="text-align:right;">2</td><td style="text-align:right;">Caldas</td><td style="text-align:right;">2204800</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">Sí</span></td><td style="text-align:right;">NA</td><td style="text-align:right;">0.05</td></tr><tr><td style="text-align:right;">2015-12-15</td><td style="text-align:right;">39359318</td><td style="text-align:right;">2304725</td><td style="text-align:right;">1</td><td style="text-align:right;">Itagüi</td><td style="text-align:right;">3428900</td><td style="text-align:right;">Sí</td><td style="text-align:right;">539641705</td><td style="text-align:right;">NA</td></tr><tr><td style="text-align:right;">2013-02-06</td><td style="text-align:right;">32321157</td><td style="text-align:right;">39522101</td><td style="text-align:right;">3</td><td style="text-align:right;">La Estrella</td><td style="text-align:right;">NA</td><td style="text-align:right;">Sí</td><td style="text-align:right;">169451000</td><td style="text-align:right;">0.22</td></tr></tbody></table></pre>
 
 ### Imputación de datos
-La imputación es un procedimiento que **consta en estimar o derivar valores para campos que poseen datos faltantes*, en donde, dichas acciones tendrán una fuerte influencia en los resultados de un análisis estadístico. Tales procedimientos poseen una gran cantidad de metodologías diferentes, las cuales se escapan de esta presentación, y por tanto nos centraremos en unos cuantos.
+La imputación es un procedimiento que **consta en estimar o derivar valores para campos que poseen datos faltantes**, en donde, dichas acciones tendrán una fuerte influencia en los resultados de un análisis estadístico. Tal procedimient poseen una gran cantidad de metodologías diferentes, las cuales se escapan de esta presentación, y por tanto nos centraremos en unos cuantos.
 
-@deJonge2013[, p. 46] presentan una tabla en donde presenta las diferentes librerías de <tt>R</tt>, que ofrecen alguna función que permita la realización de imputaciones, enumera éstas con una serie de métodos de imputación basados en modelos populares, y señalan que en **@deWaal2011[, cap. 7] se realiza una revisión general de varios métodos de imputación**. 
+@deJonge2013[, p. 46] presentan una tabla en donde presenta las diferentes librerías de <tt>R</tt>, que ofrecen alguna función que permita la realización de imputaciones, enumeran éstas con una serie de métodos de imputación basados en modelos populares. **@deWaal2011[, cap. 7] realizan una revisión general de varios métodos de imputación**. 
 
 <h6 align="center"> Librerías que permites métodos de imputación en <tt>R</tt> @deJonge2013[, p. 46] </h6> 
 ![](../PresentacionesyPoster/images/MetodosImputacion.jpg){width=80%}
 
-Para ilustrar lo métodos de imputación, se presentan el método de imputación numérica, método de imputación Hot deck, y método de imputación kNN.
+Para ilustrar los diferentes métodos de imputación, se presentan el método de imputación numérica, método de imputación Hot deck, y método de imputación kNN.
 
 #### Imputación numérica
-Como su nombre lo indica, este método de imputación se realiza para variables numéricas y **lo que haces es emplear medidas de tendencias central, tal como la media, mediana, media recortada o moda, para imputar los valores faltantes**. Dichas medidas de tendencia central, pueden consultarse en el siguiente link [Medidas de tendencia central](../../EstadisticaI/EstIClase01.html#medidas-estadísticas){:target="_blank"}.
+Como su nombre lo indica, este método de imputación se realiza solo para variables numéricas y **lo que haces es emplear medidas de tendencias central**, tal como la media, mediana, media recortada o moda, para imputar los valores faltantes. Dichas medidas de tendencia central, pueden consultarse en el siguiente link [Medidas de tendencia central](../../EstadisticaI/EstIClase01.html#medidas-estadísticas){:target="_blank"}.
 
-Para la realización de esta imputación pueden emplearse las funciones <tt>mutate()</tt>, <tt>if_else()</tt> de la librería `dplyr`, junto con la función, <tt>is.na()</tt>,  de la librería base de <tt>R</tt>, y la función <tt>impute()</tt> de la librería `Hmisc`. También será necesario seleccionar la medida de tendencia central de interés, entre ellas se tiene, <tt>mean()</tt> para la media o media recortada, <tt>median()</tt> para la mediana, <tt>Moda()</tt> (ver función en [Medidas de tendencia central](../../EstadisticaI/EstIClase01.html#medidas-estadísticas){:target="_blank"}.) para moda.
+Para la realización de esta imputación pueden emplearse las funciones <tt>mutate()</tt>, <tt>if_else()</tt> de la librería `dplyr`, junto con la función, <tt>is.na()</tt>,  de la librería base de <tt>R</tt>, y la función <tt>impute()</tt> de la librería `Hmisc`. También será necesario seleccionar la medida de tendencia central de interés, entre ellas se tiene, <tt>mean()</tt> para la media o media recortada, <tt>median()</tt> para la mediana, <tt>Moda()</tt> (ver función en [Medidas de tendencia central](../../EstadisticaI/EstIClase01.html#medidas-estadísticas){:target="_blank"}.) para la moda.
 
 ```{r eval=FALSE}
 # Se crea nueva base de datos para mostrar diferentes métodos de imputación
@@ -613,9 +623,9 @@ NumImp %<>% mutate(percent_pagado = if_else(is.na(percent_pagado) & deuda_vivien
 <th style="text-align:right;">id</th><th style="text-align:right;">number_telefono</th><th style="text-align:right;">estrato</th><th style="text-align:right;">municipio</th><th style="text-align:right;">ingresos</th><th style="text-align:right;">deuda_vivienda</th><th style="text-align:right;">costo_vivienda</th><th style="text-align:right;">percent_pagado</th></tr></thead><tbody><tr><td style="text-align:right;">2013-02-15</td><td style="text-align:right;">1035869</td><td style="text-align:right;">3124751231</td><td style="text-align:right;">2</td><td style="text-align:right;">La Estrella</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">3099150</span></td><td style="text-align:right;">No</td><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td></tr><tr><td style="text-align:right;">2013-05-01</td><td style="text-align:right;">1035857</td><td style="text-align:right;">1192334</td><td style="text-align:right;">3</td><td style="text-align:right;">Bello</td><td style="text-align:right;">3114800</td><td style="text-align:right;">Sí</td><td style="text-align:right;">728753400</td><td style="text-align:right;">0.29</td></tr><tr><td style="text-align:right;">2014-03-07</td><td style="text-align:right;">1007306</td><td style="text-align:right;">3434589</td><td style="text-align:right;">3</td><td style="text-align:right;">La Estrella</td><td style="text-align:right;">3083500</td><td style="text-align:right;">Sí</td><td style="text-align:right;">405147000</td><td style="text-align:right;">0.31</td></tr><tr><td style="text-align:right;">2013-01-12</td><td style="text-align:right;">3935563</td><td style="text-align:right;">7005931</td><td style="text-align:right;">4</td><td style="text-align:right;">NA</td><td style="text-align:right;">630700</td><td style="text-align:right;">Sí</td><td style="text-align:right;">62708000</td><td style="text-align:right;">0.18</td></tr><tr><td style="text-align:right;">2013-02-15</td><td style="text-align:right;">2222985</td><td style="text-align:right;">8660538</td><td style="text-align:right;">NA</td><td style="text-align:right;">Sabaneta</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">3099150</span></td><td style="text-align:right;">Sí</td><td style="text-align:right;">383800000</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">0.25</span></td></tr><tr><td style="text-align:right;">2014-09-23</td><td style="text-align:right;">3488986</td><td style="text-align:right;">5625266</td><td style="text-align:right;">2</td><td style="text-align:right;">Caldas</td><td style="text-align:right;">3356600</td><td style="text-align:right;">Sí</td><td style="text-align:right;">186855000</td><td style="text-align:right;">0.75</td></tr><tr><td style="text-align:right;">2014-06-02</td><td style="text-align:right;">1022146</td><td style="text-align:right;">3979642</td><td style="text-align:right;">2</td><td style="text-align:right;">Caldas</td><td style="text-align:right;">2204800</td><td style="text-align:right;">Sí</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">847222301</span></td><td style="text-align:right;">0.05</td></tr><tr><td style="text-align:right;">2015-12-15</td><td style="text-align:right;">39359318</td><td style="text-align:right;">2304725</td><td style="text-align:right;">1</td><td style="text-align:right;">Itagüi</td><td style="text-align:right;">3428900</td><td style="text-align:right;">Sí</td><td style="text-align:right;">539641705</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">0.25</span></td></tr><tr><td style="text-align:right;">2013-02-06</td><td style="text-align:right;">32321157</td><td style="text-align:right;">39522101</td><td style="text-align:right;">3</td><td style="text-align:right;">La Estrella</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">3099150</span></td><td style="text-align:right;">Sí</td><td style="text-align:right;">169451000</td><td style="text-align:right;">0.22</td></tr></tbody></table></pre>
 
 #### Imputación Hot Deck
-Este método de imputación se realiza para tanto para variables numéricas como categóricas, y **lo que haces es emplear registros que se encuentren en la base de datos, para imputar los valores faltantes**, pero se recomienda emplear cuando hay varios registros, debido a que si son pocos, es posible que no hayan registros lo suficientemente similares, para realizar la imputación de forma adecuada.
+Este método de imputación se realiza para variables numéricas y categóricas, y **lo que haces es emplear registros que se encuentren en la base de datos**, para imputar los valores faltantes. Además, dependiendo del método Hot Deck empleado, **se recomienda emplear la metodología, solo cuando se tenga una gran cantidad de registros**, debido a que si son pocos, es posible que no hayan registros lo suficientemente similares, para realizar la imputación de forma adecuada.
 
-Entre los métodos de imputación Hot Deck, se tiene que el más simple es el **método aleatorio**, el cual consta de elegir un valor de forma uniforme y aleatoriamente de la misma base de datos y reemplaza con éste el valor faltante. Éste método puede ser implementado mediante la función <tt>impute()</tt> de la librería `Hmisc`. Dado que el método de imputación se realiza de forma aleatoria **se recomienda establecer una semilla <tt>set.seed()</tt> antes de aplicar el método**, para poder replicar los resultados.
+Entre los métodos de imputación Hot Deck, el más simple es el **método aleatorio**, el cual consta de elegir un valor de forma uniforme y aleatoriamente de la misma base de datos y reemplaza con éste el valor faltante. Éste método puede ser implementado mediante la función <tt>impute()</tt> de la librería `Hmisc`. Dado que el método de imputación se realiza de forma aleatoria **se recomienda establecer una semilla <tt>set.seed()</tt> antes de aplicar el método**, para poder replicar los resultados.
 
 Entonces, para la realización de esta imputación, pueden emplearse las funciones <tt>mutate_at()</tt>, <tt>mutate()</tt>, <tt>if_else()</tt> de la librería `dplyr`, junto con las funciones, <tt>as.numeric()</tt>,  de la librería base de <tt>R</tt>, y la función <tt>impute()</tt> de la librería `Hmisc`. 
 
@@ -642,9 +652,9 @@ HotImp %<>% mutate(percent_pagado = if_else(deuda_vivienda == "Sí", as.numeric(
 <th style="text-align:right;">id</th><th style="text-align:right;">number_telefono</th><th style="text-align:right;">estrato</th><th style="text-align:right;">municipio</th><th style="text-align:right;">ingresos</th><th style="text-align:right;">deuda_vivienda</th><th style="text-align:right;">costo_vivienda</th><th style="text-align:right;">percent_pagado</th></tr></thead><tbody><tr><td style="text-align:right;">2013-02-15</td><td style="text-align:right;">1035869</td><td style="text-align:right;">3124751231</td><td style="text-align:right;">2</td><td style="text-align:right;">La Estrella</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">3356600</span></td><td style="text-align:right;">No</td><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td></tr><tr><td style="text-align:right;">2013-05-01</td><td style="text-align:right;">1035857</td><td style="text-align:right;">1192334</td><td style="text-align:right;">3</td><td style="text-align:right;">Bello</td><td style="text-align:right;">3114800</td><td style="text-align:right;">Sí</td><td style="text-align:right;">728753400</td><td style="text-align:right;">0.29</td></tr><tr><td style="text-align:right;">2014-03-07</td><td style="text-align:right;">1007306</td><td style="text-align:right;">3434589</td><td style="text-align:right;">3</td><td style="text-align:right;">La Estrella</td><td style="text-align:right;">3083500</td><td style="text-align:right;">Sí</td><td style="text-align:right;">405147000</td><td style="text-align:right;">0.31</td></tr><tr><td style="text-align:right;">2013-01-12</td><td style="text-align:right;">3935563</td><td style="text-align:right;">7005931</td><td style="text-align:right;">4</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">Itagüi</span></td><td style="text-align:right;">630700</td><td style="text-align:right;">Sí</td><td style="text-align:right;">62708000</td><td style="text-align:right;">0.18</td></tr><tr><td style="text-align:right;">2013-02-15</td><td style="text-align:right;">2222985</td><td style="text-align:right;">8660538</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">2</span></td><td style="text-align:right;">Sabaneta</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">3356600</span></td><td style="text-align:right;">Sí</td><td style="text-align:right;">383800000</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">0.31</span></td></tr><tr><td style="text-align:right;">2014-09-23</td><td style="text-align:right;">3488986</td><td style="text-align:right;">5625266</td><td style="text-align:right;">2</td><td style="text-align:right;">Caldas</td><td style="text-align:right;">3356600</td><td style="text-align:right;">Sí</td><td style="text-align:right;">186855000</td><td style="text-align:right;">0.75</td></tr><tr><td style="text-align:right;">2014-06-02</td><td style="text-align:right;">1022146</td><td style="text-align:right;">3979642</td><td style="text-align:right;">2</td><td style="text-align:right;">Caldas</td><td style="text-align:right;">2204800</td><td style="text-align:right;">Sí</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">3838000000</span></td><td style="text-align:right;">0.05</td></tr><tr><td style="text-align:right;">2015-12-15</td><td style="text-align:right;">39359318</td><td style="text-align:right;">2304725</td><td style="text-align:right;">1</td><td style="text-align:right;">Itagüi</td><td style="text-align:right;">3428900</td><td style="text-align:right;">Sí</td><td style="text-align:right;">539641705</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">0.29</span></td></tr><tr><td style="text-align:right;">2013-02-06</td><td style="text-align:right;">32321157</td><td style="text-align:right;">39522101</td><td style="text-align:right;">3</td><td style="text-align:right;">La Estrella</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">3083500</span></td><td style="text-align:right;">Sí</td><td style="text-align:right;">169451000</td><td style="text-align:right;">0.22</td></tr></tbody></table></pre>
 
 #### Imputación kNN
-El método de imputación del `$k$`-ésimo vecino más cercano (`$k$` Nearest Neighbor), también puede ser aplicado a variables numéricas y variables factor, y consta de la aplicación de una función de distancia `$d(i, j)$` que calcula una medida de disimilitud (poca semejanza) entre los registros, y **selecciona como el valor a reemplazar el dato faltante, a aquel valor que que tenga una distancia más pequeña**, es decir, a su vecino más cercano.
+El método de imputación del `$k$`-ésimo vecino más cercano (`$k$` Nearest Neighbor), también puede ser aplicado a variables numéricas y variables factor, y consta de la aplicación de una función de distancia `$d(i, j)$` que calcula una medida de disimilitud (poca semejanza) entre los registros, y **selecciona para reemplazar el dato faltante, a aquel valor que tenga una distancia más pequeña respecto al valor de interés**, es decir, a su vecino más cercano.
 
-Para el cálculo del método de imputación kNN, es posible emplear la función <tt>kNN</tt> librería `VIM`, la cual emplea la función de distancia de @Gower1971[, p. 859], para definir cuál es el vecino más cercano. Dado que dicha función no permite el uso de restricciones, debe realizarse en dos pasos, el primero paso es imputar toda la base de datos, y el segundo paso es recuperar desde la base original aquellas variables que poseen restricciones.
+Para el cálculo del método de imputación kNN, es posible emplear la función <tt>kNN</tt> librería `VIM`, la cual emplea la función de distancia de @Gower1971[, p. 859], para definir cuál es el vecino más cercano. **Dado que dicha función no permite el uso de restricciones*, debe realizarse la imputación en dos pasos, el primero paso es imputar toda la base de datos, y el segundo paso es recuperar desde la base original aquellas variables que poseen restricciones.
 
 Para realizar el procedimiento de imputación de emplean la funciones <tt>mutate()</tt>, <tt>if_else()</tt> de la librería `dplyr` y la función <tt>kNN</tt> de la librería `VIM`.
 

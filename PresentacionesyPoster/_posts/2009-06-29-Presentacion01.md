@@ -21,6 +21,7 @@ knit: (function(inputFile, encoding) {
   output_dir = "../PresentacionesyPoster/_posts/", output_format = "all"  ) })
 bibliography: "../referencias.bib"
 csl: "../apa.csl"
+link-citations: yes
 ---
 
 
@@ -55,7 +56,7 @@ perdida, poco precisa, duplicada, contradictoria, errónea o incompleta,
 ya qué ésta podría influir significativamente en los resultados
 estadísticos y conclusiones.
 
-Los procedimientos de limpieza de la información, se realizarse **para
+Los procedimientos de limpieza de la información, se realizan **para
 mantener los datos, indicadores y reportes lo más precisos, consistentes
 y confiables de como sea posible**, ya que en muchas situaciones, es
 frecuente encontrar que en el proceso de recolección y almacenamiento de
@@ -68,13 +69,14 @@ Es por ello, que realizar un buen pre-procesamiento de la información
 permite **tomar mejores decisiones** y asegurar que los resultados
 obtenidos se asemejen a la realidad del objeto de estudio.
 
-De Jonge & Van Der Loo (2013, p. 7) presentan un esquema que resume los
-**cinco pasos** que deben seguirse para realizar un **análisis
-estadístico adecuado** de la información, y señala en cuales de éstos es
-donde realiza el proceso de limpieza de datos.
+De Jonge & Van Der Loo ([2013](#ref-deJonge2013), p. 7) presentan un
+esquema que resume los **cinco pasos** que deben seguirse para realizar
+un **análisis estadístico adecuado** de la información, y señala en
+cuales de éstos es donde realiza el proceso de limpieza de datos.
 
 <h6 align="center">
-Análisis estadístico en 5 pasos De Jonge & Van Der Loo (2013, p. 7)
+Análisis estadístico en 5 pasos De Jonge & Van Der Loo
+([2013](#ref-deJonge2013), p. 7)
 </h6>
 
 <img src="../PresentacionesyPoster/images/AnalisisEstadistico.jpg" style="width:80.0%" />
@@ -112,15 +114,15 @@ se van a emplear los siguientes paquetes
 ### Operador pipe de continuidad %&gt;%
 
 Este operador es una función de adición, el cual va tomando los
-elementos de izquierda a derecha y los va ejecutando en orden. Suponga a
-un conjunto de datos `$x$`, una función `$f()$`, una función `$g()$` y
-una función `$h()$`.
+elementos de izquierda a derecha y los va ejecutando en orden. Para
+entender el funcionamiento del operador, suponga un conjunto de datos
+`$x$` y las funciones `$f()$`, `$g()$` y `$h()$`.
 
 Suponga además, que se desea realizar la siguiente operación
 `\begin{align*} f(g(h(x))) \end{align*}`
 
 entonces, es posible realizar el siguiente procedimiento, en donde se
-presenta su equivalencia de mediante el operador `$%>%$`.
+presenta su equivalencia mediante el operador `$\%>\%$`.
 
 <h6 align="center">
 Ilustración Operador pipe de continuidad
@@ -139,10 +141,10 @@ Ocultar ejemplo para %&gt;%
 Ejemplo en <tt>R</tt>
 </h3>
 <p>
-Suponga que \(x\) es un vector compuesto por \(c(0.3, 3, 0.9)\), sea una
-función \(f() = exp()\), una función \(g()=abs()\) y una función
-\(h() = log()\). Entonces si se desea calcular la función \(f(g(h(x)))\)
-se tendrá que
+Suponga que \(x\) es un vector compuesto por los números
+\(0.3, 3, 0.9\), sea una función \(f() = exp()\), una función
+\(g()=abs()\) y una función \(h() = log()\). Entonces si se desea
+calcular la función \(f(g(h(x)))\) se tendrá que
 </p>
 <section class="language-r highlighter-rouge">
 <section class="highlight">
@@ -177,10 +179,11 @@ se tendrá que
 
 ### Operador pipe de asignación compuesta %&lt;&gt;%
 
-Este operador funciona de forma similar al pipe de continuidad, pero con
-la diferencia, de que luego de realizar las operaciones éste reemplaza
-la variable `$x$` original, por la secuencia de funciones que se le
-aplican a la misma variable `$x$`.
+Este operador funciona de forma similar al pipe de continuidad
+`$\%>\%$`, pero con la diferencia, de que luego de realizar las
+operaciones deseadas, éste reemplaza la variable `$x$` original, por el
+resultado obtenido mediante la secuencia de funciones que se le aplican
+a la misma variable `$x$`.
 
 <h6 align="center">
 Ilustración operador pipe de asignación compuesta
@@ -199,9 +202,9 @@ Ocultar ejemplo para %&lt;&gt;%
 Ejemplo en <tt>R</tt>
 </h3>
 <p>
-Suponga al igual que en el ejemplo anterior, que \(x\) es un vector
-compuesto por \(c(0.3, 3, 0.9)\), función \(f() = exp()\), una función
-\(g()=abs()\) y una función \(h() = log()\). Entonces si se desea
+Suponga al igual que en el ejemplo anterior, \(x\) es un vector
+compuesto por los números \(0.3, 3, 0.9\), las funciones
+\(f() = exp()\), \(g()=abs()\) y \(h() = log()\). Entonces si se desea
 calcular la función \(f(g(h(x)))\) y almacenarla en \(x\).
 </p>
 <section class="language-r highlighter-rouge">
@@ -240,18 +243,18 @@ Datos sin procesar a Datos técnicamente correctos
 
 Los archivos de datos sin procesar, son generalmente bases de datos que
 pueden **carecer de encabezados**, contener codificación de **caracteres
-especiales** en los nombres, tener **errores en la clasificación** del
-tipos de datos, poseer **ordenes incorrecto** en dentro de sus
-categorías, entre otros.
+especiales** en los nombres o entradas, tener **errores en la
+clasificación** del tipos de datos, poseer **ordenes incorrecto** dentro
+de sus categorías, entre otros.
 
 Estos problemas puede generar inconvenientes al momento de realizar la
-lectura de los datos, manipulación de la información, o de realizarse
-análisis con estos datos, podrían arrojar resultados que no son
-consistentes con la realidad. Por ello se hace necesario usar alguna
-herramienta que permita **corregir dichos problemas**.
+lectura de los datos, manipular la información, o aplicar análisis
+estadísticos, podrían arrojar resultados que no son consistentes con la
+realidad. Por ello se hace necesario usar alguna herramienta que permita
+**corregir dichos problemas**.
 
-Con el fin de presenta los métodos para solucionar dichos problemas,
-suponga la siguiente base de datos, conformada por 10 columnas y 11
+Para presenta procedimientos que permitan solucionar dichos problemas,
+se emplea la siguiente base de datos, conformada por 10 columnas y 11
 filas.
 
 <pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -3rem; margin-top: -3rem;">
@@ -259,7 +262,7 @@ filas.
 <th style="text-align:right;">$ID</th><th style="text-align:right;"># telefono</th><th style="text-align:right;">[Estrato]</th><th style="text-align:right;">MUNICIPIO</th><th style="text-align:right;"></th><th style="text-align:right;">Deuda-vivienda?</th><th style="text-align:right;">Costo_vivienda?</th><th style="text-align:right;">% pagado</th>
 <th style="text-align:right;">muni</th></tr></thead><tbody><tr><td style="text-align:right;">15/02/2013</td><td style="text-align:right;">1035869</td><td style="text-align:right;">3124751231</td><td style="text-align:right;">2</td><td style="text-align:right;">La Estrella</td><td style="text-align:right;">NA</td><td style="text-align:right;">No</td><td style="text-align:right;">NaN</td><td style="text-align:right;">NaN</td><td style="text-align:right;">La Estrella</td></tr><tr><td style="text-align:right;">01/05/2013</td><td style="text-align:right;">1035857</td><td style="text-align:right;">1192334</td><td style="text-align:right;">3</td><td style="text-align:right;">Bello</td><td style="text-align:right;">3114800</td><td style="text-align:right;">Sí</td><td style="text-align:right;">728753400</td><td style="text-align:right;">0.29</td><td style="text-align:right;">Bello</td></tr><tr><td style="text-align:right;">7 Mar 14</td><td style="text-align:right;">1007306</td><td style="text-align:right;">3434589</td><td style="text-align:right;">3</td><td style="text-align:right;">La Estrella</td><td style="text-align:right;">3083500</td><td style="text-align:right;">Sí</td><td style="text-align:right;">405147000</td><td style="text-align:right;">0.31</td><td style="text-align:right;">La Estrella</td></tr><tr><td style="text-align:right;">encuestado <br>el 12 01 13</td><td style="text-align:right;">3935563</td><td style="text-align:right;">7005931</td><td style="text-align:right;">4</td><td style="text-align:right;">Hola! :D</td><td style="text-align:right;">630700</td><td style="text-align:right;">NA</td><td style="text-align:right;">-62708000</td><td style="text-align:right;">0.18</td><td style="text-align:right;">Hola! :D</td></tr><tr><td style="text-align:right;">01 05 2013</td><td style="text-align:right;">1035857</td><td style="text-align:right;">1192334</td><td style="text-align:right;">3</td><td style="text-align:right;">Bello</td><td style="text-align:right;">3114800</td><td style="text-align:right;">Sí</td><td style="text-align:right;">728753400</td><td style="text-align:right;">0.29</td><td style="text-align:right;">Bello</td></tr><tr><td style="text-align:right;">15 02 2013</td><td style="text-align:right;">2222985</td><td style="text-align:right;">8660538</td><td style="text-align:right;">10</td><td style="text-align:right;">Sabaneta</td><td style="text-align:right;">Na</td><td style="text-align:right;">Si</td><td style="text-align:right;">3.838e+09</td><td style="text-align:right;">NA</td><td style="text-align:right;">Sabaneta</td></tr><tr><td style="text-align:right;">23/09/2014</td><td style="text-align:right;">3488986</td><td style="text-align:right;">5625266</td><td style="text-align:right;">2</td><td style="text-align:right;">Caldas</td><td style="text-align:right;">3356600</td><td style="text-align:right;">Sí</td><td style="text-align:right;">186855000</td><td style="text-align:right;">0.75</td><td style="text-align:right;">Caldas</td></tr><tr><td style="text-align:right;">2/06/2014</td><td style="text-align:right;">1022146</td><td style="text-align:right;">3979642</td><td style="text-align:right;">2</td><td style="text-align:right;">Caldas</td><td style="text-align:right;">2204800</td><td style="text-align:right;">No responde</td><td style="text-align:right;">NA</td><td style="text-align:right;">0.05</td><td style="text-align:right;">Caldas</td></tr><tr><td style="text-align:right;">encuestado <br>el 15/12/15</td><td style="text-align:right;">39359318</td><td style="text-align:right;">2304725</td><td style="text-align:right;">1</td><td style="text-align:right;">Itagüi</td><td style="text-align:right;">3428900</td><td style="text-align:right;">Sí</td><td style="text-align:right;">539641705</td><td style="text-align:right;"></td><td style="text-align:right;">Itagüi</td></tr><tr><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td></tr><tr><td style="text-align:right;">6 Feb 13</td><td style="text-align:right;">32321157</td><td style="text-align:right;">39522101</td><td style="text-align:right;">3</td><td style="text-align:right;">La Estrella</td><td style="text-align:right;"></td><td style="text-align:right;">Sí</td><td style="text-align:right;">169451000</td><td style="text-align:right;">0.22</td><td style="text-align:right;">La Estrella</td></tr></tbody></table></pre>
 
-Las variables anteriores son:
+Las variables contenidas en la base de datos anterior son:
 
 -   **<tt>Fecha</tt>:** Hace referencia a la fecha en la cual se
     recolectó la información.
@@ -281,7 +284,7 @@ Las variables anteriores son:
 -   **<tt>muni</tt>:** Variable duplicada, hace referencia al municipio
     en donde se encuentra radicada la persona.
 
-Los datos anteriores, pueden ser descargados desde el siguiente
+Los base de datos presentada, pueden ser descargada desde el siguiente
 [Link](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/EjemploLimpieza.xlsx){:target="\_blank"}.
 
 ### Lectura de datos y pre-visualización de encabezados
@@ -355,7 +358,7 @@ uso de espacios, guiones “-”, y abuso de letras en mayúsculas.
 ### Establecer encabezados faltantes
 
 Para corregir los problemas encontrados en los encabezados, iniciamos
-con el **establecer o renombrar** aquellas variables que poseen nombres
+**estableciendo o renombrando** aquellas variables que poseen nombres
 faltantes, y para ello empleamos la función <tt>rename</tt> de la
 librería <code>dplyr</code>.
 
@@ -371,16 +374,16 @@ datos %>% names()
 
 ### Eliminar caracteres especiales
 
-Para **corregir aquellos caracteres especiales, espacios, guiones y
-letras mayúsculas**, se emplea la función <tt>clean\_names()</tt> de la
-librería <code>janitor</code>, la cual permite:
+Para **corregir los caracteres especiales, espacios, guiones y letras
+mayúsculas**, se emplea la función <tt>clean\_names()</tt> de la
+librería <code>janitor</code>, la cual entre sus funciones permite:
 
 -   Analizar las mayúsculas y minúsculas y separadores a un formato
     consistente.
 -   Maneja caracteres y espacios especiales.
 -   Agrega números a nombres duplicados.
 -   Convierte “%” en “percent” y “\#” en “number” para conservar el
-    significado.
+    significado de la variable.
 
 <!-- -->
 
@@ -408,8 +411,8 @@ indebida, por ejemplo, realizar un análisis numérico a una variable que
 realmente es tipo factor, como es al número de teléfono.
 
 Para observa las clases que poseen los datos, podemos emplear la función
-<tt>str()</tt>, o la función <tt>glimpse()</tt> de la librería
-<code>dplyr</code>.
+<tt>str()</tt> de la base de <tt>R</tt>, o la función <tt>glimpse()</tt>
+de la librería <code>dplyr</code>.
 
 ``` r
 datos %>% glimpse()  # muestra las clases que poseen los datos
@@ -430,13 +433,13 @@ datos %>% glimpse()  # muestra las clases que poseen los datos
 
 De la salida anterior, vemos que solo las variables <tt>municipio</tt>,
 <tt>deuda\_de\_vivienda</tt> y <tt>muni</tt> poseen una categoría
-adecuada, aunque esta variable también podría ser recodificada a tipo
+adecuada, aunque estas variables también podrían ser recodificada a tipo
 factor.
 
 La variable <tt>fecha</tt> aparece como tipo carácter (character) cuando
 debería ser tipo fecha (date). Por su parte, las variables <tt>id</tt>,
-number\_de\_telefono</tt> y <tt>estrato</tt> es clasificada como tipo
-numérica (double) pero éstas representan una cualidad, y por tanto,
+<tt>number\_de\_telefono</tt> y <tt>estrato</tt> es clasificada como
+tipo numérica (double) pero éstas representan una cualidad, y por tanto,
 dichas variables deberían ser de tipo carácter (character).
 
 Similarmente, las variables <tt>ingresos</tt>, <tt>costo\_vivienda</tt>
@@ -463,15 +466,18 @@ estas funciones son
     (character).
 -   **<tt>as.ordered()</tt>:** Convierte una variable a tipo factor
     asumiendo un orden o jerarquía entre los niveles.
+-   **<tt>as.Date()</tt>:** Convierte una variable a tipo fecha.
 
 Cada una de estas funciones toma un objeto <tt>R</tt> e intenta
 convertirlo a la clase especificada detrás del “as.”, en donde, aquellos
 valores que no se pueden convertir al tipo especificado, <tt>R</tt> los
-convertirá por defecto a un
+convertirá por defecto a un valor
 <code style="color: #ff628c!important">NA</code>.
 
 Para corregir la clase de las variables, usaremos la función
-<tt>mutate()</tt> de la librería <tt>dplyr</tt>, de la forma
+<tt>mutate()</tt> de la librería <tt>dplyr</tt>, junto a las funciones
+<tt>as.factor()</tt> y <tt>as.numeric()</tt> de la base de <tt>R</tt>
+para realizar la conversión de las variables.
 
 ``` r
 ### Transformar variables a tipo factor
@@ -511,22 +517,29 @@ datos %<>% mutate_at(vars(ingresos, costo_vivienda, percent_pagado), as.numeric)
     $ percent_pagado  <dbl> NaN, 0.29, 0.31, 0.18, 0.29, NA, 0.75, 0.05, N...
     $ muni            <fct> La Estrella, Bello, La Estrella, Hola! :D, Bel...
 
-Ahora, para **transformar la variable ‘fecha’ a tipo fecha (date)**, se
-pueden emplear las funciones <tt>dmy()</tt> (día-mes-año),
-<tt>mdy()</tt> (mes-día-año), <tt>myd()</tt> (mes-año-día),
-<tt>ymd()</tt> (año-mes-día), <tt>ydm()</tt> (año-día-mes) o
-<tt>dym()</tt> (día-año-mes) de la librería <code>lubridate</code>,
-dependiendo del orden de como se encuentre registrada la fecha.
+Ahora, para **transformar la variable ‘fecha’ a tipo fecha (date)**, no
+usaremos la función <tt>as.Date()</tt> de la base de <tt>R</tt> si no
+que usaremos la librería `lubridate`, dependiendo de la estructura de
+como se encuentren registradas las fechas.
 
-La ventaja que tiene usar estas variable sobre la función base
-**<tt>as.Date</tt>** del <tt>R</tt>, pues dichas funciones transforma
-las fechas almacenadas en vectores numéricos y de caracteres en objetos
-tipo (date), aunque éstas contengan caracteres adicionales a las de
-fecha.
+-   **<tt>dmy():</tt>** día-mes-año
+-   **<tt>mdy():</tt>** mes-día-año
+-   **<tt>myd():</tt>** mes-año-día
+-   **<tt>ymd():</tt>** año-mes-día
+-   **<tt>ydm():</tt>** año-día-mes
+-   **<tt>dym():</tt>** día-año-mes
 
-Dado que al observar las entradas que hay en la variable fecha son del
-tipo (día-mes-año), se emplea la función <tt>dmy()</tt> de la librería
-<code>lubridate</code>.
+La ventaja que tiene usar las funciones de la librería `lubridate`
+respecto a la función <tt>as.Date()</tt>, radica en que dichas funciones
+transforma las fechas almacenadas en vectores numéricos y de caracteres
+en objetos tipo (date), sin importar que éstas contengan caracteres
+adicionales a las de fecha planteada.
+
+Al analizar las entradas que hay en la variable <tt>fecha</tt>,
+evidenciamos que éstas poseen la estructura día-mes-año, por tanto se
+debe emplear la función <tt>dmy()</tt> de la librería `lubridate` para
+realizar la transformación. Además empleamos la función
+<tt>mutate\_at</tt> de la librería `dplyr`.
 
 ``` r
 ### Transformar variables a tipo fecha (date)
@@ -548,8 +561,8 @@ datos %<>% mutate_at(vars(fecha), dmy) %>% glimpse()
 
 De la salida anterior, se aprecia que ya todas las variables se
 encuentran debidamente codificadas, logrando así, junto con los
-procedimientos anteriores **obtener un conjunto de datos es técnicamente
-correcto**. Dichos datos quedan estructurados de la forma
+procedimientos anteriores **obtener un conjunto de datos técnicamente
+correcto**.
 
 <pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -3rem; margin-top: -3rem;">
 <table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto; font-size: 90%;"><thead><tr><th style="text-align:left;">fecha</th>
@@ -560,10 +573,10 @@ Datos técnicamente correctos a datos consistentes
 
 Los datos consistentes **son la etapa en la que el conjunto de
 observaciones están listos** para la realización de inferencia
-estadística. Éstos datos son los que asumen como punto de partida en la
-mayoría de las teorías estadísticas, aunque **en la práctica no siempre
-se emplean éstos**, si no que usan datos sin procesar o técnicamente
-correctos.
+estadística. Éstos datos son los que se asumen como punto de partida en
+la mayoría de las teorías estadísticas, aunque **en la práctica no
+siempre se emplean éstos**, si no que usan datos sin procesar o
+técnicamente correctos.
 
 Aunque es posible emplear datos sin procesar o técnicamente correcto
 para realizar inferencia estadística, el evadir el paso de llevar los
@@ -599,8 +612,8 @@ si se encuentran casillas vacías, valores especiales, tales como
 
 Para detectar aquellas filas que se encuentren faltantes dentro de una
 base de datos, podemos usar una combinación entre las funciones
-<tt>apply()</tt>, <tt>which()</tt>, tal como se hizo en la salida
-anterior, adicionando las funciones <tt>is.na()</tt> e
+<tt>apply()</tt>, <tt>which()</tt>, tal como se muestra en la siguiente
+linea de código, adicionando las funciones <tt>is.na()</tt> e
 <tt>is.null()</tt>, dentro de la función <tt>which()</tt>.
 
 ``` r
@@ -644,10 +657,10 @@ faltantes
 
 De la salida anterior se observa que en todas las variables aparece con
 valores faltantes la fila número `$10$`. Adicionalmente, se aprecian
-para las variables <tt>municipio</tt>, <tt>ingresos</tt>,
+valores `$NA$` para las variables <tt>municipio</tt>, <tt>ingresos</tt>,
 <tt>deuda\_vivienda</tt>, <tt>costo\_vivienda</tt>,
-<tt>percent\_pagado</tt> y <tt>muni</tt>, celdas similares son
-encontradas en el proceso de verificación de datos.
+<tt>percent\_pagado</tt> y <tt>muni</tt>, en donde celdas similares se
+encontrarán en el proceso de verificación de datos.
 
 <pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -3rem; margin-top: -3rem;">
 <table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto; font-size: 90%;"><thead><tr><th style="text-align:left;">fecha</th>
@@ -685,8 +698,10 @@ restricciones.
 
 Para realizar tal proceso de verificación se debe realizar la
 localización de aquellos valores que presenten inconsistencias, en
-donde, pueden emplearse las funciones <tt>editset()</tt> y
-<tt>violatedEdits()</tt> de la librería <code>editrules</code>
+donde, **inicialmente deben establecerse las restricciones** que posee
+la base de datos, y para ellos pueden emplearse las funciones
+<tt>editset()</tt> y <tt>violatedEdits()</tt> de la librería
+<code>editrules</code>
 
 ``` r
 ## Creamos conjunto de condiciones que deben cumplirse condiciones para
@@ -753,8 +768,10 @@ donde se aprecia que la condición <tt>dat1</tt>, es la que tiene una
 mayor porcentaje de errores, con un poco más del `$35\%$` de las
 violaciones de la base de datos. Cabe anotar que en el caso de variables
 categóricas, **los <code style="color: #ff628c!important">NA</code> son
-contados como una violación**. En el gráfico inferior muestra **cuantas
-filas contienen <code style="color: #ff628c!important">NA</code>,
+contados como una violación** debido a que éstas son tomadas como una
+categoría y no como un valor faltante. En el gráfico inferior muestra
+**cuantas filas contienen
+<code style="color: #ff628c!important">NA</code>,
 <code style="color: #ff628c!important">NaN</code> o violaciones a las
 condiciones establecidas**, y señala cuantas filas no poseen ningún tipo
 de violación.
@@ -766,7 +783,7 @@ funciones <tt>apply()</tt> y <tt>which()</tt>, de la forma
 
 ``` r
 # Localiza y muestra por variable las violaciones
-loc <- localizeErrors(c(CondC, CondN), datos)$adapt
+loc <- localizeErrors(c(CondC, CondN), datos) %$% adapt
 apply(X = loc, MARGIN = 2, FUN = function(x) which(x == TRUE))
 ```
 
@@ -809,7 +826,7 @@ apply(X = loc, MARGIN = 2, FUN = function(x) which(x == TRUE))
 
 De la salida anterior, observamos que hay violaciones en la entrada
 `$5$` y `$10$` de la variable <tt>estrato</tt>, en las entradas `$4, 9$`
-y `$10$` de la variable <tt>municipio</tt>, etc, etc, etc. Es de anotar
+y `$10$` de la variable <tt>municipio</tt>, etc, etc, etc. Cabe anotar
 que todos los valores faltantes también son detectados por el proceso de
 verificación de datos.
 
@@ -833,13 +850,13 @@ ajuste al conjunto de observaciones.
 En el caso en el cual no se conoce las distribuciones de probabilidad,
 pero se observa que **los datos son más o menos unimodales y
 distribuidos simétricamente**, puede emplearse el método de caja y
-bigotes de Tukey, McGill, & Larsen (1978) para detección de datos
-atípicos.
+bigotes de Tukey, McGill, & Larsen ([1978](#ref-Tukey1978)) para
+detección de datos atípicos.
 
-Éste método emplea estadísticos de orden no paramétricos, para calcular
-un gráfico de caja y bigotes, con el fin de visualizar los datos
-atípicos que se encuentren por encima y por debajo de `$1.5$` veces el
-rango intercuartílico.
+En este método se emplean estadísticos de orden no paramétricos, para
+calcular un gráfico de caja y bigotes, con el fin de visualizar los
+datos atípicos que se encuentren por encima y por debajo de `$1.5$`
+veces el rango intercuartílico.
 
 <h6 align="center">
 Gráfico de caja y bigotes
@@ -860,6 +877,9 @@ Ocultar función Outliers
 <h3 data-toc-skip>
 Creación de función Outliers
 </h3>
+<p>
+Creo la función ya que no encontré una función que lo hiciera :D
+</p>
 <section class="language-r highlighter-rouge">
 <section class="highlight">
 <pre class="highlight"><code><span class="c1"># Función para extraer valores atípicos de variables numéricas</span><span class="w">
@@ -903,7 +923,7 @@ datos %>% Outliers(row = FALSE)
     $percent_pagado
     [1] 0.75 0.05
 
-de la salida anterior, se aprecia que la observación atípica de la
+De la salida anterior, se aprecia que la observación atípica de la
 variable <tt>ingresos</tt> corresponde a un salario de `$630700$` pesos,
 mientras que, para la variable <tt>costo\_vivienda</tt> corresponde a un
 costo de vivienda de `$3838$` millones de pesos, y para la variable
@@ -919,10 +939,10 @@ pues se cree que se agregó un `$0$` de más.
 
 #### Corrección de datos
 
-La métodos de corrección tienen por objetivo tratar revisar aquellas
-observaciones en las que se encontraron inconsistencias, removiendo
-filas o columnas vacías, eliminando filas o columnas duplicadas,
-corrección deductiva e imputando datos.
+La métodos de corrección tienen por objetivo revisar en lo posible,
+aquellas observaciones en las que se encontraron inconsistencias,
+removiendo filas o columnas vacías, eliminando filas o columnas
+duplicadas, corrección deductiva e imputando datos.
 
 #### Remover filas o columnas vacías
 
@@ -935,7 +955,8 @@ pueden emplearse las funciones <tt>na\_if()</tt> o
 respectivamente.
 
 <tt>na\_if()</tt> **se emplea cuando no existan variables de tipo
-<tt>date</tt>** en la base de datos, mientras que,
+<tt>date</tt>** en la base de datos, ya que ésta genera errores cuando
+trata de realizar la transformación, mientras que,
 <tt>convert\_to\_NA()</tt> **se emplea cuando existan variables tipo
 <tt>date</tt>** en la base de datos.
 
@@ -958,7 +979,7 @@ Finalmente, para **eliminar aquellas filas o columnas poseen solo
 valores <code style="color: #ff628c!important">NA</code>** dentro de una
 base de datos, es posible usar la función <tt>remove\_empty()</tt> de la
 librería `janitor`, la cual verifica todas las filas y todas las
-columnas, para observar en cuales de ellas contienen solo valores
+columnas, para observar en cuales de ellas se presentan solo valores
 <code style="color: #ff628c!important">NA</code>.
 
 ``` r
@@ -995,9 +1016,9 @@ datos %<>% select_if(!duplicated(as.list(.)))
 
 ### Corrección deductiva
 
-Esta fase es la más complicada del todo del procedimiento, debido a que
-es necesario **revisar detalladamente** la información obtenida en las
-fases de [Verificación de
+Esta fase es la más complicada de todo del procedimiento de limpieza,
+debido a que es necesario **revisar detalladamente junto a un experto en
+el tema**, la información obtenida en las fases de [Verificación de
 datos](https://jiperezga.github.io/Presentacion01#verificación-de-datos){:target="\_blank“}
 y [Identificación de
 Outliers](https://jiperezga.github.io/Presentacion01#identificación-de-outlier){:target=”\_blank"},
@@ -1046,37 +1067,37 @@ datos %<>% mutate(deuda_vivienda = if_else(costo_vivienda > 0 | percent_pagado >
 
 ### Imputación de datos
 
-La imputación es un procedimiento que \*\*consta en estimar o derivar
-valores para campos que poseen datos faltantes\*, en donde, dichas
+La imputación es un procedimiento que **consta en estimar o derivar
+valores para campos que poseen datos faltantes**, en donde, dichas
 acciones tendrán una fuerte influencia en los resultados de un análisis
-estadístico. Tales procedimientos poseen una gran cantidad de
-metodologías diferentes, las cuales se escapan de esta presentación, y
-por tanto nos centraremos en unos cuantos.
+estadístico. Tal procedimient poseen una gran cantidad de metodologías
+diferentes, las cuales se escapan de esta presentación, y por tanto nos
+centraremos en unos cuantos.
 
-De Jonge & Van Der Loo (2013, p. 46) presentan una tabla en donde
-presenta las diferentes librerías de <tt>R</tt>, que ofrecen alguna
-función que permita la realización de imputaciones, enumera éstas con
-una serie de métodos de imputación basados en modelos populares, y
-señalan que en **De Waal, Pannekoek, & Scholtus (2011, cap. 7) se
-realiza una revisión general de varios métodos de imputación**.
+De Jonge & Van Der Loo ([2013](#ref-deJonge2013), p. 46) presentan una
+tabla en donde presenta las diferentes librerías de <tt>R</tt>, que
+ofrecen alguna función que permita la realización de imputaciones,
+enumeran éstas con una serie de métodos de imputación basados en modelos
+populares. **De Waal, Pannekoek, & Scholtus ([2011](#ref-deWaal2011),
+cap. 7) realizan una revisión general de varios métodos de imputación**.
 
 <h6 align="center">
 Librerías que permites métodos de imputación en <tt>R</tt> De Jonge &
-Van Der Loo (2013, p. 46)
+Van Der Loo ([2013](#ref-deJonge2013), p. 46)
 </h6>
 
 <img src="../PresentacionesyPoster/images/MetodosImputacion.jpg" style="width:80.0%" />
 
-Para ilustrar lo métodos de imputación, se presentan el método de
-imputación numérica, método de imputación Hot deck, y método de
-imputación kNN.
+Para ilustrar los diferentes métodos de imputación, se presentan el
+método de imputación numérica, método de imputación Hot deck, y método
+de imputación kNN.
 
 #### Imputación numérica
 
-Como su nombre lo indica, este método de imputación se realiza para
+Como su nombre lo indica, este método de imputación se realiza solo para
 variables numéricas y **lo que haces es emplear medidas de tendencias
-central, tal como la media, mediana, media recortada o moda, para
-imputar los valores faltantes**. Dichas medidas de tendencia central,
+central**, tal como la media, mediana, media recortada o moda, para
+imputar los valores faltantes. Dichas medidas de tendencia central,
 pueden consultarse en el siguiente link [Medidas de tendencia
 central](../../EstadisticaI/EstIClase01.html#medidas-estadísticas){:target="\_blank"}.
 
@@ -1089,7 +1110,7 @@ tiene, <tt>mean()</tt> para la media o media recortada,
 <tt>median()</tt> para la mediana, <tt>Moda()</tt> (ver función en
 [Medidas de tendencia
 central](../../EstadisticaI/EstIClase01.html#medidas-estadísticas){:target="\_blank"}.)
-para moda.
+para la moda.
 
 ``` r
 # Se crea nueva base de datos para mostrar diferentes métodos de imputación
@@ -1114,18 +1135,20 @@ NumImp %<>% mutate(percent_pagado = if_else(is.na(percent_pagado) & deuda_vivien
 
 #### Imputación Hot Deck
 
-Este método de imputación se realiza para tanto para variables numéricas
-como categóricas, y **lo que haces es emplear registros que se
-encuentren en la base de datos, para imputar los valores faltantes**,
-pero se recomienda emplear cuando hay varios registros, debido a que si
-son pocos, es posible que no hayan registros lo suficientemente
-similares, para realizar la imputación de forma adecuada.
+Este método de imputación se realiza para variables numéricas y
+categóricas, y **lo que haces es emplear registros que se encuentren en
+la base de datos**, para imputar los valores faltantes. Además,
+dependiendo del método Hot Deck empleado, **se recomienda emplear la
+metodología, solo cuando se tenga una gran cantidad de registros**,
+debido a que si son pocos, es posible que no hayan registros lo
+suficientemente similares, para realizar la imputación de forma
+adecuada.
 
-Entre los métodos de imputación Hot Deck, se tiene que el más simple es
-el **método aleatorio**, el cual consta de elegir un valor de forma
-uniforme y aleatoriamente de la misma base de datos y reemplaza con éste
-el valor faltante. Éste método puede ser implementado mediante la
-función <tt>impute()</tt> de la librería `Hmisc`. Dado que el método de
+Entre los métodos de imputación Hot Deck, el más simple es el **método
+aleatorio**, el cual consta de elegir un valor de forma uniforme y
+aleatoriamente de la misma base de datos y reemplaza con éste el valor
+faltante. Éste método puede ser implementado mediante la función
+<tt>impute()</tt> de la librería `Hmisc`. Dado que el método de
 imputación se realiza de forma aleatoria **se recomienda establecer una
 semilla <tt>set.seed()</tt> antes de aplicar el método**, para poder
 replicar los resultados.
@@ -1167,17 +1190,18 @@ El método de imputación del `$k$`-ésimo vecino más cercano (`$k$`
 Nearest Neighbor), también puede ser aplicado a variables numéricas y
 variables factor, y consta de la aplicación de una función de distancia
 `$d(i, j)$` que calcula una medida de disimilitud (poca semejanza) entre
-los registros, y **selecciona como el valor a reemplazar el dato
-faltante, a aquel valor que que tenga una distancia más pequeña**, es
-decir, a su vecino más cercano.
+los registros, y **selecciona para reemplazar el dato faltante, a aquel
+valor que tenga una distancia más pequeña respecto al valor de
+interés**, es decir, a su vecino más cercano.
 
 Para el cálculo del método de imputación kNN, es posible emplear la
 función <tt>kNN</tt> librería `VIM`, la cual emplea la función de
-distancia de Gower (1971, p. 859), para definir cuál es el vecino más
-cercano. Dado que dicha función no permite el uso de restricciones, debe
-realizarse en dos pasos, el primero paso es imputar toda la base de
-datos, y el segundo paso es recuperar desde la base original aquellas
-variables que poseen restricciones.
+distancia de Gower ([1971](#ref-Gower1971), p. 859), para definir cuál
+es el vecino más cercano. \*\*Dado que dicha función no permite el uso
+de restricciones\*, debe realizarse la imputación en dos pasos, el
+primero paso es imputar toda la base de datos, y el segundo paso es
+recuperar desde la base original aquellas variables que poseen
+restricciones.
 
 Para realizar el procedimiento de imputación de emplean la funciones
 <tt>mutate()</tt>, <tt>if\_else()</tt> de la librería `dplyr` y la
