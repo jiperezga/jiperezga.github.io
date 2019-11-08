@@ -80,14 +80,14 @@ Análisis estadístico en 5 pasos De Jonge & Van Der Loo (2013, p. 7)
 <img src="../PresentacionesyPoster/images/AnalisisEstadistico.jpg" style="width:80.0%" />
 
 <button id="Show1" class="btn btn-secondary">
-Ver lista de paquetes de <tt>R</tt>
+Ver lista de librerías de <tt>R</tt>
 </button>
 <button id="Hide1" class="btn btn-info">
-Ocultar lista de paquetes de <tt>R</tt>
+Ocultar lista de librerías de <tt>R</tt>
 </button>
 <main id="botoncito1">
 <h3 data-toc-skip>
-Lista de paquetes
+Lista de librerías
 </h3>
 <p>
 Con el fin de realizar el proceso de la limpieza de datos en <tt>R</tt>,
@@ -284,7 +284,7 @@ Las variables anteriores son:
 Los datos anteriores, pueden ser descargados desde el siguiente
 [Link](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/EjemploLimpieza.xlsx){:target="\_blank"}.
 
-### Encabezado
+### Lectura de datos y pre-visualización de encabezados
 
 Para realizar el proceso de tratamiento de encabezados, <tt>R</tt>
 **posee diferentes librerías y funciones que permiten corregir estos
@@ -917,7 +917,7 @@ pues se cree que se agregó un `$0$` de más.
 <table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto; font-size: 90%;"><thead><tr><th style="text-align:left;">fecha</th>
 <th style="text-align:right;">id</th><th style="text-align:right;">number_telefono</th><th style="text-align:right;">estrato</th><th style="text-align:right;">municipio</th><th style="text-align:right;">ingresos</th><th style="text-align:right;">deuda_vivienda</th><th style="text-align:right;">costo_vivienda</th><th style="text-align:right;">percent_pagado</th><th style="text-align:right;">muni</th></tr></thead><tbody><tr><td style="text-align:right;">2013-02-15</td><td style="text-align:right;">1035869</td><td style="text-align:right;">3124751231</td><td style="text-align:right;">2</td><td style="text-align:right;">La Estrella</td><td style="text-align:right;">NA</td><td style="text-align:right;">No</td><td style="text-align:right;">NaN</td><td style="text-align:right;">NaN</td><td style="text-align:right;">La Estrella</td></tr><tr><td style="text-align:right;">2013-05-01</td><td style="text-align:right;">1035857</td><td style="text-align:right;">1192334</td><td style="text-align:right;">3</td><td style="text-align:right;">Bello</td><td style="text-align:right;">3114800</td><td style="text-align:right;">Sí</td><td style="text-align:right;">728753400</td><td style="text-align:right;">0.29</td><td style="text-align:right;">Bello</td></tr><tr><td style="text-align:right;">2014-03-07</td><td style="text-align:right;">1007306</td><td style="text-align:right;">3434589</td><td style="text-align:right;">3</td><td style="text-align:right;">La Estrella</td><td style="text-align:right;">3083500</td><td style="text-align:right;">Sí</td><td style="text-align:right;">405147000</td><td style="text-align:right;">0.31</td><td style="text-align:right;">La Estrella</td></tr><tr><td style="text-align:right;">2013-01-12</td><td style="text-align:right;">3935563</td><td style="text-align:right;">7005931</td><td style="text-align:right;">4</td><td style="text-align:right;">Hola! :D</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">630700</span></td><td style="text-align:right;">NA</td><td style="text-align:right;">-62708000</td><td style="text-align:right;">0.18</td><td style="text-align:right;">Hola! :D</td></tr><tr><td style="text-align:right;">2013-05-01</td><td style="text-align:right;">1035857</td><td style="text-align:right;">1192334</td><td style="text-align:right;">3</td><td style="text-align:right;">Bello</td><td style="text-align:right;">3114800</td><td style="text-align:right;">Sí</td><td style="text-align:right;">728753400</td><td style="text-align:right;">0.29</td><td style="text-align:right;">Bello</td></tr><tr><td style="text-align:right;">2013-02-15</td><td style="text-align:right;">2222985</td><td style="text-align:right;">8660538</td><td style="text-align:right;">10</td><td style="text-align:right;">Sabaneta</td><td style="text-align:right;">NA</td><td style="text-align:right;">Si</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">3.838e+09</span></td><td style="text-align:right;">NA</td><td style="text-align:right;">Sabaneta</td></tr><tr><td style="text-align:right;">2014-09-23</td><td style="text-align:right;">3488986</td><td style="text-align:right;">5625266</td><td style="text-align:right;">2</td><td style="text-align:right;">Caldas</td><td style="text-align:right;">3356600</td><td style="text-align:right;">Sí</td><td style="text-align:right;">186855000</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">0.75</span></td><td style="text-align:right;">Caldas</td></tr><tr><td style="text-align:right;">2014-06-02</td><td style="text-align:right;">1022146</td><td style="text-align:right;">3979642</td><td style="text-align:right;">2</td><td style="text-align:right;">Caldas</td><td style="text-align:right;">2204800</td><td style="text-align:right;">No responde</td><td style="text-align:right;">NA</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">0.05</span></td><td style="text-align:right;">Caldas</td></tr><tr><td style="text-align:right;">2015-12-15</td><td style="text-align:right;">39359318</td><td style="text-align:right;">2304725</td><td style="text-align:right;">1</td><td style="text-align:right;">Itagüi</td><td style="text-align:right;">3428900</td><td style="text-align:right;">Sí</td><td style="text-align:right;">539641705</td><td style="text-align:right;">NA</td><td style="text-align:right;">Itagüi</td></tr><tr><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td></tr><tr><td style="text-align:right;">2013-02-06</td><td style="text-align:right;">32321157</td><td style="text-align:right;">39522101</td><td style="text-align:right;">3</td><td style="text-align:right;">La Estrella</td><td style="text-align:right;">NA</td><td style="text-align:right;">Sí</td><td style="text-align:right;">169451000</td><td style="text-align:right;">0.22</td><td style="text-align:right;">La Estrella</td></tr></tbody></table></pre>
 
-### Corrección de datos
+#### Corrección de datos
 
 La métodos de corrección tienen por objetivo tratar revisar aquellas
 observaciones en las que se encontraron inconsistencias, removiendo
@@ -993,7 +993,7 @@ datos %<>% select_if(!duplicated(as.list(.)))
 <table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto; font-size: 90%;"><thead><tr><th style="text-align:left;">fecha</th>
 <th style="text-align:right;">id</th><th style="text-align:right;">number_telefono</th><th style="text-align:right;">estrato</th><th style="text-align:right;">municipio</th><th style="text-align:right;">ingresos</th><th style="text-align:right;">deuda_vivienda</th><th style="text-align:right;">costo_vivienda</th><th style="text-align:right;">percent_pagado</th></tr></thead><tbody><tr><td style="text-align:right;">2013-02-15</td><td style="text-align:right;">1035869</td><td style="text-align:right;">3124751231</td><td style="text-align:right;">2</td><td style="text-align:right;">La Estrella</td><td style="text-align:right;">NA</td><td style="text-align:right;">No</td><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td></tr><tr><td style="text-align:right;">2013-05-01</td><td style="text-align:right;">1035857</td><td style="text-align:right;">1192334</td><td style="text-align:right;">3</td><td style="text-align:right;">Bello</td><td style="text-align:right;">3114800</td><td style="text-align:right;">Sí</td><td style="text-align:right;">728753400</td><td style="text-align:right;">0.29</td></tr><tr><td style="text-align:right;">2014-03-07</td><td style="text-align:right;">1007306</td><td style="text-align:right;">3434589</td><td style="text-align:right;">3</td><td style="text-align:right;">La Estrella</td><td style="text-align:right;">3083500</td><td style="text-align:right;">Sí</td><td style="text-align:right;">405147000</td><td style="text-align:right;">0.31</td></tr><tr><td style="text-align:right;">2013-01-12</td><td style="text-align:right;">3935563</td><td style="text-align:right;">7005931</td><td style="text-align:right;">4</td><td style="text-align:right;">Hola! :D</td><td style="text-align:right;">630700</td><td style="text-align:right;">NA</td><td style="text-align:right;">-62708000</td><td style="text-align:right;">0.18</td></tr><tr><td style="text-align:right;">2013-02-15</td><td style="text-align:right;">2222985</td><td style="text-align:right;">8660538</td><td style="text-align:right;">10</td><td style="text-align:right;">Sabaneta</td><td style="text-align:right;">NA</td><td style="text-align:right;">Si</td><td style="text-align:right;">3.838e+09</td><td style="text-align:right;">NA</td></tr><tr><td style="text-align:right;">2014-09-23</td><td style="text-align:right;">3488986</td><td style="text-align:right;">5625266</td><td style="text-align:right;">2</td><td style="text-align:right;">Caldas</td><td style="text-align:right;">3356600</td><td style="text-align:right;">Sí</td><td style="text-align:right;">186855000</td><td style="text-align:right;">0.75</td></tr><tr><td style="text-align:right;">2014-06-02</td><td style="text-align:right;">1022146</td><td style="text-align:right;">3979642</td><td style="text-align:right;">2</td><td style="text-align:right;">Caldas</td><td style="text-align:right;">2204800</td><td style="text-align:right;">No responde</td><td style="text-align:right;">NA</td><td style="text-align:right;">0.05</td></tr><tr><td style="text-align:right;">2015-12-15</td><td style="text-align:right;">39359318</td><td style="text-align:right;">2304725</td><td style="text-align:right;">1</td><td style="text-align:right;">Itagüi</td><td style="text-align:right;">3428900</td><td style="text-align:right;">Sí</td><td style="text-align:right;">539641705</td><td style="text-align:right;">NA</td></tr><tr><td style="text-align:right;">2013-02-06</td><td style="text-align:right;">32321157</td><td style="text-align:right;">39522101</td><td style="text-align:right;">3</td><td style="text-align:right;">La Estrella</td><td style="text-align:right;">NA</td><td style="text-align:right;">Sí</td><td style="text-align:right;">169451000</td><td style="text-align:right;">0.22</td></tr></tbody></table></pre>
 
-#### Corrección deductiva
+### Corrección deductiva
 
 Esta fase es la más complicada del todo del procedimiento, debido a que
 es necesario **revisar detalladamente** la información obtenida en las
@@ -1077,7 +1077,7 @@ Como su nombre lo indica, este método de imputación se realiza para
 variables numéricas y **lo que haces es emplear medidas de tendencias
 central, tal como la media, mediana, media recortada o moda, para
 imputar los valores faltantes**. Dichas medidas de tendencia central,
-pueden consultarse en el siguiente enlace [Medidas de tendencia
+pueden consultarse en el siguiente link [Medidas de tendencia
 central](../../EstadisticaI/EstIClase01.html#medidas-estadísticas){:target="\_blank"}.
 
 Para la realización de esta imputación pueden emplearse las funciones
@@ -1200,9 +1200,243 @@ knnImp %<>% mutate(percent_pagado = if_else(deuda_vivienda == "No", datos$percen
 <pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -3rem; margin-top: -3rem;">
 <table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto; font-size: 90%;"><thead><tr><th style="text-align:left;">fecha</th>
 <th style="text-align:right;">id</th><th style="text-align:right;">number_telefono</th><th style="text-align:right;">estrato</th><th style="text-align:right;">municipio</th><th style="text-align:right;">ingresos</th><th style="text-align:right;">deuda_vivienda</th><th style="text-align:right;">costo_vivienda</th><th style="text-align:right;">percent_pagado</th></tr></thead><tbody><tr><td style="text-align:right;">2013-02-15</td><td style="text-align:right;">1035869</td><td style="text-align:right;">3124751231</td><td style="text-align:right;">2</td><td style="text-align:right;">La Estrella</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">3114800</span></td><td style="text-align:right;">No</td><td style="text-align:right;">NA</td><td style="text-align:right;">NA</td></tr><tr><td style="text-align:right;">2013-05-01</td><td style="text-align:right;">1035857</td><td style="text-align:right;">1192334</td><td style="text-align:right;">3</td><td style="text-align:right;">Bello</td><td style="text-align:right;">3114800</td><td style="text-align:right;">Sí</td><td style="text-align:right;">728753400</td><td style="text-align:right;">0.29</td></tr><tr><td style="text-align:right;">2014-03-07</td><td style="text-align:right;">1007306</td><td style="text-align:right;">3434589</td><td style="text-align:right;">3</td><td style="text-align:right;">La Estrella</td><td style="text-align:right;">3083500</td><td style="text-align:right;">Sí</td><td style="text-align:right;">405147000</td><td style="text-align:right;">0.31</td></tr><tr><td style="text-align:right;">2013-01-12</td><td style="text-align:right;">3935563</td><td style="text-align:right;">7005931</td><td style="text-align:right;">4</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">La Estrella</span></td><td style="text-align:right;">630700</td><td style="text-align:right;">Sí</td><td style="text-align:right;">62708000</td><td style="text-align:right;">0.18</td></tr><tr><td style="text-align:right;">2013-02-15</td><td style="text-align:right;">2222985</td><td style="text-align:right;">8660538</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">2</span></td><td style="text-align:right;">Sabaneta</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">3114800</span></td><td style="text-align:right;">Sí</td><td style="text-align:right;">383800000</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">0.29</span></td></tr><tr><td style="text-align:right;">2014-09-23</td><td style="text-align:right;">3488986</td><td style="text-align:right;">5625266</td><td style="text-align:right;">2</td><td style="text-align:right;">Caldas</td><td style="text-align:right;">3356600</td><td style="text-align:right;">Sí</td><td style="text-align:right;">186855000</td><td style="text-align:right;">0.75</td></tr><tr><td style="text-align:right;">2014-06-02</td><td style="text-align:right;">1022146</td><td style="text-align:right;">3979642</td><td style="text-align:right;">2</td><td style="text-align:right;">Caldas</td><td style="text-align:right;">2204800</td><td style="text-align:right;">Sí</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">186855000</span></td><td style="text-align:right;">0.05</td></tr><tr><td style="text-align:right;">2015-12-15</td><td style="text-align:right;">39359318</td><td style="text-align:right;">2304725</td><td style="text-align:right;">1</td><td style="text-align:right;">Itagüi</td><td style="text-align:right;">3428900</td><td style="text-align:right;">Sí</td><td style="text-align:right;">539641705</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">0.29</span></td></tr><tr><td style="text-align:right;">2013-02-06</td><td style="text-align:right;">32321157</td><td style="text-align:right;">39522101</td><td style="text-align:right;">3</td><td style="text-align:right;">La Estrella</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">3114800</span></td><td style="text-align:right;">Sí</td><td style="text-align:right;">169451000</td><td style="text-align:right;">0.22</td></tr></tbody></table></pre>
-
+<h1 data-toc-skip>
 Muchas gracias! :D
-==================
+</h1>
+
+Ejercicio
+---------
+
+Suponga la siguiente base de datos compuesta por 10 variables 30
+entradas, que tiene por objetivo caracterizar a las personas que asisten
+a una congregación Cristiana. Dada la poca experiencia de los
+encuestadores, la base de datos posee una gran cantidad de errores los
+cuales, se espera en lo posible puedan ser corregidos.
+
+La base de datos contiene las siguientes variables.
+
+-   **fecha- encuesta:** Fecha en la que se realizó la encuesta.
+-   **$ID:** Número de identificación con el cual aparece registrada la
+    persona en la congregación.
+-   **tipo-documento:** Representa el tipo de documento que posee la
+    persona. Los niveles son:
+    -   Cédula de ciudadanía
+    -   Tarjeta de identidad
+    -   Tarjeta de extranjería
+    -   Registro civil
+-   **\# cédula:** Hace referencia el número de cédula de la persona
+    encuestada.
+-   **“Estrato”:** Estrato socioeconómico de la persona encuestada.
+-   **COmúna:** Hace referencia a la comúna de la ciudad de Medellín
+    donde vive la persona. Los niveles son:
+    -   Aranjuez
+    -   Belén
+    -   Buenos Aires
+    -   Castilla
+    -   Doce de octubre
+    -   Guayabal
+    -   La América
+    -   La Candelaria
+    -   Laureles
+    -   Manrique
+    -   Poblado
+    -   Popular
+    -   Robledo
+    -   San Javier
+    -   Santa Cruz
+    -   Villa Hermosa
+-   **          :** Número de hijos que posee la persona encuestada.
+-   **Asist\_Prom:** Hace referencia al número promedio de veces al mes
+    que asiste la persona a la congregación.
+-   **‘Tiemp\_Prom’:** Tiempo promedio que pasa la persona semanalmente
+    en la congregación.
+-   <strong>Prom\*Caridad:</strong> Hace referencia a la cantidad
+    promedio en pesos que aporta la persona mensualmente a la
+    congregación como caridad.
+
+La base de datos puede encontrarse en el siguiente
+[Link](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/EjercicioLimpieza.xlsx){:target="\_blank"}.
+
+Con esta base realice el siguiente procedimiento.
+
+1.  Revise la base de datos de forma visual y trate de listar los
+    posibles valores que ésta posea.
+2.  Limpie los encabezados y establezca aquellos encabezados faltantes.
+3.  Corregir el tipo y clase de las variables. Revise las variables
+    numéricas y corrija en posible aquellos valores que no son numéricos
+    antes transformar la variables.
+4.  Encuente los valores faltantes.
+    -   NA
+    -   NaN
+    -   NULL
+    -   Na
+    -   nA
+    -   999
+5.  Verifique que los datos posean las categorías.
+6.  De las variables numéricas, identifique aquellos valores atípicos, y
+    trate de establecer cuales de ellos pueden ser corregidos y bajo qué
+    condiciones.
+7.  Realice las correcciones que considere necesarias.
+8.  Emplee el método kNN de imputación y presente la base de datos
+    definitiva.
+
+<button id="Show6" class="btn btn-secondary">
+Ver Solucion en <tt>R</tt>
+</button>
+<button id="Hide6" class="btn btn-info">
+Ocultar Solucion en <tt>R</tt>
+</button>
+<main id="botoncito6">
+<h3 data-toc-skip>
+Solución <tt>R</tt>
+</h3>
+<section class="language-r highlighter-rouge">
+<section class="highlight">
+<pre class="highlight"><code><span class="c1">### Se cargan librerías</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">readxl</span><span class="p">)</span><span class="w">  </span><span class="c1"># Permite leer archivos en formato xlsx</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">janitor</span><span class="p">)</span><span class="w">  </span><span class="c1"># Librería especializada en la limpieza de datos</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span><span class="w">  </span><span class="c1"># Librería especializada para la manipulación de datos</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">magrittr</span><span class="p">)</span><span class="w">  </span><span class="c1"># Librería que probee una serie de operadores 'pipe'</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">editrules</span><span class="p">)</span><span class="w">  </span><span class="c1"># Permite crear codiciones para detectar inconsistencias.</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">forcats</span><span class="p">)</span><span class="w">  </span><span class="c1"># Librería para especializada en variables tipo factor.</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">lubridate</span><span class="p">)</span><span class="w">  </span><span class="c1"># Librería que permite analizar y manipular fechas.</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">Hmisc</span><span class="p">)</span><span class="w">  </span><span class="c1"># Posee funciones que permite realizar imputaciones.</span><span class="w">
+</span><span class="n">library</span><span class="p">(</span><span class="n">VIM</span><span class="p">)</span><span class="w">  </span><span class="c1"># Posee funciones que permite realizar imputaciones.</span><span class="w">
+
+</span><span class="c1">### Se hace lectura de los datos</span><span class="w">
+</span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tempfile</span><span class="p">(</span><span class="n">fileext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">".xlsx"</span><span class="p">)</span><span class="w">  </span><span class="c1"># Crea archivo temporal</span><span class="w">
+</span><span class="n">URL</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/EjercicioLimpieza.xlsx"</span><span class="w">  </span><span class="c1"># URL base de datos</span><span class="w">
+</span><span class="n">download.file</span><span class="p">(</span><span class="n">URL</span><span class="p">,</span><span class="w"> </span><span class="n">destfile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temp</span><span class="p">,</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"wb"</span><span class="p">)</span><span class="w">  </span><span class="c1"># Descarga archivo en el archivo temporal creado</span><span class="w">
+</span><span class="n">datos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">read_xlsx</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span><span class="w">  </span><span class="c1"># Carga base de datos desde archivo temporal</span><span class="w">
+
+</span><span class="n">datos</span><span class="w"> </span><span class="o">%&lt;&gt;%</span><span class="w"> </span><span class="n">rename</span><span class="p">(</span><span class="n">numero_hijos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"...7"</span><span class="p">)</span><span class="w">  </span><span class="c1"># renombra columna en la base de datos</span><span class="w">
+</span><span class="n">datos</span><span class="w"> </span><span class="o">%&lt;&gt;%</span><span class="w"> </span><span class="n">clean_names</span><span class="p">()</span><span class="w">  </span><span class="c1"># limpia los nombres nombre de la base de datos</span><span class="w">
+</span><span class="n">datos</span><span class="w"> </span><span class="o">%&lt;&gt;%</span><span class="w"> </span><span class="n">rename</span><span class="p">(</span><span class="n">comuna</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"c_omuna"</span><span class="p">)</span><span class="w">  </span><span class="c1"># renombra columna c_omuna en la base de datos</span><span class="w">
+
+</span><span class="c1">### Transformar variables a tipo factor</span><span class="w">
+</span><span class="n">datos</span><span class="w"> </span><span class="o">%&lt;&gt;%</span><span class="w"> </span><span class="n">mutate_at</span><span class="p">(</span><span class="n">vars</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">tipo_documento</span><span class="p">,</span><span class="w"> </span><span class="n">number_cedula</span><span class="p">,</span><span class="w"> </span><span class="n">estrato</span><span class="p">,</span><span class="w"> </span><span class="n">c_omuna</span><span class="p">),</span><span class="w"> 
+    </span><span class="n">as.factor</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">### Revisar variables numéricas para detectar valores especiales</span><span class="w">
+</span><span class="n">datos</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">select</span><span class="p">(</span><span class="n">numero_hijos</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">table</span><span class="p">()</span><span class="w">  </span><span class="c1"># Se detectan valores 'dos y uno'</span><span class="w">
+</span><span class="n">datos</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">select</span><span class="p">(</span><span class="n">asist_prom</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">table</span><span class="p">()</span><span class="w">  </span><span class="c1"># Se detectan valores 'Ninguna'</span><span class="w">
+</span><span class="n">datos</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">select</span><span class="p">(</span><span class="n">tiemp_prom</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">table</span><span class="p">()</span><span class="w">  </span><span class="c1"># No se detecta ningun valor no numerico</span><span class="w">
+</span><span class="n">datos</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">select</span><span class="p">(</span><span class="n">prom_caridad</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">table</span><span class="p">()</span><span class="w">  </span><span class="c1"># No se detecta ningun valor no numerico</span><span class="w">
+
+</span><span class="c1">### Se corrigen valores especiales en numero_hijos y asist_prom, antes de</span><span class="w">
+</span><span class="c1">### transformar</span><span class="w">
+</span><span class="n">datos</span><span class="w"> </span><span class="o">%&lt;&gt;%</span><span class="w"> </span><span class="n">mutate_at</span><span class="p">(</span><span class="n">vars</span><span class="p">(</span><span class="n">numero_hijos</span><span class="p">),</span><span class="w"> </span><span class="o">~</span><span class="n">replace</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">.</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"dos"</span><span class="p">,</span><span class="w"> </span><span class="s2">"2"</span><span class="p">))</span><span class="w">  </span><span class="c1"># Se reemplaza el 2 en variable numero_hijos</span><span class="w">
+</span><span class="n">datos</span><span class="w"> </span><span class="o">%&lt;&gt;%</span><span class="w"> </span><span class="n">mutate_at</span><span class="p">(</span><span class="n">vars</span><span class="p">(</span><span class="n">numero_hijos</span><span class="p">),</span><span class="w"> </span><span class="o">~</span><span class="n">replace</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">.</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"uno"</span><span class="p">,</span><span class="w"> </span><span class="s2">"1"</span><span class="p">))</span><span class="w">  </span><span class="c1"># Se reemplaza el 1 en variable numero_hijos</span><span class="w">
+</span><span class="n">datos</span><span class="w"> </span><span class="o">%&lt;&gt;%</span><span class="w"> </span><span class="n">mutate_at</span><span class="p">(</span><span class="n">vars</span><span class="p">(</span><span class="n">asist_prom</span><span class="p">),</span><span class="w"> </span><span class="o">~</span><span class="n">replace</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">.</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"ninguna"</span><span class="p">,</span><span class="w"> </span><span class="s2">"0"</span><span class="p">))</span><span class="w">  </span><span class="c1"># Se reemplaza el 1 en variable asist_prom</span><span class="w">
+
+</span><span class="c1">### Transformar variables a tipo numérico (double)</span><span class="w">
+</span><span class="n">datos</span><span class="w"> </span><span class="o">%&lt;&gt;%</span><span class="w"> </span><span class="n">mutate_at</span><span class="p">(</span><span class="n">vars</span><span class="p">(</span><span class="n">numero_hijos</span><span class="p">,</span><span class="w"> </span><span class="n">asist_prom</span><span class="p">,</span><span class="w"> </span><span class="n">tiemp_prom</span><span class="p">,</span><span class="w"> </span><span class="n">prom_caridad</span><span class="p">),</span><span class="w"> 
+    </span><span class="n">as.numeric</span><span class="p">)</span><span class="w">
+
+</span><span class="c1">### Transformar variables a tipo fecha (date) (se encuentra mes-día-año)</span><span class="w">
+</span><span class="n">datos</span><span class="w"> </span><span class="o">%&lt;&gt;%</span><span class="w"> </span><span class="n">mutate_at</span><span class="p">(</span><span class="n">vars</span><span class="p">(</span><span class="n">fecha_encuesta</span><span class="p">),</span><span class="w"> </span><span class="n">mdy</span><span class="p">)</span><span class="w">
+
+
+</span><span class="c1">## Creamos conjunto de condiciones que deben cumplirse condiciones para</span><span class="w">
+</span><span class="c1">## variables categóricas</span><span class="w">
+</span><span class="n">CondC</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">editset</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s2">"tipo_documento %in% c('Cédula de ciudadanía', 'Tarjeta de identidad', 'Tarjeta de extranjería', 'Registro civil')"</span><span class="p">,</span><span class="w"> 
+    </span><span class="s2">"estrato %in% 1:6"</span><span class="p">,</span><span class="w"> </span><span class="s2">"comuna %in% c('Popular', 'Santa Cruz', 'Manrique', 'Aranjuez', 'Castilla', 'Doce de octubre', 'Robledo', 'Villa Hermosa', 'Buenos Aires', 'La Candelaria',
+                   'Laureles', 'La América', 'San Javier', 'Poblado', 'Guayabal', 'Belén')"</span><span class="p">))</span><span class="w">
+</span><span class="n">CondC</span><span class="w">
+
+</span><span class="c1"># Condiciones para variables númericas</span><span class="w">
+</span><span class="n">CondN</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">editset</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s2">"numero_hijos &gt;= 0"</span><span class="p">,</span><span class="w"> </span><span class="s2">"asist_prom &gt;= 0"</span><span class="p">,</span><span class="w"> </span><span class="s2">"tiemp_prom &gt;= 0"</span><span class="p">,</span><span class="w"> 
+    </span><span class="s2">"prom_caridad &gt;= 0"</span><span class="p">))</span><span class="w">
+</span><span class="n">CondN</span><span class="w">
+
+</span><span class="c1"># Presentamos donde ocurren dichas violaciones</span><span class="w">
+</span><span class="n">Errores</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">violatedEdits</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="n">CondC</span><span class="p">,</span><span class="w"> </span><span class="n">CondN</span><span class="p">),</span><span class="w"> </span><span class="n">datos</span><span class="p">)</span><span class="w">
+</span><span class="n">Errores</span><span class="w">
+
+</span><span class="c1"># Localiza y muestra por variable las violaciones</span><span class="w">
+</span><span class="n">loc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">localizeErrors</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="n">CondC</span><span class="p">,</span><span class="w"> </span><span class="n">CondN</span><span class="p">),</span><span class="w"> </span><span class="n">datos</span><span class="p">)</span><span class="o">$</span><span class="n">adapt</span><span class="w">
+</span><span class="n">apply</span><span class="p">(</span><span class="n">X</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loc</span><span class="p">,</span><span class="w"> </span><span class="n">MARGIN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">FUN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="n">which</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">))</span><span class="w">
+
+
+</span><span class="c1">## Detectar NA, NaN, NULL..... dentro de la base de datos estas categorías</span><span class="w">
+</span><span class="c1">## como niveles del factor</span><span class="w">
+</span><span class="n">faltantes</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">apply</span><span class="p">(</span><span class="n">X</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">datos</span><span class="p">,</span><span class="w"> </span><span class="n">MARGIN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">FUN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="n">which</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> 
+    </span><span class="nf">is.null</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"Na"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"NA"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"NaN"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"999"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">"nA"</span><span class="p">))</span><span class="w">  </span><span class="c1"># se pueden agregar más caracteres</span><span class="w">
+</span><span class="n">faltantes</span><span class="w">
+
+</span><span class="c1"># Función para extraer valores atípicos de variables numéricas</span><span class="w">
+</span><span class="n">Outliers</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">require</span><span class="p">(</span><span class="n">magrittr</span><span class="p">))</span><span class="w"> 
+        </span><span class="n">install.packages</span><span class="p">(</span><span class="s2">"magrittr"</span><span class="p">)</span><span class="w">
+    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">require</span><span class="p">(</span><span class="n">dplyr</span><span class="p">))</span><span class="w"> 
+        </span><span class="n">install.packages</span><span class="p">(</span><span class="s2">"dplyr"</span><span class="p">)</span><span class="w">
+    </span><span class="n">require</span><span class="p">(</span><span class="n">magrittr</span><span class="p">)</span><span class="w">
+    </span><span class="n">require</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span><span class="w">
+    </span><span class="n">vars</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">select_if</span><span class="p">(</span><span class="n">is.numeric</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">names</span><span class="p">()</span><span class="w">
+    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">row</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">TRUE</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">row</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span><span class="w"> 
+        </span><span class="n">stop</span><span class="p">(</span><span class="s2">"row argument must be equal to TRUE or FALSE"</span><span class="p">)</span><span class="w">
+    </span><span class="n">aux</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">vars</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="n">Outlier</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">select</span><span class="p">(</span><span class="n">vars</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">boxplot</span><span class="p">(</span><span class="n">plot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span><span class="w"> </span><span class="o">%$%</span><span class="w"> </span><span class="n">out</span><span class="w">
+        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">row</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="n">Outlier</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">suppressWarnings</span><span class="p">(</span><span class="n">which</span><span class="p">(</span><span class="n">eval</span><span class="p">(</span><span class="n">parse</span><span class="p">(</span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">paste0</span><span class="p">(</span><span class="s2">"data$"</span><span class="p">,</span><span class="w"> 
+                </span><span class="n">vars</span><span class="p">)))</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">Outlier</span><span class="p">))</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+        </span><span class="nf">return</span><span class="p">(</span><span class="n">vars</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Outlier</span><span class="p">)</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span><span class="n">sapply</span><span class="p">(</span><span class="n">vars</span><span class="p">,</span><span class="w"> </span><span class="n">aux</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span><span class="c1">## Empleo de la función Outliers Muestra fila en la que se encuentra el</span><span class="w">
+</span><span class="c1">## Outlier</span><span class="w">
+</span><span class="n">datos</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">Outliers</span><span class="p">(</span><span class="n">row</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Reemplaza valores 'NA', 'NaN' y 'Na' dentro de variables tipo factor</span><span class="w">
+</span><span class="n">datos</span><span class="w"> </span><span class="o">%&lt;&gt;%</span><span class="w"> </span><span class="n">convert_to_NA</span><span class="p">(</span><span class="s2">"NA"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">convert_to_NA</span><span class="p">(</span><span class="s2">"NaN"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">convert_to_NA</span><span class="p">(</span><span class="s2">"Na"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+    </span><span class="n">convert_to_NA</span><span class="p">(</span><span class="s2">"999"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">convert_to_NA</span><span class="p">(</span><span class="s2">"NULL"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">convert_to_NA</span><span class="p">(</span><span class="s2">"nA"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+    </span><span class="n">convert_to_NA</span><span class="p">(</span><span class="s2">"Na"</span><span class="p">)</span><span class="w">  </span><span class="c1"># Se pueden agregar más caracteres</span><span class="w">
+
+</span><span class="c1"># Elimina niveles sin uso dentro de variables tipo factor</span><span class="w">
+</span><span class="n">datos</span><span class="w"> </span><span class="o">%&lt;&gt;%</span><span class="w"> </span><span class="n">droplevels</span><span class="p">()</span><span class="w">
+
+</span><span class="c1"># Elimina filas y columnas que poseen solo valores NA</span><span class="w">
+</span><span class="n">datos</span><span class="w"> </span><span class="o">%&lt;&gt;%</span><span class="w"> </span><span class="n">remove_empty</span><span class="p">()</span><span class="w">
+
+</span><span class="c1"># Elimina filas que poseen registros duplicados</span><span class="w">
+</span><span class="n">datos</span><span class="w"> </span><span class="o">%&lt;&gt;%</span><span class="w"> </span><span class="n">distinct</span><span class="p">()</span><span class="w">
+</span><span class="n">datos</span><span class="w">
+
+</span><span class="c1"># Elimina colúmnas que poseen registros duplicados</span><span class="w">
+</span><span class="n">datos</span><span class="w"> </span><span class="o">%&lt;&gt;%</span><span class="w"> </span><span class="n">select_if</span><span class="p">(</span><span class="o">!</span><span class="n">duplicated</span><span class="p">(</span><span class="n">as.list</span><span class="p">(</span><span class="n">.</span><span class="p">)))</span><span class="w">
+
+</span><span class="c1">## Corrección deductiva tipo_documento 'Cedula' se reemplaza por 'Cédula de</span><span class="w">
+</span><span class="c1">## ciudadanía'</span><span class="w">
+</span><span class="n">datos</span><span class="w"> </span><span class="o">%&lt;&gt;%</span><span class="w"> </span><span class="n">mutate</span><span class="p">(</span><span class="n">tipo_documento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fct_recode</span><span class="p">(</span><span class="n">tipo_documento</span><span class="p">,</span><span class="w"> </span><span class="n">`Cédula de ciudadanía`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Cedula"</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+    </span><span class="n">droplevels</span><span class="p">()</span><span class="w">
+
+</span><span class="c1"># estrato '0' no existe, así que se reemplaza por NA</span><span class="w">
+</span><span class="n">datos</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">mutate</span><span class="p">(</span><span class="n">estrato</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">na_if</span><span class="p">(</span><span class="n">estrato</span><span class="p">,</span><span class="w"> </span><span class="s2">"0"</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">droplevels</span><span class="p">()</span><span class="w">
+
+</span><span class="c1"># estrato 'uno' se reemplaza por 1 y 'dos se reemplaza por 2</span><span class="w">
+</span><span class="n">datos</span><span class="w"> </span><span class="o">%&lt;&gt;%</span><span class="w"> </span><span class="n">mutate</span><span class="p">(</span><span class="n">estrato</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fct_recode</span><span class="p">(</span><span class="n">estrato</span><span class="p">,</span><span class="w"> </span><span class="n">`1`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"uno"</span><span class="p">,</span><span class="w"> </span><span class="n">`2`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"dos"</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> 
+    </span><span class="n">droplevels</span><span class="p">()</span><span class="w">
+
+</span><span class="c1"># comuna 'No sabe' se reemplaza por 'NA' para imputarlo</span><span class="w">
+</span><span class="n">datos</span><span class="w"> </span><span class="o">%&lt;&gt;%</span><span class="w"> </span><span class="n">mutate</span><span class="p">(</span><span class="n">comuna</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fct_recode</span><span class="p">(</span><span class="n">comuna</span><span class="p">,</span><span class="w"> </span><span class="n">`NULL`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"No sabe"</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">droplevels</span><span class="p">()</span><span class="w">
+
+</span><span class="c1"># comuna 'San Pedro', 'Guatapé' y se reemplaza por 'Fuera de Medellín'</span><span class="w">
+</span><span class="n">datos</span><span class="w"> </span><span class="o">%&lt;&gt;%</span><span class="w"> </span><span class="n">mutate</span><span class="p">(</span><span class="n">comuna</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fct_recode</span><span class="p">(</span><span class="n">comuna</span><span class="p">,</span><span class="w"> </span><span class="n">`Fuera de Medellín`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"San Pedro"</span><span class="p">,</span><span class="w"> 
+    </span><span class="n">`Fuera de Medellín`</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Guatapé"</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">droplevels</span><span class="p">()</span><span class="w">
+
+</span><span class="c1"># tiemp_prom se cambian valores negativos a positivos</span><span class="w">
+</span><span class="n">datos</span><span class="w"> </span><span class="o">%&lt;&gt;%</span><span class="w"> </span><span class="n">mutate</span><span class="p">(</span><span class="n">tiemp_prom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">if_else</span><span class="p">(</span><span class="n">tiemp_prom</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="nf">abs</span><span class="p">(</span><span class="n">tiemp_prom</span><span class="p">),</span><span class="w"> </span><span class="n">tiemp_prom</span><span class="p">))</span><span class="w">
+
+</span><span class="c1"># Se realiza imputación kNN de toda la base de datos, dado que no hay</span><span class="w">
+</span><span class="c1"># restricciones aparentes</span><span class="w">
+</span><span class="n">datos</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="n">kNN</span><span class="p">(</span><span class="n">imp_var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span><span class="w">
+</span></code></pre>
+</section>
+</section>
+</main>
 
 Referencias
 -----------
