@@ -457,6 +457,7 @@ El número de permutaciones distintas en `$n$` objetos, en los que `$n_1$` objet
 \frac{n!}{n_1! n_2! \ldots n_k!}
 \end{align*}`
 donde `$n=n_1+n_2+\ldots+n_k$`
+
 #### Ejercicio
 
 En la facultad de Ciencias Económicas están interesados de armar un equipo de fútbol y para ello necesitan inscribir `$15$` jugadores. Entre los cuales se inscriben `$3$` de primer semestre, `$5$` de segundo semestre, `$2$` de tercer semestre, `$1$` de cuarto semestre, `$2$` de quinto semestre, `$1$` de octavo semestre y `$1$` de décimo semestre. Si al finalizar el torneo el equipo de Ciencias Económicas queda de segundo y para la entrega de medallas se desea entregarlas por semestre al que pertenecen los estudiantes. De cuantas formas diferentes pueden ordenarse los `$15$` jugadores para recibir las medallas, si solo importa el semestre en el que pertenecen?
