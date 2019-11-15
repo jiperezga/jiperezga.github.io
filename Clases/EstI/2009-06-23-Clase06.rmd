@@ -301,6 +301,7 @@ Y por tanto se concluye que los eventos NO son independientes.
 
 </li>
 </ol>
+</main>
 
 ## Probabilidad total
 Sean `$A_1, A_2, \ldots, A_k$` eventos mutuamente excluyentes `$(A_i\cap A_j = \oslash, para i\neq j)$` y exhaustivos `$\left(\underset{i=1}{\stackrel{k}{\cup}} A_i = S\right)$`, entonces para cualquier otro evento `$B$`
