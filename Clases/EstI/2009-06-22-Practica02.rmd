@@ -43,18 +43,13 @@ opts_chunk$set(echo=TRUE,
 ```
 
 # Lista de ejercicios
-1. Un fabricante de neumáticos quiere determinar el diámetro interior de un neumático de cierto grado de calidad, en donde, sabe que idealmente el diámetro debería ser de 570 mm. Suponga que el fabricante tiene los siguientes datos: 
-`\begin{align*}
-572, 573, 572, 568, 569, 575, 565, 570, 571, 562, 565, 572		
-\end{align*}`
-   * Calcule la media, la mediana y la moda de la muestra e interprete en base al enunciado.
-   * Obtenga la varianza, la desviación estándar y el rango intercuartílico de la muestra.
-   * Obtenga los coeficientes de asimetría y curtosis.
-   * Con base en los estadísticos calculados en los incisos a) y b), ¿qué comentaría acerca de la calidad de los neumáticos?
+1. Suponga que usted tienen `$12$` juegos diferentes de Nintendo Switch, y desea ponerlos sobre una repisa nueva que compró.
+   * De cuantas formas puede organizar los juegos?
+   * Si entre los `$12$` juegos, hay `$3$` RPG, `$4$` de Aventura, `$2$` de Puzzle y `$3$` de deportes, de cuantas formas puede organizar los juegos si solo importa el género del video juego?
 
 2. Un moneda esta cargada de tal forma que la probabilidad de que aparezca cara es tres veces mayor a que aparezca sello. Si se decide lanzar la moneda tres veces, cuál es la probabilidad de sacar al menos dos caras?
 3. Suponga un juego en donde se lanza un dado cargado de tal forma que la probabilidad de que caiga cualquier cara, es proporcional al número de puntos que le falta a la cara para sumar 6. ¿Cuál es la probabilidad de que al lanzar el dado salga un número impar?
-4. Si `$S = \{x | 0 < x < 12\}$`, `$X = \{x | 1 < x < 9\}$`, `$Y = \{x | 0 < x < 5\}$` y `$Z = \{x | 3 < x < 6\}$`, encuentre
+4. Sea el espacio muestral `$S = \{x | 1 < x < 12\}$` definido como el rango de tiempo que puede tardar cualquier estudiante en realizar un trabajo de la universidad. Suponga que se tienen tres tipos de estudiantes, el evento `$X = \{x | 1 < x < 3\}$` el tiempo que tardan los estudiantes que estudiaron previamente, el evento `$Y = \{x | 1.5 < x < 8\}$` el tiempo que tardan los estudiantes que solo iban a clase y el evento `$Z = \{x | 7 < x < 12\}$`, el tiempo que tardan los estudiantes que nunca iban a clase ni estudiaron previamente. Dado lo anterior, encuentre e interprete en lo posible los siguientes eventos.
    * `$X \cup Y$`
    * `$X \cap Y$`
    * `$X'\cap Z$`
@@ -62,52 +57,54 @@ opts_chunk$set(echo=TRUE,
    * `$X' \cap Y'$`
    * `$Z' \cup Y$`
 
-5. Para un examen de estadística I a las 6AM, un estudiante programa un despertador, el cual consigue despertarlo en un 80% de las veces. Si oye el despertador, la probabilidad de que presente el examen es de 0.9, y si no lo escucha, la probabilidad de presentar el examen es de 0.5.
-   * Si va a realizar el examen. ¿Cuál es la probabilidad de que haya oído el despertador?
-   * Si no realiza el examen. ¿Cuál es la probabilidad de que no haya oído el despertador?
+5. Para un examen de Estadística I a las `$6$`AM, un estudiante programa un despertador, el cual sabe que consigue despertarlo el `$80\%$` de las veces. Además, sabe que si escucha sonar el despertador, la probabilidad de que llegue a tiempo al examen es del `$90\%$`, mientras que, si no lo escucha, la probabilidad de llegue a tiempo al examen es del `$50\%$`.
+   * Si el estudiante llega a tiempo al examen, ¿Cuál es la probabilidad de que haya escuchado el despertador?
+   * Si el estudiante no llega a tiempo al examen, ¿Cuál es la probabilidad de que no haya escuchado el despertador?
    
-6. Se realiza un estudio acerca de los efectos del tabaquismo sobre los patrones de sueño. Para ello, se realiza una medición y se observa el tiempo, en minutos, que tarda una persona en quedar dormido. Se obtienen los siguientes datos:
+6. En la facultad de Química de la UdeA, adelantan un estudio para saber si usar vapeadores puede afectar el tiempo de descanso de los estudiantes universitarios. Para realizar dicho estudio, la facultad de Química realiza una medición del tiempo de sueño, en minutos, de `$12$` estudiantes que usan vapeador y `$15$` estudiantes que no usan vapeador. Se obtienen los siguientes datos:
 `\begin{align*}
-		\text{Fumadores: }		& \text{69.3  56.0  22.1  47.6 }\\
-								& \text{53.2  48.1  52.7  34.4 }\\
-								& \text{60.2  43.8  23.2  13.8 }\\
-		\text{No fumadores: }	& \text{28.6  25.1  26.4  34.9 }\\
-								& \text{29.8  28.4  38.5  30.2 }\\
-								& \text{30.6  31.8  41.6  21.1 } \\
-								& \text{36.0  37.9  13.9}
+		\text{No usan vapeador: }		& \text{369.3  356.0  322.1  347.6 }\\
+								& \text{353.2  348.1  352.7  334.4 }\\
+								& \text{360.2  343.8  323.2  313.8 }\\
+		\text{Usan vapeador: }	& \text{328.6  235.1  326.4  334.9 }\\
+								& \text{329.8  328.4  338.5  330.2 }\\
+								& \text{330.6  331.8  341.6  321.1 } \\
+								& \text{336.0  337.9  313.9}
 \end{align*}`
-   * Calcule la media de la muestra para cada grupo e interprete.
-   * Calcule la desviación estándar de la muestra para cada grupo, cuál tiene mayor dispersión? qué significa esto?.
-   * Comente qué clase de efecto parece tener el hecho de fumar sobre el tiempo que se requiere para quedarse dormido.
+   * Calcule el tiempo promedio de sueño para cada grupo e interprete.
+   * Calcule la desviación estándar para cada grupo. Cuál tiene mayor dispersión? Qué significa esto?.
+   * Comente qué clase de efecto parece tener el hecho de usar vapeor sobre el tiempo de descanso de los estudiantes.
    
-7. Suponga que se descubre que, en un grupo de 500 estudiantes universitarios de último año, 210 fuman, 258 consumen bebidas alcohólicas, 216 comen entre comidas, 122 fuman y consumen bebidas alcohólicas, 83 comen entre comidas y consumen bebidas alcohólicas, 97 fuman y comen entre comidas y 52 tienen esos tres hábitos nocivos para la salud. Si se selecciona al azar a un miembro de este grupo, calcule la probabilidad de que el estudiante
-   * fume pero no consuma bebidas alcohólicas
+7. Suponga que se descubre que, en un grupo de `$500$` estudiantes universitarios de último año, `$210$` fuman, `$258$` consumen bebidas alcohólicas, `$216$` comen entre comidas, `$122$` fuman y consumen bebidas alcohólicas, `$83$` comen entre comidas y consumen bebidas alcohólicas, `$97$` fuman y comen entre comidas y `$52$` tienen esos tres hábitos nocivos para la salud. Si se selecciona al azar a un miembro de este grupo, escriba el evento de interés y calcule la probabilidad de que el estudiante
+   * fume, pero no consuma bebidas alcohólicas
    * coma entre comidas y consuma bebidas alcohólicas pero no fume
    * no fume ni coma entre comidas.
    
-8. Una Lotería consiste en acertar 6 de 45 números. Calcule la probabilidad de acertar el resultado ganador bajo las siguientes condiciones de juego.
+8. Una Lotería consiste en acertar `$6$` de `$45$` números, y una serie que consta de un número del `$1 \text{ al } 6$`. Calcule la probabilidad de acertar el resultado ganador bajo las siguientes condiciones de juego.
    * Teniendo en cuenta el orden en que aparezca el número ganador.
    * Sin tener en cuenta el orden.
 
-9. La proporción de personas que estudia para el examen de estadística es de 60%. Si la persona estudia, tiene una probabilidad de 85% de ganar el examen; si no estudia, la probabilidad de ganar el examen es de 12%. Se selecciona una persona al azar de las que presentaron el examen y resulta que lo perdió, ¿Cuál la probabilidad de que haya estudiado?   
+9. La proporción de personas que estudia para el examen de Estadística I desde la página del profe es del `$54\%$`. Si la persona estudia de la página, tiene una probabilidad del `$85\%$` de ganar el examen; si no estudia de la página, la probabilidad de ganar el examen es del `$18\%$`. Si se selecciona un estudiante al azar y resulta que lo perdió el examen, ¿Cuál la probabilidad de que haya estudiado de la página del profe?   
 10. Un determinado circuito electrónico está compuesto por nueve componentes conectados según se muestra a continuación
 ![](../../EstadisticaI/images/Circuito1.PNG)
-la probabilidad de que funcione cada componente es del 0.95. El circuito funcionará si es posible encontrar un camino entre A y B. Se supone que la probabilidad de que funcione cada componente es independiente de los demás. A partir de la información anterior calcule
+la probabilidad de que funcione cada componente es del `$95\%$`. El circuito funcionará si es posible encontrar un camino entre `$A$` y `$B$`. Se supone que la probabilidad de que funcione cada componente es independiente de los demás. A partir de la información anterior calcule
     * ¿Cuál es la probabilidad de que funcione el subsistema M?
     * ¿Cuál es la probabilidad de que funcione el subsistema N?
     * ¿Cuál es la probabilidad de que no funcione el subsistema O?
     * ¿Cuál es la probabilidad de que haya comunicación entra A y B?
-    * Escriba mediante eventos, la estructura de uniones e intersecciones necesarias para que el circuito funcione
-11. En un centro escolar los alumnos pueden optar por cursar como lengua extranjera ingles o francés. En un determinado curso, el 90% de los alumnos estudia ingles y el resto francés. El 30% de los que estudian ingles son hombres y el 40% de los que estudian francés son mujeres. Se selecciona un alumno al azar, ¿Cuál es la probabilidad de que sea mujer?  
-12. Dos monedas una balanceada y otra con dos sellos son colocadas en un sombrero. Se selecciona al azar una moneda y se lanza al aire. Si la cara superior es sello, ¿cuál es la probabilidad de que la cara oculta sea cara?
-13. Una fraternidad local está realizando una rifa en la que se han de vender 50 boletos, uno por cliente. Hay tres premios para ser concedidos. Si los cuatro organizadores de la rifa compran un boleto cada uno, ¿cuál es la probabilidad de que los cuatro organizadores ganen
+11. Suponga que para poder graduarse en la facultad de Ciencias Económicas un los estudiantes pueden optar por tomar `$6$` niveles de ingles o francés. Si tomamos un determinado curso de la facultad, observamos que el `$90\%$` de los alumnos está matriculado en cursos de ingles y el resto de francés. Además, se identifica que el `$30\%$` de los que tienen cursos de ingles son hombres y el `$40\%$` de los que tienen cursos de francés son mujeres. Si se selecciona un estudiante de la facultad al azar, ¿Cuál es la probabilidad de que sea una mujer?.
+12. Suponga que usted desea realizar un diagrama de pastel para una presentación, y posee un total de `$6$` categorías para realizar la gráfica.
+    * De cuantas formas puede usted organizar las categorías?
+    * Si dos categorías no pueden estar juntas, de cuantas formas puede organizar las categorías?
+13. Una fraternidad local está realizando una rifa en la que se han de vender `$50$` boletas, una por cliente. Hay tres premios para ser concedidos. Si los cuatro organizadores de la rifa compran un boleto cada uno, ¿cuál es la probabilidad de que los cuatro organizadores ganen
     * todos los premios?
     * exactamente dos de los premios?
     * exactamente uno de los premios?
     * ninguno de los premios?
     
-14. Un grupo asesor A contiene 3 hombres y 3 mujeres. Otro grupo asesor B contiene 3 hombres y 2 mujeres. Se selecciona al azar un grupo y de él una persona al azar, si esta persona es un hombre, se selecciona otra persona del mismo grupo. Si la persona seleccionada es mujer, se selecciona otra persona del otro grupo. Si las dos personas seleccionadas son hombres, ¿Cuál es la probabilidad de que se haya seleccionado ambas del grupo asesor A?
+14. Un grupo asesor `$A$` contiene `$3$` hombres y `$3$` mujeres. Otro grupo asesor `$B$` contiene `$3$` hombres y `$2$` mujeres. Se selecciona al azar un grupo y de él una persona al azar, si esta persona es un hombre, se selecciona otra persona del mismo grupo. Si la persona seleccionada es mujer, se selecciona otra persona del otro grupo. Si las dos personas seleccionadas son hombres, ¿Cuál es la probabilidad de que se haya seleccionado ambas del grupo asesor `$A$`?
 15. Un estudio realizado para un supermercado clasifica los clientes en aquellos que visitan el establecimiento de una manera frecuente u ocasional, y en aquellos que adquieren regularmente, ocasionalmente o nunca productos alimenticios. La siguiente tabla presenta las proporciones correspondientes a cada uno de los seis grupos.
+<section style="font-family: 'Open Sans',sans-serif; margin-bottom: -3rem; margin-top: -3rem; font-size: 90%;">
 ```{r echo=FALSE}
 library(kableExtra)
 
@@ -119,16 +116,14 @@ kable(tabla,
 kable_styling("striped", full_width = F) %>%
 add_header_above(c("Frecuencia de" = 1, "Adquisición de Productos" = 3)) 
 ```
-    * ¿Cual es la probabilidad de que un cliente visite frecuentemente el supermercado y compre regularmente productos alimenticios?
-    * ¿Cuál es la probabilidad de que un cliente que nunca compra productos alimenticios visite el supermercado frecuentemente?
+</section>
+    * ¿Cual es la probabilidad de seleccionar un cliente que visite frecuentemente el supermercado y compre regularmente productos alimenticios?
+    * ¿Cuál es la probabilidad de que se seleccione un cliente nunca compre productos alimenticios?
+    * ¿Cuál es la probabilidad de seleccionar un cliente que nunca compra productos alimenticios, si se sabe que visita el supermercado frecuentemente?
     * ¿Son independientes los sucesos "nunca compra productos alimenticios" y "visita el supermercado frecuentemente"?
-    * ¿Cuál es la probabilidad de que un cliente que visita de manera infrecuente el supermercado compre regularmente productos alimenticios?
-    * ¿Son los sucesos "compra regularmente productos alimenticios" y "visita el supermercado	de manera infrecuente" independientes?
-    * ¿Cuál es la probabilidad de que un cliente visite frecuentemente el supermercado?
-    * ¿Cuál es la probabilidad de que un cliente nunca compre productos alimenticios?
-    * ¿Cuál es la probabilidad de que un cliente visite el establecimiento frecuentemente y/o nunca compre productos alimenticios?
+    * ¿Cuál es la probabilidad de seleccionar un cliente que visite el establecimiento frecuentemente o un cliente que nunca compre productos alimenticios?
    
-16. Las enfermedades A y B son comunes entre las personas que habitan una determinada isla. Si se supone que el 50% de la población contrae la enfermedad A alguna vez durante su vida, 60% contraerá eventualmente la enfermedad B y el 10\% no contraerá ninguna enfermedad. ¿Cuál La probabilidad de contraer ambas enfermedades?
+16. Suponga que existen dos enfermedades `$A$` y `$B$`, que son comunes entre las personas que estudian Biología debido a las salidas de campo que realiza. Si se supone que el `$50\%$` de los Biologos contrae la enfermedad `$A$` alguna vez durante su vida, `$60\%$` contrae eventualmente la enfermedad `$B$` y el `$10\%$` no contraerá ninguna enfermedad. ¿Cuál La probabilidad de que un Biologo contraiga ambas enfermedades durante su vida?
 17. Un experimento incluye lanzar un par de dados y observar los números de sus caras superiores. 
     * Encuentre el número de puntos muestrales en el espacio muestral para el experimento, si no se tiene en cuenta que los dos dados saquen el mismo resultado.
     * Cuál es la probabilidad de que el número obtenido en los dos dados sea igual?
@@ -191,3 +186,14 @@ liste los números de las regiones que representan los siguientes eventos
     * ¿De cuántas maneras se pueden formar 6 personas para abordar un autobús?
     * ¿Cuántas maneras son posibles si, de las 6, 3 personas específicas insisten en formarse una después de la otra?
     * ¿De cuántas maneras se pueden formar si, de las 6, 2 personas específicas se rehúsan a formarse una detrás de la otra?
+
+36. Un fabricante de neumáticos quiere determinar el diámetro interior de un neumático de cierto grado de calidad, en donde, sabe que idealmente el diámetro debería ser de 570 mm. Suponga que el fabricante tiene los siguientes datos: 
+`\begin{align*}
+572, 573, 572, 568, 569, 575, 565, 570, 571, 562, 565, 572		
+\end{align*}`
+   * Calcule la media, la mediana y la moda de la muestra e interprete en base al enunciado.
+   * Obtenga la varianza, la desviación estándar y el rango intercuartílico de la muestra.
+   * Obtenga los coeficientes de asimetría y curtosis.
+   * Con base en los estadísticos calculados en los incisos a) y b), ¿qué comentaría acerca de la calidad de los neumáticos?
+   
+37. Dos monedas una balanceada y otra con dos sellos son colocadas en un sombrero. Se selecciona al azar una moneda y se lanza al aire. Si la cara superior es sello, ¿cuál es la probabilidad de que la cara oculta sea cara?
