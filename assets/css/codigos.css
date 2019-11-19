@@ -26,7 +26,7 @@ pre{color:#FFFFFF; font-weight:bold}
 
 /* Códigos Python */
 .language-python.highlighter-rouge .highlight{max-width: 50rem; margin-right: auto; margin-left: auto;}
-.language-python.highlighter-rouge .highlight pre{background-color:#3a0007; border:1px solid #e3edf3}
+.language-python.highlighter-rouge .highlight pre{background-color:#940012; border:1px solid #e3edf3}
 @media only screen and (min-width:37.5rem){.language-python.highlighter-rouge .highlight{word-wrap:break-word}}
 .language-python.highlighter-rouge .highlight .hll{background-color:#333}
 .language-python.highlighter-rouge .highlight .c,.language-python.highlighter-rouge .highlight .cm,.language-python.highlighter-rouge .highlight .cp,.language-python.highlighter-rouge .highlight .cs{color:#75715e}

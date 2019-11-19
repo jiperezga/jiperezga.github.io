@@ -227,56 +227,56 @@ La probabilidad es una medida asociada a la posibilidad de que ocurra un determi
 
 #### Ejercicio
 
-Suponga una bolsa que contiene `$10$` bolas, de las cuales `$3$` son <strong style="color: #000;">negras</strong>, `$5$` son <strong style="color: #007bff;">azules</strong>, y `$2$` son <strong style="color: #28a745;">verdes</strong>. Si se saca una bola al azar de la bolsa. Cuál es la probabilidad de que sea
+Suponga una bolsa que contiene `$10$` bolas, de las cuales `$3$` son negras, `$5$` son azules, y `$2$` son verdes. Si se saca una bola al azar de la bolsa. Cuál es la probabilidad de que sea
 
-1. <strong style="color: #000;">Negra</strong>
-2. <strong style="color: #007bff;">Azul</strong>
-3. <strong style="color: #b31917;">Roja</strong>
-4. <strong style="color: #28a745;">Verde</strong>
-5. <strong style="color: #000;">Negra</strong> o <strong style="color: #007bff;">Azul</strong>
-6. No sea <strong style="color: #000;">Negra</strong> y No sea <strong style="color: #b31917;">Roja</strong>
+1. Negra
+2. Azul
+3. Roja
+4. Verde
+5. Negra o Azul
+6. No sea Negra y No sea Roja
 
 <button id="Show5" class="btn btn-secondary">Mostrar Solución </button>
 <button id="Hide5" class="btn btn-info">Ocultar Solución </button>
 <main id="botoncito5"> 
 <h3 data-toc-skip> Solución </h3> 
 <ol type ="1">
-<li> Dado que el número de <strong style="color: #000;">bolas negras</strong> (éxitos) en la bolsa es $3$ y el total de bolas en la bolsa es $10$, se tendrá que la frecuencia relativa o probabilidad de sacar una <strong style="color: #000;">bola negra</strong> de la bolsa es
+<li> Dado que el número de bolas negras (éxitos) en la bolsa es $3$ y el total de bolas en la bolsa es $10$, se tendrá que la frecuencia relativa o probabilidad de sacar una bola negra de la bolsa es
 $$\begin{align*}
 \mathbb{P}(N) & = \frac{\text{Número de bolas negras en la bolsa}}{\text{Total de bolas en la bolsa}} \\ 
 & = \frac{3}{10} \\ 
 & = 0.3
 \end{align*}$$
 </li>
-<li> Dado que el número de <strong style="color: #007bff;">bolas azules</strong> (éxitos) en la bolsa es $5$ y el total de bolas en la bolsa es $10$, se tendrá que la frecuencia relativa o probabilidad de sacar una <strong style="color: #007bff;">bola azul</strong> de la bolsa es
+<li> Dado que el número de bolas azules (éxitos) en la bolsa es $5$ y el total de bolas en la bolsa es $10$, se tendrá que la frecuencia relativa o probabilidad de sacar una bola azul de la bolsa es
 $$\begin{align*}
 \mathbb{P}(A) & = \frac{\text{Número de bolas azules en la bolsa}}{\text{Total de bolas en la bolsa}} \\ 
 & = \frac{5}{10} \\ 
 & = 0.5
 \end{align*}$$
 </li>
-<li> Dado que no hay ninguna <strong style="color: #b31917;">bola roja</strong> (éxitos) en la bolsa, entonces, la frecuencia relativa o probabilidad de sacar una <strong style="color: #b31917;">bola roja</strong> de la bolsa en la que hay de $10$ bolas es
+<li> Dado que no hay ninguna bola roja (éxitos) en la bolsa, entonces, la frecuencia relativa o probabilidad de sacar una bola roja de la bolsa en la que hay de $10$ bolas es
 $$\begin{align*}
 \mathbb{P}(R) & = \frac{\text{Número de bolas rojas en la bolsa}}{\text{Total de bolas en la bolsa}} \\ 
 & = \frac{0}{10} \\ 
 & = 0.0
 \end{align*}$$
 </li>
-<li> Dado que el número de <strong style="color: #28a745;">bolas verdes</strong> (éxitos) en la bolsa es $2$ y el total de bolas en la bolsa es $10$, se tendrá que la frecuencia relativa o probabilidad de sacar una <strong style="color: #28a745;">bola verde</strong> de la bolsa es
+<li> Dado que el número de bolas verdes (éxitos) en la bolsa es $2$ y el total de bolas en la bolsa es $10$, se tendrá que la frecuencia relativa o probabilidad de sacar una bola verde de la bolsa es
 $$\begin{align*}
 \mathbb{P}(V) & = \frac{\text{Número de bolas verdes en la bolsa}}{\text{Total de bolas en la bolsa}} \\ 
 & = \frac{2}{10} \\ 
 & = 0.2
 \end{align*}$$
 </li>
-<li> Dado que la suma del número de <strong style="color: #000;">bolas negras</strong> y <strong style="color: #007bff;">bolas azules</strong> (éxitos) en la bolsa es $8$ y el total de bolas en la bolsa es $10$, se tendrá que la frecuencia relativa o probabilidad de sacar una <strong style="color: #000;">bola negra</strong> o una <strong style="color: #007bff;">bola azul</strong> de la bolsa es
+<li> Dado que la suma del número de bolas negras y bolas azules (éxitos) en la bolsa es $8$ y el total de bolas en la bolsa es $10$, se tendrá que la frecuencia relativa o probabilidad de sacar una bola negra o una bola azul de la bolsa es
 $$\begin{align*}
 \mathbb{P}(N \text{ ó } A) & = \frac{\text{Número de bolas negras o azules en la bolsa}}{\text{Total de bolas en la bolsa}} \\ 
 & = \frac{8}{10} \\ 
 & = 0.8
 \end{align*}$$
 
-Similarmente, puede llegarse al mismo resultado mediante el empleo de teoría de conjuntos, en donde $\mathbb{P}(N \text{ ó } A) = \mathbb{P}(N \cup A)$, y como los eventos $N$ y $A$ son <strong>mutuamente excluyentes</strong>, es decir, $N\cap A = \phi$, entonces la probabilidad de sacar una <strong style="color: #000;">bola negra</strong> o una <strong style="color: #007bff;">bola azul</strong> será igual a
+Similarmente, puede llegarse al mismo resultado mediante el empleo de teoría de conjuntos, en donde $\mathbb{P}(N \text{ ó } A) = \mathbb{P}(N \cup A)$, y como los eventos $N$ y $A$ son <strong>mutuamente excluyentes</strong>, es decir, $N\cap A = \phi$, entonces la probabilidad de sacar una bola negra o una bola azul será igual a
 $$\begin{align*}
 \mathbb{P}(N \cup A) & = \mathbb{P}(N) + \mathbb{P}(A) \\
 & = \frac{3}{10} + \frac{5}{10} \\
@@ -284,14 +284,14 @@ $$\begin{align*}
 & = 0.8
 \end{align*}$$
 </li>
-<li> Dado que la suma del número de <strong style="color: #000;">bolas negras</strong> y <strong style="color: #b31917;">bolas rojas</strong> es de $3$, entonces el número de bolas en la bolsa que NO SON <strong style="color: #000;">negras</strong> y NO SON <strong style="color: #b31917;">rojas</strong> es de $7$, y por tanto, se tendrá que la frecuencia relativa o probabilidad de NO SACAR una <strong style="color: #000;">bola negra</strong> y NO SACAR una bola <strong style="color: #b31917;">bola roja</strong> de la bolsa es
+<li> Dado que la suma del número de bolas negras y bolas rojas es de $3$, entonces el número de bolas en la bolsa que NO SON negras y NO SON rojas es de $7$, y por tanto, se tendrá que la frecuencia relativa o probabilidad de NO SACAR una bola negra y NO SACAR una bola bola roja de la bolsa es
 $$\begin{align*}
 \mathbb{P}(N' \text{ y } R') & = \frac{\text{Número de bolas que NO SON negras} \\ \text{ y NO SON rojas en la bolsa}}{\text{Total de bolas en la bolsa}} \\ 
 & = \frac{7}{10} \\
 & = 0.7
 \end{align*}$$
 
-Mediante teoría de conjuntos, $\mathbb{P}(N' \text{ y } R') =$ $\mathbb{P}(N' \cap R') =$ $1 - \mathbb{P}(N \cup R)$, y como los eventos $N$ y $R$ son <strong>mutuamente excluyentes</strong>, es decir, $N\cap R = \phi$, entonces la probabilidad de NO SACAR una <strong style="color: #000;">bola negra</strong> y NO SACAR una <strong style="color: #b31917;">bola roja</strong> será igual a
+Mediante teoría de conjuntos, $\mathbb{P}(N' \text{ y } R') =$ $\mathbb{P}(N' \cap R') =$ $1 - \mathbb{P}(N \cup R)$, y como los eventos $N$ y $R$ son <strong>mutuamente excluyentes</strong>, es decir, $N\cap R = \phi$, entonces la probabilidad de NO SACAR una bola negra y NO SACAR una bola roja será igual a
 $$\begin{align*}
 \mathbb{P}(N' \cap R') & = 1 - \mathbb{P}(N \cup R) \\ 
 & = 1 - (\mathbb{P}(N) + \mathbb{P}(R)) \\ 
