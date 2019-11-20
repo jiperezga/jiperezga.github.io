@@ -128,43 +128,36 @@ add_header_above(c("Frecuencia de" = 1, "Adquisición de Productos" = 3))
     * Encuentre el número de puntos muestrales en el espacio muestral para el experimento, si no se tiene en cuenta que los dos dados saquen el mismo resultado.
     * Cuál es la probabilidad de que el número obtenido en los dos dados sea igual?
     
-18. Un experimento consiste en lanzar un dado. Si el número en el dado es par, se lanzar una moneda una vez. Si el número en el dado es impar, la moneda se lanza dos veces. 
-    * Construya un diagrama de árbol para mostrar los elementos del espacio muestral S.
-    * Calcule la probabilidad de obtener un 5 en el dado, seguido de dos caras de la moneda.
-    * Calcule la probabilidad de obtener un número par en el dado, seguido de un sello de la moneda.
+18. Un estudiante vive en un pueblo aledaño del Valle de Aburrá, y sólo cuenta con dos rutas de transporte para poder llegar a Caldas. Una vez llega a Caldas posee tres diferentes rutas para llegar al parque de San Antonio, y de allí puede seleccionar entre Metro o Bus para llegar a la UdeA. De cuantas formas podrías llegar a la UdeA desde su casa?
    
-19. Si `$S = \{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}$`, `$A = \{0, 2, 4, 6, 8\}$`, `$B = \{1, 3, 5, 7, 9\}$`, `$C = \{2, 3, 4, 5\}$` y `$D = \{1, 6, 7\}$`, liste los elementos de los conjuntos que corresponden a los siguientes eventos:
+19. Si `$S$` representa el espacio muestral de todas las posibles cartas que pueden seleccionarse de un mazo de `$52$` cartas, `$A$` representa el evento de todos los números pares , `$B$` representa el evento de todas las letras, `$C$` representa el evento de obtener una carta roja y `$D` representa el evento de obtener un `$10$` rojo, una `$J$` negra o un `$5$` de cualquier color, diga con palabras a que conjuntos que corresponden a los siguientes eventos:
     * `$A \cup C$`
     * `$A \cap B$`
     * `$C'$`
     * `$(C' \cap D) \cup B$`
-    * `$(S \cap C)'$`
-    * `$A \cap C \cap D'$`
+    * `$(S \cap A)'$`
+    * `$A \cap C \cap D$`
 
-20. Suponga que usted le pide el favor a un compañero de curso que lo inscriba en cierta materia. Si su compañero olvida hacer la inscripción a tiempo, la probabilidad de que usted consiga cupo para dicha asignatura es de sólo el 4%, en tanto que si su compañero hace la inscripción a tiempo, la probabilidad de que usted consiga cupo para dicha asignatura es del 75%. Usted está seguro en un 85% de que su compañero hará la inscripción a tiempo. Si usted obtuvo cupo, ¿Cuál la probabilidad de que su compañero no lo haya inscrito a tiempo?
-21. La policía planea hacer respetar los límites de velocidad usando un sistema de radar en 4 diferentes puntos a las orillas de la ciudad. Las trampas de radar en cada uno de los sitios L1, L2, L3 y L4 operarán 40%, 30%, 20% y 30% del tiempo. Si una persona que excede el límite de velocidad cuando va a su trabajo tiene probabilidades de 0.2, 0.1, 0.5 y 0.2, respectivamente, de pasar por esos lugares, ¿cuál es la probabilidad de que reciba una multa por conducir con exceso de velocidad?
-22. Basado en su experiencia, un agente bursátil considera que en las condiciones económicas actuales la probabilidad de que un cliente invierta en bonos libres de impuestos es 0.6, la de que invierta en fondos comunes de inversión es 0.3 y la de que invierta en ambos es 0.15. En esta ocasión encuentre la probabilidad de que un cliente invierta
+20. Suponga que usted le pide el favor a un compañero de curso que lo inscriba en cierta materia. Si su compañero olvida hacer la inscripción a tiempo, la probabilidad de que usted consiga cupo para dicha asignatura es de sólo el `$4\%$`, en tanto que si su compañero hace la inscripción a tiempo, la probabilidad de que usted consiga cupo para dicha asignatura es del `$75\%$`. Usted está seguro en un `$85\%$` de que su compañero hará la inscripción a tiempo. Si usted obtuvo cupo, ¿Cuál la probabilidad de que su compañero no lo haya inscrito a tiempo?
+21. La policía planea hacer respetar los límites de velocidad usando un sistema de radar en `$4$` diferentes puntos de la autopista. Las trampas de radar en cada uno de los sitios `$L_1$`, `$L_2$`, `$L_3$` y `$L_4$` operarán `$40\%$`, `$30\%$`, `$20\%$` y `$30\%$` del tiempo. Si una persona que excede el límite de velocidad cuando va a su trabajo tiene probabilidades del `$20\%$`, `$10\%$`, `$50\%$` y `$20\%$`, respectivamente, de pasar por esos lugares. Si pasa un carro cualquiera por la autopista, ¿Cuál es la probabilidad de que reciba una multa por conducir con exceso de velocidad?
+22. Basado en su experiencia, un agente bursátil considera que en las condiciones económicas actuales la probabilidad de que un cliente invierta en bonos libres de impuestos es `$0.6$`, la de que invierta en fondos comunes de inversión es `$0.3$` y la de que invierta en ambos es `$0.15$`. En esta ocasión encuentre la probabilidad de que un cliente invierta
     * en bonos libres de impuestos o en fondos comunes de inversión
     * en ninguno de esos dos instrumentos
 
-23. Un banco ha comprobado que uno de cada 1000 clientes con fondos expide un cheque con fecha equivocada.  En cambio, todo cliente sin fondos pone una fecha errónea en sus cheques. El 90% de los clientes del banco tienen fondos. Se recibe hoy en caja un cheque con fecha equivocada. ¿Cuál es la probabilidad de que sea de un cliente sin fondos?
+23. Si el profesor pone `$10$` preguntas en el primer parcial y deja escoger `$8$` cualesquiera para que resuelvan, de cuantas formas pueden los estudiantes escoger las `$8$` preguntas?
 24. Suponga una red de comunicaciones de cinco componentes conectados según se muestra a continuación
 ![](../../EstadisticaI/images/Circuito2.PNG)		
-la probabilidad de que funcione el componente C1 es de 0.98, la de C2 es 0.96, la de C3 es de 0.83, la de C4 es de 0.89 y la de C5 es de 0.90. La red funciona si entre A y B es posible encontrar un camino de componentes que funcione. Se supone que la probabilidad de funcionar cada componente es independiente de los demás. ¿Cuál es la probabilidad de que no haya comunicación entre A y B?
-25. Basado en su experiencia, un agente bursátil considera que en las condiciones económicas actuales la probabilidad de que un cliente invierta en bonos libres de impuestos es 0.6, la de que invierta en fondos comunes de inversión es 0.3 y la de que invierta en ambos es 0.15. En esta ocasión encuentre la probabilidad de que un cliente invierta
-    * en bonos libres de impuestos o en fondos comunes de inversión
-    * en ninguno de esos dos instrumentos 
-    
-26. Si un experimento consiste en lanzar un dado y después extraen una letra al azar del alfabeto, ¿Cuántos puntos habrá en el espacio muestral?
-27. La probabilidad de sobrevivir a una cierta operación de trasplante es 0.55. Si un paciente sobrevive la operación, la probabilidad que su cuerpo rechace el trasplante en menos de un mes es 0.20. ¿Cuál es la probabilidad de que sobreviva a estas etapas críticas?
-28. Un dado balanceado se tira seis veces y cada vez se registra el número de su cara superior, ¿Cuál es la
-probabilidad de que los números registrados sean 1, 2, 3, 4, 5 y 6 en cualquier orden?
-29. Se sabe que 2/3 de los reclusos en cierta prisión federal son menores de 25 años de edad. También se sabe que 3/5 de los reos son hombres y que 5/8 son mujeres de 25 años de edad o mayores. ¿Cuál es la probabilidad de que un prisionero seleccionado al azar de esta prisión sea mujer o tenga al menos 25 años de edad?
-30. Un alergólogo afirma que 50% de los pacientes que examina son alérgicos a algún tipo de hierba. ¿Cuál es la probabilidad de que… 
-    * exactamente 3 de sus 4 pacientes siguientes sean alérgicos a hierbas?
-    * ninguno de sus 4 pacientes siguientes sea alérgico a hierbas?
+la probabilidad de que funcione el componente C1 es del `$98\%$`, la de C2 es `$96\%$`, la de C3 es de `$83\%$`, la de C4 es de `$98\%$` y la de C5 es de `$90\%$`. La red funciona si entre A y B es posible encontrar un camino de componentes que funcione. Se supone que la probabilidad de funcionar cada componente es independiente de los demás. ¿Cuál es la probabilidad de que no haya comunicación entre A y B?
+25. Si un experimento consiste en lanzar un dado y después extraen una letra al azar del alfabeto, ¿Cuántos puntos habrá en el espacio muestral?
+26. De cuantas formas pueden acomodarse `$3$` bombillitos rojos, `$4$` amarillos y `$2$` azules en una instalación navidella que posee `$9$` entradas?
+27. La probabilidad de sobrevivir a una cierta operación de trasplante es de `$0.55$`. Si un paciente sobrevive la operación, la probabilidad que su cuerpo rechace el trasplante en menos de un mes es de`$0.20$`. ¿Cuál es la probabilidad de que sobreviva a estas etapas críticas?
+28. Un dado balanceado se tira seis veces y cada vez se registra el número de su cara superior, ¿Cuál es la probabilidad de que los números registrados sean `$1$`, `$2$`, `$3$`, `$4$`, `$5$` y `$6$` en cualquier orden?
+29. De `$200$` empleados de una empresa, `$70$` poseen automóvil. Además se sabe que de éstos, hay `$120$` profesionales, de los cuales `$50$` tienen automóvil. Si se escoge una persona al azar de las `$200$` y ésta posee automóvil, ¿Cuál es la probabilidad de que sea profesional?
+30. Un alergólogo afirma que `$30\%$` de los pacientes que examina son alérgicos a algún tipo de hierba. ¿Cuál es la probabilidad de que… 
+    * exactamente `$3$` de sus `$4$` pacientes siguientes sean alérgicos a hierbas?
+    * ninguno de sus `$4$` pacientes siguientes sea alérgico a hierbas?
 
-31. Suponga que una familia sale de vacaciones de verano en su casa rodante y que M es el evento de que sufrirán fallas mecánicas, T es el evento de que recibirán una infracción por cometer una falta de tránsito y V es el evento de que llegarán a un lugar para acampar que esté lleno. Basado en el siguiente diagráma de Venn
+31. Suponga que una familia sale de vacaciones de verano en su casa rodante. Si `$M$` es el evento de que sufrirán fallas mecánicas, `$T$` es el evento de que recibirán una infracción por cometer una falta de tránsito y `$V$` es el evento de que llegarán a un lugar para acampar que esté lleno. Basado en el siguiente diagráma de Venn
 ![](../../EstadisticaI/images/Venn1.PNG)
 liste los números de las regiones que representan los siguientes eventos
     * La familia no experimentará fallas mecánicas y no será multada por cometer una infracción de tránsito, pero llegará a un lugar para acampar que está lleno.
@@ -172,28 +165,35 @@ liste los números de las regiones que representan los siguientes eventos
     * La familia experimentará fallas mecánicas o encontrará un lugar para acampar lleno, pero no será multada por cometer una infracción de tránsito.
     * La familia no llegará a un lugar para acampar lleno.
 
-32. Una flota de nueve taxis se ha de despachar a tres aeropuertos en forma tal que tres vayan al aeropuerto A, cinco al aeropuerto B y uno al aeropuerto C. ¿En cuántas formas distintas se puede lograr esto?
-33. En un grupo de 100 estudiantes de bachillerato que están cursando el último año, 42 cursaron matemáticas, 68 psicología, 54 historia, 22 matemáticas e historia, 25 matemáticas y psicología, 7 historia pero ni matemáticas ni psicología, 10 las tres materias y 8 no cursaron ninguna de las tres. Seleccione al azar a un estudiante de este grupo y calcule la probabilidad de los siguientes eventos:
+32. Una flota de `$9$` taxis se ha de despachar a `$3$` aeropuertos en forma tal que `$3$` vayan al aeropuerto A, `$5$` al aeropuerto B y `$1$` al aeropuerto C. ¿En cuántas formas distintas se puede lograr esto?
+33. En un grupo de `$100$` estudiantes de bachillerato que están cursando el último año, `$42$` cursaron matemáticas, `$68$` psicología, `$54$` historia, `$22$` matemáticas e historia, `$25$` matemáticas y psicología, `$7$` historia pero ni matemáticas ni psicología, `$10$` las tres materias y `$8$` no cursaron ninguna de las tres. Seleccione al azar a un estudiante de este grupo y calcule la probabilidad de los siguientes eventos:
     * Una persona inscrita en psicología y cursa las tres materias
     * Una persona que no está inscrita en psicología y esté cursando historia y matemáticas.
 
-34. La probabilidad de que una industria estadounidense se ubique en Shanghái, China, es 0.7, la probabilidad de que se ubique en Beijing, China, es 0.4 y la probabilidad de que se ubique en Shamghái o Beijing, o en ambas ciudades, es 0.8. ¿Cuál es la probabilidad de que la industria se ubique…
+34. De un grupo de `$9$` estudiantes, se tiene que `$6$` estudian Economía y `$3$` estudian Administración de Empresas. De cuantas formas se puede enviar a `$3$` estudiantes de Economía y `$2$` de Administración de Empresas para un congreso en Finanzas.
+35. La probabilidad de que una industria estadounidense se ubique en Shanghái, China, es `$0.7$`, la probabilidad de que se ubique en Beijing, China, es `$0.4$` y la probabilidad de que se ubique en Shanghái o Beijing, o en ambas ciudades, es `$0.8$`. ¿Cuál es la probabilidad de que la industria se ubique…
     * en ambas ciudades?
     * en ninguna de esas ciudades?
     
-35. Un testigo de un accidente automovilístico le dijo a la policía que la matrícula del culpable, que huyó, contenía las letras RLH seguidas por 3 dígitos, de los cuales el primero era un 5. Si el testigo no recuerda los 2 últimos dígitos, pero está seguro de que los 3 eran distintos, calcule la cantidad máxima de registros de automóviles que la policía tendría que revisar.
-36. Resuelva
-    * ¿De cuántas maneras se pueden formar 6 personas para abordar un autobús?
-    * ¿Cuántas maneras son posibles si, de las 6, 3 personas específicas insisten en formarse una después de la otra?
-    * ¿De cuántas maneras se pueden formar si, de las 6, 2 personas específicas se rehúsan a formarse una detrás de la otra?
-
-36. Un fabricante de neumáticos quiere determinar el diámetro interior de un neumático de cierto grado de calidad, en donde, sabe que idealmente el diámetro debería ser de 570 mm. Suponga que el fabricante tiene los siguientes datos: 
+36. Un testigo de un accidente automovilístico le dijo a la policía que la matrícula del culpable, que huyó, contenía las letras `$RLH$` seguidas por `$3$` dígitos, de los cuales el primero era un `$5$`. Si el testigo no recuerda los `$2$` últimos dígitos, pero está seguro de que los `$3$` eran distintos, calcule la cantidad máxima de registros de automóviles que la policía tendría que revisar.
+37. Un fabricante de neumáticos quiere determinar el diámetro interior de un neumático de cierto grado de calidad, en donde, sabe que idealmente el diámetro debería ser de `$570$` mm. Suponga que el fabricante tiene los siguientes datos: 
 `\begin{align*}
 572, 573, 572, 568, 569, 575, 565, 570, 571, 562, 565, 572		
 \end{align*}`
-   * Calcule la media, la mediana y la moda de la muestra e interprete en base al enunciado.
-   * Obtenga la varianza, la desviación estándar y el rango intercuartílico de la muestra.
-   * Obtenga los coeficientes de asimetría y curtosis.
-   * Con base en los estadísticos calculados en los incisos a) y b), ¿qué comentaría acerca de la calidad de los neumáticos?
+    * Calcule la media, la mediana y la moda de la muestra e interprete en base al enunciado.
+    * Obtenga la varianza, la desviación estándar y el rango intercuartílico de la muestra.
+    * Obtenga los coeficientes de asimetría y curtosis.
+    * Con base en los estadísticos calculados en los incisos a) y b), ¿qué comentaría acerca de la calidad de los neumáticos?
    
-37. Dos monedas una balanceada y otra con dos sellos son colocadas en un sombrero. Se selecciona al azar una moneda y se lanza al aire. Si la cara superior es sello, ¿cuál es la probabilidad de que la cara oculta sea cara?
+38. Dos monedas una balanceada y otra con dos sellos son colocadas en un sombrero. Se selecciona al azar una moneda y se lanza al aire. Si la cara superior es sello, ¿cuál es la probabilidad de que la cara oculta sea cara?
+39. Un experimento consiste en lanzar un dado. Si el número en el dado es par, se lanzar una moneda una vez. Si el número en el dado es impar, la moneda se lanza dos veces. 
+    * Construya un diagrama de árbol para mostrar los elementos del espacio muestral `$S$`.
+    * Calcule la probabilidad de obtener un `$5$` en el dado, seguido de dos caras de la moneda.
+    * Calcule la probabilidad de obtener un número par en el dado, seguido de un sello de la moneda.
+    
+40. Un banco ha comprobado que uno de cada `$1000$` clientes con fondos expide un cheque con fecha equivocada.  En cambio, todo cliente sin fondos pone una fecha errónea en sus cheques. El `$90\%$` de los clientes del banco tienen fondos. Se recibe hoy en caja un cheque con fecha equivocada. ¿Cuál es la probabilidad de que sea de un cliente sin fondos?
+
+41. Resuelva
+    * ¿De cuántas maneras se pueden formar `$6$` personas para abordar un autobús?
+    * ¿Cuántas maneras son posibles si, de las `$6$`, `$3$` personas específicas insisten en formarse una después de la otra?
+    * ¿De cuántas maneras se pueden formar si, de las `$6$`, `$2$` personas específicas se rehúsan a formarse una detrás de la otra?
