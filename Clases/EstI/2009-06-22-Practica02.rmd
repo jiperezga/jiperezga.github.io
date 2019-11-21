@@ -190,9 +190,8 @@ liste los números de las regiones que representan los siguientes eventos
     * Construya un diagrama de árbol para mostrar los elementos del espacio muestral `$S$`.
     * Calcule la probabilidad de obtener un `$5$` en el dado, seguido de dos caras de la moneda.
     * Calcule la probabilidad de obtener un número par en el dado, seguido de un sello de la moneda.
-    
-40. Un banco ha comprobado que uno de cada `$1000$` clientes con fondos expide un cheque con fecha equivocada.  En cambio, todo cliente sin fondos pone una fecha errónea en sus cheques. El `$90\%$` de los clientes del banco tienen fondos. Se recibe hoy en caja un cheque con fecha equivocada. ¿Cuál es la probabilidad de que sea de un cliente sin fondos?
 
+40. Un banco ha comprobado que uno de cada `$1000$` clientes con fondos expide un cheque con fecha equivocada.  En cambio, todo cliente sin fondos pone una fecha errónea en sus cheques. El `$90\%$` de los clientes del banco tienen fondos. Se recibe hoy en caja un cheque con fecha equivocada. ¿Cuál es la probabilidad de que sea de un cliente sin fondos?
 41. Resuelva
     * ¿De cuántas maneras se pueden formar `$6$` personas para abordar un autobús?
     * ¿Cuántas maneras son posibles si, de las `$6$`, `$3$` personas específicas insisten en formarse una después de la otra?
