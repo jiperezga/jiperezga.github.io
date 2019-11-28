@@ -42,6 +42,8 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
+
+<!-- Eliminar o modificar ejercicio del sombrero!!!-->
 # Lista de ejercicios
 1. Suponga que usted tienen `$12$` juegos diferentes de Nintendo Switch, y desea ponerlos sobre una repisa nueva que compró.
    * De cuantas formas puede organizar los juegos?
@@ -49,7 +51,7 @@ opts_chunk$set(echo=TRUE,
 
 2. Un moneda esta cargada de tal forma que la probabilidad de que aparezca cara es tres veces mayor a que aparezca sello. Si se decide lanzar la moneda tres veces, cuál es la probabilidad de sacar al menos dos caras?
 3. Suponga un juego en donde se lanza un dado cargado de tal forma que la probabilidad de que caiga cualquier cara, es proporcional al número de puntos que le falta a la cara para sumar 6. ¿Cuál es la probabilidad de que al lanzar el dado salga un número impar?
-4. Sea el espacio muestral `$S = \{x | 1 < x < 12\}$` definido como el rango de tiempo que puede tardar cualquier estudiante en realizar un trabajo de la universidad. Suponga que se tienen tres tipos de estudiantes, el evento `$X = \{x | 1 < x < 3\}$` el tiempo que tardan los estudiantes que estudiaron previamente, el evento `$Y = \{x | 1.5 < x < 8\}$` el tiempo que tardan los estudiantes que solo iban a clase y el evento `$Z = \{x | 7 < x < 12\}$`, el tiempo que tardan los estudiantes que nunca iban a clase ni estudiaron previamente. Dado lo anterior, encuentre e interprete en lo posible los siguientes eventos.
+4. Sea el espacio muestral `$S = \{x | 1 < x < 12\}$` definido como el rango de tiempo que puede tardar cualquier estudiante en realizar un trabajo de la universidad. Suponga que se tienen tres tipos de estudiantes, el evento `$X = \{x | 1 < x < 3\}$` representa el tiempo que tardan los estudiantes que estudiaron más de `$5$` horas, el evento `$Y = \{x | 1.5 < x < 8\}$` representa el tiempo que tardan los estudiantes que estudiaron entre `$2$` y `$5$` horas, y `$Z = \{x | 7 < x < 12\}$`, el tiempo que tardan los estudiantes que estudiaron menos de `$2$` horas. Dado lo anterior, encuentre e interprete en lo posible los siguientes eventos.
    * `$X \cup Y$`
    * `$X \cap Y$`
    * `$X'\cap Z$`
