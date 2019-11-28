@@ -174,10 +174,11 @@ Dado que un evento puede estar compuestos por un conjunto de datos, las relacion
 <h3 data-toc-skip> Ejercicio </h3> 
 <p>Dados los resultados en los puntos anteriores</p>
 <ol type="1">
-<li> Escriba el **complemento** del evento $A_1$.</li>
-<li> Escriba la **unión** de los eventos $B_1$ y $B_2$.</li>
-<li> Escriba la **intersección** entre los eventos $A_1$ y $A_2$.</li>
-<li> Escriba un evento $B_3$ que sea **mutuamente excluyente** del evento $B_2$.</li>
+<li> Escriba el <strong>complemento</strong> del evento $A_1$.</li>
+<li> Escriba la <strong>unión</strong> de los eventos $B_1$ y $B_2$.</li>
+<li> Escriba la <strong>intersección</strong> entre los eventos $A_1$ y $A_2$.</li>
+<li> Escriba un evento $B_3$ que sea <strong>mutuamente excluyente</strong> del evento $B_2$.</li>
+</ol>
 <h3 data-toc-skip> Solución </h3> 
 <ol type = "1">
 <li> Como el evento $A_1$ está dado por $A_1 = \{2, 3, 5\}$, entonces su <strong>complemento</strong> $A_1'$ estará dado por 
