@@ -233,7 +233,7 @@ Hay una gran variedad de funciones matemáticas que suelen usarse en la práctic
 datos2 <- cbind(
   "Operación" = c("Valor absoluto", "Raíz cuadrada", "Redondear", "Techo", "Piso", "Exponencial", "Logaritmo", "Factorial", "Gamma", "Seno", "Coseno", "Tangente"),
   "Operador en R" = c("abs()", "sqrt()", "round()", "ceiling()", "floor()", "exp()", "log()", "factorial()", "gamma()", "sin()", "cos()", "tan()"),
-  "Operador en Python" = c("abs()", "math.sqrt()", "math.floor()", "math.ceil()", "math.exp()", "math.log()", "math.factorial()", "math.gamma()", "math.sin()", "math.cos()", "math.tan()"))
+  "Operador en Python" = c("abs()", "math.sqrt()", "round()", "math.floor()", "math.ceil()", "math.exp()", "math.log()", "math.factorial()", "math.gamma()", "math.sin()", "math.cos()", "math.tan()"))
 
 kable(datos2, 
   format = "html", booktabs = T) %>%
@@ -250,7 +250,7 @@ datos2 <- cbind(
   "Operación" = c("es igual que", "es distinto que", "es menor que", "es menor o igual que", "es mayor que", "es mayor o igual que", "Negación", "Conjunción", "Disyunción"),
   "Operador en R" = c("==", "!=", "<", "<=", ">", ">=", "!", "&", "|"),
   "Operador en Python" = c("==", "!=", "<", "<=", ">", ">=", "not", "and", "or"),
-  "Precedencia" = c(4, 4, 4, 4, 4, 4, 4, 6/5, 5/6, 5/7))
+  "Precedencia" = c(4, 4, 4, 4, 4, 4, 4, "6-5", "5-6", "5-7"))
 
 kable(datos2, 
   format = "html", booktabs = T) %>%
@@ -606,7 +606,7 @@ MatC <- matrix(data = c(VecE, T, T, F), nrow = 3, ncol = 3, byrow = F)  # Lógic
 <p>A continuación se presenta un ejemplo en donde se muestra como construir arreglos para diferentes tipos de datos en <tt>R</tt></p>
 
 <section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="n">ArrA</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kd">array</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">),</span><span class="w"> </span><span class="n">dim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">))</span><span class="w">  </span><span class="c1"># Numeric</span><span class="w">
-</span><span class="n">ArrN</span><span class="w">
+</span><span class="n">ArrA</span><span class="w">
 </span></code></pre></section></section>
 
 <section class="highlighter-rouge"><section class="highlight"><pre class="highlight"><code>, , 1
@@ -625,7 +625,7 @@ MatC <- matrix(data = c(VecE, T, T, F), nrow = 3, ncol = 3, byrow = F)  # Lógic
 </code></pre></section></section>
 
 <section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="n">ArrB</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kd">array</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">VecB</span><span class="p">,</span><span class="w"> </span><span class="s2">"o"</span><span class="p">,</span><span class="w"> </span><span class="s2">"m"</span><span class="p">),</span><span class="w"> </span><span class="n">dim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">))</span><span class="w">  </span><span class="c1"># Character</span><span class="w">
-</span><span class="n">ArrC</span><span class="w">
+</span><span class="n">ArrB</span><span class="w">
 </span></code></pre></section></section>
 
 <section class="highlighter-rouge"><section class="highlight"><pre class="highlight"><code>, , 1
@@ -642,7 +642,7 @@ MatC <- matrix(data = c(VecE, T, T, F), nrow = 3, ncol = 3, byrow = F)  # Lógic
 </code></pre></section></section>
 
 <section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="n">ArrC</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kd">array</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">VecE</span><span class="p">,</span><span class="w"> </span><span class="nb">F</span><span class="p">,</span><span class="w"> </span><span class="nb">F</span><span class="p">,</span><span class="w"> </span><span class="kc">NA</span><span class="p">,</span><span class="w"> </span><span class="nb">F</span><span class="p">,</span><span class="w"> </span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="kc">NA</span><span class="p">),</span><span class="w"> </span><span class="n">dim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">))</span><span class="w">  </span><span class="c1"># Logic</span><span class="w">
-</span><span class="n">ArrL</span><span class="w">
+</span><span class="n">ArrC</span><span class="w">
 </span></code></pre></section></section>
 
 <section class="highlighter-rouge"><section class="highlight"><pre class="highlight"><code>, , 1
