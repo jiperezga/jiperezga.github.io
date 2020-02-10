@@ -430,7 +430,7 @@ SetC =  set([False, True, None, False, True, False])  # Boolean
 </main>
 
 #### Módulo numpy
-Adicionalmente, se poseen otras estructuras básicas que pueden ser de nuestro interés, las cuales se pueden encontrar en el módulo `numpy`. Este paquete posee una gran variedad de funciones matemáticas para realizar computación científica, y ofrece gran soporte para un objetos de matriciales ``$N$-dimensionales.
+Adicionalmente, se poseen otras estructuras básicas que pueden ser de nuestro interés, las cuales se pueden encontrar en el módulo `numpy`. Este paquete posee una gran variedad de funciones matemáticas para realizar computación científica, y ofrece gran soporte para un objetos de matriciales `$N$`-dimensionales.
 
 Para importar el módulo `numpy` puede emplearse cualquiera de las dos lineas de código
 
