@@ -106,7 +106,7 @@ Los eventos pueden ser clasificados en dos tipos
 <main id="botoncito3"> 
 <h3 data-toc-skip> Ejercicio </h3> 
 <ol type ="1">
-<li> Considere el experimento de lanzar un dado convencional de `$6$` caras.</br> Escriba el evento </li>
+<li> Considere el experimento de lanzar un dado convencional de `$6$` caras.<br> Escriba el evento </li>
 <ul>
 <li>$A_1$ el cual se saca un número primo en el dado.</li>
 <li>$A_2$ el cual se saca un número 3 en el dado.</li>
