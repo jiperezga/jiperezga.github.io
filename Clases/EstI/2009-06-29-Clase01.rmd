@@ -83,23 +83,25 @@ Las escalas o niveles de medición se utilizan para medir variables o atributos 
 * **Intervalo**: Son aquellas mediciones cuantitativas que establecen la distancia entre una medida y otra, en términos de una unidad de medición fija, donde **el cero se selecciona de forma arbitraria y no indica ausencia del tributo**, ni indica conceptos como 'ninguno', 'vacío' o 'nada'. Por ejemplo: __Unidades de medida en centígrados o Fahrenheit__
 * **Razón**: Son aquellas mediciones cuantitativas que establece la distancia exacta de una categoría debido a que **el cero es absoluto, no es arbritario, e indica ausencia del atributo**. Por ejemplo __Índice de masa corporal, Salario__
 
-#### Ejercicio
-Clasifique las variables según el tipo de dato y su escala de medición
 
-1. Evaluación de conocimientos
-2. Tipo de universidad
-3. Posición en un reinado de belleza
-4. Calidad de vida en una ciudad
-5. Escalas de los test psicológicos
-6. Litros de agua consumidos por persona al día
-7. Número del documento de identidad
-8. Goles marcados por un futbolista en un partido
-
-<button id="Show1" class="btn btn-secondary">Mostrar Solución</button>
-<button id="Hide1" class="btn btn-info">Ocultar Solución</button>
+<button id="Show1" class="btn btn-secondary">Mostrar Ejercicio </button>
+<button id="Hide1" class="btn btn-info">Ocultar Ejercicio </button>
 <main id="botoncito1"> 
+<h3 data-toc-skip> Ejercicio </h3> 
+<p>Clasifique las variables según el tipo de dato y su escala de medición</p>
+<ol>
+<li>Evaluación de conocimientos</li>
+<li>Tipo de universidad</li>
+<li>Posición en un reinado de belleza</li>
+<li>Calidad de vida en una ciudad</li>
+<li>Escalas de los test psicológicos</li>
+<li>Litros de agua consumidos por persona al día</li>
+<li>Número del documento de identidad</li>
+<li>Goles marcados por un futbolista en un partido</li>
+</ol>
+
 <h3 data-toc-skip> Solución </h3> 
-<ol type = "1">
+<ol>
 <li> <strong> Evaluación de conocimientos: </strong> Suponga que es una calificación obtenida en un intervalo de $0$ a $5$, y en consecuencia, se tendrá que la variable será de tipo <strong>Cuantitativa continua</strong>, con una escala de medición de tipo <strong>intervalo</strong>, debido a que tener un $0$ en una evaluación de conocimiento no significa necesariamente que no se tenga ningún conocimiento sobre el tema evaluado </li>
 <li> <strong> Tipo de universidad:</strong> Dado que las universidades pueden ser públicas o privadas, se tendrá una variable de tipo <strong>lógica</strong>, con una escala de medición de tipo <strong>nominal</strong>, debido a que no existe una jerarquía o un ordenamiento natural en donde se siga que las universidades públicas son superiores a las privadas, o viceversa. </li>
 <li> <strong> Posición en un reinado de belleza:</strong> La posición obtenida en un reinado de belleza se divide en muchas competencias como Reina, Virreina, Primera princesa, Segunda Princesa y Tercera princesa, por tanto, se tendrá que la variable será de tipo <strong>Cualitativa</strong>, con una escala de medición de tipo <strong>ordinal</strong> debido a que hay una jerarquía entre las posiciones obtenidas, siendo la posición más alta la Reina, cual es la que gana la competencia, seguida por la Vierreina la cual es quién queda en la segunda posición en la competencia, y así sucesivamente.</li>
