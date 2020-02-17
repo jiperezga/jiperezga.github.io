@@ -66,7 +66,7 @@ Las estructuras de control son instrucciones que permiten controlar la forma en 
 Los condicionales son acciones usadas en programación, que **permiten que se ejecute un conjuntos de instrucciones, en función de si se cumple o no una condición establecida previamente**.
 
 ## Funciones condicionales en <tt>R</tt>
-Existen dos funciones básicas en <tt>R</tt> que permiten establecer condiciones en para la ejecución de fragmentos de código, y están dadas por las funciones <tt>if/else</tt>, <tt>ifelse</tt>.\newline
+Existen dos funciones básicas en <tt>R</tt> que permiten establecer condiciones para la ejecución de fragmentos de código, y están dadas por las funciones <tt>if/else</tt>, <tt>ifelse</tt>.\newline
 
 La función <tt>if()</tt> permite ejecutar una secuencia de código basada en una condición preestablecida, y puede emplearse de dos formas diferentes. La primera, es mediante el empleo de la función <tt>if()</tt> de forma individual, que puede interpretarse como un *"<strong>Si</strong> se cumple la condición, <strong>entonces</strong>..."*
 
@@ -259,7 +259,7 @@ for(<índice> in <secuencia>) {
 }
 ```
 
-Por su parte, la función <tt>while</tt> **permite establecer una condición lógica, para repetir un ciclo un sin número de veces, hasta que dicha condición lógica se cumpla**. La condición establecida, suele escribirse generalmente mediante el empleo de [Operadores lógicos](../../SemilleroRyPython/SRyPSesion01.html#operadores-lógicos){:target="_blank"} o mediante la comparación entre una variable de control y un valor. \La estructura de la función <tt>while</tt> está dada por
+Por su parte, la función <tt>while</tt> **permite establecer una condición lógica, para repetir un ciclo un sin número de veces, hasta que dicha condición lógica se cumpla**. La condición establecida, suele escribirse generalmente mediante el empleo de [Operadores lógicos](../../SemilleroRyPython/SRyPSesion01.html#operadores-lógicos){:target="_blank"} o mediante la comparación entre una variable de control y un valor. La estructura de la función <tt>while</tt> está dada por
 
 ```{r eval=F}
 while(<condición>) {
@@ -414,7 +414,7 @@ Para definir funciones nuevas en <tt>R</tt> es necesario emplear la función <tt
 }
 ```
 
-Una aspecto importante de las funciones es que éstas pueden dividirse en 3 tipos de elementos diferentes. El primero, está asociado a los **argumentos** que se le dan a la función, éstos pueden ser múltiples y deben separarse por coma unos de otros. Adicionalmente, existe un argumento en particular, dado por tres puntos consecutivos "`$\ldots$`", el cual permite pasar un número variable de argumentos de una función a otra.
+Una aspecto importante de las funciones es que éstas pueden dividirse en `$3$` tipos de elementos diferentes. El primero, está asociado a los **argumentos** que se le dan a la función, éstos pueden ser múltiples y deben separarse por coma unos de otros. Adicionalmente, existe un argumento en particular, dado por tres puntos consecutivos "`$\ldots$`", el cual permite pasar un número variable de argumentos de una función a otra.
 
 \newline
 
@@ -428,7 +428,7 @@ El tercer y último elemento, está asociado a los **resultados** que se tendrá
 <h3 data-toc-skip> Función <tt>function</tt> </h3> 
 <p>Cree una función que permita calcular la probabilidad de obtener más de $3$ caras en el lanzamiento de $10$ monedas, y compare el resultado obtenido con el de una distribución binomial.</p>
 
-```{r}
+```{r eval = F, echo = F}
 # Se crea función la función
 mipbinom <- function(x, n, p, izquierda = T) {
   prob <- numeric()
