@@ -1,0 +1,181 @@
+---
+layout: presentation
+title: "Elementos de Estadística con R"
+main-class: 'presentaciones'
+permalink: /SesionEsp01
+tags:
+
+introduction: 
+image: <img src="../../SesionesEspeciales/images/logo.png" alt="Rday" class="sticky">
+header-includes:
+   - \usepackage{amsmath,amssymb,amsthm,amsfonts}
+   - \usepackage[sectionbib]{natbib}
+   - \usepackage[hidelinks]{hyperref}
+output:
+  md_document:
+    variant: markdown_strict+backtick_code_blocks+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash
+    preserve_yaml: TRUE
+always_allow_html: yes   
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding,
+  output_dir = "../SesionesEspeciales/_posts/", output_format = "all"  ) })
+bibliography: "../referencias.bib"
+csl: "../apa.csl"
+link-citations: yes
+---
+
+```{r knitr_init, echo=FALSE, cache=FALSE}
+library(knitr)
+## Global options
+opts_chunk$set(echo=TRUE,
+               cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE,
+               fig.path = paste0("../SesionesEspeciales/images/", "SesionEsp01"),
+               cache.path = "../Poster/cache/",
+               cache = FALSE)
+```
+
+## Introducción
+
+La Estadística es una **herramienta** ampliamente utilizada en diferentes disciplinas científicas, debido a su gran potencial para **recolectar, analizar, interpretar, estimar y presentar** de forma amigable, la información que se genera en las distintas áreas del conocimiento, para así **poder argumentar y soportar de mejor manera las investigaciones realizadas, y/o mejorar los resultados obtenidos en la toma de decisiones**. 
+
+Adicionalmente, la estadística tiene como ventaja respecto a otras áreas, que permite extraer información de **variables tanto númerida como categórica** de la población de interés o de una muestra de la misma, permitiendo al investigador establecer conclusiones acerca de la misma población, o de alguno de los parámetros que la conforman. Y es debido a ésto, que puede considerarse a la estadística como **uno de los pilares fundamental** dentro de la investigación científica teórica y aplicada.
+
+En general, el análisis estadístico puede dividirse en dos partes:
+
+* La **Estadística descriptiva**, la cual se encarga de resumir la información suministrada mediante el empleo de tablas, gráficas y medidas numéricas, junto con el análisis de las mismas, para facilitar la interpretación y la presentación de la información.
+* La **Inferencia estadística**, la cual se encarga de la inferencias, modelamiento y predicción de la información, para facilitar la obtención de conclusiones y toma decisiones.
+
+## La estadística en políticas públicas
+
+**Las políticas públicas tienen como finalidad abordar problemas sociales** que requieren de intervención desde el ámbito público, y para ello, es *necesario gestionar planes, programas o proyectos que permitan dar solución** de la mejor manera a dichos problemas.
+
+Cada uno de los elementos listados para dar solución a los problemas sociales, **requieren de un proceso de evaluación**, que puede ser igual o más importante que el objetivo mismo que se desea alcanzar, debido a que **permite analizar la planificación y retroalimentar** del proceso de ejecución **a través de la medición del impacto que generan las políticas** para la comunidad. [@Recchioni2016, p. 162]
+
+**Es aquí donde el análisis estadísitico toma relevancia** dentro de las políticas públicas, puesto que, se emplea como una herramienta indispensable en el análisis cualitativo o cuantitativo de información, siendo dicho procedimiento escencial en el momento de diseñar planes de evaluación de políticas.
+
+Y es por ello que, **todo expertos en políticas públicas, debe desarrollar una fuerte fundamentación en análisis de datos**, debido a que éstos deben enfrentarse de forma continua a problemas que requieren la tomar decisiones, basandos en informes estadísticos descriptivos o inferenciales, que tiene por finalidad apoyar la formulación, implementación, gestión o evaluación de políticas públicas.
+
+## Estructura de datos 
+Como caso de estudio para esta sesión, se propone una base de datos construida a partir del Censo de Edificaciones que posee el DANE para el periodo comprendido entre 2012-2018. Dicha base de datos puede ser descargada desde el siguiente [Link](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/CesoEdificaciones2012-2018.csv){:target="_blank"}.
+
+Las variables contenidas en la base de datos anterior son:
+
+* **<tt>ANO_CENSO</tt>:** Año al que corresponde la información recolectada en el Censo.
+* **<tt>TRIMESTRE</tt>:** Trimestre al que corresponde la información recolectada en el Censo.
+* **<tt>REGION</tt>:** Región de acuerdo con las áreas urbanas y metropolitanas en las cuales se realiza la publicación de la información.
+  * Antioquia 5
+  * Risaralda 66
+  * Bogotá 11
+  * Quindío 63
+  * Valle 76
+  * Norte de Santander 54 
+  * Meta 50
+  * Atlántico 8
+  * Huila 41
+  * Santander 68
+  * Bolívar 13
+  * Nariño 52
+  * Cauca 19
+  * Tolima 73
+  * Caldas 17
+* **<tt>OB_FORMAL</tt>:** Define si la obra cuenta o no con licencia de construcción
+  * Si = 1
+  * No = 2
+* **<tt>ESTADO_ACT</tt>:** Ampliación o adición de metros cuadrados a la obra
+  * Si = 1
+  * No = 2
+* **<tt>ESTADO_ACT</tt>:** El movimiento es el código de cambio de estado
+  * C = continua
+  * I = inactiva
+  * N = nueva
+  * A =Ampliación cobertura
+  * R = reinicia
+  * T = Culmina
+  * D = Demolida
+* **<tt>ESTRATO</tt>:** Clasificación dada por las empresas de servicios públicos. División numérica que caracteriza el entorno socio económico de un espacio geográfico y arquitectónico determinado
+  * 1 = Bajo bajo 
+  * 2 = Bajo 
+  * 3 = Medio bajo
+  * 4 = Medio
+  * 5 = Medio Alto
+  * 6 = Alto
+* **<tt>AREATOTZC</tt>:** Área total de zonas comunes cubiertas (incluido garaje y los depósitos o cuartos útiles como: portería, salones comunales, pasillos, etc.).
+* **<tt>AREAUNITGA</tt>:** Metros cuadrados de la unidad de garaje (cubiertos).
+* **<tt>PRECIOUNIG</tt>:** Valor de las unidades de garaje cubierto en miles de pesos.
+* **<tt>TIPOVALOR</tt>:** Tipo de valor de garaje cubierto
+  * Real = 1
+  * Estimado = 2
+* **<tt>MANO_OBRAP</tt>:** Corresponde a la cantidad de mano de obra permanente generada en el período intercensal por tipo de mano de obra.
+* **<tt>MANO_OBRAT</tt>:** Corresponde a la cantidad de mano de obra temporal generada en el período intercensal por tipo de mano de obra.
+* **<tt>AREA_LOTE</tt>:** Corresponde al área del terreno donde se construye la obre o proyecto.
+* **<tt>AREAVENDIB</tt>:** Área total vendible (no incluye garaje y los depósitos o cuartos útiles).
+* **<tt>NRO_PISOS</tt>:** Número de pisos del destino corresponde al número de pisos que conformarán cada destino que este en proceso de construcción.
+* **<tt>GRADOAVANC</tt>:** Grado de avance. Porcentaje de avance de obra del capítulo constructivo.
+* **<tt>PRECIOVTAX</tt>:** Precio de venta por M2 del destino, sin incluir garaje, en miles de pesos.
+* **<tt>AREAVENUNI</tt>:** Área total vendible por unidad (no incluye garaje y los depósitos o cuartos útiles).
+* **<tt>TIPOVIVI</tt>:** Tipo de vivienda hace referencia a si el destino es vivienda de interés social o no. Valor calculado
+  * Vivienda de interés social = 1
+  * Vivienda diferente de VIS = 2
+* **<tt>RANVIVI</tt>:** Rango de vivienda, valor calculado
+  * 1 = SMLMV < 50
+  * 2 = 50 < SMLMV ≤ 70
+  * 3 = 70 < SMLMV ≤ 100
+  * 4 = 100 < SMLMV ≤ 135
+  * 5 = 135 < SMLMV ≤ 350
+  * 6 = SMLMV ≥ 350
+* **<tt>Destino2</tt>:** Identificación de la obra, según tipo o uso de la edificación, que se está construyendo.
+  * 1 = Apartamento
+* 2 = Oficinas
+* 3 = Comercio
+* 4 = Casas
+* 5 = Bodegas
+* 6 = Destinos no comercializables (educación, hoteles, hospitales y centros de salud, administración pública y otros)
+
+## Estadística descriptiva
+En general, la importancia del análisis estadístico radica en la **resolución de problemas vinculados con datos**, en donde la variabilidad de los mísmos es quién guiará la importancia del empleo de diferentes ténicas para el manejo de la información. Desde este punto de vista, se explica en esta sección el método de implementación en <tt>R</tt> de resúmenes de información, resumenes tabulares y gráficos para la presentación de información de forma adecuada, para facilitar la toma de decisiones.
+
+Un aspecto importante a tener en cuenta al realizar análisis estadísticos, es señalado por @Esquivel2016[, p. 29],  el cual menciona que dentro de un análisis con información estadística, se debe tener en cuenta las siguientes etapas: 
+
+1. **Leer entre los datos**: que consiste en llevar a cabo una lectura literal de la información, sin interpretar su contenido).
+2. **Leer dentro de los datos**: implica no solamente interpretar los datos sino integrarlos dentro del contexto.
+3. **Leer más allá de los datos**: significa tomar los datos como referente para identificar patrones que transciendan el grupo de datos observado, ya sea mediante la interpolación o extrapolación de resultados.
+4. **Leer detrás de los datos**: consiste en llevar a cabo un análisis crítico de la información que se estudia, esto implica analizar integralmente el problema, desde su origen, el tipo de dato que se utiliza, su validez y fiabilidad para analizar el problema y la posibilidad de generalizar los hallazgos.
+
+
+
+### Lectura de datos en <tt>R</tt>
+Para realizar la lectura de datos en <tt>R</tt> es necesario conocer la extensión que posee el archivo de interés, debido a que <tt>R</tt> **posee diferentes librerías y funciones que permiten la lectura de bases de datos**.
+
+
+Censo de Edificaciones
+
+### Tipos de datos
+En términos generales, los datos son cualquier pieza de información recolectada del fenómeno que se pretende analizar, y que, dependiendo de las características que posean, deben clasificarse dentro de una determinada categoría.
+
+* **Cuantitativos**: Son datos que pueden ser medidos o cuantificados. Estos se subdividen en dos categorías:
+  * **Datos cuantitativos discretos**: Son aquellos datos que provienen de procesos que involucran conteos, y por tanto, solo pueden tomar valores enteros. Por ejemplo: __Edad de una persona, número de estudiantes que perdieron un curso, cantidad de profesores que dictan Estadística I__
+  - **Datos cuantitativos continuos**: Son aquellos datos que provienen de procesos que involucran mediciones, y por tanto, solo pueden tomar cualquier valor real dentro de un intervalo. Por ejemplo: __Temperatura de congelación del agua, Tiempo que dura una clase, Utilidad diaria de un negocio.__
+* **Cualitativos**: Son datos asociados a una cualidad o propiedad, y por tanto, no pueden representarse numéricamente, a pesar de poder caracterizarse alfanúmericamente. Por ejemplo: __Estrato socioeconómico, tipo de animales en una granja, nivel de satisfacción con el método planteado para dictar el curso.__
+* **Lógicos**: Son datos asociados a valores de lógica binaria, usualmente denotados como Verdadero y Falso, o Éxito y Fracaso. Por ejemplo: __Tipo de Sexo, cara de una moneda, probar si un artículo es defectuoso.__
+
+### Escala de medición
+Las escalas o niveles de medición se utilizan para medir variables o atributos que posea un conjunto de datos. A saber, las escalas de medición se dividen en cuatro, **nominal, ordinal, intervalos y razón**. Las dos primeras (nominal y ordinal) se conocen como escalas categóricas usadas conmúnmente para variables cualitativas, mientras que las dos últimas (intervalo y razón) se conocen como escalas numéricas, usadas comúnmente para variables cuantitativas.
+
+* **Nominal**: Son aquellos factores que establecen etiquetas o categorías a los datos, sin estar sujetos a un orden específico. Por ejemplo: __Partido político, Comuna de residencia__
+* **Ordinal**: Son aquellos factores que establecen etiquetas o categorías a los datos, junto a una estructura jerárquica. Por ejemplo: __Nivel de una enfermedad, Grado de escolaridad__
+* **Intervalo**: Son aquellas mediciones cuantitativas que establecen la distancia entre una medida y otra, en términos de una unidad de medición fija, donde **el cero se selecciona de forma arbitraria y no indica ausencia del tributo**, ni indica conceptos como 'ninguno', 'vacío' o 'nada'. Por ejemplo: __Unidades de medida en centígrados o Fahrenheit__
+* **Razón**: Son aquellas mediciones cuantitativas que establece la distancia exacta de una categoría debido a que **el cero es absoluto, no es arbritario, e indica ausencia del atributo**. Por ejemplo __Índice de masa corporal, Salario__
+
+
+
+
+## Referencias
+<h7 id="ref-Recchioni2016"></h7>
+
+
+
