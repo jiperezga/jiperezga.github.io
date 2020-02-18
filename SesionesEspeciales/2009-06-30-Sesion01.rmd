@@ -52,49 +52,63 @@ En general, el análisis estadístico puede dividirse en dos partes:
 
 ## La estadística en políticas públicas
 
-**Las políticas públicas tienen como finalidad abordar problemas sociales** que requieren de intervención desde el ámbito público, y para ello, es *necesario gestionar planes, programas o proyectos que permitan dar solución** de la mejor manera a dichos problemas.
+**Las políticas públicas tienen como finalidad abordar problemas sociales** que requieren de intervención desde el ámbito público, que tienen como finalizad **gestionar planes, programas o proyectos que permitan dar solución** de la mejor manera a dichos problemas.
 
-Cada uno de los elementos listados para dar solución a los problemas sociales, **requieren de un proceso de evaluación**, que puede ser igual o más importante que el objetivo mismo que se desea alcanzar, debido a que **permite analizar la planificación y retroalimentar** del proceso de ejecución **a través de la medición del impacto que generan las políticas** para la comunidad. [@Recchioni2016, p. 162]
+Cada una las estrategias que buscan dar solución a los problemas sociales, **requieren de un proceso de evaluación**, cuyo papel puede ser igual o más importante que el objetivo mismo que se desea alcanzar. Ésto debido a que, los proceso de evaluación **permiten analizar la planificación** para retroalimentar el proceso de ejecución **a través de la medición del impacto que generan las políticas** para la comunidad. [@Recchioni2016, p. 162]
 
-**Es aquí donde el análisis estadísitico toma relevancia** dentro de las políticas públicas, puesto que, se emplea como una herramienta indispensable en el análisis cualitativo o cuantitativo de información, siendo dicho procedimiento escencial en el momento de diseñar planes de evaluación de políticas.
+**Es aquí donde el análisis estadísitico toma relevancia** dentro de las políticas públicas, puesto que, ésta se emplea como una herramienta indispensable en el análisis cualitativo o cuantitativo de información, siendo dicho procedimiento, una parte escencial en el momento de diseñar planes de evaluación de políticas.
 
-Y es por ello que, **todo expertos en políticas públicas, debe desarrollar una fuerte fundamentación en análisis de datos**, debido a que éstos deben enfrentarse de forma continua a problemas que requieren la tomar decisiones, basandos en informes estadísticos descriptivos o inferenciales, que tiene por finalidad apoyar la formulación, implementación, gestión o evaluación de políticas públicas.
+Es debido a lo anterior que, **todo expertos en políticas públicas, debe desarrollar una fuerte fundamentación en análisis de datos**, ya que deben enfrentarse continuamente a problemas que requieren la tomar decisiones, basandos en informes estadísticos descriptivos o inferenciales, que tiene por finalidad apoyar la formulación, implementación, gestión o evaluación de políticas públicas.
 
-## Estructura de datos 
-Como caso de estudio para esta sesión, se propone una base de datos construida a partir del Censo de Edificaciones que posee el DANE para el periodo comprendido entre 2012-2018. Dicha base de datos puede ser descargada desde el siguiente [Link](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/CesoEdificaciones2012-2018.csv){:target="_blank"}.
+## Estadística descriptiva
+En general, la importancia del análisis estadístico radica en la **resolución de problemas vinculados con datos**, siendo la variabilidad de los mísmos, quién guiará la importancia del empleo de diferentes ténicas para el manejo de la información. Desde este punto de vista, se explica en esta sección el método de implementación en <tt>R</tt> de resúmenes de información, resumenes tabulares y gráficos para la presentación de información de forma adecuada, para facilitar la toma de decisiones.
+
+Un aspecto importante a tener en cuenta al realizar análisis estadísticos, es señalado por @Esquivel2016[, p. 29],  el cual menciona que dentro de un análisis con información estadística, se debe tener en cuenta las siguientes etapas: 
+
+1. **Leer entre los datos**: que consiste en llevar a cabo una lectura literal de la información, sin interpretar su contenido).
+2. **Leer dentro de los datos**: implica no solamente interpretar los datos sino integrarlos dentro del contexto.
+3. **Leer más allá de los datos**: significa tomar los datos como referente para identificar patrones que transciendan el grupo de datos observado, ya sea mediante la interpolación o extrapolación de resultados.
+4. **Leer detrás de los datos**: consiste en llevar a cabo un análisis crítico de la información que se estudia, esto implica analizar integralmente el problema, desde su origen, el tipo de dato que se utiliza, su validez y fiabilidad para analizar el problema y la posibilidad de generalizar los hallazgos.
+
+### Caso de estudio y variables
+Como caso de estudio para esta sesión, se propone una base de datos construida a partir del `$10\%$` de la información contenida en el Censo de Edificaciones que posee el DANE para el periodo comprendido entre 2012-2018. Dicha base de datos puede ser descargada desde el siguiente [Link](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/CesoEdificaciones2012-2018.csv){:target="_blank"}. 
 
 Las variables contenidas en la base de datos anterior son:
 
 * **<tt>ANO_CENSO</tt>:** Año al que corresponde la información recolectada en el Censo.
 * **<tt>TRIMESTRE</tt>:** Trimestre al que corresponde la información recolectada en el Censo.
 * **<tt>REGION</tt>:** Región de acuerdo con las áreas urbanas y metropolitanas en las cuales se realiza la publicación de la información.
-  * Antioquia 5
-  * Risaralda 66
-  * Bogotá 11
-  * Quindío 63
-  * Valle 76
-  * Norte de Santander 54 
-  * Meta 50
-  * Atlántico 8
-  * Huila 41
-  * Santander 68
-  * Bolívar 13
-  * Nariño 52
-  * Cauca 19
-  * Tolima 73
-  * Caldas 17
+  * 5 = Antioquia 
+  * 66 = Risaralda 
+  * 11 = Bogotá 
+  * 63 = Quindío 
+  * 76 = Valle 
+  * 54 = Norte de Santander 
+  * 50 = Meta
+  * 8 = Atlántico
+  * 41 = Huila
+  * 68 = Santander
+  * 13 = Bolívar
+  * 52 = Nariño
+  * 19 = Cauca
+  * 73 = Tolima
+  * 17 = Caldas
 * **<tt>OB_FORMAL</tt>:** Define si la obra cuenta o no con licencia de construcción
-  * Si = 1
-  * No = 2
-* **<tt>ESTADO_ACT</tt>:** Ampliación o adición de metros cuadrados a la obra
-  * Si = 1
-  * No = 2
-* **<tt>ESTADO_ACT</tt>:** El movimiento es el código de cambio de estado
-  * C = continua
-  * I = inactiva
-  * N = nueva
-  * A =Ampliación cobertura
-  * R = reinicia
+  * 1 = Si
+  * 2 = No
+* **<tt>ESTADO_ACT</tt>:** El estado determina como se encontró la obra al momento del censo y se capta el código correspondiente.
+  * 1 = Proceso
+  * 2 = Paralizada con información completa
+  * 3 = Culminada completa
+  * 4 = Paralizada incompleta
+  * 5 = Culminada con información incompleta
+  * 6 = Demolida
+* **<tt>MOVIMIENTO</tt>:** El movimiento es el código de cambio de estado
+  * C = Continua
+  * I = Inactiva
+  * N = Nueva
+  * A = Ampliación cobertura
+  * R = Reinicia
   * T = Culmina
   * D = Demolida
 * **<tt>ESTRATO</tt>:** Clasificación dada por las empresas de servicios públicos. División numérica que caracteriza el entorno socio económico de un espacio geográfico y arquitectónico determinado
@@ -108,8 +122,8 @@ Las variables contenidas en la base de datos anterior son:
 * **<tt>AREAUNITGA</tt>:** Metros cuadrados de la unidad de garaje (cubiertos).
 * **<tt>PRECIOUNIG</tt>:** Valor de las unidades de garaje cubierto en miles de pesos.
 * **<tt>TIPOVALOR</tt>:** Tipo de valor de garaje cubierto
-  * Real = 1
-  * Estimado = 2
+  * 1 = Real
+  * 2 = Estimado
 * **<tt>MANO_OBRAP</tt>:** Corresponde a la cantidad de mano de obra permanente generada en el período intercensal por tipo de mano de obra.
 * **<tt>MANO_OBRAT</tt>:** Corresponde a la cantidad de mano de obra temporal generada en el período intercensal por tipo de mano de obra.
 * **<tt>AREA_LOTE</tt>:** Corresponde al área del terreno donde se construye la obre o proyecto.
@@ -119,8 +133,8 @@ Las variables contenidas en la base de datos anterior son:
 * **<tt>PRECIOVTAX</tt>:** Precio de venta por M2 del destino, sin incluir garaje, en miles de pesos.
 * **<tt>AREAVENUNI</tt>:** Área total vendible por unidad (no incluye garaje y los depósitos o cuartos útiles).
 * **<tt>TIPOVIVI</tt>:** Tipo de vivienda hace referencia a si el destino es vivienda de interés social o no. Valor calculado
-  * Vivienda de interés social = 1
-  * Vivienda diferente de VIS = 2
+  * 1 = Vivienda de interés social
+  * 2 = Vivienda diferente de VIS
 * **<tt>RANVIVI</tt>:** Rango de vivienda, valor calculado
   * 1 = SMLMV < 50
   * 2 = 50 < SMLMV ≤ 70
@@ -130,31 +144,154 @@ Las variables contenidas en la base de datos anterior son:
   * 6 = SMLMV ≥ 350
 * **<tt>Destino2</tt>:** Identificación de la obra, según tipo o uso de la edificación, que se está construyendo.
   * 1 = Apartamento
-* 2 = Oficinas
-* 3 = Comercio
-* 4 = Casas
-* 5 = Bodegas
-* 6 = Destinos no comercializables (educación, hoteles, hospitales y centros de salud, administración pública y otros)
-
-## Estadística descriptiva
-En general, la importancia del análisis estadístico radica en la **resolución de problemas vinculados con datos**, en donde la variabilidad de los mísmos es quién guiará la importancia del empleo de diferentes ténicas para el manejo de la información. Desde este punto de vista, se explica en esta sección el método de implementación en <tt>R</tt> de resúmenes de información, resumenes tabulares y gráficos para la presentación de información de forma adecuada, para facilitar la toma de decisiones.
-
-Un aspecto importante a tener en cuenta al realizar análisis estadísticos, es señalado por @Esquivel2016[, p. 29],  el cual menciona que dentro de un análisis con información estadística, se debe tener en cuenta las siguientes etapas: 
-
-1. **Leer entre los datos**: que consiste en llevar a cabo una lectura literal de la información, sin interpretar su contenido).
-2. **Leer dentro de los datos**: implica no solamente interpretar los datos sino integrarlos dentro del contexto.
-3. **Leer más allá de los datos**: significa tomar los datos como referente para identificar patrones que transciendan el grupo de datos observado, ya sea mediante la interpolación o extrapolación de resultados.
-4. **Leer detrás de los datos**: consiste en llevar a cabo un análisis crítico de la información que se estudia, esto implica analizar integralmente el problema, desde su origen, el tipo de dato que se utiliza, su validez y fiabilidad para analizar el problema y la posibilidad de generalizar los hallazgos.
-
-
+  * 2 = Oficinas
+  * 3 = Comercio
+  * 4 = Casas
+  * 5 = Bodegas
+  * 6 = Destinos no comercializables (educación, hoteles, hospitales y centros de salud, administración pública y otros)
 
 ### Lectura de datos en <tt>R</tt>
-Para realizar la lectura de datos en <tt>R</tt> es necesario conocer la extensión que posee el archivo de interés, debido a que <tt>R</tt> **posee diferentes librerías y funciones que permiten la lectura de bases de datos**.
+Para realizar la lectura de datos en <tt>R</tt> es necesario conocer la extensión que posee el archivo de interés, debido a que <tt>R</tt> **posee diferentes librerías y funciones que permiten la lectura de bases de datos**. En la siguiente tabla se resume el origen, la extensión, la librería, y la función para cargar cada base de datos dependiendo de su extensión.
 
+<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -3rem; margin-top: -3rem; font-size: 120%;">
+```{r echo=FALSE}
+library(kableExtra)
 
-Censo de Edificaciones
+tablita <- cbind(
+  "Origen" = c("Texto", "Texto", "Texto",  "Excel", "Excel", "SPSS", "SAS", "STATA"),
+  "Extensión" = c(".txt", ".csv (comas)", ".csv (punto y coma)",  ".xls", ".xlsx", ".sav", ".sas7bdat", ".dta"),
+  "Librería" = c("utils*", "utils*", "utils*", "readxl", "readxl", "foreign", "foreign", "foreign"),
+  "Función" = c("read.table()", "read.csv()", "read.csv2()", "read_xls()", "read_xlsx()", "read.spss()", "read.ssd()", "read.dta()"))
 
-### Tipos de datos
+kable(tablita, 
+  format = "html", booktabs = T) %>%
+kable_styling("striped", full_width = F)
+```
+</pre>
+
+**Nota:** Las librerías con * hacen referencia a funciones integradas en <tt>R</tt>, y en consecuencia, no es necesario cargarlas antes de usarlas.
+
+```{r echo=F}
+## Este código no se muestra, y es de uso interno de la presentación
+datos <- read.csv2("C:/Users/user/Desktop/Repo/pagina de control/Dataset/CesoEdificaciones2012-2018.csv")
+```
+
+A modo de ejemplo, suponga que se desea cargar una base de datos de excel con extensión <tt>.xlsx</tt> **mediante la búsqueda del archivo en el ordenador**. En este caso será necesario cargar la librería <tt>readxl</tt> y posteriormente, cargar la base de datos mediante la función <tt>read.xlsx()</tt> que sirve para cargar archivos con extensión xlsx, y la función <tt>file.choose()</tt> que permite buscar el archivo en el ordenador.
+
+```{r eval=F, echo=F}
+## Código de ejemplo NO CORRER
+library(readxl)
+datos <- read_xlsx(file.choose())
+```
+
+<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1">## Código de ejemplo NO CORRER</span><span class="w">
+</span><span class="kc">library</span><span class="p">(</span><span class="n">readxl</span><span class="p">)</span><span class="w">
+</span><span class="n">datos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">read.xlsx</span><span class="p">(</span><span class="n">file.choose</span><span class="p">())</span><span class="w">
+</span></code></pre></section></section>
+
+Por otro lado, suponga que deseamos cargar una base de datos de STATA con extensión <tt>.dta</tt> **de forma automática**. En este caso será necesario cargar la librería <tt>foreign</tt> y posteriormente, cargar la base de datos mediante la función <tt>read.dta()</tt>, estableciendo la localización en donde se encuentra el archivo en el ordenador.
+
+```{r eval=F, echo=F}
+## Código de ejemplo NO CORRER
+library(foreign)
+datos <- read.dta("C:/Users/user/Desktop/datos.dta") 
+```
+
+<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1">## Código de ejemplo NO CORRER</span><span class="w">
+</span><span class="kc">library</span><span class="p">(</span><span class="n">foreign</span><span class="p">)</span><span class="w">
+</span><span class="n">datos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">read.dta</span><span class="p">(</span><span class="s2">"C:/Users/user/Desktop/datos.dta"</span><span class="p">)</span><span class="w">
+</span></code></pre></section></section>
+
+Finalmente, suponga que se desea cargar una base de datos de Texto con extensión <tt>.csv</tt>, la cual usa como separador de columnas el punto y coma (;). En este caso será necesario descargar el archivo en una locación temporal, mediante las funciones <tt>tempfile()</tt> y <tt>download.file</tt>, y posteriormente, emplear la función <tt>read.cvs2()</tt>, de la forma
+
+```{r eval=F, echo=F}
+## Código de ejemplo CORRER :D
+temp <- tempfile(fileext = ".cvs")  # Crea archivo temporal
+URL <- "https://raw.githubusercontent.com/jiperezga/jiperezga.github.io/master/Dataset/CesoEdificaciones2012-2018.csv"  # URL base de datos
+download.file(URL, destfile = temp, mode = "wb")  # Descarga archivo en el archivo temporal creado
+datos <- read.csv2(temp)
+```
+
+<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1">## Código de ejemplo CORRER :D</span><span class="w">
+</span><span class="n">temp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">tempfile</span><span class="p">(</span><span class="n">fileext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">".cvs"</span><span class="p">)</span><span class="w">  </span><span class="c1"># Crea archivo temporal</span><span class="w">
+</span><span class="n">URL</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"https://raw.githubusercontent.com/jiperezga/jiperezga.github.io/master/Dataset/CesoEdificaciones2012-2018.csv"</span><span class="w">  </span><span class="c1"># URL base de datos</span><span class="w">
+</span><span class="kc">download.file</span><span class="p">(</span><span class="n">URL</span><span class="p">,</span><span class="w"> </span><span class="n">destfile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temp</span><span class="p">,</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"wb"</span><span class="p">)</span><span class="w">  </span><span class="c1"># Descarga base de datos en el archivo temporal creado</span><span class="w">
+</span><span class="n">datos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">read.csv2</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span><span class="w">
+</span></code></pre></section></section>
+
+## Limpieza de datos (datos sin procesar a datos tecnicamente correctos)
+La limpieza de los datos **es uno de los aspectos más importantes cuando se desea trabajar con conjuntos de datos**, a tal punto que muchos investigadores aseguran que en este procedimiento puede emplearse regularmente desde el `$50\%$` hasta el `$80\%$` del tiempo total de una investigación.
+
+El objetivo principal de la limpieza de datos, es el **asegurar la calidad de la información** que se usará en los análisis, además de minimizar el riesgo en la toma de decisiones, en base a información perdida, poco precisa, duplicada, contradictoria, errónea o incompleta, ya qué ésta podría influir significativamente en los resultados estadísticos y conclusiones.
+
+Uno de los primeros procedimientos en la limpieza de datos, corresponde en **transformar los datos sin procesar a datos tecnicamente correctos**, y para ello es necesario corregir aquellos problemas que pueden generarse en el momento de realizar la lectura de datos, que pueden impedir o complicar la manipulación de la base de datos. 
+
+Dichos problemas están relacionados con, el hallazgo de carácteres especiales, tipos o clases incorrectos para los conjuntos de datos, datos faltantes, datos duplicados, entre otros.
+
+### Corrección encabezados en <tt>R</tt>
+En muchas ocasiones, podemos enfrentarnos a bases de datos que **poseen problemas en el nombre de los encabezados**, asociados caracteres especiales tales como <tt>! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ ] ^ _ ` { | } ~</tt>, o abuso de letras mayúsculas en los encabezados, entre otros.
+
+Por ello **es necesario luego de cargar la base de datos, verificar si tales problemas existen para poder corregirlos de alguna manera**. A pesar de que en nuestro caso, no hay problemas de carácteres especiales poseemos el problema del abuso de letras mayúsculas en el nombre de las variables, lo cual podría ser tedioso en la programación, debido a que <tt>R</tt> diferencia entre carácteres en mayúscula y minúscula.
+
+Con el fin de darle solución a dicho problema, es posible emplear la función <tt>clean_names()</tt> de la librería <tt>janitor</tt>, con el fin de 
+
+* Analizar las mayúsculas y minúsculas y separadores a un formato consistente.
+* Maneja caracteres y espacios especiales.
+* Agrega números a nombres duplicados.
+* Convierte “%” en “percent” y “#” en “number” para conservar el significado de la variable.
+
+```{r eval=F}
+# Se observa el nombre de las variables
+names(datos)
+```
+
+<section class="highlighter-rouge"><section class="highlight"><pre class="highlight"><code> [1] "ANO_CENSO"  "TRIMESTRE"  "REGION"     "OB_FORMAL"  "ESTADO_ACT"
+ [6] "MOVIMIENTO" "ESTRATO"    "AREATOTZC"  "AREAUNITGA" "PRECIOUNIG"
+[11] "TIPOVALOR"  "MANO_OBRAP" "MANO_OBRAT" "AREA_LOTE"  "AREAVENDIB"
+[16] "NRO_PISOS"  "GRADOAVANC" "PRECIOVTAX" "AREAVENUNI" "TIPOVIVI"  
+[21] "RANVIVI"    "Destino2"  
+</code></pre></section></section>
+
+```{r echo=F}
+# Elimina algunos carácteres especiales y abuso de mayúsculas
+library(janitor)
+datos <- clean_names(datos)
+```
+
+```{r echo=F, eval=F}
+# Se observa el nombre de las variables
+names(datos)
+```
+
+<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1"># Elimina algunos carácteres especiales y abuso de mayúsculas</span><span class="w">
+</span><span class="kc">library</span><span class="p">(</span><span class="n">janitor</span><span class="p">)</span><span class="w">
+</span><span class="n">datos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">clean_names</span><span class="p">(</span><span class="n">datos</span><span class="p">)</span><span class="w">
+</span><span class="nf">names</span><span class="p">(</span><span class="n">datos</span><span class="p">)</span><span class="w">
+</span></code></pre></section></section>
+
+<section class="highlighter-rouge"><section class="highlight"><pre class="highlight"><code>  [1] "ano_censo"  "trimestre"  "region"     "ob_formal"  "estado_act"
+ [6] "movimiento" "estrato"    "areatotzc"  "areaunitga" "preciounig"
+[11] "tipovalor"  "mano_obrap" "mano_obrat" "area_lote"  "areavendib"
+[16] "nro_pisos"  "gradoavanc" "preciovtax" "areavenuni" "tipovivi"  
+[21] "ranvivi"    "destino2"
+</code></pre></section></section>
+
+### Corrección contenido en <tt>R</tt>
+Similar a los encabezados, puede ocurrir que se **encuentren problemas en los valores contenidos dentro de cada variable**, a causa de caracteres especiales o espacios, que puede generar que al transformar las variables se creen categorías extras, o se pierdan datos numéricos.
+
+Para dar solución a dicho problema, se pueden emplear en cojunto las funciones <tt>lapply()</tt> y <tt>gsub()</tt> de la base de <tt>R</tt>, para eliminar carácteres especiales y espacios dentro de la totalidad de la base de datos. Posteriormente, se debe emplear la función <tt>data.frame</tt> para que el conjunto de datos vuelva a tomar la estructura de una base de datos. El código para realizar dicho procedimiento se presenta a continuación.
+
+```{r echo=F}
+# Elimina carácteres especiales y espacios dentro de la base de datos
+datos <- lapply(datos, function(x) gsub("[[:punct:] [:blank:]]","", x))
+datos <- data.frame(datos, stringsAsFactors = F)
+```
+
+<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1"># Elimina carácteres especiales y espacios dentro de la base de datos</span><span class="w">
+</span><span class="n">datos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">lapply</span><span class="p">(</span><span class="n">datos</span><span class="p">,</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="kc">gsub</span><span class="p">(</span><span class="s2">"[[:punct:]] | [[:blank:]]"</span><span class="p">,</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">))</span><span class="w">
+</span></code></pre></section></section>
+
+## Tipos de datos
 En términos generales, los datos son cualquier pieza de información recolectada del fenómeno que se pretende analizar, y que, dependiendo de las características que posean, deben clasificarse dentro de una determinada categoría.
 
 * **Cuantitativos**: Son datos que pueden ser medidos o cuantificados. Estos se subdividen en dos categorías:
@@ -163,7 +300,19 @@ En términos generales, los datos son cualquier pieza de información recolectad
 * **Cualitativos**: Son datos asociados a una cualidad o propiedad, y por tanto, no pueden representarse numéricamente, a pesar de poder caracterizarse alfanúmericamente. Por ejemplo: __Estrato socioeconómico, tipo de animales en una granja, nivel de satisfacción con el método planteado para dictar el curso.__
 * **Lógicos**: Son datos asociados a valores de lógica binaria, usualmente denotados como Verdadero y Falso, o Éxito y Fracaso. Por ejemplo: __Tipo de Sexo, cara de una moneda, probar si un artículo es defectuoso.__
 
-### Escala de medición
+### Estructura de datos en <tt>R</tt>
+**Para observar la estructura de los datos** en <tt>R</tt> puede emplearse la función <tt>str()</tt>, la cual muestra la forma cómo está siendo leída la información contenida en la base de datos por el programa.
+
+<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1"># Estructura de los datos</span><span class="w">
+</span><span class="kc">str</span><span class="p">(</span><span class="n">datos</span><span class="p">)</span><span class="w">
+</span></code></pre></section></section>
+
+```{r echo = F}
+# Estructura de los datos
+str(datos)
+```
+
+## Escala de medición
 Las escalas o niveles de medición se utilizan para medir variables o atributos que posea un conjunto de datos. A saber, las escalas de medición se dividen en cuatro, **nominal, ordinal, intervalos y razón**. Las dos primeras (nominal y ordinal) se conocen como escalas categóricas usadas conmúnmente para variables cualitativas, mientras que las dos últimas (intervalo y razón) se conocen como escalas numéricas, usadas comúnmente para variables cuantitativas.
 
 * **Nominal**: Son aquellos factores que establecen etiquetas o categorías a los datos, sin estar sujetos a un orden específico. Por ejemplo: __Partido político, Comuna de residencia__
@@ -171,7 +320,165 @@ Las escalas o niveles de medición se utilizan para medir variables o atributos 
 * **Intervalo**: Son aquellas mediciones cuantitativas que establecen la distancia entre una medida y otra, en términos de una unidad de medición fija, donde **el cero se selecciona de forma arbitraria y no indica ausencia del tributo**, ni indica conceptos como 'ninguno', 'vacío' o 'nada'. Por ejemplo: __Unidades de medida en centígrados o Fahrenheit__
 * **Razón**: Son aquellas mediciones cuantitativas que establece la distancia exacta de una categoría debido a que **el cero es absoluto, no es arbritario, e indica ausencia del atributo**. Por ejemplo __Índice de masa corporal, Salario__
 
+### Coerción de datos en <tt>R</tt>
 
+Muchas veces cuando tenemos una variable, puede que esta no tenga almacenados los datos bajo el tipo que queremos tenerlo realmente, por ello, será necesario transformar (coercionar) cada variable, que permita ajustar la variable a tipo deseado. En <tt>R</tt> existen funciones que permiten redefinir una variable, para transformarlo al tipo que necesitamos. Estás funciones son
+
+* **<tt>as.numeric()</tt>:** Convierte una variable a tipo numérico (double).
+* **<tt>as.logical()</tt>:** Convierte una variable a tipo lógico.
+* **<tt>as.integer()</tt>:** Convierte una variable a tipo entero.
+* **<tt>factor()</tt>:** Convierte una variable a tipo factor asumiendo o no un orden o jerarquía entre los niveles.
+* **<tt>as.character()</tt>:** Convierte una variable a tipo carácter (character).
+* **<tt>factor()</tt>:** Convierte una variable a tipo factor asumiendo o no un orden o jerarquía entre los niveles.
+
+En nuestro caso, tenemos que todas las variables aparecen como si fuesen variables de tipo carácter, debido al procedimiento de la corrección que se hizo para eliminar carácteres especiales y espacios dentro de la base de datos. En consecuencia, debemos transformar cada variable dependiendo de su estructura y escala de medición.
+
+En sí, tenemos que en primer lugar, las variables <tt>ANO_CENSO, TRIMESTRE, ESTRATO y RANVIVI</tt> son **variables cualitativas ordinales** y por ello deben se transformadas a variables de tipo factor ordinal. En segundo lugar, las variables <tt>REGION, OB_FORMAL, ESTADO_ACT, MOVIMIENTO, TIPOVALOR, TIPOVIVI y Destino2</tt> son **variables cualitativas nominales** y deben ser transformadas a variables de tipo factor. Finalmente, las demás son **variables cuantitativas de razón** que pueden trabajarse como variables de tipo numéricas o enteros.
+
+Para llevar a cabo la transformación, podemos emplear la función <tt>factor()</tt> para realizar el cambio de las **variables cualitativas ordinales**, la función <tt>factor()</tt> para realizar el cambio de las **variables cualitativas nominales** y la función <tt>as.numeric()</tt> para realizar el cambio de las variables a tipo numérica.
+
+<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1"># Coerción de variable por variable</span><span class="w">
+</span><span class="n">datos</span><span class="o">$</span><span class="n">ano_censo</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">factor</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">ano_censo</span><span class="p">,</span><span class="w"> </span><span class="n">ordered</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+</span><span class="n">datos</span><span class="o">$</span><span class="n">trimestre</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">factor</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">trimestre</span><span class="p">,</span><span class="w"> </span><span class="n">ordered</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+</span><span class="n">datos</span><span class="o">$</span><span class="n">region</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">factor</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">region</span><span class="p">,</span><span class="w"> </span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="m">11</span><span class="p">,</span><span class="w"> </span><span class="m">13</span><span class="p">,</span><span class="w"> </span><span class="m">17</span><span class="p">,</span><span class="w"> </span><span class="m">19</span><span class="p">,</span><span class="w"> </span><span class="m">41</span><span class="p">,</span><span class="w"> </span><span class="m">50</span><span class="p">,</span><span class="w"> 
+    </span><span class="m">52</span><span class="p">,</span><span class="w"> </span><span class="m">54</span><span class="p">,</span><span class="w"> </span><span class="m">63</span><span class="p">,</span><span class="w"> </span><span class="m">66</span><span class="p">,</span><span class="w"> </span><span class="m">68</span><span class="p">,</span><span class="w"> </span><span class="m">73</span><span class="p">,</span><span class="w"> </span><span class="m">76</span><span class="p">),</span><span class="w"> </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Antioquia"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Atlántico"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Bogotá"</span><span class="p">,</span><span class="w"> 
+    </span><span class="s2">"Bolívar"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Caldas"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Cauca"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Huila"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Meta"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Nariño"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Norte de Santander"</span><span class="p">,</span><span class="w"> 
+    </span><span class="s2">"Quindío"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Risaralda"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Santander"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Tolima"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Valle"</span><span class="p">))</span><span class="w">
+</span><span class="n">datos</span><span class="o">$</span><span class="n">ob_formal</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">factor</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">ob_formal</span><span class="p">,</span><span class="w"> </span><span class="n">level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Sí"</span><span class="p">,</span><span class="w"> 
+    </span><span class="s2">"No"</span><span class="p">))</span><span class="w">
+</span><span class="n">datos</span><span class="o">$</span><span class="n">estado_act</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">factor</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">estado_act</span><span class="p">,</span><span class="w"> </span><span class="n">level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">),</span><span class="w"> </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Proceso"</span><span class="p">,</span><span class="w"> 
+    </span><span class="s2">"ParalizadaInfC"</span><span class="p">,</span><span class="w"> </span><span class="s2">"CulminadaInfC"</span><span class="p">,</span><span class="w"> </span><span class="s2">"ParalizadaInfI"</span><span class="p">,</span><span class="w"> </span><span class="s2">"CulminadaInfI"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Demolida"</span><span class="p">))</span><span class="w">
+</span><span class="n">datos</span><span class="o">$</span><span class="n">movimiento</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">factor</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">movimiento</span><span class="p">,</span><span class="w"> </span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"A"</span><span class="p">,</span><span class="w"> </span><span class="s2">"C"</span><span class="p">,</span><span class="w"> </span><span class="s2">"I"</span><span class="p">,</span><span class="w"> </span><span class="s2">"N"</span><span class="p">,</span><span class="w"> 
+    </span><span class="s2">"R"</span><span class="p">,</span><span class="w"> </span><span class="s2">"T"</span><span class="p">),</span><span class="w"> </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Ampliación"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Continua"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Inactiva"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Nueva"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Reinicia"</span><span class="p">,</span><span class="w"> 
+    </span><span class="s2">"Culmina"</span><span class="p">))</span><span class="w">
+</span><span class="n">datos</span><span class="o">$</span><span class="n">estrato</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">factor</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">estrato</span><span class="p">,</span><span class="w"> </span><span class="n">ordered</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+</span><span class="n">datos</span><span class="o">$</span><span class="n">areatotzc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">areatotzc</span><span class="p">)</span><span class="w">
+</span><span class="n">datos</span><span class="o">$</span><span class="n">areaunitga</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">areaunitga</span><span class="p">)</span><span class="w">
+</span><span class="n">datos</span><span class="o">$</span><span class="n">preciounig</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">preciounig</span><span class="p">)</span><span class="w">
+</span><span class="n">datos</span><span class="o">$</span><span class="n">tipovalor</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">factor</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">tipovalor</span><span class="p">,</span><span class="w"> </span><span class="n">level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"No responde"</span><span class="p">,</span><span class="w"> 
+    </span><span class="s2">"Real"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Estimado"</span><span class="p">))</span><span class="w">
+</span><span class="n">datos</span><span class="o">$</span><span class="n">mano_obrap</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">mano_obrap</span><span class="p">)</span><span class="w">
+</span><span class="n">datos</span><span class="o">$</span><span class="n">mano_obrat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">mano_obrat</span><span class="p">)</span><span class="w">
+</span><span class="n">datos</span><span class="o">$</span><span class="n">area_lote</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">area_lote</span><span class="p">)</span><span class="w">
+</span><span class="n">datos</span><span class="o">$</span><span class="n">areavendib</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">areavendib</span><span class="p">)</span><span class="w">
+</span><span class="n">datos</span><span class="o">$</span><span class="n">nro_pisos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">nro_pisos</span><span class="p">)</span><span class="w">
+</span><span class="n">datos</span><span class="o">$</span><span class="n">gradoavanc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">gradoavanc</span><span class="p">)</span><span class="w">
+</span><span class="n">datos</span><span class="o">$</span><span class="n">preciovtax</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">preciovtax</span><span class="p">)</span><span class="w">
+</span><span class="n">datos</span><span class="o">$</span><span class="n">areavenuni</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">areavenuni</span><span class="p">)</span><span class="w">
+</span><span class="n">datos</span><span class="o">$</span><span class="n">tipovivi</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">factor</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">tipovivi</span><span class="p">,</span><span class="w"> </span><span class="n">level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Social"</span><span class="p">,</span><span class="w"> 
+    </span><span class="s2">"No Social"</span><span class="p">))</span><span class="w">
+</span><span class="n">datos</span><span class="o">$</span><span class="n">ranvivi</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">factor</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">ranvivi</span><span class="p">,</span><span class="w"> </span><span class="n">ordered</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+</span><span class="n">datos</span><span class="o">$</span><span class="n">destino2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">factor</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">destino2</span><span class="p">,</span><span class="w"> </span><span class="n">level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">),</span><span class="w"> </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Apartamento"</span><span class="p">,</span><span class="w"> 
+    </span><span class="s2">"Oficina"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Comercio"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Casas"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Bodega"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Otros"</span><span class="p">))</span><span class="w">
+</span><span class="c1"># Estructura de los datos</span><span class="w">
+</span><span class="kc">str</span><span class="p">(</span><span class="n">datos</span><span class="p">)</span><span class="w">
+</span></code></pre></section></section>
+
+```{r echo=F}
+# Coerción de variable por variable
+datos$ano_censo <- factor(datos$ano_censo, ordered = T)
+datos$trimestre <- factor(datos$trimestre, ordered = T)
+datos$region <- factor(datos$region, levels = c(5, 8, 11, 13, 17, 19, 41, 50, 52, 54,
+                                                63, 66, 68, 73, 76),
+                       labels = c("Antioquia", "Atlántico", "Bogotá", "Bolívar", "Caldas",
+                                  "Cauca", "Huila", "Meta", "Nariño", "Norte de Santander",
+                                  "Quindío", "Risaralda", "Santander", "Tolima", "Valle"))
+datos$ob_formal <- factor(datos$ob_formal, level = c(1, 2), labels = c("Sí", "No"))
+datos$estado_act <- factor(datos$estado_act, level = c(1, 2, 3, 4, 5, 6),
+                           labels = c("Proceso", "ParalizadaInfC", "CulminadaInfC",
+                                      "ParalizadaInfI", "CulminadaInfI", "Demolida"))
+datos$movimiento <- factor(datos$movimiento, levels = c("A", "C", "I", "N", "R", "T"),
+                           labels = c("Ampliación", "Continua", "Inactiva",
+                                      "Nueva", "Reinicia", "Culmina"))
+datos$estrato <- factor(datos$estrato, ordered = T)
+datos$areatotzc <- as.numeric(datos$areatotzc)
+datos$areaunitga <- as.numeric(datos$areaunitga)
+datos$preciounig <- as.numeric(datos$preciounig)
+datos$tipovalor <- factor(datos$tipovalor, level = c(0, 1, 2), labels = c("No responde", "Real", "Estimado"))
+datos$mano_obrap <- as.numeric(datos$mano_obrap)
+datos$mano_obrat <- as.numeric(datos$mano_obrat)
+datos$area_lote <- as.numeric(datos$area_lote)
+datos$areavendib <- as.numeric(datos$areavendib)
+datos$nro_pisos <- as.numeric(datos$nro_pisos)
+datos$gradoavanc <- as.numeric(datos$gradoavanc)
+datos$preciovtax <- as.numeric(datos$preciovtax)
+datos$areavenuni <- as.numeric(datos$areavenuni)
+datos$tipovivi <- factor(datos$tipovivi, level = c(1, 2), labels = c("Social", "No Social"))
+datos$ranvivi <- factor(datos$ranvivi, ordered = T)
+datos$destino2 <- factor(datos$destino2, level = c(1, 2, 3, 4, 5, 6),
+                         labels = c("Apartamento", "Oficina", "Comercio", "Casas", "Bodega",
+                                    "Otros"))
+# Estructura de los datos
+str(datos)
+```
+
+## Limpieza de datos (datos técnicamente correctos a datos consistentes)
+Una vez se logra que los datos se encuentren en un estado ténicamente correcto, es necesario manipular la base de datos para llevarlos a un estado consistente, es decir, a una **etapa en la que el conjunto de observaciones están listos para la realización estadística descriptiva e inferencial**. Este procedimiento consta en **solucionar problemas relacionados con datos faltantes o datos duplicados**, que inflan la totalidad de la información que se posea.
+
+#### Remover filas o columnas vacías
+Este procedimiento, **permite buscar y eliminar aquellas filas o columnas que se encuentran totalmente vacías** y que pueden de alguna manera inflar la totalidad de información que se posee en la base de datos.
+
+Para ello se emplea la función <tt>remove_empty()</tt> de la librería <tt>janitor</tt>.
+
+```{r}
+# Muestra dimensión de filas y columnas antes de la eliminación
+dim(datos)
+# Elimina filas y columnas que poseen solo valores NA
+datos <- remove_empty(datos, which = c("rows", "cols"))
+# Muestra dimensión de filas y columnas despues de la eliminación
+dim(datos)
+```
+
+#### Remover filas duplicadas
+Este procedimiento **se emplea preferiblemente cuando se posee una variable de identificación única**, tal como cédula o nit, que permita comparar cada fila y eliminar solo aquellas que realmente se encuentren duplicadas.
+
+Para eliminar las filas que se encuentren duplicadas, es posible emplear la función <tt>distinct()</tt> de la librería <tt>dplyr</tt>, de la forma.
+
+```{r}
+library(dplyr)
+# Muestra dimensión de filas y columnas antes de la eliminación
+dim(datos)
+# Elimina filas que poseen registros duplicados
+datos <- distinct(datos)
+# Muestra dimensión de filas y columnas despues de la eliminación
+dim(datos)
+```
+
+### Detección de datos faltantes
+La detección de datos faltantes radica en localizar para cada variable, si se encuentran casillas vacías, valores especiales, tales como <code style="color: #ff628c!important">Na, NaN</code> o <code style="color: #ff628c!important">NULL</code>.
+
+* **<code style="color: #ff628c!important">NA</code> (Not Available):** Es un carácter especial para indicar valores perdidos. Éstos pueden ser detectados en <tt>R</tt> mediante la función <tt>is.na()</tt>.
+* **<code style="color: #ff628c!important">NaN</code> (Not a number):** Es un carácter especial para datos de clase numérica, para indicar un valor asociado a un cálculo cuyo resultado es desconocido, el cual seguramente no es un número. Este puede obtenerse mediante operaciones tales como `$0/0$`, `$Inf/Inf$`, `$Inf-Inf$`. Éstos pueden ser detectados en <tt>R</tt> mediante la función <tt>is.nan()</tt>, aunque también son detectados por la función <tt>is.na()</tt>.
+* **<code style="color: #ff628c!important">NULL</code>:** Es un carácter especial para indicar valores indefinidos o indicar la no existencia de valor dentro de la base de datos o de una entrada de la misma. Éstos pueden ser detectados en <tt>R</tt> mediante la función <tt>is.null()</tt>.
+
+Para detectar aquellas filas que se encuentren faltantes dentro de una base de datos, podemos usar una combinación entre las funciones <tt>apply()</tt>, <tt>which()</tt>, tal como se muestra en la siguiente linea de código, adicionando las funciones <tt>is.na()</tt> e <tt>is.null()</tt>, dentro de la función <tt>which()</tt>.
+
+```{r}
+## Detectar NA, NaN y NULL dentro de la base de datos
+faltantes <- apply(X = datos, MARGIN = 2, FUN = function(x) which(is.na(x) | is.null(x) | x == "Na" | x == "NA" | x == "NaN")) # se pueden agregar más caracteres
+faltantes
+```
+
+### Exportar datos
+Una vez corregida la base de datos, es posible exportar la información para emplearla posteriormente en <tt>R</tt> o en otros programas. <tt>R</tt> **posee diferentes librerías y funciones que permiten exportar bases de datos** dependiendo de la extensión de interés. En la siguiente tabla se resume el origen, la extensión, la librería, y la función para cargar cada base de datos dependiendo de su extensión.
+
+<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -3rem; margin-top: -3rem; font-size: 120%;">
+```{r echo=FALSE}
+library(kableExtra)
+
+tablita2 <- cbind(
+  "Origen" = c("Texto", "Texto", "Texto",  "Excel", "SPSS", "SAS", "STATA"),
+  "Extensión" = c(".txt", ".csv (comas)", ".csv (punto y coma)",  ".xlsx", ".sav", ".sas7bdat", ".dta"),
+  "Librería" = c("utils*", "utils*", "utils*", "openxlsx", "foreign", "foreign", "foreign"),
+  "Función" = c("write.table()", "write.csv()", "write.csv2()", "write.xlsx()", "write.foreign()", "write.foreign()", "write.foreign()"))
+
+kable(tablita2, 
+  format = "html", booktabs = T) %>%
+kable_styling("striped", full_width = F)
+```
+</pre>
+
+Para mostrar el empleo de las funciones, suponga que queremos exportar la base de datos
 
 
 ## Referencias
