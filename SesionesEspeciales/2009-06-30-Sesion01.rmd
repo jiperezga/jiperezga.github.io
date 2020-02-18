@@ -6,7 +6,7 @@ permalink: /SesionEsp01
 tags:
 
 introduction: 
-image: <img src="../../SesionesEspeciales/images/logo.png" alt="Rday" class="sticky">
+image: <img src="../../SesionesEspeciales/images/logo.png" alt="UdeA" class="sticky">
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
@@ -60,15 +60,19 @@ Cada una las estrategias que buscan dar solución a los problemas sociales, **re
 
 Es debido a lo anterior que, **todo expertos en políticas públicas, debe desarrollar una fuerte fundamentación en análisis de datos**, ya que deben enfrentarse continuamente a problemas que requieren la tomar decisiones, basandos en informes estadísticos descriptivos o inferenciales, que tiene por finalidad apoyar la formulación, implementación, gestión o evaluación de políticas públicas.
 
-## Estadística descriptiva
-En general, la importancia del análisis estadístico radica en la **resolución de problemas vinculados con datos**, siendo la variabilidad de los mísmos, quién guiará la importancia del empleo de diferentes ténicas para el manejo de la información. Desde este punto de vista, se explica en esta sección el método de implementación en <tt>R</tt> de resúmenes de información, resumenes tabulares y gráficos para la presentación de información de forma adecuada, para facilitar la toma de decisiones.
+## Pre-prosesamiento de datos
+La limpieza o pre-procesamiento de los datos **es uno de los aspectos más importantes cuando se desea trabajar con conjuntos de datos**, a tal punto que muchos investigadores aseguran que en este procedimiento puede emplearse regularmente desde el `$50\%$` hasta el `$80\%$` del tiempo total de una investigación.
 
-Un aspecto importante a tener en cuenta al realizar análisis estadísticos, es señalado por @Esquivel2016[, p. 29],  el cual menciona que dentro de un análisis con información estadística, se debe tener en cuenta las siguientes etapas: 
+El objetivo principal de la limpieza de datos, es el **asegurar la calidad de la información** que se usará en los análisis, además de minimizar el riesgo en la toma de decisiones, en base a información perdida, poco precisa, duplicada, contradictoria, errónea o incompleta, ya qué ésta podría influir significativamente en los resultados estadísticos y conclusiones.
 
-1. **Leer entre los datos**: que consiste en llevar a cabo una lectura literal de la información, sin interpretar su contenido).
-2. **Leer dentro de los datos**: implica no solamente interpretar los datos sino integrarlos dentro del contexto.
-3. **Leer más allá de los datos**: significa tomar los datos como referente para identificar patrones que transciendan el grupo de datos observado, ya sea mediante la interpolación o extrapolación de resultados.
-4. **Leer detrás de los datos**: consiste en llevar a cabo un análisis crítico de la información que se estudia, esto implica analizar integralmente el problema, desde su origen, el tipo de dato que se utiliza, su validez y fiabilidad para analizar el problema y la posibilidad de generalizar los hallazgos.
+Uno de los primeros procedimientos en la limpieza de datos, corresponde en **transformar los datos sin procesar a datos tecnicamente correctos**, y para ello es necesario corregir aquellos problemas que pueden generarse en el momento de realizar la lectura de datos, que pueden impedir o complicar la manipulación de la base de datos. 
+
+Dichos problemas están relacionados con, el hallazgo de carácteres especiales, tipos o clases incorrectos para los conjuntos de datos, datos faltantes, datos duplicados, entre otros.
+
+Ena segunda fase, corresponde en **transformar los datos ténicamente correcto a datos consistentes**, para lograr llevar los datos a una **etapa en la que el conjunto de observaciones están listos para la realización estadística descriptiva e inferencial**.
+
+Este procedimiento consta en solucionar problemas relacionados con datos faltantes o datos duplicados, que inflan la totalidad de la información que se posea.
+
 
 ### Caso de estudio y variables
 Como caso de estudio para esta sesión, se propone una base de datos construida a partir del `$10\%$` de la información contenida en el Censo de Edificaciones que posee el DANE para el periodo comprendido entre 2012-2018. Dicha base de datos puede ser descargada desde el siguiente [Link](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/CesoEdificaciones2012-2018.csv){:target="_blank"}. 
@@ -166,6 +170,8 @@ tablita <- cbind(
 kable(tablita, 
   format = "html", booktabs = T) %>%
 kable_styling("striped", full_width = F)
+
+options(scipen = 10)
 ```
 </pre>
 
@@ -178,33 +184,23 @@ datos <- read.csv2("C:/Users/user/Desktop/Repo/pagina de control/Dataset/CesoEdi
 
 A modo de ejemplo, suponga que se desea cargar una base de datos de excel con extensión <tt>.xlsx</tt> **mediante la búsqueda del archivo en el ordenador**. En este caso será necesario cargar la librería <tt>readxl</tt> y posteriormente, cargar la base de datos mediante la función <tt>read.xlsx()</tt> que sirve para cargar archivos con extensión xlsx, y la función <tt>file.choose()</tt> que permite buscar el archivo en el ordenador.
 
-```{r eval=F, echo=F}
+```{r eval=F}
 ## Código de ejemplo NO CORRER
 library(readxl)
 datos <- read_xlsx(file.choose())
 ```
 
-<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1">## Código de ejemplo NO CORRER</span><span class="w">
-</span><span class="kc">library</span><span class="p">(</span><span class="n">readxl</span><span class="p">)</span><span class="w">
-</span><span class="n">datos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">read.xlsx</span><span class="p">(</span><span class="n">file.choose</span><span class="p">())</span><span class="w">
-</span></code></pre></section></section>
-
 Por otro lado, suponga que deseamos cargar una base de datos de STATA con extensión <tt>.dta</tt> **de forma automática**. En este caso será necesario cargar la librería <tt>foreign</tt> y posteriormente, cargar la base de datos mediante la función <tt>read.dta()</tt>, estableciendo la localización en donde se encuentra el archivo en el ordenador.
 
-```{r eval=F, echo=F}
+```{r eval=F}
 ## Código de ejemplo NO CORRER
 library(foreign)
 datos <- read.dta("C:/Users/user/Desktop/datos.dta") 
 ```
 
-<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1">## Código de ejemplo NO CORRER</span><span class="w">
-</span><span class="kc">library</span><span class="p">(</span><span class="n">foreign</span><span class="p">)</span><span class="w">
-</span><span class="n">datos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">read.dta</span><span class="p">(</span><span class="s2">"C:/Users/user/Desktop/datos.dta"</span><span class="p">)</span><span class="w">
-</span></code></pre></section></section>
-
 Finalmente, suponga que se desea cargar una base de datos de Texto con extensión <tt>.csv</tt>, la cual usa como separador de columnas el punto y coma (;). En este caso será necesario descargar el archivo en una locación temporal, mediante las funciones <tt>tempfile()</tt> y <tt>download.file</tt>, y posteriormente, emplear la función <tt>read.cvs2()</tt>, de la forma
 
-```{r eval=F, echo=F}
+```{r eval=F}
 ## Código de ejemplo CORRER :D
 temp <- tempfile(fileext = ".cvs")  # Crea archivo temporal
 URL <- "https://raw.githubusercontent.com/jiperezga/jiperezga.github.io/master/Dataset/CesoEdificaciones2012-2018.csv"  # URL base de datos
@@ -212,23 +208,8 @@ download.file(URL, destfile = temp, mode = "wb")  # Descarga archivo en el archi
 datos <- read.csv2(temp)
 ```
 
-<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1">## Código de ejemplo CORRER :D</span><span class="w">
-</span><span class="n">temp</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">tempfile</span><span class="p">(</span><span class="n">fileext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">".cvs"</span><span class="p">)</span><span class="w">  </span><span class="c1"># Crea archivo temporal</span><span class="w">
-</span><span class="n">URL</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"https://raw.githubusercontent.com/jiperezga/jiperezga.github.io/master/Dataset/CesoEdificaciones2012-2018.csv"</span><span class="w">  </span><span class="c1"># URL base de datos</span><span class="w">
-</span><span class="kc">download.file</span><span class="p">(</span><span class="n">URL</span><span class="p">,</span><span class="w"> </span><span class="n">destfile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temp</span><span class="p">,</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"wb"</span><span class="p">)</span><span class="w">  </span><span class="c1"># Descarga base de datos en el archivo temporal creado</span><span class="w">
-</span><span class="n">datos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">read.csv2</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span><span class="w">
-</span></code></pre></section></section>
-
-## Limpieza de datos (datos sin procesar a datos tecnicamente correctos)
-La limpieza de los datos **es uno de los aspectos más importantes cuando se desea trabajar con conjuntos de datos**, a tal punto que muchos investigadores aseguran que en este procedimiento puede emplearse regularmente desde el `$50\%$` hasta el `$80\%$` del tiempo total de una investigación.
-
-El objetivo principal de la limpieza de datos, es el **asegurar la calidad de la información** que se usará en los análisis, además de minimizar el riesgo en la toma de decisiones, en base a información perdida, poco precisa, duplicada, contradictoria, errónea o incompleta, ya qué ésta podría influir significativamente en los resultados estadísticos y conclusiones.
-
-Uno de los primeros procedimientos en la limpieza de datos, corresponde en **transformar los datos sin procesar a datos tecnicamente correctos**, y para ello es necesario corregir aquellos problemas que pueden generarse en el momento de realizar la lectura de datos, que pueden impedir o complicar la manipulación de la base de datos. 
-
-Dichos problemas están relacionados con, el hallazgo de carácteres especiales, tipos o clases incorrectos para los conjuntos de datos, datos faltantes, datos duplicados, entre otros.
-
-### Corrección encabezados en <tt>R</tt>
+### Limpieza de datos (Datos sin procesar a datos ténicamente correctos)
+#### Corrección encabezados en <tt>R</tt>
 En muchas ocasiones, podemos enfrentarnos a bases de datos que **poseen problemas en el nombre de los encabezados**, asociados caracteres especiales tales como <tt>! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [ ] ^ _ ` { | } ~</tt>, o abuso de letras mayúsculas en los encabezados, entre otros.
 
 Por ello **es necesario luego de cargar la base de datos, verificar si tales problemas existen para poder corregirlos de alguna manera**. A pesar de que en nuestro caso, no hay problemas de carácteres especiales poseemos el problema del abuso de letras mayúsculas en el nombre de las variables, lo cual podría ser tedioso en la programación, debido a que <tt>R</tt> diferencia entre carácteres en mayúscula y minúscula.
@@ -240,58 +221,32 @@ Con el fin de darle solución a dicho problema, es posible emplear la función <
 * Agrega números a nombres duplicados.
 * Convierte “%” en “percent” y “#” en “number” para conservar el significado de la variable.
 
-```{r eval=F}
+```{r}
 # Se observa el nombre de las variables
 names(datos)
 ```
 
-<section class="highlighter-rouge"><section class="highlight"><pre class="highlight"><code> [1] "ANO_CENSO"  "TRIMESTRE"  "REGION"     "OB_FORMAL"  "ESTADO_ACT"
- [6] "MOVIMIENTO" "ESTRATO"    "AREATOTZC"  "AREAUNITGA" "PRECIOUNIG"
-[11] "TIPOVALOR"  "MANO_OBRAP" "MANO_OBRAT" "AREA_LOTE"  "AREAVENDIB"
-[16] "NRO_PISOS"  "GRADOAVANC" "PRECIOVTAX" "AREAVENUNI" "TIPOVIVI"  
-[21] "RANVIVI"    "Destino2"  
-</code></pre></section></section>
-
-```{r echo=F}
+```{r}
 # Elimina algunos carácteres especiales y abuso de mayúsculas
 library(janitor)
 datos <- clean_names(datos)
-```
 
-```{r echo=F, eval=F}
 # Se observa el nombre de las variables
 names(datos)
 ```
 
-<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1"># Elimina algunos carácteres especiales y abuso de mayúsculas</span><span class="w">
-</span><span class="kc">library</span><span class="p">(</span><span class="n">janitor</span><span class="p">)</span><span class="w">
-</span><span class="n">datos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">clean_names</span><span class="p">(</span><span class="n">datos</span><span class="p">)</span><span class="w">
-</span><span class="nf">names</span><span class="p">(</span><span class="n">datos</span><span class="p">)</span><span class="w">
-</span></code></pre></section></section>
-
-<section class="highlighter-rouge"><section class="highlight"><pre class="highlight"><code>  [1] "ano_censo"  "trimestre"  "region"     "ob_formal"  "estado_act"
- [6] "movimiento" "estrato"    "areatotzc"  "areaunitga" "preciounig"
-[11] "tipovalor"  "mano_obrap" "mano_obrat" "area_lote"  "areavendib"
-[16] "nro_pisos"  "gradoavanc" "preciovtax" "areavenuni" "tipovivi"  
-[21] "ranvivi"    "destino2"
-</code></pre></section></section>
-
-### Corrección contenido en <tt>R</tt>
+#### Corrección contenido de base de datos en <tt>R</tt>
 Similar a los encabezados, puede ocurrir que se **encuentren problemas en los valores contenidos dentro de cada variable**, a causa de caracteres especiales o espacios, que puede generar que al transformar las variables se creen categorías extras, o se pierdan datos numéricos.
 
 Para dar solución a dicho problema, se pueden emplear en cojunto las funciones <tt>lapply()</tt> y <tt>gsub()</tt> de la base de <tt>R</tt>, para eliminar carácteres especiales y espacios dentro de la totalidad de la base de datos. Posteriormente, se debe emplear la función <tt>data.frame</tt> para que el conjunto de datos vuelva a tomar la estructura de una base de datos. El código para realizar dicho procedimiento se presenta a continuación.
 
-```{r echo=F}
+```{r}
 # Elimina carácteres especiales y espacios dentro de la base de datos
 datos <- lapply(datos, function(x) gsub("[[:punct:] [:blank:]]","", x))
 datos <- data.frame(datos, stringsAsFactors = F)
 ```
 
-<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1"># Elimina carácteres especiales y espacios dentro de la base de datos</span><span class="w">
-</span><span class="n">datos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">lapply</span><span class="p">(</span><span class="n">datos</span><span class="p">,</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="kc">gsub</span><span class="p">(</span><span class="s2">"[[:punct:]] | [[:blank:]]"</span><span class="p">,</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">))</span><span class="w">
-</span></code></pre></section></section>
-
-## Tipos de datos
+### Tipos de datos
 En términos generales, los datos son cualquier pieza de información recolectada del fenómeno que se pretende analizar, y que, dependiendo de las características que posean, deben clasificarse dentro de una determinada categoría.
 
 * **Cuantitativos**: Son datos que pueden ser medidos o cuantificados. Estos se subdividen en dos categorías:
@@ -300,19 +255,15 @@ En términos generales, los datos son cualquier pieza de información recolectad
 * **Cualitativos**: Son datos asociados a una cualidad o propiedad, y por tanto, no pueden representarse numéricamente, a pesar de poder caracterizarse alfanúmericamente. Por ejemplo: __Estrato socioeconómico, tipo de animales en una granja, nivel de satisfacción con el método planteado para dictar el curso.__
 * **Lógicos**: Son datos asociados a valores de lógica binaria, usualmente denotados como Verdadero y Falso, o Éxito y Fracaso. Por ejemplo: __Tipo de Sexo, cara de una moneda, probar si un artículo es defectuoso.__
 
-### Estructura de datos en <tt>R</tt>
+#### Estructura de datos en <tt>R</tt>
 **Para observar la estructura de los datos** en <tt>R</tt> puede emplearse la función <tt>str()</tt>, la cual muestra la forma cómo está siendo leída la información contenida en la base de datos por el programa.
 
-<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1"># Estructura de los datos</span><span class="w">
-</span><span class="kc">str</span><span class="p">(</span><span class="n">datos</span><span class="p">)</span><span class="w">
-</span></code></pre></section></section>
-
-```{r echo = F}
+```{r}
 # Estructura de los datos
 str(datos)
 ```
 
-## Escala de medición
+### Escala de medición
 Las escalas o niveles de medición se utilizan para medir variables o atributos que posea un conjunto de datos. A saber, las escalas de medición se dividen en cuatro, **nominal, ordinal, intervalos y razón**. Las dos primeras (nominal y ordinal) se conocen como escalas categóricas usadas conmúnmente para variables cualitativas, mientras que las dos últimas (intervalo y razón) se conocen como escalas numéricas, usadas comúnmente para variables cuantitativas.
 
 * **Nominal**: Son aquellos factores que establecen etiquetas o categorías a los datos, sin estar sujetos a un orden específico. Por ejemplo: __Partido político, Comuna de residencia__
@@ -337,44 +288,7 @@ En sí, tenemos que en primer lugar, las variables <tt>ANO_CENSO, TRIMESTRE, EST
 
 Para llevar a cabo la transformación, podemos emplear la función <tt>factor()</tt> para realizar el cambio de las **variables cualitativas ordinales**, la función <tt>factor()</tt> para realizar el cambio de las **variables cualitativas nominales** y la función <tt>as.numeric()</tt> para realizar el cambio de las variables a tipo numérica.
 
-<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1"># Coerción de variable por variable</span><span class="w">
-</span><span class="n">datos</span><span class="o">$</span><span class="n">ano_censo</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">factor</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">ano_censo</span><span class="p">,</span><span class="w"> </span><span class="n">ordered</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
-</span><span class="n">datos</span><span class="o">$</span><span class="n">trimestre</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">factor</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">trimestre</span><span class="p">,</span><span class="w"> </span><span class="n">ordered</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
-</span><span class="n">datos</span><span class="o">$</span><span class="n">region</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">factor</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">region</span><span class="p">,</span><span class="w"> </span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="m">11</span><span class="p">,</span><span class="w"> </span><span class="m">13</span><span class="p">,</span><span class="w"> </span><span class="m">17</span><span class="p">,</span><span class="w"> </span><span class="m">19</span><span class="p">,</span><span class="w"> </span><span class="m">41</span><span class="p">,</span><span class="w"> </span><span class="m">50</span><span class="p">,</span><span class="w"> 
-    </span><span class="m">52</span><span class="p">,</span><span class="w"> </span><span class="m">54</span><span class="p">,</span><span class="w"> </span><span class="m">63</span><span class="p">,</span><span class="w"> </span><span class="m">66</span><span class="p">,</span><span class="w"> </span><span class="m">68</span><span class="p">,</span><span class="w"> </span><span class="m">73</span><span class="p">,</span><span class="w"> </span><span class="m">76</span><span class="p">),</span><span class="w"> </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Antioquia"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Atlántico"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Bogotá"</span><span class="p">,</span><span class="w"> 
-    </span><span class="s2">"Bolívar"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Caldas"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Cauca"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Huila"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Meta"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Nariño"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Norte de Santander"</span><span class="p">,</span><span class="w"> 
-    </span><span class="s2">"Quindío"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Risaralda"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Santander"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Tolima"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Valle"</span><span class="p">))</span><span class="w">
-</span><span class="n">datos</span><span class="o">$</span><span class="n">ob_formal</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">factor</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">ob_formal</span><span class="p">,</span><span class="w"> </span><span class="n">level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Sí"</span><span class="p">,</span><span class="w"> 
-    </span><span class="s2">"No"</span><span class="p">))</span><span class="w">
-</span><span class="n">datos</span><span class="o">$</span><span class="n">estado_act</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">factor</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">estado_act</span><span class="p">,</span><span class="w"> </span><span class="n">level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">),</span><span class="w"> </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Proceso"</span><span class="p">,</span><span class="w"> 
-    </span><span class="s2">"ParalizadaInfC"</span><span class="p">,</span><span class="w"> </span><span class="s2">"CulminadaInfC"</span><span class="p">,</span><span class="w"> </span><span class="s2">"ParalizadaInfI"</span><span class="p">,</span><span class="w"> </span><span class="s2">"CulminadaInfI"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Demolida"</span><span class="p">))</span><span class="w">
-</span><span class="n">datos</span><span class="o">$</span><span class="n">movimiento</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">factor</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">movimiento</span><span class="p">,</span><span class="w"> </span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"A"</span><span class="p">,</span><span class="w"> </span><span class="s2">"C"</span><span class="p">,</span><span class="w"> </span><span class="s2">"I"</span><span class="p">,</span><span class="w"> </span><span class="s2">"N"</span><span class="p">,</span><span class="w"> 
-    </span><span class="s2">"R"</span><span class="p">,</span><span class="w"> </span><span class="s2">"T"</span><span class="p">),</span><span class="w"> </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Ampliación"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Continua"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Inactiva"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Nueva"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Reinicia"</span><span class="p">,</span><span class="w"> 
-    </span><span class="s2">"Culmina"</span><span class="p">))</span><span class="w">
-</span><span class="n">datos</span><span class="o">$</span><span class="n">estrato</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">factor</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">estrato</span><span class="p">,</span><span class="w"> </span><span class="n">ordered</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
-</span><span class="n">datos</span><span class="o">$</span><span class="n">areatotzc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">areatotzc</span><span class="p">)</span><span class="w">
-</span><span class="n">datos</span><span class="o">$</span><span class="n">areaunitga</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">areaunitga</span><span class="p">)</span><span class="w">
-</span><span class="n">datos</span><span class="o">$</span><span class="n">preciounig</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">preciounig</span><span class="p">)</span><span class="w">
-</span><span class="n">datos</span><span class="o">$</span><span class="n">tipovalor</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">factor</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">tipovalor</span><span class="p">,</span><span class="w"> </span><span class="n">level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"No responde"</span><span class="p">,</span><span class="w"> 
-    </span><span class="s2">"Real"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Estimado"</span><span class="p">))</span><span class="w">
-</span><span class="n">datos</span><span class="o">$</span><span class="n">mano_obrap</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">mano_obrap</span><span class="p">)</span><span class="w">
-</span><span class="n">datos</span><span class="o">$</span><span class="n">mano_obrat</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">mano_obrat</span><span class="p">)</span><span class="w">
-</span><span class="n">datos</span><span class="o">$</span><span class="n">area_lote</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">area_lote</span><span class="p">)</span><span class="w">
-</span><span class="n">datos</span><span class="o">$</span><span class="n">areavendib</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">areavendib</span><span class="p">)</span><span class="w">
-</span><span class="n">datos</span><span class="o">$</span><span class="n">nro_pisos</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">nro_pisos</span><span class="p">)</span><span class="w">
-</span><span class="n">datos</span><span class="o">$</span><span class="n">gradoavanc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">gradoavanc</span><span class="p">)</span><span class="w">
-</span><span class="n">datos</span><span class="o">$</span><span class="n">preciovtax</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">preciovtax</span><span class="p">)</span><span class="w">
-</span><span class="n">datos</span><span class="o">$</span><span class="n">areavenuni</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">areavenuni</span><span class="p">)</span><span class="w">
-</span><span class="n">datos</span><span class="o">$</span><span class="n">tipovivi</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">factor</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">tipovivi</span><span class="p">,</span><span class="w"> </span><span class="n">level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Social"</span><span class="p">,</span><span class="w"> 
-    </span><span class="s2">"No Social"</span><span class="p">))</span><span class="w">
-</span><span class="n">datos</span><span class="o">$</span><span class="n">ranvivi</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">factor</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">ranvivi</span><span class="p">,</span><span class="w"> </span><span class="n">ordered</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
-</span><span class="n">datos</span><span class="o">$</span><span class="n">destino2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">factor</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">destino2</span><span class="p">,</span><span class="w"> </span><span class="n">level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">),</span><span class="w"> </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"Apartamento"</span><span class="p">,</span><span class="w"> 
-    </span><span class="s2">"Oficina"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Comercio"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Casas"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Bodega"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Otros"</span><span class="p">))</span><span class="w">
-</span><span class="c1"># Estructura de los datos</span><span class="w">
-</span><span class="kc">str</span><span class="p">(</span><span class="n">datos</span><span class="p">)</span><span class="w">
-</span></code></pre></section></section>
-
-```{r echo=F}
+```{r}
 # Coerción de variable por variable
 datos$ano_censo <- factor(datos$ano_censo, ordered = T)
 datos$trimestre <- factor(datos$trimestre, ordered = T)
@@ -412,10 +326,8 @@ datos$destino2 <- factor(datos$destino2, level = c(1, 2, 3, 4, 5, 6),
 str(datos)
 ```
 
-## Limpieza de datos (datos técnicamente correctos a datos consistentes)
-Una vez se logra que los datos se encuentren en un estado ténicamente correcto, es necesario manipular la base de datos para llevarlos a un estado consistente, es decir, a una **etapa en la que el conjunto de observaciones están listos para la realización estadística descriptiva e inferencial**. Este procedimiento consta en **solucionar problemas relacionados con datos faltantes o datos duplicados**, que inflan la totalidad de la información que se posea.
-
-#### Remover filas o columnas vacías
+### Limpieza de datos (Datos ténicamente correctos a datos consistentes)
+#### Remover filas o columnas vacías en <tt>R</tt>
 Este procedimiento, **permite buscar y eliminar aquellas filas o columnas que se encuentran totalmente vacías** y que pueden de alguna manera inflar la totalidad de información que se posee en la base de datos.
 
 Para ello se emplea la función <tt>remove_empty()</tt> de la librería <tt>janitor</tt>.
@@ -429,7 +341,7 @@ datos <- remove_empty(datos, which = c("rows", "cols"))
 dim(datos)
 ```
 
-#### Remover filas duplicadas
+#### Remover filas duplicadas en <tt>R</tt>
 Este procedimiento **se emplea preferiblemente cuando se posee una variable de identificación única**, tal como cédula o nit, que permita comparar cada fila y eliminar solo aquellas que realmente se encuentren duplicadas.
 
 Para eliminar las filas que se encuentren duplicadas, es posible emplear la función <tt>distinct()</tt> de la librería <tt>dplyr</tt>, de la forma.
@@ -444,7 +356,7 @@ datos <- distinct(datos)
 dim(datos)
 ```
 
-### Detección de datos faltantes
+#### Detección de datos faltantes en <tt>R</tt>
 La detección de datos faltantes radica en localizar para cada variable, si se encuentran casillas vacías, valores especiales, tales como <code style="color: #ff628c!important">Na, NaN</code> o <code style="color: #ff628c!important">NULL</code>.
 
 * **<code style="color: #ff628c!important">NA</code> (Not Available):** Es un carácter especial para indicar valores perdidos. Éstos pueden ser detectados en <tt>R</tt> mediante la función <tt>is.na()</tt>.
@@ -459,7 +371,7 @@ faltantes <- apply(X = datos, MARGIN = 2, FUN = function(x) which(is.na(x) | is.
 faltantes
 ```
 
-### Exportar datos
+### Exportar datos en <tt>R</tt>
 Una vez corregida la base de datos, es posible exportar la información para emplearla posteriormente en <tt>R</tt> o en otros programas. <tt>R</tt> **posee diferentes librerías y funciones que permiten exportar bases de datos** dependiendo de la extensión de interés. En la siguiente tabla se resume el origen, la extensión, la librería, y la función para cargar cada base de datos dependiendo de su extensión.
 
 <pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -3rem; margin-top: -3rem; font-size: 120%;">
@@ -478,8 +390,325 @@ kable_styling("striped", full_width = F)
 ```
 </pre>
 
-Para mostrar el empleo de las funciones, suponga que queremos exportar la base de datos
+Para mostrar el empleo de estas funciones, suponga que queremos exportar la base de datos en extensión, <tt>.xlsx</tt>. Para ello se emplea entonces la función <tt>write.xlsx()</tt> de la librería <tt>openxlsx</tt>.
 
+```{r eval=FALSE}
+library(openxlsx)
+## Se escribe el nombre del archivo, junto a la extensión de donde se quiera guardar
+write.xlsx(x = datos, "C:/Users/user/Desktop/datos.xlsx")
+```
+
+## Estadística descriptiva
+En general, la importancia del análisis estadístico radica en la **resolución de problemas vinculados con datos**, siendo la variabilidad de los mísmos, quién guiará la importancia del empleo de diferentes ténicas para el manejo de la información. Desde este punto de vista, se explica en esta sección el método de implementación en <tt>R</tt> de resúmenes de información, resumenes tabulares y gráficos para la presentación de información de forma adecuada, para facilitar la toma de decisiones.
+
+Un aspecto importante a tener en cuenta al realizar análisis estadísticos, es señalado por @Esquivel2016[, p. 29],  el cual menciona que dentro de un análisis con información estadística, se debe tener en cuenta las siguientes etapas: 
+
+1. **Leer entre los datos**: que consiste en llevar a cabo una lectura literal de la información, sin interpretar su contenido).
+2. **Leer dentro de los datos**: implica no solamente interpretar los datos sino integrarlos dentro del contexto.
+3. **Leer más allá de los datos**: significa tomar los datos como referente para identificar patrones que transciendan el grupo de datos observado, ya sea mediante la interpolación o extrapolación de resultados.
+4. **Leer detrás de los datos**: consiste en llevar a cabo un análisis crítico de la información que se estudia, esto implica analizar integralmente el problema, desde su origen, el tipo de dato que se utiliza, su validez y fiabilidad para analizar el problema y la posibilidad de generalizar los hallazgos.
+
+### Resumen numéricos (Variables cuantitativas)
+Una parte importante en la estadística descriptiva, son **las medidas estadísticas que tienen por objetivo resumir la información contenida en un conjunto de datos, en pocos valores númericos que representan diferentes características**. Estas medidas estadísticas nos darán información sobre la situación, dispersión, forma, asociación que posee un conjunto de datos de manera que sea posible captar rápidamente la estructura de los mismos.
+
+Las medidas estadísticas que se explicarán en esta sesión podrán ser econtradas en la [Clase 01](../../EstadisticaI/EstIClase01.html#medidas-estadísticas){:target="_blank"} y [Clase 02](../../EstadisticaI/EstIClase02.html#medidas-estadísticas){:target="_blank"} del curso de Estadística I.
+
+**Una alternativa para presentar la información que aportan las medidas estadísticas**, sin tener que realizar el cálculo de cada una de forma individual, **es mediante el empleo de resúmenes numéricos**, los cuales permiten presentar de forma simple, ordenada y simultanea las diferentes medidas que representan el comportamiento de un conjunto de datos.
+
+#### Resumen numérico individual
+
+Entre las diferentes funciones que permiten realizar resúmenes numéricos en <tt>R</tt>, se destaca la función <tt>describe()</tt> de la librería <tt>psych</tt>, que presentan diferentes medidas estadísticas para variables tipo numéricas. 
+
+Suponga que se desea realizar un resumen numérico de la variable <tt>areavenuni</tt> (Área total vendible por unidad). En este caso podríamos emplear la función <tt>describe()</tt> especificando las variables que se desean calcular, de la forma.
+
+```{r}
+library(psych)
+
+# resumen numérico mediante librería psych
+describe(datos$areavenuni, ranges = TRUE, trim = 0.1, type = 3, quant = c(0.25, 0.75), IQR = TRUE)
+```
+
+#### Resumen numérico por grupos
+
+También es posible realizar resúmenes numérico por grupos, en donde, se busca tomar una variable cuantitativa, y discriminarla por una variable cualitativa. Para ello, es posible emplear la función <tt>describeBy</tt> de la librería <tt>psych</tt>, la cual permite establecer una variable de tipo **numerica**, y agrupar los resultados por los niveles de una variable tipo **factor**.
+
+Suponga que se desea realizar un resumen numérico de la variable <tt>areavenuni</tt> (Área total vendible por unidad), discriminando por la variable estrato (estrato socioeconómico de un espacio geográfico). En este caso podríamos emplear la función <tt>describeBy()</tt> especificando las variables que se desean calcular, de la forma.
+
+```{r}
+# resumen numérico por grupos mediante librería psych
+describeBy(x = datos$areavenuni, group = datos$estrato, ranges = TRUE, trim = 0.1, type = 3, quant = c(0.25, 0.75), IQR = TRUE)
+```
+
+### Resumen tabular (Variables cualitativas)
+
+Una forma convencional de presentar resúmenes de variables cualitativas, es mediante la construcción de tablas de frecuencias, las cuales permiten presentar de **forma individual** (una vía) algunas de las características que poseen las variables cualitativas, o de **forma conjunta** (dos vías) algunas de las características que comparten dichas variables.
+
+#### Tabla de frecuencias absolutas
+
+Para presentar de forma individual o grupal las características de las variables, puede ser empleada la función <tt>table()</tt> de la base de <tt>R</tt>, la cual agrega la información presentada en de las variables de una forma simple, mediante una tabla que presenta el número **(frecuencia absoluta)** de observaciones que pertenecen a una categoría. Se aconseja que los datos usados dentro de la función <tt>table()</tt> sean de tipo *factor*.
+
+Las tablas de frecuencia pueden ser construida en una o dos vías, es decir, las tablas pueden presentar la frecuencia absoluta de una sola variable, o presentar la frecuencia absoluta del cruce entre dos variables.
+
+Para ilustrar su empleo, suponga que se desea observar el estado en el cual se encontraron las obras al momento de realizar el censo (<tt>estado_act</tt>). Al ser una sola variable, la función <tt>table()</tt> se emplea de la siguiente forma
+
+```{r}
+# tabla de frecuencias absolutas una vía
+Tunavia <- table(datos$estado_act)
+Tunavia
+```
+
+Ahora suponga, que se desea observar el cruce que hay entre el año en que se realizó el censo (<tt>ano_censo</tt>) y el estado actual en el cual se encontraron las obras al momento de realizar el censo (<tt>estado_act</tt>). En éste caso, al ser dos variables, la función <tt>table()</tt> debe emplearse de la siguiente manera
+
+```{r}
+# tabla de frecuencias absolutas doble vía
+Tdosvias <- table(datos$ano_censo, datos$estado_act)
+Tdosvias
+```
+
+#### Tabla de frecuencias absolutas
+Una alternativa para presentar la información contenida dentro de las variables cualitativas, es mediante la presentación de tablas de frecuencias relativas, las cuales muestran **el valor porcentual al que equivale una categoría específica**.
+
+Para la realización de tablas de frecuencias relativas, se emplea la función <tt>prop.table(tabla)</tt> de base de <tt>R</tt>, en donde <tt>tabla</tt> hace referencia a la tabla de frecuencias absolutas creada en la subsección anterior.
+
+Para ilustrar su empleo, suponga que se desea observar el valor porcentual para los diferentes estados en el cual se encontraron las obras al momento de realizar el censo (<tt>estado_act</tt>). Al ser una sola variable, la función <tt>prop.table()</tt> se emplea de la siguiente forma
+
+```{r}
+# tabla de frecuencias relativas una vía
+Punavia <- prop.table(Tunavia)
+Punavia
+```
+
+En el mismo hílo, suponga que se desea observar en valores porcentuales, el cruce que hay entre el año en que se realizó el censo (<tt>ano_censo</tt>) y el estado actual en el cual se encontraron las obras al momento de realizar el censo (<tt>estado_act</tt>). En éste caso, al ser dos variables, la función <tt>prop.table()</tt> debe emplearse de la siguiente manera
+
+```{r}
+# tabla de frecuencias relativas doble vía
+Pdosvias <- prop.table(Tdosvias)
+Pdosvias
+```
+
+## Análisis gráfico
+Otro aspecto importante del análisis descriptivo, es el que se realiza mediante análisis gráfico. **El análisis gráfico es una forma de simplificar lo tedioso y complejo de un conjunto de observaciones**, además de ser una forma más accesible de presentación de la información cuando se tienen muchas variables, puesto que permiten mostrar el comportamiento de los datos presentados, y hacer juicios respecto a su tendencia central, variabilidad, formas, patrones, tendencias, etc.
+
+El análisis gráfico, puede ser dividido en  
+
+* Gráficos para variables cuantitativa
+* Gráficos para variables cualitativas
+* Gráficos para cruces entre variables cuantitativas y cualitativas
+
+En la siguiente tabla se hace un resumen de qué gráficos pueden ser apropiados para usar en cada uno de los casos
+
+<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -3rem; margin-top: -3rem; font-size: 120%;">
+```{r echo=FALSE}
+library(kableExtra)
+
+tablita <- cbind(
+  "Una Cuantitativa" = c("Gráfico de caja y bigotes", "Histograma", "Densidad"),
+  "Dos Cuantitativa" = c("Diagrama de dispersión", "", ""),
+  "Más de Dos Cuantitativas" = c("Matriz de dispersión", "", ""),
+  "Una Cualitativa" = c("Gráfico de barras", "Gráfico de pareto", "Gráfico de pastel"),
+  "Dos Cualitativas" = c("Gráfico de barras", "Gráfico de balón", ""),
+  "Cualitativa - Cuantitativa" = c("Gráfico de caja y bigotes", "Gráfico de medias", ""))
+
+kable(tablita, 
+  format = "html", booktabs = T) %>%
+kable_styling("striped", full_width = F)
+
+options(scipen = 10)
+```
+</pre>
+
+### Una variable Cuantitativa
+
+#### Gráfico de caja y bigotes
+Este gráfico sirve para presentar de forma visual, datos numéricos a través de sus cuartiles, además de presentar otras **características importantes, tales como el valor de los cuartiles, dispersión, simetría y datos potencialmente atípicos**.
+
+<h4 align="center"> Representación de un Gráfico de Caja y Bigotes </h4>
+![](../EstadisticaI/images/BoxPlot.jpg)
+
+Este gráfico puede ser realizado mediante la función <tt>boxplot()</tt> de la librería <tt>graphics</tt> de la base del <tt>R</tt>. 
+
+Suponga que se desea presentar de forma visual, el comportamiento de la variable que corresponde al grado de avance de la obra en contrucción (<tt>gradoavanc</tt>) a partir de el comportamiento de los cuartiles. Para ello, podemos emplear la función <tt>boxplot()</tt> de la forma
+
+```{r}
+# Construcción de gráfico de caja y bigotes
+boxplot(datos$gradoavanc, horizontal = T, xlab = "Porcentaje de avance (%)", main = "Boxplot del Grado de Avance de la Obra", col = "lightblue")
+```
+
+#### Histograma
+Este gráfico muestra la distribución de frecuencia o densidades del grupo de observaciones, **brinda información sobre el valor más probables, la dispersión, la asimetría y valores extremos**. Adicionalmente, tiene la ventaja de que su interpretación es muy intuitiva y por tanto es de los gráficos más preferidos para resumir información. Este gráfico puede ser realizado mediante la función <tt>hist()</tt> de la librería <tt>graphics</tt> de la base del <tt>R</tt>.
+
+Suponga que se desea presentar mediante un histograma, el comportamiento de la variable que corresponde al precio de venta por `$m^2$` del inmueble (<tt>preciovtax</tt>). Para ello, podemos emplear la función <tt>hist()</tt> de la forma
+
+```{r}
+## Construcción de histograma
+hist(datos$preciovtax, main = "Histograma del Precio de venta por M2", xlab = "Precio (en miles de pesos)", col = 8) 
+```
+
+#### Densidad
+Este gráfico funciona similar al histograma de densidades, con la diferencia de que en lugar de mostrar la distribución mediante clases (barras), éste muestra el comportamiento de la distribución de las observaciones mediante una curva. Dicha curva, **brinda mayor información que el histograma respecto al valor promedio, dispersión y asimetría**. Este gráfico puede ser realizado mediante la combinación de las funciones <tt>plot()</tt> y <tt>density()</tt>, de la forma <tt>plot(density())</tt>, siendo <tt>plot()</tt> y <tt>density()</tt> funciones de las librerías <tt>graphics</tt> y <tt>stats</tt> de la base de <tt>R</tt>. 
+
+Adicionalmente se presenta la función <tt>polygon</tt> de la librería <tt>graphics</tt> de la base de <tt>R</tt>, la cual sirve para generar formas, o en este caso, darle color a la densidad.
+
+Suponga que se desea presentar la densidad, de la variable que corresponde al área total vendible por unidad (<tt>areavenuni</tt>). Para ello, podemos emplear la función <tt>hist()</tt> de la forma
+
+```{r}
+## Construcción de la densidad
+plot(density(datos$areavenuni, na.rm = T), main = "Gráfico de Densidad para Area Total Vendible", xlab = "Área Total Vendible", lwd = 2) 
+# Colorea la densidad
+polygon(density(datos$areavenuni, na.rm = T), col = 3) 
+```
+
+### Dos variables Cuantitativas
+
+#### Gráfico de dispersión
+Este gráfico se emplea para hacer cruces entre dos variables cuantitativas, y **sirve para ver tendencias y relaciones entre dos variables cuantitativas, además de permitir apreciar donde se centra el total de observaciones, y detección de datos atípicos** dados dos atributos cuantitativos. Este gráfico puede ser realizado mediante la función <tt>plot()</tt> de la librería <tt>graphics</tt> de la base del <tt>R</tt>.
+
+Para entender la forma en que se aplica un diagrama de dispersión, suponga que se quiere observar, si éxiste alguna relación entre el área del lote donde se construye la obra o proyecto (<tt>area_lote</tt>) y el precio de venta por `$m^2$` (<tt>preciovtax</tt>). Para ello, podemos emplear la función <tt>plot()</tt> de la forma.
+
+```{r}
+plot(x = datos$area_lote, y = datos$preciovtax, xlab = "Área del Lote",
+     ylab = "Precio de venta (m2)", main = "Relación entre Área del Lote y Precio de venta m2", pch = 19)
+```
+
+### Más de dos variables Cuantitativas
+
+#### Matriz de dispersión
+Cuando se poseen más de dos variables cuantitativas, es posible presentar un matriz que muestre el cruce entre pares de variables, mediante cuadros con versiones simples de la función <tt>plot()</tt>. Este gráfico puede ser realizado mediante la función <tt>pairs()</tt> de la librería <tt>graphics</tt> de la base de <tt>R</tt>.
+
+Para ello, suponga que se desea observar la relación que hay entre las variables, área del lote donde se construye la obra o proyecto (<tt>area_lote</tt>), porcentaje de avance de la obra en contrucción (<tt>gradoavanc</tt>) y área total vendible por unidad (<tt>areavenuni</tt>). Para ello empleamos la función <tt>pairs()</tt> de la forma
+```{r echo=FALSE, eval=FALSE}
+## Matríz de dispersión básica
+pairs(cbind(datos$area_lote, datos$gradoavanc, datos$areavenuni), labels = c("Área Lote", "Porcentaje de Avance", "Área Total Vendible"))
+```
+
+Funciones complementarias pueden ser desarrolladas para mejorar la visualización los pares de variables. En el libro de @Hernandez2018[, pp. 40-49], se presentan diferentes funciones que pueden ser implementadas. Entre ellas la siguiente función
+
+```{r}
+## Matríz de dispersión avanzada
+# Función para dibujar la dispersión y agregar la recta de regresión
+panel.reg <- function(x, y)
+{
+  points(x, y, pch=20)
+  abline(lm(y ~ x), lwd=2, col='dodgerblue2')
+}
+# Función para crear el histograma
+panel.hist <- function(x, ...)
+{
+  usr <- par("usr"); on.exit(par(usr))
+  par(usr = c(usr[1:2], 0, 1.5) )
+  h <- hist(x, plot = FALSE)
+  breaks <- h$breaks; nB <- length(breaks)
+  y <- h$counts; y <- y/max(y)
+  rect(breaks[-nB], 0, breaks[-1], y, col="dodgerblue2", ...)
+}
+# Función para obtener la correlación
+panel.cor <- function(x, y, digits=2, prefix="", cex.cor)
+{
+  usr <- par("usr"); on.exit(par(usr))
+  par(usr = c(0, 1, 0, 1))
+  r <- abs(cor(x, y))
+  txt <- format(c(r, 0.123456789), digits=digits)[1]
+  txt <- paste(prefix, txt, sep="")
+  if(missing(cex.cor)) cex <- 0.8
+  text(0.5, 0.5, txt, cex = cex)
+}
+
+pairs(cbind(datos$area_lote, datos$gradoavanc, datos$areavenuni), labels = c("Área Lote", "Porcentaje de Avance", "Área Total Vendible"), upper.panel = panel.reg, diag.panel = panel.hist, lower.panel = panel.cor)
+```
+
+### Una Variable Cualitativa
+
+#### Gráfico de barras
+Sirve para resumir una variable cualitativa mediante barras de frecuencias absolutas o relativas. Éste **permite observar la concentración de observaciones en una o más categorías diferentes**. Este gráfico puede ser realizado mediante la función <tt>barplot()</tt> de la librería <tt>graphics</tt> de la base de <tt>R</tt>.
+
+Para ilustrar su empleo, suponga que se desea observar el estado en el cual se encontraron las obras al momento de realizar el censo (<tt>estado_act</tt>). En este caso, la función <tt>barplot()</tt> se emplea de la siguiente forma
+
+```{r}
+# Gráfico de barras
+tabla1 <- table(datos$estado_ac)
+barplot(tabla1, main = "Estado en el cual se encontraron las obras al momento del censo", col = hcl.colors(6)) 
+```
+
+#### Gráfico de pareto
+Este gráfico es similar al gráfico de barras para una sola variable cualitativa, pero con la ventaja de que **presenta las frecuencias absolutas, relativas, y las frecuencias acumuladas absolutas y acumuladas relativas en el mismo gráfico**. Este gráfico puede ser realizado mediante la función <tt>pareto.chart()</tt> de la librería <tt>qqc</tt>.
+
+Para ilustrar su empleo, suponga que se desea observar el estrato socioeconómico en donde se está realizado la obra (<tt>estrato</tt>). Al ser una sola variable, la función <tt>pareto.chart()</tt> se emplea de la siguiente forma
+
+```{r}
+library(qcc)
+
+# Gráfico de pareto
+tabla2 <- table(datos$estrato)
+pareto.chart(tabla2, main = "Gráfico Pareto por Estrato")
+```
+
+#### Gráfico de pastel
+Este gráfico también **sirve para representar gráficamente las tablas de frecuencias absolutas y relativas para una variable cualitativa**. A pesar de ser un gráfico muy usado en la práctica, **no muestra bien la información que se desea presentar**, ya que siempre debe estar acompañado de los porcentajes o frecuencias que representa cada área, ya que no hacerlo, dicho gráfico puede ser muy engañoso. 
+
+Este gráfico puede ser realizado mediante la función <tt>pie()</tt> de la librería <tt>graphics</tt> de la base de <tt>R</tt>, y donde, para establecer etiquetas de los porcentajes o frecuencias de cada área, puede establecerse mediante la función <tt>legend()</tt> de la librería <tt>graphics</tt> de la base de <tt>R</tt>.
+
+Empleamos la variable del estado en que se encuentra la obra (<tt>movimiento</tt>) para ilustrar el empleo del gráfico de pastel. En dicho caso, la estructura de la función <tt>pie()</tt> y <tt>legend()</tt> será de la forma
+
+```{r echo=FALSE, eval=FALSE}
+# Gráfico de pastel una variable de frecuencias absolutas
+tabla3 <- prop.table(table(datos$movimiento))
+pie(tabla3, main = "Estado en que se encuentra la obra", col = cm.colors(6))
+legend("topleft", legend = paste0(names(tabla3), " (", round(tabla3,4), ")"), fill = cm.colors(6), cex = 0.8)
+```
+
+### Dos Variables Cualitativas
+
+#### Gráfico de barras
+El gráfico de barras también sirve para resumir dos variable cualitativa mediante barras de frecuencias absolutas o relativas. **La interpretación, será la misma que para una sola variable cualitativa, con la diferencia de que en este caso, se podrán hacer comparaciones por categorías adicionales.** Este gráfico puede ser realizado mediante la función <tt>barplot()</tt> de la librería <tt>graphics</tt> de la base de <tt>R</tt>, junto a la función <tt>legend()</tt>, para establecer las etiquetas asociadas a cada una de las barras que se presenten en el gráfico.
+
+Para ilustrar su empleo, suponga que se desea observar el estado en el cual se encontraron las obras al momento de realizar el censo (<tt>estado_act</tt>), respecto a si la obra cuenta o no con licencia (<tt>ob_formal</tt>). En este caso, la función <tt>barplot()</tt> se emplea junto a la función <tt>legend()</tt> de la siguiente forma
+
+```{r}
+# Gráfico de barras
+tabla4 <- table(datos$estado_ac, datos$ob_formal)
+barplot(tabla4, main = "Estado de la obra respecto a si la obra cuenta o no con licencia", col = hcl.colors(6), beside = T) 
+legend("topright", rownames(tabla4), fill = topo.colors(6), cex = 0.8) 
+```
+
+#### Gráfico de balón
+El gráfico de balón, suele ser un gráfico más avanzado para resumir dos variable cualitativa, en donde **se establecen en el cruce de las dos variables, círculos que se asocian al tamaño del cruce de las dos variables cualitativas**. Este gráfico puede ser realizado mediante la función <tt>ggballoonplot()</tt> de la librería <tt>ggpubr</tt>, la cual depende de la librería <tt>ggplot2</tt>.
+
+Para ilustrar el empleo de la función, suponga que se desea observar el estado en el cual se encontraron las obras al momento de realizar el censo (<tt>estado_act</tt>), respecto al estado en que se encuentra la obra (<tt>movimiento</tt>). En este caso, la función <tt>ggballoonplot()</tt> puede emplearse de la forma
+
+```{r}
+library(ggplot2)
+library(ggpubr)
+theme_set(theme_pubr())
+
+# Gráfico de balón
+tabla5 <- data.frame(table(datos$estado_ac, datos$movimiento))
+ggballoonplot(tabla5, fill = "value")+
+  scale_fill_viridis_c(option = "C")
+```
+
+### Cruce entre Variables Cualitativas y Cuantitativas
+
+#### Gráfico de caja y bigotes
+Este gráfico sirve para presentar de forma visual, datos numéricos **por categorías** a través de sus cuartiles, además de presentar **otras características importantes, tales como la dispersión, simetría y datos potencialmente atípicos**. Este gráfico puede ser realizado mediante la función <tt>boxplot()</tt> de la librería <tt>graphics</tt> de <tt>R</tt>.
+
+Suponga que se tiene interés en realizar un cruce entre la variable cualitativa que indica si la obra cuenta o no con licencia (<tt>ob_formal</tt>) y la variable cuantitativa del grado de avance de la obra (<tt>gradoavanc</tt>). Para ello, puede emplearse el gráfico de caja y bigotes de la forma
+```{r}
+# Construcción de gráfico de caja y bigotes por categorías
+boxplot(datos$gradoavanc ~ datos$ob_formal, horizontal = T, xlab = "Grado de avance", ylab = "Posee licencia?", main = "Grado de avance respecto a la posesión de licencia", col = terrain.colors(2))
+```
+
+#### Gráfico de medias
+Este gráfico **sirve para presentar de forma visual, grupos de datos numéricos a través de sus media y desviación estándar**. El gráfico está compuesto por un punto que representa el valor promedio del grupo de observaciones y **las barras representan dos desviación estándar de la media**. En donde, si las barras no se superponen, entonces se tendrá evidencia sólida respecto a que la media de los grupos es diferente.
+
+Este gráfico puede ser realizado mediante la función <tt>plotMeans()</tt> de la librería <tt>RcmdrMisc</tt>. Y para ilustrar su empleo, suponga que se desea observar área total vendible (<tt>areavendib</tt>), respecto al rango de vivienda calculado (<tt>ranvivi</tt>). Ésto se puede realizar mediante la forma
+
+```{r}
+library(RcmdrMisc)
+
+## Construcción de diagrama de caja y bigotes por categorías
+# Recordar escribir en error.bars = "conf.int" porque por defecto se presenta un intervalo para el error estándar y no para dos desviaciones estándar.
+plotMeans(response = datos$areavendib, factor1 = datos$ranvivi, error.bars = "conf.int", xlab = "Estrato", ylab = "Peso (kg)", main = "Área vendible respecto a rangos de vivienda")
+```
 
 ## Referencias
 <h7 id="ref-Recchioni2016"></h7>
