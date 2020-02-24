@@ -207,7 +207,7 @@ tal que $B_2\cap B_3 = \phi$.
 </main>
 
 ### Propiedades de teoría de conjuntos
-
+<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -3rem; margin-top: -3rem; font-size: 120%;">
 ```{r echo = FALSE}
 library(kableExtra)
 datos <- cbind(data.frame(
@@ -221,6 +221,7 @@ datos %>%
   kable(format = "html", booktabs = T) %>%
   kable_styling("striped", full_width = F) 
 ```
+</pre>
 
 ## Probabilidad
 La probabilidad es una medida asociada a la posibilidad de que ocurra un determinado evento, en donde, la forma forma tradicional de estimar la probabilidad es mediante el concepto de frecuencia relativa.
