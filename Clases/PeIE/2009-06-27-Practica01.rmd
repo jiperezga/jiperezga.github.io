@@ -74,7 +74,7 @@ liste los números y defina la notación de las regiones que representan los sig
    * La probabilidad de que llueva mañana es `$0.40$` y la probabilidad de que no llueva es `$0.52$`.
    * Las probabilidades de que una impresora cometa `$0$`, `$1$`, `$2$`, `$3$` o `$4$` o más errores al imprimir un documento son `$0.19$`, `$0.34$`, `$-0.25$`, `$0.43$` y `$0.29$`, respectivamente.
    * Al sacar una carta de una baraja en un solo intento la probabilidad de seleccionar un corazón es `$1/4$`, la probabilidad de seleccionar una carta negra
-es `$1/2$`, y la probabilidad de seleccionar una cartade corazones y negra es `$1/4$`.
+es `$1/2$`, y la probabilidad de seleccionar una carta de corazones y negra es `$1/4$`.
 
 8. Se sacan tres cartas seguidas, sin reemplazo, de una baraja ordinaria. Encuentre la probabilidad de la primera carta sea una `$A$` roja, la segunda carta sea una `$J$` una `$Q$` o una `$K$` y la tercera carta sea mayor que `$4$` pero menor que `$7$`.
 9. La proporción de personas que estudia para el examen de probabilidad es de `$52\%$`. Si la persona estudia, tiene una probabilidad de `$85\%$` de ganar el examen; si no estudia, la probabilidad de ganar el examen es de `$12\%$`. Se selecciona una persona al azar de las que presentaron el examen y resulta que lo perdió, ¿Cuál la probabilidad de que haya estudiado?   
