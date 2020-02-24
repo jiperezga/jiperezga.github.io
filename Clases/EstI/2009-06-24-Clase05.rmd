@@ -6,14 +6,14 @@ permalink: /EstadisticaI/EstI:title.html
 tags:
 
 introduction: |
-              Tecnicas de conteo.
-              - Regla multiplicativa
-              - Permutación de n objetos
-              - Permutación de n objetos tomados de a r 
-              - Permutación en circulo
-              - Permutación por clases
-              - Combinatoria
-              - Combinatoria por subconjuntos
+              Tecnicas de conteo. <br>
+              - Regla multiplicativa <br>
+              - Permutación de n objetos <br>
+              - Permutación de n objetos tomados de a r <br>
+              - Permutación en circulo <br>
+              - Permutación por clases <br>
+              - Combinatoria <br>
+              - Combinatoria por subconjuntos <br>
               - Permutaciones o Combinatorias?
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
