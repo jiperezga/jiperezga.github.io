@@ -5,7 +5,7 @@ main-class: 'practica'
 permalink: /SemilleroRyPython/SRyP:title.html
 tags:
 
-introduction: Ejercicio sobre variables aleatorias y distribuciones de probabilidad.
+introduction: Ejercicio sobre estructura de datos, ciclos, condicionales y funciones.
               
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
