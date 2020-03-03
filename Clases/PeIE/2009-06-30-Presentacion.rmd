@@ -150,22 +150,22 @@ El curso se desarrolla con sesiones teóricas en el aula de clase y sesiones pr�
 ## Evaluación del curso
 Los instrumentos de evaluación de cada módulo se llevan a cabo, mediante exámenes escritos individuales y proyectos elaborados en equipo, los cuales evalúan los conocimientos, habilidades, valores y actitudes propias del módulo.
 
+<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -3rem; margin-top: -3rem;">
 ```{r echo=FALSE}
 library(kableExtra)
 library(dplyr)
 kable(cbind(data.frame(
   "Evaluación" = c("Examen No.1", "Examen No.2", "Examen No.3","Examen No.4", "Trabajo", "Quices")),
-  Porcentaje = c("20%", "25%", "20%", "20%", "10%", "10%"),
+  Porcentaje = c("20%", "20%", "20%", "20%", "10%", "10%"),
   Temas = c("Fundamentos de Probabilidad", " Variables aleatorias y distribuciones de probabilidad", "Distribuciones muestrales e intervalos de confianza", "Pruebas de Hipótesis", "Estadística descriptiva", "Temas relacionados a cada parcial"),
-  "Semana para Evaluación" = c("Cuarta semana", "Novena semana", "Decimotercera semana", "Decimosexta semana", "Sexta semana", "Tercera, Séptima, Décima, Decimoquinta Semana"),
+  "Semana para Evaluación" = c("Cuarta semana", "Novena semana", "Decimotercera semana", "Decimosexta semana", "Sexta semana", "Tercera, Séptima, Décima,\nDecimoquinta Semana"),
   Modalidad = c("Individual", "Individual", "Individual", "Individual", "Parejas", "Individual")),
   format = "html", booktabs = T) %>%
 kable_styling("striped", full_width = F) %>%
 column_spec(3, width = "5cm") %>%
 column_spec(5, width = "3cm") 
-
-
 ```
+</pre>
 
 ## Malla curricular Programas
 
