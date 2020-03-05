@@ -82,7 +82,7 @@ opts_chunk$set(echo=TRUE,
    * coma entre comidas y consuma bebidas alcohólicas pero no fume
    * no fume ni coma entre comidas.
    
-8. Una Lotería consiste en acertar `$6$` de `$45$` números, y una serie que consta de un número del `$1 \text{ al } 6$`. Calcule la probabilidad de acertar el resultado ganador bajo las siguientes condiciones de juego.
+8. Una Lotería consiste en seleccionar `$6$` números de un total de `$45$` números, y una serie que consta de un número del `$1 \text{ al } 6$`. La lotería se gana si se aciertan los `$6$` números y la serie. Calcule la probabilidad de acertar el resultado ganador bajo las siguientes condiciones de juego.
    * Teniendo en cuenta el orden en que aparezca el número ganador.
    * Sin tener en cuenta el orden.
 
@@ -131,8 +131,7 @@ add_header_above(c("Frecuencia de" = 1, "Adquisición de Productos" = 3))
     * Cuál es la probabilidad de que el número obtenido en los dos dados sea igual?
     
 18. Un estudiante vive en un pueblo aledaño del Valle de Aburrá, y sólo cuenta con dos rutas de transporte para poder llegar a Caldas. Una vez llega a Caldas posee tres diferentes rutas para llegar al parque de San Antonio, y de allí puede seleccionar entre Metro o Bus para llegar a la UdeA. De cuantas formas podrías llegar a la UdeA desde su casa?
-   
-19. Si `$S$` representa el espacio muestral de todas las posibles cartas que pueden seleccionarse de un mazo de `$52$` cartas, `$A$` representa el evento de todos los números pares , `$B$` representa el evento de todas las letras, `$C$` representa el evento de obtener una carta roja y `$D` representa el evento de obtener un `$10$` rojo, una `$J$` negra o un `$5$` de cualquier color, diga con palabras a que conjuntos que corresponden a los siguientes eventos:
+19. Si `$S$` representa el espacio muestral de todas las posibles cartas que pueden seleccionarse de un mazo de `$52$` cartas, `$A$` representa el evento de todos los números pares , `$B$` representa el evento de todas las letras, `$C$` representa el evento de obtener una carta roja y `$D$` representa el evento de obtener un `$10$` rojo, una `$J$` negra o un `$5$` de cualquier color, diga con palabras a que conjuntos que corresponden a los siguientes eventos:
     * `$A \cup C$`
     * `$A \cap B$`
     * `$C'$`
@@ -152,7 +151,7 @@ add_header_above(c("Frecuencia de" = 1, "Adquisición de Productos" = 3))
 la probabilidad de que funcione el componente C1 es del `$98\%$`, la de C2 es `$96\%$`, la de C3 es de `$83\%$`, la de C4 es de `$98\%$` y la de C5 es de `$90\%$`. La red funciona si entre A y B es posible encontrar un camino de componentes que funcione. Se supone que la probabilidad de funcionar cada componente es independiente de los demás. ¿Cuál es la probabilidad de que no haya comunicación entre A y B?
 25. Si un experimento consiste en lanzar un dado y después extraen una letra al azar del alfabeto, ¿Cuántos puntos habrá en el espacio muestral?
 26. De cuantas formas pueden acomodarse `$3$` bombillitos rojos, `$4$` amarillos y `$2$` azules en una instalación navidella que posee `$9$` entradas?
-27. La probabilidad de sobrevivir a una cierta operación de trasplante es de `$0.55$`. Si un paciente sobrevive la operación, la probabilidad que su cuerpo rechace el trasplante en menos de un mes es de`$0.20$`. ¿Cuál es la probabilidad de que sobreviva a estas etapas críticas?
+27. La probabilidad de sobrevivir a una cierta operación de trasplante es de `$0.55$`. Si un paciente sobrevive la operación, la probabilidad que su cuerpo rechace el trasplante en menos de un mes es de `$0.20$`. ¿Cuál es la probabilidad de que sobreviva a estas etapas críticas?
 28. Un dado balanceado se tira seis veces y cada vez se registra el número de su cara superior, ¿Cuál es la probabilidad de que los números registrados sean `$1$`, `$2$`, `$3$`, `$4$`, `$5$` y `$6$` en cualquier orden?
 29. De `$200$` empleados de una empresa, `$70$` poseen automóvil. Además se sabe que de éstos, hay `$120$` profesionales, de los cuales `$50$` tienen automóvil. Si se escoge una persona al azar de las `$200$` y ésta posee automóvil, ¿Cuál es la probabilidad de que sea profesional?
 30. Un alergólogo afirma que `$30\%$` de los pacientes que examina son alérgicos a algún tipo de hierba. ¿Cuál es la probabilidad de que… 
