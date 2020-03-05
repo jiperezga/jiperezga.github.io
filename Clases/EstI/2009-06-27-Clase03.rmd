@@ -9,7 +9,7 @@ introduction: |
   Datos y su estructura. <br>
   Resúmenes numéricos. <br>
   Resúmenes tabulares. <br>
-  Resúmenes gráficos.
+  Análisis gráfico.
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
@@ -60,17 +60,30 @@ Los datos contenidos en la base de datos se presentan a continuación:
 <pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -3rem; margin-top: -3rem;"><table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;"><thead><tr><th style="text-align:left;">Municipio</th><th style="text-align:right;">Estrato</th><th style="text-align:right;">Edad</th><th style="text-align:right;">Altura</th><th style="text-align:right;">Peso</th><th style="text-align:right;">Salario</th><th style="text-align:left;">SatisTrabajo</th><th style="text-align:left;">DeporFavorito</th></tr></thead><tbody><tr><td style="text-align:left;">Caldas</td><td style="text-align:right;">5</td><td style="text-align:right;">17</td><td style="text-align:right;">1.77</td><td style="text-align:right;">66</td><td style="text-align:right;">1635100</td><td style="text-align:left;">Muy satisfecho</td><td style="text-align:left;">Fútbol</td></tr><tr><td style="text-align:left;">Bello</td><td style="text-align:right;">4</td><td style="text-align:right;">27</td><td style="text-align:right;">1.65</td><td style="text-align:right;">90</td><td style="text-align:right;">1752500</td><td style="text-align:left;">Insatisfecho</td><td style="text-align:left;">Fútbol</td></tr><tr><td style="text-align:left;">Medellín</td><td style="text-align:right;">1</td><td style="text-align:right;">18</td><td style="text-align:right;">1.57</td><td style="text-align:right;">66</td><td style="text-align:right;">1858400</td><td style="text-align:left;">Satisfecho</td><td style="text-align:left;">Baloncesto</td></tr><tr><td style="text-align:left;">Caldas</td><td style="text-align:right;">4</td><td style="text-align:right;">22</td><td style="text-align:right;">1.84</td><td style="text-align:right;">87</td><td style="text-align:right;">2131400</td><td style="text-align:left;">Muy satisfecho</td><td style="text-align:left;">Fútbol</td></tr><tr><td style="text-align:left;">La Estrella</td><td style="text-align:right;">3</td><td style="text-align:right;">20</td><td style="text-align:right;">1.86</td><td style="text-align:right;">89</td><td style="text-align:right;">1874800</td><td style="text-align:left;">Satisfecho</td><td style="text-align:left;">Tenis</td></tr><tr><td style="text-align:left;">Caldas</td><td style="text-align:right;">3</td><td style="text-align:right;">22</td><td style="text-align:right;">1.74</td><td style="text-align:right;">90</td><td style="text-align:right;">2933100</td><td style="text-align:left;">Muy satisfecho</td><td style="text-align:left;">Fútbol</td></tr><tr><td style="text-align:left;">Itagüí</td><td style="text-align:right;">1</td><td style="text-align:right;">20</td><td style="text-align:right;">1.91</td><td style="text-align:right;">79</td><td style="text-align:right;">1637200</td><td style="text-align:left;">Muy insatisfecho</td><td style="text-align:left;">Fútbol</td></tr><tr><td style="text-align:left;">La Estrella</td><td style="text-align:right;">3</td><td style="text-align:right;">27</td><td style="text-align:right;">1.77</td><td style="text-align:right;">88</td><td style="text-align:right;">1171200</td><td style="text-align:left;">Indiferente</td><td style="text-align:left;">Baloncesto</td></tr><tr><td style="text-align:left;">Itagüí</td><td style="text-align:right;">2</td><td style="text-align:right;">20</td><td style="text-align:right;">1.58</td><td style="text-align:right;">61</td><td style="text-align:right;">2574700</td><td style="text-align:left;">Muy satisfecho</td><td style="text-align:left;">Baloncesto</td></tr><tr><td style="text-align:left;">Bello</td><td style="text-align:right;">4</td><td style="text-align:right;">39</td><td style="text-align:right;">1.81</td><td style="text-align:right;">70</td><td style="text-align:right;">2739000</td><td style="text-align:left;">Satisfecho</td><td style="text-align:left;">Tenis</td></tr><tr><td style="text-align:left;">La Estrella</td><td style="text-align:right;">6</td><td style="text-align:right;">16</td><td style="text-align:right;">1.69</td><td style="text-align:right;">78</td><td style="text-align:right;">2887800</td><td style="text-align:left;">Indiferente</td><td style="text-align:left;">Baloncesto</td></tr><tr><td style="text-align:left;">Bello</td><td style="text-align:right;">2</td><td style="text-align:right;">40</td><td style="text-align:right;">1.93</td><td style="text-align:right;">83</td><td style="text-align:right;">2559600</td><td style="text-align:left;">Muy satisfecho</td><td style="text-align:left;">Fútbol</td></tr><tr><td style="text-align:left;">Medellín</td><td style="text-align:right;">2</td><td style="text-align:right;">26</td><td style="text-align:right;">1.93</td><td style="text-align:right;">91</td><td style="text-align:right;">1906600</td><td style="text-align:left;">Satisfecho</td><td style="text-align:left;">Fútbol</td></tr><tr><td style="text-align:left;">Medellín</td><td style="text-align:right;">2</td><td style="text-align:right;">21</td><td style="text-align:right;">1.87</td><td style="text-align:right;">61</td><td style="text-align:right;">1299700</td><td style="text-align:left;">Satisfecho
 </td><td style="text-align:left;">Baloncesto</td></tr><tr><td style="text-align:left;">Bello</td><td style="text-align:right;">4</td><td style="text-align:right;">23</td><td style="text-align:right;">1.60</td><td style="text-align:right;">84</td><td style="text-align:right;">1950900</td><td style="text-align:left;">Indiferente</td><td style="text-align:left;">Fútbol</td></tr><tr><td style="text-align:left;">Itagüí</td><td style="text-align:right;">3</td><td style="text-align:right;">40</td><td style="text-align:right;">1.91</td><td style="text-align:right;">76</td><td style="text-align:right;">2131900</td><td style="text-align:left;">Satisfecho</td><td style="text-align:left;">Fútbol</td></tr><tr><td style="text-align:left;">La Estrella</td><td style="text-align:right;">6</td><td style="text-align:right;">31</td><td style="text-align:right;">1.79</td><td style="text-align:right;">66</td><td style="text-align:right;">1085400</td><td style="text-align:left;">Indiferente</td><td style="text-align:left;">Voleibol</td></tr><tr><td style="text-align:left;">La Estrella</td><td style="text-align:right;">3</td><td style="text-align:right;">40</td><td style="text-align:right;">1.60</td><td style="text-align:right;">67</td><td style="text-align:right;">1182200</td><td style="text-align:left;">Indiferente</td><td style="text-align:left;">Tenis</td></tr><tr><td style="text-align:left;">Medellín</td><td style="text-align:right;">2</td><td style="text-align:right;">32</td><td style="text-align:right;">1.60</td><td style="text-align:right;">88</td><td style="text-align:right;">2541900</td><td style="text-align:left;">Indiferente</td><td style="text-align:left;">Baloncesto</td></tr><tr><td style="text-align:left;">Caldas</td><td style="text-align:right;">3</td><td style="text-align:right;">33</td><td style="text-align:right;">1.81</td><td style="text-align:right;">65</td><td style="text-align:right;">1333200</td><td style="text-align:left;">Muy satisfecho</td><td style="text-align:left;">Fútbol</td></tr></tbody></table></pre>
 
-### Cargar datos
-Para realiza la carga de los datos en <tt>R</tt>, es posible emplear diferentes funciones, dependiendo si el archivo a cargar se encuentra en formato <tt>.txt</tt>, <tt>.csv</tt>, <tt>.xls</tt>, <tt>.xlsx</tt> entre otros.
+### Lectura de datos en <tt>R</tt>
+Para realizar la lectura de datos en <tt>R</tt> es necesario conocer la extensión que posee el archivo de interés, debido a que <tt>R</tt> **posee diferentes librerías y funciones que permiten la lectura de bases de datos**. En la siguiente tabla se resume el origen, la extensión, la librería, y la función para cargar cada base de datos dependiendo de su extensión.
 
-Para realizar la lectura de archivos en **formato <tt>.txt</tt>**, puede emplearse la función <tt>read.table()</tt> de la librería `utils` de la base del <tt>R</tt>.
+<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -3rem; margin-top: -3rem; font-size: 120%;">
+```{r echo=FALSE}
+library(kableExtra)
 
-Para realizar lectura de archivos en **formato <tt>.cvs</tt>**, con coma (,) como separador de valores y punto (.) como separador decimal, puede emplearse la función
-<tt>read.cvs()</tt> de la librería de la librería `utils` de la base del <tt>R</tt>, mientras que, si la punto (.) es el separador de valores y la coma (,) el separador decimal, puede emplearse la función <tt>read.cvs2()</tt> de la librería de la librería `utils` de la base del <tt>R</tt>.
+tablita <- cbind(
+  "Origen" = c("Texto", "Texto", "Texto",  "Excel", "Excel", "SPSS", "SAS", "STATA"),
+  "Extensión" = c(".txt", ".csv (comas)", ".csv (punto y coma)",  ".xls", ".xlsx", ".sav", ".sas7bdat", ".dta"),
+  "Librería" = c("utils*", "utils*", "utils*", "readxl", "readxl", "foreign", "foreign", "foreign"),
+  "Función" = c("read.table()", "read.csv()", "read.csv2()", "read_xls()", "read_xlsx()", "read.spss()", "read.ssd()", "read.dta()"))
 
-Para realizar la lectura de archivos en **formato <tt>.xls</tt>**, puede emplearse la función <tt>read_xls()</tt> de la librería `readxl`, mientras que, para leer archivos en **formato <tt>.xlsx</tt>**, puede emplearse la función <tt>read_xlsx()</tt> de la librería `readxl`.
+kable(tablita, 
+  format = "html", booktabs = T) %>%
+kable_styling("striped", full_width = F)
 
-Dado que en conjunto de datos empleados en este ejercicio posee un formato <tt>.xlsx</tt>, se emplea la función <tt>read_xlsx()</tt> de la librería `readxl`. En donde se presenta dos métodos de carga. El primero, para realizar la carga desde un fichero local y la segunda, para realizar la carga de datos en linea, en donde se emplea adicionalmente la función <tt>tempfile()</tt> de base del <tt>R</tt> y la función <tt>download.file()</tt> de la librería `utils` de la base del <tt>R</tt>.
+options(scipen = 10)
+```
+</pre>
+
+**Nota:** Las librerías con * hacen referencia a funciones integradas en <tt>R</tt>, y en consecuencia, no es necesario cargarlas antes de usarlas.
+
+Dado que el conjunto de datos empleados en este ejercicio posee un formato <tt>.xlsx</tt>, se emplea la función <tt>read_xlsx()</tt> de la librería <tt>readxl</tt>. En donde se presenta dos métodos de carga. El primero, para realizar la carga desde un fichero local y la segunda, para realizar la carga de datos en linea, en donde se emplea adicionalmente la función <tt>tempfile()</tt> de base del <tt>R</tt> y la función <tt>download.file()</tt> de la librería <tt>utils</tt> de la base del <tt>R</tt>.
 
 <button id="Show1" class="btn btn-secondary">Mostrar como cargar datos en <tt>R</tt></button>
 <button id="Hide1" class="btn btn-info">Ocultar como cargar datos en <tt>R</tt></button>
@@ -129,7 +142,7 @@ datos <- read_xlsx(temp) # Carga la base de datos online
 ### Estructura de datos
 El tipo y clase de los datos juega un papel importante al momento de realizar análisis de los datos, debido a que **su adecuada especificación será la responsable de que el análisis aplicado a la variable sea el adecuado**.
 
-Para observa las clases que poseen los datos, podemos emplear la función <tt>str()</tt>, de la librería `utils` de la base del <tt>R</tt>.
+Para observa las clases que poseen los datos, podemos emplear la función <tt>str()</tt>, de la librería <tt>utils</tt> de la base del <tt>R</tt>.
 
 <button id="Show2" class="btn btn-secondary">Mostrar estructura datos en <tt>R</tt></button>
 <button id="Hide2" class="btn btn-info">Ocultar estructura datos en <tt>R</tt></button>
@@ -228,7 +241,7 @@ Una alternativa para presentar la información contenida en las medidas estadís
 
 ### Resumen numérico individual
 
-Entre las diferentes funciones que permiten realizar resúmenes numéricos en <tt>R</tt>, se destaca la función <tt>numSummary()</tt> de la librería `RcmdrMisc` y la función <tt>describe()</tt> de la librería `psych`, que presentan diferentes medidas estadísticas para variables tipo numéricas. 
+Entre las diferentes funciones que permiten realizar resúmenes numéricos en <tt>R</tt>, se destaca la función <tt>numSummary()</tt> de la librería <tt>RcmdrMisc</tt> y la función <tt>describe()</tt> de la librería <tt>psych</tt>, que presentan diferentes medidas estadísticas para variables tipo numéricas. 
 
 <button id="Show4" class="btn btn-secondary">Mostrar resumen numérico con <tt>RcmdrMisc</tt></button>
 <button id="Hide4" class="btn btn-info">Ocultar resumen numérico con <tt>RcmdrMisc</tt></button>
@@ -345,7 +358,7 @@ Se aprecia además, que la diferencia entre el rango de las alturas de la encues
 
 ### Resumen numérico por grupos
 
-También es posible realizar resúmenes numérico por grupos, en donde, para la función <tt>numSummary</tt> de la librería `RcmdrMisc`, es cuestión de agregar el argumento <tt>groups</tt> en donde en este argumento se definirá la variable tipo **factor** para la cual se desea realizar el agrupamiento. Mientras que con la librería `psych` es posible realizar resúmenes numéricos por grupos mediante la función <tt>describeBy</tt> agregando el argumento <tt>group</tt>, siendo este argumento definido por una variable tipo **factor**.
+También es posible realizar resúmenes numérico por grupos, en donde, para la función <tt>numSummary</tt> de la librería <tt>RcmdrMisc</tt>, es cuestión de agregar el argumento <tt>groups</tt> en donde en este argumento se definirá la variable tipo **factor** para la cual se desea realizar el agrupamiento. Mientras que con la librería <tt>psych</tt> es posible realizar resúmenes numéricos por grupos mediante la función <tt>describeBy</tt> agregando el argumento <tt>group</tt>, siendo este argumento definido por una variable tipo **factor**.
 
 <button id="Show6" class="btn btn-secondary">Mostrar resumen numérico por grupos con <tt>RcmdrMisc</tt></button>
 <button id="Hide6" class="btn btn-info">Ocultar resumen numérico por grupos con <tt>RcmdrMisc</tt></button>
@@ -653,15 +666,120 @@ Otro aspecto importante del análisis descriptivo, es el que se realiza mediante
 
 El análisis gráfico, puede ser dividido en  
 
-* Gráficos para una o más variables cuantitativas
-* Gráficos para una o más variables cualitativas
-* Gráficos para variables cuantitativas y cualitativas
+* Gráficos para variables cuantitativa
+* Gráficos para variables cualitativas
+* Gráficos para cruces entre variables cuantitativas y cualitativas
 
-### Gráficos para una o más variables cuantitativas
-Entre las gráficos básicos que permiten realizar análisis cuantitativo para **una variable** se tiene, al diagrama de tallo y hojas, gráfico de caja y bigotes, histograma y densidad. Mientras que, las gráficos básicos que permiten realizar análisis cuantitativo para **varias variables** se tiene, el gráfico de dispersión cuando se tienen solo dos variables y la matriz de dispersión cuando se tienen más de dos variables.
+En la siguiente tabla se hace un resumen de qué gráficos pueden ser apropiados para usar en cada uno de los casos
+
+```{r echo=FALSE, eval=FALSE}
+library(kableExtra)
+
+tablita <- cbind(
+  c("Gráfico de caja y bigotes", "Diagrama de dispersión", "Matriz de dispersión",
+    "Gráfico de barras", "Gráfico de barras", "Gráfico de caja y bigotes"),
+  c("Histograma", "", "", "Gráfico de pareto", "Gráfico de balón", "Gráfico de medias"),
+  c("Densidad", "", "", "Gráfico de pastel", "", "Gráfico de dispersión"),
+  c("Diagrama de tallo y hojas", "", "", "Gráfico de puntos", "", ""))
+
+rownames(tablita) <- c("Una Cuantitativa", "Dos Cuantitativa", "Más de Dos Cuantitativas", "Una Cualitativa", "Dos Cualitativas", "Cualitativa - Cuantitativa")
+kable(tablita, 
+  format = "html", booktabs = T, col.names = NULL) %>%
+kable_styling("striped", full_width = F)
+```
+
+<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -3rem; margin-top: -3rem; font-size: 120%;"><table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;"><thead>
+  <tr>
+   <th style="text-align:left;"> Categoría</th>
+   <th style="text-align:left; text-align: center" colspan="4"> Tipo de Gráficos </th>
+  </tr>
+ </thead>
+<tbody>
+<tr>
+<td style="text-align:left;"> <a href="http://jiperezga.github.io/EstadisticaI/EstIClase03.html#una-variable-cuantitativa" style="
+    color: #ffffff;
+"><b><u>Una Cuantitativa</u></b></a></td><td style="text-align:center;">Diagrama de
+tallo y hojas</td>
+<td style="text-align:center;">Gráfico de 
+caja y bigotes</td>
+<td style="text-align:center;">Histograma</td>
+<td style="text-align:center;">Densidad</td>
+</tr>
+<tr>
+<td style="text-align:left;"> <a href="https://jiperezga.github.io/EstadisticaI/EstIClase03.html#dos-variables-cuantitativas" style="
+    color: #ffffff;
+"><b><u>Dos Cuantitativas</u></b></a></td>
+<td style="text-align:center;">Diagrama de
+dispersión</td>
+<td style="text-align:center;"></td>
+
+<td style="text-align:center;">
+</td><td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;"> <a href="https://jiperezga.github.io/EstadisticaI/EstIClase03.html#más-de-dos-variables-cuantitativas" style="
+    color: #ffffff;
+"><b><u>Más de Dos Cuantitativas</u></b></a></td>
+<td style="text-align:center;">Matriz de
+dispersión</td>
+
+<td style="text-align:left;">
+</td><td style="text-align:left;">
+</td>
+<td style="text-align:left;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;"> <a href="https://jiperezga.github.io/EstadisticaI/EstIClase03.html#una-variable-cualitativa" style="
+    color: #ffffff;
+"><b><u>Una Cualitativa</u></b></a></td>
+<td style="text-align:center;">Gráfico de
+barras
+</td>
+<td style="text-align:center;">Gráfico de
+pareto
+</td>
+<td style="text-align:center;">Gráfico de
+pastel
+</td>
+<td style="text-align:center;">Gráfico de
+puntos
+</td>    
+</tr>
+<tr>
+<td style="text-align:left;"> <a href="https://jiperezga.github.io/EstadisticaI/EstIClase03.html#dos-variables-cualitativas" style="
+    color: #ffffff;
+"><b><u>Dos Cualitativas</u></b></a></td>
+<td style="text-align:center;">Gráfico de
+barras</td>
+<td style="text-align:center;">Gráfico de
+puntos</td>
+<td style="text-align:center;">Gráfico de
+balón</td>
+<td style="text-align:left;"></td>
+</tr>
+<tr>
+<td style="text-align:left;"> <a href="https://jiperezga.github.io/EstadisticaI/EstIClase03.html#cualitativa---cuantitativa" style="
+    color: #ffffff;
+"><b><u>Cualitativa - Cuantitativa</u></b></a></td>
+<td style="text-align:center;">Gráfico de
+caja y bigotes</td>
+<td style="text-align:center;">Gráfico de
+medias</td>
+<td style="text-align:center;">Gráfico de
+dispersión</td><td style="text-align:center;">
+</td>
+
+</tr>
+</tbody>
+</table></pre>
+
+
+### Una variable cuantitativa
 
 #### Diagrama de tallo y hojas
-Este gráfico sirve como medida de resumen de los datos, **brinda información de valores máximos, mínimos, área en donde más se centran los datos, dispersión, datos atípicos y asimetría**. A pesar de toda la información que puede brindar esta gráfica, su uso es muy limitado, ya que en situaciones en las cuales el rango de la variable es muy grande, ésta no permite visualidad con claridad dichos comportamientos. Este gráfico puede ser realizado mediante la función <tt>stem()</tt> de la librería `graphics` de la base del <tt>R</tt>.
+Este gráfico sirve como medida de resumen de los datos, **brinda información de valores máximos, mínimos, área en donde más se centran los datos, dispersión, datos atípicos y asimetría**. A pesar de toda la información que puede brindar esta gráfica, su uso es muy limitado, ya que en situaciones en las cuales el rango de la variable es muy grande, ésta no permite visualidad con claridad dichos comportamientos. Este gráfico puede ser realizado mediante la función <tt>stem()</tt> de la librería <tt>graphics</tt> de la base del <tt>R</tt>.
 
 <button id="Show12" class="btn btn-secondary">Mostrar diagrama de tallo y hojas en <tt>R</tt></button>
 <button id="Hide12" class="btn btn-info">Ocultar diagrama de tallo y hojas en <tt>R</tt></button>
@@ -702,7 +820,7 @@ Este gráfico sirve para presentar de forma visual, datos numéricos a través d
 <h4 align="center"> Representación de un Gráfico de Caja y Bigotes </h4>
 ![](../../EstadisticaI/images/BoxPlot.jpg)
 
-Este gráfico puede ser realizado mediante la función <tt>boxplot()</tt> de la librería `graphics` de la base del <tt>R</tt>. 
+Este gráfico puede ser realizado mediante la función <tt>boxplot()</tt> de la librería <tt>graphics</tt> de la base del <tt>R</tt>. 
 
 <button id="Show13" class="btn btn-secondary">Mostrar gráfico de caja y bigotes en <tt>R</tt></button>
 <button id="Hide13" class="btn btn-info">Ocultar gráfico de caja y bigotes en <tt>R</tt></button>
@@ -765,7 +883,7 @@ También se observa que la persona con menor peso posee cerca de $61$ kg, mientr
 </main>
 
 #### Histograma
-Este gráfico muestra la distribución de frecuencia o densidades del grupo de observaciones, **brinda información sobre el valor más probables, la dispersión, la asimetría y valores extremos**. Adicionalmente, tiene la ventaja de que su interpretación es muy intuitiva y por tanto es de los gráficos más preferidos para resumir información. Este gráfico puede ser realizado mediante la función <tt>hist()</tt> de la librería `graphics` de la base del <tt>R</tt>.
+Este gráfico muestra la distribución de frecuencia o densidades del grupo de observaciones, **brinda información sobre el valor más probables, la dispersión, la asimetría y valores extremos**. Adicionalmente, tiene la ventaja de que su interpretación es muy intuitiva y por tanto es de los gráficos más preferidos para resumir información. Este gráfico puede ser realizado mediante la función <tt>hist()</tt> de la librería <tt>graphics</tt> de la base del <tt>R</tt>.
 
 <button id="Show14" class="btn btn-secondary">Mostrar histograma en <tt>R</tt></button>
 <button id="Hide14" class="btn btn-info">Ocultar histograma en <tt>R</tt></button>
@@ -795,9 +913,9 @@ Adicionalmente, al ser una variable de altura de personas, y ver que hay persona
 </main>
 
 #### Densidad
-Este gráfico funciona similar al histograma de densidades, con la diferencia de que en lugar de mostrar la distribución mediante clases (barras), éste muestra el comportamiento de la distribución de las observaciones mediante una curva. Dicha curva, **brinda mayor información que el histograma respecto al valor promedio, dispersión y asimetría**. Este gráfico puede ser realizado mediante la combinación de las funciones <tt>plot()</tt> y <tt>density()</tt>, de la forma <tt>plot(density())</tt>, siendo <tt>plot()</tt> y <tt>density()</tt> funciones de las librerías `graphics` y `stats` de la base de <tt>R</tt>. 
+Este gráfico funciona similar al histograma de densidades, con la diferencia de que en lugar de mostrar la distribución mediante clases (barras), éste muestra el comportamiento de la distribución de las observaciones mediante una curva. Dicha curva, **brinda mayor información que el histograma respecto al valor promedio, dispersión y asimetría**. Este gráfico puede ser realizado mediante la combinación de las funciones <tt>plot()</tt> y <tt>density()</tt>, de la forma <tt>plot(density())</tt>, siendo <tt>plot()</tt> y <tt>density()</tt> funciones de las librerías <tt>graphics</tt> y <tt>stats</tt> de la base de <tt>R</tt>. 
 
-Adicionalmente se presenta la función <tt>polygon</tt> de la librería `graphics` de la base de <tt>R</tt>, la cual sirve para generar formas, o en este caso, darle color a la densidad.
+Adicionalmente se presenta la función <tt>polygon</tt> de la librería <tt>graphics</tt> de la base de <tt>R</tt>, la cual sirve para generar formas, o en este caso, darle color a la densidad.
 
 <button id="Show15" class="btn btn-secondary">Mostrar densidad en <tt>R</tt></button>
 <button id="Hide15" class="btn btn-info">Ocultar densidad en <tt>R</tt></button>
@@ -828,8 +946,10 @@ polygon(density(datos$Salario), col = "lightblue")
 
 </main>
 
+### Dos variables cuantitativas
+
 #### Gráfico de dispersión
-Este gráfico se emplea para hacer cruces entre dos variables cuantitativas, y **sirve para ver tendencias y relaciones entre dos variables cuantitativas, además de permitir apreciar donde se centra el total de observaciones, y detección de datos atípicos** dados dos atributos cuantitativos. Este gráfico puede ser realizado mediante la función <tt>plot()</tt> de la librería `graphics` de la base del <tt>R</tt>.
+Este gráfico se emplea para hacer cruces entre dos variables cuantitativas, y **sirve para ver tendencias y relaciones entre dos variables cuantitativas, además de permitir apreciar donde se centra el total de observaciones, y detección de datos atípicos** dados dos atributos cuantitativos. Este gráfico puede ser realizado mediante la función <tt>plot()</tt> de la librería <tt>graphics</tt> de la base del <tt>R</tt>.
 
 <button id="Show16" class="btn btn-secondary">Mostrar gráfico de dispersión en <tt>R</tt></button>
 <button id="Hide16" class="btn btn-info">Ocultar gráfico de dispersión en <tt>R</tt></button>
@@ -854,8 +974,10 @@ plot(x = datos$Altura, y = datos$Salario, xlab = "Altura (m)",
 </p>
 </main>
 
+### Más de dos variables cuantitativas
+
 #### Matriz de dispersión
-Cuando se poseen más de dos variables cuantitativas, es posible presentar un matriz que muestre el cruce entre pares de variables, mediante cuadros con versiones simples de la función <tt>plot()</tt>. Este gráfico puede ser realizado mediante la función <tt>pairs()</tt> de la librería `graphics` de la base de <tt>R</tt>.
+Cuando se poseen más de dos variables cuantitativas, es posible presentar un matriz que muestre el cruce entre pares de variables, mediante cuadros con versiones simples de la función <tt>plot()</tt>. Este gráfico puede ser realizado mediante la función <tt>pairs()</tt> de la librería <tt>graphics</tt> de la base de <tt>R</tt>.
 
 <button id="Show17" class="btn btn-secondary">Mostrar matriz de dispersión en <tt>R</tt></button>
 <button id="Hide17" class="btn btn-info">Ocultar matriz de dispersión en <tt>R</tt></button>
@@ -970,11 +1092,10 @@ Finalmente, en la parte superior derecha, se presenta el gráfico de dispersión
 
 </main>
 
-### Gráficos para variables cualitativas
-Entre las gráficos básicos que permiten realizar análisis cualitativo para una o dos variables, se tiene el gráfico de barras, gráfico pareto, gráfico de pastel, y gráfico de puntos.
+### Una variable cualitativa
 
 #### Gráfico de barras
-Sirve para resumir una o dos variables cualitativas mediante barras de frecuencias absolutas o relativas. Éste **permite observar la concentración de observaciones en una o más categorías diferentes**. Este gráfico puede ser realizado mediante la función <tt>barplot()</tt> de la librería `graphics` de la base de <tt>R</tt>.
+Sirve para resumir una o dos variables cualitativas mediante barras de frecuencias absolutas o relativas. Éste **permite observar la concentración de observaciones en una o más categorías diferentes**. Este gráfico puede ser realizado mediante la función <tt>barplot()</tt> de la librería <tt>graphics</tt> de la base de <tt>R</tt>.
 
 Para realizar estas gráficas deben usarse como insumo, las tablas de frecuencias absolutas o relativas construidas previamente en la subsección de [Resumen tabular](https://jiperezga.github.io/EstadisticaI/EstIClase03.html#resumen-tabular){:target="_blank"}.
 
@@ -1017,55 +1138,8 @@ barplot(prop1via, main = "Frecuencias relativas de los Municipios", col = rainbo
 
 </main>
 
-Adicionalmente, **cuando se emplean dos variables cualitativas en la construcción del diagrama de barras, es necesario establecer etiqueta** para las variables que representa cada barra. Dichas etiquetas se establecen mediante la función <tt>legend()</tt> de la librería `graphics` de la base de <tt>R</tt>.
-
-<button id="Show19" class="btn btn-secondary">Mostrar gráfico de barras para dos variables en <tt>R</tt></button>
-<button id="Hide19" class="btn btn-info">Ocultar gráfico de barras para dos variables en <tt>R</tt></button>
-<main id="botoncito19"> 
-
-<h3 data-toc-skip> Gráfico de barras dos variables para frecuencias absolutas</h3> 
-
-<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1"># Gráfico de barras para dos variables para frecuencias absolutas</span><span class="w">
-</span><span class="kc">barplot</span><span class="p">(</span><span class="n">tabla2vias</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Frecuencias absolutas categorías de Deporte por Municipio"</span><span class="p">,</span><span class="w"> 
-    </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">topo.colors</span><span class="p">(</span><span class="m">5</span><span class="p">),</span><span class="w"> </span><span class="n">beside</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
-</span><span class="kc">legend</span><span class="p">(</span><span class="s2">"topright"</span><span class="p">,</span><span class="w"> </span><span class="n">rownames</span><span class="p">(</span><span class="n">tabla2vias</span><span class="p">),</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">topo.colors</span><span class="p">(</span><span class="m">5</span><span class="p">))</span><span class="w">
-</span></code></pre></section></section>
-
-<p><img src="../../EstadisticaI/images/Clase03unnamed-chunk-27-1.png" alt=""></p>
-
-<h3 data-toc-skip> Interpretación </h3> 
-
-<p>En el gráfico de barras para el cruce entre el deporte favorito y el municipio de vivienda, se observa que de las $6$ personas que prefieren Baloncesto sobre otros deportes, hay $3$ que residen en Medellín, $2$ en la Estrella y $1$ en Itagüí. Por su parte, de las $10$ personas que prefieren el Fútbol, se aprecia que la mayoría de las personas habitan en Caldas, seguido por Bello, Itagüí y Medellín, con una frecuencia de $4$, $3$, $2$ y $1$ respectivamente. Para las $3$ personas encuestadas que prefieren Tenis sobre otros deportes, se tiene que $2$ viven en la Estrella y $1$ en Bello, mientras que de los encuestados, solo una persona prefiere Voleibol sobre otros deportes, y éste reside en la Estrella.
-</p>
-
-<h3 data-toc-skip> Gráfico de barras dos variables para frecuencias relativas</h3> 
-
-<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1"># Gráfico de barras para dos variables para frecuencias relativas</span><span class="w">
-</span><span class="kc">barplot</span><span class="p">(</span><span class="n">prop2vias</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Frecuencias relativa categorías de Deporte por Municipio"</span><span class="p">,</span><span class="w"> 
-    </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">terrain.colors</span><span class="p">(</span><span class="m">5</span><span class="p">),</span><span class="w"> </span><span class="n">beside</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
-</span><span class="kc">legend</span><span class="p">(</span><span class="s2">"topright"</span><span class="p">,</span><span class="w"> </span><span class="n">rownames</span><span class="p">(</span><span class="n">prop2vias</span><span class="p">),</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">terrain.colors</span><span class="p">(</span><span class="m">5</span><span class="p">))</span><span class="w">
-</span></code></pre></section></section>
-
-<p><img src="../../EstadisticaI/images/Clase03unnamed-chunk-27-2.png" alt=""></p>
-
-```{r echo=FALSE, eval=FALSE}
-# Gráfico de barras para dos variables para frecuencias absolutas
-barplot(tabla2vias, main = "Frecuencias absolutas categorías de Deporte por Municipio", col = topo.colors(5), beside = T) 
-legend("topright", rownames(tabla2vias), fill = topo.colors(5)) 
-# Gráfico de barras para dos variables para frecuencias relativas
-barplot(prop2vias, main = "Frecuencias relativa categorías de Deporte por Municipio", col = terrain.colors(5), beside = T)
-legend("topright", rownames(prop2vias), fill = terrain.colors(5)) 
-```
-
-<h3 data-toc-skip> Interpretación </h3> 
-
-<p>En el gráfico anterior, se ilustra el cruce entre las variables de deporte y municipio, y se observa que el $30\%$ de los encuestados prefieren baloncesto sobre otros deportes, porcentaje que se divide entre $15\%$ asociado a personas que habitan en Medellín, $10\%$ que habitan en la Estrella y $5\%$ en Itagüí. De forma similar, se aprecia que $50\%$ de los encuestados prefieren el fútbol, de donde el $20\%$ habitan en Caldas, $15\%$ en Bello, $10\%$ en Itagüí y $5\%$ en Medellín. Para las personas que prefieren el Tenis y Voleibol sobre otros deportes, se tiene un $15\%$ y $5\%$, respectivamente, de donde, de los que prefieren el Tenis, el $10\%$ habitan en la Estrella y $5\%$ en Bello, mientras que, los que prefieren Voleibol habitan todos en la Estrella.
-</p>
-
-</main>
-
 #### Gráfico de pareto
-Este gráfico es similar al gráfico de barras para una sola variable cualitativa, pero con la ventaja de que **presenta las frecuencias absolutas, relativas, y las frecuencias acumuladas absolutas y acumuladas relativas en el mismo gráfico**. Este gráfico puede ser realizado mediante la función <tt>pareto.chart()</tt> de la librería `qqc`, usando como insumo las tablas de frecuencias absolutas construidas previamente en la subsección de [Resumen tabular](https://jiperezga.github.io/EstadisticaI/EstIClase03.html#resumen-tabular){:target="_blank"}.
+Este gráfico es similar al gráfico de barras para una sola variable cualitativa, pero con la ventaja de que **presenta las frecuencias absolutas, relativas, y las frecuencias acumuladas absolutas y acumuladas relativas en el mismo gráfico**. Este gráfico puede ser realizado mediante la función <tt>pareto.chart()</tt> de la librería <tt>qcc</tt>, usando como insumo las tablas de frecuencias absolutas construidas previamente en la subsección de [Resumen tabular](https://jiperezga.github.io/EstadisticaI/EstIClase03.html#resumen-tabular){:target="_blank"}.
 
 <button id="Show20" class="btn btn-secondary">Mostrar gráfico de pareto una variable cualitativa en <tt>R</tt></button>
 <button id="Hide20" class="btn btn-info">Ocultar gráfico de pareto una variable cualitativa en <tt>R</tt></button>
@@ -1114,9 +1188,9 @@ Dicho comportamiento es resumido en la tabla de análisis de pareto, en donde se
 #### Gráfico de pastel
 Este gráfico también **sirve para representar gráficamente las tablas de frecuencias absolutas y relativas para una variable cualitativa**. A pesar de ser un gráfico muy usado en la práctica, **no muestra bien la información que se desea presentar**, ya que siempre debe estar acompañado de los porcentajes o frecuencias que representa cada área, ya que no hacerlo, dicho gráfico puede ser muy engañoso. 
 
-Este gráfico puede ser realizado mediante la función <tt>pie()</tt> de la librería `graphics` de la base de <tt>R</tt>, usando como insumo, las tablas de frecuencias absolutas construidas previamente en la subsección de [Resumen tabular](https://jiperezga.github.io/EstadisticaI/EstIClase03.html#resumen-tabular){:target="_blank"}.
+Este gráfico puede ser realizado mediante la función <tt>pie()</tt> de la librería <tt>graphics</tt> de la base de <tt>R</tt>, usando como insumo, las tablas de frecuencias absolutas construidas previamente en la subsección de [Resumen tabular](https://jiperezga.github.io/EstadisticaI/EstIClase03.html#resumen-tabular){:target="_blank"}.
 
-Mientras que las etiquetas de los porcentajes o frecuencias de cada área, puede establecerse mediante la función <tt>legend()</tt> de la librería `graphics` de la base de <tt>R</tt>.
+Mientras que las etiquetas de los porcentajes o frecuencias de cada área, puede establecerse mediante la función <tt>legend()</tt> de la librería <tt>graphics</tt> de la base de <tt>R</tt>.
 
 <button id="Show21" class="btn btn-secondary">Mostrar gráfico de pastel para una variable en <tt>R</tt></button>
 <button id="Hide21" class="btn btn-info">Ocultar gráfico de pastel para una variable en <tt>R</tt></button>
@@ -1162,7 +1236,7 @@ legend("topleft", legend = paste0(names(prop1via), " (", round(prop1via,4), ")")
 </main>
 
 #### Gráfico de puntos
-Este gráfico también es similar al gráfico de barras, **sirve para presentar las frecuencias absolutas o relativas de una variable cualitativa o un cruce de dos variables cualitativas**, y **muestra un punto que representa el conteo del total de observaciones que hay para cada variable**. Este gráfico puede ser realizado mediante la función <tt>dotchart()</tt> de la librería `graphics` de la base de <tt>R</tt>, usando como insumo las tablas de frecuencias absolutas construidas previamente en la subsección de [Resumen tabular](https://jiperezga.github.io/EstadisticaI/EstIClase03.html#resumen-tabular){:target="_blank"}.
+Este gráfico también es similar al gráfico de barras, **sirve para presentar las frecuencias absolutas o relativas de una variable cualitativa**, y **muestra un punto que representa el conteo del total de observaciones que hay para cada variable**. Este gráfico puede ser realizado mediante la función <tt>dotchart()</tt> de la librería <tt>graphics</tt> de la base de <tt>R</tt>, usando como insumo las tablas de frecuencias absolutas construidas previamente en la subsección de [Resumen tabular](https://jiperezga.github.io/EstadisticaI/EstIClase03.html#resumen-tabular){:target="_blank"}.
 
 <button id="Show22" class="btn btn-secondary">Mostrar gráfico de puntos para una variable en <tt>R</tt></button>
 <button id="Hide22" class="btn btn-info">Ocultar gráfico de puntos para una variable en <tt>R</tt></button>
@@ -1205,6 +1279,59 @@ dotchart(prop1via, main = "Frecuencias relativas de categorías por Municipio")
 </p>
 
 </main>
+
+### Dos variables cualitativas
+
+#### Gráfico de barras
+El gráfico de barras también sirve para resumir dos variable cualitativa mediante barras de frecuencias absolutas o relativas. **La interpretación, será la misma que para una sola variable cualitativa, con la diferencia de que en este caso, se podrán hacer comparaciones por categorías adicionales.** Este gráfico puede ser realizado mediante la función <tt>barplot()</tt> de la librería <tt>graphics</tt> de la base de <tt>R</tt>, junto a la función <tt>legend()</tt>, para establecer las etiquetas asociadas a cada una de las barras que se presenten en el gráfico.
+
+<button id="Show29" class="btn btn-secondary">Mostrar gráfico de barras para dos variables en <tt>R</tt></button>
+<button id="Hide29" class="btn btn-info">Ocultar gráfico de barras para dos variables en <tt>R</tt></button>
+<main id="botoncito29"> 
+
+<h3 data-toc-skip> Gráfico de barras dos variables para frecuencias absolutas</h3> 
+
+<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1"># Gráfico de barras para dos variables para frecuencias absolutas</span><span class="w">
+</span><span class="kc">barplot</span><span class="p">(</span><span class="n">tabla2vias</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Frecuencias absolutas categorías de Deporte por Municipio"</span><span class="p">,</span><span class="w"> 
+    </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">topo.colors</span><span class="p">(</span><span class="m">5</span><span class="p">),</span><span class="w"> </span><span class="n">beside</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+</span><span class="kc">legend</span><span class="p">(</span><span class="s2">"topright"</span><span class="p">,</span><span class="w"> </span><span class="n">rownames</span><span class="p">(</span><span class="n">tabla2vias</span><span class="p">),</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">topo.colors</span><span class="p">(</span><span class="m">5</span><span class="p">))</span><span class="w">
+</span></code></pre></section></section>
+
+<p><img src="../../EstadisticaI/images/Clase03unnamed-chunk-27-1.png" alt=""></p>
+
+<h3 data-toc-skip> Interpretación </h3> 
+
+<p>En el gráfico de barras para el cruce entre el deporte favorito y el municipio de vivienda, se observa que de las $6$ personas que prefieren Baloncesto sobre otros deportes, hay $3$ que residen en Medellín, $2$ en la Estrella y $1$ en Itagüí. Por su parte, de las $10$ personas que prefieren el Fútbol, se aprecia que la mayoría de las personas habitan en Caldas, seguido por Bello, Itagüí y Medellín, con una frecuencia de $4$, $3$, $2$ y $1$ respectivamente. Para las $3$ personas encuestadas que prefieren Tenis sobre otros deportes, se tiene que $2$ viven en la Estrella y $1$ en Bello, mientras que de los encuestados, solo una persona prefiere Voleibol sobre otros deportes, y éste reside en la Estrella.
+</p>
+
+<h3 data-toc-skip> Gráfico de barras dos variables para frecuencias relativas</h3> 
+
+<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1"># Gráfico de barras para dos variables para frecuencias relativas</span><span class="w">
+</span><span class="kc">barplot</span><span class="p">(</span><span class="n">prop2vias</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Frecuencias relativa categorías de Deporte por Municipio"</span><span class="p">,</span><span class="w"> 
+    </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">terrain.colors</span><span class="p">(</span><span class="m">5</span><span class="p">),</span><span class="w"> </span><span class="n">beside</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
+</span><span class="kc">legend</span><span class="p">(</span><span class="s2">"topright"</span><span class="p">,</span><span class="w"> </span><span class="n">rownames</span><span class="p">(</span><span class="n">prop2vias</span><span class="p">),</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">terrain.colors</span><span class="p">(</span><span class="m">5</span><span class="p">))</span><span class="w">
+</span></code></pre></section></section>
+
+<p><img src="../../EstadisticaI/images/Clase03unnamed-chunk-27-2.png" alt=""></p>
+
+```{r echo=FALSE, eval=FALSE}
+# Gráfico de barras para dos variables para frecuencias absolutas
+barplot(tabla2vias, main = "Frecuencias absolutas categorías de Deporte por Municipio", col = topo.colors(5), beside = T) 
+legend("topright", rownames(tabla2vias), fill = topo.colors(5)) 
+# Gráfico de barras para dos variables para frecuencias relativas
+barplot(prop2vias, main = "Frecuencias relativa categorías de Deporte por Municipio", col = terrain.colors(5), beside = T)
+legend("topright", rownames(prop2vias), fill = terrain.colors(5)) 
+```
+
+<h3 data-toc-skip> Interpretación </h3> 
+
+<p>En el gráfico anterior, se ilustra el cruce entre las variables de deporte y municipio, y se observa que el $30\%$ de los encuestados prefieren baloncesto sobre otros deportes, porcentaje que se divide entre $15\%$ asociado a personas que habitan en Medellín, $10\%$ que habitan en la Estrella y $5\%$ en Itagüí. De forma similar, se aprecia que $50\%$ de los encuestados prefieren el fútbol, de donde el $20\%$ habitan en Caldas, $15\%$ en Bello, $10\%$ en Itagüí y $5\%$ en Medellín. Para las personas que prefieren el Tenis y Voleibol sobre otros deportes, se tiene un $15\%$ y $5\%$, respectivamente, de donde, de los que prefieren el Tenis, el $10\%$ habitan en la Estrella y $5\%$ en Bello, mientras que, los que prefieren Voleibol habitan todos en la Estrella.
+</p>
+
+</main>
+
+#### Gráfico de puntos
+Como se señaló, estre gráfico es similar al gráfico de barras, y **sirve para resumir dos variable cualitativa a partir de sus frecuencias absolutas o relativas**, y **muestra un punto que representa el conteo del total de observaciones que hay para cada variable**. Este gráfico puede ser realizado mediante la función <tt>dotchart()</tt> de la librería <tt>graphics</tt> de la base de <tt>R</tt>, usando como insumo las tablas de frecuencias absolutas construidas previamente en la subsección de [Resumen tabular](https://jiperezga.github.io/EstadisticaI/EstIClase03.html#resumen-tabular){:target="_blank"}.
 
 <button id="Show23" class="btn btn-secondary">Mostrar gráfico de puntos para dos variables en <tt>R</tt></button>
 <button id="Hide23" class="btn btn-info">Ocultar gráfico de puntos para dos variables en <tt>R</tt></button>
@@ -1252,11 +1379,53 @@ El deporte más popular es el fútbol con un total del $50\%$ de los encuestados
 
 </main>
 
-### Gráficos para variables cuantitativas y cualitativas
-Entre las gráficos básicos que permiten analizar los cruces entre variables cuantitativas y cualitativas se tiene, al gráfico de caja y bigotes, gráfico de medias, diagrama de dispersión.
+#### Gráfico de balón
+El gráfico de balón, suele ser un gráfico más avanzado para resumir dos variable cualitativa, en donde **se establecen en el cruce de las dos variables, círculos que se asocian al tamaño del cruce de las dos variables cualitativas**. Este gráfico puede ser realizado mediante la función <tt>ggballoonplot()</tt> de la librería <tt>ggpubr</tt>, la cual depende de la librería <tt>ggplot2</tt>.
+
+
+<button id="Show30" class="btn btn-secondary">Mostrar gráfico de balón en <tt>R</tt></button>
+<button id="Hide30" class="btn btn-info">Ocultar gráfico de balón por categorías en <tt>R</tt></button>
+<main id="botoncito30"> 
+
+<h3 data-toc-skip> Gráfico de balón</h3> 
+
+<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1"># Carga las librerías</span><span class="w">
+</span><span class="kc">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span><span class="w">
+</span><span class="kc">library</span><span class="p">(</span><span class="n">ggpubr</span><span class="p">)</span><span class="w">
+
+</span><span class="c1"># Establece un tema por defecto para el gráfico</span><span class="w">
+</span><span class="kc">theme_set</span><span class="p">(</span><span class="n">theme_pubr</span><span class="p">())</span><span class="w">
+
+</span><span class="c1"># Gráfico de balón</span><span class="w">
+</span><span class="kc">ggballoonplot</span><span class="p">(</span><span class="kc">data.frame</span><span class="p">(</span><span class="n">tabla2vias</span><span class="p">),</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"value"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">scale_fill_viridis_c</span><span class="p">(</span><span class="n">option</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"C"</span><span class="p">)</span><span class="w">
+</span></code></pre></section></section>
+
+<p><img src="../../EstadisticaI/images/Clase03unnamed-chunk-35-2.png" alt=""></p>
+
+```{r echo=F, eval=F}
+# Carga las librerías
+library(ggplot2)
+library(ggpubr)
+
+# Establece un tema por defecto para el gráfico
+theme_set(theme_pubr()) 
+
+# Gráfico de balón
+ggballoonplot(data.frame(tabla2vias), fill = "value")+
+  scale_fill_viridis_c(option = "C")
+```
+
+<h3 data-toc-skip> Interpretación </h3> 
+
+<p>En el gráfico de balón, se muestra el número de observaciones que hay entre el cruce de las variables deporte y municipio. En dicho gráfico se observa que la mayor frecuecia de observaciones se da en el cruce entre los encuestados que viven en el municipo de Caldas y que prefieren el futbol entre los demás deportes, con un tal de $4$ observaciones, seguido por los cruces entre Bello-Fútbol y Medellín-Baloncesto con un total de $3$ observaciones. Adicionalmente se observa que de todos los municipios, en el departamento de La Estrella, es donde se evidencia que hay personas que prefieren el Voleibol sobre los demás deportes.
+</p>
+
+</main>
+
+### Cualitativa - Cuantitativa
 
 #### Gráfico de caja y bigotes
-Este gráfico sirve para presentar de forma visual, datos numéricos **por categorías** a través de sus cuartiles, además de presentar **otras características importantes, tales como la dispersión, simetría y datos potencialmente atípicos**. Este gráfico puede ser realizado mediante la función `boxplot()` de la librería `graphics` de <tt>R</tt>.
+Este gráfico sirve para presentar de forma visual, datos numéricos **por categorías** a través de sus cuartiles, además de presentar **otras características importantes, tales como la dispersión, simetría y datos potencialmente atípicos**. Este gráfico puede ser realizado mediante la función `boxplot()` de la librería <tt>graphics</tt> de <tt>R</tt>.
 
 <button id="Show25" class="btn btn-secondary">Mostrar gráfico de caja y bigotes en <tt>R</tt></button>
 <button id="Hide25" class="btn btn-info">Ocultar gráfico de caja y bigotes en <tt>R</tt></button>
@@ -1289,7 +1458,7 @@ Finalmente, puede notarse que no se evidencia ningún punto a la derecha o izqui
 
 </main>
 
-También puede agregarse el argumento `notch = TRUE`, para construir un intervalo de confianza del `$95%$` para la mediana, lo cual hace que se grafique una muesca en cada lado de la caja, alrededor de la mediana. En donde, si las muescas de dos parcelas no se superponen, entonces se tendrá evidencia sólida respecto a que la mediana de los grupos es diferente [@Chambers1983, p. 62].
+También puede agregarse el argumento <tt>notch = TRUE</tt>, para construir un intervalo de confianza del `$95%$` para la mediana, lo cual hace que se grafique una muesca en cada lado de la caja, alrededor de la mediana. En donde, si las muescas de dos parcelas no se superponen, entonces se tendrá evidencia sólida respecto a que la mediana de los grupos es diferente [@Chambers1983, p. 62].
 
 <button id="Show26" class="btn btn-secondary">Mostrar gráfico de caja y bigotes con intervalo de confianza para la mediana en <tt>R</tt></button>
 <button id="Hide26" class="btn btn-info">Ocultar gráfico de caja y bigotes con intervalo de confianza para la mediana en <tt>R</tt></button>
@@ -1330,7 +1499,7 @@ También se nota, que de los estratos propuestos, la altura de los estratos $1$ 
 #### Gráfico de medias
 Este gráfico **sirve para presentar de forma visual, grupos de datos numéricos a través de sus media y desviación estándar**. El gráfico está compuesto por un punto que representa el valor promedio del grupo de observaciones y **las barras representan dos desviación estándar de la media**. En donde, si las barras no se superponen, entonces se tendrá evidencia sólida respecto a que la media de los grupos es diferente.
 
-Este gráfico puede ser realizado mediante la función <tt>plotMeans()</tt> de la librería `RcmdrMisc`.
+Este gráfico puede ser realizado mediante la función <tt>plotMeans()</tt> de la librería <tt>RcmdrMisc</tt>.
 
 <button id="Show27" class="btn btn-secondary">Mostrar gráfico de medias en <tt>R</tt></button>
 <button id="Hide27" class="btn btn-info">Ocultar gráfico de medias en <tt>R</tt></button>
@@ -1373,9 +1542,9 @@ Aunque hay una pequeña diferencia entre la media de los estratos, no es posible
 </main>
 
 #### Gráfico de dispersión
-Este gráfico se emplea para hacer cruces entre dos variables cuantitativas, las cuales pueden ser diferenciadas por una cualitativa, mediante el cambio de colores. Este **sirve para ver tendencias, diferencias entre clases, relaciones entre dos variables cuantitativas, y permite apreciar donde se centra el total de observaciones dados dos atributos cuantitativos**. Este gráfico puede ser realizado mediante la función <tt>plot()</tt> de la librería `graphics` de <tt>R</tt>.
+Este gráfico se emplea para hacer cruces entre dos variables cuantitativas, las cuales pueden ser diferenciadas por una cualitativa, mediante el cambio de colores. Este **sirve para ver tendencias, diferencias entre clases, relaciones entre dos variables cuantitativas, y permite apreciar donde se centra el total de observaciones dados dos atributos cuantitativos**. Este gráfico puede ser realizado mediante la función <tt>plot()</tt> de la librería <tt>graphics</tt> de <tt>R</tt>.
 
-Para diferenciar los colores usados en el gráfico, es posible establecerse las categorías mediante la función <tt>legend()</tt> de la librería `graphics` de la base de <tt>R</tt>.
+Para diferenciar los colores usados en el gráfico, es posible establecerse las categorías mediante la función <tt>legend()</tt> de la librería <tt>graphics</tt> de la base de <tt>R</tt>.
 
 <button id="Show28" class="btn btn-secondary">Mostrar gráfico de dispersión por categorías en <tt>R</tt></button>
 <button id="Hide28" class="btn btn-info">Ocultar gráfico de dispersión por categorías en <tt>R</tt></button>
@@ -1407,5 +1576,9 @@ Adicionalmente en dicho gráfico, no es posible hablar de observaciones atípica
 
 
 ## Referencias
+<h7 id="ref-Chambers1983"></h7>
+<h7 id="ref-Hernandez2018"></h7>
+<h7 id="ref-Mcgill1978"></h7>
+
 
 
