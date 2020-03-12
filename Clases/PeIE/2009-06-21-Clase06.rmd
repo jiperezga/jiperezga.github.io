@@ -270,7 +270,7 @@ Si `$x$` es una variable aleatoria con *fmp* `$p(x)$`, entonces la media o valor
 <p>Suponga un experimento aleatorio que consta en consultar una familia conformada por $3$ hijos, en donde, se asume que la probabilidad de ser niño o niña es la misma. Entonces, si se define la variable aleatoria $X$, el número de niñas que hay en la familia. Calcule el valor esperado del número de niñas que hay en una familia que posee $3$ hijos. </p>
 
 <h3 data-toc-skip> Solución </h3> 
-<p>Como la función de distribución acumulada parte de la función de masa de probabilidad, calculamos la función de masa de probabilidad para el número de niñas que hay en una familia que posee $3$ hijos.</p>
+<p>Como para calcular la esperanza matemática requerimos de la función de masa de probabilidad, entonces procedemos a calcula la función de distribución para el número de niñas que hay en una familia que posee $3$ hijos.</p>
 <ol style="padding: 0; margin: 0;">
 ```{r echo=FALSE}
 library(kableExtra)
@@ -320,7 +320,7 @@ Sea `$a$` y `$b$` dos números constantes (reales) y `$X$` una variable aleatori
 </ol>
 
 <h3 data-toc-skip> Solución </h3> 
-<p>Como la función de distribución acumulada parte de la función de masa de probabilidad, calculamos la función de masa de probabilidad para el número de niñas que hay en una familia que posee $3$ hijos.</p>
+<p>Similar al caso anterior, calculamos la función de masa de probabilidad para el número de niñas que hay en una familia que posee $3$ hijos.</p>
 <ol style="padding: 0; margin: 0;">
 ```{r echo=FALSE}
 library(kableExtra)
@@ -411,7 +411,7 @@ Sd(X) = \sqrt{Var(X)}
 </ol>
 
 <h3 data-toc-skip> Solución </h3> 
-<p>Como la función de distribución acumulada parte de la función de masa de probabilidad, calculamos la función de masa de probabilidad para el número de niñas que hay en una familia que posee $3$ hijos.</p>
+<p>Como la función de varianza es en sí, es una esperanza matemática, entonces iniciamos con el cálculo de la función de masa de probabilidad para el número de niñas que hay en una familia que posee $3$ hijos.</p>
 <ol style="padding: 0; margin: 0;">
 ```{r echo=FALSE}
 library(kableExtra)
