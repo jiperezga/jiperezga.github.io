@@ -228,7 +228,7 @@ Calcule el coeficiente de curtosis, el cual está dado por
 <ol type ="a">
 <li> ¿Cuál es la probabilidad de que sólo se retiren 15 partículas? </li>
 <li> ¿Cuál es la probabilidad de que se retiren menos de 8 o más de 18 partículas? </li>
-<li> Cuál es el número promedio y desviación estándar de particulas que se retirarían, si se extrae un total de $4 mL$?. </li>
+<li> Cuál es el número promedio y desviación estándar de partículas que se retirarían, si se extrae un total de $4 mL$?. </li>
 </ol>	
 28. Suponga que se tiene cierto tipo de tablero de circuitos que contiene un total de `$250$` diodos. Si se sabe por experiencia que la probabilidad de que falle cualquier circuito es de `$0.002$`.
 <ol type ="a">
