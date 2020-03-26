@@ -62,7 +62,7 @@ Si `$X\sim Wei(\alpha, \beta)$`, entonces se puede probar que la media y la vari
 <button id="Hide1" class="btn btn-info">Ocultar Ejercicio </button>
 <main id="botoncito1"> 
 <h3 data-toc-skip> Ejercicio </h3> 
-<p> Un ingeniero industrial realiza un estudio sobre la vida útil, en años, de un nuevo aire acondicionado que fabrican en la compañia donde trabaja, y luego de probar muchos aires, encontró que el tiempo de vida, en años, se distribuye Weibull con parámetros $\alpha=2$ y $\beta = 8$. Dado lo anterior
+<p> Un ingeniero industrial realiza un estudio sobre la vida útil, en años, de un nuevo aire acondicionado que fabrican en la compañía donde trabaja, y luego de probar muchos aires, encontró que el tiempo de vida, en años, se distribuye Weibull con parámetros $\alpha=2$ y $\beta = 8$. Dado lo anterior
 <ol>
 <li>Cuál es la probabilidad de que un aire acondicionado falle después de $3$ años de uso?</li> 
 <li>Cuál es la probabilidad de que la vida útil del aire acondicionado se encuentre entre $6$ y $9$ años de uso?</li>
@@ -95,7 +95,7 @@ Es decir, se tendrá una probabilidad del $86.88\%$ de que el aire acondicionado
 $$\begin{align*}
 \mathbb{P}(6<X<9) = \int_{6}^9 \frac{2}{8}\left(\frac{x}{8}\right)^{2 - 1}e^{-\left(\frac{x}{8}\right)^2} dx
 \end{align*}$$
-Al aplicar el cambio de variable usado en el punto anterio se tiene que 
+Al aplicar el cambio de variable usado en el punto anterior se tiene que 
 $$\begin{align*}
 u= \left(\frac{x}{8}\right)^2 \quad \quad du = \frac{2}{8}\left(\frac{x}{8}\right)^{2-1} dx
 \end{align*}$$
@@ -109,7 +109,7 @@ $$\begin{align*}
 \end{align*}$$
 Es decir, se tendrá un $28.77\%$ de probabilidad, de que el aire acondicionado dure entre entre $6$ y $9$ años.
 </li>
-<li>Para calcular el tiempo de vida útil promedio y desviación estándar en años para el aire acondicionado, se emplea el conocimiento sobre que el tiempo de vida se distriuye Weibull con parámetros $\alpha=2$ y $\beta=8$, y las las ecuaciones de esperanza matemática y varianza de la distribución Weibull, tal que, la esperanza será igual a
+<li>Para calcular el tiempo de vida útil promedio y desviación estándar en años para el aire acondicionado, se emplea el conocimiento sobre que el tiempo de vida se distribuye Weibull con parámetros $\alpha=2$ y $\beta=8$, y las las ecuaciones de esperanza matemática y varianza de la distribución Weibull, tal que, la esperanza será igual a
 $$\begin{align*}
 \mathbb{E}(X)&=\beta\;\Gamma\left(1 + \frac{1}{\alpha}\right) \\
              &=8\;\Gamma\left(1 + \frac{1}{2}\right)\\
@@ -150,7 +150,7 @@ F(x) = \mathbb{P}(X\leq x) = \begin{cases} 0 & x<0 \\ 1- e^{-\left(\frac{x}{\bet
 <button id="Hide2" class="btn btn-info">Ocultar Ejercicio </button>
 <main id="botoncito2"> 
 <h3 data-toc-skip> Ejercicio </h3> 
-<p> Un ingeniero industrial realiza un estudio sobre la vida útil, en años, de un nuevo aire acondicionado que fabrican en la compañia donde trabaja, y luego de probar muchos aires, encontró que el tiempo de vida, en años, se distribuye Weibull con parámetros $\alpha=2$ y $\beta = 8$. Dado lo anterior, calcule la función de distribución acumulada, y con ésta, calcule la probabilidad de que el tiempo de vida útil, de aire a condicionado sea mayor a $7$ años pero menor de $12$ años. </p>
+<p> Un ingeniero industrial realiza un estudio sobre la vida útil, en años, de un nuevo aire acondicionado que fabrican en la compañía donde trabaja, y luego de probar muchos aires, encontró que el tiempo de vida, en años, se distribuye Weibull con parámetros $\alpha=2$ y $\beta = 8$. Dado lo anterior, calcule la función de distribución acumulada, y con ésta, calcule la probabilidad de que el tiempo de vida útil, de aire a condicionado sea mayor a $7$ años pero menor de $12$ años. </p>
 
 <h3 data-toc-skip> Solución </h3> 
 <p> Como el interés es calcular inicialmente la función de distribución acumulada, aplicamos la ecuación de la distribución acumulada para la distribución Weibull, reemplazando a $\alpha$ por $2$ y a $\beta$ por $8$, tal que
@@ -216,7 +216,7 @@ R(t) = e^{-\left(\frac{t}{\beta}\right)^\alpha} \quad \quad t>0
 <button id="Hide4" class="btn btn-info">Ocultar Ejercicio </button>
 <main id="botoncito4"> 
 <h3 data-toc-skip> Ejercicio </h3> 
-<p> Un ingeniero industrial realiza un estudio sobre la vida útil, en años, de un nuevo aire acondicionado que fabrican en la compañia donde trabaja, y luego de probar muchos aires, encontró que el tiempo de vida, en años, se distribuye Weibull con parámetros $\alpha=2$ y $\beta = 8$. Dado lo anterior, calcule la función de confiabilidad, y con ésta, calcule la probabilidad de que el tiempo de vida útil, de aire a condicionado sea mayor a $3$ años. </p>
+<p> Un ingeniero industrial realiza un estudio sobre la vida útil, en años, de un nuevo aire acondicionado que fabrican en la compañía donde trabaja, y luego de probar muchos aires, encontró que el tiempo de vida, en años, se distribuye Weibull con parámetros $\alpha=2$ y $\beta = 8$. Dado lo anterior, calcule la función de confiabilidad, y con ésta, calcule la probabilidad de que el tiempo de vida útil, de aire a condicionado sea mayor a $3$ años. </p>
 
 <h3 data-toc-skip> Solución </h3> 
 <p> Como el interés es calcular inicialmente la función de confiabilidad, aplicamos la ecuación de confiabilidad para la distribución Weibull, reemplazando a $\alpha$ por $2$ y a $\beta$ por $8$, tal que
@@ -235,7 +235,7 @@ Es decir, que se tendrá un $86.88\%$ de probabilidad, de que la vida útil del 
 </main>
 
 ## Tasa de fallas (tasa de riesgo)
-Representa la probabilidad de falla instantanea, dado que el componente funciona en el momento `$t$`, y se representa como
+Representa la probabilidad de falla instantánea, dado que el componente funciona en el momento `$t$`, y se representa como
 `\begin{align*} 
 h(t) & = \lim_{\Delta t\to0}\frac{\mathbb{P}(t<T<t+\Delta t|T>t)}{\Delta t} \\
      & = \lim_{\Delta t\to0}\frac{1}{\Delta t}\frac{F(t+\Delta t) - F(t)}{R(t)} \\
@@ -257,11 +257,11 @@ h(t) = \frac{1}{\beta} \quad \quad t>0
 <button id="Hide5" class="btn btn-info">Ocultar Ejercicio </button>
 <main id="botoncito5"> 
 <h3 data-toc-skip> Ejercicio </h3> 
-<p> Un ingeniero industrial afirma que encontró un catalizador solido que permite aumentar la velocidad de reacción química promedio, requerida en un proceso de producción de una bebida gaseosa. Dicho ingeniero asegura que con este catalizador solido la velocidad de la reacción química se reduce en promedio en $3$ minutos, lo cual mejoraría la eficiencia de la producción en un $28\%$. Dado lo anterior, calcule la función de riesgo del catalizador para $3$, $5$ y $7$ minutos. Cuál es el comporamiento de la tasa de fallas?
+<p> Un ingeniero industrial afirma que encontró un catalizador solido que permite aumentar la velocidad de reacción química promedio, requerida en un proceso de producción de una bebida gaseosa. Dicho ingeniero asegura que con este catalizador solido la velocidad de la reacción química se reduce en promedio en $3$ minutos, lo cual mejoraría la eficiencia de la producción en un $28\%$. Dado lo anterior, calcule la función de riesgo del catalizador para $3$, $5$ y $7$ minutos. Cuál es el comportamiento de la tasa de fallas?
 </p>
 
 <h3 data-toc-skip> Solución </h3> 
-<p> En este caso estamos interesados en la tasa de fallas para el tiempo que reduce que genera el catalizador solido en la reaccion química que se emplea en un proceso de producción de bebidas gaseosas. Entonces, como se tiene que la distribución del tiempo reducido es exponencial con parámetro $\beta=3$, entonces se tendrá que la tasa de fallas estará dada por
+<p> En este caso estamos interesados en la tasa de fallas para el tiempo que reduce que genera el catalizador solido en la reacción química que se emplea en un proceso de producción de bebidas gaseosas. Entonces, como se tiene que la distribución del tiempo reducido es exponencial con parámetro $\beta=3$, entonces se tendrá que la tasa de fallas estará dada por
 $$\begin{align*} 
 h(t) = \frac{1}{3} 
 \end{align*}$$
@@ -281,8 +281,8 @@ h(t) = \frac{\alpha}{\beta}\left(\frac{t}{\beta}\right)^{\alpha-1} \quad \quad t
 \end{align*}`
 <ol type = "a">
 <li> Si $\alpha<1$, $h(t)$ será una función decreciente del tiempo $t$, que indica que el componente se fortalece o endurece con el paso del tiempo. Por ejemplo,
-los equipos electronicos y mecánicos pueden iniciar con un alto grado de fallas, debido a errores en el diseño, problemas de producción, ensamble, presiones ocultas o control de calidad. Es por ello que se suele realizar un quemado a los componentes por un tiempo para eliminar este tipo de fallas para los usuarios.</li>
-<li> Si $\alpha=1$, $h(t)$ será una función constante que indica que las fallas son inesperadas, causadas por factores externos que pueden generar fallas incluso en los componentes mejor contruidos. Por ejemplo, sobre cargas, mal uso, casos especiales de falta de memoria.</li>
+los equipos electrónicos y mecánicos pueden iniciar con un alto grado de fallas, debido a errores en el diseño, problemas de producción, ensamble, presiones ocultas o control de calidad. Es por ello que se suele realizar un quemado a los componentes por un tiempo para eliminar este tipo de fallas para los usuarios.</li>
+<li> Si $\alpha=1$, $h(t)$ será una función constante que indica que las fallas son inesperadas, causadas por factores externos que pueden generar fallas incluso en los componentes mejor construidos. Por ejemplo, sobre cargas, mal uso, casos especiales de falta de memoria.</li>
 <li> Si $\alpha>1$, $h(t)$ será una función creciente del tiempo $t$, que indica que el componente se desgasta con el paso del tiempo. Por ejemplo, obsolescencia, fin de vida útil, edad. </li>
 </ol>
 
@@ -290,7 +290,7 @@ los equipos electronicos y mecánicos pueden iniciar con un alto grado de fallas
 <button id="Hide6" class="btn btn-info">Ocultar Ejercicio </button>
 <main id="botoncito6"> 
 <h3 data-toc-skip> Ejercicio </h3> 
-<p> Un ingeniero industrial realiza un estudio sobre la vida útil, en años, de un nuevo aire acondicionado que fabrican en la compañia donde trabaja, y luego de probar muchos aires, encontró que el tiempo de vida, en años, se distribuye Weibull con parámetros $\alpha=2$ y $\beta = 8$. Dado lo anterior, calcule la función de riesgo del catalizador para $3$, $5$ y $7$ años. Cuál es el comporamiento de la tasa de fallas?
+<p> Un ingeniero industrial realiza un estudio sobre la vida útil, en años, de un nuevo aire acondicionado que fabrican en la compañía donde trabaja, y luego de probar muchos aires, encontró que el tiempo de vida, en años, se distribuye Weibull con parámetros $\alpha=2$ y $\beta = 8$. Dado lo anterior, calcule la función de riesgo del catalizador para $3$, $5$ y $7$ años. Cuál es el comportamiento de la tasa de fallas?
 </p>
 
 <h3 data-toc-skip> Solución </h3> 
@@ -305,6 +305,6 @@ h(3) = \frac{2}{8}\left(\frac{3}{8}\right)^{2-1} = 0.09375 \\
 h(5) = \frac{2}{8}\left(\frac{5}{8}\right)^{2-1} = 0.15625 \\
 h(7) = \frac{2}{8}\left(\frac{7}{8}\right)^{2-1} = 0.21875
 \end{align*}$$
-Es decir, se aprecia que amedida que aumenta el número de años, la tasa de riesgo va aumentando, es decir, se tendrá que amedida que pasa el tiempo aumenta el riesgo de que el aire acondicionado falle.
+Es decir, se aprecia que a medida que aumenta el número de años, la tasa de riesgo va aumentando, es decir, se tendrá que a medida que pasa el tiempo aumenta el riesgo de que el aire acondicionado falle.
 </p>
 </main>
