@@ -1,0 +1,79 @@
+---
+layout: post
+title: "Trabajo R"
+main-class: 'practica'
+permalink: /EstadisticaI/EstI:title.html
+tags:
+
+introduction: | 
+              Trabajo R
+              
+header-includes:
+   - \usepackage{amsmath,amssymb,amsthm,amsfonts}
+   - \usepackage[sectionbib]{natbib}
+   - \usepackage[hidelinks]{hyperref}
+output:
+  md_document:
+    variant: markdown_strict+backtick_code_blocks+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash
+    preserve_yaml: TRUE
+always_allow_html: yes   
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding,
+  output_dir = "../../EstadisticaI/_posts/", output_format = "all"  ) })
+bibliography: "../../referencias.bib"
+csl: "../../apa.csl"
+---
+
+```{r knitr_init, echo=FALSE, cache=FALSE}
+library(knitr)
+## Global options
+opts_chunk$set(echo=TRUE,
+               cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE,
+               fig.path = paste0("../../EstadisticaI/images/", "TrabajoR"),
+               cache.path = "../../EstadisticaI/cache/",
+               cache = FALSE)
+```
+
+# Indicaciones trabajo
+* El trabajo puede realizarse de forma individual o en parejas.
+* El trabajo tiene como plazo máximo de entrega el día de hoy a las 12 del medio día.
+* En lo posible no exceder las 5 páginas (aunque esto no será restrictivo).  
+* Necesario diligenciar el nombre, la cédula y la semilla (Pilas en esta última parte).
+* La semilla a usar será igual a la cédula de la persona que realiza el trabajo (si se hace de forma individual) o de la suma de las cédulas de los dos integrantes (si se hace en parejas). 
+* La solución de las preguntas debe contener las salidas de R, gráficas o tabulares, para apoyar la interpretación de los puntos.
+*	Una vez termine el trabajo deberá enviar el trabajo (documento de Word con la solución, y el código de R empleado) al correo electrónico <a target="_blank" href="mailto:jivan.perez@udea.edu.co"> jivan.perez@udea.edu.co</a>, con el nombre de los dos participantes en el asunto.
+# Descargar base de datos
+Los link de descarga para la base de datos se presentan a continuación, diferenciando entre formato Excel y formato de Texto.
+* [Link BD en Formato Texto](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/TrabajoR/BD_Trabajo.txt){:target="_blank"}. <tt>(click derecho -> guardar como)</tt>
+* [Link BD en Formato Excel](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/TrabajoR/BD_Trabajo.xlsx){:target="_blank"}. 
+# Descargar documento Word
+El link de descarga del documento para realizar el trabajo se presenta a continuación.
+* [Link Word Trabajo](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/TrabajoR/Trabajo.docx){:target="_blank"}. 
+# Cargar base de datos
+Si desean empelar código, pueden cargar la base de datos mediante la siguiente linea de código
+```{r eval=F}
+# Cargar base de datos en formato TXT
+BD <- read.table(file.choose())
+# Cargar base de datos en formato Excel
+library(readxl)
+BD <- read_xlsx(file.choose())
+```
+# Establecer semilla
+Una vez cargada la base de datos deben establecer la semilla de la forma (mirar documento de Word)
+```{r eval=F}
+# Establecer semilla igual a cédula o suma de las cédulas de los participantes
+set.seed(Escriba el número)
+```
+# Selección de la base de datos con la que se realizará el trabajo
+Una vez descargada la base de datos, cargarla en <tt>R</tt>, y haber establecido la semilla para realizar el trabajo, deben correr la siguiente linea de código para seleccionar de forma aleatoria los 250 registros con los cuales desarrollarán el trabajo
+```{r eval=F}
+datos <- BD[sample(1:nrow(BD), size = 250), ]
+```
+Se recomienda antes de comenzar con el desarrollo del trabajo, correr las 3 lineas de código anteriores de forma juntas (abrir BD, establecer semilla y recortar base de datos) para evitar que la selección aleatoria del conjunto de datos no sea la correcta.
+**Traten de verificar varias veces que al correr las 3 lineas de código se obtenga la misma base de datos, tomando como referencia los números que aparecen en la izquierda cuando corren <tt>datos</tt>.**
+<h1> Mucha Suerte! </h1>
