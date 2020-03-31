@@ -85,7 +85,7 @@ kable_styling("striped", full_width = F)
 <li> Calcule la probabilidad de que en un año una familia use la licuadora entre $65$ y $100$ horas. </li>
 <li> Calcule la media y la varianza del tiempo de uso de la licuadora, medido en unidades de $100$ horas. </li>
 </ol>
-5. El tiempo que pasa, en horas, para que un radar detecte entre conductores sucesivos a los que exceden los límites de velocidad es una variable aleatoria continua con una función de distribución acumulativa
+5. El tiempo que pasa, en minutos, para que un radar detecte entre conductores sucesivos a los que exceden los límites de velocidad es una variable aleatoria continua con una función de distribución acumulativa
 `\begin{align*}
 	F(x) =\begin{cases}0, & 0< x\\ 1-e^{-x/10}, & x \geq 0 \end{cases} 
 \end{align*}`
@@ -137,7 +137,15 @@ A partir de esta función de probabilidad
 <li> Si se selecciona una persona al azar, cuál sería la probabilidad de que el número de fotomultas que tenga sea más de 3, pero a lo más 8. </li>
 </ol>
 10. Según una página de estadísticas deportivas, el número promedio de goles que anota el Barcelona por partido es de `$2.61$`. ¿Cuál es la probabilidad de que en un determinado partido anote más de `$2$` goles?.
-11. Suponga que el número de llamadas telefónicas que entran a un conmutador  particular siguen un proceso de Poisson con un promedio de `$5$` llamadas entrantes por minuto. ¿Cuál es la probabilidad de que transcurra hasta un minuto en el momento en que han entrado `$3$` llamadas al conmutador? 
+11. Suponga que el número de llamadas telefónicas que entran a un conmutador  particular siguen un proceso de Poisson con un promedio de `$5$` llamadas entrantes por minuto. 
+<ol type ="a">
+<li>¿Cuál es la probabilidad de que transcurra hasta un minuto en el momento en que han entrado `$1$` llamada al conmutador? </li>
+<li>¿Cuál es la probabilidad de que transcurra hasta un minuto en el momento en que han entrado `$3$` llamadas al conmutador?
+$$\begin{align*}
+f(x)=\frac{1}{\Gamma(\alpha)\beta^\alpha}x^{\alpha-1}e^{-\frac{x}{\beta}} \quad x>0,\; \alpha>0, \;\beta>0
+\end{align*}
+$$</li>
+</ol>
 12. En el artículo de W. Pang, et. al (2001) "*Parameter Estimation with Only One Complete Failure Observation, International Journal of Reliability, Quality, and Safety Engineering, 2001:109-122*", se modela la duración, en horas, de cierto tipo de cojinete con la distribución de Weibull(`$\alpha = 2.25, \beta = 4.474*10^{-4}$`).
 <ol type ="a">
 <li> Determine la probabilidad de que un cojinete dure más de 1000 horas. </li>
@@ -182,7 +190,8 @@ kable_styling("striped", full_width = F)
 ```
 Encuentre el coeficiente de asimetría, el cuál está dado por 
 `\begin{align*}
-\gamma_{1}= \mathbb{E}\left[\left({\frac{X-\mu}{\sigma}}\right)^{3}\right]={\frac{\mu_{3}}{\sigma^{3}}}={\frac{\mathbb{E}\left[(X-\mu)^{3}\right]}{(\mathbb{E}\left[(X-\mu)^{2}\right])^{3/2}}}
+\gamma_{1}&= \mathbb{E}\left[\left({\frac{X-\mu}{\sigma}}\right)^{3}\right]={\frac{\mu_{3}}{\sigma^{3}}}={\frac{\mathbb{E}\left[(X-\mu)^{3}\right]}{(\mathbb{E}\left[(X-\mu)^{2}\right])^{3/2}}}\\
+\gamma_{1}&=\frac{\mathbb{E}(X^3)-3\mathbb{E}(X^2)\mathbb{E}(X)+2\mathbb{E}(X)^3}{Sd(X)^3}
 \end{align*}`
 22. A partir de la siguiente función de masa de probabilidad 
 `\begin{align*}
