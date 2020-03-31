@@ -249,11 +249,8 @@ $$\begin{align*}
                         & = \frac{1 - \left(1 - e^{-\frac{3.5}{2}}\right)}{1 - \left(1 - e^{-\frac{1.5}{2}}\right)} \\
                         & = \frac{e^{-\frac{3.5}{2}}}{e^{-\frac{1.5}{2}}} \\
                         & = 0.3678794
-                        
 \end{align*}$$
-
 Ahora, si empleamos la propiedad de carencia de memoria de la distribución Exponencial, se tendrá que, dicha probabilidad peude resolverse de forma más rápida, de la forma
-
 $$\begin{align*}
 \mathbb{P}(X\geq3.5|X>1.5) & = \mathbb{P}(X\geq2 + 1.5 |X>1.5) \\
                         & = \mathbb{P}(X\geq2) \\
@@ -262,7 +259,6 @@ $$\begin{align*}
                         & = 1 - \left(1 - e^{-\frac{2}{2}}\right) \\
                         & = e^{-1} \\
                         & = 0.3678794
-                        
 \end{align*}$$
 Obteniendo el mismo resultado. Ahora la interpretación del resultado es que, si ya han pasado $2$ minutos y no ha entrado ninguna llamada al Call Center, la probabilidad de que tarde almenos $1.5$ minutos más en entrar la próxima llamada será de $36.78\%$.
 </p>
