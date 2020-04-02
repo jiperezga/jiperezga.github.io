@@ -1,0 +1,63 @@
+---
+layout: post
+title: "Quiz II"
+main-class: 'practica'
+permalink: /ProbabilidadeInferencia/PeIE:title.html
+tags:
+
+introduction: Quiz II
+header-includes:
+   - \usepackage{amsmath,amssymb,amsthm,amsfonts}
+   - \usepackage[sectionbib]{natbib}
+   - \usepackage[hidelinks]{hyperref}
+output:
+  md_document:
+    variant: markdown_strict+backtick_code_blocks+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash
+    preserve_yaml: TRUE
+always_allow_html: yes   
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding,
+  output_dir = "../../ProbabilidadeInferencia/_posts/", output_format = "all"  ) })
+bibliography: "../../referencias.bib"
+csl: "../../apa.csl"
+---
+
+```{r knitr_init, echo=FALSE, cache=FALSE}
+library(knitr)
+## Global options
+opts_chunk$set(echo=TRUE,
+               cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE,
+               fig.path = paste0("../../ProbabilidadeInferencia/images/", "Quiz II"),
+               cache.path = "../../ProbabilidadeInferencia/cache/",
+               cache = FALSE)
+
+```
+
+# Quiz
+El quiz deberá solucionarse a mano, y enviar los resultado (escanear o tomar foto a la hoja resuelta) a más tardar a las 8:20 am, al correo electrónico <a target="_blank" href="mailto:jivan.perez@udea.edu.co"> jivan.perez@udea.edu.co</a>.
+
+* [Arcila Galvis Faber Esteban](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Quiz/Q1017276234.pdf){:target="_blank"}
+* [Atehortua Bedoya Natalia](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Quiz/Q1000439514.pdf){:target="_blank"}
+* [Barrientos Cortés Susana Eugenia](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Quiz/Q1152687823.pdf){:target="_blank"}
+* [Bedoya Carvajal Jhon Alexánder](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Quiz/Q1028037122.pdf){:target="_blank"}
+* [Buitrago Yepez Julio César](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Quiz/Q98534085.pdf){:target="_blank"}
+* [Escobar Londoño Juan Pablo](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Quiz/Q1000920301.pdf){:target="_blank"}
+* [Giraldo Valencia Yuddy Lorena](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Quiz/Q1041328895.pdf){:target="_blank"}
+* [Gomez Giraldo Valentina](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Quiz/Q1001250142.pdf){:target="_blank"}
+* [Martinez Ayala Juan Esteban](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Quiz/Q1007900969.pdf){:target="_blank"}
+* [Mosquera Franco Arthur Jose](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Quiz/Q1003073445.pdf){:target="_blank"}
+* [Muñoz Blandon Juan Felipe](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Quiz/Q1000895681.pdf){:target="_blank"}
+* [Peñaloza Villegas Edwin Andres](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Quiz/Q1037655076.pdf){:target="_blank"}
+* [Tangarife González Sebastian](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Quiz/Q1037665594.pdf){:target="_blank"}
+* [Vallejo Quiroz Jose Alfredo](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Quiz/Q1017239918.pdf){:target="_blank"}
+* [Villota Moreno Fernando Jose](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Quiz/Q1085347829.pdf){:target="_blank"}
+
+<h1> Mucha Suerte! </h1>
+
+
+
