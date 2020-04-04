@@ -233,11 +233,11 @@ Calcule el coeficiente de curtosis, el cual está dado por
 <li> Calcule la asimetría de la variable aleatoria $Y$. </li>
 <li> Calcule la curtosis de la variable aleatoria $Y$. </li>
 </ol>	
-27. Unas partículas están suspendidas en un medio líquido con concentración de seis partículas por $mL$. Se agita por completo un volumen grande de la suspensión, y después se extrae $3 mL$.
+27. Unas partículas están suspendidas en un medio líquido con concentración de seis partículas por `$mL$`. Se agita por completo un volumen grande de la suspensión, y después se extrae `$3_{mL}$`.
 <ol type ="a">
 <li> ¿Cuál es la probabilidad de que sólo se retiren 15 partículas? </li>
 <li> ¿Cuál es la probabilidad de que se retiren menos de 8 o más de 18 partículas? </li>
-<li> Cuál es el número promedio y desviación estándar de partículas que se retirarían, si se extrae un total de $4 mL$?. </li>
+<li> Cuál es el número promedio y desviación estándar de partículas que se retirarían, si se extrae un total de $4_{mL}$?. </li>
 </ol>	
 28. Suponga que se tiene cierto tipo de tablero de circuitos que contiene un total de `$250$` diodos. Si se sabe por experiencia que la probabilidad de que falle cualquier circuito es de `$0.002$`.
 <ol type ="a">
