@@ -146,7 +146,7 @@ f(x)=\frac{1}{\Gamma(\alpha)\beta^\alpha}x^{\alpha-1}e^{-\frac{x}{\beta}} \quad 
 \end{align*}
 $$</li>
 </ol>
-12. En el artículo de W. Pang, et. al (2001) "*Parameter Estimation with Only One Complete Failure Observation, International Journal of Reliability, Quality, and Safety Engineering, 2001:109-122*", se modela la duración, en horas, de cierto tipo de cojinete con la distribución de Weibull(`$\alpha = 2.25, \beta = 4.474*10^{-4}$`).
+12. En el artículo de W. Pang, et. al (2001) "*Parameter Estimation with Only One Complete Failure Observation, International Journal of Reliability, Quality, and Safety Engineering, 2001:109-122*", se modela la duración, en horas, de cierto tipo de cojinete con la distribución de Weibull(`$\alpha = 2.25, \beta = 2109.705$`).
 <ol type ="a">
 <li> Determine la probabilidad de que un cojinete dure más de 1000 horas. </li>
 <li> Determine la probabilidad de que un cojinete dure menos de 2000 horas. </li>
