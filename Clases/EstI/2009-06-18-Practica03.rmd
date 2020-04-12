@@ -242,7 +242,7 @@ Calcule
   <li>  $\mathbb{P}(X+Y = 4)$. </li>
   <li>  $\mathbb{P}(X>2|Y\leq1)$. </li>
 </ol>
-22. Sea `$X$` la variable aleatoria que da el número de caras menos el número de cruces en cuatro lanzamientos de una moneda. Liste los elementos del espacio muestral `$S$` para los cuatro lanzamientos de la moneda y asigne un valor `$x$` a cada punto muestral de la variable aleatoria`$X$`.
+22. Sea `$X$` la variable aleatoria que da el número de caras menos el número de cruces en cuatro lanzamientos de una moneda. Liste los elementos del espacio muestral `$S$` para los cuatro lanzamientos de la moneda y asigne un valor `$x$` a cada punto muestral de la variable aleatoria `$X$`.
 <ol type ="a">	
   <li>  Obtenga la función de masa de probabilidad y la función de distribución acumulada de la variable aleatoria $X$ </li>
   <li>  Suponga que la moneda está cargada, de manera que existe el doble de 		probabilidad de que ocurra una cara que una cruz. Obtenga la función de masa de probabilidad y la función de distribución acumulada de la variable aleatoria $X$. </li>
