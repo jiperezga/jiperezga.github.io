@@ -102,7 +102,7 @@ Calcule la probabilidad de que el tiempo que pase para que el radar detecte entr
 <li> Verifique si $f(x)$ es efectivamente una función de densidad de probabilidad. </li>
 <li> Suponga que $\theta = 100$, ¿Cuál es la probabilidad de que $X$ sea a lo más de 200? menos de 200? al menos 200?. </li>
 <li> Suponga nuevamente que $\theta = 100$. ¿Cuál es el valor esperado y varianza de la distribución de probabilidad $f(x)$?. </li>
-<li> De una expresión para $P(X > x)$?. </li>
+<li> De una expresión para $\mathbb{P}(X > x)$?. </li>
 </ol>
 7. Considere a `$X$` la variable aleatoria que representa la suma de las caras para el lanzamiento de dos dados, con función de masa de probabilidad dada por
 `\begin{align*}
@@ -197,9 +197,10 @@ Encuentre el coeficiente de asimetría, el cuál está dado por
 `\begin{align*}
 	f(x)=\frac{\binom{2}{x}\binom{3}{3-x}}{\binom{5}{3}} \quad \quad \text{ para }x=0,1,2
 \end{align*}`
-Calcule el coeficiente de curtosis, el cual está dado por 
+Calcule el coeficiente de exceso de curtosis, el cual está dado por 
 `\begin{align*}
-	\gamma_{2}= \mathbb{E}\left[\left({\frac{X-\mu}{\sigma}}\right)^{4}\right]={\frac{\mu_{4}}{\sigma^{4}}}={\frac{\mathbb{E}\left[(X-\mu)^{4}\right]}{(\mathbb{E}\left[(X-\mu)^{2}\right])^{4/2}}}
+	\gamma_{2}&= \mathbb{E}\left[\left({\frac{X-\mu}{\sigma}}\right)^{4}\right] -3={\frac{\mu_{4}}{\sigma^{4}}} -3 ={\frac{\mathbb{E}\left[(X-\mu)^{4}\right]}{(\mathbb{E}\left[(X-\mu)^{2}\right])^{4/2}}} -3\\
+\gamma_2&=\frac{\mathbb{E}(Y^4)-4\mathbb{E}(Y^3)\mathbb{E}(Y)+6\mathbb{E}(Y^2)\mathbb{E}(Y)^2 -3\mathbb{E}(Y)^4}{Sd(Y)^4} -3
 \end{align*}`
 23. Considere la siguiente función de densidad de probabilidad
 `\begin{align*}
