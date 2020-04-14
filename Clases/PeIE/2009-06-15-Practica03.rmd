@@ -54,6 +54,7 @@ kable_styling("striped", full_width = F)
 <li> Encuentre el tiempo de vida real promedio de las patentes para nuevos medicamentos. </li>
 <li> Encuentre la función de distribución acumulada $F(X)$. </li>
 <li> Calcule la probabilidad de que el tiempo de vida en años de la patente sea a lo más $9$ años. </li>
+<li> Calcule el tiempo de vida promedio de la patente. </li>
 </ol>
 2. Sea `$X$` la variable aleatoria del número de clientes que llegan a un centro comercial en un periodo de una hora. Si la distribución acumulada de `$X$` es:
 `\begin{align*}
@@ -100,7 +101,7 @@ Calcule la probabilidad de que el tiempo que pase para que el radar detecte entr
 \end{align*}`
 <ol type ="a">
 <li> Verifique si $f(x)$ es efectivamente una función de densidad de probabilidad. </li>
-<li> Suponga que $\theta = 100$, ¿Cuál es la probabilidad de que $X$ sea a lo más de 200? menos de 200? al menos 200?. </li>
+<li> Suponga que $\theta = 100$, ¿Cuál es la probabilidad de que $X$ sea a lo más de 200? al menos 200?. </li>
 <li> Suponga nuevamente que $\theta = 100$. ¿Cuál es el valor esperado y varianza de la distribución de probabilidad $f(x)$?. </li>
 <li> De una expresión para $\mathbb{P}(X > x)$?. </li>
 </ol>
@@ -148,12 +149,12 @@ $$</li>
 </ol>
 12. En el artículo de W. Pang, et. al (2001) "*Parameter Estimation with Only One Complete Failure Observation, International Journal of Reliability, Quality, and Safety Engineering, 2001:109-122*", se modela la duración, en horas, de cierto tipo de cojinete con la distribución de Weibull(`$\alpha = 2.25, \beta = 2109.705$`).
 <ol type ="a">
-<li> Determine la probabilidad de que un cojinete dure más de 1000 horas. </li>
-<li> Determine la probabilidad de que un cojinete dure menos de 2000 horas. </li>
+<li> Determine la probabilidad de que un cojinete dure más de $1000$ horas. </li>
+<li> Determine la probabilidad de que un cojinete dure menos de $2000$ horas. </li>
 <li> Determine la media y desviación estándar de la duración de un cojinete. </li>
 <li> La función de riesgo se definió en el ejercicio 4. ¿Cuál es el riesgo en t = 2000 horas?. </li>
 </ol>
-13. El periodo de vida de una broca en una operación mecánica, en horas, tiene una distribución de Weibull con `$\alpha = 1/2$` y `$\beta = 35$`. Calcule la probabilidad de que la broca falle antes de 10 horas de uso.
+13. El periodo de vida de una broca en una operación mecánica, en horas, tiene una distribución de Weibull con `$\alpha = 1/2$` y `$\beta = 35$`. Calcule la probabilidad de que la broca falle antes de $10$ horas de uso.
 14. El número de automóviles que llegan a cierta intersección por minuto tiene una distribución de Poisson con una media de `$3$`. Existe interés por el tiempo que transcurre antes de que `$8$` automóviles aparezcan en la intersección.
 <ol type ="a">
 <li> Cuál es la probabilidad de que más de $8$ automóviles aparezcan en la intersección durante cualquier minuto determinado. </li>
