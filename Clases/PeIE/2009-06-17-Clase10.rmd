@@ -116,7 +116,6 @@ $$\begin{align*}
              &=8\;\frac{1}{2}\Gamma\left(\frac{1}{2}\right)\\
              &=4\sqrt{\pi} \\
              &=7.089815
-        
 \end{align*}$$
 
 y la varianza será igual a
