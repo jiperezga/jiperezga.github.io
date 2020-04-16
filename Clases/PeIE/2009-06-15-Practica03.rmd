@@ -258,7 +258,7 @@ de que cuatro o más de ellos funcione? </li>
 29. Un fabricante de alimentos usa una máquina de moldeo por inyección (que produce galletas del tamaño de un bocado y botanas) que proporciona un ingreso para la empresa a razón de `$200$` por hora cuando está en operación. No obstante, la máquina se descompone a un promedio de dos veces por cada día que trabaja. Si `$Y$` denota el número de descomposturas por día, el ingreso diario generado por la máquina es `$R = 1600 – 50Y^2$`. Encuentre el ingreso diario esperado por usar la máquina.
 30. El tiempo de vida `$X$`, en horas, de un artículo en el taller mecánico tiene una distribución de Weibull con parámetro de escala `$10$` y de forma `$2$`.
 <ol type ="a">
-<li> ¿Cuál es la probabilidad de que falle antes de $8$ horas de uso? </li>
+<li> Cuál es la probabilidad de que falle antes de $8$ horas de uso? </li>
 <li> Cómo es el comportamiento de su función de falla? </li>
 </ol>
 31. Suponga el tiempo, en minutos, que tarda un camión en cruzar debajo del puente de la madre Laura, posee una función de densidad de probabilidad dada por
@@ -305,7 +305,7 @@ Si la probabilidad `$p$` de encontrar un yacimiento en una perforación es del `
 <ol type ="a">
 <li> Calcule la probabilidad de que la vida útil que tiene una computadora Hewlett-Packard se encuentre entre $3.2$ y $8.4$ años. </li>
 <li> Calcule la función de distribución acumulada, $F(x)$.</li>
-<li> De una expresión para la tasa de fallas, $h(t)$, y evalue como es su comportamiento a medida que pasa el tiempo.</li>
+<li> De una expresión para la tasa de fallas, $h(t)$, y evalúe como es su comportamiento a medida que pasa el tiempo.</li>
 </ol>
 38. El grupo ALIADO del Departamento de Ingeniería Industrial, realiza un estudio experimental sobre el tiempo que pasan los estudiantes en una computadora durante el día. En dicho estudio el grupo ALIADO revela que el tiempo que pasan los estudiante frente a la computadora, se distribuye normalmente con un promedio de `$4.8$` horas, y una desviación estándar de `$2.5$` horas. Si se selecciona un estudiante al azar
 <ol type ="a">
