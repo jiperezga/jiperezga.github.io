@@ -39,7 +39,7 @@ opts_chunk$set(echo=TRUE,
 ```
 
 # Parcial
-El parcial deberá solucionarse a mano, y enviar los resultado (escanear o tomar foto a la hoja resuelta) a más tardar a las 12:20 am, al correo electrónico <a target="_blank" href="mailto:jivan.perez@udea.edu.co"> jivan.perez@udea.edu.co</a>.
+El parcial deberá solucionarse a mano, y enviar los resultado (escanear o tomar foto a la hoja resuelta) a más tardar a las 8:20 am, al correo electrónico <a target="_blank" href="mailto:jivan.perez@udea.edu.co"> jivan.perez@udea.edu.co</a>.
 
 * [Cuadros Giraldo Juan Camilo](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/ParcialII/P1152698134.pdf){:target="_blank"}
 * [García Cano Anny](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/ParcialII/P1152209588.pdf){:target="_blank"}
