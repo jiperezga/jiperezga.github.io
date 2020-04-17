@@ -52,7 +52,7 @@ La inferencia estadística es la obtención de conclusiones basadas en datos exp
 
 **Muestra aleatoria:** Es un subconjunto de la población seleccionado de forma independiente e idénticamente distribuidos (*iid* en adelante).
 
-## Estadístico
+## Estadísticos
 Son funciones de las variables aleatorias obtenidas a partir de muestras aleatorias, que tienen por objetivo estimar o hacer inferencia acerca de parámetros desconocidos de una población.
 
 A continuación se definirán algunos estadísticos importantes que sirven para medir el centro y la dispersión de un conjunto de datos, acomodados por orden de magnitud.
@@ -92,9 +92,9 @@ Debido a que todos los estadístico son funciones de las variables aleatorias ob
 ### Distribución muestral de `$\bar{X}$`
 Sea `$X_1, X_2, \ldots, X_n$` una muestra aleatoria de tamaño `$n$` de una distribución normal con media `$\mu$` y varianza `$\sigma^2$`, entonces se puede mostrar que
 `\begin{align*}
-\bar{X}=\frac{1}{n}\sum_{i=1}^n \sim N(\mu, \sigma^2/n)
+\bar{X}=\frac{1}{n}\sum_{i=1}^n x_i \sim N(\mu, \sigma^2/n)
 \end{align*}`
-se distribuye normalmente con media `$mu$` y varianza `$\sigma^2/n$`.
+se distribuye normalmente con media `$\mu$` y varianza `$\sigma^2/n$`.
 
 #### Teorema
 Dado que `$\bar{X}\sim N(\mu,\sigma^2/n)$`, entonces se puede aplicar la estandarización que se emplea a la distribución normal para llevar ésta, a una distribución normal estándar. Dicha estandarización sería de la forma
