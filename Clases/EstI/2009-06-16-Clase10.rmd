@@ -104,6 +104,16 @@ El valor de `$\rho_{xy}$` indica el tipo y fuerza de la dependencia lineal que h
 * `$\rho_{xy} = -1$` indica que existe dependencia lineal negativa exacta entre las variables, es decir, cuando aumenta una variable, la otra disminuye proporcionalmente en la misma cantidad. Este aumento es de la forma `$Y = a + bX$` con `$a$` y `$b$` dos constantes, y `$b<0$`.
 * `$\rho_{xy} = 0$` No existe dependencia lineal entre las variables.
 
+Además, se tendrá que si 
+
+* `$0.5 < \rho_{xy} \leq 1$` fuerte correlación positiva entre `$X$` y `$Y$`.
+* `$0.3 < \rho_{xy} \leq 0.5$` moderada correlación positiva entre `$X$` y `$Y$`.
+* `$0.1 < \rho_{xy} \leq 0.3$` débil correlación positiva entre `$X$` y `$Y$`.
+* `$-0.1 \leq \rho_{xy} \leq 0.1$` débil o ninguna correlación entre `$X$` y `$Y$`.
+* `$-0.3 \leq \rho_{xy} < -0.1$` débil correlación negativa entre `$X$` y `$Y$`.
+* `$-0.5 \leq \rho_{xy} < -0.3$` moderada correlación negativa entre `$X$` y `$Y$`.
+* `$-1 \leq \rho_{xy} < -0.5$` fuerte correlación negativa entre `$X$` y `$Y$`.
+
 ## Independencia
 Si las variables aleatorias `$X, Y$` son independientes, entonces se debe cumplir que `\begin{align*}
 \mathbb{E}(XY) = \mathbb{E}(X)\mathbb{E}(Y)
