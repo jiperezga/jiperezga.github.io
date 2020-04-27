@@ -51,7 +51,7 @@ Sea `$X_1, X_2, \ldots, X_n$` una muestra aleatoria *iid* de tamaño `$n$`, tal 
 \end{align*}`
 donde por teorema de estandarización se obtendrá que
 `\begin{align*}
-Z = \frac{\hat{p}-p}{\sqrt{\frac{p(1-p)}{n}}} \stackrel{a}{\sim} N(0,1)
+Z_c = \frac{\hat{p}-p}{\sqrt{\frac{p(1-p)}{n}}} \stackrel{a}{\sim} N(0,1)
 \end{align*}`
 
 ### Teorema
