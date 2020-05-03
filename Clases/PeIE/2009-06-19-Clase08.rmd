@@ -221,10 +221,10 @@ $$\begin{align*}
 
 se tendrá que 
 $$\begin{align*}
-a= \frac{0.5_\text{horas}* 60_\text{min}}{1_\text{hora}} = 30_\text{min}
+a= \frac{0.5_\text{horas}\times 60_\text{min}}{1_\text{hora}} = 30_\text{min}
 \end{align*}$$
 
-el tiempo esperado será de $30$ minutos.
+el tiempo esperado que tarda una serie financiera en cumplir un ciclo será de $30$ minutos.
 </p>
 </main>
 
@@ -234,10 +234,10 @@ Sea `$a$` y `$b$` dos números constantes (reales) y `$X$` una variable aleatori
 * `$\mathbb{E}(a)=a$`
 * `$\mathbb{E}(X+b)=\mathbb{E}(X)+b$`
 * `$\mathbb{E}(aX)=a\mathbb{E}(X)$`
-* si `$g(X)$` es una función de `$X$`, entonces
+* si `$m(X)$` es una función de `$X$`, entonces
 
 `\begin{align*}
-\mathbb{E}(g(X))=\sum_xg(x)p(x)
+\mathbb{E}(m(X))=\int_{-\infty}^\infty m(x)f(x)
 \end{align*}`
 
 <button id="Show4" class="btn btn-secondary">Mostrar Ejercicio </button>
@@ -248,18 +248,18 @@ Sea `$a$` y `$b$` dos números constantes (reales) y `$X$` una variable aleatori
 $$\begin{align*}
 f(x)=30x^2(1-x)^2 \quad \quad 0<x<1
 \end{align*}$$
-siendo $X$ una variable aleatoria que representa el tiempo en horas que tarda la serie financiera en cumplir un ciclo. 
+siendo $X$ una variable aleatoria que representa el tiempo en horas que tarda la serie financiera en cumplir un ciclo. Calcule </p>
 <ol>
-<li> Calcule la $\mathbb{E}(60X)$</li>
-<li> Calcule la $\mathbb{E}(X+40)$</li>
-<li> Calcule la $\mathbb{E}(X^2)$</li>
+<li>$\mathbb{E}(60X)$</li>
+<li>$\mathbb{E}(X+40)$</li>
+<li>$\mathbb{E}(X^2)$</li>
 </ol>
-</p>
 <h3 data-toc-skip> Solución </h3> 
-<p> Dado que la función de densidad de probabilidad estádada por
+<p> Dado que la función de densidad de probabilidad estádada por 
 $$\begin{align*}
 f(x)=30x^2(1-x)^2 \quad \quad 0<x<1
 \end{align*}$$
+</p>
 <ol>
 <li> se procede a calcular $\mathbb{E}(60X)$, tal que
 $$\begin{align*}
@@ -274,7 +274,7 @@ $$\begin{align*}
              &= 30
 \end{align*}$$
 
-Similarmente, al usar la propiedad `$\mathbb{E}(aX)=a\mathbb{E}(X)$`, sabiendo que $\mathbb{E}(X)=0.5$ se tendrá que
+Similarmente, al usar la propiedad $\mathbb{E}(aX)=a\mathbb{E}(X)$, sabiendo que $\mathbb{E}(X)=0.5$ se tendrá que
 $$\begin{align*}
 \mathbb{E}(60X)&= 60\mathbb{E}(X) \\
                &= 60(0.5) \\
@@ -301,7 +301,7 @@ $$\begin{align*}
                &= 40.5 \\
 \end{align*}$$
 </li>
-<li>Para el cálculo de la $\mathbb{E}(X^2)$, se tendrá que aplicar la ecuación de la esperanza, tal que 
+<li>Para el cálculo de la $\mathbb{E}(X^2)$, se tendrá que en este caso $m(X) = X^2$, y por tanto, al aplicar la propiedad $\mathbb{E}(m(X))=\int_{-\infty}^\infty m(x)f(x) dx$ tendremos que
 $$\begin{align*}
 \mathbb{E}(X^2)&= \int_{0}^1x^2\,f(x) dx\\
                &= \int_{0}^1x^2\,30x^2(1-x)^2 dx\\
@@ -315,9 +315,7 @@ $$\begin{align*}
 \end{align*}$$
 </li>
 </ol>
-</p>
 </main>
-
 
 ## Varianza caso continuo
 Sea `$X$` una variable aleatoria con *fdp* `$f(x)$`, entonces si `$m(X) = (X - \mathbb{E}(X))^2$`, se tendrá que la varianza de `$X$` que se denota `$Var(X)$` o `$\sigma^2$` estará dada por
@@ -344,14 +342,12 @@ Sd(X) = \sqrt{Var(X)}
 $$\begin{align*}
 f(x)=30x^2(1-x)^2 \quad \quad 0<x<1
 \end{align*}$$
-siendo $X$ una variable aleatoria que representa el tiempo en horas que tarda la serie financiera en cumplir un ciclo. 
+siendo $X$ una variable aleatoria que representa el tiempo en horas que tarda la serie financiera en cumplir un ciclo. </p>
 <ol>
 <li>Calcule la $Var(X)$. </li>
 <li>Calcule la $Sd(X)$. </li>
 </ol>
-</p>
 <h3 data-toc-skip> Solución </h3> 
-<p>
 <ol>
 <li>A partir de las ecuaciones anteriormente presentadas, se tiene que la $Var(X)$, puede calcularse a partir de la $\mathbb{E}(X^2)=0.2857142857$ y la $\mathbb{E}(X)=0.5$. Entonces basados en estos valores se tendrá que la varianza del tiempo en horas que tarda la serie financiera en cumplir un ciclo está dada por
 
@@ -375,5 +371,4 @@ Sd(X) &= \sqrt{Var(X)} \\
 y en consecuencia, se tendrá que el tiempo esperado que tarda una serie financiera en cumplir un ciclo será $0.5$ horas, con una desviación estándar de $0.1889822$ horas. Esto es, un promedio de $30$ minutos con una desviación de $11.33893$.
 </li>
 </ol>
-</p>
 </main>
