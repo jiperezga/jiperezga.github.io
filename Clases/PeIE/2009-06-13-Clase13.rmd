@@ -117,8 +117,12 @@ W_1 = \frac{(n_1-1)S_1^2}{\sigma^2_1} \sim N(0,1) \quad \text{ y } \quad W_2 =\f
 \end{align*}`
 tienen distribuciones chi-cuadrado independientes con `$v_1=(n_1-1)$` y `$v_2 = (n_2-1)$` grados de libertad, respectivamente. Y por tanto
 `\begin{align*}
-F_c = \frac{\left(\frac{(n_1-1)S_1^2}{\sigma^2_1}\right)/(n_1-1)}{\left(\frac{(n_1-1)S_1^2}{\sigma^2_1}\right)/(n_2-1)} = \frac{S_1^2/\sigma^2_1}{S_2^2/\sigma^2_2} = \frac{S^2_1\sigma^2_2}{S^2_2\sigma^2_1} \sim F_{n_1-1, n_2-1}
+F_c = \frac{\left(\frac{(n_1-1)S_1^2}{\sigma^2_1}\right)/(n_1-1)}{\left(\frac{(n_1-1)S_1^2}{\sigma^2_1}\right)/(n_2-1)} = \frac{S_1^2/\sigma^2_1}{S_2^2/\sigma^2_2} 
 \end{align*}`
+
+En donde, al reordenar términos se tendrá que 
+
+F_c  = \frac{S^2_1\sigma^2_2}{S^2_2\sigma^2_1} \sim F_{n_1-1, n_2-1}
 
 tienen una distribución `$F$` con `$n_1-1$` grados de libertad en el numerador y `$n_2-1$` grados de libertad en el denominador.
 
