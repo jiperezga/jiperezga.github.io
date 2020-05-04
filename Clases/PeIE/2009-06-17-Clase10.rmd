@@ -6,9 +6,9 @@ permalink: /ProbabilidadeInferencia/PeIE:title.html
 tags:
 
 introduction: |
-  Distribuciones de probabilidad continua: <br/>
-  - Distribución Weibull. <br/>
-  - Tasa de falla.  <br/>
+  Distribuciones de probabilidad continua: <br>
+  - Distribución Weibull. <br>
+  - Tasa de falla.  <br>
   - Función de confiabilidad.
   
 header-includes:

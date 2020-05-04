@@ -6,11 +6,11 @@ permalink: /EstadisticaI/EstI:title.html
 tags:
 
 introduction: |
-  Distribuciones de probabilidad continuas: </br>
-  - Distribución Normal. </br>
-  - Distribución Normal estándar. </br>
-  Teoremas de aproximación: </br>
-  - Aproximación Binomial a Normal.  <br/>
+  Distribuciones de probabilidad continuas: <br>
+  - Distribución Normal. <br>
+  - Distribución Normal estándar. <br>
+  Teoremas de aproximación: <br>
+  - Aproximación Binomial a Normal.  <br>
   - Aproximación Poisson a Normal.
   
 header-includes:

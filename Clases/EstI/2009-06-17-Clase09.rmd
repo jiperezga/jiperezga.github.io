@@ -6,9 +6,9 @@ permalink: /EstadisticaI/EstI:title.html
 tags:
 
 introduction: |
-  Esperanza matemática <br/>
-  Propiedades de la esperanza matemática <br/>
-  Esperanza condicional <br/>
+  Esperanza matemática <br>
+  Propiedades de la esperanza matemática <br>
+  Esperanza condicional <br>
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}

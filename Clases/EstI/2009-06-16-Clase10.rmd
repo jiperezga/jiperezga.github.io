@@ -6,10 +6,10 @@ permalink: /EstadisticaI/EstI:title.html
 tags:
 
 introduction: |
-  Varianza. <br/>
-  Covarianza. <br/>
-  Independencia. <br/>
-  Propiedades de la varianza y la covarianza. <br/>
+  Varianza. <br>
+  Covarianza. <br>
+  Independencia. <br>
+  Propiedades de la varianza y la covarianza. <br>
   Teorema de Chebyshev
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}

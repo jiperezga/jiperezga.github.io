@@ -6,11 +6,11 @@ permalink: /EstadisticaI/EstI:title.html
 tags:
 
 introduction: |
-  Distribuciones de probabilidad continuas: </br>
-  - Distribución Uniforme continua. </br>
-  - Distribución Gamma. </br>
-  - Distribución Exponencial. </br>
-  &nbsp * Propiedad de carencia de memoria.  <br/>
+  Distribuciones de probabilidad continuas: <br>
+  - Distribución Uniforme continua. <br>
+  - Distribución Gamma. <br>
+  - Distribución Exponencial. <br>
+  &nbsp * Propiedad de carencia de memoria.  <br>
   &nbsp * Relación con la distribución Poisson.
   
 header-includes:

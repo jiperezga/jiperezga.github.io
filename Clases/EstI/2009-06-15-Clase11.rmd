@@ -6,9 +6,9 @@ permalink: /EstadisticaI/EstI:title.html
 tags:
 
 introduction: |
-  Distribuciones de probabilidad discreta: </br>
-  - Distribución Binomial </br>
-  - Distribución Hipergeométrica </br>
+  Distribuciones de probabilidad discreta: <br>
+  - Distribución Binomial <br>
+  - Distribución Hipergeométrica <br>
   - Distribución Geométrica
   
 header-includes:

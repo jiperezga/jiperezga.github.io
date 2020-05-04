@@ -6,8 +6,8 @@ permalink: /ProbabilidadeInferencia/PeIE:title.html
 tags:
 
 introduction: |
-  Introducción a la probabilidad. <br/>
-  Fundamentos de probabilidad. <br/>
+  Introducción a la probabilidad. <br>
+  Fundamentos de probabilidad. <br>
   Teoría de conjuntos.
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}

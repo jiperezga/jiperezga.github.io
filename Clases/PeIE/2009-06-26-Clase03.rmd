@@ -6,9 +6,9 @@ permalink: /ProbabilidadeInferencia/PeIE:title.html
 tags:
 
 introduction: |
-  Introducción a la estadística descriptiva. <br/>
-  Tipos de datos. <br/>
-  Escala de medición. <br/>
+  Introducción a la estadística descriptiva. <br>
+  Tipos de datos. <br>
+  Escala de medición. <br>
   Medidas estadísticas. 
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}

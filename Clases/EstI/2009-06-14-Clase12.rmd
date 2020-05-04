@@ -6,15 +6,13 @@ permalink: /EstadisticaI/EstI:title.html
 tags:
 
 introduction: |
-  Distribuciones de probabilidad discreta: </br>
-  - Distribución Binomial Negativa </br>
-  - Distribución Poisson </br>
-  - Distribución Uniforme discreta </br>
-  Teoremas de Aproximación: </br>
-  - Aproximación Hipergeométrica a Binomial </br>
+  Distribuciones de probabilidad discreta: <br>
+  - Distribución Binomial Negativa <br>
+  - Distribución Poisson <br>
+  - Distribución Uniforme discreta <br>
+  Teoremas de Aproximación: <br>
+  - Aproximación Hipergeométrica a Binomial <br>
   - Aproximación Binomial a Poisson 
-  
-  
   
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}

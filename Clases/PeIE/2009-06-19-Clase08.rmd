@@ -6,8 +6,8 @@ permalink: /ProbabilidadeInferencia/PeIE:title.html
 tags:
 
 introduction: |
-  Funciones de probabilidad continuas. <br/>
-  Función de distribución acumulada. <br/>
+  Funciones de probabilidad continuas. <br>
+  Función de distribución acumulada. <br>
   Esperanza matemática y varianza.
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}

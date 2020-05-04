@@ -6,9 +6,9 @@ permalink: /EstadisticaI/EstI:title.html
 tags:
 
 introduction: |
-  Introducción a variables aleatorias <br/>
-  Distribuciones de probabilidad discretas <br/>
-  Distribuciones de probabilidad continua <br/>
+  Introducción a variables aleatorias <br>
+  Distribuciones de probabilidad discretas <br>
+  Distribuciones de probabilidad continua <br>
   Función de distribución acumulada
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}

@@ -6,9 +6,9 @@ permalink: /ProbabilidadeInferencia/PeIE:title.html
 tags:
 
 introduction: |
-  Distribuciones muestrales para combinaciones lineales. </br>
-  Estimación puntual. </br>
-  Estimación por intervalos. </br>
+  Distribuciones muestrales para combinaciones lineales. <br>
+  Estimación puntual. <br>
+  Estimación por intervalos. <br>
   - Intervalos de confianza para una media.
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
