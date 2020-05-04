@@ -58,8 +58,8 @@ Un proceso Bernoulli es aquel que cumple
 <p> Los siguientes, son algunos ejemplos de casos que pueden considerarse como Procesos Bernoulli, debido a que cumplen las $4$ condiciones propuestas anteriormente.</p>
 <ul>
 <li>Tirar una moneda al aire y observar si sale cara o sello.</li>
-<li>Mirar el próximo carro que pasa por debajo de un tiene, y observar si es o no de color azul.</li>
-<li>Compra una empanada y determinar si tiene buen sabor o mal sabor.</li>
+<li>Mirar el próximo carro que pasa por debajo de un puente, y observar si es o no de color azul.</li>
+<li>Comprar una empanada y determinar si tiene buen sabor o mal sabor.</li>
 <li>Seleccionar un estudiante de la Universidad, y determinar si éste nació o no en Antioquia.</li>
 </ul>
 </main>
@@ -80,13 +80,15 @@ Si `$X\sim Be(p)$`, entonces se puede probar que la media y la varianza de la va
 <button id="Hide2" class="btn btn-info">Ocultar Ejercicio </button>
 <main id="botoncito2"> 
 <h3 data-toc-skip> Ejercicio </h3> 
-<p> Suponga que en un estudio se encontró que $2$ de cada $5$ estudiantes no desea tomar clases virtuales. Si se selecciona aleatoriamente un estudiante, cuál es la probabilidad de que éste desee tomar clases virtuales, y calcule su desviación estándar.</p>
+<p> Suponga que en un estudio se encontró que $2$ de cada $5$ estudiantes no desea tomar clases virtuales. Si se selecciona aleatoriamente un estudiante, cuál es la probabilidad de que éste desee tomar clases virtuales, y determine su media y desviación estándar.</p>
 
 <h3 data-toc-skip> Solución </h3> 
 <p>En este caso estamos interesados en la variable $X$, que representa el número de estudiantes que desean tomar clases virtuales, en donde sabemos que si, $2$ de cada $5$ no quieren tomar clases virtuales, entonces se tendrá que $3$ de cada $5$ si desean tomar clases virtuales. Por tanto al aplicar la definición de frecuencia relativa se tiene que 
 
 $$\begin{align*}
-p = \frac{\text{Número de éxitos}}{\text{Número de muestras}} = \frac{3}{5} = 0.6
+p &= \frac{\text{Número de éxitos}}{\text{Número de muestras}}\\
+  &= \frac{3}{5} \\
+  &= 0.6
 \end{align*}$$
 siendo $p$ la probabilidad de que un estudiante desee tomar clases virtuales.
 
@@ -95,7 +97,7 @@ $$\begin{align*}
 \mathbb{P}(X = 1) &= p(1-p)^{1-x} \\
                   &= 0.6(0.4)^{1-1} \\
                   &= 0.6(0.4)^0 \\
-\mathbb{P}(X = 1) &= 0.6
+                  &= 0.6
 \end{align*}$$
 
 es decir, que la probabilidad de que el estudiante seleccionado desee tomar clases virtuales será del $60\%$.
@@ -103,20 +105,20 @@ es decir, que la probabilidad de que el estudiante seleccionado desee tomar clas
 Ahora, para calcular la desviación estándar se requiere calcular inicialmente la varianza de la variable aleatoria, la cual está dada por 
 $$\begin{align*}
 Var(X) &= p(1-p) \\
-Var(X) &= 0.6(0.4) \\
-Var(X) &= 0.24
+       &= 0.6(0.4) \\
+       &= 0.24
 \end{align*}$$
 
 y a partir de éste valor, se tendrá que la desviación estándar es igual a 
 $$\begin{align*}
 Sd(X) &= \sqrt{Var(X)} \\
-Sd(X) &= \sqrt{0.24} \\
-Sd(X) &= 0.4898979
+      &= \sqrt{0.24} \\
+      &= 0.4898979
 \end{align*}$$
 Entonces, como el valor esperado de un proceso Bernoulli es igual a $p$, esto es
 $$\begin{align*}
 \mathbb{E}(X) &= p \\
-\mathbb{E}(X) &= 0.6
+              &= 0.6
 \end{align*}$$
 Por tanto, al seleccionar un solo estudiante, se espera que $0.6$ estudiantes respondan que desean tomar clases virtuales, con una desviación estándar de $0.489$.
 </p>
@@ -152,7 +154,9 @@ Si `$X\sim b(n,p)$`, entonces se puede probar que la media y varianza de la vari
 <p>En este caso estamos interesados en la variable $X$, que representa el número de estudiantes que desean tomar clases virtuales, en donde sabemos que si, $2$ de cada $5$ no quieren tomar clases virtuales, entonces se tendrá que $3$ de cada $5$ si desean tomar clases virtuales. Por tanto al aplicar la definición de frecuencia relativa se tiene que 
 
 $$\begin{align*}
-p = \frac{\text{Número de éxitos}}{\text{Número de muestras}} = \frac{3}{5} = 0.6
+p &= \frac{\text{Número de éxitos}}{\text{Número de muestras}} \\
+  &= \frac{3}{5} \\
+  &= 0.6
 \end{align*}$$
 siendo $p$ la probabilidad de que un estudiante desee tomar clases virtuales.
 </p>
