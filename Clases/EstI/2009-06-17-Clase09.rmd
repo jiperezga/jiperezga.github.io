@@ -91,7 +91,7 @@ se tendrá que el número promedio de niñas que se espera encontrar en una fami
 $$\begin{align*}
 f(x)=30x^2(1-x)^2 \quad \quad 0<x<1
 \end{align*}$$
-siendo $X$ una variable aleatoria que representa el tiempo en horas que tarda la serie financiera en cumplir un ciclo. Calcule el valor esperado en que tarda la serie financiera en cumplir un ciclo.</p>
+siendo $X$ una variable aleatoria que representa el tiempo en horas que tarda la serie financiera en cumplir un ciclo. Calcule el valor esperado del tiempo que tarda la serie financiera en cumplir un ciclo.</p>
 <h3 data-toc-skip> Solución </h3> 
 <p>Conocida la función de densida de probabilidad, se procede a calcular el valor esperado del tiempo que tarda la serie financiera en cumplir un ciclo, tal que
 $$\begin{align*}
@@ -727,7 +727,7 @@ $$\begin{align*}
              &=\frac{4}{3} \\
              &=1.333333 
 \end{align*}$$
-Por tanto se tendrá que el tiempo libre promedio que tiene el profesor de Estadística I en un día es de $1.3333$ horas.
+Por tanto se tendrá que el valor esperado para el número de horas promedio de tiempo libre que tiene el profesor de Estadística I en un día es de $1.3333$ horas.
 </li>
 <li> Similar al cálculo de la esperanza de $X$, se realiza el cálculo de la $\mathbb{E}(Y)$, la cual, al depender solo de la variable aleatoria $Y$, permite que el cálculo se realice mediante el empleo de la distribución marginal $h(y)$, tal que
 $$\begin{align*}
@@ -740,7 +740,7 @@ $$\begin{align*}
              &=\frac{85}{28} \\
              &=3.035714 
 \end{align*}$$
-Por tanto se tendrá que el tiempo libre promedio que poseen los estudiantes del curso de Estadística I es de $3.035714$ horas.
+Por tanto se tendrá que el valor esperado para el número promedio de horas de tiempo libre que tienen los estudiantes que cursan Estadística I es de $3.035714$ horas
 </li>
 <li>En este punto, estamos interesados en calcular la esperanza conjunta de $XY$, esto es, $\mathbb{E}(XY)$, en donde, se observa que la esperanza matemática depende de dos variables aleatorias, y por tanto para resolver el ejercicio empleamos la función de distribución conjunta $f(x,y)$ tal que
 $$\begin{align*}
