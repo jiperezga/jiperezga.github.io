@@ -6,7 +6,9 @@ permalink: /ProbabilidadeInferencia/PeIE:title.html
 tags:
 
 introduction: |
-  Distribuciones muestrales para combinaciones lineales. <br>
+  Distribuciones muestrales
+  - Distribuciones muestrales para diferencia de medias. <br>
+  - Distribuciones muestrales para diferencia de proporciones. <br>
   Estimación puntual. <br>
   Estimación por intervalos. <br>
   - Intervalos de confianza para una media.
@@ -42,26 +44,7 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
-### Distribución de una combinación lineal
-Sean `$X_1$` y `$X_2$` dos variables aleatorias normalmente distribuidas con media `$\mu$` y varianza `$\sigma^2$`. Y si `$Y$` es una combinación lineal de `$X_1$` y `$X_2$`, tal que
-`\begin{align*}
-Y = X_1 + X_2
-\end{align*}`
-entonces, la media de `$Y$` estará dada por
-`\begin{align*}
-\mathbb{E}(Y) = \mu_1 + \mu_2
-\end{align*}`
-
-y la varianza de `$Y$` estará dada por
-`\begin{align*}
-Var(Y) = \sigma_{x_1}^2 + \sigma_{x_2}^2 + 2 \sigma_{x_1x_2}
-\end{align*}`
-
-o en caso de que `$X_1$` y `$X_2$` sean variables aleatorias independientes, entonces se tendrá que la varianza de `$Y$` estará dada por
-`\begin{align*}
-Var(Y) = \sigma_{x_1}^2 + \sigma_{x_2}^2
-\end{align*}`
-
+## Distribuciones muestrales
 ### Distribuciones muestrales para diferencia de medias
 Sea `$X_{11}, X_{12}, \ldots, X_{1n_1}$` y `$X_{21}, X_{22}, \ldots, X_{2n_1}$` dos muestras aleatorias *iid* con medias `$\mathbb{E}(X_{1i})=\mu_1$` y `$\mathbb{E}(X_{2j})=\mu_2$`, y varianzas `$Var(X_{1i})=\sigma_1^2<\infty$` y `$Var(X_{2j})=\sigma_2^2<\infty$`, para `$i=1,2,\ldots,n_1$` y `$j=1,2,\ldots,n_2$`, entonces dependiendo de la distribución de donde provengan las muestras aleatorias, los tamaños muestrales `$n_1$` y `$n_2$`, y de si se conocen o no las varianzas `$\sigma^2_1$` y `$\sigma^2_2$`, se tendra un estadístico diferente.
 
@@ -98,7 +81,7 @@ donde
 Z_c=\frac{(\bar{X}_1 - \bar{X}_2) - (\mu_1 - \mu_2)}{\sqrt{\frac{S^2_1}{n_1} + \frac{S^2_2}{n_2}}} \stackrel{a}{\sim} N(0,1)
 \end{align*}`
 
-#### Distribución muestral para diferencia de proporciones `$p_1 - p_2$`
+### Distribución muestral para diferencia de proporciones `$p_1 - p_2$`
 Sea `$X_{11}, X_{12}, \ldots, X_{1n_1}$` y `$X_{21}, X_{22}, \ldots, X_{2n_1}$` dos muestras aleatorias *iid* de tamaño `$n_1$` y `$n_2$`, tal que `$X_{1i}\sim b(n_1,p_1)$` y `$X_{2i}\sim b(n_2,p_2)$`. Entonces si `$n_1$` y `$n_2$` son suficientemente grandes, y las proporción `$p_1$`, `$p_2$` no está muy cercana a `$0$` o a `$1$`, tal que `$n_ip_i$` y `$n_i(1-p_i)>5$`, entonces se puede probar que
 `\begin{align*}
 \hat{p_1}  = \frac{x_1}{n_1} \stackrel{a}{\sim} N\left(p_1, \frac{p_1(1-p_1)}{n_1}\right) \quad \quad \text{ y } \quad \quad \hat{p_2}  = \frac{x_2}{n_2} \stackrel{a}{\sim} N\left(p_2, \frac{p_2(1-p_2)}{n_2}\right)
