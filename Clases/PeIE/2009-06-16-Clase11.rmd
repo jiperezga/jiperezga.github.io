@@ -83,21 +83,20 @@ Si `$X\sim N(\mu, \sigma^2)$`, entonces al aplicar el teorema de estandarizació
 En donde, debe recordarse que, al ser la distribución normal una distribución continua, la `$\mathbb{P}(Z\leq z_1) = \mathbb{P}(Z< z_1)$` y `$\mathbb{P}(Z\geq z_1) = \mathbb{P}(Z > z_1)$`. Lo anterior debido a que en la distribuciones continuas la probabilidad puntual es igual a `$0$`.
 
 
-<button id="Show1" class="btn btn-secondary">Mostrar Ejercicio Manejo de Tabla </button>
-<button id="Hide1" class="btn btn-info">Ocultar Ejercicio Manejo de Tabla</button>
+<button id="Show1" class="btn btn-secondary">Mostrar Ejercicio Manejo de Tabla Normal Estándar</button>
+<button id="Hide1" class="btn btn-info">Ocultar Ejercicio Manejo de Tabla Normal Estándar</button>
 <main id="botoncito1"> 
 <h3 data-toc-skip> Ejercicio </h3> 
-<p> Suponga que poseemos una distribución normal estándar, tal que $Z\sim N(0,1)$. Entonces, a partir de esta distribución y empleando la <a href="https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Documentos/DistNormEst.pdf">Tabla de la Distribución Normal Estándar</a>, calcule
+<p> Suponga que poseemos una distribución normal estándar, tal que $Z\sim N(0,1)$. Entonces, a partir de esta distribución y empleando la <a href="https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Documentos/DistNormEst.pdf">Tabla de la Distribución Normal Estándar</a>, calcule </p>
 <ol>
 <li>$\mathbb{P}(Z\leq 1.96)$</li> 
 <li>$\mathbb{P}(Z> 2.13)$</li>
 <li>$\mathbb{P}(-2.42 <Z \leq 0.24)$</li>
 <li>$\mathbb{P}(Z>z) = 0.0129$</li>
 </ol>
-</p>
 
 <h3 data-toc-skip> Solución </h3> 
-<p>Para calcular probabilidades con la tabla de la distribución normal estándar, es necesario tener en cuenta el funcionamiento de la tabla misma, y para ello, se debe entender su funcionamiento. Y para ello se presenta la siguiente imagen.</p>
+<p>Para calcular probabilidades con la tabla de la distribución normal estándar, es necesario tener en cuenta el funcionamiento de la tabla misma. Y para ello se presenta la siguiente imagen.</p>
 
 <img src="../../ProbabilidadeInferencia/images/TablaNormalEst.jpg" alt="" style="max-width: 80%;">
 
@@ -118,7 +117,7 @@ $$\begin{align*}\mathbb{P}(Z\leq 1.96)=0.9750\end{align*}$$
 $$\begin{align*}
 \mathbb{P}(Z> 2.13)= 1 - \mathbb{P}(Z\leq 2.13)
 \end{align*}$$
-En donde, se aprecia podemos calcular la $\mathbb{P}(Z> 2.13)$, mediante el empleo de la $\mathbb{P}(Z\leq 2.13)$, la cual podemos buscar en la tabla directamente. Para localizar $\mathbb{P}(Z\leq 2.13)$, se busca el valor $2.1$ en la parte izquierda de la tabla, y el valor $0.03$ en la parte superior de la tabla, y en donde se encuentre el cruce de ambos valores, se encontrará el valor de la probabilidad asociada a $2.13$.
+En donde, se aprecia que ahora podemos calcular la $\mathbb{P}(Z> 2.13)$, mediante el empleo de la $\mathbb{P}(Z\leq 2.13)$, la cual podemos buscar en la tabla directamente. Para localizar $\mathbb{P}(Z\leq 2.13)$, se busca el valor $2.1$ en la parte izquierda de la tabla, y el valor $0.03$ en la parte superior de la tabla, y en donde se encuentre el cruce de ambos valores, se encontrará el valor de la probabilidad asociada a $2.13$.
 
 <img src="../../ProbabilidadeInferencia/images/TablaNormalEst3.jpg" alt="" style="max-width: 80%;">
 
@@ -145,7 +144,7 @@ $$\begin{align*}
 obteniendo que la probabilidad $\mathbb{P}(-2.42 <Z \leq 0.24)$, puede calcularse mediante el empleo de las probabilidades acumuladas $\mathbb{P}(Z \leq 0.24)$ y $\mathbb{P}(Z \leq -2.42)$, las cuales pueden calcularse en la tabla de forma similar a los dos puntos anteriores.
 
 
-<img src="../../ProbabilidadeInferencia/images/TablaNormalEst4.jpg" alt="" style="max-width: 80%;">
+<img src="../../ProbabilidadeInferencia/images/TablaNormalEst4.jpg" alt="" style="max-width:100%;">
 
 Donde se aprecia que 
 
