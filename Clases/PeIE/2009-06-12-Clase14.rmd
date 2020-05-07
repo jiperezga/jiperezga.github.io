@@ -6,7 +6,7 @@ permalink: /ProbabilidadeInferencia/PeIE:title.html
 tags:
 
 introduction: |
-  Distribuciones muestrales
+  Distribuciones muestrales <br>
   - Distribuciones muestrales para diferencia de medias. <br>
   - Distribuciones muestrales para diferencia de proporciones. <br>
   Estimación puntual. <br>
