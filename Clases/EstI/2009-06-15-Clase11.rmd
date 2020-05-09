@@ -294,7 +294,7 @@ Consideremos un experimento con las mismas propiedades de un experimento binomia
 <p> Los siguientes, son algunos ejemplos de casos que pueden considerarse Experimentos Binomial Negativo, debido a que cumplen las propiedades de un experimento binomial, es decir, las $4$ condiciones propuestas en el <a href="../../EstadisticaI/EstIClase11.html#proceso-bernoulli">Proceso Bernoulli</a>.</p>
 <ul>
 <li>Tirar una moneda al aire, hasta obtener la primera cara.</li>
-<li>Contar el número de carros que pasan por debajo de un puente, hasta que pasen $5$ o más carros azules.</li>
+<li>Contar el número de carros que pasan por debajo de un puente, hasta que pasen $5$ carros azules.</li>
 <li>Comprar empanada hasta encontrar la segunda refritas.</li>
 <li>Seleccionar estudiantes de la Universidad, hasta encontrar el primero que nació por fuera de Antioquia.</li>
 </ul>
