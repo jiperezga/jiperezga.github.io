@@ -11,11 +11,7 @@ introduction: |
               - Esperanza condicional <br/>
               - Varianza <br/>
               - Teorema de Chebyshev <br/>
-              - Distribución Binomial <br/>
-              - Distribución Hipergeométrica <br/>
-              - Distribución Geométrica <br/>
-              - Distribución Binomial Negativa <br/>
-              - Distribución Poisson <br/>
+              - Distribuciones de Probabilidad Discretas <br/>
               - Teoremas de Aproximación
               
 header-includes:
