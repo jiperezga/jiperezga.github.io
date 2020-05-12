@@ -213,10 +213,10 @@ Un proceso Poisson es aquel que cumple
 <button id="Hide4" class="btn btn-info">Ocultar Ejemplo </button>
 <main id="botoncito4"> 
 <h3 data-toc-skip> Ejemplo </h3> 
-<p> El número de carros que transitan por una glorieta en dos horas.</p>
 <ul>
+<li>El número de carros que transitan por una glorieta en dos horas.</li>
 <li>El número de estudiantes que entrar a la universidad en un día.</li>
-<li>Mirar el próximo carro que pasa por debajo de un tiene, y observar si es o no de color azul.</li>
+<li>Mirar el número de carros que pasa por debajo de un puente, en $5$ minutos.</li>
 <li>El número de empanada que se venden en media hora.</li>
 <li>El número de resaltos para reducción de velocidad que se encuentran en la carretera en un kilómetro.</li>
 </ul>
