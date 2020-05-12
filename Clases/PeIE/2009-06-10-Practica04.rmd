@@ -5,7 +5,11 @@ main-class: 'practica'
 permalink: /ProbabilidadeInferencia/PeIE:title.html
 tags:
 
-introduction: Ejercicio sobre variables aleatorias y distribuciones de probabilidad.
+introduction: |
+  Ejercicio sobre:
+  - Distribuciones muestrales. 
+  - Intervalos de confianza.
+              
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
