@@ -424,7 +424,6 @@ $$\begin{align*}
                              &= \mathbb{P}\left(Z \leq -0.02217791\right)\\
 \end{align*}$$
 
-
 Y como $Z \stackrel{a}{\sim} N(0,1)$, podemos encontrar la probabilidad de interés, empleando la <a href="https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Documentos/DistNormEst.pdf">Tabla de la Distribución Normal Estándar</a>, la función <tt>pnorm()</tt> del software <tt>R</tt> o la función <tt>DISTR.NORM.ESTAND.N()</tt> de Excel, tal que
 $$\begin{align*}
 \mathbb{P}\left(Z \leq -0.02217791\right) = 0.491153
