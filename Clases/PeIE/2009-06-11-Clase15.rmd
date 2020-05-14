@@ -9,6 +9,7 @@ introduction: |
   Estimación por intervalos. <br>
   - Intervalos de confianza para diferencia de medias. <br>
   - Intervalos de confianza para una proporción. <br>
+  - Intervalos de confianza para diferencia de proporciones <br>
   - Intervalos de confianza para razón de varianzas.
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
@@ -342,11 +343,11 @@ Sea `$X_{1,1}, X_{1,2}, \ldots, X_{1,n_1}$` y `$X_{2,1}, X_{2,2}, \ldots, X_{2,n
 
 ![](../../ProbabilidadeInferencia/images/Intervalos4.jpg)
 
-<button id="Show7" class="btn btn-secondary">Mostrar Ejercicio 5</button>
-<button id="Hide7" class="btn btn-info">Ocultar Ejercicio 5</button>
+<button id="Show7" class="btn btn-secondary">Mostrar Ejercicio</button>
+<button id="Hide7" class="btn btn-info">Ocultar Ejercicio</button>
 <main id="botoncito7"> 
 <h3 data-toc-skip> Ejercicio </h3> 
-p>Una empresa de computación dedice realizar un cambio en el proceso de fabricación de uno de los componentes que requiere en sus portátiles, y está en interesado en saber si dicho cambio ofrece una mejora significativa en la rendimiento que sus equipos ofrecen.<br>
+<p>Una empresa de computación dedice realizar un cambio en el proceso de fabricación de uno de los componentes que requiere en sus portátiles, y está en interesado en saber si dicho cambio ofrece una mejora significativa en la rendimiento que sus equipos ofrecen.<br>
 <br>
 Para determinar si el cambio en el proceso de fabricación mejora el rendimiento que sus equipos ofrecen, deciden tomar una muestra de equipos antes y después de la implementación del nuevo proceso de fabricación y se evalúa la velocidad de procesamiento para la ejecución de un programa determinado. Suponga que se encuentra que $120$ de $500$ computadores fabricados con el método actual ofrece un rendimiento superior al promedio, mientras que, $220$ de $700$ computadores fabricados con el nuevo método ofrece un rendimiento superior al promedio.<br>
 <br>
