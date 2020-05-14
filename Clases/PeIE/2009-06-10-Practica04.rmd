@@ -6,8 +6,8 @@ permalink: /ProbabilidadeInferencia/PeIE:title.html
 tags:
 
 introduction: |
-  Ejercicio sobre:
-  - Distribuciones muestrales. 
+  Ejercicio sobre: <br>
+  - Distribuciones muestrales. <br>
   - Intervalos de confianza.
               
 header-includes:
@@ -44,9 +44,9 @@ opts_chunk$set(echo=TRUE,
 
 ## Lista de ejercicios
 
-1. Se encuentra que la concentración promedio de zinc que se obtiene en una muestra de mediciones en `$36$` sitios diferentes de un río es de `$2.6$` gramos por mililitro. Si la función de probabilidad es conocida, pero se sabe su desviación estándar es de `$0.3$` gramos por mililitro. Basado en lo anterior
+1. Se encuentra que la concentración promedio de zinc que se obtiene en una muestra de mediciones en `$36$` sitios diferentes de un río es de `$2.6$` gramos por mililitro. Si la función de probabilidad no es conocida, pero se sabe su desviación estándar es de `$0.3$` gramos por mililitro. Basado en lo anterior
 <ol type ="a">
-  <li> Calcule la probabilidad de que la concentración media de zinc en el río se encuentre entre $2.2$ y $2.3$ gramos por mililitro.
+  <li> Calcule la probabilidad de que la concentración media de zinc en el río se encuentre entre $2.4$ y $2.5$ gramos por mililitro.
   </li>
   <li> Calcule un intervalo de confianza del $95\%$ para la concentración media de zinc en el río?
   </li>
@@ -60,12 +60,12 @@ opts_chunk$set(echo=TRUE,
 Construya un intervalo de confianza del `$95\%$` para el contenido promedio de todos los contenedores suponiendo que el contenido de los contenedores se distribuye aproximadamente normal.
 5. Para un experimento de pruebas psicológicas se seleccionan al azar `$25$` sujetos de prueba y se les mide sus tiempos de reacción, en segundos, ante un estímulo particular, obteniendo que el tiempo promedio de reacción de los sujetos es de `$6.2$` segundos. La experiencia sugiere que la varianza en los tiempos de reacción ante los diferentes tipos de estímulos es de `$4_{s^2}$` y que la distribución de probabilidad para los tiempos de reacción es aproximadamente normal. Basado en lo anterior
 <ol type ="a">
-  <li> Calcule la probabilidad de el tiempo de reacción promedio para todos los individuos sea a lo más de $6$ segundos.
+  <li> Calcule la probabilidad de que el tiempo de reacción promedio para todos los individuos sea a lo más de $6$ segundos.
   </li>
   <li> Calcule el límite superior del $95\%$ para el tiempo medio de reacción de todos los individuos.
   </li>
 </ol>
-6. Un investigador de la \texttt{ucla} afirma que la esperanza de vida de los ratones se puede extender hasta en `$25\%$` cuando se reduce aproximadamente `$40\%$` de las calorías de su dieta desde el momento en que son destetados, en donde, la dieta restringida se enriquece hasta niveles normales con vitaminas y proteínas. Si se supone que a partir de estudios previos se sabe que la desviación estándar del aumento de vida de los ratones es de `$5.8$` meses, ¿cuántos ratones se deberían incluir en la muestra para tener un `$99\%$` de confianza en que la vida media esperada de la muestra estará dentro de 2 meses a partir de la media de la población para todos los ratones sujetos a la dieta reducida?
+6. Un investigador de la <tt>ucla</tt> afirma que la esperanza de vida de los ratones se puede extender hasta en `$25\%$` cuando se reduce aproximadamente `$40\%$` de las calorías de su dieta desde el momento en que son destetados, en donde, la dieta restringida se enriquece hasta niveles normales con vitaminas y proteínas. Si se supone que a partir de estudios previos se sabe el aumento de vida de los ratones se distribuye normalmente con una desviación estándar de `$5.8$` meses, ¿cuántos ratones se deberían incluir en la muestra para tener un `$99\%$` de confianza en que la vida media esperada de la muestra estará dentro de `$2$` meses a partir de la media de la población para todos los ratones sujetos a la dieta reducida?
 7. Suponga que el grupo ALIADO, realiza un estudio sobre la altura que poseen los estudiantes de la Universidad, y para ello, toma una muestra aleatoria de `$50$` estudiantes universitarios y encuentra que la estatura promedio fue de `$174.5$` centímetros con una desviación estándar de `$6.9$` centímetros. Basados en la información anterior,
 <ol type ="a">
   <li> Construya un intervalo de confianza del $98\%$ para la estatura media de todos los estudiantes universitarios.
@@ -74,19 +74,19 @@ Construya un intervalo de confianza del `$95\%$` para el contenido promedio de t
   </li>
   <li> Cual es la probabilidad de que la estatura promedio de todos los estudiantes sea a lo sumo $172$ centímetros, si suponemos que las alturas se distribuyen <i>iid</i> con desviación estándar de $7.3$ centímetros.
   </li>
-8. Dos marcas de refrigeradores, denotadas por `$A$` y `$B$` poseen garantías de `$1$` año. Suponga que en una muestra aleatoria de `$50$` refrigeradores de la marca `$A$`, se observó que `$12$` de ellos fallaron antes de terminar el periodo de garantía, mientras que, una muestra aleatoria independiente de `$60$` refrigeradores de la marca `$B$` también reveló que `$12$` de ellos fallaron durante el período de garantía. 
+8. Dos marcas de refrigeradores, denotadas por `$A$` y `$B$` poseen garantías de `$1$` año. Suponga que en una muestra aleatoria de `$50$` refrigeradores de la marca `$A$`, se observó que `$12$` de ellos fallaron antes de terminar el periodo de garantía, mientras que, una muestra aleatoria independiente de `$60$` refrigeradores de la marca `$B$` también reveló que `$12$` de ellos fallaron durante el período de garantía.
 <ol type ="a">
-  <li> Calcule con un nivel de confianza del $98\%$ un intervalo de confianza para la diferencia entre las proporciones de falla, dentro del periodo de garantía, para todos los refrigeradores de las marcas $A$ y $B$.</li>
-  <li> ¿Podría concluirse que hay evidencia suficiente para afirma que existen diferencia significativas entre las proporciones de fallas, dentro del período de garantía, para las dos marcas de refrigeradores? ¿Por qué?</li> 
+  <li> Calcule la probabilidad de que la proporción de refrigeradores que fallan durante el periodo de garantía para la marca $A$ sea superior la proporción de refrigeradores de la marca $B$ que fallan durante el periodo de garantía. </li>
+  <li> ¿Podría concluirse que hay evidencia suficiente para afirma que las proporciones de fallas de la marca $A$ de refrigeradores es superior a la proporción de falla de la marca $B$ de refrigeradores, dentro del período de garantía? ¿Por qué?</li>
 </ol>
 9. ¿Está menguando el romance de los estadounidenses con el cine?, En una encuesta realizada por la empresa Gallup a `$800$` adultos seleccionados de forma aleatoria, se encontró que `$45\%$` de los encuestados indicaron que el cine estaba mejorando, mientras que, `$43\%$` de los encuestados dijeron que el cine estaba empeorando. Basados en lo anterior
 <ol type ="a">
-  <li>  Encuentre un intervalo de confianza de $87\%$ para la proporción total de de adultos que piensan que el cine está mejorando.</li>
+  <li>  Encuentre un intervalo de confianza de $87\%$ para la proporción total de adultos que piensan que el cine está mejorando.</li>
   <li>¿El intervalo incluye el valor $p = 0.50$? ¿Piensa usted que la mayoría de los adultos piensa que el cine está mejorando?</li>
 </ol>
 10. Los administradores de un hospital deseaban estimar el número promedio de días necesarios para el tratamiento de enfermos internados entre las edades de `$25$` y `$34$` años. Una muestra aleatoria de `$500$` pacientes entre estas edades produjo una media y una desviación estándar igual a `$5.4$` y `$3.1$` días, respectivamente. Basado en la información anterior, 
 <ol type ="a">
-  <li> Calcule la probabilidad de que la varianza de la población de pacientes de la cual se extrajo la muestra, tenga un valor superior a $8_{días^2}$ .
+  <li> Si se asume que los datos se distribuye normalmente, calcule la probabilidad de que la varianza de la población de pacientes de la cual se extrajo la muestra, tenga un valor superior a $8_{días^2}$.
   </li>
   <li> Calcule el límite superior de un intervalo de confianza del $95\%$ para la duración media de permanencia de la población de pacientes de la cual se extrajo la muestra.	
   </li>
@@ -137,7 +137,7 @@ Construya un intervalo de confianza del `$95\%$` para el contenido promedio de t
 </table>
 </pre>
 <ol type ="a">
-  <li> Encuentre un intervalo de confianza de $90\%$ para la media de calificaciones del SAT verbal para alumnos de último año de preparatoria urbana.
+  <li> Suponiendo normalidad, encuentre un intervalo de confianza de $90\%$ para la media de calificaciones del SAT verbal para alumnos de último año de preparatoria urbana.
   </li>
   <li> ¿El intervalo hallado por usted en el inciso a) incluye el valor $508$?, la calificación media real del SAT verbal para $2005$? ¿Qué puede concluir?
   </li>
@@ -477,4 +477,9 @@ Suponiendo que la duración de todas las baterías se distribuye de forma aproxi
   </li>
   <li> Construya un intervalo de confianza del $92\%$ para el promedio de durabilidad de todas las baterías y después decida si la afirmación del fabricante sobre que el promedio de durabilidad es de $3$, es o no válida.
   </li>
+</ol>
+31. Dos marcas de refrigeradores, denotadas por `$A$` y `$B$` poseen garantías de `$3$` año. Suponga que en una muestra aleatoria de `$50$` refrigeradores de la marca `$A$`, se encontró que el tiempo medio de vida de lo refrigeradores es de `$4.3$` años con una desviación estándar de `$1.2$` años, mientras que, en una muestra aleatoria independiente de `$60$` refrigeradores de la marca `$B$`, se encontró que el tiempo promedio de vida de los refrigeradores es de `$5.5$` años con una desviación estándar de `$1.7$` años. 
+<ol type ="a">
+  <li> Calcule con un nivel de confianza del $90\%$ un intervalo para la diferencia los tiempos promedio de vida de los refrigeradores de las marcas $A$ y $B$.</li>
+  <li> ¿Podría concluirse que hay evidencia suficiente para afirma que existen diferencia significativas entre los tiempos de vida promedio para las dos marcas de refrigeradores? ¿Por qué?</li> 
 </ol>
