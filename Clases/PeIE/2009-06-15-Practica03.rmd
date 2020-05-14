@@ -6,8 +6,8 @@ permalink: /ProbabilidadeInferencia/PeIE:title.html
 tags:
 
 introduction: |
-  Ejercicio sobre:
-  - Variables aleatorias.
+  Ejercicio sobre: <br>
+  - Variables aleatorias. <br>
   - Distribuciones de probabilidad.
   
 header-includes:
