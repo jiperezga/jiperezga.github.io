@@ -1916,7 +1916,7 @@ En consecuencia, dado que la igualdad se cumple, se concluye que el número prom
 </p>
 </main>
 
-### Propiedades de la varianza, covarianza y correlación
+## Propiedades de la varianza, covarianza y correlación
 Sea `$a$` y `$b$` números reales (constantes) y `$X$` y `$Y$` dos variables aleatorias discretas o continuas, entonces
 
 1. `$Var(a)=0$`
@@ -1926,10 +1926,10 @@ Sea `$a$` y `$b$` números reales (constantes) y `$X$` y `$Y$` dos variables ale
 5. `$Var(X-Y) = Var(X) + Var(Y) - 2 Cov(X,Y)$`
 6. Si `$X, Y$` son independientes entonces `$Var(X+Y) = Var(X) + Var(Y)$`
 7. Si `$X, Y$` son independientes entonces `$Var(X-Y) = Var(X) + Var(Y)$`
-8. `$Cov(aX,bX) = abCov(X,Y)$`
-9. Si `$X, Y$` son linealmente independientes entonces `$Cov(aX,bX) = 0$`
-10. `$Cor(aX,bX) = Cor(X,Y)$`
-11. Si `$X, Y$` son linealmente independientes entonces `$Cor(aX,bX) = 0$`
+8. `$Cov(aX,bY) = abCov(X,Y)$`
+9. Si `$X, Y$` son linealmente independientes entonces `$Cov(aX,bY) = 0$`
+10. `$Cor(aX,bY) = Cor(X,Y)$`
+11. Si `$X, Y$` son linealmente independientes entonces `$Cor(aX,bY) = 0$`
 
 ## Desigualdad de Chebyshev
 ### Desigualdad de Markov
