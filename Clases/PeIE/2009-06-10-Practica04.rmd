@@ -184,7 +184,7 @@ Construya un intervalo de confianza del `$95\%$` para el contenido promedio de t
 <ol type ="a">
   <li> Determine un intervalo de confianza de $95\%$ para la diferencia de las reducciones medias en presión sanguínea, suponiendo que las mediciones están distribuidas normalmente.
   </li>
-  <li>Calcule la probabilidad de la diferencia de las reducciones medias en la presión sanguínea sean iguales, suponiendo que las mediciones están distribuidas normalmente.
+  <li>Calcule la probabilidad de la diferencia de las reducciones medias en la presión sanguínea con el medicamento $A$ sea menor que la reducción media que ofrece el medicamento $B$, suponiendo que las mediciones están distribuidas normalmente.
   </li>
 </ol>
 18. ¿El precio pagado por el atún depende del método de empaque? *Consumer Reports* da el precio promedio estimado para una lata de `$6$` onzas o una bolsa de `$7.06$` onzas de atún, con base en precios pagados a nivel nacional en supermercados. Los precios se registran para una variedad de marcas de atún en la tabla siguiente:
