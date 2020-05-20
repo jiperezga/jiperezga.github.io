@@ -86,7 +86,8 @@ kable_styling("striped", full_width = F)
 ```
 Encuentre el coeficiente de asimetría, el cuál está dado por 
 `\begin{align*}
-\gamma_{1}= \mathbb{E}\left[\left({\frac{X-\mu}{\sigma}}\right)^{3}\right]={\frac{\mu_{3}}{\sigma^{3}}}={\frac{\mathbb{E}\left[(X-\mu)^{3}\right]}{(\mathbb{E}\left[(X-\mu)^{2}\right])^{3/2}}}
+\gamma_{1}&= \mathbb{E}\left[\left({\frac{X-\mu}{\sigma}}\right)^{3}\right]={\frac{\mu_{3}}{\sigma^{3}}}={\frac{\mathbb{E}\left[(X-\mu)^{3}\right]}{(\mathbb{E}\left[(X-\mu)^{2}\right])^{3/2}}}\\
+\gamma_{1}&=\frac{\mathbb{E}(X^3)-3\mathbb{E}(X^2)\mathbb{E}(X)+2\mathbb{E}(X)^3}{\left[\mathbb{E}(X^2)- \mathbb{E}(X)^2)\right]^{3/2}}
 \end{align*}`
 8. Un granjero cultiva peras en su finca para posteriormente venderlas en la minorista. Dado que los pedidos realizados en la minorista son tan grandes, el granjero corre el riesgo de que algunas peras se echen a perder durante el tiempo de entrega. Suponga que en una entrega de `$1000$` peras, el `$10\%$` están echadas a perder. Con el fin de aceptar dicho pedido, en la minorista realizan una selección aleatoria de `$15$` peras, y si encuentran más de `$5$` peras echadas a perder, rechazan el pedido del granjero.
 <ol type ="a">
@@ -102,9 +103,10 @@ Encuentre el coeficiente de asimetría, el cuál está dado por
 `\begin{align*}
 	f(x)=\frac{\binom{2}{x}\binom{3}{3-x}}{\binom{5}{3}} \quad \quad \text{ para }x=0,1,2
 \end{align*}`
-Calcule el coeficiente de curtosis, el cual está dado por 
+Calcule el coeficiente de exceso de curtosis, el cual está dado por 
 `\begin{align*}
-	\gamma_{2}= \mathbb{E}\left[\left({\frac{X-\mu}{\sigma}}\right)^{4}\right]={\frac{\mu_{4}}{\sigma^{4}}}={\frac{\mathbb{E}\left[(X-\mu)^{4}\right]}{(\mathbb{E}\left[(X-\mu)^{2}\right])^{4/2}}}
+	\gamma_{2}&= \mathbb{E}\left[\left({\frac{X-\mu}{\sigma}}\right)^{4}\right] -3={\frac{\mu_{4}}{\sigma^{4}}} -3 ={\frac{\mathbb{E}\left[(X-\mu)^{4}\right]}{(\mathbb{E}\left[(X-\mu)^{2}\right])^{4/2}}} -3\\
+\gamma_2&=\frac{\mathbb{E}(X^4)-4\mathbb{E}(X^3)\mathbb{E}(X)+6\mathbb{E}(X^2)\mathbb{E}(X)^2 -3\mathbb{E}(X)^4}{\left[\mathbb{E}(X^2) - \mathbb{E}(X)^2\right]^2} -3
 \end{align*}`
 11. Dado que ya hemos lanzado al aire una moneda balanceada diez veces y no obtuvimos caras, ¿cuál es la probabilidad de que debamos lanzar la moneda al menos dos veces más, para obtener la primera cara? 
 12. Sea `$X$` el número de veces que fallará cierta máquina de control numérico: 1, 2 o 3 veces en un día dado, y `$Y$` denota el número de veces que se llama a un técnico para una emergencia. Suponga que su distribución de probabilidad conjunta estará dada como
@@ -174,7 +176,7 @@ Calcule
 <li> Calcule la covarianza entre $X$ y $Y$. </li>
 </ol>	
 22. La facultad de ciencias económicas de cierta universidad realiza a nivel nacional, una encuesta a 13000 estudiantes de economía y administración de último año, en la cual se observa que el `$70\%$` de los encuestados, no están conformes con su carrera. Si se seleccionan al azar 200 de los encuestados y se les pide su opinión, ¿Cuál es la probabilidad de que más de 60 pero menos de 80 no estén conformes con su carrera?.
-23. Suponga una variable aleatoria discreta `$X$` con función de masa de probabilidad dada 
+23. Suponga en un proceso de producción, el número de fallas que tiene una maquina en un día antes de apagarse, es una variable aleatoria discreta `$X$` con función de densidad de probabilidad dada por 
 `\begin{align*}
 f(x)=\frac{(x^2+4)}{30} \quad \quad x=0,1,2,3  
 \end{align*}`
@@ -246,7 +248,7 @@ Entonces, a partir de ésta, calcule la covarianza de `$6X^2$` y `$3Y^3$`.
 35. Se cree que de los `$10000$` votantes que residen en la ciudad, `$4000$` están a favor de la iniciativa de talar arboles para construir nuevas vías. Se seleccionan al azar `$60$` votantes de los `$10000$` y se les pregunta si están o no de acuerdo con dicha iniciativa. ¿Cuál es la probabilidad de que entre `$30$` y `$40$` votantes, inclusive, estén a favor de dicha iniciativa?
 36. Dos personas, por turnos, tiran un dado imparcial hasta que una de ellas lanza un 6. La persona A tiró primero, la B en segundo, A en tercero y así sucesivamente. En vista de que la persona B tiró el primer `$6$`, ¿cuál es la probabilidad de que B obtenga el primer `$6$` en su segundo tiro (es decir, en el cuarto tiro total)?
 37. En una industria automotríz, se sabe que diez por ciento de los motores fabricados en una línea de ensamble son defectuosos. Si los motores se seleccionan al azar uno a la vez y se prueban, ¿cuál es la probabilidad de que el primer motor no defectuoso sea hallado en el segundo intento?
-38. Luego de una revisión exhaustiva, se encuentra que en promedio las obleas de silicio producidas por un fabricante tienen dos defectos grandes. Si `$Y$` representa al número de defectos por oblea ¿qué proporción de las obleas tiene más de cinco defectos grandes?
+38. Luego de una revisión exhaustiva, se encuentra que en promedio una oblea de silicio producidas por un fabricante tienen dos defectos grandes. Si `$X$` representa al número de defectos que posee una oblea, ¿Cuál es la probabilidad de que una oblea de silicio tenga más de cinco defectos grandes?
 39. Un proveedor de queroseno tiene un tanque de `$150$` galones que se llena al empezar cada semana. Su demanda semanal muestra un comportamiento de frecuencia relativo que aumenta de manera continua hasta `$100$` galones y luego se nivela entre `$100$` y `$150$` galones. Si `$Y$` denota la demanda semanal en cientos de galones, la frecuencia relativa de demanda puede ser modelada por
 `\begin{align*}
 	f(y)=\begin{cases}y & 0\leq y\leq 1 \\1 & 1<y\leq 1.5 \\0 & \text{en otro caso}\end{cases} 

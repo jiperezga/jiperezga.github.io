@@ -196,7 +196,7 @@ kable_styling("striped", full_width = F)
 Encuentre el coeficiente de asimetría, el cuál está dado por 
 `\begin{align*}
 \gamma_{1}&= \mathbb{E}\left[\left({\frac{X-\mu}{\sigma}}\right)^{3}\right]={\frac{\mu_{3}}{\sigma^{3}}}={\frac{\mathbb{E}\left[(X-\mu)^{3}\right]}{(\mathbb{E}\left[(X-\mu)^{2}\right])^{3/2}}}\\
-\gamma_{1}&=\frac{\mathbb{E}(X^3)-3\mathbb{E}(X^2)\mathbb{E}(X)+2\mathbb{E}(X)^3}{Sd(X)^3}
+\gamma_{1}&=\frac{\mathbb{E}(X^3)-3\mathbb{E}(X^2)\mathbb{E}(X)+2\mathbb{E}(X)^3}{[\mathbb{E}(X^2)- \mathbb{E}(X)^2)]^{3/2}}
 \end{align*}`
 22. A partir de la siguiente función de masa de probabilidad 
 `\begin{align*}
@@ -205,7 +205,7 @@ Encuentre el coeficiente de asimetría, el cuál está dado por
 Calcule el coeficiente de exceso de curtosis, el cual está dado por 
 `\begin{align*}
 	\gamma_{2}&= \mathbb{E}\left[\left({\frac{X-\mu}{\sigma}}\right)^{4}\right] -3={\frac{\mu_{4}}{\sigma^{4}}} -3 ={\frac{\mathbb{E}\left[(X-\mu)^{4}\right]}{(\mathbb{E}\left[(X-\mu)^{2}\right])^{4/2}}} -3\\
-\gamma_2&=\frac{\mathbb{E}(Y^4)-4\mathbb{E}(Y^3)\mathbb{E}(Y)+6\mathbb{E}(Y^2)\mathbb{E}(Y)^2 -3\mathbb{E}(Y)^4}{Sd(Y)^4} -3
+\gamma_2&=\frac{\mathbb{E}(X^4)-4\mathbb{E}(X^3)\mathbb{E}(X)+6\mathbb{E}(X^2)\mathbb{E}(X)^2 -3\mathbb{E}(X)^4}{[\mathbb{E}(X^2) - \mathbb{E}(X)^2]^2} -3
 \end{align*}`
 23. Considere la siguiente función de densidad de probabilidad
 `\begin{align*}
