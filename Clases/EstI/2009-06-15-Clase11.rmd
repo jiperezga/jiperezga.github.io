@@ -71,7 +71,7 @@ Si la probabilidad de éxito de un experimento es `$p$`, entonces se tendrá que
 p(x) = p^x(1-p)^{1-x} \quad \quad x=0,1
 \end{align*}`
 
-#### Teorema
+#### Media y Varianza Bernoulli
 Si `$X\sim Be(p)$`, entonces se puede probar que la media y la varianza de la variable aleatoria `$X$` están dadas por 
 `\begin{align*}
 \mathbb{E}(X)=p \quad \quad Var(X)=p(1-p)
@@ -133,7 +133,7 @@ f(x) = \left(\begin{array}{c}n\\ x\end{array}\right)p^x(1-p)^{n-x} \quad \quad x
 
 **Nota:** Esta distribución es usada cuando se realiza muestreo **con reemplazo** o en poblaciones infinitas en donde es posible **suponer que la probabilidad de éxito `$p$` es la misma** en cada ensayo Bernoulli.
 
-#### Teorema
+#### Media y Varianza Binomial
 Si `$X\sim b(n,p)$`, entonces se puede probar que la media y varianza de la variable aleatoria `$X$` están dadas por
 `\begin{align*}
 \mathbb{E}(X)=np \quad \quad Var(X)=np(1-p)
@@ -213,7 +213,7 @@ con `$x$` un entero que satisface la condición `$\max\{0, M-(N-n)\} \leq x \leq
 
 **Nota:** Esta distribución es usada cuando se realiza muestreo **sin reemplazo**, en poblaciones finitas donde hay `$M$` éxitos de un total de `$N$` objetos, de los cuales se seleccionan `$n$` objetos a la vez.
 
-#### Teorema
+#### Media y Varianza Hipergeométrica
 Si `$X\sim h(N,M,n)$`, entonces se puede probar que la media y varianza de la variable aleatoria `$X$` están dadas por
 `\begin{align*}
 \mathbb{E}(X)=n\frac{M}{N} \quad \quad Var(X)=\left(\frac{N-n}{N-1}\right)\left(\frac{M}{N}\right)\left(1-\frac{M}{N}\right)
@@ -316,7 +316,7 @@ Sea  `$X$` el número de ensayos necesarios para generar un éxito (`$k=1$`), en
 p(x) = p(1-p)^{x-1} \quad \quad x = 1,2,\ldots
 \end{align*}`
 
-#### Teorema
+#### Media y Varianza Geométrica
 Si `$X\sim g(p)$`, entonces se puede probar que la media y varianza de la variable aleatoria `$X$` están dadas por
 `\begin{align*}
 \mathbb{E}(X)=\frac{1}{p} \quad \quad Var(X)=\frac{1-p}{p^2}
