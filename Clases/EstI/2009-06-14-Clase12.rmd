@@ -53,7 +53,7 @@ Sea `$X$` el número de ensayos necesarios para generar `$k$` éxitos en un expe
 p(x) = \left(\begin{array}{c}x-1\\ k-1\end{array}\right)p^k(1-p)^{x-k} \quad \quad x=k, k+1, \ldots
 \end{align*}`
 
-#### Teorema
+#### Media y Varianza Binomial Negativa
 Si `$X\sim b^*(k,p)$`, entonces se puede probar que la media y varianza de la variable aleatoria `$X$` están dadas por
 `\begin{align*}
 \mathbb{E}(X)=\frac{k}{p} \quad \quad Var(X)=k\frac{(1-p)}{p^2}
@@ -157,7 +157,7 @@ p(x) = \frac{e^{-\lambda}\lambda^x}{x!} \quad \quad x=0,1,\ldots
 \end{align*}`
 donde `$\lambda$` es el parámetro de la distribución y representa el número promedio de sucesos por unidad de tiempo o región específica.
 
-#### Teorema
+#### Media y Varianza Poisson
 Si `$X\sim P(\lambda)$` entonces se puede probar que la media y varianza de la variable aleatoria `$X$` están dadas por
 `\begin{align*}
 \mathbb{E}(X)=\lambda \quad \quad Var(X)=\lambda
@@ -251,19 +251,19 @@ De lo anterior se tiene que, en el tramo de $5$ kilómetros de carretera, se esp
 </main>
 
 
-### Distribución Uniforme discreta
+### Distribución Uniforme Discreta
 Se dice que la variable aleatoria `$X$` tiene una distribución uniforme discreta en los enteros `$a, a+1,\ldots, b$`, si su distribución de probabilidad es de la forma
 `\begin{align*}
 p(x) = \frac{1}{b-a+1} \quad \quad x = a,a+1, \ldots, b
 \end{align*}`
 
-#### Teorema
+#### Media y Varianza Uniforme Discreta
 Si `$X\sim Unif\{a, a+1,\ldots,b\}$` entonces se puede probar que la media y varianza de la variable aleatoria `$X$` están dadas por
 `\begin{align*}
 \mathbb{E}(X)=\frac{a+b}{2} \quad \quad Var(X)=\frac{(b-a+1)^2-1}{12}
 \end{align*}`
 
-#### Teorema
+#### Distribución Acumulada Uniforme Discreta
 Si `$X\sim Unif\{a, a+1,\ldots,b\}$` entonces se puede probar que la función de distribución acumulada de la variable aleatoria `$X$` es de la forma
 `\begin{align*}
 F(x) = \frac{x-a+1}{b-a+1} \quad \quad & a\leq x\leq b 
