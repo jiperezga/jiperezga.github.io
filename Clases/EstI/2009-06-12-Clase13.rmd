@@ -176,7 +176,7 @@ La función gamma se define como
 
 #### Propiedades Función Gamma
 <ol type = "a">
-<li> $\Gamma(\alpha) = (\alpha-1)\Gamma(\alpha)$, para todo $\alpha>0$ </li>
+<li> $\Gamma(\alpha) = (\alpha-1)\Gamma(\alpha -1)$, para todo $\alpha>0$ </li>
 <li> $\Gamma(n) = (n-1)!$, siendo $n$ un entero positivo. </li>
 <li> $\Gamma(1/2) = \sqrt{\pi}$ </li>
 </ol>
@@ -287,7 +287,7 @@ Si `$X\sim Gamma(\alpha,\beta)$`, entonces se puede probar que la media y varian
 <button id="Hide3" class="btn btn-info">Ocultar Ejercicio</button>
 <main id="botoncito3"> 
 <h3 data-toc-skip> Ejercicio </h3> 
-<p> Suponga se realiza un estudio sobre el tiempo de transferencia de datos de un sistema de red informática, en milisegundos. Si se encuentra que el tiempo de transferencia se distribuye gamma con media $37.5_{ms}$ y desviación estándar de $21.36196_{ms}$
+<p> Suponga que se realiza un estudio sobre el tiempo de transferencia de datos de un sistema de red informática, en milisegundos. Si se encuentra que el tiempo de transferencia se distribuye gamma con media $37.5_{ms}$ y desviación estándar de $21.36196_{ms}$
 </p>
 <ol>
 <li> Cuales son los valores de los parámetros de la distribución Gamma?
@@ -546,7 +546,6 @@ $$\begin{align*}
                     &= 0.082085
 \end{align*}$$
 
-
 Y por tanto se tendrá una probabilidad de $8.21\%$ de que la próxima persona que llega al cajero de Bancolombia tarde más de $4$ minutos, dado que ya han pasado $2$ minutos y aún no ha llegado ninguna persona.
 </li>
 </ol>
@@ -562,9 +561,28 @@ Suponga que el número de eventos que ocurren en un intervalo de tiempo `$t$`, t
 <p> Suponga que se realiza un estudio en un Call Center para observar el número de llamadas que entran al Call Center de Bancolombia por minuto, encontrando que en promedio entran al Call Center $2$ llamadas por minuto. Basados en lo anterior, cuál es la probabilidad de que pase más de $5$ minutos en entrar la próxima llamada al Call Center?
 </p>
 
-
 <h3 data-toc-skip> Solución </h3> 
-<p>
+<p> En el enunciado de este ejercicio nos hablan sobre el número de llamadas que entran a un Call Center por minuto, lo cual puede interpretarse como una distribución Poisson, debido a que nos hablan del número de sucesos en un intervalo de tiempo. Además nos dicen que el número promedio de llamadas que entran al Call Center posee una media de $2$ llamadas por minuto, por lo cual se tendrá que 
+$$\begin{align*}
+\mathbb{E}(X) = \lambda = 2_{llamadas/min}
+\end{align*}$$
+siendo $X$ el número de llamadas que entran al Call Center en un intervalo de $1$ minuto.<br>
+<br>
+Ahora, cuando observamos la probabilidad que nos piden, se observa que en lugar de preguntarnos por el número de sucesos que ocurren en un intervalo de tiempo, nos piden la probabilidad de que pase más de $5_{min}$ hasta que entre al Call Center la próxima llamada, esto es
+$$\begin{align*}
+\mathbb{P}(Y>5)
+\end{align*}$$
+en donde $Y$ representaría el tiempo que pasa en un Call Center entre llamadas sucesivas, la cual podría pensarse que posee una distribución Exponencial, debido a que se pregunta por una unidad de tiempo hasta que ocurra un evento.<br>
+<br>
+Y por tanto, para calcular la probabilidad requeriremos encontrar el parámetro $\beta$ asociado a la distribución Exponencial, en donde, dada la relación que hay entre la distribución Poisson y la distribución Exponencial, nos permitirá calcular mediante el empleo de una regla de $3$, encontrar el parámetro $\beta$, tal que
+$$\begin{align*}
+5_{llamadas} - 1_{min} \\
+1_{llamada}
+\end{align*}$$
+
+
+
+
 </p>
 </main>
 
