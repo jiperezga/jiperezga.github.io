@@ -558,7 +558,7 @@ Suponga que el número de eventos que ocurren en un intervalo de tiempo `$t$`, t
 <button id="Hide6" class="btn btn-info">Ocultar Ejercicio 1</button>
 <main id="botoncito6"> 
 <h3 data-toc-skip> Ejercicio </h3> 
-<p> Suponga que se realiza un estudio en un Call Center para observar el número de llamadas que entran al Call Center de Bancolombia por minuto, encontrando que en promedio entran al Call Center $2$ llamadas por minuto. Basados en lo anterior, cuál es la probabilidad de que pase más de $5$ minutos en entrar la próxima llamada al Call Center?
+<p> Suponga que se realiza un estudio en un Call Center para observar el número de llamadas que entran al Call Center de Bancolombia por minuto, encontrando que en promedio entran al Call Center $2$ llamadas por minuto. Basados en lo anterior, cuál es la probabilidad de que pase más de $3$ minutos en entrar la próxima llamada al Call Center?
 </p>
 
 <h3 data-toc-skip> Solución </h3> 
@@ -568,21 +568,31 @@ $$\begin{align*}
 \end{align*}$$
 siendo $X$ el número de llamadas que entran al Call Center en un intervalo de $1$ minuto.<br>
 <br>
-Ahora, cuando observamos la probabilidad que nos piden, se observa que en lugar de preguntarnos por el número de sucesos que ocurren en un intervalo de tiempo, nos piden la probabilidad de que pase más de $5_{min}$ hasta que entre al Call Center la próxima llamada, esto es
+Ahora, cuando observamos la probabilidad que nos piden, se observa que en lugar de preguntarnos por el número de sucesos que ocurren en un intervalo de tiempo, nos piden la probabilidad de que pase más de $3_{min}$ hasta que entre al Call Center la próxima llamada, esto es
 $$\begin{align*}
-\mathbb{P}(Y>5)
+\mathbb{P}(Y>3)
 \end{align*}$$
 en donde $Y$ representaría el tiempo que pasa en un Call Center entre llamadas sucesivas, la cual podría pensarse que posee una distribución Exponencial, debido a que se pregunta por una unidad de tiempo hasta que ocurra un evento.<br>
 <br>
-Y por tanto, para calcular la probabilidad requeriremos encontrar el parámetro $\beta$ asociado a la distribución Exponencial, en donde, dada la relación que hay entre la distribución Poisson y la distribución Exponencial, nos permitirá calcular mediante el empleo de una regla de $3$, encontrar el parámetro $\beta$, tal que
+Y por tanto, para calcular la probabilidad requeriremos encontrar el parámetro $\beta$ asociado a la distribución Exponencial, en donde, dada la relación que hay entre la distribución Poisson y la distribución Exponencial, nos permitirá calcular mediante el empleo de una regla de $3$, el valor del parámetro $\beta$, tal que
 $$\begin{align*}
-5_{llamadas} - 1_{min} \\
-1_{llamada}
+2_{llamadas} &- 1_{min} \\
+1_{llamada} &- \beta_{min}
 \end{align*}$$
-
-
-
-
+entonces al multiplicar en cruz, tendremos que
+$$\begin{align*}
+\beta &= \frac{1_{min}\times 1_{llamada}}{2_{llamadas}} \\
+\beta &= \frac{1}{2}_{min}
+\end{align*}$$
+Ahora, al conocer el valor del parámetro de la distribución Exponencial, se procede al cálculo de la probabilidad de interés, tal que
+$$\begin{align*}
+\mathbb{P}(Y>3) &= 1 - \mathbb{P}(Y\leq3) \\
+                &= 1 - F(3) \\
+                &= 1 - \left(1 - e^{-\frac{3}{1/2}}\right)\\
+                &= e^{-6}\\
+                &= 0.002478752
+\end{align*}$$
+Encontrando que, la probabilidad de que pasen más de $3$ minutos hasta que entre la próxima llamada al Call Center, es de $0.24\%$.
 </p>
 </main>
 
@@ -590,11 +600,38 @@ $$\begin{align*}
 <button id="Hide7" class="btn btn-info">Ocultar Ejercicio 2</button>
 <main id="botoncito7"> 
 <h3 data-toc-skip> Ejercicio </h3> 
-<p> En un estudio realizado en la ciudad de Medellín, se encontró que el número promedio de automóviles que exceden el límite de velocidad establecido para transitar por la avenida regional en un intervalo de media hora es de $12.3$ automóviles. Basados en lo anterior, cual es la probabilidad de que transcurra más de $10$ minutos hasta detectar el próximo automovil que exceda el límite de velocidad por la avenida regional.
+<p> En un estudio realizado en la ciudad de Medellín, se encontró que el tiempo promedio que transcurre para que un automóvil exceda los limites de velocidad establecidos para transitar en la avenida regional es de $10$ minutos. Basados en lo anterior, cual es la probabilidad de que en un intervalo de media hora, se detecte un máximo de $6$ pero mínimo de $3$ automóviles que exceden el límite de velocidad por la avenida regional.
 </p>
 
-
 <h3 data-toc-skip> Solución </h3> 
-<p>
+<p> En este punto estamos interesados en calcular la probabilidad de que en un intervalo de $30$ minutos, se detecten entre $3$ y $6$ automóviles, inclusive, que excedan los límites de velocidad establecidos para transitar en la avenida regional, lo cual está dado por
+$$\begin{align*}
+\mathbb{P}(3 \leq X \leq 6)
+\end{align*}$$
+Siendo $X$ el número de automóviles que exceden los límites de velocidad en un intervalo de $30$ minutos, por lo cual puede asumirse que $X$ sigue una distribución Poisson.<br>
+<br>
+Ahora, del enunciado nos mencionan que el tiempo promedio que transcurre hasta que un automóvil exceda los límites de velocidad es de $10$ minutos, en donde, al hablarnos del tiempo hasta que ocurra un solo suceso, podría asumirse que se trata de una variable aleatoria $Y$ con distribución de probabilidad Exponencial con parámetro 
+$$\begin{align*}
+\mathbb{E}(Y) = \beta=10_{min}
+\end{align*}$$
+
+Entonces para poder realizar el cálculo de la probabilida de interés, podemos emplear la relación existente entre la distribución Poisson y la distribución Exponencial, mediante el empleo de una regla de $3$, tal que
+$$\begin{align*}
+10_{min} &- 1_{automóvil} \\
+30_{min} &- \lambda_{automóviles}
+\end{align*}$$
+
+en donde, al multiplicar en cruz, tendremos que
+$$\begin{align*}
+\lambda &= \frac{30_{min}\times 1_{automóvil}}{10_{min}} \\
+\lambda &= 3_{automóviles}
+\end{align*}$$
+Por tanto, al conocer el valor del parámetro de la distribución Poisson, se procede al cálculo de la probabilidad de interés, tal que
+$$\begin{align*}
+\mathbb{P}(3 \leq X \leq 6) &= \sum_{x=3}^{6} \frac{e^{-3} 3^{x}}{x!} \\
+                            &= 0.22404181 + 0.16803136 + 0.10081881 + 0.05040941 \\
+                            &= 0.5433014
+\end{align*}$$
+Encontrando una probabilidad del $54.33\%$ de que en un intervalo de $30$ minutos se detecten mínimo $3$ pero máximo $6$ automóviles que excedan los límites de velocidad establecidos para transitar en la avenida regional.
 </p>
 </main>
