@@ -175,7 +175,7 @@ Construya un intervalo de confianza del `$95\%$` para el contenido promedio de t
 </table>
 </pre>
 <ol type ="a">
-  <li>Construya un intervalo de confianza de $95\%$ para el número medio de gramos de acetanilida que se puede recuperar de $4.85$ gramos de anilina.
+  <li>Construya un intervalo de confianza de $95\%$ para el número medio de gramos de acetanilida que se puede recuperar de $4.85$ gramos de anilina. Suponga que los gramos de acetanilida que se pueden recuperar tiene un comportamiento aproximadamente normal.
   </li>
   <li>Construya un intervalo de confianza de $90\%$ para la proporción de experimentos que recuperan una cantidad de acetanilida superior a $3.82$ gramos, al emplear $4.85$ gramos de anilina.
   </li>
