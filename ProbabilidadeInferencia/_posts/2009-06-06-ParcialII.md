@@ -42,13 +42,13 @@ Recomendación
 Luego de programar la solución de los puntos del parcial, me di cuenta
 de que el primer punto puede ser el más tedioso de solucionar, debido a
 que dependiendo de las características de este punto, tal vez deban
-verificar si las varianzas son o no iguales, con una distribución \(F\),
-además de tener que realizar el cálculo de \(S_p\) o \(\nu\) en dicho
+verificar si las varianzas son o no iguales, con una distribución `$F$`,
+además de tener que realizar el cálculo de `$S_p$` o `$\nu$` en dicho
 caso, lo cual puede tomarles mucho tiempo. Es por ello, que les
 **aconsejo tratar de dejar para el final** el primer punto.
 
 -   [Arcila Galvis Faber
-    Esteban](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/Q1017276234.pdf){:target="\_blank"}
+    Esteban](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1017276234.pdf){:target="\_blank"}
 -   [Barrientos Cortés Susana
     Eugenia](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1152687823.pdf){:target="\_blank"}
 -   [Bedoya Carvajal Jhon
