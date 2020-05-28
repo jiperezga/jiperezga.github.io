@@ -175,7 +175,7 @@ Calcule
 <li> Calcule la varianza de la variable aleatoria $Y=2X+3$. </li>
 <li> Calcule la covarianza entre $X$ y $Y$. </li>
 </ol>	
-22. La facultad de ciencias económicas de cierta universidad realiza a nivel nacional, una encuesta a 13000 estudiantes de economía y administración de último año, en la cual se observa que el `$70\%$` de los encuestados, no están conformes con su carrera. Si se seleccionan al azar 200 de los encuestados y se les pide su opinión, ¿Cuál es la probabilidad de que más de 60 pero menos de 80 no estén conformes con su carrera?.
+22. La facultad de ciencias económicas de cierta universidad realiza a nivel nacional, una encuesta a 13000 estudiantes de economía y administración de último año, en la cual se observa que el `$70\%$` de los encuestados, no están conformes con su carrera. Si se seleccionan al azar 200 de los encuestados y se les pide su opinión, ¿Cuál es la probabilidad de que más de 60 pero más de 80 no estén conformes con su carrera?.
 23. Suponga en un proceso de producción, el número de fallas que tiene una maquina en un día antes de apagarse, es una variable aleatoria discreta `$X$` con función de densidad de probabilidad dada por 
 `\begin{align*}
 f(x)=\frac{(x^2+4)}{30} \quad \quad x=0,1,2,3  
@@ -185,7 +185,7 @@ f(x)=\frac{(x^2+4)}{30} \quad \quad x=0,1,2,3
 <li> Calcule la desviación estándar de la variable aleatoria $X$. </li>
 <li> Encuentre la probabilidad de que la variable aleatoria $X$, se encuentre a lo más a 1.5 desviaciones estándar de su media y compare el resultado obtenido con el teorema de Chebyshev. </li>
 </ol>
-24. De una población de consumidores, `$60%$` tienen fama de preferir una marca `$A$` de pasta dental. Si se entrevista a un grupo de consumidores escogidos al azar, ¿cuál es la probabilidad de que exactamente cinco personas tengan que ser entrevistadas para hallar el primer consumidor que prefiera la marca `$A$` de pasta dental? ¿Al menos cinco personas? 
+24. De una población de consumidores, `$60\%$` tienen fama de preferir una marca `$A$` de pasta dental. Si se entrevista a un grupo de consumidores escogidos al azar, ¿cuál es la probabilidad de que exactamente cinco personas tengan que ser entrevistadas para hallar el primer consumidor que prefiera la marca `$A$` de pasta dental? ¿Al menos cinco personas? 
 25. Dos estudiantes apuestan sobre el número de ejercicios correctos realizados por el profesor de matemáticas hasta que cometa un error. Si la probabilidad de que el profesor cometar una error en un ejercicio es de `$0.08$`.
 <ol type ="a">
 <li> ¿Cuál es el promedio del número de ejercicios realizados por el profesor hasta cometer un error?. </li>
