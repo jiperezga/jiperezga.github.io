@@ -158,7 +158,7 @@ $$</li>
 <li> Determine la media y desviación estándar de la duración de un cojinete. </li>
 <li> La función de riesgo se definió en el ejercicio 4. ¿Cuál es el riesgo en t = 2000 horas?. </li>
 </ol>
-13. El periodo de vida de una broca en una operación mecánica, en horas, tiene una distribución de Weibull con `$\alpha = 1/2$` y `$\beta = 35$`. Calcule la probabilidad de que la broca falle antes de $10$ horas de uso.
+13. El periodo de vida de una broca en una operación mecánica, en horas, tiene una distribución de Weibull con `$\alpha = 1/2$` y `$\beta = 35$`. Calcule la probabilidad de que la broca falle antes de `$10$` horas de uso.
 14. El número de automóviles que llegan a cierta intersección por minuto tiene una distribución de Poisson con una media de `$3$`. Existe interés por el tiempo que transcurre antes de que `$4$` automóviles aparezcan en la intersección.
 <ol type ="a">
 <li> Cuál es la probabilidad de que más de $4$ automóviles aparezcan en la intersección durante cualquier minuto determinado. </li>

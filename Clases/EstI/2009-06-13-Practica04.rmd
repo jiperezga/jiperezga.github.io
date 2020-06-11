@@ -137,7 +137,7 @@ Calcule el `$Corr(X,Y^2)$`.
 <li> Determine la esperanza condicional $\mathbb{E}(Y | X)$ </li>
 <li> Determine la esperanza condicional $\mathbb{E}(X | Y)$ </li>
 </ol>	
-15. El número de problemas que puede presentar la impresora del centro de documentación de la facultad al mes, es una variable aleatoria uniforme en el conjunto cerrado de 1 a 6 errores.
+15. El número de problemas que puede presentar la impresora del centro de documentación de la facultad al mes, es una variable aleatoria uniforme en el conjunto cerrado de `$1$` a `$6$` errores.
 <ol type ="a">
 <li> ¿Cuál es el número esperado de fallas que tenga la impresora? </li>
 <li> Si la impresora ya ha presentado al menos $2$ fallas, ¿Cuál es la probabilidad de que presente exactamente $3$? </li>
@@ -246,7 +246,7 @@ Entonces, a partir de ésta, calcule la covarianza de `$6X^2$` y `$3Y^3$`.
 <li> Calcule $\mathbb{E}(X |Y > \frac{1}{2}, 1 < Z < 2)$ </li>
 </ol>	
 35. Se cree que de los `$10000$` votantes que residen en la ciudad, `$4000$` están a favor de la iniciativa de talar arboles para construir nuevas vías. Se seleccionan al azar `$60$` votantes de los `$10000$` y se les pregunta si están o no de acuerdo con dicha iniciativa. ¿Cuál es la probabilidad de que entre `$30$` y `$40$` votantes, inclusive, estén a favor de dicha iniciativa?
-36. Dos personas, por turnos, tiran un dado imparcial hasta que una de ellas lanza un 6. La persona A tiró primero, la B en segundo, A en tercero y así sucesivamente. En vista de que la persona B tiró el primer `$6$`, ¿cuál es la probabilidad de que B obtenga el primer `$6$` en su segundo tiro (es decir, en el cuarto tiro total)?
+36. Dos personas, por turnos, tiran un dado imparcial hasta que una de ellas lanza un 6. La persona `$A$` tiró primero, la `$B$` en segundo, `$A$` en tercero y así sucesivamente. En vista de que la persona `$B$` tiró el primer `$6$`, ¿cuál es la probabilidad de que `$B$` obtenga el primer `$6$` en su segundo tiro (es decir, en el cuarto tiro total)?
 37. En una industria automotríz, se sabe que diez por ciento de los motores fabricados en una línea de ensamble son defectuosos. Si los motores se seleccionan al azar uno a la vez y se prueban, ¿cuál es la probabilidad de que el primer motor no defectuoso sea hallado en el segundo intento?
 38. Luego de una revisión exhaustiva, se encuentra que en promedio una oblea de silicio producidas por un fabricante tienen dos defectos grandes. Si `$X$` representa al número de defectos que posee una oblea, ¿Cuál es la probabilidad de que una oblea de silicio tenga más de cinco defectos grandes?
 39. Un proveedor de queroseno tiene un tanque de `$150$` galones que se llena al empezar cada semana. Su demanda semanal muestra un comportamiento de frecuencia relativo que aumenta de manera continua hasta `$100$` galones y luego se nivela entre `$100$` y `$150$` galones. Si `$Y$` denota la demanda semanal en cientos de galones, la frecuencia relativa de demanda puede ser modelada por
