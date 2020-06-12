@@ -52,7 +52,7 @@ opts_chunk$set(echo=TRUE,
 ```{r echo=FALSE}
 library(kableExtra)
 tabla1 <- data.frame(c("Años, $x$", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"),
-              c("$f(x)$", "0.03", "0.05", "0.07", "0.10", "0.14", "0.20", "0.18", "0.12", "0.07", "0.04"))
+              c("$p(x)$", "0.03", "0.05", "0.07", "0.10", "0.14", "0.20", "0.18", "0.12", "0.07", "0.04"))
 tabla1 <- data.frame(t(tabla1))
 
 kable(tabla1, align = c("c", "l", "l", "l", "l"),
@@ -81,8 +81,8 @@ kable_styling("striped", full_width = F)
 </ol>
 4. Suponga que el número de llamadas telefónicas que entran a un conmutador  particular siguen un proceso de Poisson con un promedio de `$5$` llamadas entrantes por minuto. 
 <ol type ="a">
-<li>¿Cuál es la probabilidad de que transcurra hasta un minuto en el momento en que han entrado $1$ llamada al conmutador? </li>
-<li>¿Cuál es la probabilidad de que transcurra hasta un minuto en el momento en que han entrado $3$ llamadas al conmutador?<li>
+<li>¿Cuál es la probabilidad de que transcurra hasta un minuto en el momento en que ha entrado $1$ llamada al conmutador? </li>
+<li>¿Cuál es la probabilidad de que transcurra hasta un minuto en el momento en que han entrado $3$ llamadas al conmutador?</li>
 </ol>
 5. Sea `$X$` una variable aleatoria con función de masa de probabilidad geométrica dada por 
 `\begin{align*}
@@ -107,7 +107,7 @@ Calcule el segundo momento central.
 8. Demuestre que el `$r$`-ésimo momento respecto al origen de la distribución gamma es
 `\begin{align*}
 	\mu'_r=\frac{\beta^r\Gamma(\alpha + r)}{\Gamma(\alpha)}
-\end{align*}
+\end{align*}`
 9. Luego de varios semestres, un profesor de estadística encuentra que los resultados que obtienen los estudiantes en el examen final de estadística, tienen una distribución normal con media `$3.2$` y varianza `$0.1225$`. Si un estudiante necesita al menos un `$4$` para que la nota acumulada le quede sobre `$2.96$`, cuál es la probabilidad de que luego de presentar el parcial gane la materia?
 10. Suponga una variable aleatoria `$X$` la cual posee una función de masa de probabilidad uniforme discreta, de la forma
 `\begin{align*}
@@ -149,7 +149,7 @@ Calcule de forma exacta y mediante aproximación a una distribución normal la `
 <li> ¿Cuál es la probabilidad de que el próximo cliente en llegar donde Pastora tarde al menos $20$ minutos? </li>
 <li> ¿Cuál es la probabilidad de que lleguen donde Pastora en menos $50$ minutos $3$ clientes, si se sabe que han transcurrido $24$ minutos y aún no llegan los $3$ clientes? </li>
 </ol>	
-18. Suponga una variable aleatoria $X$ con función de distribución de probabilidad exponencial dada por
+18. Suponga una variable aleatoria `$X$` con función de distribución de probabilidad exponencial dada por
 `\begin{align*}
 	f(x) = \lambda e^{-\lambda x} \text{  para  } x>0, \lambda>0 
 \end{align*}`
