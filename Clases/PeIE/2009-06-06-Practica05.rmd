@@ -1,0 +1,156 @@
+---
+layout: post
+title: "Práctica 05"
+main-class: 'practica'
+permalink: /ProbabilidadeInferencia/PeIE:title.html
+tags:
+
+introduction: |
+  Ejercicio sobre: <br>
+  - Errores tipo I y tipo II <br>
+  - Pruebas de hipótesis <br>
+  - Pruebas de bondad de ajuste
+              
+header-includes:
+   - \usepackage{amsmath,amssymb,amsthm,amsfonts}
+   - \usepackage[sectionbib]{natbib}
+   - \usepackage[hidelinks]{hyperref}
+output:
+  md_document:
+    variant: markdown_strict+backtick_code_blocks+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash
+    preserve_yaml: TRUE
+always_allow_html: yes   
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding,
+  output_dir = "../../ProbabilidadeInferencia/_posts/", output_format = "all"  ) })
+bibliography: "../../referencias.bib"
+csl: "../../apa.csl"
+---
+
+```{r knitr_init, echo=FALSE, cache=FALSE}
+library(knitr)
+## Global options
+opts_chunk$set(echo=TRUE,
+               cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE,
+               fig.path = paste0("../../ProbabilidadeInferencia/images/", "Práctica05"),
+               cache.path = "../../ProbabilidadeInferencia/cache/",
+               cache = FALSE)
+
+```
+
+## Lista de ejercicios
+
+1. Se realiza un estudio para determinar si los habitantes de dos islas ubicadas en el Pacífico poseen o no la misma ascendencia racial, y para ello un antropólogo decide emplear los índices cefálicos de `$12$` hombres adultos de la isla `$A$` y `$18$` de la isla `$B$` obteniendo los sigiuentes resultados
+<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -4rem; margin-top: -2rem; font-size: 98%;">
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+  <tr>
+    <td colspan="10" style="text-align:center;font-weight: bold">Isla A</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>78.96</td>
+    <td>79.30</td>
+    <td>78.79</td>
+    <td>75.59</td>
+    <td>74.52</td>
+    <td>75.97</td>
+    <td>74.69</td>
+    <td>73.31</td>
+    <td>76.78</td>
+    <td>80.86</td>
+  </tr>
+  <tr>
+    <td>81.09</td>
+    <td>76.94</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
+</pre>
+<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -4rem; margin-top: -2rem; font-size: 98%;">
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+  <tr>
+    <td colspan="10" style="text-align:center;font-weight: bold">Isla B</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>72.27</td>
+    <td>71.40</td>
+    <td>74.25</td>
+    <td>73.55</td>
+    <td>73.87</td>
+    <td>71.17</td>
+    <td>73.38</td>
+    <td>72.39</td>
+    <td>72.09</td>
+    <td>73.81</td>
+  </tr>
+  <tr>
+    <td>68.23</td>
+    <td>71.57</td>
+    <td>72.89</td>
+    <td>74.89</td>
+    <td>73.46</td>
+    <td>76.79</td>
+    <td>70.98</td>
+    <td>69.58</td>
+    <td></td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
+</pre>
+Mediante el empleo de un nivel de significancia del `$8\%$` pruebe si es razonable suponer que las dos poblaciones poseen en promedio índices cefálicos similares.
+2. Se realiza un estudio en un río para observar la concentración de zinc que éste posee, y para ello se reaiza una muestra aleatoria de `$36$` sitios diferentes y se encuentra que la concentración promedio de zinc es de `$2.8$` gramos po mililitro con una desviación estándar de `$0.6$` gramos por mililitro. Si la función de probabilidad no es conocida, pero se sabe su desviación estándar es de `$0.3$` gramos por mililitro, pruebe con un nivel de confianza del `$5\%$` si la concentración media de zinc es de al menos `$3$` gramos por mililitro.
+3. Un botánico desea probar la hipótesis de que el diámetro promedio de las flores de una planta en particular es `$9.6_{cm}$`, y para probar ésto, decide tomar una muestra aleatoria de `$80$` flores y no rechazar la hipótesis si la media de la muestra cae entre `$9.3_{cm}$` y `$9.9_{cm}$`; si la media de esta muestra cae fuera de este intervalo, el botánico rechazará tal hipótesis. ¿Qué decisión deberá tomará el botánico y qué situación estará ocurriendo si
+<ol type ="a">
+  <li> obtiene una media muestral de $10.2_{cm}$ y la verdadera media $\mu=9.6_{cm}$
+  </li>
+  <li> obtiene una media muestral de $10.2_{cm}$ y la verdadera media $\mu=9.8cm$
+  </li>
+  <li> obtiene una media muestral de $9.2_{cm}$ y la verdadera media $\mu=9.6cm$
+  </li>
+  <li> obtiene una media muestral de $9.2_{cm}$ y la verdadera media $\mu=9.8cm$
+  </li> 
+  <li>Calcule la probabilidad de cometer Error Tipo I.
+  </li>
+  <li>Calcule la probabilidad de cometer Error Tipo II, si la verdadera media $\mu=9.8cm$.
+  </li>
+</ol>
+4. Suponga que el contenido de ácido sulfúrico, en litros, de una muestra aleatoria de `$7$` contenedores similares es de 
+`\begin{align*}
+9.8 \quad 10.2 \quad 10.4 \quad 9.8 \quad 10.0 \quad 10.2 \quad 9.6
+\end{align*}`
+Emplee el P-valor para verificar si hay evidencia sobre que el contenido promedio de todos los contenedores de ácido sulfúrico es de más de `$10$` litros.
+5. Para un experimento de pruebas psicológicas se seleccionan al azar `$25$` sujetos de prueba y se les mide sus tiempos de reacción, en segundos, ante un estímulo particular, obteniendo que el tiempo promedio de reacción de los sujetos es de `$6.2$` segundos con una desviación estándar de `$1.3$` segundos. La experiencia sugiere que la varianza en los tiempos de reacción ante los diferentes tipos de estímulos es de `$4_{s^2}$` y que la distribución de probabilidad para los tiempos de reacción es aproximadamente normal. Basado en lo anterior, emplee un nivel de significancia del `$98\%$` para probar si el tiempo medio de reacción de todos los individuos es como máximo de `$5.5$` segundos.
+6. El gerente de una gran tabacalera afirma en una conferencia de prensa que el contenido promedio de alquitrán de los cigarrillos que produce es de `$14$` mg/cigarrillo. Un ingeniero realiza `$5$` mediciones del contenido de alquitrán de cierta clase de cigarrillos para observar si la afirmación del gerente sobre el contenido de alquitrán es cierta, y obtiene en la muestra los siguientes resultados
+<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -4rem; margin-top: -2rem; font-size: 98%;">
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<tbody>
+  <tr>
+    <td>14.5</td>
+    <td>14.2</td>
+    <td>14.4</td>
+    <td>14.3</td>
+    <td>14.6</td>
+  </tr>
+</tbody>
+</table>
+</pre>
+¿Encuentra apoyo la afirmación del gerente de la tabacalera?, emplee un nivel de significancia del $5\%$ para su conclusión.
