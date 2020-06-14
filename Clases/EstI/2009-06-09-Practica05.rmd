@@ -73,7 +73,7 @@ kable_styling("striped", full_width = F)
 </ol>
 3. 	Suponga que a partir de gran cantidad de datos históricos se sabe que `$X$`, el número de automóviles que llegan a una intersección específica durante un periodo de `$20$` segundos, se determina mediante la siguiente función de probabilidad discreta
 `\begin{align*}
-	f(x)=\frac{e^{-\lambda} \lambda^x}{x!} \text{  para  } x=0,1,2,\dots
+	p(x)=\frac{e^{-\lambda} \lambda^x}{x!} \text{  para  } x=0,1,2,\dots
 \end{align*}`
 <ol type ="a">
 <li> Encuentre su función generadora de momentos de la variable aleatoria $X$. </li>
@@ -86,7 +86,7 @@ kable_styling("striped", full_width = F)
 </ol>
 5. Sea `$X$` una variable aleatoria con función de masa de probabilidad geométrica dada por 
 `\begin{align*}
-	f(x)=p(1-p)^{x-1} \text{  para  }  x=1,2,3,\ldots
+	p(x)=p(1-p)^{x-1} \text{  para  }  x=1,2,3,\ldots
 \end{align*}`
 <ol type ="a">
 <li> Encuentre su función generadora de momentos de la variable aleatoria $X$. </li>
@@ -94,27 +94,28 @@ kable_styling("striped", full_width = F)
 </ol>
 6. Considere a `$X$` la variable aleatoria que representa la suma de las caras para el lanzamiento de dos dados, con función de masa de probabilidad dada por
 `\begin{align*}
-	f(x)=\frac{6-|7-x|}{36} \text{  para  } x = 2,3,\ldots,12 
+	p(x)=\frac{6-|7-x|}{36} \text{  para  } x = 2,3,\ldots,12 
 \end{align*}`
 Calcule el segundo momento central.
-7. El tiempo entre arribos de taxis al acopio de una estación del metro tiene una media de 60 segundos. 
+7. El tiempo entre arribos de taxis al acopio de una estación del metro tiene una media de `$60$` segundos. 
 <ol type ="a">
 <li> ¿Cuál es la probabilidad de que la llegada del próximo taxi tarde al menos $40$ segundos?. 
 </li>
 <li> ¿Cuál es la probabilidad de que la llegada del próximo taxi tarde al menos $40$ segundos, si ya han pasado $20$ segundos y aún no llega ningún taxi al acopio del metro?
 </li>
 </ol>
-8. Demuestre que el `$r$`-ésimo momento respecto al origen de la distribución gamma es
+8. Demuestre que el `$r$`-ésimo momento alrededor del origen de la distribución gamma es
 `\begin{align*}
-	\mu'_r=\frac{\beta^r\Gamma(\alpha + r)}{\Gamma(\alpha)}
+	\mu'_r=\mathbb{E}(X^r)=\frac{\beta^r\Gamma(\alpha + r)}{\Gamma(\alpha)}
 \end{align*}`
+y calcule la media, varianza, asimetría y exceso de curtosis de la distribución Gamma.
 9. Luego de varios semestres, un profesor de estadística encuentra que los resultados que obtienen los estudiantes en el examen final de estadística, tienen una distribución normal con media `$3.2$` y varianza `$0.1225$`. Si un estudiante necesita al menos un `$4$` para que la nota acumulada le quede sobre `$2.96$`, cuál es la probabilidad de que luego de presentar el parcial gane la materia?
 10. Suponga una variable aleatoria `$X$` la cual posee una función de masa de probabilidad uniforme discreta, de la forma
 `\begin{align*}
-	f(x) = \frac{1}{k} \text{  para  } x = 1,2, \ldots, k
+	p(x) = \frac{1}{k} \text{  para  } x = 1,2, \ldots, k
 \end{align*}`
-Encuentre su función generadora de momentos de la variable aleatoria $X$.
-11. El sistema de puntuación Elo es un método matemático empleado para calcular la habilidad relativa de los jugadores en algunos deportes tales como el Ajedrez. Suponga que el puntaje Elo promedio de los jugadores de cierta categoría es de 1556 con una desviación estándar de 14. Si pruebas estadísticas han sugerido que el rendimiento de los ajedrecistas se distribuye normalmente. ¿Cuál es la probabilidad de que un ajedrecista de dicha categoría tenga un puntaje Elo superior a 1603?.
+Encuentre su función generadora de momentos de la variable aleatoria `$X$`.
+11. El sistema de puntuación Elo es un método matemático empleado para calcular la habilidad relativa de los jugadores en algunos deportes tales como el Ajedrez. Suponga que el puntaje Elo promedio de los jugadores de cierta categoría es de `$1556$` con una desviación estándar de `$14$`. Si pruebas estadísticas han sugerido que el rendimiento de los ajedrecistas se distribuye normalmente. ¿Cuál es la probabilidad de que un ajedrecista de dicha categoría tenga un puntaje Elo superior a `$1603$`?.
 12. La función generadora de momentos de cierta variable aleatoria de Poisson `$X$` es dada por
 `\begin{align*}
 	M_x(t) = e^{4(e^t-1)}
