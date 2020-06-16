@@ -136,7 +136,7 @@ Calcule de forma exacta y mediante aproximación a una distribución normal la `
 <li> Encuentre su función generadora de momentos de la variable aleatoria $X$. </li>
 <li> Encuentre la media y la varianza de la variable aleatoria $X$ mediante la función generadora de momentos. </li>
 </ol>
-15. Por experiencia se sabe que el `$20\%$` de las inversiones realizadas por un experto en finanzas terminan en pérdida. Si se seleccionan aleatoriamente `$60$` inversiones realizadas por el experto, ¿Cuál es la probabilidad de que más de `$7$` pero menos de `$15$`, no terminen en pérdida? Compare el resultado obtenido mediante una aproximación Normal.
+15. Por experiencia se sabe que el `$20\%$` de las inversiones realizadas por un experto en finanzas terminan en pérdida. Si se seleccionan aleatoriamente `$60$` inversiones realizadas por el experto, ¿Cuál es la probabilidad de que más de `$37$` pero menos de `$45$`, no terminen en pérdida? Compare el resultado obtenido mediante una aproximación Normal.
 16. Sea `$X$` una variable aleatoria con función de masa de probabilidad binomial dada por
 `\begin{align*}
 	f(x) = \left(\begin{array}{c}n\\ x\end{array}\right) p^x(1-p)^{n-x} \text{  para  } x=0,1,2,\ldots,n

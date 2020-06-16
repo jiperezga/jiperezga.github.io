@@ -124,9 +124,9 @@ Mediante el empleo de un nivel de significancia del `$8\%$` pruebe si es razonab
   </li>
   <li> obtiene una media muestral de $10.2_{cm}$ y la verdadera media $\mu=9.8cm$
   </li>
-  <li> obtiene una media muestral de $9.2_{cm}$ y la verdadera media $\mu=9.6cm$
+  <li> obtiene una media muestral de $9.4_{cm}$ y la verdadera media $\mu=9.6cm$
   </li>
-  <li> obtiene una media muestral de $9.2_{cm}$ y la verdadera media $\mu=9.8cm$
+  <li> obtiene una media muestral de $9.4_{cm}$ y la verdadera media $\mu=9.8cm$
   </li> 
   <li>Si la desviación estándar es igual a $2_{cm}$, calcule la probabilidad de cometer Error Tipo I.
   </li>
