@@ -47,7 +47,7 @@ Recuerden plantear y probar la hipótesis de normalidad y la hipótesis para dif
 # PosData
 Reciclé el enunciado del Quiz III y IV para que el parcial les pareciera más familiar :v ¡Mucha Suerte en ese final!
 
-* [Arcila Galvis Faber Esteban](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/Q1017276234.pdf){:target="_blank"}
+* [Arcila Galvis Faber Esteban](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1017276234.pdf){:target="_blank"}
 * [Barrientos Cortés Susana Eugenia](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1152687823.pdf){:target="_blank"}
 * [Bedoya Carvajal Jhon Alexánder](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1028037122.pdf){:target="_blank"}
 * [Buitrago Yepez Julio César](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P98534085.pdf){:target="_blank"}
