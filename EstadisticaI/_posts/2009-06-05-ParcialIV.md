@@ -35,7 +35,7 @@ Parcial
 El parcial deberá solucionarse a mano, y enviar los resultado (escanear
 o tomar foto a la hoja resuelta) a más tardar a las 8:30 am, al correo
 electrónico <a target="_blank" href="mailto:jivan.perez@udea.edu.co">
-jivan.perez@udea.edu.co</a>.
+jivan.perez@udea.edu.co</a>
 
 Nota 1
 ======
