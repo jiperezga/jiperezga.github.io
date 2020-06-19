@@ -39,7 +39,7 @@ opts_chunk$set(echo=TRUE,
 ```
 
 # Parcial
-El parcial deberá solucionarse a mano, y enviar los resultado (escanear o tomar foto a la hoja resuelta) a más tardar a las 8:30 am, al correo electrónico <a target="_blank" href="mailto:jivan.perez@udea.edu.co"> jivan.perez@udea.edu.co</a>
+El parcial deberá solucionarse a mano, y enviar los resultado (escanear o tomar foto a la hoja resuelta) a más tardar a las 8:30 am, al correo electrónico <a target="_blank" href="mailto:jivan.perez@udea.edu.co"> jivan.perez@udea.edu.co</a>.
 
 # Nota 1
 Una vez planteado el ejercicio con la distribución de probabilidad identificada, pueden emplear cualquier herramienta para calcular el valor de la probabilidad, y recuerden **interpretar los resultados en el contexto del ejercicio**.
