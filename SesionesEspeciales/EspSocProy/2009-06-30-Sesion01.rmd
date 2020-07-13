@@ -1103,7 +1103,7 @@ Este gráfico sirve para presentar de forma visual, datos numéricos **por categ
 
 <p>En el gráfico anterior, se hace una comparación entre el número de vehículos que transitan por la avenida Guayabal en un día y la zona donde se realizó el registro del número de vehículos. En éste se aprecia que de las $5$ zonas, la zona $3$ es la única que tiene una media y una mediana inferior a las demás zonas. <br>
 <br>
-Adicionalmente, se evidencia que de las $5$ zonas, la zona $4$ es la que presenta mayor variabilidad, mientras que las zonas $3$ y $4$ son la que posee datos más alejados respecto al $50%$ central de los datos.<br>
+Adicionalmente, se evidencia que de las $5$ zonas, la zona $4$ es la que presenta mayor variabilidad, mientras que las zonas $3$ y $4$ son la que posee datos más alejados respecto al $50\%$ central de los datos.<br>
 <br>
 Finalmente, puede notarse que no se evidencia ningún punto en la parte superior o inferior de los bigotes de las diferentes cajas, lo cual quiere decir, que no se identificaron datos extremos para ninguna de las zonas registradas.
 </p>
