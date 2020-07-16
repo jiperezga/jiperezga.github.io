@@ -784,6 +784,7 @@ Y=\beta_0 + \beta_1 X+ \varepsilon \quad \quad (I)
 \end{align*}`
 
 donde
+
 * `$\beta_0$` y `$\beta_1$`: son dos constantes desconocidas denominadas parámetros del modelo, estimados a partir de los datos.
 * `$\beta_0$` representa el intercepto.
 * `$\beta_1$` representa la pendiente.
@@ -797,7 +798,6 @@ donde
 y_i=\beta_0 + \beta_1 x_i+ \varepsilon_i \quad \text{ para } i =0,1,2, \ldots, n \quad \quad (II)
 \end{align*}`
 donde `$y_i$` es la i-ésima observación de la variable `$Y$`, dado que `$X$` es igual a `$x_i$`.
-
 2. Del modelo `$(II)$` suponga que las `$\varepsilon_i$` son variables aleatorias independientes con media `$\mathbb{E}(\varepsilon_i)=0$` y varianza `$Var(\varepsilon_i)=\sigma^2$`, de tal forma que
 `\begin{align*}
 \mathbb{E}(y_i)=\beta_0 + \beta_1 x_i+ \mathbb{E}(\varepsilon_i) = \beta_0 + \beta_1 x_i
@@ -815,7 +815,7 @@ y_i\sim N(\beta_0+\beta_1x_i, \sigma^2)
 El objetivo de un modelo de regresión será entonces estimar los parámetros `$\beta_0, \beta_1, \sigma^2$` del modelo lineal, y para ello puede recurrirse a los métodos de mínimos cuadrados, el cual está implementado en <tt>Excel</tt> en la pestaña Datos>Análisis>Análisis de datos>Regresión.
 
 #### Método de Mínimos Cuadrados
-Sea una muestra aleatoria`$(y_1, x_1), (y_2, x_2), \ldots, (y_n, x_n)$` a partir de la cual se desea ajustar el siguiente modelo
+Sea una muestra aleatoria `$(y_1, x_1), (y_2, x_2), \ldots, (y_n, x_n)$` a partir de la cual se desea ajustar el siguiente modelo
 `\begin{align*}
 y_i=\beta_0 + \beta_1 x_i+ \varepsilon_i 
 \end{align*}`
