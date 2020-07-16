@@ -971,7 +971,7 @@ Entonces el estimador puntual de la respuesta media de `$Y$` dado `$x_0$`
 donde se puede probar que
 `\begin{align*}
  \mathbb{E}(\hat{y_0}) &= \beta_0 + \beta_1 x_0 \\
- Var(\hat{y_0}) &= \sigma^2_e\left[\frac{1}{n} + \frac{(x_0 - \bar{X})^2}{S_{xx}}]
+ Var(\hat{y_0}) &= \sigma^2_e\left[\frac{1}{n} + \frac{(x_0 - \bar{X})^2}{S_{xx}}\right]
  \end{align*}`
  
  Además, para un nivel de confianza del `$100(1-\alpha)\%$` un intervalo de confianza para la respuesta media será de la forma
