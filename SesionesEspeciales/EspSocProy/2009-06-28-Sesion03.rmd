@@ -1099,7 +1099,7 @@ $$\begin{align*}
           &= \frac{120}{500} \\
           &= 0.24
 \end{align*}$$
-Ahora, dado que el intervalo que nos piden es bilateral, y tenemos que los tamaños muestrales para cada población son suficientemente grandes, tenfremos que el intervalo de interés es de la forma
+Ahora, dado que el intervalo que nos piden es bilateral, y tenemos que los tamaños muestrales para cada población son suficientemente grandes, tendremos que el intervalo de interés es de la forma
 
 <img src="../../EspecializacionSocioeconomica/images/Intervalos4a.jpg" alt="" style="max-width: 80%;">
 
@@ -1185,7 +1185,7 @@ $$\begin{align*}
    \frac{(n-1)S^2}{\chi^2_{\frac{\alpha}{2}, n-1}}< \sigma^2 <\frac{(n-1)S^2}{\chi^2_{1 -\frac{\alpha}{2}, n-1}}
 \end{align*}$$
 
-En donde se observa que para realizar el cálculo del intervalo, se requiere de los varianza muestral $S^2 = 230541.2$, el nivel de confianza $1-\alpha=0.95$, los valores críticos $\chi^2_{\frac{\alpha}{2}=0.025, n-1=19}=32.85233$ y $\chi^2_{1-\frac{\alpha}{2}=0.975, n-1=19}=8.906516$ y el tamaño muestral $n=20$. <br>
+En donde se observa que para realizar el cálculo del intervalo, se requiere de la varianza muestral $S^2 = 230541.2$, el nivel de confianza $1-\alpha=0.95$, los valores críticos $\chi^2_{\frac{\alpha}{2}=0.025, n-1=19}=32.85233$ y $\chi^2_{1-\frac{\alpha}{2}=0.975, n-1=19}=8.906516$ y el tamaño muestral $n=20$. <br>
 <br>
 Al reemplazar dichos valores en el intervalo de confianza, se tendrá que 
 $$\begin{align*}
