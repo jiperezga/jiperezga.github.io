@@ -69,14 +69,14 @@
       styles: { ".MathJax": { color: "#FFFFFF" } },
       MMLorHTML: { prefer: { Firefox: "HTML" } } // Para mejorar la visualización de Firefox
   });
-  MathJax.Hub.Queue( 
+  MathJax.Hub.Typeset( 
     ["setRenderer",MathJax.Hub,"HTML-CSS"], 
     ["Typeset",MathJax.Hub,"id-for-html-css"], 
     ["setRenderer",MathJax.Hub,"SVG"], 
     ["Typeset",MathJax.Hub,"id-for-SVG"] 
   ); 
   </script>
-  <script type="text/javascript" src="/assets/js/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="/assets/Mathjax/Math/MathJax.js"></script>
   
 
 
@@ -279,7 +279,6 @@
             <td style="width: 70%;">
                 <div id="MathOutput">
                     <div id="ForLatext">\[{}\]</div>
-                    <div id="ForASC">`{}`</div>              
                 </div>
             </td>
         </tr>
