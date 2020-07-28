@@ -153,3 +153,8 @@ a:visited
     background-image: none;
     background-repeat: no-repeat;
 }
+
+.MJXp-display
+{
+    display: none!important
+}
