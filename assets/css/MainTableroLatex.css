@@ -19,11 +19,10 @@
 
 
 #MyInput {
-    height: 1500px;
+    height: 2500px;
     width: 100%;
     border-style: solid;
     border-width: 1px;
-    border-top-width: 0px;
     border-color: #999999 #999999 #999999 #999999;
 }
 
@@ -35,10 +34,9 @@
 
 
 #MathOutput {
-    margin-top: 5px;
     font-size: 20px;
     width: 950px;
-    height: 1529px;
+    height: 2500px;
     border: 1px solid #999999;
     text-align: center;
 }
@@ -63,14 +61,7 @@
 #ForLatext {
     margin-top: 25px;
     width: 950px;
-    height: 1500px;
-    overflow: auto
-}
-
-#ForASC {
-    margin-top: 25px;
-    width: 700px;
-    height: 150px;
+    height: 2470px;
     overflow: auto
 }
 
@@ -134,7 +125,7 @@
 {
     overflow: auto;
     width: 500px;
-    height: 1500px;
+    height: 2500px;
     position: relative;
 }
 

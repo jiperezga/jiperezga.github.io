@@ -42,18 +42,11 @@
     <meta name="msapplication-square310x310logo" content="largetile.png" />
     <!-- Android Lolipop Theme Color -->
     <meta name="theme-color" content="{{ page.color }}">
-  <link href="/assets/css/FontTableroLatex.css" type="text/css" rel="stylesheet" />
-
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'UA-5103734-6');
-    </script>
+    <link href="/assets/css/FontTableroLatex.css" type="text/css" rel="stylesheet" />
 
     <title>
-	Tablero Latex
-</title>
+	Tablero LaTeX
+	  </title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">  
 
     <script type="text/x-mathjax-config">
@@ -89,7 +82,6 @@
 
             $.initSetGlobal("TextAreaInput", "MathOutput", "TextAreaLinkCode", "divURL", "divMathML");
             $.iniEmbeded("ShowHideEmbeded", "divEmbed", "selectEquation", "ShowHideURL", "ShowHideMathML");
-            $("#MyTools").initTool();
             $("#MyMath20").initMath();
             $("#MyMath3528").initMath3528();
             $("#MyMath3545").initMath3545();
@@ -151,7 +143,7 @@
             </li>
             <li class="nav-item active">
               <a class=nav-link href=/TableroLatex.html>
-                <i class="fas fa-chalkboard"></i>&nbsp;&nbsp;Tablero Latex
+                <i class="fas fa-chalkboard"></i>&nbsp;&nbsp;Tablero LaTeX
               </a>
             </li>
             <li class=nav-item>
@@ -251,6 +243,45 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \end{align}" />
     <input type="hidden" name="ctl00$ContentPlaceHolder1$HiddenFieldIsAsc" id="HiddenFieldIsAsc" />
 
@@ -258,10 +289,9 @@
   <table cellpadding="0" cellspacing="0" class="MainTable">
         <tr>
             <td style="width: 30%;">
-                <div id="MyTools">                   
-                </div>
+                <div id="MyTools">Codigo LaTeX de Entrada</div>
 
-                <div id="MyInput" style="height: 1500px;">
+                <div id="MyInput">
                    <textarea id="TextAreaInput"></textarea>
                 </div>
             </td>
@@ -269,10 +299,10 @@
                 &nbsp;
             </td>
             <td style="width: 70%;">
-                <div id="MathOutput">
-                    <div id="ForLatext">\[{}\]</div>
-                    <div id="ForASC">`{}`</div>              
-                </div>
+              <div id="MyTools">Codigo LaTeX de Salida</div>
+              <div id="MathOutput">
+                <div id="ForLatext">\[{}\]</div>
+              </div>
             </td>
         </tr>
     </table>
