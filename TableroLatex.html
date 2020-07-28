@@ -59,7 +59,15 @@
      
     <script type="text/javascript" src="/assets/Mathjax/Js/MyConfig.js"></script>
     <script type="text/javascript" src="/assets/Mathjax/Math/MathJax.js"></script>
-  
+  <script>
+try {
+  if (typeof BG.Methods !== 'undefoned') {
+    document.getElementById('msg').innerHTML = 'Script evaluated successfully!';
+  }
+} catch (e) {
+  document.getElementById('msg').innerHTML = 'Problem evaluating script';
+}
+</script>
 
 
     <link href="/assets/TableroLatex/Css/codemirror.css" rel="stylesheet" type="text/css" />
