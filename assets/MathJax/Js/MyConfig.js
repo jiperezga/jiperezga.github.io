@@ -1,5 +1,5 @@
 window.MathJax = {
-    extensions: ["tex2jax.js", "asciimath2jax.js", "toMathML.js"],
+    extensions: ["tex2jax.js", "asciimath2jax.js", "toMathML.js", "fast-preview.js"],
     "HTML-CSS": { imageFont: null },
     showMathMenu: false,
     showMathMenuMSIE: false,
