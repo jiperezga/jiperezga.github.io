@@ -64,6 +64,7 @@ code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inher
   </style>
 
   <script type="text/x-mathjax-config">
+  MathJax.Hub.processSectionDelay = 0;
   MathJax.Hub.Config({
     TeX: { equationNumbers: { autoNumber: "AMS" } },
     tex2jax: {
@@ -81,7 +82,7 @@ code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inher
     ["Typeset",MathJax.Hub,"id-for-SVG"] 
   ); 
   </script>
-  <script type="text/javascript" src="/assets/js/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" id=""></script>
 
   
   {% include plotly.html %}
