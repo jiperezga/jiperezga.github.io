@@ -58,16 +58,26 @@
 
      
     <script type="text/javascript" src="/assets/Mathjax/Js/MyConfig.js"></script>
-    <script type="text/javascript" src="/assets/Mathjax/Math/MathJax.js"></script>
-  <script>
-try {
-  if (typeof BG.Methods !== 'undefoned') {
-    document.getElementById('msg').innerHTML = 'Script evaluated successfully!';
-  }
-} catch (e) {
-  document.getElementById('msg').innerHTML = 'Problem evaluating script';
-}
-</script>
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Typeset({
+    TeX: { equationNumbers: { autoNumber: "AMS" } },
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'], // removed 'code' entry
+      processEscapes: true
+      },
+      styles: { ".MathJax": { color: "#FFFFFF" } },
+      MMLorHTML: { prefer: { Firefox: "HTML" } } // Para mejorar la visualización de Firefox
+  });
+  MathJax.Hub.Queue( 
+    ["setRenderer",MathJax.Hub,"HTML-CSS"], 
+    ["Typeset",MathJax.Hub,"id-for-html-css"], 
+    ["setRenderer",MathJax.Hub,"SVG"], 
+    ["Typeset",MathJax.Hub,"id-for-SVG"] 
+  ); 
+  </script>
+  <script type="text/javascript" src="/assets/js/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
 
 
     <link href="/assets/TableroLatex/Css/codemirror.css" rel="stylesheet" type="text/css" />
