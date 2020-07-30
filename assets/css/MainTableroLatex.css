@@ -3,6 +3,7 @@
     margin-top: 10px;
     margin-bottom:15px;
     width: 100%;
+    table-layout: fixed;
 }   
         
 .MainTable tr
@@ -35,7 +36,6 @@
 
 #MathOutput {
     font-size: 20px;
-    width: 950px;
     height: 2500px;
     border: 1px solid #999999;
     text-align: center;
@@ -60,7 +60,6 @@
 
 #ForLatext {
     margin-top: 25px;
-    width: 950px;
     height: 2470px;
     overflow: auto
 }
@@ -124,7 +123,6 @@
 .CodeMirror-scroll
 {
     overflow: auto;
-    width: 500px;
     height: 2500px;
     position: relative;
 }
