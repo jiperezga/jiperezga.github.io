@@ -197,7 +197,7 @@ library(plotly)
 
 # Extracción de los componentes del número de pasajeros áereos
 AP2 <- as_tsibble(AP) # Transforma el conjunto de datos a una base "tibble"
-descNP <- AP2 %>% STL(value ~ season(window = 12)) # Realiza descomposición de la serie
+descNP <- AP2 %>% model(STL(value ~ season(window = 12))) %>%components() # Realiza descomposición de la serie
 
 estacionalNP <-  descNP$season_year # Se separa componente estacional
 tendenciaNP <-  descNP$trend # Se separa componente de tendencia
