@@ -1,5 +1,5 @@
 /* Tablitas */
-.table thead th, .table td{background-color: rgba(59,165,255,.60);border:.125rem solid #ccc;padding:.313rem; font-size:80%;}
+.table thead th, .table td{background-color: rgba(59,165,255,.60);border:.125rem solid #ccc;padding:.313rem; font-size:100%;}
 .table td{font-weight: normal}
 
 .table{margin:3.125rem auto; color: #FFFFFF}
