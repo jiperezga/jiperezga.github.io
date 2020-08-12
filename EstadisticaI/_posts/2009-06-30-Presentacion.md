@@ -115,8 +115,8 @@ Unidades detalladas
 -   Distribución uniforme discreta
 -   Distribución de Bernoulli y binomial
 -   Distribución hipergeométrica
--   Distribución binomial negativa
 -   Distribución geométrica
+-   Distribución binomial negativa
 -   Distribución de Poisson
 
 ### Unidad No.6: Algunas distribuciones continuas de probabilidad
@@ -131,8 +131,21 @@ Unidades detalladas
 
 ### Unidad No.7: Funciones de variables aleatorias
 
+-   Transformación de variables aleatorias
 -   Momentos
 -   Funciones generadoras de momentos
+
+Metodología
+-----------
+
+El desarrollo del curso se hará fundamentalmente con base en la
+exposición magistral de los temas que el programa contempla y los
+ejercicios correspondientes por sesiones de dos horas. Para las
+aplicaciones, tanto con datos simulados como reales, se empleará el
+lenguaje de programación <tt>R</tt>. Este programa es uno de los más
+empleados en la comunidad científica para análisis estadístico, análisis
+predictivo, procesamiento y visualización de gran volumen de
+información, etcétera.
 
 Evaluación del curso
 --------------------
