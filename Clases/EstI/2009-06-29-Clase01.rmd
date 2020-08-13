@@ -49,7 +49,7 @@ opts_chunk$set(echo=TRUE,
 
 La Estadística es una **fuerte herramienta** empleada en las diferentes disciplinas científicas, debido a su gran potencial para **recolectar, analizar y presentar** de forma amigable, la información que se genera en las distintas áreas del conocimiento, para así poder argumentar y soportar de mejor manera las investigaciones realizadas. 
 
-Adicionalmente, la estadística tiene como ventaja respecto a otras áreas, que permite extraer información de **variables tanto númerida como categórica** de la población de interés o de una muestra de la misma, permitiendo con ello, establecer conclusiones acerca de la misma población, o de alguno de los parámetros que la conforman. Dado lo anterior, no es de sorprender que la estadística sea concebida como **uno de los pilares fundamental** dentro de la investigación científica teórica y aplicada.
+Adicionalmente, la estadística tiene como ventaja respecto a otras áreas, que permite extraer información de **variables tanto numérica como categórica** de la población de interés o de una muestra de la misma, permitiendo con ello, establecer conclusiones acerca de la misma población, o de alguno de los parámetros que la conforman. Dado lo anterior, no es de sorprender que la estadística sea concebida como **uno de los pilares fundamental** dentro de la investigación científica teórica y aplicada.
 
 En general, el análisis estadístico puede dividirse en dos partes:
 
@@ -72,7 +72,7 @@ En términos generales, los datos son cualquier pieza de información recolectad
 * **Cuantitativos**: Son datos que pueden ser medidos o cuantificados. Estos se subdividen en dos categorías:
   * **Datos cuantitativos discretos**: Son aquellos datos que provienen de procesos que involucran conteos, y por tanto, solo pueden tomar valores enteros. Por ejemplo: __Edad de una persona, número de estudiantes que perdieron un curso, cantidad de profesores que dictan Estadística I__
   - **Datos cuantitativos continuos**: Son aquellos datos que provienen de procesos que involucran mediciones, y por tanto, solo pueden tomar cualquier valor real dentro de un intervalo. Por ejemplo: __Temperatura de congelación del agua, Tiempo que dura una clase, Utilidad diaria de un negocio.__
-* **Cualitativos**: Son datos asociados a una cualidad o propiedad, y por tanto, no pueden representarse numéricamente, a pesar de poder caracterizarse alfanúmericamente. Por ejemplo: __Estrato socioeconómico, tipo de animales en una granja, nivel de satisfacción con el método planteado para dictar el curso.__
+* **Cualitativos**: Son datos asociados a una cualidad o propiedad, y por tanto, no pueden representarse numéricamente, a pesar de poder caracterizarse alfanuméricamente. Por ejemplo: __Estrato socioeconómico, tipo de animales en una granja, nivel de satisfacción con el método planteado para dictar el curso.__
 * **Lógicos**: Son datos asociados a valores de lógica binaria, usualmente denotados como Verdadero y Falso, o Éxito y Fracaso. Por ejemplo: __Tipo de Sexo, cara de una moneda, probar si un artículo es defectuoso.__
 
 ### Escala de medición
@@ -206,7 +206,7 @@ donde `$x_{\left[j\right]}$` representa la `$j$`-ésima observación ordenada. E
 <button id="Hide4" class="btn btn-info">Ocultar Ejercicio Manual</button>
 <main id="botoncito4"> 
 <h3 data-toc-skip> Ejercicio Caso de Estudio </h3> 
-<p>Calcule la mediana obtenida por los $10$ estudiantes en el primer y cuarto parcial del curso de Estadística I, de forma manual.</p>
+<p>Calcule la nota mediana obtenida por los $10$ estudiantes en el primer y cuarto parcial del curso de Estadística I, de forma manual.</p>
 
 <h3 data-toc-skip> Solución Manual </h3> 
 <p>Inicialmente, se observa que el total de estudiantes es $10$, por lo cual, se tiene que $n$ es un número par, haciendo que la ecuación empleada sea
@@ -256,7 +256,7 @@ De lo anterior se aprecia que para el parcial $1$, la mitad de los estudiantes d
 <button id="Hide5" class="btn btn-info">Ocultar Ejercicio en <tt>R</tt></button>
 <main id="botoncito5"> 
 <h3 data-toc-skip> Ejercicio Caso de Estudio </h3> 
-<p>Calcule la mediana obtenida por los $10$ estudiantes en el primer y cuarto parcial del curso de Estadística I con <tt>R</tt>. </p>
+<p>Calcule la nota mediana obtenida por los $10$ estudiantes en el primer y cuarto parcial del curso de Estadística I con <tt>R</tt>. </p>
 
 <h3 data-toc-skip> Solución en <tt>R</tt> </h3> 
 <p>Para realizar el cálculo en <tt>R</tt> de la nota mediana obtenida por los estudiantes en los dos parciales se emplea la función <code>median()</code> tal que </p>
@@ -296,7 +296,7 @@ Una vez creada la función, puede calcularse la moda de un conjunto de observaci
 <button id="Hide6" class="btn btn-info">Ocultar Ejercicio Manual</button>
 <main id="botoncito6"> 
 <h3 data-toc-skip> Ejercicio Caso de Estudio </h3> 
-<p>Calcule la moda obtenida por los $10$ estudiantes en el primer y cuarto parcial del curso de Estadística I de forma manual. </p>
+<p>Calcule la moda de las nota obtenida por los $10$ estudiantes en el primer y cuarto parcial del curso de Estadística I de forma manual. </p>
 
 <h3 data-toc-skip> Solución Manual</h3> 
 <p> Para encontrar la nota modal de los parciales, es necesario localizar la nota que más se repita en cada parcial. Con el fin de ilustrar cuales son éstas, se presenta nuevamente la tabla con la nota registrada para cada uno de los 10 estudiantes. </p>
@@ -323,7 +323,7 @@ Similarmente, para el parcial $4$, se aprecia que la nota modal es de $3.4$ dado
 <button id="Hide7" class="btn btn-info">Ocultar Ejercicio en <tt>R</tt></button>
 <main id="botoncito7"> 
 <h3 data-toc-skip> Ejercicio Caso de Estudio </h3> 
-<p>Calcule la moda obtenida por los $10$ estudiantes en el primer y cuarto parcial del curso de Estadística I con <tt>R</tt>. </p>
+<p>Calcule la moda de las notas obtenidas por los $10$ estudiantes en el primer y cuarto parcial del curso de Estadística I con <tt>R</tt>. </p>
 
 <h3 data-toc-skip> Solución en <tt>R</tt> </h3> 
 <p>Para realizar el cálculo en <tt>R</tt> de la nota modal obtenida por los estudiantes en los dos parciales se emplea la función <code>Moda()</code>, la cual se definió anteriormente </p>
@@ -364,7 +364,7 @@ En <tt>R</tt>, puede calcularse el valor de la media recortada de un conjunto de
 <button id="Hide8" class="btn btn-info">Ocultar Ejercicio Manual</button>
 <main id="botoncito8"> 
 <h3 data-toc-skip> Ejercicio Caso de Estudio </h3> 
-<p>Calcule la media recortada al $10\%$ obtenida por los $10$ estudiantes en el primer y cuarto parcial del curso de Estadística I de forma manual. </p>
+<p>Calcule la media recortada al $10\%$ de las notas obtenidas por los $10$ estudiantes en el primer y cuarto parcial del curso de Estadística I de forma manual. </p>
 
 <h3 data-toc-skip> Solución Manual </h3> 
 <p> Para encontrar la nota promedio de los parciales, al eliminar el efecto del $10\%$ de notas más altas y más bajas, es necesario ordenar de forma ascendente las notas obtenidas en los parciales. Dado que se tienen $10$ observaciones, de tendrá que eliminar entonces la nota más alta y la nota más baja.
@@ -417,7 +417,7 @@ De los hallazgos encontrados al comparar los resultados de la media contra la me
 <button id="Hide9" class="btn btn-info">Ocultar Ejercicio en <tt>R</tt></button>
 <main id="botoncito9"> 
 <h3 data-toc-skip> Ejercicio Caso de Estudio </h3> 
-<p>Calcule la media recortada al $10\%$ obtenida por los $10$ estudiantes en el primer y cuarto parcial del curso de Estadística I con <tt>R</tt>. </p>
+<p>Calcule la media recortada al $10\%$ de las notas obtenidas por los $10$ estudiantes en el primer y cuarto parcial del curso de Estadística I con <tt>R</tt>. </p>
 
 <h3 data-toc-skip> Solución en <tt>R</tt> </h3> 
 <p>Para realizar el cálculo en <tt>R</tt> de la nota promedio recortada al $10\%$ de los estudiantes en los dos parciales se emplea la función <code>mean()</code> con el argumento <code>trim = 0.1</code>, tal que </p>
@@ -465,7 +465,7 @@ En <tt>R</tt> puede calcularse los cuartiles de un conjunto de observaciones med
 <h3 data-toc-skip> Solución Manual </h3> 
 <p> Se presenta el cálculo del primer cuartil obtenido en el parcial $1$. El cálculo de los demás cuartiles del parcial $1$ y para el parcial $4$ se dejan al estudiante. </p>
 
-<p>Para realizar el cálculo de los cuartiles asociados a la nota obtenida por los estudiantes en cada parcial, es necesario ordenar el total de notas obtenidas en orden ascendente, tal que para el parcial $1$ se tendrá </p>
+<p>Para realizar el cálculo de los cuartiles asociados a las notas obtenidas por los estudiantes en cada parcial, es necesario ordenar el total de notas obtenidas en orden ascendente, tal que para el parcial $1$ se tendrá </p>
 
 ```{r echo=FALSE}
 kable(datos2, 
@@ -497,7 +497,7 @@ $$\begin{align*}
       &= 2.625
 \end{align*}$$
 
-Por tanto, se concluye que para la nota obtenida en el parcial $1$, el $25\%$ inferior de los estudiantes obtuvo una nota menor o igual a $2.625$, mientras que el $75\%$ superior de los estudiantes obtuvo notas mayores o iguales a $2.625$. <br>
+Por tanto, se concluye que para las notas obtenidas en el parcial $1$, el $25\%$ inferior de los estudiantes obtuvo una nota menor o igual a $2.625$, mientras que el $75\%$ superior de los estudiantes obtuvo notas mayores o iguales a $2.625$. <br>
 <br>
 Procedimiento e interpretación similar se realiza para los demás cuartiles del parcial $1$, y para los tres cuartiles del parcial $4$.</p>
 </main>
@@ -554,7 +554,7 @@ En <tt>R</tt> pueden calcularse los quintiles de un conjunto de observaciones me
 <h3 data-toc-skip> Solución Manual </h3> 
 <p> Se presenta el cálculo del tercer quintil obtenido en el parcial $4$. El cálculo de los demás cuartiles del parcial $4$ y para el parcial $1$ se dejan al estudiante. </p>
 
-<p>Para realizar el cálculo de los cuartiles asociados a la nota obtenida por los estudiantes en cada parcial, es necesario ordenar el total de notas obtenidas en orden ascendente, tal que para el parcial $4$ se tendrá </p>
+<p>Para realizar el cálculo de los cuartiles asociados a las notas obtenidas por los estudiantes en cada parcial, es necesario ordenar el total de notas obtenidas en orden ascendente, tal que para el parcial $4$ se tendrá </p>
 
 ```{r echo=FALSE}
 kable(datos3, 
@@ -639,7 +639,7 @@ En <tt>R</tt> pueden calcularse los deciles de un conjunto de observaciones medi
 <p>Calcule los nueve deciles para las notas obtenida por los $10$ estudiantes en el primer y cuarto parcial del curso de Estadística I de forma manual. </p>
 
 <h3 data-toc-skip> Solución Manual </h3> 
-<p> Similar al caso de cuartil y quintil, se presenta el cálculo de un solo Decil, debido a que el cálculo de los demás posee un procedimiento similar, y en consecuencia, se deja dícho cálculo al estudiante. <br>
+<p> Similar al caso de cuartil y quintil, se presenta el cálculo de un solo Decil, debido a que el cálculo de los demás posee un procedimiento similar, y en consecuencia, se deja dicho cálculo al estudiante. <br>
 <br>
 En este caso, se decide realizar el cálculo para el sexto Decil $(j=6)$, asociado a na nota obtenida por los estudiantes en el parcial $1$. Para ello es necesario ordenar el total de notas obtenidas el parcial $1$ de forma ascendente, tal que </p>
 
@@ -758,7 +758,7 @@ $$\begin{align*}
          &= 3.164
 \end{align*}$$
 
-De lo anterio, se podrá concluir que el $33\%$ inferior de los estudiantes logró obtener una nota menor o igual a $3.164$ en el cuarto parcial, mientras que el $67\%$ superior logró obtener una nota mínima de $3.164$ en el cuarto parcial. <br>
+De lo anterior, se podrá concluir que el $33\%$ inferior de los estudiantes logró obtener una nota menor o igual a $3.164$ en el cuarto parcial, mientras que el $67\%$ superior logró obtener una nota mínima de $3.164$ en el cuarto parcial. <br>
 <br>
 El procedimiento e interpretación aquí presentada, se puede replicar para realizar el cálculo de los demás percentiles asociados a los dos parciales estudiados.</p>
 </main>
