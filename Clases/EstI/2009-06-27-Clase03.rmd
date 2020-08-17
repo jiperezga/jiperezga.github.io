@@ -6,6 +6,7 @@ permalink: /EstadisticaI/EstI:title.html
 tags:
 
 introduction: |
+  Introducción al lenguaje estadístico R. <br>
   Datos y su estructura. <br>
   Resúmenes numéricos. <br>
   Resúmenes tabulares. <br>
@@ -24,6 +25,7 @@ knit: (function(inputFile, encoding) {
   output_dir = "../../EstadisticaI/_posts/", output_format = "all"  ) })
 bibliography: "../../referencias.bib"
 csl: "../../apa.csl"
+link-citations: yes
 ---
 
 ```{r knitr_init, echo=FALSE, cache=FALSE}
@@ -42,8 +44,309 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
+## Introducción a R
 
-## Datos y su estructura
+<tt>R</tt> **es un lenguaje de programación interpretado orientado a objetos** junto con un sistema de ventanas, que permite una interacción directa e intuitiva con el tipo de programación realizada. Este tipo de programación, posee una notable cercanía con la forma en que se expresarían las cosas en la vida real, ya que trabaja sobre objetos visibles que poseen determinadas característica, lo cual hace que puedan ser empleados para la realización de acciones específicas. 
+
+Para entender cómo se crean o manipulan objetos en <tt>R</tt>, es necesario introducir inicialmente el lenguaje de programación, y para ello lo primero que debe hacerse, es entender la estructura de asignación, los tipos de datos, las clases de los objetos y los tipos de operadores 
+
+### Estructura de asignación
+La estructura de asignación del lenguaje <tt>R</tt> puede llevarse a cabo mediante cuatro formas diferentes, donde, cada una de ellas lleva al mismo resultado
+
+<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="n">variable</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">objeto</span><span class="w">       </span><span class="c1"># Primer método</span><span class="w">
+</span><span class="n">objeto</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">variable</span><span class="w">       </span><span class="c1"># Segundo método</span><span class="w">
+</span><span class="n">variable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">objeto</span><span class="w">        </span><span class="c1"># Tercer método</span><span class="w">
+</span><span class="n">assign</span><span class="p">(</span><span class="n">variable</span><span class="p">,</span><span class="w"> </span><span class="n">objeto</span><span class="p">)</span><span class="w"> </span><span class="c1"># Cuarto método</span><span class="w">
+</span></code></pre></section></section>
+
+```{r eval=FALSE, echo=FALSE}
+variable <- objeto       # Primer método
+objeto -> variable       # Segundo método
+variable = objeto        # Tercer método
+assign(variable, objeto) # Cuarto método
+```
+
+De estos cuatro métodos de asignación presentados, **el primero y el segundo poseen la misma estructura**, la diferencia entre ellos radica en que, el primero realiza la asignación a la izquierda y el segundo a la derecha, lo cual depende de la dirección hacia donde apunte la flecha.
+
+El **tercer método**, a pesar de realizar la asignación al igual que los dos primeros métodos, éste **no es el operador habitual de asignación**, pues éste se encuentra reservado para otros propósitos, tales como darle valores a una variable dentro de una función. El **cuarto método**, es una forma de asignación equivalente a las dos primeras, pero **requiere de "más esfuerzo"** para llevarse acabo la asignación.
+
+Por lo tanto, se **recomienda emplear el primer método de asignación**. Es de anotar que el símbolo `<-` puede escribirse de dos formas, presionando la tecla `<` seguida de la tecla `-`, o alternativamente, presionando de forma simultanea las teclas `Alt` y la tecla `-`.
+
+También se señala que **el carácter `#`, se emplea para comentar el código** o una línea específica, lo cual implica que posterior a `#`, no se ejecutará ningún tipo de código en la linea específica en la cual se encuentre `#`.
+
+### Tipo de datos
+Existen diferentes tipos de datos en los lenguajes de programación, de estos tipos dependerá las operaciones o funciones que pueden o no emplearse con éstos, y es por ello que debe tenerse especial cuidado cuando se deseen manipular.
+
+Los tipos de datos más que pueden encontrarse en <tt>R</tt> son:
+
+* **<tt>numeric</tt>**: Datos numéricos, los cuales soportan números que se encuentren en el conjunto de los reales, `$\mathbb{R}$`, y por tanto soporta tanto números enteros (<tt>integer</tt>) y números de doble precisión (<tt>double</tt>).
+* **<tt>integer</tt>**: Datos enteros, los cuales soportan números que se encuentren en el conjunto de los enteros,  `$\mathbb{Z}$`, y en consecuencia, solo soporta números enteros.
+* **<tt>complex</tt>**: Datos complejos, los cuales soportan números que se encuentren en el conjunto de los complejos, `$\mathbb{C}$`, y por tanto, soporta tanto números reales como imaginarios.
+* **<tt>character</tt>**: Datos de carácter, los cuales soportan caracteres alfanuméricos, es decir, datos numéricos y alfabéticos. Éstos deben ser escritos entre comillas simples o dobles.
+* **<tt>factor</tt>**: Datos categóricos nominales, los cuales soportan caracteres alfanuméricos, y establece entre estos diferentes categorías. Se puede emplear la función <tt>factor()</tt> para crear datos de este tipo. Éstos deben ser escritos entre comillas simples o dobles.
+* **<tt>ordered</tt>**: Datos categóricos ordinales, los cuales soportan caracteres alfanuméricos, y establece entre estos diferentes categorías junto con una estructura jerárquica. Se puede emplear la función <tt>ordered()</tt> para crear datos de este tipo. Éstos deben ser escritos entre comillas simples o dobles.
+* **<tt>logical</tt>**: Datos lógicos, los cuales soportan caracteres lógicos tales como <tt style="color: #ff628c!important">TRUE</tt> o <tt style="color: #ff628c!important">FALSE</tt>.
+
+Para verificar al estructura de almacenamiento en <tt>R</tt>, puede emplearse la función <tt>str()</tt>, mientras para observar la estructura de almacenamiento pueden emplearse las funciones <tt>mode()</tt>, <tt>typeof</tt>, y para observar la clase interna del objeto puede emplearse la función <tt>class()</tt>.
+
+<button id="Show1" class="btn btn-secondary">Mostrar Ejemplo en <tt>R</tt></button>
+<button id="Hide1" class="btn btn-info">Ocultar Ejemplo en <tt>R</tt></button>
+<main id="botoncito1"> 
+<p>A continuación se presenta un ejemplo en donde se muestran los diferentes tipos de objetos en <tt>R</tt></p>
+
+<h3 data-toc-skip> Dato tipo numérico </h3> 
+
+<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1"># Numeric</span><span class="w">
+</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">3.3</span><span class="w">
+</span><span class="n">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="w">
+</span></code></pre></section></section>
+
+<section class="highlighter-rouge"><section class="highlight"><pre class="highlight"><code> num 3.3
+</code></pre></section></section>
+
+<h3 data-toc-skip> Dato tipo entero </h3> 
+
+<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1"># Integer</span><span class="w">
+</span><span class="n">b</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">3L</span><span class="w">
+</span><span class="n">str</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="w">
+</span></code></pre></section></section>
+
+<section class="highlighter-rouge"><section class="highlight"><pre class="highlight"><code> int 3
+</code></pre></section></section>
+
+<h3 data-toc-skip> Dato tipo lógico </h3> 
+
+<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1"># Complex</span><span class="w">
+</span><span class="n">c</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="m">0+0.2i</span><span class="p">)</span><span class="w">
+</span><span class="n">str</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="w">
+</span></code></pre></section></section>
+
+<section class="highlighter-rouge"><section class="highlight"><pre class="highlight"><code> cplx 3+0.2i
+</code></pre></section></section>
+
+<h3 data-toc-skip> Dato tipo carácter </h3> 
+
+<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1"># Character</span><span class="w">
+</span><span class="n">d</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s2">"Ejemplo :D"</span><span class="w">
+</span><span class="n">str</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="w">
+</span></code></pre></section></section>
+
+<section class="highlighter-rouge"><section class="highlight"><pre class="highlight"><code> chr "Ejemplo :D"
+</code></pre></section></section>
+
+<h3 data-toc-skip> Dato tipo factor </h3> 
+
+<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1"># Factor</span><span class="w">
+</span><span class="n">e</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">factor</span><span class="p">(</span><span class="s2">"Otro ejemplo :o"</span><span class="p">)</span><span class="w">
+</span><span class="n">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="w">
+</span></code></pre></section></section>
+
+<section class="highlighter-rouge"><section class="highlight"><pre class="highlight"><code> Factor w/ 1 level "Otro ejemplo :o": 1
+</code></pre></section></section>
+
+<h3 data-toc-skip> Dato tipo ordinal </h3> 
+
+<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1"># Ordered</span><span class="w">
+</span><span class="n">f</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ordered</span><span class="p">(</span><span class="s2">"Uno más &gt;:o"</span><span class="p">)</span><span class="w">
+</span><span class="n">str</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="w">
+</span></code></pre></section></section>
+
+<section class="highlighter-rouge"><section class="highlight"><pre class="highlight"><code> Ord.factor w/ 1 level "Uno más &gt;:o": 1
+</code></pre></section></section>
+
+<h3 data-toc-skip> Dato tipo lógico </h3> 
+
+<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1"># logic</span><span class="w">
+</span><span class="n">g</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">FALSE</span><span class="w">
+</span><span class="n">str</span><span class="p">(</span><span class="n">g</span><span class="p">)</span><span class="w">
+</span></code></pre></section></section>
+
+<section class="highlighter-rouge"><section class="highlight"><pre class="highlight"><code> logi FALSE
+</code></pre></section></section>
+
+```{r eval=FALSE, echo=FALSE}
+# Numeric
+a <- 3.3 
+str(a)
+
+# Integer
+b <- 3L 
+str(b)
+
+# Complex
+c <- 3+0.2i
+str(c)
+
+# Character
+d <- "Ejemplo :D"
+str(d)
+
+# Factor
+e <- factor("Otro ejemplo :o")
+str(e)
+
+# Ordered
+f <- ordered("Uno más >:o")
+str(f)
+
+# Logic
+g <- FALSE
+str(g)
+```
+
+</main>
+
+### Clases de objetos
+Adicionalmente, con el fin de organizar los datos, se presentan algunas de las clases de objetos más comúnmente usados en <tt>R</tt> 
+
+* **Vector:** este objeto admite datos numéricos, caracteres, complejos o lógicos, pero solo permite un solo tipo de dato a la vez. Puede construirse mediante la función `c()`.
+
+<h4 align="center"> Representación de un Vector </h4>
+![](../../EstadisticaI/images/vector.jpg){ width=60% }
+
+<button id="Show4" class="btn btn-secondary">Mostrar Ejemplos de <tt>R</tt></button>
+<button id="Hide4" class="btn btn-info">Ocultar Ejemplos de <tt>R</tt></button>
+<main id="botoncito4"> 
+<h3 data-toc-skip> Solución en <tt>R</tt> </h3> 
+
+<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="n">vecN</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">-6.2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">-3</span><span class="p">)</span><span class="w">  </span><span class="c1"># Númerico</span><span class="w">
+</span><span class="n">vecC</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span><span class="w"> </span><span class="s2">"c"</span><span class="p">,</span><span class="w"> </span><span class="s2">"a"</span><span class="p">,</span><span class="w"> </span><span class="s2">"b"</span><span class="p">,</span><span class="w"> </span><span class="s2">"c"</span><span class="p">,</span><span class="w"> </span><span class="s2">"a"</span><span class="p">)</span><span class="w">  </span><span class="c1"># Alfanumérico</span><span class="w">
+</span><span class="n">vecL</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="nb">F</span><span class="p">,</span><span class="w"> </span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="kc">NA</span><span class="p">,</span><span class="w"> </span><span class="nb">F</span><span class="p">,</span><span class="w"> </span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="nb">F</span><span class="p">)</span><span class="w">  </span><span class="c1"># Lógico</span><span class="w">
+</span></code></pre></section></section>
+
+</main>
+
+* **Matriz:** este objeto admite datos numéricos, caracteres, complejos o lógicos, pero solo permite un solo tipo de dato a la vez. Puede construirse mediante la función `matrix()`.
+
+<h4 align="center"> Representación de un Matriz </h4>
+![](../../EstadisticaI/images/matrix.jpg){ width=60% }
+
+<button id="Show5" class="btn btn-secondary">Mostrar Ejemplos de <tt>R</tt></button>
+<button id="Hide5" class="btn btn-info">Ocultar Ejemplos de <tt>R</tt></button>
+<main id="botoncito5"> 
+<h3 data-toc-skip> Solución en <tt>R</tt> </h3> 
+
+<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="n">matN</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">),</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">byrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">  </span><span class="c1"># Númerico      </span><span class="w">
+</span><span class="n">matC</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"a"</span><span class="p">,</span><span class="w"> </span><span class="s2">"c"</span><span class="p">,</span><span class="w"> </span><span class="s2">"a"</span><span class="p">,</span><span class="w"> </span><span class="s2">"b"</span><span class="p">,</span><span class="w"> </span><span class="s2">"c"</span><span class="p">,</span><span class="w"> </span><span class="s2">"a"</span><span class="p">),</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">byrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">F</span><span class="p">)</span><span class="w">  </span><span class="c1"># Alfanumérico</span><span class="w">
+</span><span class="n">matL</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">vecL</span><span class="p">,</span><span class="w"> </span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="nb">F</span><span class="p">),</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">ncol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">byrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">F</span><span class="p">)</span><span class="w">  </span><span class="c1"># Lógico</span><span class="w">
+</span><span class="n">rownames</span><span class="p">(</span><span class="n">matN</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"F1"</span><span class="p">,</span><span class="w"> </span><span class="s2">"F2"</span><span class="p">,</span><span class="w"> </span><span class="s2">"bla"</span><span class="p">)</span><span class="w">  </span><span class="c1"># Poner nombre filas</span><span class="w">
+</span><span class="n">colnames</span><span class="p">(</span><span class="n">matN</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s2">"D:"</span><span class="p">,</span><span class="w"> </span><span class="s2">"C2"</span><span class="p">)</span><span class="w">  </span><span class="c1"># Poner nombre columnas</span><span class="w">
+</span><span class="n">matV</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">-5</span><span class="p">,</span><span class="w"> </span><span class="m">-6</span><span class="p">,</span><span class="w"> </span><span class="m">8.1</span><span class="p">,</span><span class="w"> </span><span class="m">12.3</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">-1</span><span class="p">),</span><span class="w"> </span><span class="n">nrow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">)</span><span class="w">  </span><span class="c1"># Crear vector con función matrix</span><span class="w">
+</span></code></pre></section></section>
+
+</main>
+
+* **Marco de Datos:** Permite datos numéricos, caracteres, complejos o lógicos, además de permitir múltiples tipos por objeto a la vez. Puede construirse mediante la función `data.frame()`.
+
+<h4 align="center"> Representación de un Marco de Datos </h4>
+![](../../EstadisticaI/images/dataframe.jpg){ width=60% }
+
+<button id="Show6" class="btn btn-secondary">Mostrar Ejemplos de <tt>R</tt></button>
+<button id="Hide6" class="btn btn-info">Ocultar Ejemplos de <tt>R</tt></button>
+<main id="botoncito6"> 
+<h3 data-toc-skip> Solución en <tt>R</tt> </h3> 
+
+<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="n">dataf</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.frame</span><span class="p">(</span><span class="n">cbind</span><span class="p">(</span><span class="n">vecN</span><span class="p">,</span><span class="w"> </span><span class="n">vecC</span><span class="p">,</span><span class="w"> </span><span class="n">vecL</span><span class="p">))</span><span class="w">
+</span><span class="c1"># Las funciones cbind() y rbind() combinan vectores, matrices o data-frame</span><span class="w">
+</span><span class="c1"># por columna o fila, respectivamente.</span><span class="w">
+</span></code></pre></section></section>
+
+</main>
+
+* **Arreglos:** Permite datos numéricos, caracteres, complejos o lógicos, pero solo permite un solo tipo de dato a la vez. Puede construirse mediante la función `array()`.
+
+<h4 align="center"> Representación de un Arreglo </h4>
+![](../../EstadisticaI/images/array.jpg){ width=60% }
+
+<button id="Show7" class="btn btn-secondary">Mostrar Ejemplos de <tt>R</tt></button>
+<button id="Hide7" class="btn btn-info">Ocultar Ejemplos de <tt>R</tt></button>
+<main id="botoncito7"> 
+<h3 data-toc-skip> Solución en <tt>R</tt> </h3> 
+
+<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="n">arrN</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">),</span><span class="w"> </span><span class="n">dim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">))</span><span class="w">  </span><span class="c1"># Númerico</span><span class="w">
+</span><span class="n">arrC</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">vecC</span><span class="p">,</span><span class="w"> </span><span class="s2">"o"</span><span class="p">,</span><span class="w"> </span><span class="s2">"m"</span><span class="p">),</span><span class="w"> </span><span class="n">dim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">))</span><span class="w">  </span><span class="c1"># Alfanumérico</span><span class="w">
+</span><span class="n">arrL</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">vecL</span><span class="p">,</span><span class="w"> </span><span class="nb">F</span><span class="p">,</span><span class="w"> </span><span class="nb">F</span><span class="p">,</span><span class="w"> </span><span class="kc">NA</span><span class="p">,</span><span class="w"> </span><span class="nb">F</span><span class="p">,</span><span class="w"> </span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="kc">NA</span><span class="p">),</span><span class="w"> </span><span class="n">dim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">))</span><span class="w">  </span><span class="c1"># Lógico</span><span class="w">
+</span><span class="n">arrV</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">-5</span><span class="p">,</span><span class="w"> </span><span class="m">-6</span><span class="p">,</span><span class="w"> </span><span class="m">8.1</span><span class="p">,</span><span class="w"> </span><span class="m">12.3</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">-1</span><span class="p">))</span><span class="w">  </span><span class="c1"># Crear vector con función array</span><span class="w">
+</span><span class="n">arrM</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">array</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vecC</span><span class="p">,</span><span class="w"> </span><span class="n">dim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">))</span><span class="w">  </span><span class="c1"># Crear matriz con función array</span><span class="w">
+</span></code></pre></section></section>
+
+</main>
+
+* **Listas:** Permite datos numéricos, caracteres, complejos, lógicos, funciones, expresiones, etc, además de permitir múltiples tipos por objetos a la vez. Puede construirse mediante la función `list()`.
+
+<h4 align="center"> Representación de listas </h4>
+![](../../EstadisticaI/images/list.jpg)
+
+<button id="Show8" class="btn btn-secondary">Mostrar Ejemplos de <tt>R</tt></button>
+<button id="Hide8" class="btn btn-info">Ocultar Ejemplos de <tt>R</tt></button>
+<main id="botoncito8"> 
+<h3 data-toc-skip> Solución en <tt>R</tt> </h3> 
+
+<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="n">listica</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">dataf</span><span class="p">,</span><span class="w"> </span><span class="n">matN</span><span class="p">,</span><span class="w"> </span><span class="nf">expression</span><span class="p">(</span><span class="n">beta</span><span class="p">))</span><span class="w">
+</span></code></pre></section></section>
+
+</main>
+
+### Operadores aritméticos y precedencias
+Existen diferentes operadores aritméticos que pueden emplearse en los lenguajes de programación. Estos se resumen en la siguiente tabla.
+
+```{r echo=FALSE}
+library(kableExtra)
+
+datos <- cbind(
+  "Operación" = c("Potencia", "Producto", "División", "División Entera", "Módulo o Resto", "Suma", "Resta"),
+  "Operador en R" = c("^", "*", "/", "%/%", "%%", "+", "-"),
+  "Asociatividad" = c("Por la derecha", "Por la izquierda", "Por la izquierda", "Por la izquierda", "Por la izquierda", "Por la izquierda", "Por la izquierda"),
+  "Precedencia" = c(1, 2, 2, 2, 2, 3, 3))
+
+kable(datos, 
+  format = "html", booktabs = T) %>%
+kable_styling("striped", full_width = F)
+```
+
+Como se observa, existen operadores que poseen el mismo nivel de prioridad, y por tanto éstos se ejecuta de izquierda a derecha. Para evitar problemas en los cálculos para operadores del mismo nivel de precedencia, se aconseja emplear el paréntesis, con el fin de modificar el orden de las operaciones.
+
+### Operadores lógicos
+También es posible que se quieran realizar operaciones lógicas entre objetos cuando se realiza programación en los diferentes lenguajes, ya sea para establecer condicionales, o para hacer algunas verificaciones. Estos se resumen en la siguiente tabla.
+
+```{r echo=FALSE}
+datos2 <- cbind(
+  "Operación" = c("Igual que", "Distinto que", "Menor que", "Menor o igual que", "Mayor que", "Mayor o igual que", "Conjunción", "Disyunción", "Negación", "Asignación"),
+  "Operador en R" = c("==", "!=", "<", "<=", ">", ">=", "&", "|", "!", "<-"),
+  "Precedencia" = c(4, 4, 4, 4, 4, 4, 5, 5, 6, 7))
+
+kable(datos2, 
+  format = "html", booktabs = T) %>%
+kable_styling("striped", full_width = F)
+```
+
+### Funciones matemáticas
+Hay una gran variedad de funciones matemáticas que suelen usarse en la práctica, y es por ello que se listan las funciones aritméticas que suelen emplearse comúnmente por lenguaje de programación. Estos se resumen en la siguiente tabla.
+
+```{r echo=FALSE}
+datos2 <- cbind(
+  "Operación" = c("Valor absoluto", "Raíz cuadrada", "Redondear", "Techo", "Piso", "Exponencial", "Logaritmo", "Factorial", "Gamma", "Seno", "Coseno", "Tangente"),
+  "Operador en R" = c("abs()", "sqrt()", "round()", "ceiling()", "floor()", "exp()", "log()", "factorial()", "gamma()", "sin()", "cos()", "tan()"))
+
+kable(datos2, 
+  format = "html", booktabs = T) %>%
+kable_styling("striped", full_width = F)
+```
+
+### Ayuda sobre funciones
+Para obtener información sobre una función concreta o carácter en <tt>R</tt>, existen dos métodos que permiten abrir la ventana de ayuda, el primero es mediante la función <tt>help()</tt>, la segunda es mediante el signo `?`. Para ilustrar dichos métodos, empleamos la función <tt>if()</tt> y el carácter <tt>+</tt>, para consultar su ventana de ayuda.
+
+<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="n">help</span><span class="p">(</span><span class="s2">"if"</span><span class="p">)</span><span class="w">  </span><span class="c1"># Primer método</span><span class="w">
+</span><span class="n">?</span><span class="s2">"+"</span><span class="w">        </span><span class="c1"># Segundo método</span><span class="w">
+</span></code></pre></section></section>
+
+```{r eval=FALSE, echo=FALSE}
+help("if")     # Primer método
+?"+"           # Segundo método
+```
+
+
+## Caso de estudio
 Para ilustrar como realizar los diferentes métodos de resúmenes numéricos, tabulares y gráficos, se empleará la siguiente base de datos de [EjemploDescriptiva](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/EjemploDescriptiva.xlsx){:target="_blank"}, la cual contiene las siguientes variables
 
 * **<tt>Municipio:</tt>** Municipio de residencia de la persona.
@@ -57,13 +360,13 @@ Para ilustrar como realizar los diferentes métodos de resúmenes numéricos, ta
 
 Los datos contenidos en la base de datos se presentan a continuación:
 
-<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -3rem; margin-top: -3rem;"><table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;"><thead><tr><th style="text-align:left;">Municipio</th><th style="text-align:right;">Estrato</th><th style="text-align:right;">Edad</th><th style="text-align:right;">Altura</th><th style="text-align:right;">Peso</th><th style="text-align:right;">Salario</th><th style="text-align:left;">SatisTrabajo</th><th style="text-align:left;">DeporFavorito</th></tr></thead><tbody><tr><td style="text-align:left;">Caldas</td><td style="text-align:right;">5</td><td style="text-align:right;">17</td><td style="text-align:right;">1.77</td><td style="text-align:right;">66</td><td style="text-align:right;">1635100</td><td style="text-align:left;">Muy satisfecho</td><td style="text-align:left;">Fútbol</td></tr><tr><td style="text-align:left;">Bello</td><td style="text-align:right;">4</td><td style="text-align:right;">27</td><td style="text-align:right;">1.65</td><td style="text-align:right;">90</td><td style="text-align:right;">1752500</td><td style="text-align:left;">Insatisfecho</td><td style="text-align:left;">Fútbol</td></tr><tr><td style="text-align:left;">Medellín</td><td style="text-align:right;">1</td><td style="text-align:right;">18</td><td style="text-align:right;">1.57</td><td style="text-align:right;">66</td><td style="text-align:right;">1858400</td><td style="text-align:left;">Satisfecho</td><td style="text-align:left;">Baloncesto</td></tr><tr><td style="text-align:left;">Caldas</td><td style="text-align:right;">4</td><td style="text-align:right;">22</td><td style="text-align:right;">1.84</td><td style="text-align:right;">87</td><td style="text-align:right;">2131400</td><td style="text-align:left;">Muy satisfecho</td><td style="text-align:left;">Fútbol</td></tr><tr><td style="text-align:left;">La Estrella</td><td style="text-align:right;">3</td><td style="text-align:right;">20</td><td style="text-align:right;">1.86</td><td style="text-align:right;">89</td><td style="text-align:right;">1874800</td><td style="text-align:left;">Satisfecho</td><td style="text-align:left;">Tenis</td></tr><tr><td style="text-align:left;">Caldas</td><td style="text-align:right;">3</td><td style="text-align:right;">22</td><td style="text-align:right;">1.74</td><td style="text-align:right;">90</td><td style="text-align:right;">2933100</td><td style="text-align:left;">Muy satisfecho</td><td style="text-align:left;">Fútbol</td></tr><tr><td style="text-align:left;">Itagüí</td><td style="text-align:right;">1</td><td style="text-align:right;">20</td><td style="text-align:right;">1.91</td><td style="text-align:right;">79</td><td style="text-align:right;">1637200</td><td style="text-align:left;">Muy insatisfecho</td><td style="text-align:left;">Fútbol</td></tr><tr><td style="text-align:left;">La Estrella</td><td style="text-align:right;">3</td><td style="text-align:right;">27</td><td style="text-align:right;">1.77</td><td style="text-align:right;">88</td><td style="text-align:right;">1171200</td><td style="text-align:left;">Indiferente</td><td style="text-align:left;">Baloncesto</td></tr><tr><td style="text-align:left;">Itagüí</td><td style="text-align:right;">2</td><td style="text-align:right;">20</td><td style="text-align:right;">1.58</td><td style="text-align:right;">61</td><td style="text-align:right;">2574700</td><td style="text-align:left;">Muy satisfecho</td><td style="text-align:left;">Baloncesto</td></tr><tr><td style="text-align:left;">Bello</td><td style="text-align:right;">4</td><td style="text-align:right;">39</td><td style="text-align:right;">1.81</td><td style="text-align:right;">70</td><td style="text-align:right;">2739000</td><td style="text-align:left;">Satisfecho</td><td style="text-align:left;">Tenis</td></tr><tr><td style="text-align:left;">La Estrella</td><td style="text-align:right;">6</td><td style="text-align:right;">16</td><td style="text-align:right;">1.69</td><td style="text-align:right;">78</td><td style="text-align:right;">2887800</td><td style="text-align:left;">Indiferente</td><td style="text-align:left;">Baloncesto</td></tr><tr><td style="text-align:left;">Bello</td><td style="text-align:right;">2</td><td style="text-align:right;">40</td><td style="text-align:right;">1.93</td><td style="text-align:right;">83</td><td style="text-align:right;">2559600</td><td style="text-align:left;">Muy satisfecho</td><td style="text-align:left;">Fútbol</td></tr><tr><td style="text-align:left;">Medellín</td><td style="text-align:right;">2</td><td style="text-align:right;">26</td><td style="text-align:right;">1.93</td><td style="text-align:right;">91</td><td style="text-align:right;">1906600</td><td style="text-align:left;">Satisfecho</td><td style="text-align:left;">Fútbol</td></tr><tr><td style="text-align:left;">Medellín</td><td style="text-align:right;">2</td><td style="text-align:right;">21</td><td style="text-align:right;">1.87</td><td style="text-align:right;">61</td><td style="text-align:right;">1299700</td><td style="text-align:left;">Satisfecho
+<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -3rem; margin-top: -3rem; font-size: 100%;"><table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;"><thead><tr><th style="text-align:left;">Municipio</th><th style="text-align:right;">Estrato</th><th style="text-align:right;">Edad</th><th style="text-align:right;">Altura</th><th style="text-align:right;">Peso</th><th style="text-align:right;">Salario</th><th style="text-align:left;">SatisTrabajo</th><th style="text-align:left;">DeporFavorito</th></tr></thead><tbody><tr><td style="text-align:left;">Caldas</td><td style="text-align:right;">5</td><td style="text-align:right;">17</td><td style="text-align:right;">1.77</td><td style="text-align:right;">66</td><td style="text-align:right;">1635100</td><td style="text-align:left;">Muy satisfecho</td><td style="text-align:left;">Fútbol</td></tr><tr><td style="text-align:left;">Bello</td><td style="text-align:right;">4</td><td style="text-align:right;">27</td><td style="text-align:right;">1.65</td><td style="text-align:right;">90</td><td style="text-align:right;">1752500</td><td style="text-align:left;">Insatisfecho</td><td style="text-align:left;">Fútbol</td></tr><tr><td style="text-align:left;">Medellín</td><td style="text-align:right;">1</td><td style="text-align:right;">18</td><td style="text-align:right;">1.57</td><td style="text-align:right;">66</td><td style="text-align:right;">1858400</td><td style="text-align:left;">Satisfecho</td><td style="text-align:left;">Baloncesto</td></tr><tr><td style="text-align:left;">Caldas</td><td style="text-align:right;">4</td><td style="text-align:right;">22</td><td style="text-align:right;">1.84</td><td style="text-align:right;">87</td><td style="text-align:right;">2131400</td><td style="text-align:left;">Muy satisfecho</td><td style="text-align:left;">Fútbol</td></tr><tr><td style="text-align:left;">La Estrella</td><td style="text-align:right;">3</td><td style="text-align:right;">20</td><td style="text-align:right;">1.86</td><td style="text-align:right;">89</td><td style="text-align:right;">1874800</td><td style="text-align:left;">Satisfecho</td><td style="text-align:left;">Tenis</td></tr><tr><td style="text-align:left;">Caldas</td><td style="text-align:right;">3</td><td style="text-align:right;">22</td><td style="text-align:right;">1.74</td><td style="text-align:right;">90</td><td style="text-align:right;">2933100</td><td style="text-align:left;">Muy satisfecho</td><td style="text-align:left;">Fútbol</td></tr><tr><td style="text-align:left;">Itagüí</td><td style="text-align:right;">1</td><td style="text-align:right;">20</td><td style="text-align:right;">1.91</td><td style="text-align:right;">79</td><td style="text-align:right;">1637200</td><td style="text-align:left;">Muy insatisfecho</td><td style="text-align:left;">Fútbol</td></tr><tr><td style="text-align:left;">La Estrella</td><td style="text-align:right;">3</td><td style="text-align:right;">27</td><td style="text-align:right;">1.77</td><td style="text-align:right;">88</td><td style="text-align:right;">1171200</td><td style="text-align:left;">Indiferente</td><td style="text-align:left;">Baloncesto</td></tr><tr><td style="text-align:left;">Itagüí</td><td style="text-align:right;">2</td><td style="text-align:right;">20</td><td style="text-align:right;">1.58</td><td style="text-align:right;">61</td><td style="text-align:right;">2574700</td><td style="text-align:left;">Muy satisfecho</td><td style="text-align:left;">Baloncesto</td></tr><tr><td style="text-align:left;">Bello</td><td style="text-align:right;">4</td><td style="text-align:right;">39</td><td style="text-align:right;">1.81</td><td style="text-align:right;">70</td><td style="text-align:right;">2739000</td><td style="text-align:left;">Satisfecho</td><td style="text-align:left;">Tenis</td></tr><tr><td style="text-align:left;">La Estrella</td><td style="text-align:right;">6</td><td style="text-align:right;">16</td><td style="text-align:right;">1.69</td><td style="text-align:right;">78</td><td style="text-align:right;">2887800</td><td style="text-align:left;">Indiferente</td><td style="text-align:left;">Baloncesto</td></tr><tr><td style="text-align:left;">Bello</td><td style="text-align:right;">2</td><td style="text-align:right;">40</td><td style="text-align:right;">1.93</td><td style="text-align:right;">83</td><td style="text-align:right;">2559600</td><td style="text-align:left;">Muy satisfecho</td><td style="text-align:left;">Fútbol</td></tr><tr><td style="text-align:left;">Medellín</td><td style="text-align:right;">2</td><td style="text-align:right;">26</td><td style="text-align:right;">1.93</td><td style="text-align:right;">91</td><td style="text-align:right;">1906600</td><td style="text-align:left;">Satisfecho</td><td style="text-align:left;">Fútbol</td></tr><tr><td style="text-align:left;">Medellín</td><td style="text-align:right;">2</td><td style="text-align:right;">21</td><td style="text-align:right;">1.87</td><td style="text-align:right;">61</td><td style="text-align:right;">1299700</td><td style="text-align:left;">Satisfecho
 </td><td style="text-align:left;">Baloncesto</td></tr><tr><td style="text-align:left;">Bello</td><td style="text-align:right;">4</td><td style="text-align:right;">23</td><td style="text-align:right;">1.60</td><td style="text-align:right;">84</td><td style="text-align:right;">1950900</td><td style="text-align:left;">Indiferente</td><td style="text-align:left;">Fútbol</td></tr><tr><td style="text-align:left;">Itagüí</td><td style="text-align:right;">3</td><td style="text-align:right;">40</td><td style="text-align:right;">1.91</td><td style="text-align:right;">76</td><td style="text-align:right;">2131900</td><td style="text-align:left;">Satisfecho</td><td style="text-align:left;">Fútbol</td></tr><tr><td style="text-align:left;">La Estrella</td><td style="text-align:right;">6</td><td style="text-align:right;">31</td><td style="text-align:right;">1.79</td><td style="text-align:right;">66</td><td style="text-align:right;">1085400</td><td style="text-align:left;">Indiferente</td><td style="text-align:left;">Voleibol</td></tr><tr><td style="text-align:left;">La Estrella</td><td style="text-align:right;">3</td><td style="text-align:right;">40</td><td style="text-align:right;">1.60</td><td style="text-align:right;">67</td><td style="text-align:right;">1182200</td><td style="text-align:left;">Indiferente</td><td style="text-align:left;">Tenis</td></tr><tr><td style="text-align:left;">Medellín</td><td style="text-align:right;">2</td><td style="text-align:right;">32</td><td style="text-align:right;">1.60</td><td style="text-align:right;">88</td><td style="text-align:right;">2541900</td><td style="text-align:left;">Indiferente</td><td style="text-align:left;">Baloncesto</td></tr><tr><td style="text-align:left;">Caldas</td><td style="text-align:right;">3</td><td style="text-align:right;">33</td><td style="text-align:right;">1.81</td><td style="text-align:right;">65</td><td style="text-align:right;">1333200</td><td style="text-align:left;">Muy satisfecho</td><td style="text-align:left;">Fútbol</td></tr></tbody></table></pre>
 
-### Lectura de datos en <tt>R</tt>
+## Lectura de datos
 Para realizar la lectura de datos en <tt>R</tt> es necesario conocer la extensión que posee el archivo de interés, debido a que <tt>R</tt> **posee diferentes librerías y funciones que permiten la lectura de bases de datos**. En la siguiente tabla se resume el origen, la extensión, la librería, y la función para cargar cada base de datos dependiendo de su extensión.
 
-<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -3rem; margin-top: -3rem; font-size: 120%;">
+<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -3rem; margin-top: -3rem; font-size: 100%;">
 ```{r echo=FALSE}
 library(kableExtra)
 
@@ -85,9 +388,9 @@ options(scipen = 10)
 
 Dado que el conjunto de datos empleados en este ejercicio posee un formato <tt>.xlsx</tt>, se emplea la función <tt>read_xlsx()</tt> de la librería <tt>readxl</tt>. En donde se presenta dos métodos de carga. El primero, para realizar la carga desde un fichero local y la segunda, para realizar la carga de datos en linea, en donde se emplea adicionalmente la función <tt>tempfile()</tt> de base del <tt>R</tt> y la función <tt>download.file()</tt> de la librería <tt>utils</tt> de la base del <tt>R</tt>.
 
-<button id="Show1" class="btn btn-secondary">Mostrar como cargar datos en <tt>R</tt></button>
-<button id="Hide1" class="btn btn-info">Ocultar como cargar datos en <tt>R</tt></button>
-<main id="botoncito1"> 
+<button id="Show9" class="btn btn-secondary">Mostrar como cargar datos en <tt>R</tt></button>
+<button id="Hide9" class="btn btn-info">Ocultar como cargar datos en <tt>R</tt></button>
+<main id="botoncito9"> 
 
 <h3 data-toc-skip> Carga de datos fichero local </h3> 
 <section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1">### Instalar y cargar librerías </span><span class="w">
@@ -139,14 +442,14 @@ datos <- read_xlsx(temp) # Carga la base de datos online
 
 </main>
 
-### Estructura de datos
+## Estructura de datos
 El tipo y clase de los datos juega un papel importante al momento de realizar análisis de los datos, debido a que **su adecuada especificación será la responsable de que el análisis aplicado a la variable sea el adecuado**.
 
 Para observa las clases que poseen los datos, podemos emplear la función <tt>str()</tt>, de la librería <tt>utils</tt> de la base del <tt>R</tt>.
 
-<button id="Show2" class="btn btn-secondary">Mostrar estructura datos en <tt>R</tt></button>
-<button id="Hide2" class="btn btn-info">Ocultar estructura datos en <tt>R</tt></button>
-<main id="botoncito2"> 
+<button id="Show10" class="btn btn-secondary">Mostrar estructura datos en <tt>R</tt></button>
+<button id="Hide10" class="btn btn-info">Ocultar estructura datos en <tt>R</tt></button>
+<main id="botoncito10"> 
 <h3 data-toc-skip> Estructura de los datos </h3> 
 
 <section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1"># Muestra la estructura de la base de datos</span><span class="w">
@@ -182,9 +485,9 @@ El papel de una correcta estructura de datos, se debe a que podrían haber dentr
 * **<tt>as.character()</tt>:** Convierte una variable a tipo caracter (character).
 * **<tt>as.ordered()</tt>:** Convierte una variable a tipo factor asumiendo un orden o jerarquía entre los niveles.
 
-<button id="Show3" class="btn btn-secondary">Mostrar corrección estructura de datos en <tt>R</tt></button>
-<button id="Hide3" class="btn btn-info">Ocultar corrección estructura de datos en <tt>R</tt></button>
-<main id="botoncito3"> 
+<button id="Show11" class="btn btn-secondary">Mostrar corrección estructura de datos en <tt>R</tt></button>
+<button id="Hide11" class="btn btn-info">Ocultar corrección estructura de datos en <tt>R</tt></button>
+<main id="botoncito11"> 
 
 <h3 data-toc-skip> Corrección de estructura de los datos </h3> 
 
@@ -243,9 +546,9 @@ Una alternativa para presentar la información contenida en las medidas estadís
 
 Entre las diferentes funciones que permiten realizar resúmenes numéricos en <tt>R</tt>, se destaca la función <tt>numSummary()</tt> de la librería <tt>RcmdrMisc</tt> y la función <tt>describe()</tt> de la librería <tt>psych</tt>, que presentan diferentes medidas estadísticas para variables tipo numéricas. 
 
-<button id="Show4" class="btn btn-secondary">Mostrar resumen numérico con <tt>RcmdrMisc</tt></button>
-<button id="Hide4" class="btn btn-info">Ocultar resumen numérico con <tt>RcmdrMisc</tt></button>
-<main id="botoncito4"> 
+<button id="Show12" class="btn btn-secondary">Mostrar resumen numérico con <tt>RcmdrMisc</tt></button>
+<button id="Hide12" class="btn btn-info">Ocultar resumen numérico con <tt>RcmdrMisc</tt></button>
+<main id="botoncito12"> 
 
 <h3 data-toc-skip> Resumen numérico con librería <tt>RcmdrMisc</tt> </h3> 
 
@@ -298,9 +601,9 @@ Finalmente, se aprecia que la altura mínima obtenida en la encuesta es de $1.57
 
 </main>
 
-<button id="Show5" class="btn btn-secondary">Mostrar resumen numérico con <tt>psych</tt></button>
-<button id="Hide5" class="btn btn-info">Ocultar resumen numérico con <tt>psych</tt></button>
-<main id="botoncito5"> 
+<button id="Show13" class="btn btn-secondary">Mostrar resumen numérico con <tt>psych</tt></button>
+<button id="Hide13" class="btn btn-info">Ocultar resumen numérico con <tt>psych</tt></button>
+<main id="botoncito13"> 
 
 <h3 data-toc-skip> Resumen numérico con librería <tt>psych</tt> </h3> 
 
@@ -360,9 +663,9 @@ Se aprecia además, que la diferencia entre el rango de las alturas de la encues
 
 También es posible realizar resúmenes numérico por grupos, en donde, para la función <tt>numSummary</tt> de la librería <tt>RcmdrMisc</tt>, es cuestión de agregar el argumento <tt>groups</tt> en donde en este argumento se definirá la variable tipo **factor** para la cual se desea realizar el agrupamiento. Mientras que con la librería <tt>psych</tt> es posible realizar resúmenes numéricos por grupos mediante la función <tt>describeBy</tt> agregando el argumento <tt>group</tt>, siendo este argumento definido por una variable tipo **factor**.
 
-<button id="Show6" class="btn btn-secondary">Mostrar resumen numérico por grupos con <tt>RcmdrMisc</tt></button>
-<button id="Hide6" class="btn btn-info">Ocultar resumen numérico por grupos con <tt>RcmdrMisc</tt></button>
-<main id="botoncito6"> 
+<button id="Show14" class="btn btn-secondary">Mostrar resumen numérico por grupos con <tt>RcmdrMisc</tt></button>
+<button id="Hide14" class="btn btn-info">Ocultar resumen numérico por grupos con <tt>RcmdrMisc</tt></button>
+<main id="botoncito14"> 
 
 <h3 data-toc-skip> Resumen numérico por grupos con librería <tt>RcmdrMisc</tt> </h3> 
 
@@ -400,9 +703,9 @@ Entre los deportes, se aprecia que la distribución del peso de las personas que
 
 </main>
 
-<button id="Show7" class="btn btn-secondary">Mostrar resumen numérico por grupos con <tt>psych</tt></button>
-<button id="Hide7" class="btn btn-info">Ocultar resumen numérico por grupos con <tt>psych</tt></button>
-<main id="botoncito7"> 
+<button id="Show15" class="btn btn-secondary">Mostrar resumen numérico por grupos con <tt>psych</tt></button>
+<button id="Hide15" class="btn btn-info">Ocultar resumen numérico por grupos con <tt>psych</tt></button>
+<main id="botoncito15"> 
 
 <h3 data-toc-skip> Resumen numérico por grupos con librería <tt>psych</tt> </h3> 
 
@@ -466,9 +769,9 @@ Para presentar de forma individual o grupal las características de las variable
 
 Adicionalmente, es posible agregar los totales a las tablas mediante el empleo de la función <tt>addmargins</tt> de la librería base de <tt>R</tt>.
 
-<button id="Show8" class="btn btn-secondary">Mostrar tabla de frecuencias absolutas una vía en <tt>R</tt></button>
-<button id="Hide8" class="btn btn-info">Ocultar tabla de frecuencias absolutas una vía en <tt>R</tt></button>
-<main id="botoncito8"> 
+<button id="Show16" class="btn btn-secondary">Mostrar tabla de frecuencias absolutas una vía en <tt>R</tt></button>
+<button id="Hide16" class="btn btn-info">Ocultar tabla de frecuencias absolutas una vía en <tt>R</tt></button>
+<main id="botoncito16"> 
 
 <h3 data-toc-skip> Tabla de frecuencias absoluta una vía </h3> 
 
@@ -508,9 +811,9 @@ addmargins(tabla1via)
 
 </main>
 
-<button id="Show9" class="btn btn-secondary">Mostrar tabla de frecuencias absolutas dos vías en <tt>R</tt></button>
-<button id="Hide9" class="btn btn-info">Ocultar tabla de frecuencias absolutas dos vías en <tt>R</tt></button>
-<main id="botoncito9"> 
+<button id="Show17" class="btn btn-secondary">Mostrar tabla de frecuencias absolutas dos vías en <tt>R</tt></button>
+<button id="Hide17" class="btn btn-info">Ocultar tabla de frecuencias absolutas dos vías en <tt>R</tt></button>
+<main id="botoncito17"> 
 
 <h3 data-toc-skip> Tabla de frecuencias absoluta dos vías </h3> 
 
@@ -566,9 +869,9 @@ Una alternativa para presentar la información contenida dentro de una variable 
 
 Para la realización de tablas de frecuencias relativas, se emplea la función <tt>prop.table(tabla)</tt> de base de <tt>R</tt>, en donde **<tt>tabla</tt> hace referencia a la tabla de frecuencias absolutas creada anteriormente en la subsección anterior**.
 
-<button id="Show10" class="btn btn-secondary">Mostrar tabla de frecuencias relativas una vía en <tt>R</tt></button>
-<button id="Hide10" class="btn btn-info">Ocultar tabla de frecuencias relativas una vía en <tt>R</tt></button>
-<main id="botoncito10"> 
+<button id="Show18" class="btn btn-secondary">Mostrar tabla de frecuencias relativas una vía en <tt>R</tt></button>
+<button id="Hide18" class="btn btn-info">Ocultar tabla de frecuencias relativas una vía en <tt>R</tt></button>
+<main id="botoncito18"> 
 
 <h3 data-toc-skip> Tabla de frecuencias relativas una vía </h3> 
 
@@ -609,9 +912,9 @@ addmargins(prop1via)
 
 </main>
 
-<button id="Show11" class="btn btn-secondary">Mostrar tabla de frecuencias relativas dos vías en <tt>R</tt></button>
-<button id="Hide11" class="btn btn-info">Ocultar tabla de frecuencias relativas dos vías en <tt>R</tt></button>
-<main id="botoncito11"> 
+<button id="Show19" class="btn btn-secondary">Mostrar tabla de frecuencias relativas dos vías en <tt>R</tt></button>
+<button id="Hide19" class="btn btn-info">Ocultar tabla de frecuencias relativas dos vías en <tt>R</tt></button>
+<main id="botoncito19"> 
 
 <h3 data-toc-skip> Tabla de frecuencias relativas dos vías </h3> 
 
@@ -688,7 +991,7 @@ kable(tablita,
 kable_styling("striped", full_width = F)
 ```
 
-<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -3rem; margin-top: -3rem; font-size: 120%;"><table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;"><thead>
+<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -3rem; margin-top: -3rem;"><table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;"><thead>
   <tr>
    <th style="text-align:left;"> Categoría</th>
    <th style="text-align:left; text-align: center" colspan="4"> Tipo de Gráficos </th>
@@ -698,19 +1001,30 @@ kable_styling("striped", full_width = F)
 <tr>
 <td style="text-align:left;"> <a href="http://jiperezga.github.io/EstadisticaI/EstIClase03.html#una-variable-cuantitativa" style="
     color: #ffffff;
-"><b><u>Una Cuantitativa</u></b></a></td><td style="text-align:center;">Diagrama de
-tallo y hojas</td>
-<td style="text-align:center;">Gráfico de 
-caja y bigotes</td>
-<td style="text-align:center;">Histograma</td>
-<td style="text-align:center;">Densidad</td>
+"><b><u>Una Cuantitativa</u></b></a></td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/EstIClase03.html#diagrama-de-tallo-y-hojas" style="
+    color: #ffffff;
+">Diagrama de
+tallo y hojas</a></td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/EstIClase03.html#gráfico-de-caja-y-bigotes" style="
+    color: #ffffff;
+">Gráfico de 
+caja y bigotes</a></td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/EstIClase03.html#histograma" style="
+    color: #ffffff;
+">Histograma</a></td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/EstIClase03.html#densidad" style="
+    color: #ffffff;
+">Densidad</a></td>
 </tr>
 <tr>
 <td style="text-align:left;"> <a href="https://jiperezga.github.io/EstadisticaI/EstIClase03.html#dos-variables-cuantitativas" style="
     color: #ffffff;
 "><b><u>Dos Cuantitativas</u></b></a></td>
-<td style="text-align:center;">Diagrama de
-dispersión</td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/EstIClase03.html#gráfico-de-dispersión" style="
+    color: #ffffff;
+">Diagrama de
+dispersión</a></td>
 <td style="text-align:center;"></td>
 
 <td style="text-align:center;">
@@ -721,8 +1035,10 @@ dispersión</td>
 <td style="text-align:left;"> <a href="https://jiperezga.github.io/EstadisticaI/EstIClase03.html#más-de-dos-variables-cuantitativas" style="
     color: #ffffff;
 "><b><u>Más de Dos Cuantitativas</u></b></a></td>
-<td style="text-align:center;">Matriz de
-dispersión</td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/EstIClase03.html#matriz-de-dispersión" style="
+    color: #ffffff;
+">Matriz de
+dispersión</a></td>
 
 <td style="text-align:left;">
 </td><td style="text-align:left;">
@@ -734,41 +1050,57 @@ dispersión</td>
 <td style="text-align:left;"> <a href="https://jiperezga.github.io/EstadisticaI/EstIClase03.html#una-variable-cualitativa" style="
     color: #ffffff;
 "><b><u>Una Cualitativa</u></b></a></td>
-<td style="text-align:center;">Gráfico de
-barras
-</td>
-<td style="text-align:center;">Gráfico de
-pareto
-</td>
-<td style="text-align:center;">Gráfico de
-pastel
-</td>
-<td style="text-align:center;">Gráfico de
-puntos
-</td>    
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/EstIClase03.html#gráfico-de-barras" style="
+    color: #ffffff;
+">Gráfico de
+barras</a></td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/EstIClase03.html#gráfico-de-pareto" style="
+    color: #ffffff;
+">Gráfico de
+pareto</a></td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/EstIClase03.html#gráfico-de-pastel" style="
+    color: #ffffff;
+">Gráfico de
+pastel</a></td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/EstIClase03.html#gráfico-de-puntos" style="
+    color: #ffffff;
+">Gráfico de
+puntos</a></td>    
 </tr>
 <tr>
 <td style="text-align:left;"> <a href="https://jiperezga.github.io/EstadisticaI/EstIClase03.html#dos-variables-cualitativas" style="
     color: #ffffff;
 "><b><u>Dos Cualitativas</u></b></a></td>
-<td style="text-align:center;">Gráfico de
-barras</td>
-<td style="text-align:center;">Gráfico de
-puntos</td>
-<td style="text-align:center;">Gráfico de
-balón</td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/EstIClase03.html#gráfico-de-barras-1" style="
+    color: #ffffff;
+">Gráfico de
+barras</a></td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/EstIClase03.html#gráfico-de-puntos-1" style="
+    color: #ffffff;
+">Gráfico de
+puntos</a></td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/EstIClase03.html#gráfico-de-balón" style="
+    color: #ffffff;
+">Gráfico de
+balón</a></td>
 <td style="text-align:left;"></td>
 </tr>
 <tr>
 <td style="text-align:left;"> <a href="https://jiperezga.github.io/EstadisticaI/EstIClase03.html#cualitativa---cuantitativa" style="
     color: #ffffff;
 "><b><u>Cualitativa - Cuantitativa</u></b></a></td>
-<td style="text-align:center;">Gráfico de
-caja y bigotes</td>
-<td style="text-align:center;">Gráfico de
-medias</td>
-<td style="text-align:center;">Gráfico de
-dispersión</td><td style="text-align:center;">
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/EstIClase03.html#gráfico-de-caja-y-bigotes-1" style="
+    color: #ffffff;
+">Gráfico de
+caja y bigotes</a></td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/EstIClase03.html#gráfico-de-medias" style="
+    color: #ffffff;
+">Gráfico de
+medias</a></td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/EstIClase03.html#gráfico-de-dispersión-1" style="
+    color: #ffffff;
+">Gráfico de
+dispersión</a></td><td style="text-align:center;">
 </td>
 
 </tr>
@@ -781,9 +1113,9 @@ dispersión</td><td style="text-align:center;">
 #### Diagrama de tallo y hojas
 Este gráfico sirve como medida de resumen de los datos, **brinda información de valores máximos, mínimos, área en donde más se centran los datos, dispersión, datos atípicos y asimetría**. A pesar de toda la información que puede brindar esta gráfica, su uso es muy limitado, ya que en situaciones en las cuales el rango de la variable es muy grande, ésta no permite visualidad con claridad dichos comportamientos. Este gráfico puede ser realizado mediante la función <tt>stem()</tt> de la librería <tt>graphics</tt> de la base del <tt>R</tt>.
 
-<button id="Show12" class="btn btn-secondary">Mostrar diagrama de tallo y hojas en <tt>R</tt></button>
-<button id="Hide12" class="btn btn-info">Ocultar diagrama de tallo y hojas en <tt>R</tt></button>
-<main id="botoncito12"> 
+<button id="Show20" class="btn btn-secondary">Mostrar diagrama de tallo y hojas en <tt>R</tt></button>
+<button id="Hide20" class="btn btn-info">Ocultar diagrama de tallo y hojas en <tt>R</tt></button>
+<main id="botoncito20"> 
 
 <h3 data-toc-skip> Diagrama de tallo y hojas </h3> 
 
@@ -822,9 +1154,9 @@ Este gráfico sirve para presentar de forma visual, datos numéricos a través d
 
 Este gráfico puede ser realizado mediante la función <tt>boxplot()</tt> de la librería <tt>graphics</tt> de la base del <tt>R</tt>. 
 
-<button id="Show13" class="btn btn-secondary">Mostrar gráfico de caja y bigotes en <tt>R</tt></button>
-<button id="Hide13" class="btn btn-info">Ocultar gráfico de caja y bigotes en <tt>R</tt></button>
-<main id="botoncito13"> 
+<button id="Show21" class="btn btn-secondary">Mostrar gráfico de caja y bigotes en <tt>R</tt></button>
+<button id="Hide21" class="btn btn-info">Ocultar gráfico de caja y bigotes en <tt>R</tt></button>
+<main id="botoncito21"> 
 
 <h3 data-toc-skip> Gráfico de caja y bigotes </h3> 
 
@@ -847,47 +1179,12 @@ boxplot(datos$Peso, horizontal = T, xlab = "Peso (kg)", main = "Boxplot del Peso
 
 </main>
 
-Adicionalmente puede agregarse el argumento <tt>notch = TRUE</tt>, lo cual provoca una muesca en cada lado de la caja. @Mcgill1978 señala que **estas muescas representan un intervalo del 95% de confianza alrededor de la mediana**, y que son construidas a partir de la ecuación
-
-`\begin{align*}
-\tilde{X}\pm 1.57\times \frac{IQR}{\sqrt{n}}
-\end{align*}`
-
-<button id="Show24" class="btn btn-secondary">Mostrar gráfico de caja y bigotes con intervalo de confianza para la mediana en <tt>R</tt></button>
-<button id="Hide24" class="btn btn-info">Ocultar gráfico de caja y bigotes con intervalo de confianza para la mediana en <tt>R</tt></button>
-<main id="botoncito24"> 
-
-<h3 data-toc-skip> Gráfico de caja y bigotes con intervalo de confianza del 95% para la mediana </h3> 
-
-<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1"># Construcción de gráfico de caja y bigotes</span><span class="w">
-</span><span class="c1"># con intervalo del 95% para la mediana</span><span class="w">
-</span><span class="kc">boxplot</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">Peso</span><span class="p">,</span><span class="w"> </span><span class="n">horizontal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">,</span><span class="w"> </span><span class="n">xlab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Peso (kg)"</span><span class="p">,</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Boxplot del Peso de las Personas"</span><span class="p">,</span><span class="w"> 
-    </span><span class="n">col</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"lightblue"</span><span class="p">,</span><span class="w"> </span><span class="n">notch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">T</span><span class="p">)</span><span class="w">
-</span></code></pre></section></section>
-
-<p><img src="../../EstadisticaI/images/Clase03unnamed-chunk-20-1.png" alt=""></p>
-
-```{r eval=FALSE, echo=FALSE}
-# Construcción de diagrama de caja y bigotes 
-# con intervalo del 95% para la mediana
-boxplot(datos$Peso, horizontal = T, xlab = "Peso (kg)", main = "Boxplot del Peso de las Personas", col = "lightblue", notch = T)
-```
-
-<h3 data-toc-skip> Interpretación </h3> 
-
-<p> En el gráfico anterior se presenta un diagrama de caja y bigotes con muescas, para presentar el comportamiento de los pesos de las personas encuestadas a través de medidas de localización y un intervalo de confianza del $95\%$ para la mediana. En éste se evidencia que la mediana del peso de las personas es aproximadamente $79$ kg, con un intervalo de confianza del $95\%$ aproximado entre $71$ y $86$ kg. Adicionalmente no se observan puntos atípicos en el gráfico, y por ello, se concluye que no hay personas que tengan un peso extremadamente bajo o uno extremadamente alto, respecto al resto de personas. <br>
-<br>
-También se observa que la persona con menor peso posee cerca de $61$ kg, mientras que la mayor un peso de $91$ kg, con primer y tercer cuartil cercanos a $66$ y $88$ kg, respectivamente, lo cual ofrece un rango intercuartílico cercano a $22$ kg, mostrando con ellos que hay una dispersión considerable entre el conjunto de pesos de los encuestados.
-</p>
-
-</main>
-
 #### Histograma
 Este gráfico muestra la distribución de frecuencia o densidades del grupo de observaciones, **brinda información sobre el valor más probables, la dispersión, la asimetría y valores extremos**. Adicionalmente, tiene la ventaja de que su interpretación es muy intuitiva y por tanto es de los gráficos más preferidos para resumir información. Este gráfico puede ser realizado mediante la función <tt>hist()</tt> de la librería <tt>graphics</tt> de la base del <tt>R</tt>.
 
-<button id="Show14" class="btn btn-secondary">Mostrar histograma en <tt>R</tt></button>
-<button id="Hide14" class="btn btn-info">Ocultar histograma en <tt>R</tt></button>
-<main id="botoncito14"> 
+<button id="Show22" class="btn btn-secondary">Mostrar histograma en <tt>R</tt></button>
+<button id="Hide22" class="btn btn-info">Ocultar histograma en <tt>R</tt></button>
+<main id="botoncito22"> 
 
 <h3 data-toc-skip> Histograma </h3> 
 
@@ -917,9 +1214,9 @@ Este gráfico funciona similar al histograma de densidades, con la diferencia de
 
 Adicionalmente se presenta la función <tt>polygon</tt> de la librería <tt>graphics</tt> de la base de <tt>R</tt>, la cual sirve para generar formas, o en este caso, darle color a la densidad.
 
-<button id="Show15" class="btn btn-secondary">Mostrar densidad en <tt>R</tt></button>
-<button id="Hide15" class="btn btn-info">Ocultar densidad en <tt>R</tt></button>
-<main id="botoncito15"> 
+<button id="Show23" class="btn btn-secondary">Mostrar densidad en <tt>R</tt></button>
+<button id="Hide23" class="btn btn-info">Ocultar densidad en <tt>R</tt></button>
+<main id="botoncito23"> 
 
 <h3 data-toc-skip> Densidad </h3> 
 
@@ -951,9 +1248,9 @@ polygon(density(datos$Salario), col = "lightblue")
 #### Gráfico de dispersión
 Este gráfico se emplea para hacer cruces entre dos variables cuantitativas, y **sirve para ver tendencias y relaciones entre dos variables cuantitativas, además de permitir apreciar donde se centra el total de observaciones, y detección de datos atípicos** dados dos atributos cuantitativos. Este gráfico puede ser realizado mediante la función <tt>plot()</tt> de la librería <tt>graphics</tt> de la base del <tt>R</tt>.
 
-<button id="Show16" class="btn btn-secondary">Mostrar gráfico de dispersión en <tt>R</tt></button>
-<button id="Hide16" class="btn btn-info">Ocultar gráfico de dispersión en <tt>R</tt></button>
-<main id="botoncito16"> 
+<button id="Show24" class="btn btn-secondary">Mostrar gráfico de dispersión en <tt>R</tt></button>
+<button id="Hide24" class="btn btn-info">Ocultar gráfico de dispersión en <tt>R</tt></button>
+<main id="botoncito24"> 
 
 <h3 data-toc-skip> Gráfico de dispersión </h3> 
 
@@ -979,9 +1276,9 @@ plot(x = datos$Altura, y = datos$Salario, xlab = "Altura (m)",
 #### Matriz de dispersión
 Cuando se poseen más de dos variables cuantitativas, es posible presentar un matriz que muestre el cruce entre pares de variables, mediante cuadros con versiones simples de la función <tt>plot()</tt>. Este gráfico puede ser realizado mediante la función <tt>pairs()</tt> de la librería <tt>graphics</tt> de la base de <tt>R</tt>.
 
-<button id="Show17" class="btn btn-secondary">Mostrar matriz de dispersión en <tt>R</tt></button>
-<button id="Hide17" class="btn btn-info">Ocultar matriz de dispersión en <tt>R</tt></button>
-<main id="botoncito17"> 
+<button id="Show25" class="btn btn-secondary">Mostrar matriz de dispersión en <tt>R</tt></button>
+<button id="Hide25" class="btn btn-info">Ocultar matriz de dispersión en <tt>R</tt></button>
+<main id="botoncito25"> 
 
 <h3 data-toc-skip> Matriz de dispersión básica </h3> 
 
@@ -1099,9 +1396,9 @@ Sirve para resumir una o dos variables cualitativas mediante barras de frecuenci
 
 Para realizar estas gráficas deben usarse como insumo, las tablas de frecuencias absolutas o relativas construidas previamente en la subsección de [Resumen tabular](https://jiperezga.github.io/EstadisticaI/EstIClase03.html#resumen-tabular){:target="_blank"}.
 
-<button id="Show18" class="btn btn-secondary">Mostrar gráfico de barras para una variable en <tt>R</tt></button>
-<button id="Hide18" class="btn btn-info">Ocultar gráfico de barras para una variable en <tt>R</tt></button>
-<main id="botoncito18"> 
+<button id="Show26" class="btn btn-secondary">Mostrar gráfico de barras para una variable en <tt>R</tt></button>
+<button id="Hide26" class="btn btn-info">Ocultar gráfico de barras para una variable en <tt>R</tt></button>
+<main id="botoncito26"> 
 
 <h3 data-toc-skip> Gráfico de barras una variable para frecuencias absoluta</h3> 
 
@@ -1141,9 +1438,9 @@ barplot(prop1via, main = "Frecuencias relativas de los Municipios", col = rainbo
 #### Gráfico de pareto
 Este gráfico es similar al gráfico de barras para una sola variable cualitativa, pero con la ventaja de que **presenta las frecuencias absolutas, relativas, y las frecuencias acumuladas absolutas y acumuladas relativas en el mismo gráfico**. Este gráfico puede ser realizado mediante la función <tt>pareto.chart()</tt> de la librería <tt>qcc</tt>, usando como insumo las tablas de frecuencias absolutas construidas previamente en la subsección de [Resumen tabular](https://jiperezga.github.io/EstadisticaI/EstIClase03.html#resumen-tabular){:target="_blank"}.
 
-<button id="Show20" class="btn btn-secondary">Mostrar gráfico de pareto una variable cualitativa en <tt>R</tt></button>
-<button id="Hide20" class="btn btn-info">Ocultar gráfico de pareto una variable cualitativa en <tt>R</tt></button>
-<main id="botoncito20"> 
+<button id="Show27" class="btn btn-secondary">Mostrar gráfico de pareto una variable cualitativa en <tt>R</tt></button>
+<button id="Hide27" class="btn btn-info">Ocultar gráfico de pareto una variable cualitativa en <tt>R</tt></button>
+<main id="botoncito27"> 
 
 <h3 data-toc-skip> Gráfico de pareto una variable cualitativa</h3> 
 
@@ -1192,9 +1489,9 @@ Este gráfico puede ser realizado mediante la función <tt>pie()</tt> de la libr
 
 Mientras que las etiquetas de los porcentajes o frecuencias de cada área, puede establecerse mediante la función <tt>legend()</tt> de la librería <tt>graphics</tt> de la base de <tt>R</tt>.
 
-<button id="Show21" class="btn btn-secondary">Mostrar gráfico de pastel para una variable en <tt>R</tt></button>
-<button id="Hide21" class="btn btn-info">Ocultar gráfico de pastel para una variable en <tt>R</tt></button>
-<main id="botoncito21"> 
+<button id="Show28" class="btn btn-secondary">Mostrar gráfico de pastel para una variable en <tt>R</tt></button>
+<button id="Hide28" class="btn btn-info">Ocultar gráfico de pastel para una variable en <tt>R</tt></button>
+<main id="botoncito28"> 
 
 <h3 data-toc-skip> Gráfico de barras una variable para frecuencias absoluta</h3> 
 
@@ -1238,9 +1535,9 @@ legend("topleft", legend = paste0(names(prop1via), " (", round(prop1via,4), ")")
 #### Gráfico de puntos
 Este gráfico también es similar al gráfico de barras, **sirve para presentar las frecuencias absolutas o relativas de una variable cualitativa**, y **muestra un punto que representa el conteo del total de observaciones que hay para cada variable**. Este gráfico puede ser realizado mediante la función <tt>dotchart()</tt> de la librería <tt>graphics</tt> de la base de <tt>R</tt>, usando como insumo las tablas de frecuencias absolutas construidas previamente en la subsección de [Resumen tabular](https://jiperezga.github.io/EstadisticaI/EstIClase03.html#resumen-tabular){:target="_blank"}.
 
-<button id="Show22" class="btn btn-secondary">Mostrar gráfico de puntos para una variable en <tt>R</tt></button>
-<button id="Hide22" class="btn btn-info">Ocultar gráfico de puntos para una variable en <tt>R</tt></button>
-<main id="botoncito22"> 
+<button id="Show29" class="btn btn-secondary">Mostrar gráfico de puntos para una variable en <tt>R</tt></button>
+<button id="Hide29" class="btn btn-info">Ocultar gráfico de puntos para una variable en <tt>R</tt></button>
+<main id="botoncito29"> 
 
 <h3 data-toc-skip> Gráfico de puntos para una variable de frecuencias absolutas </h3> 
 
@@ -1285,9 +1582,9 @@ dotchart(prop1via, main = "Frecuencias relativas de categorías por Municipio")
 #### Gráfico de barras
 El gráfico de barras también sirve para resumir dos variable cualitativa mediante barras de frecuencias absolutas o relativas. **La interpretación, será la misma que para una sola variable cualitativa, con la diferencia de que en este caso, se podrán hacer comparaciones por categorías adicionales.** Este gráfico puede ser realizado mediante la función <tt>barplot()</tt> de la librería <tt>graphics</tt> de la base de <tt>R</tt>, junto a la función <tt>legend()</tt>, para establecer las etiquetas asociadas a cada una de las barras que se presenten en el gráfico.
 
-<button id="Show29" class="btn btn-secondary">Mostrar gráfico de barras para dos variables en <tt>R</tt></button>
-<button id="Hide29" class="btn btn-info">Ocultar gráfico de barras para dos variables en <tt>R</tt></button>
-<main id="botoncito29"> 
+<button id="Show30" class="btn btn-secondary">Mostrar gráfico de barras para dos variables en <tt>R</tt></button>
+<button id="Hide30" class="btn btn-info">Ocultar gráfico de barras para dos variables en <tt>R</tt></button>
+<main id="botoncito30"> 
 
 <h3 data-toc-skip> Gráfico de barras dos variables para frecuencias absolutas</h3> 
 
@@ -1331,11 +1628,11 @@ legend("topright", rownames(prop2vias), fill = terrain.colors(5))
 </main>
 
 #### Gráfico de puntos
-Como se señaló, estre gráfico es similar al gráfico de barras, y **sirve para resumir dos variable cualitativa a partir de sus frecuencias absolutas o relativas**, y **muestra un punto que representa el conteo del total de observaciones que hay para cada variable**. Este gráfico puede ser realizado mediante la función <tt>dotchart()</tt> de la librería <tt>graphics</tt> de la base de <tt>R</tt>, usando como insumo las tablas de frecuencias absolutas construidas previamente en la subsección de [Resumen tabular](https://jiperezga.github.io/EstadisticaI/EstIClase03.html#resumen-tabular){:target="_blank"}.
+Como se señaló, este gráfico es similar al gráfico de barras, y **sirve para resumir dos variable cualitativa a partir de sus frecuencias absolutas o relativas**, y **muestra un punto que representa el conteo del total de observaciones que hay para cada variable**. Este gráfico puede ser realizado mediante la función <tt>dotchart()</tt> de la librería <tt>graphics</tt> de la base de <tt>R</tt>, usando como insumo las tablas de frecuencias absolutas construidas previamente en la subsección de [Resumen tabular](https://jiperezga.github.io/EstadisticaI/EstIClase03.html#resumen-tabular){:target="_blank"}.
 
-<button id="Show23" class="btn btn-secondary">Mostrar gráfico de puntos para dos variables en <tt>R</tt></button>
-<button id="Hide23" class="btn btn-info">Ocultar gráfico de puntos para dos variables en <tt>R</tt></button>
-<main id="botoncito23"> 
+<button id="Show31" class="btn btn-secondary">Mostrar gráfico de puntos para dos variables en <tt>R</tt></button>
+<button id="Hide31" class="btn btn-info">Ocultar gráfico de puntos para dos variables en <tt>R</tt></button>
+<main id="botoncito31"> 
 
 <h3 data-toc-skip> Gráfico de puntos para dos variables de frecuencias absolutas </h3> 
 
@@ -1383,9 +1680,9 @@ El deporte más popular es el fútbol con un total del $50\%$ de los encuestados
 El gráfico de balón, suele ser un gráfico más avanzado para resumir dos variable cualitativa, en donde **se establecen en el cruce de las dos variables, círculos que se asocian al tamaño del cruce de las dos variables cualitativas**. Este gráfico puede ser realizado mediante la función <tt>ggballoonplot()</tt> de la librería <tt>ggpubr</tt>, la cual depende de la librería <tt>ggplot2</tt>.
 
 
-<button id="Show30" class="btn btn-secondary">Mostrar gráfico de balón en <tt>R</tt></button>
-<button id="Hide30" class="btn btn-info">Ocultar gráfico de balón por categorías en <tt>R</tt></button>
-<main id="botoncito30"> 
+<button id="Show32" class="btn btn-secondary">Mostrar gráfico de balón en <tt>R</tt></button>
+<button id="Hide32" class="btn btn-info">Ocultar gráfico de balón por categorías en <tt>R</tt></button>
+<main id="botoncito32"> 
 
 <h3 data-toc-skip> Gráfico de balón</h3> 
 
@@ -1417,7 +1714,7 @@ ggballoonplot(data.frame(tabla2vias), fill = "value")+
 
 <h3 data-toc-skip> Interpretación </h3> 
 
-<p>En el gráfico de balón, se muestra el número de observaciones que hay entre el cruce de las variables deporte y municipio. En dicho gráfico se observa que la mayor frecuecia de observaciones se da en el cruce entre los encuestados que viven en el municipo de Caldas y que prefieren el futbol entre los demás deportes, con un tal de $4$ observaciones, seguido por los cruces entre Bello-Fútbol y Medellín-Baloncesto con un total de $3$ observaciones. Adicionalmente se observa que de todos los municipios, en el departamento de La Estrella, es donde se evidencia que hay personas que prefieren el Voleibol sobre los demás deportes.
+<p>En el gráfico de balón, se muestra el número de observaciones que hay entre el cruce de las variables deporte y municipio. En dicho gráfico se observa que la mayor frecuencia de observaciones se da en el cruce entre los encuestados que viven en el municipio de Caldas y que prefieren el fútbol entre los demás deportes, con un tal de $4$ observaciones, seguido por los cruces entre Bello-Fútbol y Medellín-Baloncesto con un total de $3$ observaciones. Adicionalmente se observa que de todos los municipios, en el departamento de La Estrella, es donde se evidencia que hay personas que prefieren el Voleibol sobre los demás deportes.
 </p>
 
 </main>
@@ -1427,9 +1724,9 @@ ggballoonplot(data.frame(tabla2vias), fill = "value")+
 #### Gráfico de caja y bigotes
 Este gráfico sirve para presentar de forma visual, datos numéricos **por categorías** a través de sus cuartiles, además de presentar **otras características importantes, tales como la dispersión, simetría y datos potencialmente atípicos**. Este gráfico puede ser realizado mediante la función `boxplot()` de la librería <tt>graphics</tt> de <tt>R</tt>.
 
-<button id="Show25" class="btn btn-secondary">Mostrar gráfico de caja y bigotes en <tt>R</tt></button>
-<button id="Hide25" class="btn btn-info">Ocultar gráfico de caja y bigotes en <tt>R</tt></button>
-<main id="botoncito25"> 
+<button id="Show33" class="btn btn-secondary">Mostrar gráfico de caja y bigotes en <tt>R</tt></button>
+<button id="Hide33" class="btn btn-info">Ocultar gráfico de caja y bigotes en <tt>R</tt></button>
+<main id="botoncito33"> 
 
 <h3 data-toc-skip> Gráfico de caja y bigotes </h3> 
 
@@ -1458,11 +1755,17 @@ Finalmente, puede notarse que no se evidencia ningún punto a la derecha o izqui
 
 </main>
 
-También puede agregarse el argumento <tt>notch = TRUE</tt>, para construir un intervalo de confianza del `$95%$` para la mediana, lo cual hace que se grafique una muesca en cada lado de la caja, alrededor de la mediana. En donde, si las muescas de dos parcelas no se superponen, entonces se tendrá evidencia sólida respecto a que la mediana de los grupos es diferente [@Chambers1983, p. 62].
+Adicionalmente puede agregarse el argumento <tt>notch = TRUE</tt>, lo cual provoca una muesca en cada lado de la caja. @Mcgill1978 señala que **estas muescas representan un intervalo del 95% de confianza alrededor de la mediana**, y que son construidas a partir de la ecuación
 
-<button id="Show26" class="btn btn-secondary">Mostrar gráfico de caja y bigotes con intervalo de confianza para la mediana en <tt>R</tt></button>
-<button id="Hide26" class="btn btn-info">Ocultar gráfico de caja y bigotes con intervalo de confianza para la mediana en <tt>R</tt></button>
-<main id="botoncito26"> 
+`\begin{align*}
+\tilde{X}\pm 1.57\times \frac{IQR}{\sqrt{n}}
+\end{align*}`
+
+En donde, si las muescas de dos parcelas no se superponen, entonces se tendrá evidencia sólida respecto a que la mediana de los grupos es diferente [@Chambers1983, p. 62].
+
+<button id="Show34" class="btn btn-secondary">Mostrar gráfico de caja y bigotes con intervalo de confianza para la mediana en <tt>R</tt></button>
+<button id="Hide34" class="btn btn-info">Ocultar gráfico de caja y bigotes con intervalo de confianza para la mediana en <tt>R</tt></button>
+<main id="botoncito34"> 
 
 <h3 data-toc-skip> Gráfico de caja y bigotes con intervalo de confianza del 95% para la mediana </h3> 
 
@@ -1501,9 +1804,9 @@ Este gráfico **sirve para presentar de forma visual, grupos de datos numéricos
 
 Este gráfico puede ser realizado mediante la función <tt>plotMeans()</tt> de la librería <tt>RcmdrMisc</tt>.
 
-<button id="Show27" class="btn btn-secondary">Mostrar gráfico de medias en <tt>R</tt></button>
-<button id="Hide27" class="btn btn-info">Ocultar gráfico de medias en <tt>R</tt></button>
-<main id="botoncito27"> 
+<button id="Show35" class="btn btn-secondary">Mostrar gráfico de medias en <tt>R</tt></button>
+<button id="Hide35" class="btn btn-info">Ocultar gráfico de medias en <tt>R</tt></button>
+<main id="botoncito35"> 
 
 <h3 data-toc-skip> Gráfico de medias </h3> 
 
@@ -1546,9 +1849,9 @@ Este gráfico se emplea para hacer cruces entre dos variables cuantitativas, las
 
 Para diferenciar los colores usados en el gráfico, es posible establecerse las categorías mediante la función <tt>legend()</tt> de la librería <tt>graphics</tt> de la base de <tt>R</tt>.
 
-<button id="Show28" class="btn btn-secondary">Mostrar gráfico de dispersión por categorías en <tt>R</tt></button>
-<button id="Hide28" class="btn btn-info">Ocultar gráfico de dispersión por categorías en <tt>R</tt></button>
-<main id="botoncito28"> 
+<button id="Show36" class="btn btn-secondary">Mostrar gráfico de dispersión por categorías en <tt>R</tt></button>
+<button id="Hide36" class="btn btn-info">Ocultar gráfico de dispersión por categorías en <tt>R</tt></button>
+<main id="botoncito36"> 
 
 <h3 data-toc-skip> Gráfico de dispersión por categorías </h3> 
 
