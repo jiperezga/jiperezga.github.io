@@ -1,0 +1,84 @@
+---
+layout: post
+title: "Presentación Curso"
+main-class: 'presentacion'
+permalink: /EstadisticayProbabilidades/EyP:title.html
+tags:
+
+introduction: Presentación del curso de Estadística y Probabilidades.
+
+image: <img src="../../assets/images/logoUdeM.png" alt="UdeM" class="sticky">
+
+header-includes:
+   - \usepackage{amsmath,amssymb,amsthm,amsfonts}
+   - \usepackage[sectionbib]{natbib}
+   - \usepackage[hidelinks]{hyperref}
+output:
+  md_document:
+    variant: markdown_strict+backtick_code_blocks+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash
+    preserve_yaml: TRUE
+always_allow_html: yes   
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding,
+  output_dir = "../../EstadisticayProbabilidades/_posts/", output_format = "all"  ) })
+bibliography: "../../referencias.bib"
+csl: "../../apa.csl"
+---
+
+```{r knitr_init, echo=FALSE, cache=FALSE}
+library(knitr)
+## Global options
+opts_chunk$set(echo=TRUE,
+               cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE,
+               fig.path = paste0("../../EstadisticayProbabilidades/images/", "Presentacion"),
+               cache.path = "../../EstadisticayProbabilidades/cache/",
+               cache = FALSE)
+```
+
+## Descripción general del curso
+La mayoría de los datos disponibles en la amplia gama de áreas del conocimiento, corresponden a datos observados que provienen de un fenómeno o ley aleatoria, la cual es de gran importancia conocer con el objetivo de obtener conclusiones, realizar contrastes de hipótesis, hacer predicciones, tomar decisiones óptimas, entre muchas otras. No obstante, para poder afrontar dichos fines es necesario conocer y familiarizarse primero con los conceptos provistos por la teoría de la probabilidad y la estadística matemática.
+
+En este sentido, este curso está diseñado para proveer al estudiante con un sólido y bien balanceado entendimiento de estos conceptos, tales como las nociones de probabilidad clásica, condicionamiento, independencia, variables aleatorias, funciones de distribución, esperanza matemática, entre otras. Aunque, el curso se concentra principalmente en los conceptos más que en los detalles matemáticos, los resultados teóricos son presentados en la manera más precisa y rigurosa posible. El curso contiene numerosos ejemplos de aplicaciones, tanto teóricas como con datos reales.
+
+## Objetivo general
+Que el estudiante adquiera los elementos básicos de la teoría de la probabilidad, distribuciones de probabilidad, y sus aplicaciones, junto con un desarrollo integral de las técnicas asociadas a estadística descriptiva. 
+
+## Objetivo específico
+* Trabajar la estadística descriptiva por medio de las distribuciones de frecuencias y de gráficos. Utilizar el computador y la calculadora como herramientas adicionales y a la vez saber interpretar los resultados que estos instrumentos arrojan.
+* Conocer las técnicas de conteo (análisis combinatorio) que facilitan el cálculo de las probabilidades.
+* Conocer las distribuciones de probabilidades tanto discretas como continuas, proporcionando áreas de aplicaciones a cada una de ellas.
+
+## Evaluación del curso
+```{r echo=FALSE}
+library(kableExtra)
+
+kable(cbind(data.frame(
+  Actividad = c("Examen No.1", "Examen No.2", "Examen No.3","Trabajo Escrito", "Sustentación", "Examen No.4")),
+  Porcentaje = c("20%", "20%", "20%", "10%", "10%", "20%"),
+  Fechas = c("26 Agosto", "30 Septiembre", "28 Octubre", "11 Noviembre", "11 Noviembre", "18 Noviembre") ), 
+  format = "html", booktabs = T) %>%
+kable_styling("striped", full_width = F) 
+```
+
+## Plan de Estudios
+
+[Ingeniería Financiera](https://udem.edu.co/images/Ing_Financiera/PLAN_DE_FORMACION_ING_FINANCIERA_2007-2019.pdf){:target="_blank"}.
+
+[Ingeniería Industrial](https://udem.edu.co/index.php/2012-10-12-13-19-26/ingenieria-industrial/plan-de-estudios-ingenieria-industrial){:target="_blank"}.
+
+## Bibliografía del curso
+
+Devore, J. (2018). Fundamentos de Probabilidad y Estadística. Cengage Learning. primera edición.
+[(Descargar)](http://80.82.78.35/get.php?md5=bb8e2a77cf37ad02dad4ee789e7451e3&key=ZSWZCIIW8MISGPEF&mirr=1){:target="_blank"}
+
+Wackerly, D., Muñoz, R., y Humbertotr, J. (2010). Estadística matemática con aplicaciones. Cengage Learning, Séptima edición.
+[(Link)](https://www.cimat.mx/ciencia_para_jovenes/bachillerato/libros/[Wackerly,Mendenhall,Scheaffer]Estadistica_Matematica_con_Aplicaciones.pdf){:target="_blank"}
+
+Walpole, R. , Myers, R. , Myers, S. , y Ye, K. (2012). Probabilidad y estadística para ingeniería y ciencias. Pearson, Novena edición. [(Link)](https://vereniciafunez94hotmail.files.wordpress.com/2014/08/8va-probabilidad-y-estadistica-para-ingenier-walpole_8.pdf){:target="_blank"}
+
+

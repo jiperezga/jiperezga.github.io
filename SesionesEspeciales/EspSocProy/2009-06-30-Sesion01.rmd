@@ -15,7 +15,7 @@ introduction: |
               - Medidas de forma <br>
               - Medidas de asociación <br>
               
-image: <img src="../../assets/images/logoUdeA.png" alt="UdeA" class="sticky">
+image: <img src="../../assets/images/logoUdeA.png" alt="Ude" class="sticky">
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
