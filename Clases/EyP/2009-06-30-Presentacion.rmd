@@ -67,9 +67,9 @@ kable_styling("striped", full_width = F)
 
 ## Plan de Estudios
 
-[Ingeniería Financiera](https://udem.edu.co/images/Ing_Financiera/PLAN_DE_FORMACION_ING_FINANCIERA_2007-2019.pdf){:target="_blank"}.
+[Ingeniería Financiera](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/jiperezga/jiperezga.github.io/da4273e4b459bb59a1a3acc806f4a3ee53aa71c5/EstadisticayProbabilidades/images/PlanEstudiosFinanciera.pdf){:target="_blank"}
 
-[Ingeniería Industrial](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/jiperezga/jiperezga.github.io/6e17e79b8d4992e0a441a6e2863c7867be1d231b/EstadisticayProbabilidades/images/PlanEstudiosIndustrial.pdf){:target="_blank"}.
+[Ingeniería Industrial](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/jiperezga/jiperezga.github.io/6e17e79b8d4992e0a441a6e2863c7867be1d231b/EstadisticayProbabilidades/images/PlanEstudiosIndustrial.pdf){:target="_blank"}
 
 ## Bibliografía del curso
 
