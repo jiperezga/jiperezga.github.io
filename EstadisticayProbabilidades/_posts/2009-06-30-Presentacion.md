@@ -167,7 +167,7 @@ Plan de Estudios
 Financiera](https://udem.edu.co/images/Ing_Financiera/PLAN_DE_FORMACION_ING_FINANCIERA_2007-2019.pdf){:target="\_blank"}.
 
 [Ingeniería
-Industrial](https://udem.edu.co/index.php/2012-10-12-13-19-26/ingenieria-industrial/plan-de-estudios-ingenieria-industrial){:target="\_blank"}.
+Industrial](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/jiperezga/jiperezga.github.io/6e17e79b8d4992e0a441a6e2863c7867be1d231b/EstadisticayProbabilidades/images/PlanEstudiosIndustrial.pdf){:target="\_blank"}.
 
 Bibliografía del curso
 ----------------------
