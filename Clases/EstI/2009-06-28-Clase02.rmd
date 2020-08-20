@@ -334,7 +334,7 @@ En <tt>R</tt> puede calcularse el rango intercuartílico de un conjunto de obser
 <h3 data-toc-skip> Solución Manual </h3> 
 <p>El rango intercuartílico se calcula de forma similar al rango, solo que en lugar de emplear el valor máximo y el valor mínimo del conjunto de observaciones, se emplea en su lugar, el tercer y primer cuartil. <br>
 
-Entonces, basados en los cálculos de los cuartiles obtenidos en la <a href="https://jiperezga.github.io/EstadisticaI/EstIClase01.html#cuartil" target="\_blank">Clase 1</a> (ver Solucion en R), se tendrá que el primer y tercer cuartil para el parcial $1$ son $C_{1}= 2.625$ y $C_{3}= 3.050$, respectivamente, obteniendo un rango intercuartílico de 
+Entonces, basados en los cálculos de los cuartiles obtenidos en la <a href="https://jiperezga.github.io/EstadisticaI/EstIClase01.html#cuartil" target="\_blank">Clase 01</a> (ver Solucion en R), se tendrá que el primer y tercer cuartil para el parcial $1$ son $C_{1}= 2.625$ y $C_{3}= 3.050$, respectivamente, obteniendo un rango intercuartílico de 
 
 $$\begin{align*}
   IQR_{P1} = 3.050 - 2.625 = 0.425
@@ -393,7 +393,7 @@ En <tt>R</tt> puede calcularse la desviación absoluta mediana de un conjunto de
 <p>Calcule la desviación absoluta mediana de las notas obtenidas por los $10$ estudiantes, en el primer y cuarto parcial del curso de Estadística I de forma manual. </p>
 
 <h3 data-toc-skip> Solución Manual </h3> 
-<p>Para realizar el cálculo de la desviación absoluta mediana para las notas obtenidas por los estudiantes en los parciales $1$ y $4$ del curso de Estadística I, es necesario inicialmente realizar el cálculo de $|X_i-\tilde{X}|$ para cada una de las notas obtenidas en los dos parciales, siendo $\tilde{X}$ el valor de la mediana calculada en la <a href="https://jiperezga.github.io/EstadisticaI/EstIClase01.html#mediana" target="\_blank">Clase 1</a> (ver Solucion manual o en R). </p>
+<p>Para realizar el cálculo de la desviación absoluta mediana para las notas obtenidas por los estudiantes en los parciales $1$ y $4$ del curso de Estadística I, es necesario inicialmente realizar el cálculo de $|X_i-\tilde{X}|$ para cada una de las notas obtenidas en los dos parciales, siendo $\tilde{X}$ el valor de la mediana calculada en la <a href="https://jiperezga.github.io/EstadisticaI/EstIClase01.html#mediana" target="\_blank">Clase 01</a> (ver Solucion manual o en R). </p>
 
 ```{r echo=FALSE}
 datos4 <- abs(datos[1,] - median(P1))
@@ -478,7 +478,7 @@ Entre las funciones base del programa <tt>R</tt> no hay ninguna función que cal
 <p>Calcule el coeficiente de asimetría de las notas obtenidas por los $10$ estudiantes, en el primer y cuarto parcial del curso de Estadística I de forma manual. </p>
 
 <h3 data-toc-skip> Solución Manual </h3> 
-<p>El coeficiente de asimetría asociado a la nota de los estudiantes del curso de Estadística I, para los parciales $1$ y $4$, depende del valor promedio $\bar{X}$ y la desviación estándar $S$. Por tanto al emplear los valores ya calculados en <a href="https://jiperezga.github.io/EstadisticaI/EstIClase01.html#media" target="\_blank">Clase 1</a> y <a href="https://jiperezga.github.io/EstadisticaI/EstIClase02.html#desviación-estándar" target="\_blank">Clase 2</a> (ver Solucion manual o en R), se tendrá que el coeficiente de asimetría para los dos parciales estará dado por
+<p>El coeficiente de asimetría asociado a la nota de los estudiantes del curso de Estadística I, para los parciales $1$ y $4$, depende del valor promedio $\bar{X}$ y la desviación estándar $S$. Por tanto al emplear los valores ya calculados en <a href="https://jiperezga.github.io/EstadisticaI/EstIClase01.html#media" target="\_blank">Clase 01</a> y <a href="https://jiperezga.github.io/EstadisticaI/EstIClase02.html#desviación-estándar" target="\_blank">Clase 02</a> (ver Solucion manual o en R), se tendrá que el coeficiente de asimetría para los dos parciales estará dado por
 
 $$\begin{align*}
   \gamma_{1,P_1} &= \frac{1}{10}\left[\frac{(2.7 - 2.75)^3 + (4.0 - 2.75)^3 + \ldots + (2.1 - 2.75)^3}{0.7121954^3}\right] \\
@@ -546,7 +546,7 @@ Entre las funciones base del programa <tt>R</tt> no hay ninguna función que cal
 <p>Calcule el coeficiente de exceso de curtosis de las notas obtenidas por los $10$ estudiantes, en el primer y cuarto parcial del curso de Estadística I, de forma manual. </p>
 
 <h3 data-toc-skip> Solución Manual </h3> 
-<p>Similar al coeficiente de asimetría, el coeficiente de exceso de curtosis depende del valor promedio $\bar{X}$ y la desviación estándar $S$, de los parciales $1$ y $4$ del curso de Estadística I. Por tanto al emplear los valores ya calculados en <a href="https://jiperezga.github.io/EstadisticaI/EstIClase01.html#media" target="\_blank">Clase 1</a> y <a href="https://jiperezga.github.io/EstadisticaI/EstIClase02.html#desviación-estándar" target="\_blank">Clase 2</a> (ver Solucion manual o en R), se tendrá que el coeficiente de exceso de curtosis para los dos parciales estará dado por
+<p>Similar al coeficiente de asimetría, el coeficiente de exceso de curtosis depende del valor promedio $\bar{X}$ y la desviación estándar $S$, de los parciales $1$ y $4$ del curso de Estadística I. Por tanto al emplear los valores ya calculados en <a href="https://jiperezga.github.io/EstadisticaI/EstIClase01.html#media" target="\_blank">Clase 01</a> y <a href="https://jiperezga.github.io/EstadisticaI/EstIClase02.html#desviación-estándar" target="\_blank">Clase 02</a> (ver Solucion manual o en R), se tendrá que el coeficiente de exceso de curtosis para los dos parciales estará dado por
 
 $$\begin{align*}
   \gamma_{2,P_1} &= \frac{1}{10}\left[\frac{(2.7 - 2.75)^4 + (4.0 - 2.75)^4 + \ldots + (2.1 - 2.75)^4}{0.7121954^4}\right] - 3 \\
@@ -607,7 +607,7 @@ En <tt>R</tt> puede calcularse la covarianza de dos conjunto de observaciones me
 <p>Calcule el covarianza que hay entre las notas obtenidas en el primer parcial y el cuarto parcial, por los $10$ estudiantes que vieron el curso de Estadística I de forma manual. </p>
 
 <h3 data-toc-skip> Solución Manual </h3> 
-<p>A diferencia de las anteriores medidas, el coeficiente de covarianza buscar observar si existe o no una dependencia lineal entre dos grupos de observaciones. Para ello, se emplean los valores promedio $\bar{X}_{P1}$ y $\bar{X}_{P4}$ obtenido en la clase <a href="https://jiperezga.github.io/EstadisticaI/EstIClase01.html#media" target="\_blank">Clase 1</a> para ambos parciales, y con éstos se busca comparar si hay una relación entre las notas obtenidas en el parcial $1$ y el parcial $4$, tal que 
+<p>A diferencia de las anteriores medidas, el coeficiente de covarianza buscar observar si existe o no una dependencia lineal entre dos grupos de observaciones. Para ello, se emplean los valores promedio $\bar{X}_{P1}$ y $\bar{X}_{P4}$ obtenido en la clase <a href="https://jiperezga.github.io/EstadisticaI/EstIClase01.html#media" target="\_blank">Clase 01</a> para ambos parciales, y con éstos se busca comparar si hay una relación entre las notas obtenidas en el parcial $1$ y el parcial $4$, tal que 
 
 $$\begin{align*}
   S_{P_1P_4} &= \frac{1}{10}\left[(2.7-2.75)(1.8-3.14) + \ldots + (2.1 - 2.75)(2.0 - 3.14)\right] \\ 
