@@ -435,7 +435,7 @@ $('#Show34').click(function() {
     $('#Hide34').css({'display': 'block'});
     $('#Hide34').show(0);
 });
-$('#Hide35').click(function() {
+$('#Hide34').click(function() {
     $('#botoncito34').hide(500);
     $('#Show34').show(0);
     $('#Hide34').hide(0);
