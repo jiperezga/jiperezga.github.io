@@ -1,0 +1,211 @@
+---
+layout: post
+title: "Práctica 01"
+main-class: 'practica'
+permalink: /EstadisticayProbabilidades/EyP:title.html
+tags:
+
+introduction: |
+              Ejercicios sobre: <br>
+              - Estadística descriptiva. 
+header-includes:
+   - \usepackage{amsmath,amssymb,amsthm,amsfonts}
+   - \usepackage[sectionbib]{natbib}
+   - \usepackage[hidelinks]{hyperref}
+output:
+  md_document:
+    variant: markdown_strict+backtick_code_blocks+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash
+    preserve_yaml: TRUE
+always_allow_html: yes   
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding,
+  output_dir = "../../EstadisticayProbabilidades/_posts/", output_format = "all"  ) })
+bibliography: "../../referencias.bib"
+csl: "../../apa.csl"
+---
+
+```{r knitr_init, echo=FALSE, cache=FALSE}
+library(knitr)
+## Global options
+opts_chunk$set(echo=TRUE,
+               cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE,
+               fig.path = paste0("../../EstadisticayProbabilidades/images/", "Práctica02"),
+               cache.path = "../../EstadisticayProbabilidades/cache/",
+               cache = FALSE)
+
+```
+
+
+<!-- Eliminar o modificar ejercicio del sombrero!!!-->
+# Lista de ejercicios
+1. Los siguientes datos representan los consumos en kWh, medidos en una hora en `$50$` establecimientos nucleados en una zona comercial.
+```{r echo=FALSE}
+library(kableExtra)
+tabla1 <- data.frame(c("10.3", "13.0", "11.1", "10.0", "9.3", "11.1", "11.2", "10.2", "12.9", "11.5"),
+                     c("9.6", "7.3", "11.1", "10.7", "9.2", "9.0", "5.3", "9.9", "10.0", "11.6"),
+                     c("14.5", "12.5", "12.8", "7.8", "9.8", "13.0", "8.0", "11.6", "12.5", "10.5"),
+                     c("11.8", "15.1", "9.3", "7.6", "6.7", "11.0", "8.7", "12.5", "10.4", "10.1"),
+                     c("8.4", "10.6", "6.5", "12.7", "8.9", "10.3", "9.5", "7.5", "10.5", "8.6"))
+tabla1 <- data.frame(t(tabla1))
+
+kable(tabla1, align = c("r", "r", "r", "r", "r", "r", "r", "r", "r", "r"),
+  format = "html", booktabs = T, row.names = FALSE, col.names = NULL) %>%
+kable_styling("striped", full_width = F)
+```
+<ol type ="a">
+<li> Defina la variable bajo estudio y clasifíquela de acuerdo a su tipo. </li>
+<li> Construya un histograma a partir de los datos registrados. </li>
+<li> ¿Qué puede decir acerca del gráfico realizado en el inciso b)? </li>
+<li> Calcule todas las medidas descriptivas que crea convenientes para comprender el comportamiento de la variable bajo estudio. </li>
+<li> Describa el comportamiento de la variable bajo estudio teniendo en cuenta las medidas estadísticas calculadas en los incisos anteriores. </li>
+</ol>
+2. Los siguientes datos representan los costos de mantenimiento (en miles de pesos) de una determinada máquina trabajando en `$15$` establecimientos productivos distintos, durante el periodo `$2016- 2017$`
+```{r echo=FALSE}
+library(kableExtra)
+tabla1 <- data.frame(c("10.5", "10.1", "10.0", "11.0", "9.8"),
+                     c("8.9", "9.3", "9.7", "10.4", "10.0"),
+                     c("9.6", "9.1", "11.2", "10.5", "9.8"))
+tabla1 <- data.frame(t(tabla1))
+
+kable(tabla1, align = c("r", "r", "r", "r", "r", "r", "r", "r", "r", "r"),
+  format = "html", booktabs = T, row.names = FALSE, col.names = NULL) %>%
+kable_styling("striped", full_width = F)
+```
+<ol type ="a">
+<li> Identifica el tipo de variable bajo análisis. </li>
+<li> Utilizar las herramientas descriptivas y/o exploratorias para extraer conclusiones respecto de los costos de mantenimiento de la máquina analizada. </li>
+</ol>
+3. Los grandes autoservicios disponen de estacionamiento para sus clientes. Los siguientes datos se refieren al número de horas que permanecen en el estacionamiento una serie de coches:
+```{r echo=FALSE}
+library(kableExtra)
+tabla1 <- data.frame(c("4", "5", "5", "1", "7", "4", "4", "3", "6", "5"),
+                     c("3", "2", "4", "4", "3", "6", "6", "4", "5", "5"),
+                     c("6", "4", "3", "3", "4", "5", "4", "3", "2", "4"),
+                     c("5", "2", "4", "7", "3", "6", "2", "2", "4", "1"),
+                     c("2", "1", "3", "7", "3", "1", "5", "1", "7", "2"),
+                     c("4", "4", "2", "4", "5", "3", "6", "3", "5", "3"))
+tabla1 <- data.frame(t(tabla1))
+
+kable(tabla1, align = c("r", "r", "r", "r", "r", "r", "r", "r", "r", "r"),
+  format = "html", booktabs = T, row.names = FALSE, col.names = NULL) %>%
+kable_styling("striped", full_width = F)
+```
+<ol type ="a">
+<li> Clasifique la variable bajo estudio. </li>
+<li> El número de horas de permanencia en el estacionamiento, ¿muestra una marcada dispersión?. Justifique. ¿Cómo se interpreta? </li>
+<li> El número de horas de permanencia en el estacionamiento, ¿muestra una marcada asimetría?. ¿en qué dirección?. Justifique. ¿Cómo se interpreta?. </li>
+<li> Realice un gráfico conveniente para mostrar cómo se distribuye la variable bajo estudio. Obtenga conclusiones del mismo. </li>
+</ol>
+4. Un comisionista de bolsa desea determinar la estabilidad de los precios de dos acciones en particular. Decide basar su juicio en la estabilidad de las desviaciones estándar de los precios de cierre diarios de dichas acciones. Al revisar las páginas financieras, el comisionista sabe que las acciones han sido transadas en la bolsa durante algún tiempo y que hay muchos precios de cierre desde hace varios meses. En lugar de utilizar todos estos precios, el comisionista decide simplificar su aritmética y seleccionar una muestra de tamaño `$6$` para la acción `$1$` y `$7$` para la acción `$2$`. Los precios de cierre son: 
+```{r echo=FALSE}
+library(kableExtra)
+tabla1 <- data.frame(c("$\\mathbf{\\text{Acción 1}}$", "87", "120", "54", "92", "73", "81", " "),
+                     c("$\\mathbf{\\text{Acción 2}}$", "91", "114", "56", "90", "75", "75", "90"))
+
+kable(tabla1, align = c("r", "r"),
+  format = "html", booktabs = T, row.names = FALSE, col.names = NULL) %>%
+kable_styling("striped", full_width = F)
+```
+Basados en la información anterior ¿Cuál de los dos activos presenta  mayor estabilidad?
+5. Seleccione dos acciones que coticen en la bolsa de valores de Colombia, y consulte la serie de precios de cierre para estas en el último año. Describa el interés particular que usted tiene sobre estas acciones y la finalidad de realizar el estudio descriptivo con estas y sus rentabilidades.
+<ol type ="a">
+<li> Halle y describa alrededor de qué valor se centran los precios de las acciones seleccionadas en el último año y halle su volatilidad histórica (desviación estándar de los precios) e interprétela. ¿Qué acción presenta mayor precio medio? ¿Cuál tiene mayor dispersión? Si se desea invertir en una de estas acciones, ¿Se prefiere que los precios tengan alta o baja dispersión? ¿Por qué?. </li>
+<li> Comente sobre las características de la distribución en los precios de ambas acciones. Apóyese en las medidas de forma y en la construcción de un boxplot y el histograma de frecuencias para cada una. </li>
+<li> Para cada acción, determine hasta que valor se encuentra el $20\%$ de los precios más bajos y el 15% de los precios más altos. </li>
+</ol>
+6. En una entidad de salud llegan diariamente casos relacionados con la solicitud de certificados y requerimientos de quejas. Basados en la información presentada a continuación, calcule e interprete la moda
+```{r echo=FALSE}
+library(kableExtra)
+tabla1 <- data.frame(c("$\\mathbf{\\text{Tipo de certificado}}$", "Afiliación", "Paz y salvo", "Beneficiarios", "Antigüedad"),
+                     c("$\\mathbf{\\text{Cantidad de}} \\\\  \\mathbf{\\text{solicitudes}} \\\\ \\mathbf{\\text{recibidas}}$", "7", "6", "10", "7"))
+
+kable(tabla1, align = c("r", "r"),
+  format = "html", booktabs = T, row.names = FALSE, col.names = NULL) %>%
+kable_styling("striped", full_width = F)
+```
+7. En una entidad de salud llegan diariamente casos relacionados con la solicitud de certificados y requerimientos de quejas. Basados en la información presentada a continuación, calcular e interpretar para las variables “Cantidad de quejas gestionadas” y “Cantidad de certificados enviados” las siguientes medidas:
+<ol type ="a">
+<li> Promedio. </li>
+<li> Cuartil 1. </li>
+<li> Cuartil 2 (Mediana). </li>
+<li> Cuartil 3. </li>
+</ol>
+```{r echo=FALSE}
+library(kableExtra)
+tabla1 <- data.frame(c("$\\mathbf{\\text{Agente}}$", "A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10", "A11"),
+                     c("$\\mathbf{\\text{Cantidad}} \\\\  \\mathbf{\\text{de quejas}} \\\\ \\mathbf{\\text{gestionadas}}$", "2", "3", "6", "5", "8", "9", "10", "1", "1", "5", "6"), 
+                     c("$\\mathbf{\\text{Cantidad de}} \\\\  \\mathbf{\\text{certificados}} \\\\ \\mathbf{\\text{enviados}}$", "2", "3", "1", "5", "5", "2", "4", "3", "1", "2", "2"))
+
+kable(tabla1, align = c("r", "r"),
+  format = "html", booktabs = T, row.names = FALSE, col.names = NULL) %>%
+kable_styling("striped", full_width = F)
+```
+8. Los préstamos bancarios para compra de bienes productivos tienen  distintas tasas de amortización dependiendo de la ubicación, del tipo del bien, de la facturación promedio del comprador y otros factores. Una muestra de tamaño `$25$`, de los registros que se tienen sobre tasas de amortización para préstamos bancarios se presentan a continuación:
+```{r echo=FALSE}
+library(kableExtra)
+tabla1 <- data.frame(c("5.2", "6.0", "7.5", "8.0", "5.0"),
+                     c("7.9", "6.6", "9.2", "7.4", "6.5"),
+                     c("8.0", "9.0", "7.3", "7.5", "7.0"),
+                     c("4.6", "8.5", "5.5", "9.3", "9.5"),
+                     c("6.5", "7.5", "6.5", "8.1", "8.2"))
+tabla1 <- data.frame(t(tabla1))
+
+kable(tabla1, align = c("r", "r", "r", "r", "r"),
+  format = "html", booktabs = T, row.names = FALSE, col.names = NULL) %>%
+kable_styling("striped", full_width = F)
+```
+<ol type ="a">
+<li> Construya un histograma e interprete. </li>
+<li> ¿Qué porcentaje de clientes han pedido préstamos bancarios para compra de bienes que tienen una tasa de amortización menor o igual a $7\%$?. </li>
+<li> ¿Qué tipo de asimetría presenta la distribución? Justifique. </li>
+<li> ¿Qué tipo de kurtosis presenta la distribución? Justifique. </li>
+<li> A partir de que tasa de amortización se encuentra el 30% de los compradores que pagan mayor interés. ¿El $10\%$? o ¿el $5\%$?. </li>
+<li> Una tasa de amortización de $6.3$ está entre el $10\%$ de los compradores que pagan menos interés?. </li>
+</ol>
+9. Suponga que es un agente de compras de una empresa manufacturera que toma pedidos de dos proveedores distintos mensualmente. Después de seis meses de trabajar así, encuentra que el tiempo, en días, que tardan los proveedores en suministrar el pedido es:
+```{r echo=FALSE}
+library(kableExtra)
+tabla1 <- data.frame(c("$\\mathbf{\\text{Proveedor 1}}$", "11", "10", "11", "11", "9", "11"),
+                     c("$\\mathbf{\\text{Proveedor 2}}$", "5", "15", "14", "10", "8", "19"))
+
+kable(tabla1, align = c("r", "r"),
+  format = "html", booktabs = T, row.names = FALSE, col.names = NULL) %>%
+kable_styling("striped", full_width = F)
+```
+<ol type ="a">
+<li> ¿Tiene estos proveedores el mismo grado de confiabilidad?. </li>
+<li> ¿Qué proveedor prefiere usted?. </li>
+<li> Para cada proveedor, determine valor de tiempo, $A$, tal que el $5\%$ de los meses se presente un tiempo de entrega inferior a $A$. </li>
+<li> Para cada proveedor, determine valor de tiempo, $B$, tal que el $5\%$ de los meses se presente un tiempo de entrega superior a $B$. </li>
+</ol>
+10. Los datos cuantitativos continuos son aquellos que:
+11. La varianza es una medida que representa:
+12. Las medidas de localización o posición, son mediciones que permiten:
+13. Ante la imposibilidad de estudiar de forma directa la totalidad de una población, se suele tomar una porción o grupo representativo de la población para realizar el estudio y generalizar los resultados obtenidos. Esta porción o grupo representativo se denomina
+<ol type ="a">
+<li> Individuo. </li>
+<li> Media. </li>
+<li> Muestra. </li>
+<li> Variable. </li>
+<li> Todas las anteriores. </li>
+</ol>
+14. Cual de las siguientes medidas, no es una medida de posicionamiento
+<ol type ="a">
+<li> Decil. </li>
+<li> Quintil. </li>
+<li> Cuartil. </li>
+<li> Ventil. </li>
+</ol>
+15. Cuales de las siguientes variables es una variable cuantitativa Discreta
+<ol type ="a">
+<li> Edad. </li>
+<li> Estrato. </li>
+<li> Temperatura. </li>
+<li> Partido político. </li>
+<li> Número de empleados. </li>
+</ol>
