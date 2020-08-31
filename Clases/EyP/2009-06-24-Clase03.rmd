@@ -224,10 +224,11 @@ y en consecuencia `$_nC_r <\; _nP_r$`
 <p>Suponga que entre el total de $27$ estudiantes que están en el curso de Estadística, el profesor decide seleccionar $4$ para que realicen un quiz sorpresa. De cuantas maneras puede el profesor escoger un grupo de $4$ personas del total de estudiantes del curso?</p>
 
 <h3 data-toc-skip> Solución </h3> 
-Dado que no importa el orden en el cual el estudiante sea escogido va a tener que presentar el quiz y un estudiante no puede ser seleccionado más de una vez, se tiene que el total de estudiantes $n=27$, mientras que el total de estudiantes que tomará son $r=4$, entonces se tendrá que el número de formas en que el profesor puede hacer la selección es
+<p>Dado que no importa el orden en el cual el estudiante sea escogido va a tener que presentar el quiz y un estudiante no puede ser seleccionado más de una vez, se tiene que el total de estudiantes $n=27$, mientras que el total de estudiantes que tomará son $r=4$, entonces se tendrá que el número de formas en que el profesor puede hacer la selección es
 $$\begin{align*}
 _{27}C_{4}= \frac{27!}{4! (27-4)!} = 17550 \text{ formas}
 \end{align*}$$
+</p>
 </main>
 
 ### Combinatoria por subconjuntos
