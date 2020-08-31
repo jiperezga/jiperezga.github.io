@@ -131,3 +131,5 @@ img.sticky {
 
 /*Color Mathjax*/
 .mjx-math{color: #FFFFFF}
+/*Tamaño formulas Mathjax*/
+.mjx-chtml{font-size: 100%!important;}
