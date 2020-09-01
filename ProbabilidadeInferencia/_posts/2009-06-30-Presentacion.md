@@ -207,45 +207,44 @@ propias del módulo.
 <tbody>
   <tr>
    <td style="text-align:left;"> Examen No.1 </td>
-   <td style="text-align:left;"> 20% </td>
+   <td style="text-align:left;"> 15% </td>
    <td style="text-align:left;width: 5cm; "> Fundamentos de Probabilidad </td>
    <td style="text-align:left;"> Cuarta semana </td>
    <td style="text-align:left;width: 3cm; "> Individual </td>
   </tr>
   <tr>
+   <td style="text-align:left;"> Trabajo No.1 </td>
+   <td style="text-align:left;"> 15% </td>
+   <td style="text-align:left;width: 5cm; "> Estadística Descriptiva </td>
+   <td style="text-align:left;"> Novena semana </td>
+   <td style="text-align:left;width: 3cm; "> Parejas </td>
+  </tr>
+  <tr>
    <td style="text-align:left;"> Examen No.2 </td>
    <td style="text-align:left;"> 20% </td>
    <td style="text-align:left;width: 5cm; "> Variables aleatorias y distribuciones de probabilidad </td>
-   <td style="text-align:left;"> Novena semana </td>
-   <td style="text-align:left;width: 3cm; "> Individual </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Examen No.3 </td>
-   <td style="text-align:left;"> 20% </td>
-   <td style="text-align:left;width: 5cm; "> Distribuciones muestrales e intervalos de confianza </td>
    <td style="text-align:left;"> Decimotercera semana </td>
    <td style="text-align:left;width: 3cm; "> Individual </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Examen No.4 </td>
-   <td style="text-align:left;"> 20% </td>
-   <td style="text-align:left;width: 5cm; "> Pruebas de Hipótesis </td>
+   <td style="text-align:left;"> Trabajo No.2 </td>
+   <td style="text-align:left;"> 15% </td>
+   <td style="text-align:left;width: 5cm; "> Distribuciones muestrales e intervalos de confianza </td>
    <td style="text-align:left;"> Decimosexta semana </td>
-   <td style="text-align:left;width: 3cm; "> Individual </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Trabajo </td>
-   <td style="text-align:left;"> 10% </td>
-   <td style="text-align:left;width: 5cm; "> Estadística descriptiva </td>
-   <td style="text-align:left;"> Sexta semana </td>
    <td style="text-align:left;width: 3cm; "> Parejas </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Quices </td>
-   <td style="text-align:left;"> 10% </td>
-   <td style="text-align:left;width: 5cm; "> Temas relacionados a cada parcial </td>
-   <td style="text-align:left;"> Tercera, Séptima, Décima,
-Decimoquinta Semana </td>
+   <td style="text-align:left;"> Examen No.3 </td>
+   <td style="text-align:left;"> 20% </td>
+   <td style="text-align:left;width: 5cm; "> Pruebas de Hipótesis </td>
+   <td style="text-align:left;"> Sexta semana </td>
+   <td style="text-align:left;width: 3cm; "> Individual </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Seguimiento </td>
+   <td style="text-align:left;"> 15% </td>
+   <td style="text-align:left;width: 5cm; "> Seguimiento </td>
+   <td style="text-align:left;"> Todo Semestre </td>
    <td style="text-align:left;width: 3cm; "> Individual </td>
   </tr>
 </tbody>

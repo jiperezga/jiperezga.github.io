@@ -155,11 +155,11 @@ Los instrumentos de evaluación de cada módulo se llevan a cabo, mediante exám
 library(kableExtra)
 library(dplyr)
 kable(cbind(data.frame(
-  "Evaluación" = c("Examen No.1", "Examen No.2", "Examen No.3","Examen No.4", "Trabajo", "Quices")),
-  Porcentaje = c("20%", "20%", "20%", "20%", "10%", "10%"),
-  Temas = c("Fundamentos de Probabilidad", " Variables aleatorias y distribuciones de probabilidad", "Distribuciones muestrales e intervalos de confianza", "Pruebas de Hipótesis", "Estadística descriptiva", "Temas relacionados a cada parcial"),
-  "Semana para Evaluación" = c("Cuarta semana", "Novena semana", "Decimotercera semana", "Decimosexta semana", "Sexta semana", "Tercera, Séptima, Décima,\nDecimoquinta Semana"),
-  Modalidad = c("Individual", "Individual", "Individual", "Individual", "Parejas", "Individual")),
+  "Evaluación" = c("Examen No.1", "Trabajo No.1", "Examen No.2","Trabajo No.2", "Examen No.3", "Seguimiento")),
+  Porcentaje = c("15%", "15%", "20%", "15%", "20%", "15%"),
+  Temas = c("Fundamentos de Probabilidad", "Estadística Descriptiva", " Variables aleatorias y distribuciones de probabilidad", "Distribuciones muestrales e intervalos de confianza", "Pruebas de Hipótesis", "Seguimiento"),
+  "Semana para Evaluación" = c("Cuarta semana", "Novena semana", "Decimotercera semana", "Decimosexta semana", "Sexta semana", "Todo Semestre"),
+  Modalidad = c("Individual", "Parejas", "Individual", "Parejas", "Individual", "Individual")),
   format = "html", booktabs = T) %>%
 kable_styling("striped", full_width = F) %>%
 column_spec(3, width = "5cm") %>%
