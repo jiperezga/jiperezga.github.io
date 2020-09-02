@@ -227,8 +227,6 @@ La probabilidad es una medida asociada a la posibilidad de que ocurra un determi
 \text{Frecuencia relativa} = \frac{\text{Número de puntos muestrales del evento de interés}}{\text{Total puntos en el espacio muestral}}
 \end{align*}`
 
-#### Ejercicio
-
 <button id="Show5" class="btn btn-secondary">Mostrar Ejercicio </button>
 <button id="Hide5" class="btn btn-info">Ocultar Ejercicio </button>
 <main id="botoncito5"> 
