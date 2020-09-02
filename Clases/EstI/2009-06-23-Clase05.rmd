@@ -96,7 +96,7 @@ siendo $t$ el <strong>tiempo en minutos</strong> que tarda el decano en salir de
 ### Evento de un espacio muestral
 Es un **subconjunto de resultados del espacio muestral** `$S$`. Generalmente, los eventos se denotan por las primeras letras del abecedario de la forma `$A, B, C$` o `$A_1, A_2, A_3$`.
 
-Los eventos pueden ser clasificados en dos tipos
+Los eventos pueden ser clasificados en tres tipos
 
 * **Simple:** se da cuando el evento tiene un solo resultado o punto muestral. 
 * **Compuesto:** se da cuando el evento tiene más de un resultado o punto muestral. Estos resultados pueden ser dependientes o independientes.
