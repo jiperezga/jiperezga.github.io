@@ -6,11 +6,11 @@ permalink: /ProbabilidadeInferencia/PeIE:title.html
 tags:
 
 introduction: |
-  Probabilidad condicional. <br>
-  Regla multiplicativa. <br>
-  Independencia entre eventos. <br>
-  Probabilidad total. <br>
-  Teorema de Bayes.
+              Probabilidad condicional. <br>
+              Regla multiplicativa. <br>
+              Independencia entre eventos. <br>
+              Probabilidad total. <br>
+              Teorema de Bayes.
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
