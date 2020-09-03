@@ -101,7 +101,7 @@ kable_styling("striped", full_width = F)
 
 <pre style="font-family: 'Open Sans',sans-serif; margin-top: -3rem; margin-bottom: -2rem; font-size:0.98rem;"><table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;"><thead><tr><th style="text-align:right;"></th><th style="text-align:left;">Fútbol</th><th style="text-align:left;">Baloncesto</th><th style="text-align:left;">Voleibol</th><th style="text-align:left;">Tenis</th></tr></thead><tbody><tr><td style="text-align:left;">Administración de empresas</td><td style="text-align:right;">0.120</td><td style="text-align:right;">0.0675</td><td style="text-align:right;">0.0550</td><td style="text-align:right;">0.0575</td></tr><tr><td style="text-align:left;">Contaduría</td><td style="text-align:right;">0.085</td><td style="text-align:right;">0.1025</td><td style="text-align:right;">0.0625</td><td style="text-align:right;">0.0250</td></tr><tr><td style="text-align:left;">Economía</td><td style="text-align:right;">0.165</td><td style="text-align:right;">0.1275</td><td style="text-align:right;">0.0325</td><td style="text-align:right;">0.1000</td></tr></tbody></table></pre>
 </li>
-<li> Dado que nos interesa solo la probabilidad de que al estudiante seleccionado prefiera el Fútbol, entonces podemos calcular dicha probabilidad mediante el cálculo de la suma marginal de la columna de Fútbol, dicha suma se conoce como <a href="../../EstadisticaI/EstIClase06.html#probabilidad-total" target="\_blank">Probabilidad total</a>, de la cual se hablará más adelante.
+<li> Dado que nos interesa solo la probabilidad de que al estudiante seleccionado prefiera el Fútbol, entonces podemos calcular dicha probabilidad mediante el cálculo de la suma marginal de la columna de Fútbol, dicha suma se conoce como <a href="../../ProbabilidadeInferencia/PeIEClase02.html#probabilidad-total" target="\_blank">Probabilidad total</a>, de la cual se hablará más adelante.
 
 <pre style="font-family: 'Open Sans',sans-serif; margin-top: -3rem; margin-bottom: -2rem; font-size:0.98rem;"><table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;"><thead><tr><th style="text-align:right;"></th><th style="text-align:left;">Fútbol</th><th style="text-align:left;">Baloncesto</th><th style="text-align:left;">Voleibol</th><th style="text-align:left;">Tenis</th></tr></thead><tbody><tr><td style="text-align:left;">Administración de empresas</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">0.120</span></td><td style="text-align:right;">0.0675</td><td style="text-align:right;">0.0550</td><td style="text-align:right;">0.0575</td></tr><tr><td style="text-align:left;">Contaduría</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">0.085</span></td><td style="text-align:right;">0.1025</td><td style="text-align:right;">0.0625</td><td style="text-align:right;">0.0250</td></tr><tr><td style="text-align:left;">Economía</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">0.165</span></td><td style="text-align:right;">0.1275</td><td style="text-align:right;">0.0325</td><td style="text-align:right;">0.1000</td></tr></tbody></table></pre>
 
@@ -110,7 +110,7 @@ $$\begin{align*}
 \end{align*}$$
 Por tanto, se tendrá un $37\%$ de probabilidad de que el estudiante seleccionado prefiera el Fútbol sobre los demás deportes.
 </li>
-<li>Similar al punto anterior, dado que solo nos interesa la probabilidad de que el estudiante sea de Contaduría, entonces será posible realizar el cálculo mediante la suma marginal de la fila de Contaduría, donde dicha suma se conoce como <a href="../../EstadisticaI/EstIClase06.html#probabilidad-total" target="\_blank">Probabilidad total</a>, de la cual se hablará más adelante.
+<li>Similar al punto anterior, dado que solo nos interesa la probabilidad de que el estudiante sea de Contaduría, entonces será posible realizar el cálculo mediante la suma marginal de la fila de Contaduría, donde dicha suma se conoce como <a href="../../ProbabilidadeInferencia/PeIEClase02.html#probabilidad-total" target="\_blank">Probabilidad total</a>, de la cual se hablará más adelante.
 
 <pre style="font-family: 'Open Sans',sans-serif; margin-top: -3rem; margin-bottom: -2rem; font-size:0.98rem;"><table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;"><thead><tr><th style="text-align:right;"></th><th style="text-align:left;">Fútbol</th><th style="text-align:left;">Baloncesto</th><th style="text-align:left;">Voleibol</th><th style="text-align:left;">Tenis</th></tr></thead><tbody><tr><td style="text-align:left;">Administración de empresas</td><td style="text-align:right;">0.120</td><td style="text-align:right;">0.0675</td><td style="text-align:right;">0.0550</td><td style="text-align:right;">0.0575</td></tr><tr><td style="text-align:left;">Contaduría</td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">0.085</span></td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">0.1025</span></td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">0.0625</span></td><td style="text-align:right;"><span style="border-radius: 4px; padding-right: 4px; padding-left: 4px; background-color: #974c55 !important;">0.0250</span></td></tr><tr><td style="text-align:left;">Economía</td><td style="text-align:right;">0.165</td><td style="text-align:right;">0.1275</td><td style="text-align:right;">0.0325</td><td style="text-align:right;">0.1000</td></tr></tbody></table></pre>
 
@@ -183,7 +183,7 @@ En general, si pueden ocurrir los eventos `$A_1, A_2, \ldots, A_n$`, entonces
 <h3 data-toc-skip> Ejercicio </h3> 
 <p> Una bolsa contiene seis pelotas rojas y cuatro azules, una segunda contiene siete rojas y dos azules. El experimento consiste en seleccionar una pelota al azar de la primera bolsa y colocarla dentro de la segunda bolsa. Seguidamente se selecciona una de la segunda bolsa y se coloca en la primera bolsa.</p>
 
-<img src="../../EstadisticaI/images/ReglaMultiplicativa.jpg" alt="">
+<img src="../../ProbabilidadeInferencia/images/ReglaMultiplicativa.jpg" alt="">
 <br>
 
 <ol type = "1">
@@ -195,7 +195,7 @@ En general, si pueden ocurrir los eventos `$A_1, A_2, \ldots, A_n$`, entonces
 <ol type = "1">
 <li> Para resolver tal problema podemos emplear lo conocido como un <strong>Diagrama de Árbol</strong> el cual consta de gráficas todos los posibles resultados, de la siguiente forma <br><br>
 
-<img src="../../EstadisticaI/images/DiagramadeArbol.jpg" alt="">
+<img src="../../ProbabilidadeInferencia/images/DiagramadeArbol.jpg" alt="">
 <br>
 
 Entonces, si observamos el diagrama de árbol, podemos apreciar que la probabilidad de que se saque una bola roja de la primera bolsa (primer paso) es de
@@ -270,7 +270,7 @@ En cualquier otro caso, los eventos `$A$` y `$B$` son dependientes.
 
 Dado lo anterior tendremos el siguiente escenario <br><br>
 
-<img src="../../EstadisticaI/images/DiagramadeArbol2.jpg" alt="">
+<img src="../../ProbabilidadeInferencia/images/DiagramadeArbol2.jpg" alt="">
 <br>
 
 Para realizar el cálculo de la probabilidad de sacar una bola negra en el primer paso y una bola azul en el segundo paso, con reemplazo, se tendrá que
@@ -296,7 +296,7 @@ Y por tanto, al verificar que la igualdad se cumple, se concluye que los eventos
 </li>
 <li> Similar al punto anterior, pero con la diferencia a que se realizan $3$ pasos, en donde, luego de sacar la primera bola, se registra y se reemplaza la bola con una del mismo color, pero al sacar la segunda bola, no se realiza reemplazo antes de sacar la tercera bola, alterando las probabilidades de cada una de las bolas dentro de la bolsa, tal como se presenta en el siguiente escenario <br><br>
 
-<img src="../../EstadisticaI/images/DiagramadeArbol3.jpg" alt="">
+<img src="../../ProbabilidadeInferencia/images/DiagramadeArbol3.jpg" alt="">
 <br>
 
 Al realizar el cálculo necesario para calcular la probabilidad de sacar una bola azul en el primer paso, una bola negra en el segundo paso y una bola roja en el tercero paso, tendremos que
@@ -327,7 +327,7 @@ Sean `$A_1, A_2, \ldots, A_k$` eventos **mutuamente excluyentes** `$(A_i\cap A_j
 `\begin{align*}
 \mathbb{P}(B) &= \mathbb P(B\cap A_1)+\mathbb P(B\cap A_2)+\ldots+\mathbb P(B\cap A_k)
 \end{align*}`
-o alternativamente, al aplicar la formula de la <a href="../../EstadisticaI/EstIClase06.html#regla-multiplicativa" target="\_blank">Regla multiplicativa</a>, tenemos que
+o alternativamente, al aplicar la formula de la <a href="../../ProbabilidadeInferencia/PeIEClase02.html#regla-multiplicativa" target="\_blank">Regla multiplicativa</a>, tenemos que
 `\begin{align*}
 \mathbb{P}(B) &= \mathbb P(A_1)\mathbb P(B|A_1)+\mathbb P(A_2)\mathbb P(B|A_2)+\ldots+\mathbb P(A_k)\mathbb P(B|A_k)
 \end{align*}`
@@ -377,7 +377,7 @@ Sea `$A_1, A_2, \ldots, A_k$` eventos **mutuamente excluyentes** y **exhaustivos
 `\begin{align*}
 \mathbb P(A_j|B) &= \frac{\mathbb P(A_j\cap B)}{\mathbb P(B)}
 \end{align*}`
-En donde, al aplicar la formula de la <a href="../../EstadisticaI/EstIClase06.html#regla-multiplicativa" target="\_blank">Regla multiplicativa</a> en el numerador, y la formula de la <a href="../../EstadisticaI/EstIClase06.html#probabilidad-total" target="\_blank">Probabilidad total</a> en el denominador, tenemos que
+En donde, al aplicar la formula de la <a href="../../ProbabilidadeInferencia/PeIEClase02.html#regla-multiplicativa" target="\_blank">Regla multiplicativa</a> en el numerador, y la formula de la <a href="../../ProbabilidadeInferencia/PeIEClase02.html#probabilidad-total" target="\_blank">Probabilidad total</a> en el denominador, tenemos que
 
 `\begin{align*}
 \mathbb P(A_j|B) &= \frac{\mathbb P(A_j)\mathbb P(B|A_j)}{\sum_{i=1}^k \mathbb P(A_i)\mathbb P(B|A_i)}
@@ -407,7 +407,7 @@ $$\begin{align*}
 
 El problema, es que al observar las probabilidades necesarias para realizar el cálculo de la formula anterior vemos que no poseemos ninguna de las dos probabilidades que necesitamos para llevar a cabo el cálculo de interés. <br> <br>
 
-Al detallar la ecuación más detenidamente, observamos que los eventos $A_1, A_2, A_3$ son <strong>mutuamente excluyentes</strong> y <strong>exhaustivos</strong>, lo cual nos permite poder calcular la $\mathbb{P}(B)$ mediante el teorema de <a href="../../EstadisticaI/EstIClase06.html#probabilidad-total" target="\_blank">Probabilidad total</a>, y la probabilidad $\mathbb{P}(A_3 \cap B)$ mediante el teorema de la <a href="../../EstadisticaI/EstIClase06.html#regla-multiplicativa" target="\_blank">Regla multiplicativa</a>. Lo cual nos lleva a la siguiente expresión.
+Al detallar la ecuación más detenidamente, observamos que los eventos $A_1, A_2, A_3$ son <strong>mutuamente excluyentes</strong> y <strong>exhaustivos</strong>, lo cual nos permite poder calcular la $\mathbb{P}(B)$ mediante el teorema de <a href="../../ProbabilidadeInferencia/PeIEClase02.html#probabilidad-total" target="\_blank">Probabilidad total</a>, y la probabilidad $\mathbb{P}(A_3 \cap B)$ mediante el teorema de la <a href="../../ProbabilidadeInferencia/PeIEClase02.html#regla-multiplicativa" target="\_blank">Regla multiplicativa</a>. Lo cual nos lleva a la siguiente expresión.
 $$\begin{align*}
 \mathbb{P}{(A_3|B)} & = \frac{\mathbb{P}(A_3)\mathbb{P}(B|A_3)}{\mathbb{P}(A_1)\mathbb{P}(B|A_1)+\mathbb{P}(A_2)\mathbb{P}(B|A_2)+\mathbb{P}(A_3)\mathbb{P}(B|A_3)} \\
 & = \frac{0.25\times 0.02}{0.30\times 0.04 + 0.45\times 0.05 + 0.25\times 0.02} \\
