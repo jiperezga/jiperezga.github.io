@@ -55,14 +55,15 @@ La razón del empleo de las técnicas de conteo se debe a que en muchos casos es
 ### Regla multiplicativa
 **Si una operación consiste en `$k$` diferentes pasos**, donde el primer paso puede realizarse de `$n_1$` formas distintas, el segundo paso puede realizarse de `$n_2$` formas distintas, `$\ldots$` y el `$i$`-ésimo paso puede realizarse de `$n_i$` formas distintas, con `$i=1,2,\ldots,k$`, entonces la operación completa se puede realizar de `$(n_1)(n_2)(n_3)\ldots(n_k)$` formas distintas.
 
-#### Ejercicio
-
-1. Suponga que en un grupo de Estadística I hay un total de `$10$` hombres y `$7$` mujeres, de cuantas formas posibles puede el profesor escoger un hombre y luego una mujer para que resuelvan un ejercicio?
-2. Cuantos números impares de 2 dígitos pueden formarse con el conjunto de números `$1,3,4,2,6,0,9,8$` si cada uno de ellos sólo puede ser seleccionado una sola vez?
-
-<button id="Show1" class="btn btn-secondary">Mostrar Solución </button>
-<button id="Hide1" class="btn btn-info">Ocultar Solución </button>
+<button id="Show1" class="btn btn-secondary">Mostrar Ejercicio</button>
+<button id="Hide1" class="btn btn-info">Ocultar Ejercicio</button>
 <main id="botoncito1"> 
+<h3 data-toc-skip> Ejercicio </h3> 
+<ol>
+<li> Suponga que en un grupo de Estadística hay un total de $10$ hombres y $7$ mujeres, de cuantas formas posibles puede el profesor escoger un hombre y luego una mujer para que resuelvan un ejercicio? </li>
+<li> Cuantos números impares de $2$ dígitos pueden formarse con el conjunto de números $1,3,4,2,6,0,9,8$ si cada uno de ellos sólo puede ser seleccionado una sola vez? </li>
+</ol>
+
 <h3 data-toc-skip> Solución </h3> 
 <ol type ="1">
 <li>Como hay un total de $n_1=10$ foras de seleccionar un hombre y $n_2=7$ formas de seleccionar una mujer, entonces el número de formas de seleccionar un hombre y luego una mujer es de 
@@ -91,12 +92,12 @@ n! &= n(n-1)(n-2)\ldots(3)(2)(1) \\
 \end{align*}`
 donde el caso especial de `$0!=1$`
 
-#### Ejercicio
-Suponga que en el curso de Estadística I hay un total de `$8$` estudiantes que van a presentar un supletorio, de cuantas formas puede organizar el profesor los estudiantes en una fila?
-
-<button id="Show2" class="btn btn-secondary">Mostrar Solución </button>
-<button id="Hide2" class="btn btn-info">Ocultar Solución </button>
+<button id="Show2" class="btn btn-secondary">Mostrar Ejercicio</button>
+<button id="Hide2" class="btn btn-info">Ocultar Ejercicio</button>
 <main id="botoncito2"> 
+<h3 data-toc-skip> Ejercicio </h3> 
+<p>Suponga que en el curso de Estadística hay un total de $8$ estudiantes que van a presentar un supletorio, de cuantas formas puede organizar el profesor los estudiantes en una fila?</p>
+
 <h3 data-toc-skip> Solución </h3> 
 <p> Como hay un total de $8$ estudiantes, entonces el total de formas en que el profesor puede ordenar el total de estudiantes en una fila es, $8$ posibles estudiantes en el primer puesto, $7$ posibles estudiantes en el segundo puesto, $\ldots$, y $1$ posible estudiante en el último puesto. Esto es,
 $$\begin{align*}
@@ -115,12 +116,12 @@ donde en el caso especial de `$n=r$`, se tendrá la formula
 _nP_n= \frac{n!}{(n-n)!}=\frac{n!}{0!}=n!\\
 \end{align*}`
 
-#### Ejercicio
-Suponga que en la facultad de Ciencias Económicas se encuentran en elecciones, y se van a seleccionar `$4$` profesores para cubrir los puestos de Decano, Vicedecano, Jefe del departamento de Economía y Jefe del departamento de Administración de Empresas. Si se tiene un total de `$25$` candidatos, de cuantas maneras se pueden llenar estos `$4$` puestos.
-
-<button id="Show3" class="btn btn-secondary">Mostrar Solución </button>
-<button id="Hide3" class="btn btn-info">Ocultar Solución </button>
+<button id="Show3" class="btn btn-secondary">Mostrar Ejercicio</button>
+<button id="Hide3" class="btn btn-info">Ocultar Ejercicio</button>
 <main id="botoncito3"> 
+<h3 data-toc-skip> Ejercicio </h3> 
+<p>Suponga que en la facultad de Ciencias Económicas se encuentran en elecciones, y se van a seleccionar $4$ profesores para cubrir los puestos de Decano, Vicedecano, Jefe del departamento de Ingeniería Industrial y Jefe del departamento de Ingeniería Financiera. Si se tiene un total de $25$ candidatos, de cuantas maneras se pueden llenar estos $4$ puestos.</p>
+
 <h3 data-toc-skip> Solución </h3> 
 <p> Como hay un total de $25$ aspirantes, entonces se tendrán $25$ posibilidades para ocupar el puesto de Decano, $24$ posibilidades para ocupar el puesto de Vicedecano dado que se ocupó ya el primer puesto, $23$ posibilidades para ocupar el puesto de Jefe del departamento de Economía dado que ya se ocuparon los dos primeros puestos, y $22$ posibilidades para ocupar el puesto de Jefe del departamento de Administración de Empresas dado que ya se ocuparon los tres primeros puestos. Esto es
 $$\begin{align*}
@@ -134,21 +135,21 @@ _{25}P_4 = \frac{25!}{(25-4)!} = 303600 \text{ formas}
   </p>
 </main>
 
-
 ### Permutación en circulo
 El número de permutaciones de `$n$` objetos ordenados en forma circular es de `$(n-1)!$`. Dos permutaciones circulares no se consideran diferentes a menos
 que los objetos correspondientes en los dos arreglos estén precedidos o seguidos por un objeto diferente.
 
-#### Ejercicio
-De cuantas manera puede organizar el profesor de Estadística I a `$6$` estudiantes (Andrés, Ana, Luisa, Camila, Sebastián, Pedro) en una mesa redonda para resolver un trabajo, si
-
-1. No hay ninguna restricción.
-2. Si Luisa y Camila deben sentarse juntas.
-3. Si Luisa y Camila no pueden sentarse juntos.
-
-<button id="Show4" class="btn btn-secondary">Mostrar Solución </button>
-<button id="Hide4" class="btn btn-info">Ocultar Solución </button>
+<button id="Show4" class="btn btn-secondary">Mostrar Ejercicio</button>
+<button id="Hide4" class="btn btn-info">Ocultar Ejercicio</button>
 <main id="botoncito4"> 
+<h3 data-toc-skip> Solución </h3> 
+<p>De cuantas manera puede organizar el profesor de Estadística a $6$ estudiantes (Andrés, Ana, Luisa, Camila, Sebastián, Pedro) en una mesa redonda para resolver un trabajo, si</p>
+<ol>
+<li> No hay ninguna restricción. </li>
+<li> Si Luisa y Camila deben sentarse juntas. </li>
+<li> Si Luisa y Camila no pueden sentarse juntos. </li>
+</ol>
+
 <h3 data-toc-skip> Solución </h3> 
 <ol type="1">
 <li> Cuando no hay restricción, se tendrá entonces que dejando uno de los estudiantes en un punto fijo, el profesor podrá sentar a los estudiantes en una mesa redonda de
@@ -185,13 +186,13 @@ El número de permutaciones distintas en `$n$` objetos, en los que `$n_1$` objet
 \end{align*}`
 donde `$n=n_1+n_2+\ldots+n_k$`
 
-#### Ejercicio
 
-En la facultad de Ciencias Económicas están interesados de armar un equipo de fútbol y para ello necesitan inscribir `$15$` jugadores. Entre los cuales se inscriben `$3$` de primer semestre, `$5$` de segundo semestre, `$2$` de tercer semestre, `$1$` de cuarto semestre, `$2$` de quinto semestre, `$1$` de octavo semestre y `$1$` de décimo semestre. Si al finalizar el torneo el equipo de Ciencias Económicas queda de segundo y para la entrega de medallas se desea entregarlas por semestre al que pertenecen los estudiantes. De cuantas formas diferentes pueden ordenarse los `$15$` jugadores para recibir las medallas, si solo importa el semestre en el que pertenecen?
-
-<button id="Show5" class="btn btn-secondary">Mostrar Solución </button>
-<button id="Hide5" class="btn btn-info">Ocultar Solución </button>
+<button id="Show5" class="btn btn-secondary">Mostrar Ejercicio</button>
+<button id="Hide5" class="btn btn-info">Ocultar Ejercicio</button>
 <main id="botoncito5"> 
+<h3 data-toc-skip> Ejercicio </h3>
+<p>En la facultad de Ciencias Económicas están interesados de armar un equipo de fútbol y para ello necesitan inscribir $15$ jugadores. Entre los cuales se inscriben $3$ de primer semestre, $5$ de segundo semestre, $2$ de tercer semestre, $1$ de cuarto semestre, $2$ de quinto semestre, $1$ de octavo semestre y $1$ de décimo semestre. Si al finalizar el torneo el equipo de Ciencias Económicas queda de segundo y para la entrega de medallas se desea entregarlas por semestre al que pertenecen los estudiantes. De cuantas formas diferentes pueden ordenarse los $15$ jugadores para recibir las medallas, si solo importa el semestre en el que pertenecen?</p>
+
 <h3 data-toc-skip> Solución </h3>
 <p>Dado que solo importa el semestre al que pertenecen los `$15$` estudiantes, entonces se tendrán un total de `$7$` clases, entre las cuales, la primera posee `$3$` estudiantes, la segunda posee `$5$` estudiantes, la tercera posee `$2$` estudiantes, la cuarta posee `$1$` estudiante, la quinta posee `$2$` estudiantes, la sexta posee `$1$` estudiante y la séptima posee `$1$` estudiante. 
 Por tanto, para entregar las medallas, el número de arreglos diferentes que pueden formarse son
@@ -210,19 +211,20 @@ en donde puede observarse que
 `\begin{align*}
 _nC_r=\frac{_nP_r}{r!}
 \end{align*}`
-y en consecuencia `$_nC_r < _nP_r$`
+y en consecuencia `$_nC_r <\; _nP_r$`
 
-#### Ejercicio
-Suponga que entre el total de `$27$` estudiantes que están en el curso de Estadística I, el profesor decide seleccionar `$4$` para que realicen un quiz sorpresa. De cuantas maneras puede el profesor escoger un grupo de `$4$` personas del total de estudiantes del curso?
-
-<button id="Show6" class="btn btn-secondary">Mostrar Solución </button>
-<button id="Hide6" class="btn btn-info">Ocultar Solución </button>
+<button id="Show6" class="btn btn-secondary">Mostrar Ejercicio</button>
+<button id="Hide6" class="btn btn-info">Ocultar Ejercicio</button>
 <main id="botoncito6"> 
+<h3 data-toc-skip> Ejercicio </h3> 
+<p>Suponga que entre el total de $27$ estudiantes que están en el curso de Estadística, el profesor decide seleccionar $4$ para que realicen un quiz sorpresa. De cuantas maneras puede el profesor escoger un grupo de $4$ personas del total de estudiantes del curso?</p>
+
 <h3 data-toc-skip> Solución </h3> 
-Dado que no importa el orden en el cual el estudiante sea escogido va a tener que presentar el quiz y un estudiante no puede ser seleccionado más de una vez, se tiene que el total de estudiantes $n=27$, mientras que el total de estudiantes que tomará son $r=4$, entonces se tendrá que el número de formas en que el profesor puede hacer la selección es
+<p>Dado que no importa el orden en el cual el estudiante sea escogido va a tener que presentar el quiz y un estudiante no puede ser seleccionado más de una vez, se tiene que el total de estudiantes $n=27$, mientras que el total de estudiantes que tomará son $r=4$, entonces se tendrá que el número de formas en que el profesor puede hacer la selección es
 $$\begin{align*}
 _{27}C_{4}= \frac{27!}{4! (27-4)!} = 17550 \text{ formas}
 \end{align*}$$
+</p>
 </main>
 
 ### Combinatoria por subconjuntos
@@ -233,52 +235,94 @@ El número de maneras en que un conjunto de `$n$` objetos diferentes se puede di
 
 siendo `$\sum_{i=1}^kn_i=n$`.
 
-#### Ejercicio
-Suponga que un grupo de `$10$` estudiantes del grupo de Estadística I asisten a un congreso y deciden hospedarse en un hostal. Si una hay dos habitación triple, una doble y dos privadas, de cuantas formas pueden repartirse los estudiantes?
-
-<button id="Show7" class="btn btn-secondary">Mostrar Solución </button>
-<button id="Hide7" class="btn btn-info">Ocultar Solución </button>
+<button id="Show7" class="btn btn-secondary">Mostrar Ejercicio</button>
+<button id="Hide7" class="btn btn-info">Ocultar Ejercicio</button>
 <main id="botoncito7"> 
-El número de formas posibles en que pueden repartirse los $10$ estudiantes, siendo $n_1=3$ y $n_2=3$ las dos habitaciones triples, $n_3=2$ la habitaciones doble y $n_4=1$ y $n_5=1$ las dos habitaciones privadas, entonces
+<h3 data-toc-skip> Ejercicio </h3> 
+<p>Suponga que un grupo de $10$ estudiantes del grupo de Estadística asisten a un congreso y deciden hospedarse en un hostal. Si una hay dos habitación triple, una doble y dos privadas, de cuantas formas pueden repartirse los estudiantes?</p>
+
+<h3 data-toc-skip> Solución </h3> 
+<p>El número de formas posibles en que pueden repartirse los $10$ estudiantes, siendo $n_1=3$ y $n_2=3$ las dos habitaciones triples, $n_3=2$ la habitaciones doble y $n_4=1$ y $n_5=1$ las dos habitaciones privadas, entonces
 $$\begin{align*}
 \left(\begin{array}{c}10\\ 3, 3, 2, 1, 1\end{array}\right) = \frac{10!}{3!\;3!\;2!\;1!\;1!} = 50400 \text{ formas}
 \end{align*}$$
+</p>
 </main>
 
 ### Permutaciones o Combinatorias?
 Con el proposito de identificar cuando se deben usar permutaciones y cuando se deben usar combinatorias, es necesario determinar si **el conteo se realiza con reemplazo o sin reemplazo**, y además determinar si **los objetos se encuentran o no ordenados**. Entonces, suponga que se tienen `$n$` objetos de los cuales se desean tomar `$r$` a la vez, entonces planteamos los siguientes `$4$` escenarios
 
-#### Caso 1: Con orden, sin reemplazo
-`\begin{align*}
-_nP_r= n(n-1)(n-2)\ldots(n-r+1)=\frac{n!}{(n-r)!}
-\end{align*}`
+```{r echo=FALSE, eval=F}
+library(kableExtra)
+tabla <- data.frame(rbind(c("", "", "$\\mathbf{\\text{Reemplazo}}$", ""), 
+                          c("", "", "$\\mathbf{\\text{Sí}}$", "$\\mathbf{\\text{No}}$"), 
+                          c("$\\mathbf{\\text{Orden}}$", "$\\mathbf{\\text{Sí}}$", "$n^r$", "$_nP_r= n(n-1)(n-2)\\ldots(n-r+1)=\\frac{n!}{(n-r)!}$"), 
+                          c("", "$\\mathbf{\\text{No}}$", "$_{n+r-1}C_r = \\left(\\begin{array}{c}n+r-1\\\\ r\\end{array}\\right) = \\frac{(n+r-1)!}{r!\\;(n-1)!}$", "$_nC_r = \\left(\\begin{array}{c}n\\\\ r\\end{array}\\right) = \\frac{n!}{r!\\;(n-r)!}$")))
+kable(tabla, align = c("c", "c", "c", "c"),
+  format = "html", booktabs = T, row.names = FALSE, col.names = NULL) %>%
+kable_styling("striped", full_width = F) 
+```
+<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -2rem; margin-top: -2rem; font-size: 98%;">
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td rowspan="2" colspan="2" style="text-align:center; vertical-align: middle;"></td>
 
-#### Caso 2: Con orden, con reemplazo
-`\begin{align*}
-n^r
-\end{align*}`
+<td style="text-align:center;" colspan="2">
+<script type="math/tex" id="MathJax-Element-143">\mathbf{\text{Reemplazo}}</script>
+</td>
 
-#### Caso 3: Sin orden, sin reemplazo
-`\begin{align*}
-_nC_r = \left(\begin{array}{c}n\\ r\end{array}\right) = \frac{n!}{r!\;(n-r)!}
-\end{align*}`
+</tr>
+<tr>
+<td style="text-align:center;">
+<script type="math/tex" id="MathJax-Element-144">\mathbf{\text{Sí}}</script>
+</td>
+<td style="text-align:center;">
+<script type="math/tex" id="MathJax-Element-145">\mathbf{\text{No}}</script>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;vertical-align: middle !important;" rowspan="2">
+<script type="math/tex" id="MathJax-Element-146">\mathbf{\text{Orden}}</script>
+</td>
+<td style="text-align:center;">
+<script type="math/tex" id="MathJax-Element-147">\mathbf{\text{Sí}}</script>
+</td>
+<td style="text-align:center;">
+<script type="math/tex" id="MathJax-Element-148">n^r</script>
+</td>
+<td style="text-align:center;">
+<script type="math/tex" id="MathJax-Element-149">_nP_r= n(n-1)(n-2)\ldots(n-r+1)=\frac{n!}{(n-r)!}</script>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+<script type="math/tex" id="MathJax-Element-150">\mathbf{\text{No}}</script>
+</td>
+<td style="text-align:center;">
+<script type="math/tex" id="MathJax-Element-151">_{n+r-1}C_r = \left(\begin{array}{c}n+r-1\\ r\end{array}\right) = \frac{(n+r-1)!}{r!\;(n-1)!}</script>
+</td>
+<td style="text-align:center;">
+<script type="math/tex" id="MathJax-Element-152">_nC_r = \left(\begin{array}{c}n\\ r\end{array}\right) = \frac{n!}{r!\;(n-r)!}</script>
+</td>
+</tr>
+</tbody>
+</table>
+</pre>
 
-#### Caso 4: sin orden con reemplazo
-`\begin{align*}
-_{n+r-1}C_r = \left(\begin{array}{c}n+r-1\\ r\end{array}\right) = \frac{(n+r-1)!}{r!\;(n-1)!}
-\end{align*}`
-
-#### Ejercicio
-Suponga que se está interesado en jugar una lotería, en la cual deben seleccionarse `$4$` diferentes números. De cuantas formas es posible seleccionar estos `$4$` números
-
-1. Si en la lotería influye el orden y los números deben seleccionarse sin reemplazo.
-2. Si en la lotería influye el orden y los números pueden seleccionarse con reemplazo.
-3. Si en la lotería no influye el orden y los números deen seleccionarse sin reemplazo.
-4. Si en la lotería no influye el orden y los números pueden seleccionarse con reemplazo.
-
-<button id="Show8" class="btn btn-secondary">Mostrar Solución </button>
-<button id="Hide8" class="btn btn-info">Ocultar Solución </button>
+<button id="Show8" class="btn btn-secondary">Mostrar Ejercicio</button>
+<button id="Hide8" class="btn btn-info">Ocultar Ejercicio</button>
 <main id="botoncito8"> 
+<h3 data-toc-skip> Ejercicio </h3> 
+<p>Suponga que se está interesado en jugar una lotería, en la cual deben seleccionarse $4$ diferentes números. De cuantas formas es posible seleccionar estos $4$ números</p>
+<ol>
+<li> Si en la lotería influye el orden y los números deben seleccionarse sin reemplazo.</li>
+<li> Si en la lotería influye el orden y los números pueden seleccionarse con reemplazo.</li>
+<li> Si en la lotería no influye el orden y los números deen seleccionarse sin reemplazo.</li>
+<li> Si en la lotería no influye el orden y los números pueden seleccionarse con reemplazo.</li>
+</ol>
+
+<h3 data-toc-skip> Solución </h3> 
 <ol type ="1">
 <li>Dado que <strong>influye el orden</strong> de los números y <strong>no se puede seleccionar un número dos veces</strong>, se tiene que el total números de $4$ dígitos que se pueden formar son
 $$\begin{align*}
