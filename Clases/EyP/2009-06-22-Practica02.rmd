@@ -2,14 +2,16 @@
 layout: post
 title: "Práctica 02"
 main-class: 'practica'
-permalink: /EstadisticaI/EstI:title.html
+permalink: /EstadisticayProbabilidades/EyP:title.html
 tags:
-
 introduction: |
               Ejercicios sobre: <br>
               - Estadística descriptiva. <br>
               - Probabilidad. <br>
               - Técnicas de conteo.
+              
+image: <img src="../../assets/images/logoUdeM.png" alt="UdeM" class="sticky">
+
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
@@ -21,9 +23,10 @@ output:
 always_allow_html: yes   
 knit: (function(inputFile, encoding) {
   rmarkdown::render(inputFile, encoding = encoding,
-  output_dir = "../../EstadisticaI/_posts/", output_format = "all"  ) })
+  output_dir = "../../EstadisticayProbabilidades/_posts/", output_format = "all"  ) })
 bibliography: "../../referencias.bib"
 csl: "../../apa.csl"
+link-citations: yes
 ---
 
 ```{r knitr_init, echo=FALSE, cache=FALSE}
@@ -36,11 +39,12 @@ opts_chunk$set(echo=TRUE,
                comment=NA,
                message=FALSE,
                warning=FALSE,
-               fig.path = paste0("../../EstadisticaI/images/", "Práctica02"),
-               cache.path = "../../EstadisticaI/cache/",
+               fig.path = paste0("../../EstadisticayProbabilidades/images/", "Práctica02"),
+               cache.path = "../../EstadisticayProbabilidades/cache/",
                cache = FALSE)
 
 ```
+
 
 # Lista de ejercicios
 1. Suponga que es sábado y planea con su pareja sentarse a ver todo el día películas. Si entre los dos han seleccionado un total de `$7$` películas para ver ese día. 
