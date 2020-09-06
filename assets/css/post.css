@@ -14,7 +14,7 @@ ol .table{ font-size: 80%}
 
 .post-content img{max-width:100%;margin:auto;display:block}
 
-.post-content p,.post-content h1,.post-content h2,.post-content h3,.post-content h4,.post-content ul,.post-content ol,.post-content .tags,.post-content iframe,.post-content .button-post{*zoom:1;width:auto;float:none;display:block;margin-right:auto;margin-left:auto;padding-left:0;padding-right:0;padding:0 1.25rem;margin:0 auto 1.875rem;font-family:'Open Sans',sans-serif;font-weight:300;font-style:normal;font-size:1.125rem;letter-spacing:.01rem;}
+.post-content p,.post-content h1,.post-content h2,.post-content h3,.post-content h4,.post-content ul,.post-content ol,.post-content .tags,.post-content iframe,.post-content .button-post{*zoom:1;width:auto;float:none;display:block;margin-right:auto;margin-left:auto;padding-left:0;padding-right:0;padding:0 1.25rem;/*margin:0 auto 1.875rem;*/font-family:'Open Sans',sans-serif;font-weight:300;font-style:normal;font-size:1.125rem;letter-spacing:.01rem;}
 
 .post-content p:before,.post-content h1:before,.post-content h2:before,.post-content h3:before,.post-content h4:before,.post-content ul:before,.post-content ol:before,.post-content .tags:before,.post-content iframe:before,.post-content .button-post:before,.post-content p:after,.post-content h1:after,.post-content h2:after,.post-content h3:after,.post-content h4:after,.post-content ul:after,.post-content ol:after,.post-content .tags:after,.post-content iframe:after,.post-content .button-post:after{content:'';display:table;}
 
