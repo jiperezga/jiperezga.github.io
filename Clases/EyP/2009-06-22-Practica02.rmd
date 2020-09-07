@@ -50,11 +50,11 @@ opts_chunk$set(echo=TRUE,
 1. Suponga que es sábado y planea con su pareja sentarse a ver todo el día películas. Si entre los dos han seleccionado un total de `$7$` películas para ver ese día. 
 <ol type = "a">
 <li> De cuantas formas podrían ver las películas ese día? </li>
-<li> Si entre las $7$ películas seleccionadas hay $2$ de romance, $2$ de acción y $3$ de suspenso, de cuantas formas puede ver la pareja las $7$ películas ese día? </li>
+<li> Si entre las $7$ películas seleccionadas hay $2$ de romance, $2$ de acción y $3$ de suspenso, de cuantas formas puede ver la pareja las $7$ películas ese día, si solo importa la categoría de la película? </li>
 </ol>
 2. Un moneda esta cargada de tal forma que la probabilidad de que aparezca cara es tres veces mayor a que aparezca sello. Si se decide lanzar la moneda tres veces, cuál es la probabilidad de sacar al menos dos caras?
 3. Suponga un juego en donde se lanza un dado cargado de tal forma que la probabilidad de que caiga cualquier cara, es proporcional al número de puntos que le falta a la cara para sumar `$6$`. ¿Cuál es la probabilidad de que al lanzar el dado salga un número impar?
-4. Sea el espacio muestral `$S = \{x | 1 < x < 12\}$` definido como el rango de tiempo que puede tardar cualquier estudiante en realizar un trabajo de la universidad. Suponga que se tienen tres tipos de estudiantes, el evento `$X = \{x | 1 < x < 3\}$` representa el tiempo que tardan los estudiantes que estudiaron más de `$5$` horas, el evento `$Y = \{x | 1.5 < x < 8\}$` representa el tiempo que tardan los estudiantes que estudiaron entre `$2$` y `$5$` horas, y `$Z = \{x | 7 < x < 12\}$`, el tiempo que tardan los estudiantes que estudiaron menos de `$2$` horas. Dado lo anterior, encuentre e interprete en lo posible los siguientes eventos.
+4. Sea el espacio muestral `$S = \{x | 1 < x < 12\}$` definido como el rango de tiempo que puede tardar cualquier estudiante en realizar un trabajo de la universidad. Suponga que se tienen tres tipos de estudiantes, el evento `$X = \{x | 1 < x < 3\}$` representa el tiempo que tardan los estudiantes que estudiaron al menos de `$5$` horas, el evento `$Y = \{x | 1.5 < x < 8\}$` representa el tiempo que tardan los estudiantes que estudiaron entre `$2$` y `$5$` horas, y `$Z = \{x | 7 < x < 12\}$`, el tiempo que tardan los estudiantes que estudiaron menos de `$2$` horas. Dado lo anterior, encuentre e interprete en lo posible los siguientes eventos.
 <ol type = "a">
 <li> $X \cup Y$ </li>
 <li> $X \cap Y$ </li>
@@ -63,25 +63,15 @@ opts_chunk$set(echo=TRUE,
 <li> $X' \cap Y'$ </li>
 <li> $Z' \cup Y$ </li>
 </ol>
-5. Para un examen de Estadística I a las `$6$`AM, un estudiante programa un despertador, el cual sabe que consigue despertarlo el `$80\%$` de las veces. Además, sabe que si escucha sonar el despertador, la probabilidad de que llegue a tiempo al examen es del `$90\%$`, mientras que, si no lo escucha, la probabilidad de llegue a tiempo al examen es del `$50\%$`.
+5. Para un examen de Estadística y Probabilidades a las `$8$`AM, un estudiante programa un despertador, el cual sabe que consigue despertarlo el `$80\%$` de las veces. Además, sabe que si escucha sonar el despertador, la probabilidad de que llegue a tiempo al examen es del `$90\%$`, mientras que, si no lo escucha, la probabilidad de llegue a tiempo al examen es del `$50\%$`.
 <ol type = "a">
 <li> Si el estudiante llega a tiempo al examen, ¿Cuál es la probabilidad de que haya escuchado el despertador? </li>
 <li> Si el estudiante no llega a tiempo al examen, ¿Cuál es la probabilidad de que no haya escuchado el despertador? </li>
 </ol>
-6. En la facultad de Química de la UdeA, adelantan un estudio para saber si usar vapeadores puede afectar el tiempo de descanso de los estudiantes universitarios. Para realizar dicho estudio, la facultad de Química realiza una medición del tiempo de sueño, en minutos, de `$12$` estudiantes que usan vapeador y `$15$` estudiantes que no usan vapeador. Se obtienen los siguientes datos:
-`\begin{align*}
-		\text{No usan vapeador: }		& \text{369.3  356.0  322.1  347.6 }\\
-								& \text{353.2  348.1  352.7  334.4 }\\
-								& \text{360.2  343.8  323.2  313.8 }\\
-		\text{Usan vapeador: }	& \text{328.6  235.1  326.4  334.9 }\\
-								& \text{329.8  328.4  338.5  330.2 }\\
-								& \text{330.6  331.8  341.6  321.1 } \\
-								& \text{336.0  337.9  313.9}
-\end{align*}`
+6. Andrés, Ana, Pedro, Carlos, Sandra, Andrea y Juan hacen un reencuentro luego de muchos años de haber terminado el colegio y desean ir a comer. Si al restaurante se sientan en cualquier posición, 
 <ol type = "a">
-<li> Calcule el tiempo promedio de sueño para cada grupo e interprete. </li>
-<li> Calcule la desviación estándar para cada grupo. Cuál tiene mayor dispersión? Qué significa esto? </li>
-<li> Comente qué clase de efecto parece tener el hecho de usar vapeor sobre el tiempo de descanso de los estudiantes. </li>
+<li> Cuál es la probabilidad de que Ana y Carlos queden sentados juntos? </li>
+<li> Cuál es la probabilidad de que Pedro y Juan queden sentados separados? </li>
 </ol>
 7. Suponga que se descubre que, en un grupo de `$500$` estudiantes universitarios de último año, `$210$` fuman, `$258$` consumen bebidas alcohólicas, `$216$` comen entre comidas, `$122$` fuman y consumen bebidas alcohólicas, `$83$` comen entre comidas y consumen bebidas alcohólicas, `$97$` fuman y comen entre comidas y `$52$` tienen esos tres hábitos nocivos para la salud. Si se selecciona al azar a un miembro de este grupo, escriba el evento de interés y calcule la probabilidad de que el estudiante
 <ol type = "a">
@@ -216,13 +206,13 @@ liste los números de las regiones que representan los siguientes eventos
 39. Un experimento consiste en lanzar un dado. Si el número en el dado es par, se lanzar una moneda una vez. Si el número en el dado es impar, la moneda se lanza dos veces. 
 <ol type = "a">
 <li> Construya un diagrama de árbol para mostrar los elementos del espacio muestral $S$. </li>
-<li> Calcule la probabilidad de obtener un `$5$` en el dado, seguido de dos caras de la moneda. </li>
+<li> Calcule la probabilidad de obtener un $5$ en el dado, seguido de dos caras de la moneda. </li>
 <li> Calcule la probabilidad de obtener un número par en el dado, seguido de un sello de la moneda. </li>
 </ol>
 40. Un banco ha comprobado que uno de cada `$1000$` clientes con fondos expide un cheque con fecha equivocada.  En cambio, todo cliente sin fondos pone una fecha errónea en sus cheques. El `$90\%$` de los clientes del banco tienen fondos. Se recibe hoy en caja un cheque con fecha equivocada. ¿Cuál es la probabilidad de que sea de un cliente sin fondos?
 41. Resuelva
 <ol type = "a">
-<li> ¿De cuántas maneras se pueden formar `$6$` personas para abordar un autobús?. </li>
-<li> ¿Cuántas maneras son posibles si, de las `$6$`, `$3$` personas específicas insisten en formarse una después de la otra? </li>
-<li> ¿De cuántas maneras se pueden formar si, de las `$6$`, `$2$` personas específicas se rehúsan a formarse una detrás de la otra? </li>
+<li> ¿De cuántas maneras se pueden formar $6$ personas para abordar un autobús?. </li>
+<li> ¿Cuántas maneras son posibles si, de las $6$, $3$ personas específicas insisten en formarse una después de la otra? </li>
+<li> ¿De cuántas maneras se pueden formar si, de las $6$, $2$ personas específicas se rehúsan a formarse una detrás de la otra? </li>
 </ol>
