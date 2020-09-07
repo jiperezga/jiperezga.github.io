@@ -256,58 +256,59 @@ $$\begin{align*}
 ### Permutaciones o Combinatorias?
 Con el proposito de identificar cuando se deben usar permutaciones y cuando se deben usar combinatorias, es necesario determinar si **el conteo se realiza con reemplazo o sin reemplazo**, y además determinar si **los objetos se encuentran o no ordenados**. Entonces, suponga que se tienen `$n$` objetos de los cuales se desean tomar `$r$` a la vez, entonces planteamos los siguientes `$4$` escenarios
 
-```{r echo=FALSE, eval=F}
+```{r echo=FALSE, eval=FALSE}
 library(kableExtra)
-tabla <- data.frame(rbind(c("", "", "$\\mathbf{\\text{Reemplazo}}$", ""), 
-                          c("", "", "$\\mathbf{\\text{Sí}}$", "$\\mathbf{\\text{No}}$"), 
-                          c("$\\mathbf{\\text{Orden}}$", "$\\mathbf{\\text{Sí}}$", "$n^r$", "$_nP_r= n(n-1)(n-2)\\ldots(n-r+1)=\\frac{n!}{(n-r)!}$"), 
-                          c("", "$\\mathbf{\\text{No}}$", "$_{n+r-1}C_r = \\left(\\begin{array}{c}n+r-1\\\\ r\\end{array}\\right) = \\frac{(n+r-1)!}{r!\\;(n-1)!}$", "$_nC_r = \\left(\\begin{array}{c}n\\\\ r\\end{array}\\right) = \\frac{n!}{r!\\;(n-r)!}$")))
+tabla <- data.frame(rbind(c("$\\mathbf{\\text{Orden}}$", "$\\mathbf{\\text{Sí}}$", "$n^r$", "$_nP_r= n(n-1)(n-2)\\ldots(n-r+1)=\\frac{n!}{(n-r)!}$"), 
+                          c("$\\mathbf{\\text{Orden}}$", "$\\mathbf{\\text{No}}$", "$_{n+r-1}C_r = \\left(\\begin{array}{c}n+r-1\\\\ r\\end{array}\\right) = \\frac{(n+r-1)!}{r!\\;(n-1)!}$", "$_nC_r = \\left(\\begin{array}{c}n\\\\ r\\end{array}\\right) = \\frac{n!}{r!\\;(n-r)!}$")))
+
+colnames(tabla) <- c("", "", "$\\mathbf{\\text{Sí}}$", "$\\mathbf{\\text{No}}$")
 kable(tabla, align = c("c", "c", "c", "c"),
-  format = "html", booktabs = T, row.names = FALSE, col.names = NULL) %>%
-kable_styling("striped", full_width = F) 
+  format = "html", booktabs = T, row.names = FALSE) %>%
+kable_styling("striped", full_width = F) %>%
+collapse_rows(columns = 1:2, valign = "middle") %>%
+add_header_above(header = c(" " = 2, "$\\mathbf{\\text{Reemplazo}}$" = 2))
 ```
-<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -2rem; margin-top: -2rem; font-size: 98%;">
+
+<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -2rem; margin-top: -2rem; font-size: 100%;">
 <table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
 <td rowspan="2" colspan="2" style="text-align:center; vertical-align: middle;"></td>
-
 <td style="text-align:center;" colspan="2">
-<script type="math/tex" id="MathJax-Element-143">\mathbf{\text{Reemplazo}}</script>
+<script type="math/tex">\mathbf{\text{Reemplazo}}</script>
 </td>
-
 </tr>
 <tr>
 <td style="text-align:center;">
-<script type="math/tex" id="MathJax-Element-144">\mathbf{\text{Sí}}</script>
+<script type="math/tex">\mathbf{\text{Sí}}</script>
 </td>
 <td style="text-align:center;">
-<script type="math/tex" id="MathJax-Element-145">\mathbf{\text{No}}</script>
+<script type="math/tex">\mathbf{\text{No}}</script>
 </td>
 </tr>
 <tr>
 <td style="text-align:left;vertical-align: middle !important;" rowspan="2">
-<script type="math/tex" id="MathJax-Element-146">\mathbf{\text{Orden}}</script>
+<script type="math/tex">\mathbf{\text{Orden}}</script>
 </td>
 <td style="text-align:center;">
-<script type="math/tex" id="MathJax-Element-147">\mathbf{\text{Sí}}</script>
+<script type="math/tex">\mathbf{\text{Sí}}</script>
 </td>
 <td style="text-align:center;">
-<script type="math/tex" id="MathJax-Element-148">n^r</script>
+<script type="math/tex">n^r</script>
 </td>
 <td style="text-align:center;">
-<script type="math/tex" id="MathJax-Element-149">_nP_r= n(n-1)(n-2)\ldots(n-r+1)=\frac{n!}{(n-r)!}</script>
+<script type="math/tex">_nP_r= n(n-1)(n-2)\ldots(n-r+1)=\frac{n!}{(n-r)!}</script>
 </td>
 </tr>
 <tr>
 <td style="text-align:center;">
-<script type="math/tex" id="MathJax-Element-150">\mathbf{\text{No}}</script>
+<script type="math/tex">\mathbf{\text{No}}</script>
 </td>
 <td style="text-align:center;">
-<script type="math/tex" id="MathJax-Element-151">_{n+r-1}C_r = \left(\begin{array}{c}n+r-1\\ r\end{array}\right) = \frac{(n+r-1)!}{r!\;(n-1)!}</script>
+<script type="math/tex">_{n+r-1}C_r = \left(\begin{array}{c}n+r-1\\ r\end{array}\right) = \frac{(n+r-1)!}{r!\;(n-1)!}</script>
 </td>
 <td style="text-align:center;">
-<script type="math/tex" id="MathJax-Element-152">_nC_r = \left(\begin{array}{c}n\\ r\end{array}\right) = \frac{n!}{r!\;(n-r)!}</script>
+<script type="math/tex">_nC_r = \left(\begin{array}{c}n\\ r\end{array}\right) = \frac{n!}{r!\;(n-r)!}</script>
 </td>
 </tr>
 </tbody>
