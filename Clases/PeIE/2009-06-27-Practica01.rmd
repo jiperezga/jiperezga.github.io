@@ -69,9 +69,10 @@ liste los números y defina la notación de las regiones que representan los sig
 </ol>
 6. Suponga que se descubre que, en un grupo de `$500$` estudiantes universitarios de último año, `$210$` fuman, `$258$` consumen bebidas alcohólicas, `$216$` comen entre comidas, `$122$` fuman y consumen bebidas alcohólicas, `$83$` comen entre comidas y consumen bebidas alcohólicas, `$97$` fuman y comen entre comidas y `$52$` tienen esos tres hábitos nocivos para la salud. Si se selecciona al azar a un miembro de este grupo, escriba el evento de interés y calcule la probabilidad de que el estudiante
 <ol type = "a">
-<li> fume, pero no consuma bebidas alcohólicas</li>
-<li> coma entre comidas y consuma bebidas alcohólicas pero no fume</li>
+<li> fume, pero no consuma bebidas alcohólicas.</li>
+<li> coma entre comidas y consuma bebidas alcohólicas pero no fume.</li>
 <li> no fume ni coma entre comidas.</li>
+<li> Coma entre comidas o consuma bebidas alcohólicas, pero no fume.</li>
 </ol>
 7. Encuentre los errores en cada una de las siguientes aseveraciones:
 <ol type = "a">
