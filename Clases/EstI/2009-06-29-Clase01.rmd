@@ -6,12 +6,12 @@ permalink: /EstadisticaI/EstI:title.html
 tags:
 
 introduction: |
-  Introducción a la estadística descriptiva. <br>
-  Tipos de datos. <br>
-  Escala de medición. <br>
-  Medidas estadísticas: <br>
-  - Medidas de tendencia central <br>
-  - Medidas de localización
+              Introducción a la estadística descriptiva. <br>
+              Tipos de datos. <br>
+              Escala de medición. <br>
+              Medidas estadísticas: <br>
+              - Medidas de tendencia central <br>
+              - Medidas de localización
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
@@ -547,7 +547,7 @@ y posteriormente, con éste valor se realiza el cálculo del quintil de interés
 siendo `$\lfloor h_j\rfloor$` el valor piso de `$h_j$`, **es decir, el entero de `$h$` aproximando siempre hacia abajo**.
 
 <h4 align="center"> Representación Quintil </h4>
-![](../../EstadisticayProbabilidades/images/Quintil.jpg){ width=70% }
+![](../../EstadisticaI/images/Quintil.jpg){ width=70% }
 
 En <tt>R</tt> pueden calcularse los quintiles de un conjunto de observaciones mediante la función `quantile(datos, probs = c(0.2, 0.4, 0.6, 0.8))`.
 
@@ -637,7 +637,7 @@ y posteriormente, con éste valor se realiza el cálculo del decil de interés
 siendo `$\lfloor h_j\rfloor$` el valor piso de `$h_j$`, **es decir, el entero de `$h$` aproximando siempre hacia abajo**.
 
 <h4 align="center"> Representación Decil </h4>
-![](../../EstadisticayProbabilidades/images/Decil.jpg){ width=80% }
+![](../../EstadisticaI/images/Decil.jpg){ width=80% }
 
 En <tt>R</tt> pueden calcularse los deciles de un conjunto de observaciones mediante la función `quantile(datos, probs = seq(0.1, 0.9, 0.1))`.
 
@@ -727,7 +727,7 @@ y posteriormente, con éste valor se realiza el cálculo del percentil de inter�
 siendo `$\lfloor h_j\rfloor$` el valor piso de `$h_j$`, **es decir, el entero de `$h$` aproximando siempre hacia abajo**.
 
 <h4 align="center"> Representación Percentil </h4>
-![](../../EstadisticayProbabilidades/images/Percentil.jpg){ width=100% }
+![](../../EstadisticaI/images/Percentil.jpg){ width=100% }
 
 En <tt>R</tt> pueden calcularse los percentiles de un conjunto de observaciones mediante la función `quantile(datos, probs = seq(0.01, 0.99, 0.01))`.
 
