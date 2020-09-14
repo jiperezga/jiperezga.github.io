@@ -6,14 +6,14 @@ permalink: /EstadisticayProbabilidades/EyP:title.html
 tags:
 
 introduction: |
-  Introducción a la estadística descriptiva. <br>
-  Tipos de datos. <br>
-  Escala de medición. <br>
-  Medidas estadísticas: <br>
-  - Medidas de tendencia central <br>
-  - Medidas de localización <br>
-  - Medidas de dispersión <br>
-  - Medidas de forma <br>
+              Introducción a la estadística descriptiva. <br>
+              Tipos de datos. <br>
+              Escala de medición. <br>
+              Medidas estadísticas: <br>
+              - Medidas de tendencia central <br>
+              - Medidas de localización <br>
+              - Medidas de dispersión <br>
+              - Medidas de forma <br>
   
 image: <img src="../../assets/images/logoUdeM.png" alt="UdeM" class="sticky">
 
