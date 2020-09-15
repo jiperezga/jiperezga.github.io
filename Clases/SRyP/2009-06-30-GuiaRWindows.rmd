@@ -84,7 +84,7 @@ Esto hará que aparezca la ventana de instalación, espere un par de minutos mie
 Finalmente haga click en de botón Finalizar, y con ésto concluirá la instalación del programa.
 
 ## Instalación de RStudio
-Para la descarga de la última versión del programa Rstudio, haga click en el siguiente enlace [(Descargar RStudio)](https://www.rstudio.com/products/rstudio/download/#download){:target="_blank"}.
+Para la descarga de la última versión del programa Rstudio, haga click en el siguiente enlace [(Descargar RStudio)](https://rstudio.com/products/rstudio/download/#download){:target="_blank"}.
 
 Una vez realizado click en el enlace, se abrirá la siguiente venta
 
