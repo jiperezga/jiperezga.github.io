@@ -6,11 +6,12 @@ permalink: /EstadisticayProbabilidades/EyP:title.html
 tags:
 
 introduction: |
+              Variables aleatorias discretas <br>
+              - Varianza <br>
               Distribuciones de probabilidad discreta: <br>
               - Ensayo Bernoulli <br>
               - Distribución Binomial <br>
               - Distribución Hipergeométrica <br>
-              - Distribución Geométrica
               
 image: <img src="../../assets/images/logoUdeM.png" alt="UdeM" class="sticky">
 
@@ -46,6 +47,73 @@ opts_chunk$set(echo=TRUE,
                cache = FALSE)
 
 ```
+
+## Variables aleatorias discretas
+### Varianza caso discreto
+Sea `$X$` una variable aleatoria con *fmp* `$p(x)$`, entonces si `$m(X) = (X - \mathbb{E}(X))^2$`, se tendrá que la varianza de `$X$` que se denota `$Var(X)$` o `$\sigma^2$` estará dada por
+`\begin{align*}
+Var(X) = \mathbb{E}\left[\left(X-\mathbb{E}(X)\right)^2\right]=\sum_x(x-\mathbb{E}(X))^2p(x)
+\end{align*}`
+
+Puede demostrarse a partir de la ecuación anterior, que una alternativa para el cálculo de la `$Var(X)$` es de la forma
+
+`\begin{align*}
+Var(X) = \mathbb{E}(X^2) - \mathbb{E}(X)^2
+\end{align*}`
+
+además, la raíz cuadrada de la varianza de `$X$` se llama desviación estándar de `$X$`, se denota por `$Sd(X)$` o `$\sigma$` y se define como
+`\begin{align*}
+Sd(X) = \sqrt{Var(X)}
+\end{align*}`
+
+<button id="Show6" class="btn btn-secondary">Mostrar Ejercicio </button>
+<button id="Hide6" class="btn btn-info">Ocultar Ejercicio </button>
+<main id="botoncito6"> 
+<h3 data-toc-skip> Ejercicio </h3> 
+<p>Suponga un experimento aleatorio que consta en consultar una familia conformada por $3$ hijos, en donde, se asume que la probabilidad de ser niño o niña es la misma. Entonces, si se define la variable aleatoria $X$, el número de niñas que hay en la familia. </p>
+<ol>
+<li>Calcule la $Var(X)$. </li>
+<li>Calcule la $Sd(X)$. </li>
+</ol>
+
+<h3 data-toc-skip> Solución </h3> 
+<p>Como la función de varianza es en sí, es una esperanza matemática, entonces iniciamos con el cálculo de la función de masa de probabilidad para el número de niñas que hay en una familia que posee $3$ hijos.</p>
+<div style="font-family: 'Open Sans',sans-serif; margin-bottom: -2rem; margin-top: -2rem; font-size: 100%;">
+```{r echo=FALSE}
+library(kableExtra)
+tabla <- rbind("$X$" = c("$0$", "$1$", "$2$", "$3$"),
+              "$p(x)$" = c("$\\frac{1}{8}$", "$\\frac{3}{8}$", "$\\frac{3}{8}$", "$\\frac{1}{8}$"))
+
+kable(data.frame(tabla),
+  format = "html", booktabs = T, col.names = NULL) %>%
+kable_styling("striped", full_width = F)
+```
+</div>
+<ol>
+<li>A partir de la tabla anterior, se procede a realizar el cálculo de $Var(X)$, a partir de los valores ya calculado de $\mathbb{E}(X^2)=3$ y $\mathbb{E}(X)=1.5$, tal que
+
+$$\begin{align*}
+Var(X)&=\mathbb{E}(X^2) - \mathbb{E}(X)^2 \\
+        &=3 - (1.5)^2 \\
+        &=3 - 2.25 \\
+        &=0.75
+\end{align*}$$
+
+Y en consecuencia, se tendrá que la varianza del número de niña que hay en una familia que posee $3$ hijos es de $0.75$ hijos$^2$.
+</li>
+<li> Basado en el valor de la varianza $Var(X)=0.75$, se procede a realizar el cálculo de la desviación estándar de la variable aleatoria $X$, $Sd(X)$, tal que
+
+$$\begin{align*}
+Sd(X) &= \sqrt{Var(X)} \\
+      &= \sqrt{0.75} \\
+      &= 0.8660
+\end{align*}$$
+
+Es decir, se tendrá que el número promedio de niñas que tiene una familia que posee $3$ hijos es de $1.5$ niñas, con una desviación estándar de $0.8660$ niñas.
+</li>
+</ol>
+</main>
+
 
 ## Distribuciones de probabilidad discretas
 ### Proceso Bernoulli
@@ -220,7 +288,7 @@ con `$x$` un entero que satisface la condición `$\max\{0, M-(N-n)\} \leq x \leq
 #### Media y Varianza Hipergeométrica
 Si `$X\sim h(N,M,n)$`, entonces se puede probar que la media y varianza de la variable aleatoria `$X$` están dadas por
 `\begin{align*}
-\mathbb{E}(X)=n\frac{M}{N} \quad \quad Var(X)=\left(\frac{N-n}{N-1}\right)\left(\frac{M}{N}\right)\left(1-\frac{M}{N}\right)
+\mathbb{E}(X)=n\frac{M}{N} \quad \quad Var(X)=n\left(\frac{M}{N}\right)\left(1-\frac{M}{N}\right)\left(\frac{N-n}{N-1}\right)
 \end{align*}`
 
 <button id="Show4" class="btn btn-secondary">Mostrar Ejercicio </button>
@@ -294,108 +362,6 @@ Sd(X) &= \sqrt{Var(X)} \\
 \end{align*}$$
 
 Por tanto se tendrá que el comprador encontrará en sus revisiones un promedio de $1.75$ repuestos defectuosos, en un container de $40$ repuestos para computadora, con una desviación estándar de $0.3332$ repuestos defectuosos. 
-</li>
-</ol>
-</main>
-
-### Experimento Binomial Negativo
-Consideremos un experimento con las mismas propiedades de un experimento binomial, solo que en este caso, las pruebas se repetirán hasta que ocurra un número fijo de éxitos. Por lo tanto en vez de encontrar la probabilidad de `$X$` éxitos en `$n$` pruebas, donde `$n$` es fija, ahora nos interesa la probabilidad de que ocurra el `$k$`-ésimo éxito en la `$X$`-ésima prueba.
-
-<button id="Show5" class="btn btn-secondary">Mostrar Ejemplo </button>
-<button id="Hide5" class="btn btn-info">Ocultar Ejemplo </button>
-<main id="botoncito5"> 
-<h3 data-toc-skip> Ejemplo </h3> 
-<p> Los siguientes, son algunos ejemplos de casos que pueden considerarse Experimentos Binomial Negativo, debido a que cumplen las propiedades de un experimento binomial, es decir, las $4$ condiciones propuestas en el <a href="../../EstadisticayProbabilidades/EyPClase06.html#proceso-bernoulli">Proceso Bernoulli</a>.</p>
-<ul>
-<li>Tirar una moneda al aire, hasta obtener la primera cara.</li>
-<li>Contar el número de carros que pasan por debajo de un puente, hasta que pasen $5$ carros azules.</li>
-<li>Comprar empanada hasta encontrar la segunda refritas.</li>
-<li>Seleccionar estudiantes de la Universidad, hasta encontrar el primero que nació por fuera de Antioquia.</li>
-</ul>
-</main>
-
-### Distribución Geométrica
-Sea  `$X$` el número de ensayos necesarios para generar un éxito (`$k=1$`), entonces se dice que `$X\sim g(p)$` si su función de probabilidad es de la forma
-`\begin{align*}
-p(x) = p(1-p)^{x-1} \quad \quad x = 1,2,\ldots
-\end{align*}`
-
-#### Media y Varianza Geométrica
-Si `$X\sim g(p)$`, entonces se puede probar que la media y varianza de la variable aleatoria `$X$` están dadas por
-`\begin{align*}
-\mathbb{E}(X)=\frac{1}{p} \quad \quad Var(X)=\frac{1-p}{p^2}
-\end{align*}`
-
-<button id="Show6" class="btn btn-secondary">Mostrar Ejercicio </button>
-<button id="Hide6" class="btn btn-info">Ocultar Ejercicio </button>
-<main id="botoncito6"> 
-<h3 data-toc-skip> Ejercicio </h3> 
-<p>Suponga que por experiencia se sabe que $1$ de cada $5$ personas que solicitan la Visa Americana en la embajada de Estados Unidos en la Ciudad de Bogotá, es rechazada. Basados en lo anterior, </p>
-<ol>
-<li>Cuál es la probabilidad de que más de $3$ personas deban solicitar la Visa hasta que la Embajada otorgue la primera Visa?.</li>
-<li>Cuál es el número promedio y desviación estándar de personas que deben solicitar la Visa hasta que la Embajada de Estados Unidos decida otorgar la primera Visa Americana?</li>
-</ol>
-
-<h3 data-toc-skip> Solución </h3> 
-<ol>
-<li>En este caso nos preguntan, por la probabilidad de que más de $3$ personas deban presentarse a la embajada de Estados Unidos, hasta que la Embajada de Estados Unidos otorgue la primera Visa Americana, esto es
-$$\begin{align*}
-\mathbb{P}(X>3)
-\end{align*}$$
-
-Donde $X$: representa el número de solicitantes que se presentan para solicitar la Visa. Entonces, como estamos en una situación en la cual nos preguntan por el número de ensayos que hay que realizar, hasta obtener $1$ éxito, estamos en una situación asociada a una distribución Geométrica, la cual tiene la estructura
-$$\begin{align*}
-p(x) = p(1-p)^{x-1} \quad \quad x = 1,2,\ldots
-\end{align*}$$
-En donde se sabe por experiencia que $1$ de cada $5$ personas que solicitan la Visa es rechazada, y por tanto, como nuestro éxito está asociado a que se otorgue la Visa, se tendrá que a $4$ de cada $5$ personas que solicitan la Visa, se les otorga de forma satisfactoriamente, es decir que al aplicar la definición de frecuencia relativa, tendremos que la proporción $p$, estará dada por
-$$\begin{align*}
-p &= \frac{\text{# éxitos}}{\text{total Ensayos}} \\
-  &= \frac{4}{5} \\
-  &= 0.80
-\end{align*}$$
-
-Ahora, al emplear la función de distribución Geométrica con $p=0.80$, tendremos que la probabilidad de interés estará dada por
-
-$$\begin{align*}
-\mathbb{P}(X>3) &= 1 - \mathbb{P}(X\leq 3) \\
-                &= 1 - \sum_{x=1}^3 0.80(1-0.80)^{x-1} \\
-                &= 1 - \left(0.80(0.20)^{1-1} + 0.80(0.20)^{2-1} + 0.80(0.20)^{3-1}\right) \\
-                &= 1 - (0.80 + 0.16 + 0.032) \\
-                &= 1 - 0.992 \\
-                &= 0.008
-\end{align*}$$
-
-En consecuencia, se tendrá un $0.8\%$ de probabilidad, de que más de $3$ personas deban solicitar la Visa Americana, hasta que la embajada de Estados Unidos decida otorgar la primera.
-</li>
-<li>En esta ocasión estamos interesados en conocer el promedio y desviación estándar del número de personas que deben presentarse a la embajada de Estados Unidos, hasta que éstos le otorguen la primera Visa Americana. Y para ello podemos emplear la formula de la esperanza matemática, de la distribución Geométrica, para realiza el cálculo
-
-$$\begin{align*}
-\mathbb{E}(X)=\frac{1}{p}
-\end{align*}$$
-
-Entonces, como $4$ de $5$ personas que se presentan a la embajada, obtienen la Visa, entonces se tendrá que la proporción $p=0.80$, y en consecuencia,
-
-$$\begin{align*}
-\mathbb{E}(X) &= \frac{1}{0.80} \\
-              &= 1.25
-\end{align*}$$
-
-lo cual significa, que en promedio deberán presentarse $1.25$ personas, hasta que la embajada de Estados Unidos decida otorgar la primera Visa Americana. <br>
-<br>
-Ahora, para completar la interpretación anterior, realizaremos el cálculo de la desviación estándar del número de personas que deben presentarse a la embajada de Estados Unidos hasta que éstos ortorguen la primera Visa, en donde, requerimos calcular inicialmente la Varianza del número de personas, tal que, al emplear la definición de Varianza para el caso de una distribución Geométrica, se tendrá que 
-$$\begin{align*}
-Var(X) &= \frac{1-p}{p^2} \\
-       &= \frac{1-0.8}{0.8^2} \\
-       &= 0.3125
-\end{align*}$$
-y con este valor calculamos la desviación estándar, mediante la ecuación
-$$\begin{align*}
-Sd(X) &= \sqrt{Var(X)} \\
-      &= \sqrt{0.3125} \\
-      &= 0.559017
-\end{align*}$$
-
-Y por tanto se tendrá que en promedio $1.25$ personas con una desviación estándar de $0.559017$ personas, deben presentarse a la embajada de Estados Unidos, con el fin de que éstos decidan otorgar la primera Visa Americana.
 </li>
 </ol>
 </main>

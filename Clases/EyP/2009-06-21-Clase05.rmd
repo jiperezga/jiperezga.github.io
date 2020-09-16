@@ -6,10 +6,12 @@ permalink: /EstadisticayProbabilidades/EyP:title.html
 tags:
 
 introduction: |
-              Introducción a variables aleatorias. <br>
-              Funciones de probabilidad discretas. <br>
-              Función de distribución acumulada. <br>
-              Esperanza matemática y varianza.
+              Introducción a variables aleatorias <br>
+              Variables aleatorias discretas <br>
+              - Funciones de probabilidad <br>
+              - Función de distribución acumulada <br>
+              - Esperanza matemática <br>
+              - Propiedades de esperanza matemática
               
 image: <img src="../../assets/images/logoUdeM.png" alt="UdeM" class="sticky">
 
@@ -98,7 +100,8 @@ Z = \begin{cases}
 </ol>
 </main>
 
-## Funciones de probabilidad discreta
+## Variables aleatorias discretas
+### Función de probabilidad
 
 Se dice que el conjunto de pares ordenados `$(x,p(x))$` es una función de masa de probabilidad (*fmp*) de la variable aleatoria discreta `$X$`, si para cualquier resultado posible de `$X$` se cumple que
 
@@ -176,7 +179,7 @@ y en consecuencia, se tendrá que la probabilidad de que en una familia de $3$ h
 </ol>
 </main>
 
-## Función de distribución acumulada caso discreto
+### Función de distribución acumulada
 
 La función de distribución acumulada (*fda*) denotada por `$F(x)$`, para una variable aleatoria discreta `$X$` con distribución de probabilidad `$p(x)$` es de la forma 
 `\begin{align*}
@@ -260,7 +263,7 @@ y por tanto, se tendrá que la probabilidad de que en una familia de $3$ hijos, 
 
 </main>
 
-## Esperanza matemática caso discreto
+### Esperanza matemática
 
 Si `$X$` es una variable aleatoria con función de masa de probabilidad `$p(x)$`, entonces la media o valor esperado de la variable aleatoria se denota por `$\mathbb{E}(X)$` o `$\mu$` está dada por
 `\begin{align*}
@@ -308,7 +311,7 @@ Sea `$a$` y `$b$` dos números constantes (reales) y `$X$` una variable aleatori
 * si `$m(X)$` es una función de `$X$`, entonces
 
 `\begin{align*}
-\mathbb{E}(m(X))=\sum_xg(x)p(x)
+\mathbb{E}(m(X))=\sum_xm(x)p(x)
 \end{align*}`
 
 <button id="Show5" class="btn btn-secondary">Mostrar Ejercicio </button>
@@ -383,71 +386,6 @@ $$\begin{align*}
              &=\frac{24}{8} \\
              &=3
 \end{align*}$$
-</li>
-</ol>
-</main>
-
-## Varianza caso discreto
-Sea `$X$` una variable aleatoria con *fmp* `$p(x)$`, entonces si `$m(X) = (X - \mathbb{E}(X))^2$`, se tendrá que la varianza de `$X$` que se denota `$Var(X)$` o `$\sigma^2$` estará dada por
-`\begin{align*}
-Var(X) = \mathbb{E}\left[\left(X-\mathbb{E}(X)\right)^2\right]=\sum_x(x-\mathbb{E}(X))^2p(x)
-\end{align*}`
-
-Puede demostrarse a partir de la ecuación anterior, que una alternativa para el cálculo de la `$Var(X)$` es de la forma
-
-`\begin{align*}
-Var(X) = \mathbb{E}(X^2) - \mathbb{E}(X)^2
-\end{align*}`
-
-además, la raíz cuadrada de la varianza de `$X$` se llama desviación estándar de `$X$`, se denota por `$Sd(X)$` o `$\sigma$` y se define como
-`\begin{align*}
-Sd(X) = \sqrt{Var(X)}
-\end{align*}`
-
-<button id="Show6" class="btn btn-secondary">Mostrar Ejercicio </button>
-<button id="Hide6" class="btn btn-info">Ocultar Ejercicio </button>
-<main id="botoncito6"> 
-<h3 data-toc-skip> Ejercicio </h3> 
-<p>Suponga un experimento aleatorio que consta en consultar una familia conformada por $3$ hijos, en donde, se asume que la probabilidad de ser niño o niña es la misma. Entonces, si se define la variable aleatoria $X$, el número de niñas que hay en la familia. </p>
-<ol>
-<li>Calcule la $Var(X)$. </li>
-<li>Calcule la $Sd(X)$. </li>
-</ol>
-
-<h3 data-toc-skip> Solución </h3> 
-<p>Como la función de varianza es en sí, es una esperanza matemática, entonces iniciamos con el cálculo de la función de masa de probabilidad para el número de niñas que hay en una familia que posee $3$ hijos.</p>
-<div style="font-family: 'Open Sans',sans-serif; margin-bottom: -2rem; margin-top: -2rem; font-size: 100%;">
-```{r echo=FALSE}
-library(kableExtra)
-tabla <- rbind("$X$" = c("$0$", "$1$", "$2$", "$3$"),
-              "$p(x)$" = c("$\\frac{1}{8}$", "$\\frac{3}{8}$", "$\\frac{3}{8}$", "$\\frac{1}{8}$"))
-
-kable(data.frame(tabla),
-  format = "html", booktabs = T, col.names = NULL) %>%
-kable_styling("striped", full_width = F)
-```
-</div>
-<ol>
-<li>A partir de la tabla anterior, se procede a realizar el cálculo de $Var(X)$, a partir de los valores ya calculado de $\mathbb{E}(X^2)=3$ y $\mathbb{E}(X)=1.5$, tal que
-
-$$\begin{align*}
-Var(X)&=\mathbb{E}(X^2) - \mathbb{E}(X)^2 \\
-        &=3 - (1.5)^2 \\
-        &=3 - 2.25 \\
-        &=0.75
-\end{align*}$$
-
-Y en consecuencia, se tendrá que la varianza del número de niña que hay en una familia que posee $3$ hijos es de $0.75$ hijos$^2$.
-</li>
-<li> Basado en el valor de la varianza $Var(X)=0.75$, se procede a realizar el cálculo de la desviación estándar de la variable aleatoria $X$, $Sd(X)$, tal que
-
-$$\begin{align*}
-Sd(X) &= \sqrt{Var(X)} \\
-      &= \sqrt{0.75} \\
-      &= 0.8660
-\end{align*}$$
-
-Es decir, se tendrá que el número promedio de niñas que tiene una familia que posee $3$ hijos es de $1.5$ niñas, con una desviación estándar de $0.8660$ niñas.
 </li>
 </ol>
 </main>
