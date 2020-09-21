@@ -93,8 +93,8 @@ $$\begin{align*}
 Es de anotar, que la interpretación de la varianza no tiene mucho sentido, debido a que la unidad de medición estará elevada al cuadrado, así que en general, los valores calculados se usan para realizar el cálculo de la desviación estándar. </p>
 </main>
 
-<button id="Show2" class="btn btn-secondary">Mostrar Solución en <tt>R</tt></button>
-<button id="Hide2" class="btn btn-info">Ocultar Solución en <tt>R</tt></button>
+<button id="Show2" class="btn btn-secondary">Mostrar Ejercicio en <tt>R</tt></button>
+<button id="Hide2" class="btn btn-info">Ocultar Ejercicio en <tt>R</tt></button>
 <main id="botoncito2"> 
 <h3 data-toc-skip> Ejercicio Caso de Estudio </h3> 
 <p>Calcule la varianza de las notas obtenidas por los $10$ estudiantes en el primer y cuarto parcial del curso de Estadística I, con <tt>R</tt>. </p>
@@ -142,8 +142,8 @@ $$\begin{align*}
 De los resultados obtenidos se tiene que, la dispersión que poseen los datos respecto a su valor promedio es de $0.7121953$ para las notas obtenidas en el parcial $1$ y de $1.273839$ para las notas obtenidas en el parcial $4$ de Estadística I. Esto quiere decir, que las notas obtenidas en el parcial $1$ se encuentran más reunidas respecto a valor promedio, que las notas obtenidas en el parcial $4$. </p>
 </main>
 
-<button id="Show4" class="btn btn-secondary">Mostrar Solución en <tt>R</tt></button>
-<button id="Hide4" class="btn btn-info">Ocultar Solución en <tt>R</tt></button>
+<button id="Show4" class="btn btn-secondary">Mostrar Ejercicio en <tt>R</tt></button>
+<button id="Hide4" class="btn btn-info">Ocultar Ejercicio en <tt>R</tt></button>
 <main id="botoncito4"> 
 <h3 data-toc-skip> Ejercicio Caso de Estudio </h3> 
 <p>Calcule la desviación estándar de las notas obtenidas por los $10$ estudiantes en el primer y cuarto parcial del curso de Estadística I, con <tt>R</tt>. </p>
@@ -199,8 +199,8 @@ $$\begin{align*}
 De lo anterior, se aprecia que tal como se esperaba, la variación porcentual de los datos respecto a su media para el caso del parcial $1$ es menor al obtenido en el parcial $4$, pues se evidencia que el coeficiente de variación del parcial $1$ es cercano al $25.9\%$, mientras que en el parcial $4$, se obtuvo un porcentaje de variación de $40.57\%$. </p>
 </main>
 
-<button id="Show6" class="btn btn-secondary">Mostrar Solución en <tt>R</tt></button>
-<button id="Hide6" class="btn btn-info">Ocultar Solución en <tt>R</tt></button>
+<button id="Show6" class="btn btn-secondary">Mostrar Ejercicio en <tt>R</tt></button>
+<button id="Hide6" class="btn btn-info">Ocultar Ejercicio en <tt>R</tt></button>
 <main id="botoncito6"> 
 <h3 data-toc-skip> Ejercicio Caso de Estudio </h3> 
 <p>Calcule el porcentaje de variación de las notas por los $10$ estudiantes en el primer y cuarto parcial del curso de Estadística I, respecto a su valor promedio en <tt>R</tt>. </p>
@@ -288,8 +288,8 @@ $$\begin{align*}
 Se evidencia entonces que la amplitud de las notas del parcial $4$ es mucho mayor a la amplitud del parcial $1$, puesto que se observa que el rango obtenido por las notas del parcial $4$ es de $4.0$ puntos, mientras que el rango obtenido por las notas del parcial $1$ es de $2.7$ puntos. De lo anterior, vemos que hay una consistencia con lo encontrado en la desviación estándar, en donde veíamos que la dispersión para el parcial $4$ era mayor a la dispersión del parcial $1$. </p>
 </main>
 
-<button id="Show8" class="btn btn-secondary">Mostrar Solución en <tt>R</tt></button>
-<button id="Hide8" class="btn btn-info">Ocultar Solución en <tt>R</tt></button>
+<button id="Show8" class="btn btn-secondary">Mostrar Ejercicio en <tt>R</tt></button>
+<button id="Hide8" class="btn btn-info">Ocultar Ejercicio en <tt>R</tt></button>
 <main id="botoncito8"> 
 <h3 data-toc-skip> Ejercicio Caso de Estudio </h3> 
 <p>Calcule el rango de las notas obtenidas por los $10$ estudiantes en el primer y cuarto parcial del curso de Estadística I en <tt>R</tt>. </p>
@@ -349,8 +349,8 @@ $$\begin{align*}
 Mostrando que, al eliminar el $50\%$ de los datos más extremos, se obtiene un rango de $0.425$ para el caso del parcial $1$, y de $1.675$ para el caso del parcial $4$, lo cual, corrobora que aún para el $50\%$ de los datos centrales, se aprecia que la dispersión de las notas del primer parcial es bastante menor que la dispersión de las notas del cuarto parcial. </p>
 </main>
 
-<button id="Show10" class="btn btn-secondary">Mostrar Solución en <tt>R</tt></button>
-<button id="Hide10" class="btn btn-info">Ocultar Solución en <tt>R</tt></button>
+<button id="Show10" class="btn btn-secondary">Mostrar Ejercicio en <tt>R</tt></button>
+<button id="Hide10" class="btn btn-info">Ocultar Ejercicio en <tt>R</tt></button>
 <main id="botoncito10"> 
 <h3 data-toc-skip> Ejercicio Caso de Estudio </h3> 
 <p>Calcule el rango intercuartílico de las notas obtenidas por los $10$ estudiantes en el primer y cuarto parcial del curso de Estadística I en <tt>R</tt>. </p>
@@ -426,8 +426,8 @@ $$\begin{align*}
 Se tiene entonces que la desviación abosulta mediana o dispersión respecto a la mediana que poseen las notas de los estudiantes de Estadística I, en el primer parcial es de $0.37$, mientras para el cuarto parcial es de $1.33434$, lo cual indica que la dispersión de las notas para el cuarto parcial es superior a la dispersión de las notas asociada al primer parcial, lo cual es consistente con las otras medidas de dispersión vistas en esta sección. </p>
 </main>
 
-<button id="Show12" class="btn btn-secondary">Mostrar Solución en <tt>R</tt></button>
-<button id="Hide12" class="btn btn-info">Ocultar Solución en <tt>R</tt></button>
+<button id="Show12" class="btn btn-secondary">Mostrar Ejercicio en <tt>R</tt></button>
+<button id="Hide12" class="btn btn-info">Ocultar Ejercicio en <tt>R</tt></button>
 <main id="botoncito12"> 
 <h3 data-toc-skip> Ejercicio Caso de Estudio </h3> 
 <p>Calcule la desviación absoluta mediana de las notas obtenidas por los $10$ estudiantes, en el primer y cuarto parcial del curso de Estadística I en <tt>R</tt>. </p>
@@ -491,8 +491,8 @@ De lo anterior se observa que en ambos casos el coeficiente de asimetría es men
 También puede corroborarse el comportamiento asimétrico negativo, al observar los valores obtenidos por la media y la mediana, en donde para ambos parciales, se aprecia que la media posee un valor más bajo que la mediana. </p>
 </main>
 
-<button id="Show14" class="btn btn-secondary">Mostrar Solución en <tt>R</tt></button>
-<button id="Hide14" class="btn btn-info">Ocultar Solución en <tt>R</tt></button>
+<button id="Show14" class="btn btn-secondary">Mostrar Ejercicio en <tt>R</tt></button>
+<button id="Hide14" class="btn btn-info">Ocultar Ejercicio en <tt>R</tt></button>
 <main id="botoncito14"> 
 <h3 data-toc-skip> Ejercicio Caso de Estudio </h3> 
 <p>Calcule el coeficiente de asimetría de las notas obtenidas por los $10$ estudiantes, en el primer y cuarto parcial del curso de Estadística I en <tt>R</tt>. </p>
@@ -558,8 +558,8 @@ $$\begin{align*}
 A partir de los valores calculados, se observa que en ambos casos, los coeficientes de exceso de curtoris es menor que $0$, y por tanto, se puede concluir que las notas de los estudiantes posee un comportamiento platicúrtico, es decir, las notas obtenidas por los estudiantes en el curso de Estadística I, poseen un comportamiento relativamente uniforme, debido a que su comportamiento es muy plano. </p>
 </main>
 
-<button id="Show16" class="btn btn-secondary">Mostrar Solución en <tt>R</tt></button>
-<button id="Hide16" class="btn btn-info">Ocultar Solución en <tt>R</tt></button>
+<button id="Show16" class="btn btn-secondary">Mostrar Ejercicio en <tt>R</tt></button>
+<button id="Hide16" class="btn btn-info">Ocultar Ejercicio en <tt>R</tt></button>
 <main id="botoncito16"> 
 <h3 data-toc-skip> Ejercicio Caso de Estudio </h3> 
 <p>Calcule el coeficiente de exceso de curtosis de las notas obtenidas por los $10$ estudiantes, en el primer y cuarto parcial del curso de Estadística I en <tt>R</tt>. </p>
@@ -617,8 +617,8 @@ $$\begin{align*}
 Dado que del coeficiente de covarianza, solo es posible interpretar el signo o cuando el valor está muy cercano a $0$, se concluye entonces que existe una relación lineal positiva entre la nota obtenida en el primer parcial y el cuarto parcial.</p>
 </main>
 
-<button id="Show18" class="btn btn-secondary">Mostrar Solución en <tt>R</tt></button>
-<button id="Hide18" class="btn btn-info">Ocultar Solución en <tt>R</tt></button>
+<button id="Show18" class="btn btn-secondary">Mostrar Ejercicio en <tt>R</tt></button>
+<button id="Hide18" class="btn btn-info">Ocultar Ejercicio en <tt>R</tt></button>
 <main id="botoncito18"> 
 <h3 data-toc-skip> Ejercicio Caso de Estudio </h3> 
 <p>Calcule el covarianza que hay entre las notas obtenidas en el primer parcial y el cuarto parcial, por los $10$ estudiantes que vieron el curso de Estadística I en <tt>R</tt>. </p>
@@ -675,8 +675,8 @@ $$\begin{align*}
 Del resultado anterior se concluye, que hay existe una correlación débil entre las notas obtenidas por los estudiantes en el parcial $1$ y el parcial $4$, del curso de Estadística 1. </p>
 </main>
 
-<button id="Show20" class="btn btn-secondary">Mostrar Solución en <tt>R</tt></button>
-<button id="Hide20" class="btn btn-info">Ocultar Solución en <tt>R</tt></button>
+<button id="Show20" class="btn btn-secondary">Mostrar Ejercicio en <tt>R</tt></button>
+<button id="Hide20" class="btn btn-info">Ocultar Ejercicio en <tt>R</tt></button>
 <main id="botoncito20"> 
 <h3 data-toc-skip> Ejercicio Caso de Estudio </h3> 
 <p>Calcule la correlación que hay entre las notas obtenidas en el primer parcial y el cuarto parcial, por los $10$ estudiantes que vieron el curso de Estadística I en <tt>R</tt>. </p>
