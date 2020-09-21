@@ -161,9 +161,9 @@ Si `$X\sim b^*(k,p)$`, entonces se puede probar que la media y varianza de la va
 \mathbb{E}(X)=\frac{k}{p} \quad \quad Var(X)=k\frac{(1-p)}{p^2}
 \end{align*}`
 
-<button id="Show2" class="btn btn-secondary">Mostrar Ejercicio </button>
-<button id="Hide2" class="btn btn-info">Ocultar Ejercicio </button>
-<main id="botoncito2"> 
+<button id="Show3" class="btn btn-secondary">Mostrar Ejercicio </button>
+<button id="Hide3" class="btn btn-info">Ocultar Ejercicio </button>
+<main id="botoncito3"> 
 <h3 data-toc-skip> Ejercicio </h3> 
 <p>Suponga que por experiencia se sabe que $1$ de cada $5$ personas que solicitan la Visa Americana en la embajada de Estados Unidos en la Ciudad de Bogotá, es rechazada. Basados en lo anterior, </p>
 <ol>
@@ -239,9 +239,9 @@ Un proceso Poisson es aquel que cumple
 2. La probabilidad de que ocurra un solo resultado durante un intervalo de tiempo corto o región pequeña es proporcional a la longitud del intervalo o al tamaño de la región, y no depende del número de resultados que ocurren por fuera de este intervalo de tiempo o región.
 3. La probabilidad de que ocurra más de un resultado en un intervalo de tiempo corto o región pequeña es insignificante.
 
-<button id="Show3" class="btn btn-secondary">Mostrar Ejemplo </button>
-<button id="Hide3" class="btn btn-info">Ocultar Ejemplo </button>
-<main id="botoncito3"> 
+<button id="Show4" class="btn btn-secondary">Mostrar Ejemplo </button>
+<button id="Hide4" class="btn btn-info">Ocultar Ejemplo </button>
+<main id="botoncito4"> 
 <h3 data-toc-skip> Ejemplo </h3> 
 <ul>
 <li>El número de carros que transitan por una glorieta en dos horas.</li>
