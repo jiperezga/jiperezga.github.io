@@ -48,7 +48,7 @@ opts_chunk$set(echo=TRUE,
 
 ## Distribuciones de probabilidad discreta
 ### Experimento Binomial Negativo
-Consideremos un experimento con las mismas propiedades de un experimento binomial, solo que en este caso, las pruebas se repetirán hasta que ocurra un número fijo de éxitos. Por lo tanto en vez de encontrar la probabilidad de `$X$` éxitos en `$n$` pruebas, donde `$n$` es fija, ahora nos interesa la probabilidad de que ocurra el `$k$`-ésimo éxito en la `$X$`-ésima prueba.
+Consideremos un experimento con las mismas propiedades de un experimento binomial, solo que en este caso, las pruebas se repetirán hasta que ocurra un número fijo de éxitos. Por lo tanto en vez de encontrar la probabilidad de `$X$` éxitos en `$n$` pruebas, donde `$n$` es fija, ahora nos interesa la probabilidad de que ocurra el `$r$`-ésimo éxito en la `$X$`-ésima prueba.
 
 <button id="Show1" class="btn btn-secondary">Mostrar Ejemplo </button>
 <button id="Hide1" class="btn btn-info">Ocultar Ejemplo </button>
@@ -64,7 +64,7 @@ Consideremos un experimento con las mismas propiedades de un experimento binomia
 </main>
 
 ### Distribución Geométrica
-Sea  `$X$` el número de ensayos necesarios para generar un éxito (`$k=1$`), entonces se dice que `$X\sim g(p)$` si su función de probabilidad es de la forma
+Sea  `$X$` el número de ensayos necesarios para generar un éxito (`$r=1$`), entonces se dice que `$X\sim g(p)$` si su función de probabilidad es de la forma
 `\begin{align*}
 p(x) = p(1-p)^{x-1} \quad \quad x = 1,2,\ldots
 \end{align*}`
@@ -150,15 +150,15 @@ Y por tanto se tendrá que en promedio $1.25$ personas con una desviación está
 </main>
 
 ### Distribución Binomial Negativa
-Sea `$X$` el número de ensayos necesarios para generar `$k$` éxitos en un experimento Binomial Negativo, entonces se dice que `$X\sim b^*(k,p)$` si su función de probabilidad es de la forma
+Sea `$X$` el número de ensayos necesarios para generar `$r$` éxitos en un experimento Binomial Negativo, entonces se dice que `$X\sim b^*(r,p)$` si su función de probabilidad es de la forma
 `\begin{align*}
-p(x) = \left(\begin{array}{c}x-1\\ k-1\end{array}\right)p^k(1-p)^{x-k} \quad \quad x=k, k+1, \ldots
+p(x) = \left(\begin{array}{c}x-1\\ r-1\end{array}\right)p^r(1-p)^{x-r} \quad \quad x=r, r+1, \ldots
 \end{align*}`
 
 #### Media y Varianza Binomial Negativa
-Si `$X\sim b^*(k,p)$`, entonces se puede probar que la media y varianza de la variable aleatoria `$X$` están dadas por
+Si `$X\sim b^*(r,p)$`, entonces se puede probar que la media y varianza de la variable aleatoria `$X$` están dadas por
 `\begin{align*}
-\mathbb{E}(X)=\frac{k}{p} \quad \quad Var(X)=k\frac{(1-p)}{p^2}
+\mathbb{E}(X)=\frac{r}{p} \quad \quad Var(X)=r\frac{(1-p)}{p^2}
 \end{align*}`
 
 <button id="Show3" class="btn btn-secondary">Mostrar Ejercicio </button>
@@ -180,17 +180,18 @@ $$\begin{align*}
 
 Donde $X$: representa el número de personas que se presentan a la embajada de Estados Unidos para solicitar la Visa, hasta que éstos decidan otorgar la octava Visa. Entonces, como estamos en una situación en la cual nos preguntan por el número de ensayos que hay que realizar, hasta obtener $8$ éxitos, estamos en una situación asociada a una distribución Binomial Negativa, la cual tiene la estructura
 $$\begin{align*}
-p(x) = \left(\begin{array}{c}x-1\\ k-1\end{array}\right)p^k(1-p)^{x-k} \quad \quad x=k, k+1, \ldots
+p(x) = \left(\begin{array}{c}x-1\\ r-1\end{array}\right)p^r(1-p)^{x-
+r} \quad \quad x=r, r+1, \ldots
 \end{align*}$$
 
-en donde, $k=8$: representa el número de visas otorgadas por la embajada de Estados Unidos. Entonces como se sabe por experiencia que $1$ de cada $5$ personas que solicitan la Visa es rechazada, se tendrá que a $4$ de cada $5$ personas que solicitan la Visa, se les otorga ésta de forma satisfactoriamente, es decir que al aplicar la definición de frecuencia relativa, tendremos que la proporción $p$, estará dada por
+en donde, $r=8$: representa el número de visas otorgadas por la embajada de Estados Unidos. Entonces como se sabe por experiencia que $1$ de cada $5$ personas que solicitan la Visa es rechazada, se tendrá que a $4$ de cada $5$ personas que solicitan la Visa, se les otorga ésta de forma satisfactoriamente, es decir que al aplicar la definición de frecuencia relativa, tendremos que la proporción $p$, estará dada por
 $$\begin{align*}
 p &= \frac{\text{# éxitos}}{\text{total Ensayos}} \\
   &= \frac{4}{5} \\
   &= 0.80
 \end{align*}$$
 
-Ahora, al emplear la función de distribución Binomial Negativa con $p=0.80$ y $k=8$ tendremos que la probabilidad de interés estará dada por
+Ahora, al emplear la función de distribución Binomial Negativa con $p=0.80$ y $r=8$ tendremos que la probabilidad de interés estará dada por
 
 $$\begin{align*}
 \mathbb{P}(10<X\leq 15) &= \sum_{x=11}^{15} \left(\begin{array}{c}x-1\\ 8-1\end{array}\right)(0.80)^8(1-0.80)^{x-8} \\
@@ -202,10 +203,10 @@ En consecuencia, se tendrá un $31.79\%$ de probabilidad, de que más de $10$ pe
 </li>
 <li>En esta ocasión estamos interesados en conocer el promedio y desviación estándar del número de personas que deben presentarse a la embajada de Estados Unidos, hasta que éstos decidan otorgar la octava Visa Americana. Y para ello podemos emplear la formula de la esperanza matemática, de la distribución Binomial negativa, tal que
 $$\begin{align*}
-\mathbb{E}(X)=\frac{k}{p}
+\mathbb{E}(X)=\frac{r}{p}
 \end{align*}$$
 
-Entonces, como $4$ de $5$ personas que se presentan a la embajada obtienen la Visa, estamos interesados en el octavo éxito, entonces se tendrá que $p=0.80$ y $k=8$, con lo cual obtendremos un número promedio de personas igual a
+Entonces, como $4$ de $5$ personas que se presentan a la embajada obtienen la Visa, estamos interesados en el octavo éxito, entonces se tendrá que $p=0.80$ y $r=8$, con lo cual obtendremos un número promedio de personas igual a
 
 $$\begin{align*}
 \mathbb{E}(X) &= \frac{8}{0.80} \\
@@ -214,7 +215,7 @@ $$\begin{align*}
 
 Ahora, para calcular la desviación estándar, realizamos primero el cálculo de la varianza para el número de personas que deben presentarse a la embajada, hasta que éstos decidan otorgar la octava visa, tal que
 $$\begin{align*}
-Var(X) &= k\frac{(1-p)}{p^2} \\
+Var(X) &= r\frac{(1-p)}{p^2} \\
        &= 8\left(\frac{1-0.8}{0.8^2}\right) \\
        &= 8(0.3125) \\
        &= 2.5
