@@ -123,7 +123,7 @@ add_header_above(c("Frecuencia de" = 1, "Adquisición de Productos" = 3))
 18. Un experimento consiste en lanzar un dado. Si el número en el dado es par, se lanzar un dado una vez. Si el número en el dado es impar, se lanza una moneda dos veces. 
 <ol type = "a">
 <li> Construya un diagrama de árbol para mostrar los elementos del espacio muestral $S$.</li>
-<li> Calcule la probabilidad de obtener al menos un $5$ en un dado.</li>
+<li> Calcule la probabilidad de obtener al menos un $5$ en uno de los dos dados.</li>
 <li> Calcule la probabilidad de obtener un número impar en el dado, seguido de al menos un sello en la moneda.</li>
 </ol>
 19. Si `$S = \{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}$`, `$A = \{0, 2, 4, 6, 8\}$`, `$B = \{1, 3, 5, 7, 9\}$`, `$C = \{2, 3, 4, 5\}$` y `$D = \{1, 6, 7\}$`, liste los elementos de los conjuntos, en el siguiente diagrama de Venn
