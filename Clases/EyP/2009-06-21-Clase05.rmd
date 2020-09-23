@@ -183,7 +183,7 @@ y en consecuencia, se tendrá que la probabilidad de que en una familia de $3$ h
 
 La función de distribución acumulada (*fda*) denotada por `$F(x)$`, para una variable aleatoria discreta `$X$` con distribución de probabilidad `$p(x)$` es de la forma 
 `\begin{align*}
-F(x)=P(X\leq x)=\sum_{t\leq x}p(t) \quad \quad -\infty<x<\infty
+F(x)=\mathbb{P}(X\leq x)=\sum_{t\leq x}p(t) \quad \quad -\infty<x<\infty
 \end{align*}`
 para cualquier `$x$` dentro del rango de `$X$`, `$F(x)$` será la suma acumulada de todos los valores de rango de `$X$` menores a `$x$`.
 
