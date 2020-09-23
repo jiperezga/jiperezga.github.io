@@ -43,7 +43,7 @@ El parcial deberá solucionarse a mano, y enviar los resultado (escanear o tomar
 # Nota
 Recuerden interpretar todos los resultados!!! TODOS!!!! TOOOOOODDDDOOOOOOSSSS!!!!!! en el contexto del enunciado.
 
-* [Agudelo Pulgarín Mateo](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/ParcialI/P1020471882.pdf){:target="_blank"}
+* [Agudelo Pulgarín Mateo](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1020471882.pdf){:target="_blank"}
 * [Asprilla Palomino Laura Consuelo](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1003932757.pdf){:target="_blank"}
 * [Atencia Hernandez Patricia](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1017214350.pdf){:target="_blank"}
 * [Bedoya López Juan Esteban](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1216729063.pdf){:target="_blank"}
