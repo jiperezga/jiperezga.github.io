@@ -189,14 +189,14 @@ para cualquier `$x$` dentro del rango de `$X$`, `$F(x)$` será la suma acumulada
 
 **Nota:** Si se quieren calcular probabilidades con la función de distribución acumulada en el caso discreto, entonces, si `$a$` y `$b$` son dos números **constantes enteras**, deberán tenerse en cuenta las siguientes reglas
 
-* `$\mathbb{P}(a \leq X \leq b) = F(b) - F(a - 1)$`
-* `$\mathbb{P}(a < X \leq b) = F(b) - F(a)$`
-* `$\mathbb{P}(a \leq X < b) = F(b - 1) - F(a - 1)$`
-* `$\mathbb{P}(a < X < b) = F(b - 1) - F(a)$`
-* `$\mathbb{P}(X \geq a) = 1 - F(a-1)$`
-* `$\mathbb{P}(X > a) = 1 - F(a)$`
+* `$\mathbb{P}(a \leq X \leq b) = \mathbb{P}(X\leq b) - \mathbb{P}(X\leq a - 1) = F(b) - F(a - 1)$`
+* `$\mathbb{P}(a < X \leq b) = \mathbb{P}(X\leq b) - \mathbb{P}(X\leq a)  = F(b) - F(a)$`
+* `$\mathbb{P}(a \leq X < b) = \mathbb{P}(X\leq b-1) - \mathbb{P}(X\leq a-1) = F(b - 1) - F(a - 1)$`
+* `$\mathbb{P}(a < X < b) = \mathbb{P}(X\leq b-1) + \mathbb{P}(X\leq a) = F(b - 1) - F(a)$`
+* `$\mathbb{P}(X \geq a) = 1 - \mathbb{P}(X\leq a-1) = 1 - F(a-1)$`
+* `$\mathbb{P}(X > a) = 1 - \mathbb{P}(X\leq a) = 1 - F(a)$`
 * `$\mathbb{P}(X \leq b) = F(b)$`
-* `$\mathbb{P}(X < b) = F(b - 1)$`
+* `$\mathbb{P}(X < b) = \mathbb{P}(X\leq b-1) = F(b - 1)$`
 
 <button id="Show3" class="btn btn-secondary">Mostrar Ejercicio </button>
 <button id="Hide3" class="btn btn-info">Ocultar Ejercicio </button>
