@@ -60,26 +60,48 @@ p(x)=\begin{cases}k(x^2+4) & x=0,1,2,3 \\ 0 & \text{en otro caso}\end{cases}
 </ol>
 2. Suponga que se tiene un total de tres cajas exactamente iguales, donde cada una de las cajas contiene un animal encerrado, a saber, un conejo, un hamster y una cobaya. Si se trata de adivinar qué clase de animal hay en cada caja, siendo `$X$` la variable aleatoria que representa el numero de aciertos. Escriba la función de masa de probabilidad de la variable aleatoria `$X$`, su función de distribución acumulada y calcule la probabilidad de que acierte al menos 2 animales.
 3. Sean `$X$` y `$Y$` dos variables aleatorias discretas las cuales pueden tomar como posibles valores -1, 0, y 1. En la siguiente tabla se dan las probabilidades conjuntas para todos los posibles valores de `$X$` y `$Y$`.
-```{r echo=FALSE}
-library(kableExtra)
-tabla1 <- data.frame(c("$\\mathbf{Y}$", "$\\mathbf{-1}$", "$1/16$", "$3/16$", "$1/16$"),
-              c("$\\mathbf{Y}$", "$\\mathbf{0}$", "$3/16$", "$0$", "$3/16$"),
-              c("$\\mathbf{Y}$", "$\\mathbf{1}$", "$1/16$", "$3/16$", "$1/16$"))
-tabla1 <- data.frame(t(tabla1))
-colnames(tabla1) <- c("$\\mathbf{p(x,y)}$", "$\\mathbf{X}$", "$\\mathbf{-1}$", "$\\mathbf{0}$", "$\\mathbf{1}$")
-
-kable(tabla1, align = c("c", "l", "l", "l", "l"),
-  format = "html", booktabs = T, row.names = FALSE) %>%
-kable_styling("striped", full_width = F) %>%
-collapse_rows(columns = 1, valign = "middle")
-```
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td rowspan="2" colspan="2" style="text-align:center; vertical-align: middle;"><script type="math/tex">p(x,y)</script></td>
+<td style="text-align:center;" colspan="3"><script type="math/tex">X</script>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;"><script type="math/tex">\mathbf{-1}</script></td>
+<td style="text-align:center;"><script type="math/tex">\mathbf{0}</script></td>
+<td style="text-align:center;"><script type="math/tex">\mathbf{1}</script></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align: middle !important;" rowspan="3"><script type="math/tex">Y</script></td>
+<td style="text-align:center;"><script type="math/tex">\mathbf{-1}</script></td>
+<td style="text-align:center;"><script type="math/tex">\frac{1}{16}</script></td>
+<td style="text-align:center;"><script type="math/tex">\frac{3}{16}</script></td>
+<td style="text-align:center;"><script type="math/tex">\frac{1}{16}</script></td>
+</tr>
+<tr>
+<td style="text-align:center;"><script type="math/tex">\mathbf{0}</script></td>
+<td style="text-align:center;"><script type="math/tex">\frac{3}{16}</script></td>
+<td style="text-align:center;"><script type="math/tex">0</script></td>
+<td style="text-align:center;"><script type="math/tex">\frac{3}{16}</script></td>
+</tr>
+<tr>
+<td style="text-align:center;"><script type="math/tex">\mathbf{1}</script></td>
+<td style="text-align:center;"><script type="math/tex">\frac{1}{16}</script></td>
+<td style="text-align:center;"><script type="math/tex">\frac{3}{16}</script></td>
+<td style="text-align:center;"><script type="math/tex">\frac{1}{16}</script></td>
+</tr>
+</tbody>
+</table>
 <ol type ="a">
 <li> Obtenga las funciones de probabilidad marginales de $X$ y de $Y$. </li>
 <li> Pruebe si las variables aleatorias $X$ y $Y$ son independientes. </li>
 <li> Calcule la $\mathbb{P}(X=1|Y\leq 0)$. </li>
+</ol>
 4. Sea `$X$` una variable aleatoria con distribución de probabilidades `$p(x)$` dada por:
 ```{r echo=FALSE}
-tabla2 <- rbind("$x$" = c("$\\mathbf{-1}$", "$\\mathbf{3}$", "$\\mathbf{4}$", "$\\mathbf{5}$", "$\\mathbf{7}$"),
+library(kableExtra)
+tabla2 <- rbind("$X$" = c("$\\mathbf{-1}$", "$\\mathbf{3}$", "$\\mathbf{4}$", "$\\mathbf{5}$", "$\\mathbf{7}$"),
               "$p(x)$" = c("$0.31$", "k", "$0.15$", "$0.18$", "$0.23$"))
 
 kable(data.frame(tabla2),
@@ -158,7 +180,7 @@ f(x)=\frac{e^{-6} 6^x}{x!} \text{  para  } x=0,1,2,\dots
 </ol>
 12. Se sabe por ley que la vida máxima de la patente para un nuevo medicamento es de 17 años. Si restamos el tiempo requerido por la FDA para someter a pruebas y aprobar el medicamento, se obtiene la vida real de la patente para el medicamento, es decir, el tiempo que la compañía tiene para recuperar los costos de investigación y desarrollo, para obtener una utilidad. La distribución de los tiempos de vida reales de las patentes para nuevos medicamentos se da a continuación:
 ```{r echo=FALSE}
-tabla3 <- rbind("$x$ (en años)" = c("$\\mathbf{3}$", "$\\mathbf{4}$", "$\\mathbf{5}$", "$\\mathbf{6}$", "$\\mathbf{7}$", "$\\mathbf{8}$", "$\\mathbf{9}$", "$\\mathbf{10}$", "$\\mathbf{11}$", "$\\mathbf{12}$", "$\\mathbf{13}$"),
+tabla3 <- rbind("$X$ (en años)" = c("$\\mathbf{3}$", "$\\mathbf{4}$", "$\\mathbf{5}$", "$\\mathbf{6}$", "$\\mathbf{7}$", "$\\mathbf{8}$", "$\\mathbf{9}$", "$\\mathbf{10}$", "$\\mathbf{11}$", "$\\mathbf{12}$", "$\\mathbf{13}$"),
               "$p(x)$" = c("$0.03$", "$0.05$", "$0.07$", "$0.10$", "$0.14$", "$0.20$", "$0.18$", "$0.12$", "$0.07$", "$0.03$", "$0.01$"))
 tabla3[1,] <- formatC(as.matrix(tabla3[1,]),digits=0,format="f")
 
@@ -349,18 +371,39 @@ Calcule la probabilidad de que el tiempo que pase para que el radar detecte entr
 <li> De una expresión para la función de distribución acumulada $F(x) = \mathbb{P}(X \leq x)$?. </li>
 </ol>
 36. Suponga la siguiente función de probabilidad para las variables aleatorias `$X$` y `$Y$`
-```{r echo=FALSE}
-tabla4 <- data.frame(c(" ", "$\\mathbf{0}$", "$0.0600$", "$0.1050$", "$0.1350$"),
-              c("$\\mathbf{Y}$", "$\\mathbf{1}$", "$0.0900$", "$0.1575$", "$0.2025$"),
-              c(" ", "$\\mathbf{2}$", "$0.0500$", "$0.0875$", "$0.1125$"))
-tabla4 <- data.frame(t(tabla4))
-colnames(tabla4) <- c("$\\mathbf{p(x,y)}$", "$\\mathbf{X}$", "$\\mathbf{0}$", "$\\mathbf{1}$", "$\\mathbf{2}$")
-
-kable(tabla4, align = c("l", "l", "l", "l", "l"),
-  format = "html", booktabs = T, row.names = FALSE) %>%
-kable_styling("striped", full_width = F) %>%
-collapse_rows(columns = 1, valign = "middle")
-```
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td rowspan="2" colspan="2" style="text-align:center; vertical-align: middle;"><script type="math/tex">p(x,y)</script></td>
+<td style="text-align:center;" colspan="3"><script type="math/tex">X</script>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;"><script type="math/tex">\mathbf{0}</script></td>
+<td style="text-align:center;"><script type="math/tex">\mathbf{1}</script></td>
+<td style="text-align:center;"><script type="math/tex">\mathbf{2}</script></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align: middle !important;" rowspan="3"><script type="math/tex">Y</script></td>
+<td style="text-align:center;"><script type="math/tex">\mathbf{0}</script></td>
+<td style="text-align:center;"><script type="math/tex">0.0600</script></td>
+<td style="text-align:center;"><script type="math/tex">0.1050</script></td>
+<td style="text-align:center;"><script type="math/tex">0.1350</script></td>
+</tr>
+<tr>
+<td style="text-align:center;"><script type="math/tex">\mathbf{1}</script></td>
+<td style="text-align:center;"><script type="math/tex">0.0900</script></td>
+<td style="text-align:center;"><script type="math/tex">0.1575</script></td>
+<td style="text-align:center;"><script type="math/tex">0.2025</script></td>
+</tr>
+<tr>
+<td style="text-align:center;"><script type="math/tex">\mathbf{2}</script></td>
+<td style="text-align:center;"><script type="math/tex">0.0500</script></td>
+<td style="text-align:center;"><script type="math/tex">0.0875</script></td>
+<td style="text-align:center;"><script type="math/tex">0.1125</script></td>
+</tr>
+</tbody>
+</table>
 <ol type ="a">	
   <li> Evalúe la distribución marginal de $X$. </li>
   <li> Evalué la distribución marginal de $Y$. </li>
@@ -380,18 +423,39 @@ collapse_rows(columns = 1, valign = "middle")
   <li> Si se sabe que $Y>0.2$, entonces, cuál es la probabilidad de que $X<0.1$. </li>
 </ol>
 38. Sea `$X$` el número de veces que fallará cierta máquina de control numérico: 1, 2 o 3 veces en un día dado. Y sea `$Y$` el número de veces que se llama a un técnico para una emergencia, su distribución de probabilidad conjunta estará dada como
-```{r echo=FALSE}
-tabla5 <- data.frame(c("", "$\\mathbf{1}$", "$0.05$", "$0.05$", "$0.10$"),
-              c("$\\mathbf{Y}$", "$\\mathbf{3}$", "$0.05$", "$0.10$", "$0.35$"),
-              c(" ", "$\\mathbf{5}$", "$k$", "$0.20$", "$0.10$"))
-tabla5 <- data.frame(t(tabla5))
-colnames(tabla5) <- c("$\\mathbf{p(x,y)}$", "$\\mathbf{X}$", "$\\mathbf{1}$", "$\\mathbf{2}$", "$\\mathbf{3}$")
-
-kable(tabla5, align = c("l", "l", "l", "l", "l"),
-  format = "html", booktabs = T, row.names = FALSE) %>%
-kable_styling("striped", full_width = F) %>%
-collapse_rows(columns = 1, valign = "middle")
-```
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td rowspan="2" colspan="2" style="text-align:center; vertical-align: middle;"><script type="math/tex">p(x,y)</script></td>
+<td style="text-align:center;" colspan="3"><script type="math/tex">X</script>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;"><script type="math/tex">\mathbf{1}</script></td>
+<td style="text-align:center;"><script type="math/tex">\mathbf{2}</script></td>
+<td style="text-align:center;"><script type="math/tex">\mathbf{3}</script></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align: middle !important;" rowspan="3"><script type="math/tex">Y</script></td>
+<td style="text-align:center;"><script type="math/tex">\mathbf{1}</script></td>
+<td style="text-align:center;"><script type="math/tex">0.05</script></td>
+<td style="text-align:center;"><script type="math/tex">0.05</script></td>
+<td style="text-align:center;"><script type="math/tex">0.10</script></td>
+</tr>
+<tr>
+<td style="text-align:center;"><script type="math/tex">\mathbf{3}</script></td>
+<td style="text-align:center;"><script type="math/tex">0.05</script></td>
+<td style="text-align:center;"><script type="math/tex">0.10</script></td>
+<td style="text-align:center;"><script type="math/tex">0.35</script></td>
+</tr>
+<tr>
+<td style="text-align:center;"><script type="math/tex">\mathbf{5}</script></td>
+<td style="text-align:center;"><script type="math/tex">k</script></td>
+<td style="text-align:center;"><script type="math/tex">0.20</script></td>
+<td style="text-align:center;"><script type="math/tex">0.10</script></td>
+</tr>
+</tbody>
+</table>
 <ol type ="a">	
   <li> Evalúe la distribución marginal de $X$. </li>
   <li> Evalué la distribución marginal de $Y$. </li>

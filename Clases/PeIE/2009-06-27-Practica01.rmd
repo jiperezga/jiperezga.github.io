@@ -98,7 +98,6 @@ la probabilidad de que funcione cada componente es del `$0.95$`. El circuito fun
 13. Suponga que tenemos una caja de fusibles que contiene `$20$` unidades, de las cuales `$5$` están defectuosas. Si se seleccionan `$2$` fusibles al azar y se retiran de la caja, uno después del otro, sin reemplazar el primero, ¿cuál es la probabilidad de que ambos fusibles estén defectuosos?
 14. Un grupo asesor `$A$` contiene `$3$` hombres y `$3$` mujeres. Otro grupo asesor `$B$` contiene `$3$` hombres y `$2$` mujeres. Se selecciona al azar un grupo y de él una persona al azar, si esta persona es un hombre, se selecciona otra persona del mismo grupo. Si la persona seleccionada es mujer, se selecciona otra persona del otro grupo. Si las dos personas seleccionadas son hombres, ¿Cuál es la probabilidad de que se haya seleccionado ambas del grupo asesor `$A$`?
 15. Un estudio realizado para un supermercado clasifica los clientes en aquellos que visitan el establecimiento de una manera frecuente u ocasional, y en aquellos que adquieren regularmente, ocasionalmente o nunca productos alimenticios. La siguiente tabla presenta las proporciones correspondientes a cada uno de los seis grupos.
-<section style="font-family: 'Open Sans',sans-serif; margin-bottom: -3rem; margin-top: -3rem; font-size: 100%;">
 ```{r echo=FALSE}
 library(kableExtra)
 
@@ -110,7 +109,6 @@ kable(tabla,
 kable_styling("striped", full_width = F) %>%
 add_header_above(c("Frecuencia de" = 1, "Adquisición de Productos" = 3)) 
 ```
-</section>
 <ol type = "a">
 <li> ¿Cual es la probabilidad de seleccionar un cliente que visite frecuentemente el supermercado y compre regularmente productos alimenticios?</li>
 <li> ¿Cuál es la probabilidad de que se seleccione un cliente nunca compre productos alimenticios?</li>
@@ -183,7 +181,6 @@ la probabilidad de que funcione el componente `$C1$` es de `$0.98$`, la de `$C2$
 35. ¿Cuál es la probabilidad de seleccionar aleatoriamente, en sucesión, `$4$` empanadas de carne de una canasta que contiene `$25$` empanadas, de las cuales solo `$8$` son de carne?
 36. De un estudio realizado en la ciudad de Medellín, se encontró que la probabilidad de que un esposo sea infiel es del `$0.21$`, y que una esposa sea infiel `$0.25$`. ¿Cuál es la probabilidad de que una mujer casada sea infiel dado que su esposo no lo es? Suponga que los eventos pueden asumirse como independientes.
 37. Con curiosidad sobre sus pacientes, un psicólogo analiza la relación de `$60$` de sus pacientes según si trabaja o es desempleado y si sufre o no de alguna depresión. Él ha recopilado la información que se muestra en la siguiente tabla
-<section style="font-family: 'Open Sans',sans-serif; margin-bottom: -3rem; margin-top: -3rem; font-size: 100%;">
 ```{r echo=FALSE}
 library(kableExtra)
 
@@ -194,7 +191,6 @@ kable(tabla2,
   format = "html", booktabs = T) %>%
 kable_styling("striped", full_width = F) 
 ```
-</section>
 <ol type = "a">
 <li> ¿Cuál es la probabilidad de que un cliente seleccionado al azar sea empleado? </li>
 <li> Si él sabe que el paciente sufre de depresión, ¿Cuál es la probabilidad de que sea desempleado?</li>

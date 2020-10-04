@@ -52,8 +52,8 @@ opts_chunk$set(echo=TRUE,
 2. Suponga que por Ley, la vida máxima de la patente para un nuevo medicamento es `$17$` años. Si restamos el tiempo requerido por la FDA para someter a pruebas y aprobar el medicamento, se obtiene la vida real de la patente para el medicamento, es decir, el tiempo que la compañía tiene para recuperar los costos de investigación, desarrollo y obtener una utilidad. La distribución de los tiempos de vida reales de las patentes para nuevos medicamentos se da a continuación:
 ```{r echo=FALSE}
 library(kableExtra)
-tabla1 <- data.frame(c("Años, $x$", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"),
-              c("$f(x)$", "0.03", "0.05", "0.07", "0.10", "0.14", "0.20", "0.18", "0.12", "0.07", "0.04"))
+tabla1 <- data.frame(c("$X$ (Años)", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"),
+              c("$p(x)$", "0.03", "0.05", "0.07", "0.10", "0.14", "0.20", "0.18", "0.12", "0.07", "0.04"))
 tabla1 <- data.frame(t(tabla1))
 
 kable(tabla1, align = c("c", "l", "l", "l", "l"),
@@ -88,10 +88,10 @@ A partir de esta función de probabilidad
 <li> Si se selecciona una persona al azar, cuál sería la probabilidad de que el número de fotomultas que tenga sea más de $3$, pero a lo más $8$. </li>
 </ol>
 4. En una tienda de barrio, el dueño exhibe `$15$` ollas arroceras de la misma marca, `$9$` negras y `$6$` grises. Suponga que en el día, `$7$` clientes compran cada uno, una olla en momentos diferentes. ¿Cuál es la probabilidad de que más de `$2$` clientes hayan comprado arroceras de color gris?
-5. Sea `$X$` una variable aleatoria discreta con distribución de probabilidades `$f(x)$` dada por:
+5. Sea `$X$` una variable aleatoria discreta con distribución de probabilidades `$p(x)$` dada por:
 ```{r echo=FALSE}
-tabla2 <- data.frame(c("$x$", "1", "3", "4", "5", "7"),
-              c("$f(x)$", "0.31", "0.13", "0.15", "0.18", "0.23"))
+tabla2 <- data.frame(c("$X$", "1", "3", "4", "5", "7"),
+              c("$p(x)$", "0.31", "0.13", "0.15", "0.18", "0.23"))
 tabla2 <- data.frame(t(tabla2))
 
 kable(tabla2, align = c("c", "l", "l", "l", "l"),
@@ -104,7 +104,7 @@ Encuentre el coeficiente de asimetría, el cuál está dado por
 \end{align*}`
 6. Suponga la siguiente función de masa de probabilidad 
 `\begin{align*}
-	f(x)=\frac{\binom{2}{x}\binom{3}{3-x}}{\binom{5}{3}} \quad \quad \text{ para }x=0,1,2
+	p(x)=\frac{\binom{2}{x}\binom{3}{3-x}}{\binom{5}{3}} \quad \quad \text{ para }x=0,1,2
 \end{align*}`
 Calcule el coeficiente de exceso de curtosis, el cual está dado por 
 `\begin{align*}
@@ -131,7 +131,7 @@ Calcule el coeficiente de exceso de curtosis, el cual está dado por
 13. La Facultad de Ingeniería de la UdeM realiza una encuesta a  `$13000$` estudiantes de Ingeniería Industrial y Ingeniería Financiera de último año, en la cual se observa que el `$70\%$` de los encuestados, no están conformes con su carrera. Si se seleccionan al azar `$200$` de los encuestados y se les pide su opinión, ¿Cuál es la probabilidad de que más de `$60$` pero más de `$80$` no estén conformes con su carrera?.
 14. Suponga en un proceso de producción, el número de fallas que tiene una maquina en un día antes de apagarse, es una variable aleatoria discreta `$X$` con función de densidad de probabilidad dada por 
 `\begin{align*}
-f(x)=\frac{(x^2+4)}{30} \quad \quad x=0,1,2,3  
+p(x)=\frac{(x^2+4)}{30} \quad \quad x=0,1,2,3  
 \end{align*}`
 <ol type ="a">
 <li> Calcule la función de distribución acumulada para el número de fallas que tiene una máquina en un día antes de apagarse. </li>

@@ -115,7 +115,6 @@ la probabilidad de que funcione cada componente es del `$95\%$`. El circuito fun
 </ol>
 14. Un grupo asesor `$A$` contiene `$3$` hombres y `$3$` mujeres. Otro grupo asesor `$B$` contiene `$3$` hombres y `$2$` mujeres. Se selecciona al azar un grupo y de él una persona al azar, si esta persona es un hombre, se selecciona otra persona del mismo grupo. Si la persona seleccionada es mujer, se selecciona otra persona del otro grupo. Si las dos personas seleccionadas son hombres, ¿Cuál es la probabilidad de que se haya seleccionado ambas del grupo asesor `$A$`?
 15. Un estudio realizado para un supermercado clasifica los clientes en aquellos que visitan el establecimiento de una manera frecuente u ocasional, y en aquellos que adquieren regularmente, ocasionalmente o nunca productos alimenticios. La siguiente tabla presenta las proporciones correspondientes a cada uno de los seis grupos.
-<section style="font-family: 'Open Sans',sans-serif; margin-bottom: -3rem; margin-top: -3rem; font-size: 90%;">
 ```{r echo=FALSE}
 library(kableExtra)
 
@@ -127,7 +126,6 @@ kable(tabla,
 kable_styling("striped", full_width = F) %>%
 add_header_above(c("Frecuencia de" = 1, "Adquisición de Productos" = 3)) 
 ```
-</section>
 <ol type = "a">
 <li> ¿Cual es la probabilidad de seleccionar un cliente que visite frecuentemente el supermercado y compre regularmente productos alimenticios? </li>
 <li> ¿Cuál es la probabilidad de que se seleccione un cliente nunca compre productos alimenticios? </li>

@@ -108,7 +108,6 @@ la probabilidad de que funcione cada componente es del `$95\%$`. El circuito fun
 </ol>
 14. Un grupo asesor `$A$` contiene `$3$` hombres y `$3$` mujeres. Otro grupo asesor `$B$` contiene `$3$` hombres y `$2$` mujeres. Se selecciona al azar un grupo y de él una persona al azar, si esta persona es un hombre, se selecciona otra persona del mismo grupo. Si la persona seleccionada es mujer, se selecciona otra persona del otro grupo. Si las dos personas seleccionadas son hombres, ¿Cuál es la probabilidad de que se haya seleccionado ambas del grupo asesor `$A$`?
 15. Un estudio realizado para un supermercado clasifica los clientes en aquellos que visitan el establecimiento de una manera frecuente u ocasional, y en aquellos que adquieren regularmente, ocasionalmente o nunca productos alimenticios. La siguiente tabla presenta las proporciones correspondientes a cada uno de los seis grupos.
-<section style="font-family: 'Open Sans',sans-serif; margin-bottom: -3rem; margin-top: -3rem; font-size: 90%;">
 ```{r echo=FALSE}
 library(kableExtra)
 
@@ -120,7 +119,6 @@ kable(tabla,
 kable_styling("striped", full_width = F) %>%
 add_header_above(c("Frecuencia de" = 1, "Adquisición de Productos" = 3)) 
 ```
-</section>
 <ol type = "a">
 <li> ¿Cual es la probabilidad de seleccionar un cliente que visite frecuentemente el supermercado y compre regularmente productos alimenticios? </li>
 <li> ¿Cuál es la probabilidad de que se seleccione un cliente nunca compre productos alimenticios? </li>
@@ -134,7 +132,7 @@ add_header_above(c("Frecuencia de" = 1, "Adquisición de Productos" = 3))
 <li> Encuentre el número de puntos muestrales en el espacio muestral para el experimento, si no se tiene en cuenta que los dos dados saquen el mismo resultado. </li>
 <li> ¿Cuál es la probabilidad de que el número obtenido en los dos dados sea igual? </li>
 </ol>
-18. Un estudiante vive en un pueblo aledaño del Valle de Aburrá, y sólo cuenta con dos rutas de transporte para poder llegar a Caldas. Una vez llega a Caldas posee tres diferentes rutas para llegar al parque de San Antonio, y de allí puede seleccionar entre Metro o Bus para llegar a la UdeA. De cuantas formas podrías llegar a la UdeA desde su casa?
+18. Un estudiante vive en un pueblo aledaño del Valle de Aburrá, y sólo cuenta con dos rutas de transporte para poder llegar a Caldas. Una vez llega a Caldas posee tres diferentes rutas para llegar al parque de San Antonio, y de allí puede seleccionar entre Metro o Bus para llegar a la UdeM. De cuantas formas podrías llegar a la UdeA desde su casa?
 19. Si `$S$` representa el espacio muestral de todas las posibles cartas que pueden seleccionarse de un mazo de `$52$` cartas, `$A$` representa el evento de todos los números pares , `$B$` representa el evento de todas las letras, `$C$` representa el evento de obtener una carta roja y `$D$` representa el evento de obtener un `$10$` rojo, una `$J$` negra o un `$5$` de cualquier color, diga con palabras a que conjuntos que corresponden a los siguientes eventos:
 <ol type = "a">
 <li> $A \cup C$ </li>
