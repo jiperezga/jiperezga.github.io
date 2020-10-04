@@ -1,5 +1,6 @@
 /* Tablitas */
-ol .table{ font-size: 80%}
+ol .table{ font-size: 80%!important}
+div .table{ font-size: 100%; margin-bottom: 1rem; margin-top: 1rem;}
 
 .table thead th, .table td{background-color: rgba(59,165,255,.60);border:.125rem solid #ccc;padding:.313rem; font-size:100%;}
 .table td{font-weight: normal}
