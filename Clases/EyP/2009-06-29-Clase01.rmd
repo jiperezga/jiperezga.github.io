@@ -123,7 +123,6 @@ PM25 <- round(10 + 0.01 * datos + rnorm(28)*5, 2)
 zona <- sample(1:5, 28, T)
 ```
 
-<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -4rem; margin-top: -2rem; font-size: 120%;">
 <table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <tbody>
   <tr>
@@ -164,7 +163,6 @@ zona <- sample(1:5, 28, T)
   </tr>
 </tbody>
 </table>
-</pre>
 
 ### Medidas de tendencia central
 Estas medidas tienen por objetivo buscar valores que muestren el lugar en el cual se encuentra el centro de un conjunto de observaciones. Si se define `$x_1, x_2, \ldots, x_n$` como un conjunto de `$n$` observaciones, entonces 
@@ -228,7 +226,7 @@ Realizando el ordenamiento se tendrá que</p>
 ```{r echo=FALSE}
 datos2 <- sort(datos)
 ```
-<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -4rem; margin-top: -2rem; font-size: 120%;">
+
 <table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <tbody>
   <tr>
@@ -269,18 +267,17 @@ datos2 <- sort(datos)
   </tr>
 </tbody>
 </table>
-</pre>
 
 <p>donde se observa que las observaciones $14$ y $15$ para el número de vehículos que transitan sur-norte por la avenida Guayabal es $x_{[14]}=`r datos2[14]`$ y $x_{[15]}=`r datos2[15]`$, respectivamente.<br> 
 <br>
-Con dichos valores se realiza entonces, el cálculo de la mediana, tal que </p>
+Con dichos valores se realiza entonces, el cálculo de la mediana, tal que 
 
 $$\begin{align*}
   \tilde{X} &= \frac{1}{2}(`r datos2[14]`+ `r datos2[15]`) \\
             &=`r (datos2[14] + datos2[15])/2`
 \end{align*}$$
 
-<p>De lo anterior se obtiene que el $50\%$ inferior de los días transitan por la avenida Guayabal sur-norte a lo más $`r (datos2[14] + datos2[15])/2`$ vehículos, mientras que el $50\%$ superior de los días transitan por la avenida Guayabal sur-norte al menos $`r (datos2[14] + datos2[15])/2`$ vehículos.</p>
+De lo anterior se obtiene que el $50\%$ inferior de los días transitan por la avenida Guayabal sur-norte a lo más $`r (datos2[14] + datos2[15])/2`$ vehículos, mientras que el $50\%$ superior de los días transitan por la avenida Guayabal sur-norte al menos $`r (datos2[14] + datos2[15])/2`$ vehículos.</p>
 </main>
 
 #### Moda
@@ -308,7 +305,6 @@ En <tt>Excel</tt> puede calcularse la moda de un conjunto de observaciones media
 <h3 data-toc-skip> Solución </h3> 
 <p>Para encontrar el número modal de automóviles, es necesario localizar el número de vehículos que más se repita por día. Con el fin de ilustrar cual es este valor, se presenta nuevamente la tabla ordenada con el número de vehículos que transitaron cada uno de los $28$ días para facilitar su visualización. </p>
 
-<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -4rem; margin-top: -2rem; font-size: 120%;">
 <table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <tbody>
   <tr>
@@ -349,7 +345,6 @@ En <tt>Excel</tt> puede calcularse la moda de un conjunto de observaciones media
   </tr>
 </tbody>
 </table>
-</pre>
 
 <p> De la tabla anterior, se observa que estamos ante una situación trimodal en la cual los valores $`r datos2[5]`$, $`r datos2[14]`$ y $`r datos2[24]`$ son el número de vehículos que más se repiten en para los días registrados, ya que estos se repiten dos veces en el conjunto de observaciones.</p> 
 </main>
@@ -386,7 +381,6 @@ En <tt>Excel</tt> puede calcularse el k-ésimo percentil de un conjunto de obser
 <h3 data-toc-skip> Solución </h3> 
 <p> Para realizar el cálculo del cuartil número $j=2$, es necesario ordenar el número de automóviles que transitan por la avenida Guayabal por día, tal que </p>
 
-<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -4rem; margin-top: -2rem; font-size: 120%;">
 <table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <tbody>
   <tr>
@@ -427,7 +421,6 @@ En <tt>Excel</tt> puede calcularse el k-ésimo percentil de un conjunto de obser
   </tr>
 </tbody>
 </table>
-</pre>
 
 <p>Con los datos ordenados, se realiza el cálculo para la variable de posicionamiento $h_j$, con $j=2$, dado que se posee un total de $28$ observaciones, tal que 
 $$h_{2} = \frac{2(28-1)}{4} + 1 = 14.5$$
@@ -474,7 +467,6 @@ En <tt>Excel</tt> puede calcularse el k-ésimo percentil de un conjunto de obser
 <h3 data-toc-skip> Solución </h3> 
 <p> Para realizar el cálculo del quintil número $j=4$, es necesario ordenar el número de automóviles que transitan por la avenida Guayabal por día, tal que </p>
 
-<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -4rem; margin-top: -2rem; font-size: 120%;">
 <table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <tbody>
   <tr>
@@ -515,7 +507,6 @@ En <tt>Excel</tt> puede calcularse el k-ésimo percentil de un conjunto de obser
   </tr>
 </tbody>
 </table>
-</pre>
 
 <p>Con los datos ordenados, se realiza el cálculo para la variable de posicionamiento $h_j$, con $j=4$, dado que se posee un total de $28$ observaciones, tal que 
 $$h_{4} = \frac{4(28-1)}{5} + 1 = 22.6$$
@@ -562,7 +553,6 @@ En <tt>Excel</tt> puede calcularse el k-ésimo percentil de un conjunto de obser
 <h3 data-toc-skip> Solución </h3> 
 <p> Para realizar el cálculo del decil número $j=7$, es necesario ordenar el número de automóviles que transitan por la avenida Guayabal por día, tal que </p>
 
-<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -4rem; margin-top: -2rem; font-size: 120%;">
 <table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <tbody>
   <tr>
@@ -603,7 +593,6 @@ En <tt>Excel</tt> puede calcularse el k-ésimo percentil de un conjunto de obser
   </tr>
 </tbody>
 </table>
-</pre>
 
 <p>Con los datos ordenados, se realiza el cálculo para la variable de posicionamiento $h_j$, con $j=7$, dado que se posee un total de $28$ observaciones, tal que 
 $$h_{7} = \frac{7(28-1)}{10} + 1 = 19.9$$
@@ -650,7 +639,6 @@ En <tt>Excel</tt> puede calcularse el k-ésimo percentil de un conjunto de obser
 <h3 data-toc-skip> Solución </h3> 
 <p> Para realizar el cálculo del percentil número $j=95$, es necesario ordenar el número de automóviles que transitan por la avenida Guayabal por día, tal que </p>
 
-<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -4rem; margin-top: -2rem; font-size: 120%;">
 <table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <tbody>
   <tr>
@@ -691,7 +679,6 @@ En <tt>Excel</tt> puede calcularse el k-ésimo percentil de un conjunto de obser
   </tr>
 </tbody>
 </table>
-</pre>
 
 <p>Con los datos ordenados, se realiza el cálculo para la variable de posicionamiento $h_j$, con $j=95$, dado que se posee un total de $28$ observaciones, tal que 
 $$h_{95} = \frac{95(28-1)}{100} + 1 = 26.65$$

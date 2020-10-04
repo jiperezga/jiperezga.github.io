@@ -198,7 +198,7 @@ donde `$n=n_1+n_2+\ldots+n_k$`
 <p>En la facultad de Ciencias Económicas están interesados de armar un equipo de fútbol y para ello necesitan inscribir $15$ jugadores. Entre los cuales se inscriben $3$ de primer semestre, $5$ de segundo semestre, $2$ de tercer semestre, $1$ de cuarto semestre, $2$ de quinto semestre, $1$ de octavo semestre y $1$ de décimo semestre. Si al finalizar el torneo el equipo de Ciencias Económicas queda de segundo y para la entrega de medallas se desea entregarlas por semestre al que pertenecen los estudiantes. De cuantas formas diferentes pueden ordenarse los $15$ jugadores para recibir las medallas, si solo importa el semestre en el que pertenecen?</p>
 
 <h3 data-toc-skip> Solución </h3>
-<p>Dado que solo importa el semestre al que pertenecen los `$15$` estudiantes, entonces se tendrán un total de `$7$` clases, entre las cuales, la primera posee `$3$` estudiantes, la segunda posee `$5$` estudiantes, la tercera posee `$2$` estudiantes, la cuarta posee `$1$` estudiante, la quinta posee `$2$` estudiantes, la sexta posee `$1$` estudiante y la séptima posee `$1$` estudiante. 
+<p>Dado que solo importa el semestre al que pertenecen los $15$ estudiantes, entonces se tendrán un total de $7$ clases, entre las cuales, la primera posee $3$ estudiantes, la segunda posee $5$ estudiantes, la tercera posee $2$ estudiantes, la cuarta posee $1$ estudiante, la quinta posee $2$ estudiantes, la sexta posee $1$ estudiante y la séptima posee $1$ estudiante. 
 Por tanto, para entregar las medallas, el número de arreglos diferentes que pueden formarse son
 $$\begin{align*}
 \frac{15!}{3!\;5!\;2!\;1!\;2!\;1!\;1!} = \frac{1307674368000}{2880} = 454053600 \text{ formas}
@@ -269,7 +269,6 @@ collapse_rows(columns = 1:2, valign = "middle") %>%
 add_header_above(header = c(" " = 2, "$\\mathbf{\\text{Reemplazo}}$" = 2))
 ```
 
-<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -2rem; margin-top: -2rem; font-size: 100%;">
 <table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -313,7 +312,6 @@ add_header_above(header = c(" " = 2, "$\\mathbf{\\text{Reemplazo}}$" = 2))
 </tr>
 </tbody>
 </table>
-</pre>
 
 <button id="Show8" class="btn btn-secondary">Mostrar Ejercicio</button>
 <button id="Hide8" class="btn btn-info">Ocultar Ejercicio</button>

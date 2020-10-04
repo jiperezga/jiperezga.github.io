@@ -142,7 +142,7 @@ $$\begin{align*}
 \mathbb{P}(X=0) = \frac{1}{8}
 \end{align*}$$
 Procedimiento similar se aplica para $X=1$, $X=2$ y $X=3$, obteniendo como resultado la siguiente tabla de probabilidades
-<div style="font-family: 'Open Sans',sans-serif; margin-bottom: -2rem; margin-top: -2rem; font-size: 100%;">
+<div style="font-size:120%!important">
 ```{r echo=FALSE}
 library(kableExtra)
 tabla <- rbind("$X$" = c("$0$", "$1$", "$2$", "$3$"),
@@ -155,7 +155,7 @@ kable_styling("striped", full_width = F)
 </div>
 </li>
 <li>Si, la variable aleatoria se encuentra bien definida, dado que cada una de las probabilidades es mayor o igual a $0$, además, al sumar cada una de las probabilidades de la tabla
-<div style="font-family: 'Open Sans',sans-serif; margin-bottom: -2rem; margin-top: -2rem; font-size: 100%;">
+<div style="font-size:120%!important">
 ```{r echo=FALSE}
 library(kableExtra)
 tabla <- rbind("$X$" = c("$0$", "$1$", "$2$", "$3$"),
@@ -212,7 +212,7 @@ para cualquier `$x$` dentro del rango de `$X$`, `$F(x)$` será la suma acumulada
 <h3 data-toc-skip> Solución </h3> 
 <ol>
 <li>Como la función de distribución acumulada parte de la función de masa de probabilidad, calculamos la función de masa de probabilidad para el número de niñas que hay en una familia que posee $3$ hijos.
-<div style="font-family: 'Open Sans',sans-serif; margin-bottom: -2rem; margin-top: -2rem; font-size: 100%;">
+<div style="font-size:120%!important">
 ```{r echo=FALSE}
 library(kableExtra)
 tabla <- rbind("$X$" = c("$0$", "$1$", "$2$", "$3$"),
@@ -223,6 +223,7 @@ kable(data.frame(tabla),
 kable_styling("striped", full_width = F)
 ```
 </div>
+
 A partir de ésta tabla se procede a realizar el cálculo de la función de distribución acumulada $F(x)$. Para ello, debemos calcular las siguientes probabilidades $F(0) = \mathbb{P}(X\leq 0)$, $F(1) = \mathbb{P}(X\leq1)$, $F(2) = \mathbb{P}(X\leq2)$ y $F(3) = \mathbb{P}(X\leq3)$
 
 $$\begin{align*}
@@ -277,7 +278,7 @@ Si `$X$` es una variable aleatoria con función de masa de probabilidad `$p(x)$`
 
 <h3 data-toc-skip> Solución </h3> 
 <p>Como para calcular la esperanza matemática debemos calcular primero la función de masa de probabilidad, entonces calculamos la tabla asociada a la función de distribución para el número de niñas que hay en una familia que posee $3$ hijos.</p>
-<div style="font-family: 'Open Sans',sans-serif; margin-bottom: -2rem; margin-top: -2rem; font-size: 100%;">
+<div style="font-size:120%!important">
 ```{r echo=FALSE}
 library(kableExtra)
 tabla <- rbind("$X$" = c("$0$", "$1$", "$2$", "$3$"),
@@ -328,7 +329,7 @@ Sea `$a$` y `$b$` dos números constantes (reales) y `$X$` una variable aleatori
 <h3 data-toc-skip> Solución </h3> 
 <p>Similar al caso anterior, calculamos la función de masa de probabilidad para el número de niñas que hay en una familia que posee $3$ hijos.</p>
 <ol>
-<div style="font-family: 'Open Sans',sans-serif; margin-bottom: -2rem; margin-top: -2rem; font-size: 100%;">
+<div style="font-size:120%!important">
 ```{r echo=FALSE}
 library(kableExtra)
 tabla <- rbind("$X$" = c("$0$", "$1$", "$2$", "$3$"),

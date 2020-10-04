@@ -78,7 +78,7 @@ Sd(X) = \sqrt{Var(X)}
 
 <h3 data-toc-skip> Solución </h3> 
 <p>Como la función de varianza es en sí, es una esperanza matemática, entonces iniciamos con el cálculo de la función de masa de probabilidad para el número de niñas que hay en una familia que posee $3$ hijos.</p>
-<div style="font-family: 'Open Sans',sans-serif; margin-bottom: -2rem; margin-top: -2rem; font-size: 100%;">
+<div style="font-size:120%!important">
 ```{r echo=FALSE}
 library(kableExtra)
 tabla <- rbind("$X$" = c("$0$", "$1$", "$2$", "$3$"),
