@@ -86,8 +86,10 @@ En <tt>R</tt> puede calcularse la varianza de un conjunto de observaciones media
 <p>La varianza de las notas obtenidas en los parciales $1$ y $4$ por los estudiantes que cursaron Estadística I estará dada por
 
 $$\begin{align*}
-  S^2_{P1} &= \frac{1}{10-1}\left[(2.7 - 2.75)^2 + (4.0 - 2.75)^2 + \ldots + (2.1 - 2.75) ^2\right] = 0.5072222 \\
-  S^2_{P4} &=\frac{1}{10-1}\left[(1.8 - 3.14)^2 + (4.7 - 3.14)^2 + \ldots + (2.0 - 3.14) ^2\right] = 1.622667
+  S^2_{P1} &= \frac{1}{10-1}\left[(2.7 - 2.75)^2 + (4.0 - 2.75)^2 + \ldots + (2.1 - 2.75) ^2\right] \\
+           &= 0.5072222 \\
+  S^2_{P4} &=\frac{1}{10-1}\left[(1.8 - 3.14)^2 + (4.7 - 3.14)^2 + \ldots + (2.0 - 3.14) ^2\right] \\
+           &= 1.622667
 \end{align*}$$
 
 Es de anotar, que la interpretación de la varianza no tiene mucho sentido, debido a que la unidad de medición estará elevada al cuadrado, así que en general, los valores calculados se usan para realizar el cálculo de la desviación estándar. </p>
@@ -136,7 +138,7 @@ En <tt>R</tt> puede calcularse la desviación estándar de un conjunto de observ
 
 $$\begin{align*}
   S_{P1} &= \sqrt{0.5072222} = 0.7121953 \\ 
-  S_{P4}=\sqrt{1.622667} = 1.273839
+  S_{P4} &= \sqrt{1.622667} = 1.273839
 \end{align*}$$
 
 De los resultados obtenidos se tiene que, la dispersión que poseen los datos respecto a su valor promedio es de $0.7121953$ para las notas obtenidas en el parcial $1$ y de $1.273839$ para las notas obtenidas en el parcial $4$ de Estadística I. Esto quiere decir, que las notas obtenidas en el parcial $1$ se encuentran más reunidas respecto a valor promedio, que las notas obtenidas en el parcial $4$. </p>
