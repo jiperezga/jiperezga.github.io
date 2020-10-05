@@ -289,13 +289,13 @@ Adicionalmente, con el fin de organizar los datos, se presentan algunas de las c
 ### Operadores aritméticos y precedencias
 Existen diferentes operadores aritméticos que pueden emplearse en los lenguajes de programación. Estos se resumen en la siguiente tabla.
 
-<section>
+<pre style="margin-bottom: 0px;">
 ```{r echo=FALSE}
 library(kableExtra)
 
 datos <- cbind(
   "Operación" = c("Potencia", "Producto", "División", "División Entera", "Módulo o Resto", "Suma", "Resta"),
-  "Operador en R" = c("^", "$*$", "/", "%/%", "%%", "$\\text{+}$", "\\text{-}"),
+  "Operador en R" = c("^", "*", "/", "%/%", "%%", "+", "-"),
   "Asociatividad" = c("Por la derecha", "Por la izquierda", "Por la izquierda", "Por la izquierda", "Por la izquierda", "Por la izquierda", "Por la izquierda"),
   "Precedencia" = c(1, 2, 2, 2, 2, 3, 3))
 
@@ -303,7 +303,7 @@ kable(datos,
   format = "html", booktabs = T) %>%
 kable_styling("striped", full_width = F)
 ```
-</section>
+</pre>
 
 Como se observa, existen operadores que poseen el mismo nivel de prioridad, y por tanto éstos se ejecuta de izquierda a derecha. Para evitar problemas en los cálculos para operadores del mismo nivel de precedencia, se aconseja emplear el paréntesis, con el fin de modificar el orden de las operaciones.
 
