@@ -272,16 +272,16 @@ y en consecuencia se deberá obtener el mismo valor.
 </main>
 
 ### Distribución Gamma
-Se dice que la variable aleatoria `$X$` tiene una distribución Gamma con parámetro de forma `$\alpha$` y de escala `$\beta$`, si su función de densidad de probabilidad está dada por
+Se dice que la variable aleatoria `$X$` tiene una distribución Gamma con parámetro de forma `$\alpha$` y de razón `$\beta$`, si su función de densidad de probabilidad está dada por
 `\begin{align*}
-f(x) = \begin{cases} \frac{1}{\Gamma(\alpha)\beta^\alpha} x^{\alpha-1}e^{-{\frac{x}{\beta}}} \quad \quad & x>0; \alpha>0; \beta>0 \\
+f(x) = \begin{cases} \frac{\beta^\alpha}{\Gamma(\alpha)} x^{\alpha-1}e^{-{\frac{x}{\beta}}} \quad \quad & x>0; \alpha>0; \beta>0 \\
 0 \quad \quad & \text{en otro caso}\end{cases}
 \end{align*}`
 
 #### Media y Varianza Gamma
 Si `$X\sim Gamma(\alpha,\beta)$`, entonces se puede probar que la media y varianza de la variable aleatoria `$X$` están dadas por
 `\begin{align*}
-\mathbb{E}(X) = \alpha\beta \quad \quad Var(X)=\alpha\beta^2
+\mathbb{E}(X) = \frac{\alpha}{\beta} \quad \quad Var(X)=\frac{\alpha}{\beta^2}
 \end{align*}`
 
 <button id="Show3" class="btn btn-secondary">Mostrar Ejercicio</button>
@@ -303,43 +303,43 @@ Si `$X\sim Gamma(\alpha,\beta)$`, entonces se puede probar que la media y varian
 <ol>
 <li>En el enunciado nos mencionan que las transferencias de datos en un sistema de red informática, sigue una distribución gamma con media y desviación estándar dadas por $37_{ms}$ y $21.36196_{ms}$, respectivament, y nos piden que calculemos el valor de los parámetros de la misma. Y por ello debemos despejar de las fórmulas de media y varianza el valor de los dos parámetros, tal que
 $$\begin{align*}
-\mathbb{E}(X) &= \alpha\beta \\
-37 &= \alpha\beta\\
+\mathbb{E}(X) &= \frac{\alpha}{\beta} \\
+37 &= \frac{\alpha}{\beta}\\
 \end{align*}$$
 mientras que
 $$\begin{align*}
-Var(X)     &= \alpha\beta^2 \\
-Sd(X)^2    &= \alpha\beta^2 \\
-21.36196^2 &= \alpha\beta^2
+Var(X)     &= \frac{\alpha}{\beta^2} \\
+Sd(X)^2    &= \frac{\alpha}{\beta^2} \\
+21.36196^2 &= \frac{\alpha}{\beta^2}
 \end{align*}$$
 
 Entonces estamos en una situación dada por dos ecuaciones y dos incognitas, y por tanto, podemos despejar uno de los parámetros de una de las ecuaciones y reemplazar en la otra, para obtener el valor de uno de los parametros tal que
 $$\begin{align*}
-37                &= \alpha\beta\\
-\frac{37}{\alpha} &= \beta
+37    &= \frac{\alpha}{\beta}\\
+\beta &= \frac{\alpha}{37}
 \end{align*}$$
 entonces al reemplazar el resultado anterior en la fórmula de la varianza tendremos que el valor del parámetro $\alpha$ será igual a 
 $$\begin{align*}
-21.36196^2 &= \alpha\left(\frac{37}{\alpha}\right)^2\\
+21.36196^2 &= \frac{\alpha}{\left(\frac{\alpha}{37}\right)^2}\\
 21.36196^2 &= \frac{37^2}{\alpha}\\
 \alpha     &= \frac{37^2}{21.36196^2} \\
 \alpha     &= 3
 \end{align*}$$
 ahora al reemplazar el valor de $\alpha=3$ en la fórmula de la media tendremos que
 $$\begin{align*}
-37           &= (3)\beta\\
-\frac{37}{3} &= \beta
+37    &= \frac{3}{\beta}\\
+\beta &= \frac{3}{37}
 \end{align*}$$
-Y por tanto, se tendrá que las transferencias de datos en un sistema de red informática tendrá una distribución $Gamma(\alpha= 3, \beta = 37/3)$.
+Y por tanto, se tendrá que las transferencias de datos en un sistema de red informática tendrá una distribución $Gamma(\alpha= 3, \beta = 3/37)$.
 </li>
 <li> Basados en los parámetros calculados en el punto anterior, estamos interesados en calcular la probabilidad de que el tiempo de transferencia de datos exceda los $50_{ms}$, es decir
 $$\begin{align*}
 \mathbb{P}(X>50) 
 \end{align*}$$
-la cual, al emplear la distribución $Gamma(\alpha=3, \beta=37/3)$ se tendrá que
+la cual, al emplear la distribución $Gamma(\alpha=3, \beta=3/37)$ se tendrá que
 $$\begin{align*}
-\mathbb{P}(X>50) &= \int_{50}^{\infty} \frac{1}{\Gamma(\alpha)\beta^\alpha} x^{\alpha-1}e^{-{\frac{x}{\beta}}} dx \\
-                 &= \int_{50}^{\infty} \frac{1}{\Gamma(3)(37/3)^3} x^{3-1}e^{-{\frac{x}{(37/3)}}} dx \\
+\mathbb{P}(X>50) &= \int_{50}^{\infty} \frac{\beta^\alpha}{\Gamma(\alpha)} x^{\alpha-1}e^{-{x\beta}} dx \\
+                 &= \int_{50}^{\infty} \frac{(3/37)^3}{\Gamma(3)} x^{3-1}e^{-{\frac{3x}{37}}} dx \\
                  &= \frac{3^3}{\Gamma(3)(37)^3}\int_{50}^{\infty}  x^{2}e^{-{\frac{3x}{37}}} dx
 \end{align*}$$
 
@@ -400,23 +400,23 @@ Y por tanto, si el tiempo de transferencia de datos ha superado $20_{ms}$, se te
 </main>
 
 ### Distribución Exponencial
-Se dice que la variable aleatoria `$X$` tiene una distribución Exponencial con parámetro de escala `$\beta$`, si su función de densidad de probabilidad está dada por
+Se dice que la variable aleatoria `$X$` tiene una distribución Exponencial con parámetro de razón `$\lambda$`, si su función de densidad de probabilidad está dada por
 `\begin{align*}
-f(x) = \begin{cases} \frac{1}{\beta} e^{-{\frac{x}{\beta}}} \quad \quad & x>0; \beta>0 \\
+f(x) = \begin{cases} \lambda e^{-x\lambda} \quad \quad & x>0; \lambda>0 \\
 0 \quad \quad & \text{en otro caso}\end{cases}
 \end{align*}`
 en donde se observa que ésta distribución es un caso particular de la distribución Gamma cuando `$\alpha=1$`.
 
 #### Media y Varianza Exponencial
-Si `$X\sim Exp(\beta)$`, entonces se puede probar que la media y varianza de la variable aleatoria `$X$` están dadas por
+Si `$X\sim Exp(\lambda)$`, entonces se puede probar que la media y varianza de la variable aleatoria `$X$` están dadas por
 `\begin{align*}
-\mathbb{E}(X) = \beta \quad \quad Var(X)=\beta^2
+\mathbb{E}(X) = \frac{1}{\lambda} \quad \quad Var(X)= \frac{1}{\lambda^2}
 \end{align*}`
 
 #### Distribución Acumulada Exponencial
-Si `$X\sim Exp(\beta)$`, entonces se puede probar que la función de distribución acumulada de la variable aleatoria `$X$` es de la forma
+Si `$X\sim Exp(\lambda)$`, entonces se puede probar que la función de distribución acumulada de la variable aleatoria `$X$` es de la forma
 `\begin{align*}
-F(x) =  1 - e^{-{\frac{x}{\beta}}} \quad \quad & x>0; \beta>0
+F(x) =  1 - e^{-x\lambda} \quad \quad & x>0; \lambda>0
 \end{align*}`
 
 <button id="Show4" class="btn btn-secondary">Mostrar Ejercicio</button>
@@ -436,23 +436,23 @@ F(x) =  1 - e^{-{\frac{x}{\beta}}} \quad \quad & x>0; \beta>0
 <ol>
 <li> Para calcular la probabilidad de que la próxima persona tarde más de $4$ minutos en llegar al cajero, debemos primero encontrar el valor del parámetro de la distribución Exponencial, en donde, nos dicen en el enunciado, que el tiempo promedio entre llegadas sucesivas es de $0.8$ minutos, tal que
 $$\begin{align*}
-\mathbb{E}(X) &= 0.8
+\mathbb{E}(X) &= 0.8 = \frac{4}{5}
 \end{align*}$$
 Entonces como para la distribución Exponencial se tiene que el valor de la esperanza matemática está dada por
 $$\begin{align*}
-\mathbb{E}(X) &= \beta
+\mathbb{E}(X) &= \frac{1}{\lambda}
 \end{align*}$$
-se tendrá que el parámetro $\beta$ de la distribución Exponencial será igual a
+se tendrá que el parámetro $\lambda$ de la distribución Exponencial será igual a
 $$\begin{align*}
-\beta &= 0.8
+\lambda &= \frac{5}{4}
 \end{align*}$$
 Ahora, con el valor de este parámetro podemos calcular la probabilidad de interés empleando la función de distribución acumulada Exponencial, tal que 
 $$\begin{align*}
 \mathbb{P}(X>4) &= 1 - \mathbb{P}(X\leq 4) \\
                 &= 1 - F(4) \\
-                &= 1 - \left(1 - e^{-{\frac{4}{\beta}}}\right) \\
-                &= 1 - \left(1 - e^{-{\frac{4}{0.8}}}\right) \\
-                &= e^{-{\frac{4}{3}}} \\
+                &= 1 - \left(1 - e^{-{\frac{4(5)}{4}}}\right) \\
+                &= 1 - \left(1 - e^{-5}\right) \\
+                &= e^{-5} \\
                 &= 0.006737947
 \end{align*}$$
 Es decir que la probabilidad de que la próxima persona en llegar cajero de Bancolombia tarde más de $4$ minutos es de $0.67\%$. 
@@ -475,7 +475,7 @@ Y por tanto se tendrá una probabilidad de $8.21\%$ de que la próxima persona q
 </main>
 
 #### Propiedad de carencia de memoria
-Suponga que `$X$` es una variable aleatoria tal que `$X\sim Exp(\beta)$`, entonces sean dos reales positivos `$a$` y `$b$`, entonces se puede probar que
+Suponga que `$X$` es una variable aleatoria tal que `$X\sim Exp(\lambda)$`, entonces sean dos reales positivos `$a$` y `$b$`, entonces se puede probar que
 
 1. `$\mathbb{P}(X\geq a+b | x \geq b) = \mathbb{P}(X\geq a)$` 
 2. `$\mathbb{P}(X\leq a+b | x \geq b) = \mathbb{P}(X\leq a)$`
@@ -495,7 +495,7 @@ Suponga que `$X$` es una variable aleatoria tal que `$X\sim Exp(\beta)$`, entonc
 
 <h3 data-toc-skip> Solución </h3> 
 <ol>
-<li> Dado que para este ejercicio tenemos que el tiempo que tarda una persona en llegar a un cajero de Bancolombia se distribuye Exponencialmente con parámetro $\beta=0.8$, tendremos que, la probabilidad de que la próxima persona tarde a lo más $2$ minutos, dado que ya han pasado $0.8$ minutos y no llega ninguna persona, estará dada por una probabilidad condicional de la forma
+<li> Dado que para este ejercicio tenemos que el tiempo que tarda una persona en llegar a un cajero de Bancolombia se distribuye Exponencialmente con parámetro $\lambda=5/4$, tendremos que, la probabilidad de que la próxima persona tarde a lo más $2$ minutos, dado que ya han pasado $0.8$ minutos y no llega ninguna persona, estará dada por una probabilidad condicional de la forma
 $$\begin{align*}
 \mathbb{P}(X\leq2|X>0.8) 
 \end{align*}$$
@@ -520,7 +520,7 @@ $$\begin{align*}
 \mathbb{P}(X\leq2|X>0.8) &= \mathbb{P}(X\leq1.2 + 0.8|X>0.8) \\
                          &= \mathbb{P}(X\leq1.2) \\
                          &= F(1.2) \\
-                         &= 1 - e^{-\frac{1.2}{0.8}} \\
+                         &= 1 - e^{-\frac{(1.2)5}{4}} \\
                          &= 1 - 0.2231302 \\
                          &= 0.7768698
 \end{align*}$$
