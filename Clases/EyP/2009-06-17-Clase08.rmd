@@ -239,9 +239,9 @@ el tiempo esperado que tarda una serie financiera en cumplir un ciclo será de $
 ### Propiedades de la esperanza matemática
 Sea `$a$` y `$b$` dos números constantes (reales) y `$X$` una variable aleatoria, entonces se tiene que
 
-* `$\mathbb{E}(a)=a$`
-* `$\mathbb{E}(X+b)=\mathbb{E}(X)+b$`
-* `$\mathbb{E}(aX)=a\mathbb{E}(X)$`
+* `$\mathbb{E}(a) = a$`
+* `$\mathbb{E}(bX) = b\mathbb{E}(X)$`
+* `$\mathbb{E}(a+bX) = a+ b\mathbb{E}(X)$`
 * si `$m(X)$` es una función de `$X$`, entonces
 
 `\begin{align*}

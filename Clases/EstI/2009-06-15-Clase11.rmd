@@ -123,10 +123,10 @@ el tiempo esperado que tarda una serie financiera en cumplir un ciclo será de $
 ### Propiedades de la esperanza matemática
 Sea `$a$` y `$b$` números reales (constantes) y `$X$` una variable aleatoria con función de masa de probabilidad dada por `$p(x)$` o función de densidad de probabilidad dada por `$f(x)$`, entonces
 
-1. `$\mathbb{E}(a) = a$`
-2. `$\mathbb{E}(bX) = b\mathbb{E}(X)$`
-3. `$\mathbb{E}(a+bX) = a+ b\mathbb{E}(X)$`
-4. Si `$m(X)$` es una función de `$X$`, entonces
+* `$\mathbb{E}(a) = a$`
+* `$\mathbb{E}(bX) = b\mathbb{E}(X)$`
+* `$\mathbb{E}(a+bX) = a+ b\mathbb{E}(X)$`
+* Si `$m(X)$` es una función de `$X$`, entonces
 `\begin{align*}
 \mathbb{E}(m(X))=\begin{cases} \sum_{x}m(x)p(x) & \text{ si } X \text{ es discreta}  \\
 \int_{-\infty}^\infty m(x)f(x) dx & \text{ si } X \text{ es continua} \end{cases}
