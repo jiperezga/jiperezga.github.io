@@ -193,63 +193,131 @@ exámenes escritos individuales y proyectos elaborados en equipo, los
 cuales evalúan los conocimientos, habilidades, valores y actitudes
 propias del módulo.
 
-<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -3rem; margin-top: -3rem;">
 <table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
- <thead>
-  <tr>
-   <th style="text-align:left;"> Evaluación </th>
-   <th style="text-align:left;"> Porcentaje </th>
-   <th style="text-align:left;"> Temas </th>
-   <th style="text-align:left;"> Semana para Evaluación </th>
-   <th style="text-align:left;"> Modalidad </th>
-  </tr>
- </thead>
+<thead>
+<tr>
+<th style="text-align:left;">
+Evaluación
+</th>
+<th style="text-align:left;">
+Porcentaje
+</th>
+<th style="text-align:left;">
+Temas
+</th>
+<th style="text-align:left;">
+Semana para Evaluación
+</th>
+<th style="text-align:left;">
+Modalidad
+</th>
+</tr>
+</thead>
 <tbody>
-  <tr>
-   <td style="text-align:left;"> Examen No.1 </td>
-   <td style="text-align:left;"> 15% </td>
-   <td style="text-align:left;width: 5cm; "> Fundamentos de Probabilidad </td>
-   <td style="text-align:left;"> Cuarta semana </td>
-   <td style="text-align:left;width: 3cm; "> Individual </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Trabajo No.1 </td>
-   <td style="text-align:left;"> 15% </td>
-   <td style="text-align:left;width: 5cm; "> Estadística Descriptiva </td>
-   <td style="text-align:left;"> Novena semana </td>
-   <td style="text-align:left;width: 3cm; "> Parejas </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Examen No.2 </td>
-   <td style="text-align:left;"> 20% </td>
-   <td style="text-align:left;width: 5cm; "> Variables aleatorias y distribuciones de probabilidad </td>
-   <td style="text-align:left;"> Decimotercera semana </td>
-   <td style="text-align:left;width: 3cm; "> Individual </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Trabajo No.2 </td>
-   <td style="text-align:left;"> 15% </td>
-   <td style="text-align:left;width: 5cm; "> Distribuciones muestrales e intervalos de confianza </td>
-   <td style="text-align:left;"> Decimosexta semana </td>
-   <td style="text-align:left;width: 3cm; "> Parejas </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Examen No.3 </td>
-   <td style="text-align:left;"> 20% </td>
-   <td style="text-align:left;width: 5cm; "> Pruebas de Hipótesis </td>
-   <td style="text-align:left;"> Sexta semana </td>
-   <td style="text-align:left;width: 3cm; "> Individual </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Seguimiento </td>
-   <td style="text-align:left;"> 15% </td>
-   <td style="text-align:left;width: 5cm; "> Seguimiento </td>
-   <td style="text-align:left;"> Todo Semestre </td>
-   <td style="text-align:left;width: 3cm; "> Individual </td>
-  </tr>
+<tr>
+<td style="text-align:left;">
+Examen No.1
+</td>
+<td style="text-align:left;">
+15%
+</td>
+<td style="text-align:left;width: 5cm; ">
+Fundamentos de Probabilidad
+</td>
+<td style="text-align:left;">
+Cuarta semana
+</td>
+<td style="text-align:left;width: 3cm; ">
+Individual
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Trabajo No.1
+</td>
+<td style="text-align:left;">
+15%
+</td>
+<td style="text-align:left;width: 5cm; ">
+Estadística Descriptiva
+</td>
+<td style="text-align:left;">
+Novena semana
+</td>
+<td style="text-align:left;width: 3cm; ">
+Parejas
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Examen No.2
+</td>
+<td style="text-align:left;">
+20%
+</td>
+<td style="text-align:left;width: 5cm; ">
+Variables aleatorias y distribuciones de probabilidad
+</td>
+<td style="text-align:left;">
+Decimotercera semana
+</td>
+<td style="text-align:left;width: 3cm; ">
+Individual
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Trabajo No.2
+</td>
+<td style="text-align:left;">
+15%
+</td>
+<td style="text-align:left;width: 5cm; ">
+Distribuciones muestrales e intervalos de confianza
+</td>
+<td style="text-align:left;">
+Decimosexta semana
+</td>
+<td style="text-align:left;width: 3cm; ">
+Parejas
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Examen No.3
+</td>
+<td style="text-align:left;">
+20%
+</td>
+<td style="text-align:left;width: 5cm; ">
+Pruebas de Hipótesis
+</td>
+<td style="text-align:left;">
+Sexta semana
+</td>
+<td style="text-align:left;width: 3cm; ">
+Individual
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Seguimiento
+</td>
+<td style="text-align:left;">
+15%
+</td>
+<td style="text-align:left;width: 5cm; ">
+Seguimiento
+</td>
+<td style="text-align:left;">
+Todo Semestre
+</td>
+<td style="text-align:left;width: 3cm; ">
+Individual
+</td>
+</tr>
 </tbody>
 </table>
-</pre>
 
 Malla curricular Programas
 --------------------------
