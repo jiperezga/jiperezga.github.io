@@ -69,7 +69,7 @@ f(z) = \begin{cases} \frac{1}{\sqrt{2\pi}}e^{-\frac{z^2}{2}} & -\infty<z<\infty 
 Si `$X\sim N(\mu, \sigma^2)$`, siendo `$a$` y `$b$` dos constantes cualquiera, entonces si se realiza la transformación `$Z=\frac{x-\mu}{\sigma}$` conocida como **estandarización**, se tendrá que `$Z\sim N(0,1)$`, con `$z_1$` y `$z_2$` las dos constantes transformadas.
 
 
-![](../../ProbabilidadeInferencia/images/Estandarizacion.jpg)
+![](../../EstadisticaI/images/Estandarizacion.jpg)
 
 ### Propiedades
 Si `$X\sim N(\mu, \sigma^2)$`, entonces al aplicar el teorema de estandarización `$Z=\frac{x-\mu}{\sigma} \sim N(0,1)$`, y por tanto, si `$z_1$` y `$z_2$` son constantes, se tendrá que
@@ -99,14 +99,14 @@ En donde, debe recordarse que, al ser la distribución normal una distribución 
 <h3 data-toc-skip> Solución </h3> 
 <p>Para calcular probabilidades con la tabla de la distribución normal estándar, es necesario tener en cuenta el funcionamiento de la tabla misma. Y para ello se presenta la siguiente imagen.</p>
 
-<img src="../../ProbabilidadeInferencia/images/TablaNormalEst.jpg" alt="" style="max-width: 80%;">
+<img src="../../EstadisticaI/images/TablaNormalEst.jpg" alt="" style="max-width: 80%;">
 
 <p>En donde, se aprecia que, <strong>los cuadros rojos representan los valores críticos</strong> $z$ que se emplea para calcular probabilidades, en donde, el cuadro rojo de la parte izquierda muestra la parte entera y el primer decimal, mientras que el cuadro rojo de la parte superior muestra el segundo decimal. <strong>El cuadro azul representa las probabilidades</strong> $\alpha$ que se desean calcular a partir de los valores críticos. Finalmente, <strong>el cuadro azul claro representa el funcionamiento de la tabla </strong>, la cual muestra las probabilidades que poseen la forma $\mathbb{P}(Z<z)=\alpha$. </p>
 
 <ol>
 <li>Con la explicación de la tabla en mente, la primera probabilidad a calcular es $\mathbb{P}(Z\leq 1.96)$. Entonces como esta probabilidad tiene la estructura establecida por la tabla $\mathbb{P}(Z\leq z)$, será cuestión de buscar el valor crítico $1.96$ para localizar la probabilidad asociada, tal que se busca en la parte izquierda, el valor $1.9$ y en la parte superior el valor $0.06$, y en donde se encuentre el cruce de ambos valores, se encontrará el valor de la probabilidad asociada a $1.96$. Dicho procedimiento se muestra en la siguiente imagen 
 
-<img src="../../ProbabilidadeInferencia/images/TablaNormalEst2.jpg" alt="" style="max-width: 80%;">
+<img src="../../EstadisticaI/images/TablaNormalEst2.jpg" alt="" style="max-width: 80%;">
 
 Donde se aprecia que 
 
@@ -120,7 +120,7 @@ $$\begin{align*}
 \end{align*}$$
 En donde, se aprecia que ahora podemos calcular la $\mathbb{P}(Z> 2.13)$, mediante el empleo de la $\mathbb{P}(Z\leq 2.13)$, la cual podemos buscar en la tabla directamente. Para localizar $\mathbb{P}(Z\leq 2.13)$, se busca el valor $2.1$ en la parte izquierda de la tabla, y el valor $0.03$ en la parte superior de la tabla, y en donde se encuentre el cruce de ambos valores, se encontrará el valor de la probabilidad asociada a $2.13$.
 
-<img src="../../ProbabilidadeInferencia/images/TablaNormalEst3.jpg" alt="" style="max-width: 80%;">
+<img src="../../EstadisticaI/images/TablaNormalEst3.jpg" alt="" style="max-width: 80%;">
 
 Donde se aprecia que 
 
@@ -145,7 +145,7 @@ $$\begin{align*}
 obteniendo que la probabilidad $\mathbb{P}(-2.42 <Z \leq 0.24)$, puede calcularse mediante el empleo de las probabilidades acumuladas $\mathbb{P}(Z \leq 0.24)$ y $\mathbb{P}(Z \leq -2.42)$, las cuales pueden calcularse en la tabla de forma similar a los dos puntos anteriores.
 
 
-<img src="../../ProbabilidadeInferencia/images/TablaNormalEst4.jpg" alt="" style="max-width:100%;">
+<img src="../../EstadisticaI/images/TablaNormalEst4.jpg" alt="" style="max-width:100%;">
 
 Donde se aprecia que 
 
@@ -178,7 +178,7 @@ $$\begin{align*}
 
 En donde observamos que la probabilidad $\mathbb{P}(Z\leq z)$ ya posee la estructura de la tabla, y en consecuencia, podemos proceder a encontrar el valor crítico $z$, buscando el valor de la probabilidad $0.9871$ en la parte interior de la tabla, y luego buscando cual es el valor crítico $z$ asociado a dicha probabilidad.
 
-<img src="../../ProbabilidadeInferencia/images/TablaNormalEst5.jpg" alt="" style="max-width: 80%;">
+<img src="../../EstadisticaI/images/TablaNormalEst5.jpg" alt="" style="max-width: 80%;">
 
 En la tabla se aprecia, que al buscar la probabilidad $0.9871$ encontramos que el valor crítico $z$ asociado es de $2.24$, es decir
 
@@ -219,7 +219,7 @@ $$\begin{align*}
 \end{align*}$$
 y en consecuencia podemos ahora buscar la probabilidad $\mathbb{P}(Z < -0.83)$ en la tabla de la distribución normal estándar, de la siguiente manera
 
-<img src="../../ProbabilidadeInferencia/images/TablaNormalEst6.jpg" alt="" style="max-width: 80%;">
+<img src="../../EstadisticaI/images/TablaNormalEst6.jpg" alt="" style="max-width: 80%;">
 
 Donde se aprecia que 
 
@@ -311,7 +311,7 @@ $$\begin{align*}
 
 En donde se aprecia que la $\mathbb{P}(Z \leq -0.40)$ tiene la misma estructura establecida por la tabla de distribución normal estándar $\mathbb{P}(Z\leq z)$, y por tanto será cuestión de buscar el valor crítico $0.40$ en la tabla, para encontrar la probabilidad asociada a dicho valor, tal que
 
-<img src="../../ProbabilidadeInferencia/images/TablaNormalEst7.jpg" alt="" style="max-width: 80%;">
+<img src="../../EstadisticaI/images/TablaNormalEst7.jpg" alt="" style="max-width: 80%;">
 
 Donde se aprecia que 
 
