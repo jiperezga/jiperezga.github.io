@@ -250,7 +250,7 @@ f(x) =\begin{cases}k\sqrt{x}, & 0< x < 1\\ 0, & \text{en otro caso} \end{cases}
   <li>  Encuentre el valor de $k$ para que $f(x)$ sea una función de densidad de probabilidad. </li>
   <li>  Calcule $F(x)$ y utilice el resultado para calcular la $\mathbb{P}(0.24 < X < 0.63)$. </li>
 </ol>
-20. Si `$X$` y `$Y$` son variables aleatorias discretas con función de probabilidad dada por: `$f(x,y)=k(\frac{x+y}{xy})$`,para `$x=1,2,3$`; `$y=2,3$`.
+20. Si `$X$` y `$Y$` son variables aleatorias discretas con función de probabilidad dada por: `$f(x,y)=k(\frac{x+y}{xy})$`,para `$x=1,2,3$`; `$y=1,2,3$`.
 <ol type ="a">	
   <li>  Encuentre el valor de $k$ que hace que $f(x,y)$ sea una función de masa de probabilidad conjunta. </li>
   <li>  Encuentre la distribución marginal de $X$ y $Y$. </li>
