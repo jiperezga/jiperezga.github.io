@@ -150,7 +150,6 @@ El curso se desarrolla con sesiones teóricas en el aula de clase y sesiones pr�
 ## Evaluación del curso
 Los instrumentos de evaluación de cada módulo se llevan a cabo, mediante exámenes escritos individuales y proyectos elaborados en equipo, los cuales evalúan los conocimientos, habilidades, valores y actitudes propias del módulo.
 
-<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -3rem; margin-top: -3rem;">
 ```{r echo=FALSE}
 library(kableExtra)
 library(dplyr)
@@ -165,7 +164,6 @@ kable_styling("striped", full_width = F) %>%
 column_spec(3, width = "5cm") %>%
 column_spec(5, width = "3cm") 
 ```
-</pre>
 
 ## Malla curricular Programas
 
