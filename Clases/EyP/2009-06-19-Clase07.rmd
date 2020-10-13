@@ -46,7 +46,7 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
-## Distribuciones de probabilidad discreta
+## Distribuciones de probabilidad discretas
 ### Experimento Binomial Negativo
 Consideremos un experimento con las mismas propiedades de un experimento binomial, solo que en este caso, las pruebas se repetirán hasta que ocurra un número fijo de éxitos. Por lo tanto en vez de encontrar la probabilidad de `$X$` éxitos en `$n$` pruebas, donde `$n$` es fija, ahora nos interesa la probabilidad de que ocurra el `$r$`-ésimo éxito en la `$X$`-ésima prueba.
 

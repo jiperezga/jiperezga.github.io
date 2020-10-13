@@ -47,6 +47,7 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
+## Distribuciones de probabilidad continuas
 ### Distribución Uniforme Continua
 Se dice que la variable aleatoria `$X$` tiene una distribución uniforme continua, definida en el intervalo `$(a,b)$`, si su función de probabilidad está dada por
 `\begin{align*}
