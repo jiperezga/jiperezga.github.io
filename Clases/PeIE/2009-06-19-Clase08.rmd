@@ -67,7 +67,7 @@ Un proceso Bernoulli es aquel que cumple
 ### Ensayo de Bernoulli
 Si la probabilidad de éxito de un experimento es `$p$`, entonces la probabilidad de fallo debe ser `$1-p$` y la función de probabilidad de la variable aleatoria `$X\sim Be(p)$` para un ensayo Bernoulli será
 `\begin{align*}
-f(x) = p^x(1-p)^{1-x} \quad \quad x=0,1
+p(x) = p^x(1-p)^{1-x} \quad \quad x=0,1
 \end{align*}`
 
 #### Teorema
@@ -127,7 +127,7 @@ Por tanto, al seleccionar un solo estudiante, se espera que $0.6$ estudiantes re
 ### Distribución Binomial
 Si `$X$` es la variable aleatoria del número de éxitos de `$n$` ensayos de Bernoulli, con probabilidad de éxito `$p$`, entonces se dice que `$X\sim b(n,p)$` tal que
 `\begin{align*}
-f(x) = \left(\begin{array}{c}n\\ x\end{array}\right)p^x(1-p)^{n-x} \quad \quad x=0,1,\ldots,n
+p(x) = \left(\begin{array}{c}n\\ x\end{array}\right)p^x(1-p)^{n-x} \quad \quad x=0,1,\ldots,n
 \end{align*}`
 
 **Nota:** Esta distribución es usada cuando se realiza muestreo con reemplazo o en poblaciones infinitas en donde es posible **suponer que la probabilidad de éxito `$p$` es la misma** en cada ensayo Bernoulli.
@@ -225,7 +225,7 @@ Un proceso Poisson es aquel que cumple
 ### Distribución Poisson
 El número de sucesos que ocurren en un intervalo de tiempo o región específica, es una variable aleatoria `$X$` con distribución de probabilidad Poisson, tal que
 `\begin{align*}
-f(x) = \frac{e^{-\lambda}\lambda^x}{x!} \quad \quad x=0,1,\ldots
+p(x) = \frac{e^{-\lambda}\lambda^x}{x!} \quad \quad x=0,1,\ldots
 \end{align*}`
 donde `$\lambda$` es el parámetro de la distribución y representa el número promedio de sucesos por unidad de tiempo o región específica.
 
