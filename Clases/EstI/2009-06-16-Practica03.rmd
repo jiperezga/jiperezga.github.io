@@ -6,12 +6,12 @@ permalink: /EstadisticaI/EstI:title.html
 tags:
 
 introduction: | 
-              Ejercicios sobre: <br/>
-              - Distribuciones Discretas <br/>
-              - Distribuciones Continuas <br/>
-              - Distribuciones Conjuntas <br/>
-              - Distribuciones Marginales <br/>
-              - Distribuciones Condicionales <br/>
+              Ejercicios sobre: <br>
+              - Distribuciones Discretas <br>
+              - Distribuciones Continuas <br>
+              - Distribuciones Conjuntas <br>
+              - Distribuciones Marginales <br>
+              - Distribuciones Condicionales <br>
               - Independencia Estadística
               
 header-includes:
@@ -135,7 +135,7 @@ f(x) =\begin{cases}k(3-x^2), & -1\leq x \leq 1\\ 0, & \text{en otro caso} \end{c
 </ol>
 7. Suponga una función de densidad de probabilidad conjunta de las variables aleatorias `$X$`, `$Y$` y `$Z$`, la cual se define como
 `\begin{align*}
-f(x,y,z)=\begin{cases}kxyz^2 & 0< x,y <1; 0< z<3 \\0 & \text{en otro caso}\end{cases}
+f(x,y,z)=\begin{cases}kxyz^2 & 0< x < 1; 0< y <1; 0< z<3 \\0 & \text{en otro caso}\end{cases}
 \end{align*}`
 A partir de esta ecuación, calcule
 <ol type ="a">
@@ -290,7 +290,7 @@ Calcule la probabilidad de que el tiempo que pase para que el radar detecte entr
 </ol>
 25. Si `$X$`, `$Y$` y `$Z$` tienen la siguiente función de densidad de probabilidad conjunta:
 `\begin{align*}
-	f(x,y,z)=\begin{cases}kxy^2z& 0<x,y<1; 0<z<2 \\0 & \text{en otro caso}\end{cases} 
+	f(x,y,z)=\begin{cases}kxy^2z& 0<x<1;0<y<1; 0<z<2 \\0 & \text{en otro caso}\end{cases} 
 \end{align*}`
 <ol type ="a">	
   <li>  Calcule el valor $k$ para que hace que $f(x,y,z)$ sea una función de densidad de probabilidad conjunta. </li>
@@ -371,7 +371,6 @@ Calcule la probabilidad de que el tiempo que pase para que el radar detecte entr
 <ol type ="a">
 <li> Verifique si $f(x)$ es efectivamente una función de densidad de probabilidad. </li>
 <li> Suponga que $\theta = 100$. Cuál es la probabilidad de que el hamster tarde a lo más de $200$ minutos en superar el laberinto? y cuál es la probabilidad de que tarde al menos $200$ minutos?. </li>
-<li> Suponga nuevamente que $\theta = 100$. ¿Cuál es el valor esperado y varianza de del tiempo que tarda el hamster en superar el laberinto?. </li>
 <li> De una expresión para la función de distribución acumulada $F(x) = \mathbb{P}(X \leq x)$?. </li>
 </ol>
 36. Suponga la siguiente función de probabilidad para las variables aleatorias `$X$` y `$Y$`
