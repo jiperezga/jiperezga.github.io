@@ -160,8 +160,8 @@ f(x)=\begin{cases}kx^4(1-x)^3 & 0\leq x \leq 1,\\0 & \text{en otro caso}\end{cas
 \end{align*}`
 <ol type ="a">
 <li> ¿Cuál es el valor de $k$ que hace de la anterior una función de densidad válida? </li>
-<li> Calcule la probabilidad de que al menos $50\%$ de las empresas tenga utilidades durante el primer año. </li>
-<li> Calcule la probabilidad de que al menos $80\%$, pero no más de $90\%$ de las empresas tenga utilidades durante el primer año. </li>
+<li> Calcule la probabilidad de que la proporción de utilidades que obtiene una empresa pequeña durante su primer año sea de al menos el $50\%$. </li>
+<li> Calcule la probabilidad de que la proporción de utlidades que obtiene una empresa pequeña durante su primer año sea de al menos el $80\%$, pero no más del $90\%$. </li>
 </ol>
 10. Suponga que a partir de una gran cantidad de datos históricos, se sabe que `$X$` representa el número de automóviles que llegan a una intersección específica durante un periodo de `$20$` segundos, la cual puede ser determinada mediante la siguiente función de probabilidad discreta
 `\begin{align*}
