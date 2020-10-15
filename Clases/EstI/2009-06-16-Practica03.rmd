@@ -470,7 +470,7 @@ Calcule la probabilidad de que el tiempo que pase para que el radar detecte entr
 `\begin{align*}
 	f(x,y)=\begin{cases}2e^{-\left(\frac{x}{5}+10y\right)} & x,y > 0 \\0 & \text{en otro caso}\end{cases}
 \end{align*}`
-con función de densidad de probabilidad conjunta dada por
+con función de distribución acumulada conjunta dada por
 `\begin{align*}
 	F(x,y)=\begin{cases}\left[1-e^{-\frac{x}{5}}\right] \left[1-e^{-10y}\right]  & x,y > 0 \\0 & \text{en otro caso}\end{cases} 
 \end{align*}`
