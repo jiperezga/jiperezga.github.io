@@ -1,14 +1,17 @@
 ---
 layout: post
-title: "Clase 08"
+title: "Clase 9"
 main-class: 'clase'
 permalink: /ProbabilidadeInferencia/PeIE:title.html
 tags:
 
 introduction: |
-  Funciones de probabilidad continuas. <br>
-  Función de distribución acumulada. <br>
-  Esperanza matemática y varianza.
+              Variables aleatorias continuas <br>
+              - Funciones de probabilidad <br>
+              - Función de distribución acumulada <br>
+              - Esperanza matemática <br>
+              - Propiedades de esperanza matemática <br>
+              - Varianza
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
@@ -35,7 +38,7 @@ opts_chunk$set(echo=TRUE,
                comment=NA,
                message=FALSE,
                warning=FALSE,
-               fig.path = paste0("../../ProbabilidadeInferencia/images/", "Clase08"),
+               fig.path = paste0("../../ProbabilidadeInferencia/images/", "Clase09"),
                cache.path = "../../ProbabilidadeInferencia/cache/",
                cache = FALSE)
 
