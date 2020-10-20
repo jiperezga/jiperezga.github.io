@@ -6,9 +6,10 @@ permalink: /EstadisticaI/EstI:title.html
 tags:
 
 introduction: |
-              Distribuciones marginales <br>
-              Distribuciones condicionales <br>
-              Independencia estadística
+              Distribuciones de probabilidad conjuntas <br>
+              - Distribuciones marginales <br>
+              - Distribuciones condicionales <br>
+              - Independencia estadística
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
@@ -41,7 +42,8 @@ opts_chunk$set(echo=TRUE,
 
 ```
 
-## Distribuciones marginales
+## Distribución de probabilidad conjunta
+### Distribuciones marginales
 
 Sean `$X, Y$` dos variables aleatorias con función de masa de probabilidad conjunta `$p(x,y)$`o función de densidad de probabilidad conjunta `$f(x,y)$`, entonces las distribuciones marginales solo de `$X$`, están dada por
 `\begin{align*}
@@ -339,7 +341,7 @@ Donde se evidencia que la distribución marginal $h(y)$ solo depende de la varia
 </p>
 </main>
 
-## Distribuciones condicionales
+### Distribuciones condicionales
 
 Sea `$X, Y$` dos variables aleatorias con función de masa de probabilidad conjunta o función de densidad de probabilidad conjunta entonces la distribución condicional de `$X$` dado `$Y$` es
 `\begin{align*}
@@ -577,7 +579,7 @@ f(y|x\leq1.3) =& \frac{0.0201y^2}{0.4225} \\
 </p>
 </main>
 
-## Independencia estadística
+### Independencia estadística
 
 Sea `$X, Y$` dos variables aleatorias discretas con función de masa de probabilidad conjunta `$p(x,y)$` o continuas con función de densidad de probabilidad conjunta `$f(x,y)$`, y con distribuciones marginales `$g(x)$` y `$h(y)$`. entonces, se dice que las variables aleatorias `$X,Y$` son estadísticamente independientes si y solo si
 `\begin{align*}
