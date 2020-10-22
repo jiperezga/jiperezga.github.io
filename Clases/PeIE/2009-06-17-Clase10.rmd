@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "Clase 09"
+title: "Clase 10"
 main-class: 'clase'
 permalink: /ProbabilidadeInferencia/PeIE:title.html
 tags:
 
 introduction: |
-  Distribuciones de probabilidad continua: <br>
-  - Distribución Exponencial: <br>
-  &nbsp * Relación con la distribución Poisson. <br>
-  &nbsp * Propiedad de Carencia de Memoria. 
+              Distribuciones de probabilidad continua: <br>
+              - Distribución Exponencial: <br>
+              &nbsp * Relación con la distribución Poisson. <br>
+              &nbsp * Propiedad de Carencia de Memoria. 
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
@@ -36,7 +36,7 @@ opts_chunk$set(echo=TRUE,
                comment=NA,
                message=FALSE,
                warning=FALSE,
-               fig.path = paste0("../../ProbabilidadeInferencia/images/", "Clase09"),
+               fig.path = paste0("../../ProbabilidadeInferencia/images/", "Clase10"),
                cache.path = "../../ProbabilidadeInferencia/cache/",
                cache = FALSE)
 
