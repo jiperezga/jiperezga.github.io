@@ -133,7 +133,7 @@ kable_styling("striped", full_width = F) %>%
 collapse_rows(columns = 1, valign = "middle")
 ```
 
-<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto; font-size:100%!important">
 <tbody>
 <tr>
 <td rowspan="2" colspan="2" style="text-align:center; vertical-align: middle;"><script type="math/tex">p(x,y)</script></td>
@@ -249,7 +249,7 @@ $$\begin{align*}
 
 entonces al observar la tabla de probabilidades tenemos que las probabilidades que cumplen tal condición son
 
-<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto; font-size:100%!important">
 <tbody>
 <tr>
 <td rowspan="2" colspan="2" style="text-align:center; vertical-align: middle;"><script type="math/tex">p(x,y)</script></td>

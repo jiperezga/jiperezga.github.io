@@ -66,7 +66,7 @@ h(y)=\begin{cases} \sum_{x}p(x,y) & \text{ si } x,y \text{ son discretas} \\
 <h3 data-toc-skip> Solución </h3> 
 <p>En el caso de una distribución discreta, encontrar las distribuciones marginales es cuestion de sumar las probabilidades que hay en la tabla por filas o por columnas. Para ilustrar esto, retomemos la tabla de distribución que encontramos anteriormente para este punto </p>
 
-<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto; font-size:120%!important">
 <tbody>
 <tr>
 <td rowspan="2" colspan="2" style="text-align:center; vertical-align: middle;"><script type="math/tex">p(x,y)</script></td>
@@ -176,7 +176,7 @@ h(y)=\begin{cases} \sum_{x}p(x,y) & \text{ si } x,y \text{ son discretas} \\
 
 <p>Como se aprecia, se tiene en la parte izquierda la variable aleatoria $Y$, mientras que en la parte superior la variable aleatoria $X$. Entonces, si realizamos la suma de las probabilidades por columna, encontraremos la distribución marginal de $X$, $g(x)$, mientras que si sumamos las probabilidades por fila, encontraremos la distribución marginal de $Y$, $h(y)$. tal que</p>
 
-<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto; font-size:120%!important">
 <tbody>
 <tr>
 <td rowspan="2" colspan="2" style="text-align:center; vertical-align: middle;"><script type="math/tex">p(x,y)</script></td>
@@ -367,7 +367,7 @@ f(x|y=3)=\frac{f(x,y=3)}{h(y=3)} \text{ con } h(y)>0
 
 Para calcular dicha distribución, necesitamos tanto la función de masa de probabilidad como las distribución marginal de $Y=3$, y para ello, empleamos la tabla anteriormente calculada con sus correspondientes distribuciones marginales, tal que</p>
 
-<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto; font-size:120%!important">
 <tbody>
 <tr>
 <td rowspan="2" colspan="2" style="text-align:center; vertical-align: middle;"><script type="math/tex">p(x,y)</script></td>
@@ -498,7 +498,7 @@ Para calcular dicha distribución, necesitamos tanto la función de masa de prob
 
 <p>En donde se aprecia que $f(x,y=3)$ aparece resaltado de color rojo, mientras que $h(y=3)$ aparece resaltado de color amarillo. Entonces al aplicar la formula de probabilidad condicional, se tendrá que la distribución condicional de $X$ dado que $Y=3$ es</p>
 
-<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto; font-size:120%!important">
 <tbody>
 <tr>
 <td style="text-align:center;"><script type="math/tex">X</script></td>
@@ -597,7 +597,7 @@ para todo `$(x,y)$` dentro de sus rangos o planos.
 <h3 data-toc-skip> Solución </h3> 
 <p> Para observar si la suma de los dos dados y la resta absoluta del resultado de los dos dados es o no independiente, es necesario calcular inicialmente, las distribuciones marginales de las variables aleatorias tal como se hizo en puntos anteriores</p>
 
-<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto; font-size:120%!important">
 <tbody>
 <tr>
 <td rowspan="2" colspan="2" style="text-align:center; vertical-align: middle;"><script type="math/tex">p(x,y)</script></td>
