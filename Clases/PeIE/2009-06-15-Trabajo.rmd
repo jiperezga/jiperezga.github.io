@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Trabajo 2.0"
+title: "Trabajo"
 main-class: 'presentaciones'
 permalink: /ProbabilidadeInferencia/PeIE:title.html
 tags:
 
-introduction: Trabajo R 2.0
+introduction: Trabajo R
 
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
