@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "Clase 10"
+title: "Clase 11"
 main-class: 'clase'
 permalink: /ProbabilidadeInferencia/PeIE:title.html
 tags:
 
 introduction: |
-  Distribuciones de probabilidad continua: <br>
-  - Distribución Weibull. <br>
-  - Tasa de falla.  <br>
-  - Función de confiabilidad.
+              Distribuciones de probabilidad continua: <br>
+              - Distribución Weibull. <br>
+              - Tasa de falla.  <br>
+              - Función de confiabilidad.
   
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
@@ -37,7 +37,7 @@ opts_chunk$set(echo=TRUE,
                comment=NA,
                message=FALSE,
                warning=FALSE,
-               fig.path = paste0("../../ProbabilidadeInferencia/images/", "Clase10"),
+               fig.path = paste0("../../ProbabilidadeInferencia/images/", "Clase11"),
                cache.path = "../../ProbabilidadeInferencia/cache/",
                cache = FALSE)
 
