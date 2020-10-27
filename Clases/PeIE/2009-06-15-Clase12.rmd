@@ -1,17 +1,17 @@
 ---
 layout: post
-title: "Clase 11"
+title: "Clase 12"
 main-class: 'clase'
 permalink: /ProbabilidadeInferencia/PeIE:title.html
 tags:
 
 introduction: |
-  Distribuciones de probabilidad continua: <br>
-  - Distribución Normal <br>
-  - Distribución Normal Estándar <br>
-  Teoremas de Aproximación: <br>
-  - Binomial a Poisson <br>
-  - Binomial a Normal
+              Distribuciones de probabilidad continua: <br>
+              - Distribución Normal <br>
+              - Distribución Normal Estándar <br>
+              Teoremas de Aproximación: <br>
+              - Binomial a Poisson <br>
+              - Binomial a Normal
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
@@ -38,7 +38,7 @@ opts_chunk$set(echo=TRUE,
                comment=NA,
                message=FALSE,
                warning=FALSE,
-               fig.path = paste0("../../ProbabilidadeInferencia/images/", "Clase11"),
+               fig.path = paste0("../../ProbabilidadeInferencia/images/", "Clase12"),
                cache.path = "../../ProbabilidadeInferencia/cache/",
                cache = FALSE)
 
