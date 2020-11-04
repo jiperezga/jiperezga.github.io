@@ -58,7 +58,7 @@ Si `$X\sim N(\mu, \sigma^2)$`, entonces se puede probar que la media y la varian
 \end{align*}`
 
 ### Distribución Normal estándar
-Un caso particular de la distribución normal cuando la media `$\mu=0$` y ka varianza `$\sigma^2=1$`, recibe el nombre de distribución normal estándar, cuya variable aleatoria se simboliza con `$Z$`, tal que `$Z\sim N(0,1)$`, y donde su función de densidad de probabilidad está dada por
+Un caso particular de la distribución normal cuando la media `$\mu=0$` y la varianza `$\sigma^2=1$`, recibe el nombre de distribución normal estándar, cuya variable aleatoria se simboliza con `$Z$`, tal que `$Z\sim N(0,1)$`, y donde su función de densidad de probabilidad está dada por
 
 `\begin{align*} 
 f(z) = \begin{cases} \frac{1}{\sqrt{2\pi}}e^{-\frac{z^2}{2}} & -\infty<z<\infty \\ 0 & \text{en otro caso} \end{cases}
