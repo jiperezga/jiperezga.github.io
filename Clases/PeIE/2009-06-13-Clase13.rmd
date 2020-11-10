@@ -1,16 +1,16 @@
 ---
 layout: post
-title: "Clase 12"
+title: "Clase 13"
 main-class: 'clase'
 permalink: /ProbabilidadeInferencia/PeIE:title.html
 tags:
 
 introduction: |
-  Introducción a la inferencia estadística. <br>
-  Estadísticos. <br>
-  Distribuciones muestrales: <br>
-  - Distribución muestral para la media muestral. <br>
-  - Teorema del Límite Central. 
+              Introducción a la inferencia estadística. <br>
+              Estadísticos. <br>
+              Distribuciones muestrales: <br>
+              - Distribución muestral para la media muestral. <br>
+              - Teorema del Límite Central. 
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
@@ -37,7 +37,7 @@ opts_chunk$set(echo=TRUE,
                comment=NA,
                message=FALSE,
                warning=FALSE,
-               fig.path = paste0("../../ProbabilidadeInferencia/images/", "Clase12"),
+               fig.path = paste0("../../ProbabilidadeInferencia/images/", "Clase13"),
                cache.path = "../../ProbabilidadeInferencia/cache/",
                cache = FALSE)
 
