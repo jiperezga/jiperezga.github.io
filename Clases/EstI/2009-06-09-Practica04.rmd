@@ -114,20 +114,41 @@ Calcule el coeficiente de exceso de curtosis, el cual está dado por
 \end{align*}`
 11. Dado que ya hemos lanzado al aire una moneda balanceada diez veces y no obtuvimos caras, ¿cuál es la probabilidad de que debamos lanzar la moneda al menos dos veces más, para obtener la primera cara? 
 12. Sea `$X$` el número de veces que fallará cierta máquina de control numérico: 1, 2 o 3 veces en un día dado, y `$Y$` denota el número de veces que se llama a un técnico para una emergencia. Suponga que su distribución de probabilidad conjunta estará dada como
-```{r echo=FALSE}
-tabla3 <- data.frame(c("", "1", "0.05", "0.05", "0.10"),
-              c("$\\mathbf{Y}$", "3", "0.05", "0.10", "0.35"),
-              c(" ", "5", "k", "0.20", "0.10"))
-tabla3 <- data.frame(t(tabla3))
-colnames(tabla3) <- c("$\\mathbf{p(x,y)}$", "$\\mathbf{X}$", "1", "2", "3")
-
-kable(tabla3, align = c("l", "l", "l", "l", "l"),
-  format = "html", booktabs = T, row.names = FALSE) %>%
-kable_styling("striped", full_width = F) %>%
-collapse_rows(columns = 1, valign = "middle")
-```
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td rowspan="2" colspan="2" style="text-align:center; vertical-align: middle;"><script type="math/tex">p(x,y)</script></td>
+<td style="text-align:center;" colspan="3"><script type="math/tex">X</script>
+</td>
+</tr>
+<tr>
+<td style="text-align:center;"><script type="math/tex">\mathbf{1}</script></td>
+<td style="text-align:center;"><script type="math/tex">\mathbf{2}</script></td>
+<td style="text-align:center;"><script type="math/tex">\mathbf{3}</script></td>
+</tr>
+<tr>
+<td style="text-align:center;vertical-align: middle !important;" rowspan="3"><script type="math/tex">Y</script></td>
+<td style="text-align:center;"><script type="math/tex">\mathbf{1}</script></td>
+<td style="text-align:center;"><script type="math/tex">0.05</script></td>
+<td style="text-align:center;"><script type="math/tex">0.05</script></td>
+<td style="text-align:center;"><script type="math/tex">0.10</script></td>
+</tr>
+<tr>
+<td style="text-align:center;"><script type="math/tex">\mathbf{3}</script></td>
+<td style="text-align:center;"><script type="math/tex">0.05</script></td>
+<td style="text-align:center;"><script type="math/tex">0.10</script></td>
+<td style="text-align:center;"><script type="math/tex">0.35</script></td>
+</tr>
+<tr>
+<td style="text-align:center;"><script type="math/tex">\mathbf{5}</script></td>
+<td style="text-align:center;"><script type="math/tex">k</script></td>
+<td style="text-align:center;"><script type="math/tex">0.20</script></td>
+<td style="text-align:center;"><script type="math/tex">0.10</script></td>
+</tr>
+</tbody>
+</table>
 Calcule el `$Corr(X,Y^2)$`.
-13. Una moneda se lanza dos veces. Sea `$X$` el número de caras en el primer lanzamiento y `$Y$` el número	total de caras en los 2 lanzamientos. Si la moneda no está balanceada y la probabilidad de sello es dos veces la probabilidad de cara, calcule
+13. Una moneda se lanza dos veces. Sea `$X$` el número de caras en el primer lanzamiento y `$Y$` el número	total de caras en los `$2$` lanzamientos. Si la moneda no está balanceada y la probabilidad de sello es dos veces la probabilidad de cara, calcule
 <ol type ="a">
 <li> la media y varianza de $X$ y $Y$ </li>
 <li> el coeficiente de asimetría de $X$ y $Y$ </li>
@@ -191,8 +212,8 @@ f(x)=\frac{(x^2+4)}{30} \quad \quad x=0,1,2,3
 </ol>
 24. De una población de consumidores, `$60\%$` tienen fama de preferir una marca `$A$` de pasta dental. Si se entrevista a un grupo de consumidores escogidos al azar, 
 <ol type ="a">
-<li> ¿Cuál es la probabilidad de que al menos $5$ personas tengan que ser entrevistadas para hallar el primer consumidor que prefiera la marca `$A$` de pasta dental? </li>
-<li> ¿Cuál es la probabilidad de que a lo más $12$ personas tengan que ser entrevistadas para hallar el tercer consumidor que prefiera la marca `$A$` de pasta dental? </li>
+<li> ¿Cuál es la probabilidad de que al menos $5$ personas tengan que ser entrevistadas para hallar el primer consumidor que prefiera la marca $A$ de pasta dental? </li>
+<li> ¿Cuál es la probabilidad de que a lo más $12$ personas tengan que ser entrevistadas para hallar el tercer consumidor que prefiera la marca $A$ de pasta dental? </li>
 </ol> 
 25. Dos estudiantes apuestan sobre el número de ejercicios correctos realizados por el profesor de matemáticas hasta que cometa un error. Si la probabilidad de que el profesor cometa una error en un ejercicio es de `$0.08$`.
 <ol type ="a">
@@ -247,7 +268,7 @@ Entonces, a partir de ésta, calcule la covarianza de `$6X^2$` y `$3Y^3$`.
 </ol>	
 34. Si `$X$`, `$Y$` y `$Z$` tienen la siguiente función de densidad de probabilidad conjunta:
 `\begin{align*}
-	f(x,y,z)=\begin{cases}kxy^2z& 0<x,y<1; 0<z<2 \\0 & \text{en otro caso}\end{cases} 
+	f(x,y,z)=\begin{cases}kxy^2z& 0<x<1;\quad 0<y<1;\quad 0<z<2 \\0 & \text{en otro caso}\end{cases} 
 \end{align*}`
 <ol type ="a">
 <li> Calcule el valor $k$ que hace que la función de densidad de probabilidad conjunta esté bien definida. </li>
@@ -255,7 +276,7 @@ Entonces, a partir de ésta, calcule la covarianza de `$6X^2$` y `$3Y^3$`.
 </ol>	
 35. Se cree que de los `$10000$` votantes que residen en una ciudad, `$4000$` están a favor de la iniciativa de talar arboles para construir nuevas vías. Se seleccionan al azar `$60$` votantes de los `$10000$` y se les pregunta si están o no de acuerdo con dicha iniciativa. 
 <ol type ="a">
-<li> ¿Cuál es la probabilidad de que entre `$30$` y `$40$` votantes, inclusive, estén a favor de dicha iniciativa?. </li>
+<li> ¿Cuál es la probabilidad de que entre $30$ y $40$ votantes, inclusive, estén a favor de dicha iniciativa?. </li>
 <li> ¿Cuál es el número esperado de votantes que estarán a favor de la iniciativa? </li>
 </ol>	
 36. Dos personas, por turnos, tiran un dado imparcial hasta que una de ellas lanza un `$6$`. La persona `$A$` tiró primero, la `$B$` en segundo, `$A$` en tercero y así sucesivamente. En vista de que la persona `$B$` tiró el primer `$6$`, ¿cuál es la probabilidad de que `$B$` obtenga el primer `$6$` en su segundo tiro (es decir, en el cuarto tiro total)?
