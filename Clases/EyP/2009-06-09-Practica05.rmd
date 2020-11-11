@@ -384,5 +384,9 @@ con función de distribución acumulada conjunta dada por
   <li> Si se sabe que el tiempo de espera es mayor a seis minutos, calcule la probabilidad de que el tiempo de ejecición sea menor a $15$ segundos. </li>
   <li> Obtener las funciones de densidad marginal y probar si estos lapsos de tiempo son variables aleatorias independientes. </li>
 </ol>
-26. Sean `$X$` y `$Y$` variables aleatorias continuas distribuidas conjuntamente con `$f(x,y)=kxy$` para `$0<x<5$`, `$1<y<x$`. El valor de `$k$` que hace que `$f(x,y)$` sea una función de densidad de probabilidad conjunta es?
+26. Sean `$X$` y `$Y$` variables aleatorias continuas distribuidas conjuntamente con
+`\begin{align*}
+	f(x,y)=kxy \quad \text{ para } 0<x<5; \quad 1<y<x
+\end{align*}`
+El valor de `$k$` que hace que `$f(x,y)$` sea una función de densidad de probabilidad conjunta es?
 
