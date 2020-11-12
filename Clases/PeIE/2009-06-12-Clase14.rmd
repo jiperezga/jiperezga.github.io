@@ -6,12 +6,12 @@ permalink: /ProbabilidadeInferencia/PeIE:title.html
 tags:
 
 introduction: |
-  Distribuciones muestrales: <br>
-  - Distribución muestral para una proporción. <br>
-  - Distribución para combinaciones lineales <br>
-  - Distribución muestral chi-cuadrado. <br>
-  - Distribución muestral t de Student. <br>
-  - Distribución mustral F de Fisher. 
+              Distribuciones muestrales: <br>
+              - Distribución muestral para una proporción. <br>
+              - Distribución para combinaciones lineales <br>
+              - Distribución muestral chi-cuadrado. <br>
+              - Distribución muestral t de Student. <br>
+              - Distribución mustral F de Fisher. 
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
