@@ -7,7 +7,7 @@ tags:
 
 introduction: |
               Distribuciones muestrales <br>
-              - Distribución muestral F de Fisher. 
+              - Distribución muestral F de Fisher. <br>
               - Distribuciones muestrales para diferencia de medias. <br>
               - Distribuciones muestrales para diferencia de proporciones. <br>
               Estimación puntual. <br>
