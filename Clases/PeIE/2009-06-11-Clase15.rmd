@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Clase 14"
+title: "Clase 15"
 main-class: 'clase'
 permalink: /ProbabilidadeInferencia/PeIE:title.html
 tags:
@@ -39,7 +39,7 @@ opts_chunk$set(echo=TRUE,
                comment=NA,
                message=FALSE,
                warning=FALSE,
-               fig.path = paste0("../../ProbabilidadeInferencia/images/", "Clase14"),
+               fig.path = paste0("../../ProbabilidadeInferencia/images/", "Clase15"),
                cache.path = "../../ProbabilidadeInferencia/cache/",
                cache = FALSE)
 
