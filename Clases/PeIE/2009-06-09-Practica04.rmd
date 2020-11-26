@@ -6,9 +6,9 @@ permalink: /ProbabilidadeInferencia/PeIE:title.html
 tags:
 
 introduction: |
-  Ejercicio sobre: <br>
-  - Distribuciones muestrales. <br>
-  - Intervalos de confianza.
+               Ejercicio sobre: <br>
+               - Distribuciones muestrales. <br>
+               - Intervalos de confianza.
               
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
