@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "Clase 18"
+title: "Clase 19"
 main-class: 'clase'
 permalink: /ProbabilidadeInferencia/PeIE:title.html
 tags:
 
 introduction: |
-  Prueba de hipótesis. <br>
-  - Prueba de hipótesis para diferencia de proporciones <br>
-  - Prueba de hipótesis para el cociente de varianzas <br>
-  - Prueba de bondad de ajuste
+              Prueba de hipótesis. <br>
+              - Prueba de hipótesis para diferencia de proporciones <br>
+              - Prueba de hipótesis para el cociente de varianzas <br>
+              - Prueba de bondad de ajuste
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
@@ -36,7 +36,7 @@ opts_chunk$set(echo=TRUE,
                comment=NA,
                message=FALSE,
                warning=FALSE,
-               fig.path = paste0("../../ProbabilidadeInferencia/images/", "Clase17"),
+               fig.path = paste0("../../ProbabilidadeInferencia/images/", "Clase19"),
                cache.path = "../../ProbabilidadeInferencia/cache/",
                cache = FALSE)
 

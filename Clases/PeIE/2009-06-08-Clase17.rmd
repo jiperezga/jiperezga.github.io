@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "Clase 16"
+title: "Clase 17"
 main-class: 'clase'
 permalink: /ProbabilidadeInferencia/PeIE:title.html
 tags:
 
 introduction: |
-  Prueba de hipótesis. <br>
-  - Componentes de una prueba de hipótesis. <br>
-  - Errores tipo I, II y potencia de la prueba. 
+              Prueba de hipótesis. <br>
+              - Componentes de una prueba de hipótesis. <br>
+              - Errores tipo I, II y potencia de la prueba. 
   
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
@@ -36,7 +36,7 @@ opts_chunk$set(echo=TRUE,
                comment=NA,
                message=FALSE,
                warning=FALSE,
-               fig.path = paste0("../../ProbabilidadeInferencia/images/", "Clase16"),
+               fig.path = paste0("../../ProbabilidadeInferencia/images/", "Clase17"),
                cache.path = "../../ProbabilidadeInferencia/cache/",
                cache = FALSE)
 

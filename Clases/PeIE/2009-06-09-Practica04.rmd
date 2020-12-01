@@ -46,7 +46,7 @@ opts_chunk$set(echo=TRUE,
 
 1. Se encuentra que la concentración promedio de zinc que se obtiene en una muestra de mediciones en `$36$` sitios diferentes de un río es de `$2.6$` gramos por mililitro. Si la función de probabilidad no es conocida, pero se sabe su desviación estándar es de `$0.3$` gramos por mililitro. Basado en lo anterior
 <ol type ="a">
-  <li> Calcule la probabilidad de que la concentración media de zinc en el río se encuentre entre $2.4$ y $2.5$ gramos por mililitro
+  <li> Calcule la probabilidad de que la concentración media de zinc en el río se encuentre entre $2.4$ y $2.5$ gramos por mililitro.
   </li>
   <li> Calcule un intervalo de confianza del $95\%$ para la concentración media de zinc en el río?
   </li>

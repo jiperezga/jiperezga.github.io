@@ -6,10 +6,10 @@ permalink: /ProbabilidadeInferencia/PeIE:title.html
 tags:
 
 introduction: |
-  Ejercicio sobre: <br>
-  - Errores tipo I y tipo II <br>
-  - Pruebas de hipótesis <br>
-  - Pruebas de bondad de ajuste
+              Ejercicio sobre: <br>
+              - Errores tipo I y tipo II <br>
+              - Pruebas de hipótesis <br>
+              - Pruebas de bondad de ajuste
               
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
