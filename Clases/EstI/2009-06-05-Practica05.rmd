@@ -148,7 +148,7 @@ Calcule de forma exacta y mediante aproximación a una distribución normal la `
 17. Suponga que se realiza un estudio estadístico y se encuentra que el número de clientes que llega donde Pastora en media hora, es una variable aleatoria Poisson con media de `$4$` clientes. Basados en lo anterior
 <ol type ="a">
 <li> ¿Cuál es la probabilidad de que el próximo cliente en llegar donde Pastora tarde al menos $20$ minutos? </li>
-<li> ¿Cuál es la probabilidad de que lleguen donde Pastora en menos $50$ minutos $3$ clientes, si se sabe que han transcurrido $24$ minutos y aún no llegan los $3$ clientes? </li>
+<li> ¿Cuál es la probabilidad de que lleguen donde Pastora en menos de $50$ minutos, $3$ clientes, si se sabe que han transcurrido $24$ minutos y aún no llegan los $3$ clientes? </li>
 </ol>	
 18. Suponga una variable aleatoria `$X$` con función de distribución de probabilidad exponencial dada por
 `\begin{align*}
