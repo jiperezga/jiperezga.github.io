@@ -8,6 +8,7 @@ tags:
 introduction: |
               Prueba de hipótesis. <br>
               - Prueba de hipótesis para diferencia de proporciones <br>
+              - Prueba de hipótesis para una varianza <br>
               - Prueba de hipótesis para el cociente de varianzas <br>
               - Prueba de bondad de ajuste
 header-includes:
@@ -47,13 +48,246 @@ Sean `$X_{1,1}, X_{1,2}, \ldots, X_{1,n_1}$` y `$X_{2,1}, X_{2,2}, \ldots, X_{2,
 
 ![](../../ProbabilidadeInferencia/images/Hipotesis6.jpg)
 
+<button id="Show10" class="btn btn-secondary">Mostrar Ejercicio</button>
+<button id="Hide10" class="btn btn-info">Ocultar Ejercicio</button>
+<main id="botoncito10"> 
+<h3 data-toc-skip> Ejercicio </h3> 
+<p>Una empresa de computación decide realizar un cambio en el proceso de fabricación de uno de los componentes que requiere en sus portátiles, y está en interesado en saber si dicho cambio ofrece una mejora significativa en la rendimiento que sus equipos ofrecen.<br>
+<br>
+Para determinar si el cambio en el proceso de fabricación mejora el rendimiento que sus equipos ofrecen, deciden tomar una muestra de equipos antes y después de la implementación del nuevo proceso de fabricación y se evalúa la velocidad de procesamiento para la ejecución de un programa determinado. Suponga que se encuentra que $120$ de $500$ computadores fabricados con el método actual ofrece un rendimiento superior al promedio, mientras que, $220$ de $700$ computadores fabricados con el nuevo método ofrece un rendimiento superior al promedio.<br>
+<br>
+Basados en la información obtenida, emplee un nivel de confianza del $2\%$ para probar si la proporción de nuevos equipos que ofrecen un rendimiento superior al promedio, es igual o superior a la proporción de equipos actuales que ofrecen un rendimiento superior al promedio.</p>
+<h3 data-toc-skip> Solución </h3> 
+<p> Como estamos interesado en comparar la proporción de rendimiento superior al promedio entre los nuevos equipos y los actuales, para saber si los nuevos equipo son iguales o superiores a los actuales, tendremos que la hipótesis de interés está dada por
+$$\begin{align*}
+  H_0:p_N - p_A \geq 0\\
+  H_1:p_N - p_A < 0
+\end{align*}$$
+
+Entonces como estamos interesados en hacer inferencia sobre una diferencia de proporciones, y nos encontramos frente a una hipótesis unilateral, tendremos que estamos ante la siguiente situación
+
+<img src="../../EspecializacionSocioeconomica/images/Hipotesis6a.jpg" alt="" style="max-width: 100%;">
+
+En donde se observa que el estadístico de prueba está dado por 
+$$\begin{align*}
+  Z_c = \frac{(\hat{p}_N - \hat{p}_A) - d_0}{\sqrt{\frac{p^*(1-p^*)}{n_N} + \frac{p^*(1-p^*)}{n_A}}} \stackrel{a}{\sim} N(0,1)
+\end{align*}$$
+
+De lo anterior se observa que para el cálculo se requiere de las proporciones muestrales $\hat{p}_{N}$ y $\hat{p}_{A}$, y proporciones conjuntas $p^*$, las cuales se pueden obtener a partir del tamaño de muestra y del número de éxitos obtenidos, tal que para el caso de los equipos construidos con el nuevos procedimiento se tendrá que
+$$\begin{align*}
+\hat{p}_N &= \frac{\text{# de equipos nuevos con rendimiento superior}}{\text{Total equipos nuevos evaluados}} \\
+          &= \frac{x_N}{n_N} \\
+          &= \frac{220}{700} \\
+          &= 0.3142857
+\end{align*}$$
+
+mientras que para los equipos que se construyen con el procedimiento actual, se tendrá que 
+
+$$\begin{align*}
+\hat{p}_A &= \frac{\text{# de equipos actuales con rendimiento superior}}{\text{Total equipos actuales evaluados}} \\
+          &= \frac{x_A}{n_A} \\
+          &= \frac{120}{500} \\
+          &= 0.24
+\end{align*}$$
+
+Ahora, la proporción conjunta es igual a 
+$$\begin{align*}
+p^* &= \frac{x_N + x_A}{n_N + n_A} \\
+    &= \frac{220 + 120}{700 + 500} \\
+    &= 0.2833333
+\end{align*}$$
+
+Una vez calculados todos los valores asociados al estadístico de prueba, se procede a su cálculo, el cual está dado por
+$$\begin{align*}
+  Z_c &= \frac{(0.3142857 - 0.24) - d_0}{\sqrt{\frac{0.2833333(1-0.2833333)}{700} + \frac{0.2833333(1-0.2833333)}{500}}} \\
+      &= 2.815407
+\end{align*}$$
+
+Ahora, con el fin de decidir si el estadístico de prueba apoya o no la hipótesis establecida, se emplea en esta ocasión la región crítica la cual estará dada por 
+$$\begin{align*}
+  RC:\{Z|Z<-Z_{\alpha}\}
+\end{align*}$$
+
+en donde el valor crítico $Z_{\alpha=0.02}=2.053749$ y por tanto la región crítica será
+$$\begin{align*}
+  RC:\{Z|Z<-2.053749\}
+\end{align*}$$
+
+Entonces como el estadístico de prueba no cae dentro de la región crítica, no hay evidencia significativa en contra de la hipótesis nula, y por tanto se tendrá que la proporción de nuevos equipos que ofrecen un rendimiento superior al promedio no es inferior a la proporción de equipos fabricados con el actual proceso que ofrecen rendimientos superiores al promedio.
+</p>
+</main>
+
+### Prueba de hipótesis para una varianza `$\sigma^2$`
+Sea `$X_{1}, X_{2}, \ldots, X_{n}$` una muestra aleatoria de una problación normal de tamaño `$n$` conmedias `$\mathbb{E}(X)=\mu$` y varianza desconocidas `$Var(X)=\sigma_1^2<\infty$`, entonces un contraste de hipótesis para la varianza real `$\sigma^2$`, a un nivel de significancia `$\alpha$` será de la forma 
+
+![](../../EspecializacionSocioeconomica/images/Hipotesis7.jpg)
+
+<button id="Show11" class="btn btn-secondary">Mostrar Ejercicio</button>
+<button id="Hide11" class="btn btn-info">Ocultar Ejercicio</button>
+<main id="botoncito11"> 
+<h3 data-toc-skip> Ejercicio </h3> 
+<p>Suponga que se realiza un estudio sobre los costos que han tenido proyectos de renovación de parques en la ciudad de Medellín, encontrando que los costos asociados a $20$ proyectos que se han a cabo en le ciudad, en millones de pesos, fueron de</p>
+
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<tbody>
+  <tr>
+    <td>1780</td>
+    <td>2933</td>
+    <td>1220</td>
+    <td>1278</td>
+    <td>1170</td>
+    <td>1032</td>
+    <td>1245</td>
+    <td>2070</td>
+    <td>2040</td>
+    <td>1289</td>
+  </tr>
+  <tr>
+    <td>1531</td>
+    <td>980</td>
+    <td>1730</td>
+    <td>1380</td>
+    <td>2243</td>
+    <td>1687</td>
+    <td>1422</td>
+    <td>1731</td>
+    <td>1435</td>
+    <td>2080</td>
+  </tr>
+</tbody>
+</table>
+
+<p>Si es posible supone que el costo de construir cualquier parque se distribuyen aproximadamente normal, emplee un nivel de significancia del $5\%$ para observar si la variabilidad de los costos de cualquier construcción es de al menos $300000$ millones de pesos$^2$.</p>
+
+<h3 data-toc-skip> Solución </h3> 
+<p> Como estamos interesados en este punto de observar si la variabilidad de los costos de cualquier construcción es de al menos $300000$ millones de pesos$^2$ y por tanto la hipótesis de interés está dada por
+$$\begin{align*}
+  H_0:\sigma^2 \geq 300000\\
+  H_1:\sigma^2 < 300000
+\end{align*}$$
+
+En donde, se evidencia que en este caso estaremos bajo la siguiente situación 
+<img src="../../EspecializacionSocioeconomica/images/Hipotesis7a.jpg" alt="" style="max-width: 100%;">
+
+la cual muestra que el estadístico de prueba en esta ocasión está dada por
+$$\begin{align*}
+   \chi^2_c = \frac{(n-1)S^2}{\sigma^2_0} \sim \chi^2_{n-1}
+\end{align*}$$
+
+De lo anterior, se observa que para el cálculo del estadístico de prueba, se requiere de la varianza muestral $S^2 = 230541.2$, el tamaño de muestra $n=20$ y el valor de la hipótesis nula, en donde, al reemplazar dichos valores en el estadístico de prueba se tendrá que
+$$\begin{align*}
+   \chi^2_c &= \frac{(20-1)230541.2}{300000} \\
+            &= 14.60094
+\end{align*}$$
+
+en donde, al estar frente a una situación unilateral izquierda, se tendrá que el P-valor para este caso está dado por
+$$\begin{align*}
+  P-valor &= \mathbb{P}(\chi^2_{n-1}<\chi^2_c) \\
+          &= 0.216856934
+\end{align*}$$
+
+Entonces, como el P-valor obtenido es superior al nivel de significancia preestablecido del $5\%$, se concluye que no hay evidencia suficiente para rechazar la hipótesis nula, y por tanto, se tendrá que la variabilidad de los costos de cualquier construcción es de al menos $300000$ millones de pesos$^2$.
+</p>
+</main>
+
 ## Prueba de hipótesis para cociente de varianzas `$\sigma^2_1/\sigma^2_2$`
 Sea `$X_{1,1}, X_{1,2}, \ldots, X_{1,n_1}$` y `$X_{2,1}, X_{2,2}, \ldots, X_{2,n_1}$` dos muestras aleatorias normales de tamaños `$n_1$`, y `$n_2$` con medias `$\mathbb{E}(X_{1})=\mu_1$` y `$\mathbb{E}(X_{2})=\mu_2$`, y varianzas desconocidas `$Var(X_{1})=\sigma_1^2<\infty$` y `$Var(X_{2})=\sigma^2_2<\infty$`, respectivamente, entonces un contraste de hipótesis para el cociente de varianzas `$\sigma^2_1/\sigma^2_2$`, a un nivel de significancia `$\alpha$` será de la forma
 
-![](../../ProbabilidadeInferencia/images/Hipotesis7.jpg)
+![](../../ProbabilidadeInferencia/images/Hipotesis8.jpg)
+
+<button id="Show11" class="btn btn-secondary">Mostrar Ejercicio</button>
+<button id="Hide11" class="btn btn-info">Ocultar Ejercicio</button>
+<main id="botoncito11"> 
+<h3 data-toc-skip> Ejercicio </h3> 
+<p>Se aplican pruebas a $10$ cables conductores soldados a un dispositivo  semiconductor con el fin de determinar su resistencia a la tracción. Las pruebas demostraron que para romper la unión se requiere las libras de fuerza que se listan a continuación. </p>
+
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+  <tr>
+    <td style="font-weight: bold">Sin Encapsulado</td>
+    <td>19.8</td>
+    <td>12.7</td>
+    <td>13.2</td>
+    <td>16.9</td>
+    <td>10.6</td>
+    <td>18.8</td>
+    <td>11.1</td>
+    <td>14.3</td>
+    <td>17.0</td>
+    <td>12.5</td>
+    </tr>
+</thead>
+</table>
+
+<p>Otra conjunto de $8$ cables conductores que forman otro dispositivo, se encapsulan y se prueban para determinar si el encapsulado aumenta la resistencia a la tracción, obteniendo para este caso se requirieron las siguientes libras de fuerza para romper la unión</p>
+
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+  <tr>
+    <td style="font-weight: bold">Con Encapsulado</td>
+    <td>24.9</td>
+    <td>22.9</td>
+    <td>23.6</td>
+    <td>22.1</td>
+    <td>20.3</td>
+    <td>21.6</td>
+    <td>21.9</td>
+    <td>22.5</td>
+    </tr>
+</thead>
+</table>
+
+<p>Si se supone que las resistencias a la tracción se distribuyen normalmente, construya un intervalo del $90\%$ para la razón de varianzas entre la variabilidad de los cables sin encapsulado y la variabilidad de los cables con encapsulado. Es posible afirmar que la variabilidad de de los cables con encapsulado es superior a los cables sin encapsulado?
+</p>
+<h3 data-toc-skip> Solución </h3> 
+<p> En este punto nos mencionan que se tiene interés en calcular un intervalo de confianza para el cociente de las varianzas asociadas a la resistencia a la tracción para cables sin encapsulado y cables con encapsulado. Además nos mencionan que la resistencia a la tracción hasta la ruptura se distribuye normalmente, y por tanto deberemos calcular el siguiente intervalo
+
+<img src="../../EspecializacionSocioeconomica/images/Intervalos6a.jpg" alt="" style="max-width: 80%;">
+
+en donde se aprecia que el intervalo bilateral para la razón de varianzas posee la estructura
+$$\begin{align*}
+   \frac{S^2_C}{S^2_S}\frac{1}{f_{\alpha/2, n_C-1, n_S-1}} < \frac{\sigma^2_C}{\sigma^2_S} < \frac{S^2_C}{S^2_S}f_{\alpha/2, n_S-1, n_C-1}
+\end{align*}$$
+
+En donde se observa que para realizar el cálculo del intervalo, se requiere de los varianzas muestrales $S^2_S$ y $S^2_C$, el nivel de confianza $1-\alpha$ y los valores críticos $f_{\alpha/2, n_C-1, n_S-1}$ y $f_{\alpha/2, n_S-1, n_C-1}$. <br>
+<br>
+Para realizar el cálculo de las varianzas muestrales, se emplean los datos muestrales y los tamaños de muestra $n_C=8$ y $n_S=10$, tal que al realizar el cálculo obtenemos
+
+$$\begin{align*}
+S^2_C = 1.378146 \quad \text{ y } \quad S^2_S = 3.231254
+\end{align*}$$
+
+Por su parte, al buscar los valores críticos para un nivel de significancia $1-\alpha=0.90$ y tamaños muestrales $n_C=8$ y $n_S=10$ tenemos que
+
+$$\begin{align*}
+f_{\alpha/2 = 0.05, n_C-1 = 7, n_S-1 = 9} = 3.292746\\ 
+f_{\alpha/2 = 0.05, n_S-1 = 9, n_C-1 = 7} = 3.676675
+\end{align*}$$
+
+Una vez calculados los valores necesarios para calcular el intervalo de confianza, se procede a su cálculo, tal que
+$$\begin{align*}
+   \frac{1.378146}{3.231254}\frac{1}{3.292746} &< \frac{\sigma^2_C}{\sigma^2_S} < \frac{1.378146}{3.231254}3.676675 \\
+   0.1295287 &< \frac{\sigma^2_C}{\sigma^2_S} < 1.56812
+\end{align*}$$
+
+Por tanto, se podrá concluir con un nivel de confianza del $90\%$ que el verdadero valor para el cociente de varianzas entre la variabilidad de los cables sin encapsulado y la variabilidad de los cables con encapsulado, se encontrará entre $0.1295287$ y $1.56812$.<br>
+<br>
+Ahora, para verificar si existen o no diferencias significativas entre las varianzas de resistencia a la tracción de los cables encapsulados o sin encapsular, debemos verificar la posición en la que se encuentra el intervalo de confianza para la razón de varianzas $\sigma^2_C/\sigma^2_S$.
+
+<img src="../../EspecializacionSocioeconomica/images/Intervalos6b.jpg" alt="" style="max-width: 80%;">
+
+En donde se observa que el intervalo calculado contiene el valor de $1$, el cual representa la igualdad entre la varianza de los dos tipos de cable, tal que 
+$$\begin{align*}
+  \sigma^2_C = \sigma^2_S \quad =>\quad \frac{\sigma^2_C}{\sigma^2_S} = 1
+\end{align*}$$
+
+y por tanto, con un nivel de confianza del $90\%$ no será posible afirmar que la variabilidad de la resistencia a la tracción de los cables encapsulados o sin encapsular sean diferentes, y por tanto, debe asumirse que éstos son iguales.
+</p>
+</main>
 
 ## Prueba de bondad de ajuste
-Es un contraste de hipótesis para determinar el grado o nivel de ajuste de nuestros datos a una distribución teórica. 
+Las pruebas de bondad de ajuste **son un contraste de hipótesis para determinar el grado o nivel de ajuste de nuestros datos a una distribución teórica**. 
+
 Estas pruebas se basan en la comparación de las frecuencias de ocurrencia observadas en una muestra empírica y las frecuencias esperadas de una distribución teórica. En donde, el objetivo será si existe o no discrepancia entre los valores observados y los valores esperados de la distribución de interés.
 
 La hipótesis a probar de interés estará dada por
@@ -65,14 +299,36 @@ Siendo `$F_0(x)$` la distribución de probabilidad hipótetica que se quiere pro
 
 Entre las pruebas de bondad de ajuste más usadas se tiene:
 
-* Prueba Kolmogorov–Smirnov 
-* Prueba Cramér–von Mises
-* Prueba Anderson–Darling
-* Prueba Chi-Cuadrado
-* Prueba Kuiper
+```{r echo=FALSE}
+library(kableExtra)
 
-Además, en el caso de probas específicas para detectar normalidad se tiene
+tablita <- cbind(
+  "Prueba" = c("Kolmogorov–Smirnov", "Cramér–von Mises", "Anderson–Darling", "Kuiper", "QQPlot"),
+  "Librería" = c("truncgof", "truncgof", "truncgof", "truncgof", "truncgof", "truncgof", "truncgof", "truncgof", "car"),
+  "Función" = c("ks.test()", "w2.test()", "ad.test()", "v.test()", "qqPlot"))
 
-* Prueba Shapiro-Wilk
-* Prueba Lilliefors
-* Prueba Shapiro-Francia
+kable(tablita, 
+  format = "html", booktabs = T) %>%
+kable_styling("striped", full_width = F)
+
+options(scipen = 10)
+```
+
+Donde éstas pruebas, **requieren de los parámetros de la distribución que se quiere probar**, y para encontrarlos, es posible emplear **métodos de optimización** que nos permitan observar cuales son los parámetros ajustados para un conjunto de datos determinado. Para emplear estos método de optimización es posible usar la función <tt>fitdistr()</tt> de la librería <tt>MASS</tt>. 
+
+Adicionalmente, existen pruebas específicas para probar si los datos se distribuyen o no normalmente
+
+```{r echo=FALSE}
+library(kableExtra)
+
+tablita <- cbind(
+  "Prueba" = c("Shapiro-Wilk", "Lilliefors", "Shapiro-Francia", "Cramer Von-Mises", "Anderson-Darling", "QQPlot"),
+  "Librería" = c("stats", "nortest", "nortest", "nortest", "nortest", "car"),
+  "Función" = c("shapiro.test()", "lillie.test()", "sf.test()", "cvm.test()", "ad.test()", "qqPlot"))
+
+kable(tablita, 
+  format = "html", booktabs = T) %>%
+kable_styling("striped", full_width = F)
+
+options(scipen = 10)
+```
