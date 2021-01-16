@@ -304,7 +304,7 @@ library(kableExtra)
 
 tablita <- cbind(
   "Prueba" = c("Kolmogorov–Smirnov", "Cramér–von Mises", "Anderson–Darling", "Kuiper", "QQPlot"),
-  "Librería" = c("truncgof", "truncgof", "truncgof", "truncgof", "truncgof", "truncgof", "truncgof", "truncgof", "car"),
+  "Librería" = c("truncgof", "truncgof", "truncgof", "truncgof", "car"),
   "Función" = c("ks.test()", "w2.test()", "ad.test()", "v.test()", "qqPlot"))
 
 kable(tablita, 
