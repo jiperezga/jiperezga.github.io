@@ -158,7 +158,7 @@ Emplee el P-valor para verificar si hay evidencia sobre que el contenido promedi
 </tbody>
 </table>
 ¿Encuentra apoyo la afirmación del gerente de la tabacalera?, emplee un nivel de significancia del `$5\%$` para su conclusión.
-7. Suponga que el grupo ALIADO, realiza un estudio sobre la altura que poseen los estudiantes de la Universidad, y para ello, toma una muestra aleatoria de `$28$` estudiantes universitarios y encuentra que la estatura promedio fue de `$174.5$` centímetros con una desviación estándar de `$6.9$` centímetros. Empleando un nivel de significancia del `$2\%$`, pruebe si la altura promedio de todos los estudiantes de la universidad es de al menos `$173$` centímetros.
+7. Suponga que el grupo ALIADO, realiza un estudio sobre la altura que poseen los estudiantes de la Universidad, y para ello, toma una muestra aleatoria de `$38$` estudiantes universitarios y encuentra que la estatura promedio fue de `$174.5$` centímetros con una desviación estándar de `$6.9$` centímetros. Empleando un nivel de significancia del `$2\%$`, pruebe si la altura promedio de todos los estudiantes de la universidad es de al menos `$173$` centímetros.
 8. El gerente de una planta sospecha que el número promedio de piezas que produce un trabajador en particular por día, es menor que el número promedio de piezas de los demás trabajadores. Por ello, el gerente decide observar el número de piezas que produce este trabajador durante diez días, seleccionados al azar, obteniendo los siguientes resultados
 <table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <tbody>
