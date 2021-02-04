@@ -7,7 +7,6 @@ tags:
 
 introduction: |
               Distribuciones muestrales: <br>
-              - Distribución muestral para una proporción. <br>
               - Distribución para combinaciones lineales <br>
               - Distribución muestral chi-cuadrado. <br>
               - Distribución muestral t de Student. <br>
@@ -45,80 +44,6 @@ opts_chunk$set(echo=TRUE,
 ```
 
 ## Distribuciones muestrales
-### Distribución muestral para una proporción `$p$`
-Sea `$X_1, X_2, \ldots, X_n$` una muestra aleatoria *iid* de tamaño `$n$`, tal que `$X\sim b(n,p)$`. Entonces si `$n$` es suficientemente grande, y la proporción `$p$` no está muy cercana a `$0$` o a `$1$`, tal que `$np$` y `$n(1-p)>5$`, entonces se puede probar que
-`\begin{align*}
-\hat{p}  = \frac{x}{n} \stackrel{a}{\sim} N\left(p, \frac{p(1-p)}{n}\right)
-\end{align*}`
-donde por teorema de estandarización se obtendrá que
-`\begin{align*}
-Z_c = \frac{\hat{p}-p}{\sqrt{\frac{p(1-p)}{n}}} \stackrel{a}{\sim} N(0,1)
-\end{align*}`
-
-<button id="Show1" class="btn btn-secondary">Mostrar Ejercicio </button>
-<button id="Hide1" class="btn btn-info">Ocultar Ejercicio </button>
-<main id="botoncito1"> 
-<h3 data-toc-skip> Ejercicio </h3> 
-<p>Suponga que se realiza un estudio sobre el salario de los estudiantes de ingeniería industrial una vez finalizan su pregrado y se incertan en el mercado laboral. Para ello, se le pregunta a $15$ egresados seleccionados de forma aleatoria y se les pregunta cuál es el salario que devengan actualmente, obteniendo los siguientes resultados en millones de pesos
-$$\begin{align*}
-1.78 \quad 2.93 \quad 1.22 \quad 1.27 \quad 1.17 \\
-1.03 \quad 1.24 \quad 2.07 \quad 2.04 \quad 1.28 \\
-1.53 \quad 0.98 \quad 1.73 \quad 1.38 \quad 3.24
-\end{align*}$$
-
-Basados en la información anterior, calcule la probabilidad de que la proporción de egresados que tienen un salario superior a $2$ millones de pesos sea mayor al $40\%$.  </p>
-
-<h3 data-toc-skip> Solución </h3> 
-<p> 
-En este punto, nos preguntan por la proporción de egresados que tienen un salario superior a $2$ millones de pesos sea mayor al $40\%$, es decir
-$$\begin{align*}
-  \mathbb{P}(p > 0.4)
-\end{align*}$$
-
-Pero al observar la información recolectada por los $15$ egresados, apreciamos que que nos dan el salario que devengan, y no la proporción muestral, de quienes tienen un salario superior a $2$ millones de pesos, por lo cual, será necesario calcular la proporción muestral, y para ello, denotaremos como $1$ aquellas observaciones que sean superiores a $2$ millones de pesos, y $0$ aquellas observaciones que no cumplan la condición, tal que
-$$\begin{align*}
- \underset{0}{1.78} \quad \underset{1}{2.93} \quad \underset{0}{1.22} \quad \underset{0}{1.27} \quad \underset{0}{1.17} \\
-\underset{0}{1.03} \quad \underset{0}{1.24} \quad \underset{1}{2.07} \quad \underset{1}{2.04} \quad \underset{0}{1.28} \\
-\underset{0}{1.53} \quad \underset{0}{0.98} \quad \underset{0}{1.73} \quad \underset{0}{1.38} \quad \underset{1}{3.24}
-\end{align*}$$
-
-Entonces, si los $1$ representa los éxitos, tendremos un total de $x=4$ éxitos en las $n=15$ muestras, entonces podemos aplicar la fórmula de frecuencia relativa para calcular la proporción muestral de egresados que poseen salarios superiores a $2$ millones.
-$$\begin{align*}
-  \hat{p} &= \frac{\text{# éxitos}}{\text{Total ensayos}} \\
-          &= \frac{x}{n} \\
-          &= \frac{4}{15} \\
-          &= 0.2666667
-\end{align*}$$
-
-Una vez calculada la proporción muestral, podemos emplear ésta para calcular la probabilidad de interés, mediante el empleo de operaciones matemáticas, de tal forma que la probabilidad planteada tenga la estructura de una distribución de probabilidad conocida, lo cual, en este caso, será una distribución aproximadamente normal, tal que
-
-$$\begin{align*}
-Z_c = \frac{\hat{p}-p}{\sqrt{\frac{p(1-p)}{n}}} \stackrel{a}{\sim} N(0,1)
-\end{align*}$$
-
-Con esta estructura en mente, se procede a realizar la operaciones correspondientes para llevar la probabilidad original, a la forma conocida, tal que
-$$\begin{align*}
-  \mathbb{P}(p > 0.4) &= \mathbb{P}(- p < - 0.4) \\
-                      &= \mathbb{P}(\hat{p}- p < 0.2666667 - 0.4) \\
-                      &= \mathbb{P}\left(\frac{\hat{p}- p}{\sqrt{\frac{p(1-p)}{n}}} < \frac{0.2666667 - 0.4}{\sqrt{\frac{0.4(1-0.4)}{15}}}\right) \\
-                      &= \mathbb{P}\left(Z < -1.054092\right)
-\end{align*}$$
-
-Y como $Z \sim N(0,1)$, entonces podemos encontrar la probabilidad de interés, empleando la <a href="https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Documentos/DistNormEst.pdf">Tabla de la Distribución Normal Estándar</a>, la función <tt>pnorm()</tt> del software <tt>R</tt> o la función <tt>DISTR.NORM.ESTAND.N()</tt> de Excel, tal que
-
-$$\begin{align*}
-\mathbb{P}(Z < -1.054092) = 0.1459204
-\end{align*}$$
-
-lo cual, dada la equivalencia de la igualdad anterior, significará que
-$$\begin{align*}
-\mathbb{P}(p > 0.4) = 0.1459204
-\end{align*}$$
-
-Y por tanto, se tendrá un $14.59\%$ de probabilidad de que la proporción de egresados que tienen un salario superior a $2$ millones de pesos, sea mayor al $40\%$.
-</p>
-</main>
-
 ### Distribución para combinaciones lineales
 En estadística aplicada a menudo se necesita conocer la distribución de probabilidad de una combinación lineal de variables aleatorias independientes. Y Por ello se presentan a continuación `$4$` teoremas que pueden ser de utilidad 
 
