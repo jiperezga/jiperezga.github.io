@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Práctica 01B"
+title: "Práctica 01A"
 main-class: 'practica'
 permalink: /EstadisticaI/EstI:title.html
 tags:
@@ -32,7 +32,7 @@ opts_chunk$set(echo=TRUE,
                comment=NA,
                message=FALSE,
                warning=FALSE,
-               fig.path = paste0("../../EstadisticaI/images/", "Práctica01B"),
+               fig.path = paste0("../../EstadisticaI/images/", "Práctica01A"),
                cache.path = "../../EstadisticaI/cache/",
                cache = FALSE)
 

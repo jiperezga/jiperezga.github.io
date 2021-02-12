@@ -109,7 +109,7 @@ Existen varios tipos de convergencia en la teoría de probabilidad, y el objetiv
 ![](../../EstadisticaII/images/TiposdeConvergencia.jpg){ width=100% }
 
 ### Convergencia en Distribución
-Sea `$X_2, X_3, X_4, \ldots$` una secuencia de variables aleatorias, y sea `$X$` una variable aleatoria definida en el espacio muestral, entonces, si `$F_{X_{n}}$` y `$F_{X}$` son las funciones de distribución acumulada de `$X_n$` y `$X$` respectivamente, se tendrá que `$X_n$` converge en distribución a `$X$`, si
+Sea `$X_1, X_2, X_3, \ldots$` una secuencia de variables aleatorias, y sea `$X$` una variable aleatoria definida en el espacio muestral, entonces, si `$F_{X_{n}}$` y `$F_{X}$` son las funciones de distribución acumulada de `$X_n$` y `$X$` respectivamente, se tendrá que `$X_n$` converge en distribución a `$X$`, si
 `\begin{align*}
 \lim_{n\to\infty} F_{X_{n}}(x) = F_{X}(x)
 \end{align*}`
@@ -119,7 +119,7 @@ para todos los puntos `$x$` donde `$F_{X}(x)$` está definida. En tal caso se es
 <button id="Hide2" class="btn btn-info">Ocultar Ejercicio </button>
 <main id="botoncito2"> 
 <h3 data-toc-skip> Ejercicio </h3> 
-<p>Sea $X_1, X_2, \ldots$ una secuencia de variables aleatorias distribuidas, tal que 
+<p>Sea $X_2, X_3, x_4, \ldots$ una secuencia de variables aleatorias distribuidas, tal que 
 $$\begin{align*}
   F_{X_i}(x)=1-\left(1-\frac{1}{i}\right)^{ix} \text{ para } x>0
 \end{align*}$$
