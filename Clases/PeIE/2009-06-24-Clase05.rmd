@@ -366,6 +366,7 @@ Los datos contenidos en la base de datos se presentan a continuación:
 ## Lectura de datos
 Para realizar la lectura de datos en <tt>R</tt> es necesario conocer la extensión que posee el archivo de interés, debido a que <tt>R</tt> **posee diferentes librerías y funciones que permiten la lectura de bases de datos**. En la siguiente tabla se resume el origen, la extensión, la librería, y la función para cargar cada base de datos dependiendo de su extensión.
 
+<pre style="margin-bottom: 0px;">
 ```{r echo=FALSE}
 library(kableExtra)
 
@@ -381,6 +382,7 @@ kable_styling("striped", full_width = F)
 
 options(scipen = 10)
 ```
+</pre>
 
 **Nota:** Las librerías con * hacen referencia a funciones integradas en <tt>R</tt>, y en consecuencia, no es necesario cargarlas antes de usarlas.
 

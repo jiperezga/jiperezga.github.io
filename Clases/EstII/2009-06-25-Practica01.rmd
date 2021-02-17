@@ -245,7 +245,7 @@ Suponga que las marcas de atún incluidas en el estudio representan una muestra 
   </li>
 </ol>
 19. Un experimentador desea comprobar la variabilidad de mediciones obtenidas al usar equipo diseñado para medir el volumen de una fuente de audio. Tres mediciones independientes registradas por este equipo para la misma fuente de sonido fueron `$4.1$`, `$5.2$` y `$10.2$`. Calcule la probabilidad de que la variabilidad del volumen de una fuente de audio sea cuando mucho `$12.53$`. Suponga normalidad.
-20. La Environmental Protection Agency (*EPA*) ha establecido un máximo nivel de ruido de `$83_{dB}$` para camiones pesados. La forma en la que se aplique este límite afectará considerablemente al público y a la industria del transporte por carretera. Una forma de aplicar los límites es exigir que todos los camiones se apeguen al límite de ruido. Un segundo método menos satisfactorio es exigir que el nivel medio de ruido de la flota de camiones sea menor al límite. Si se adopta esta última regla, la variación en el nivel de ruido de un camión a otro se hace importante porque una variabilidad grande, implicaría que muchos camiones rebasen ese límite, incluso si el nivel medio de la flota fuera de `$83_{dB}$`. Una muestra aleatoria de seis camiones pesados produjo los siguientes niveles de ruido (en decibeles):
+20. La Environmental Protection Agency (*EPA*) ha establecido un máximo nivel de ruido de `$83_{dB}$` para camiones pesados. La forma en la que se aplique este límite afectará considerablemente al público y a la industria del transporte por carretera. Una forma de aplicar los límites es exigir que todos los camiones se apeguen al límite de ruido. Un segundo método menos satisfactorio es exigir que el nivel medio de ruido de la flota de camiones sea menor al límite. Si se adopta esta última regla, la variación en el nivel de ruido de un camión a otro se hace importante porque una variabilidad grande, implicaría que muchos camiones rebasen ese límite, incluso si el nivel medio de la flota fuera de `$83_{dB}$`. Una muestra aleatoria de cinco camiones pesados produjo los siguientes niveles de ruido (en decibeles):
 <table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
   <tr>
@@ -259,7 +259,7 @@ Suponga que las marcas de atún incluidas en el estudio representan una muestra 
 </table>
 Basados en esta información y bajo el supuesto de normalidad
 <ol type ="a">
-  <li> Calcule la probabilidad de que la varianza de las lecturas de emisión de ruido de camiones, sea mayor a $2_{dB}$. Interprete sus resultados.
+  <li> Calcule la probabilidad de que la varianza de las lecturas de emisión de ruido de camiones, sea mayor a $2_{dB^2}$. Interprete sus resultados.
   </li>
   <li> Calcule la probabilidad de que la diferencia entre la media real y muestral sea como máximo de $0.4_{dB}$.
   </li>
@@ -488,7 +488,7 @@ f(x) = 3x^{-4} \text{ para } x\geq1
 Encuentre la función de densidad de probabilidad del `$k$`-ésimo estadístico de orden.
 38. Un proveedor de queroseno tiene un tanque de `$150$` galones que se llena al empezar cada semana. Su demanda semanal muestra un comportamiento de frecuencia relativo que aumenta de manera continua hasta `$100$` galones y luego se nivela entre `$100$` y `$150$` galones. Si `$Y$` denota la demanda semanal en cientos de galones, la frecuencia relativa de demanda puede ser modelada por
 `\begin{align*}
-	p(y)=\begin{cases}y & 0\leq y\leq 1 \\1 & 1<y\leq 1.5 \\0 & \text{en otro caso}\end{cases} 
+	f(x)=\begin{cases}x & 0\leq x\leq 1 \\1 & 1<x\leq 1.5 \\0 & \text{en otro caso}\end{cases} 
 \end{align*}`
 Si se toma una muestra aleatoria de tamaño `$60$` de la demanda semanal en cientos de galones del proveedor de queroseno, cuál es la probabilidad de que la demanda promedio obtenida en las `$60$` semanas sea a lo más de `$1.3$` cientos de galones.
 39. Se considera una medición física realizada con un instrumento de precisión, donde el interés se centra en la variabilidad de la lectura. Se sabe que la medición es una variable aleatoria con distribución normal y desviación estándar `$4$` unidades. Si se toma una muestra aleatoria de tamaño `$23$`, cuál esla probabilidad de que el valor de la varianza muestral sea mayor de `$13.6$` unidades cuadradas.
