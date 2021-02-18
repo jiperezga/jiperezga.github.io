@@ -1019,8 +1019,8 @@ library(kableExtra)
 tablita2 <- cbind(
   "Origen" = c("Texto", "Texto", "Texto",  "Excel", "SPSS", "SAS", "STATA"),
   "Extensión" = c(".txt", ".csv (comas)", ".csv (punto y coma)",  ".xlsx", ".sav", ".sas7bdat", ".dta"),
-  "Librería" = c("utils*", "utils*", "utils*", "openxlsx", "foreign", "foreign", "foreign"),
-  "Función" = c("write.table()", "write.csv()", "write.csv2()", "write.xlsx()", "write.foreign()", "write.foreign()", "write.foreign()"))
+  "Librería" = c("utils*", "utils*", "utils*", "openxlsx", "haven", "haven", "haven"),
+  "Función" = c("write.table()", "write.csv()", "write.csv2()", "write.xlsx()", "write_sav()", "write_sas()", "write_dta()"))
 
 kable(tablita2, 
   format = "html", booktabs = T) %>%
