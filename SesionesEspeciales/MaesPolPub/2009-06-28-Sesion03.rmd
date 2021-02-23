@@ -462,9 +462,10 @@ caja y bigotes</a></td>
 </table></pre>
 
 
-#### Una variable Cuantitativa
+### Una variable Cuantitativa
 
-**Gráfico de caja y bigotes**<br><br>
+#### Gráfico de caja y bigotes
+
 Este gráfico sirve para presentar de forma visual, datos numéricos a través de sus cuartiles, además de presentar otras **características importantes, tales como el valor de los cuartiles, dispersión, simetría y datos potencialmente atípicos**.
 
 <h4 align="center"> Representación de un Gráfico de Caja y Bigotes </h4>
@@ -479,7 +480,7 @@ Suponga que se desea presentar de forma visual, el comportamiento de la variable
 boxplot(datos$gradoavanc, horizontal = T, xlab = "Porcentaje de avance (%)", main = "Boxplot del Grado de Avance de la Obra", col = "lightblue")
 ```
 
-**Histograma**<br><br>
+#### Histograma
 Este gráfico muestra la distribución de frecuencia o densidades del grupo de observaciones, **brinda información sobre el valor más probables, la dispersión, la asimetría y valores extremos**. Adicionalmente, tiene la ventaja de que su interpretación es muy intuitiva y por tanto es de los gráficos más preferidos para resumir información. Este gráfico puede ser realizado mediante la función <tt>hist()</tt> de la librería <tt>graphics</tt> de la base del <tt>R</tt>.
 
 Suponga que se desea presentar mediante un histograma, el comportamiento de la variable que corresponde al precio de venta por `$m^2$` del inmueble (<tt>preciovtax</tt>). Para ello, podemos emplear la función <tt>hist()</tt> de la forma
@@ -489,7 +490,7 @@ Suponga que se desea presentar mediante un histograma, el comportamiento de la v
 hist(datos$preciovtax, main = "Histograma del Precio de venta por M2", xlab = "Precio (en miles de pesos)", col = 8) 
 ```
 
-**Densidad**<br><br>
+#### Densidad
 Este gráfico funciona similar al histograma de densidades, con la diferencia de que en lugar de mostrar la distribución mediante clases (barras), éste muestra el comportamiento de la distribución de las observaciones mediante una curva. Dicha curva, **brinda mayor información que el histograma respecto al valor promedio, dispersión y asimetría**. Este gráfico puede ser realizado mediante la combinación de las funciones <tt>plot()</tt> y <tt>density()</tt>, de la forma <tt>plot(density())</tt>, siendo <tt>plot()</tt> y <tt>density()</tt> funciones de las librerías <tt>graphics</tt> y <tt>stats</tt> de la base de <tt>R</tt>. 
 
 Adicionalmente se presenta la función <tt>polygon</tt> de la librería <tt>graphics</tt> de la base de <tt>R</tt>, la cual sirve para generar formas, o en este caso, darle color a la densidad.
@@ -503,9 +504,10 @@ plot(density(datos$areavenuni, na.rm = T), main = "Gráfico de Densidad para Are
 polygon(density(datos$areavenuni, na.rm = T), col = 3) 
 ```
 
-#### Dos variables Cuantitativas
+### Dos variables Cuantitativas
 
-**Gráfico de dispersión**<br><br>
+#### Gráfico de dispersión
+
 Este gráfico se emplea para hacer cruces entre dos variables cuantitativas, y **sirve para ver tendencias y relaciones entre dos variables cuantitativas, además de permitir apreciar donde se centra el total de observaciones, y detección de datos atípicos** dados dos atributos cuantitativos. Este gráfico puede ser realizado mediante la función <tt>plot()</tt> de la librería <tt>graphics</tt> de la base del <tt>R</tt>.
 
 Para entender la forma en que se aplica un diagrama de dispersión, suponga que se quiere observar, si éxiste alguna relación entre el área del lote donde se construye la obra o proyecto (<tt>area_lote</tt>) y el precio de venta por `$m^2$` (<tt>preciovtax</tt>). Para ello, podemos emplear la función <tt>plot()</tt> de la forma.
@@ -515,9 +517,10 @@ plot(x = datos$area_lote, y = datos$preciovtax, xlab = "Área del Lote",
      ylab = "Precio de venta (m2)", main = "Relación entre Área del Lote y Precio de venta m2", pch = 19)
 ```
 
-#### Más de dos variables Cuantitativas
+### Más de dos variables Cuantitativas
 
-**Matriz de dispersión**<br><br>
+#### Matriz de dispersión
+
 Cuando se poseen más de dos variables cuantitativas, es posible presentar un matriz que muestre el cruce entre pares de variables, mediante cuadros con versiones simples de la función <tt>plot()</tt>. Este gráfico puede ser realizado mediante la función <tt>pairs()</tt> de la librería <tt>graphics</tt> de la base de <tt>R</tt>.
 
 Para ello, suponga que se desea observar la relación que hay entre las variables, área del lote donde se construye la obra o proyecto (<tt>area_lote</tt>), porcentaje de avance de la obra en contrucción (<tt>gradoavanc</tt>) y área total vendible por unidad (<tt>areavenuni</tt>). Para ello empleamos la función <tt>pairs()</tt> de la forma
@@ -561,9 +564,10 @@ panel.cor <- function(x, y, digits=2, prefix="", cex.cor)
 pairs(cbind(datos$area_lote, datos$gradoavanc, datos$areavenuni), labels = c("Área Lote", "Porcentaje de Avance", "Área Total Vendible"), upper.panel = panel.reg, diag.panel = panel.hist, lower.panel = panel.cor)
 ```
 
-#### Una Variable Cualitativa
+### Una Variable Cualitativa
 
-**Gráfico de barras**<br><br>
+#### Gráfico de barras
+
 Sirve para resumir una variable cualitativa mediante barras de frecuencias absolutas o relativas. Éste **permite observar la concentración de observaciones en una o más categorías diferentes**. Este gráfico puede ser realizado mediante la función <tt>barplot()</tt> de la librería <tt>graphics</tt> de la base de <tt>R</tt>.
 
 Para ilustrar su empleo, suponga que se desea observar el estado en el cual se encontraron las obras al momento de realizar el censo (<tt>estado_act</tt>). En este caso, la función <tt>barplot()</tt> se emplea de la siguiente forma
@@ -574,7 +578,8 @@ tabla1 <- table(datos$estado_ac)
 barplot(tabla1, main = "Estado en el cual se encontraron las obras al momento del censo", col = hcl.colors(6)) 
 ```
 
-**Gráfico de pareto**<br><br>
+#### Gráfico de pareto
+
 Este gráfico es similar al gráfico de barras para una sola variable cualitativa, pero con la ventaja de que **presenta las frecuencias absolutas, relativas, y las frecuencias acumuladas absolutas y acumuladas relativas en el mismo gráfico**. Este gráfico puede ser realizado mediante la función <tt>pareto.chart()</tt> de la librería <tt>qqc</tt>.
 
 Para ilustrar su empleo, suponga que se desea observar el estrato socioeconómico en donde se está realizado la obra (<tt>estrato</tt>). Al ser una sola variable, la función <tt>pareto.chart()</tt> se emplea de la siguiente forma
@@ -587,7 +592,8 @@ tabla2 <- table(datos$estrato)
 pareto.chart(tabla2, main = "Gráfico Pareto por Estrato")
 ```
 
-**Gráfico de pastel**<br><br>
+#### Gráfico de pastel
+
 Este gráfico también **sirve para representar gráficamente las tablas de frecuencias absolutas y relativas para una variable cualitativa**. A pesar de ser un gráfico muy usado en la práctica, **no muestra bien la información que se desea presentar**, ya que siempre debe estar acompañado de los porcentajes o frecuencias que representa cada área, ya que no hacerlo, dicho gráfico puede ser muy engañoso. 
 
 Este gráfico puede ser realizado mediante la función <tt>pie()</tt> de la librería <tt>graphics</tt> de la base de <tt>R</tt>, y donde, para establecer etiquetas de los porcentajes o frecuencias de cada área, puede establecerse mediante la función <tt>legend()</tt> de la librería <tt>graphics</tt> de la base de <tt>R</tt>.
@@ -601,9 +607,10 @@ pie(tabla3, main = "Estado en que se encuentra la obra", col = cm.colors(6))
 legend("topleft", legend = paste0(names(tabla3), " (", round(tabla3,4), ")"), fill = cm.colors(6), cex = 0.8)
 ```
 
-#### Dos Variables Cualitativas
+### Dos Variables Cualitativas
 
-**Gráfico de barras**<br><br>
+#### Gráfico de barras
+
 El gráfico de barras también sirve para resumir dos variable cualitativa mediante barras de frecuencias absolutas o relativas. **La interpretación, será la misma que para una sola variable cualitativa, con la diferencia de que en este caso, se podrán hacer comparaciones por categorías adicionales.** Este gráfico puede ser realizado mediante la función <tt>barplot()</tt> de la librería <tt>graphics</tt> de la base de <tt>R</tt>, junto a la función <tt>legend()</tt>, para establecer las etiquetas asociadas a cada una de las barras que se presenten en el gráfico.
 
 Para ilustrar su empleo, suponga que se desea observar el estado en el cual se encontraron las obras al momento de realizar el censo (<tt>estado_act</tt>), respecto a si la obra cuenta o no con licencia (<tt>ob_formal</tt>). En este caso, la función <tt>barplot()</tt> se emplea junto a la función <tt>legend()</tt> de la siguiente forma
@@ -633,7 +640,8 @@ ggballoonplot(tabla5, fill = "value")+
 
 #### Cruce entre Variables Cualitativas y Cuantitativas
 
-**Gráfico de caja y bigotes**<br><br>
+#### Gráfico de caja y bigotes
+
 Este gráfico sirve para presentar de forma visual, datos numéricos **por categorías** a través de sus cuartiles, además de presentar **otras características importantes, tales como la dispersión, simetría y datos potencialmente atípicos**. Este gráfico puede ser realizado mediante la función <tt>boxplot()</tt> de la librería <tt>graphics</tt> de <tt>R</tt>.
 
 Suponga que se tiene interés en realizar un cruce entre la variable cualitativa que indica si la obra cuenta o no con licencia (<tt>ob_formal</tt>) y la variable cuantitativa del grado de avance de la obra (<tt>gradoavanc</tt>). Para ello, puede emplearse el gráfico de caja y bigotes de la forma
@@ -642,7 +650,8 @@ Suponga que se tiene interés en realizar un cruce entre la variable cualitativa
 boxplot(datos$gradoavanc ~ datos$ob_formal, horizontal = T, xlab = "Grado de avance", ylab = "Posee licencia?", main = "Grado de avance respecto a la posesión de licencia", col = terrain.colors(2))
 ```
 
-**Gráfico de medias**<br><br>
+#### Gráfico de medias
+
 Este gráfico **sirve para presentar de forma visual, grupos de datos numéricos a través de sus media y desviación estándar**. El gráfico está compuesto por un punto que representa el valor promedio del grupo de observaciones y **las barras representan dos desviación estándar de la media**. En donde, si las barras no se superponen, entonces se tendrá evidencia sólida respecto a que la media de los grupos es diferente.
 
 Este gráfico puede ser realizado mediante la función <tt>plotMeans()</tt> de la librería <tt>RcmdrMisc</tt>. Y para ilustrar su empleo, suponga que se desea observar área total vendible (<tt>areavendib</tt>), respecto al rango de vivienda calculado (<tt>ranvivi</tt>). Ésto se puede realizar mediante la forma
