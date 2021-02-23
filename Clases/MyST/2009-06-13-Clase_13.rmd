@@ -58,17 +58,16 @@ La encuesta es un método de investigación y recopilación de datos que consta 
 ## Tipos de encuestas
 El tipo de las encuestas dependen de las componentes que se deseen abordar, las cuales se reparten en tres caracteristicas principales
 
-* Según la forma de aplicación
-  * Encuesta por correo
-  * Encuesta directa
-  * Encuesta telefónicas
-  * Encuesta personal
-  * Encuesta online
-  * Combinación de los anteriores
-* Según sus objetivos
+* **Según la forma de aplicación**
+  * **Encuesta por correo:** En la que se emplea el servicio postal como medio para el envío y recepción de información a través de un cuestionario.
+  * **Encuesta telefónicas:** En la que se emplea el servicio telefónico o celular como medio para realizar una entrevista que permita recopilar la información del interesado.
+  * **Encuesta personal:** En la que se emplea una entrevista directa o personal con cada encuestado para recopilar información.
+  * **Encuesta online:** En la que se emplea una página web o correo electrónico para establecer el cuestionario que se pretende respondan los encuestados potenciales.
+  * **Combinación de los anteriores:** Emplea dos o más métodos de los anteriormente descritos para realizar la recolección de la información.
+* **Según sus objetivos**
   * **Encuestas descriptivas:** buscan crear un registro sobre las actitudes o condiciones presentes dentro de una población en un momento determinado, es decir, en el momento en el que se realiza la encuesta.
   * **Encuestas análiticas:** su objetivo es explicar y describir el problema para poder encontrar la mejor solución.
-* Según las el tipo de cuestionario
+* **Según las el tipo de cuestionario**
   * **Respuesta abierta:** permiten al encuestado tener la libertad de responder libremente cada pregunta, esto permite obtener respuestas más profundas y también obtener respuestas en las que no había pensado, sin embargo, el problema de este tipo de encuestas es que es muy difícil de cuantificar, por el contrario se deben interpretar las respuestas.
   * **Respuesta cerrada:** en este tipo, los encuestados deberán elegir alguna de las posibles opciones, su principal ventaja es que son más fáciles de cuantificar, sin embargo, en ocasiones ninguna de las opciones refleja el pensamiento de los participantes, para ello, siempre es recomendable añadir la casi “otro”.
   
