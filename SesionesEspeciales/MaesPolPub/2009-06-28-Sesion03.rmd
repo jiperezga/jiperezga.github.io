@@ -388,14 +388,14 @@ kable_styling("striped", full_width = F)
 <td style="text-align:left;"> <a href="http://jiperezga.github.io/MaestriaPoliticasPublicas/MaesPolPubSesion03#una-variable-cuantitativa" style="
     color: #ffffff;
 "><b><u>Una Cuantitativa</u></b></a></td>
-<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/MaesPolPubSesion03#gráfico-de-caja-y-bigotes" style="
+<td style="text-align:center;"><a href="http://jiperezga.github.io/MaestriaPoliticasPublicas/MaesPolPubSesion03#gráfico-de-caja-y-bigotes" style="
     color: #ffffff;
 ">Gráfico de 
 caja y bigotes</a></td>
-<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/MaesPolPubSesion03#histograma" style="
+<td style="text-align:center;"><a href="http://jiperezga.github.io/MaestriaPoliticasPublicas/MaesPolPubSesion03#histograma" style="
     color: #ffffff;
 ">Histograma</a></td>
-<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/MaesPolPubSesion03#densidad" style="
+<td style="text-align:center;"><a href="http://jiperezga.github.io/MaestriaPoliticasPublicas/MaesPolPubSesion03#densidad" style="
     color: #ffffff;
 ">Densidad</a></td>
 </tr>
@@ -403,7 +403,7 @@ caja y bigotes</a></td>
 <td style="text-align:left;"> <a href="https://jiperezga.github.io/MaestriaPoliticasPublicas/MaesPolPubSesion03#dos-variables-cuantitativas" style="
     color: #ffffff;
 "><b><u>Dos Cuantitativas</u></b></a></td>
-<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/MaesPolPubSesion03#gráfico-de-dispersión" style="
+<td style="text-align:center;"><a href="http://jiperezga.github.io/MaestriaPoliticasPublicas/MaesPolPubSesion03#gráfico-de-dispersión" style="
     color: #ffffff;
 ">Diagrama de dispersión</a></td>
 <td style="text-align:left;"></td>
@@ -424,13 +424,13 @@ caja y bigotes</a></td>
 <td style="text-align:left;"> <a href="https://jiperezga.github.io/MaestriaPoliticasPublicas/MaesPolPubSesion03#una-variable-cualitativa" style="
     color: #ffffff;
 "><b><u>Una Cualitativa</u></b></a></td>
-<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/MaesPolPubSesion03#gráfico-de-barras" style="
+<td style="text-align:center;"><a href="http://jiperezga.github.io/MaestriaPoliticasPublicas/MaesPolPubSesion03#gráfico-de-barras" style="
     color: #ffffff;
 ">Gráfico de barras</a></td>
-<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/MaesPolPubSesion03#gráfico-de-pareto" style="
+<td style="text-align:center;"><a href="http://jiperezga.github.io/MaestriaPoliticasPublicas/MaesPolPubSesion03#gráfico-de-pareto" style="
     color: #ffffff;
 ">Gráfico de pareto</a></td>
-<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/MaesPolPubSesion03#gráfico-de-pastel" style="
+<td style="text-align:center;"><a href="http://jiperezga.github.io/MaestriaPoliticasPublicas/MaesPolPubSesion03#gráfico-de-pastel" style="
     color: #ffffff;
 ">Gráfico de pastel</a></td>
 </tr>
@@ -438,10 +438,10 @@ caja y bigotes</a></td>
 <td style="text-align:left;"> <a href="https://jiperezga.github.io/MaestriaPoliticasPublicas/MaesPolPubSesion03#dos-variables-cualitativas" style="
     color: #ffffff;
 "><b><u>Dos Cualitativas</u></b></a></td>
-<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/MaesPolPubSesion03#gráfico-de-barras-1" style="
+<td style="text-align:center;"><a href="http://jiperezga.github.io/MaestriaPoliticasPublicas/MaesPolPubSesion03#gráfico-de-barras-1" style="
     color: #ffffff;
 ">Gráfico de barras</a></td>
-<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/MaesPolPubSesion03#gráfico-de-balón" style="
+<td style="text-align:center;"><a href="http://jiperezga.github.io/MaestriaPoliticasPublicas/MaesPolPubSesion03#gráfico-de-balón" style="
     color: #ffffff;
 ">Gráfico de balón</a></td>
 <td style="text-align:left;"></td>
@@ -450,10 +450,10 @@ caja y bigotes</a></td>
 <td style="text-align:left;"> <a href="https://jiperezga.github.io/MaestriaPoliticasPublicas/MaesPolPubSesion03#cruce-entre-variables-cualitativas-y-cuantitativas" style="
     color: #ffffff;
 "><b><u>Cualitativa - Cuantitativa</u></b></a></td>
-<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/MaesPolPubSesion03#gráfico-de-caja-y-bigotes-1" style="
+<td style="text-align:center;"><a href="http://jiperezga.github.io/MaestriaPoliticasPublicas/MaesPolPubSesion03#gráfico-de-caja-y-bigotes-1" style="
     color: #ffffff;
 ">Gráfico de caja y bigotes</a></td>
-<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/MaesPolPubSesion03#gráfico-de-medias" style="
+<td style="text-align:center;"><a href="http://jiperezga.github.io/MaestriaPoliticasPublicas/MaesPolPubSesion03#gráfico-de-medias" style="
     color: #ffffff;
 ">Gráfico de medias</a></td>
 <td style="text-align:left;"></td>
@@ -468,7 +468,7 @@ caja y bigotes</a></td>
 Este gráfico sirve para presentar de forma visual, datos numéricos a través de sus cuartiles, además de presentar otras **características importantes, tales como el valor de los cuartiles, dispersión, simetría y datos potencialmente atípicos**.
 
 <h4 align="center"> Representación de un Gráfico de Caja y Bigotes </h4>
-![](../EstadisticaI/images/BoxPlot.jpg)
+![](../MaestriaPoliticasPublicas/images/BoxPlot.jpg)
 
 Este gráfico puede ser realizado mediante la función <tt>boxplot()</tt> de la librería <tt>graphics</tt> de la base del <tt>R</tt>. 
 
