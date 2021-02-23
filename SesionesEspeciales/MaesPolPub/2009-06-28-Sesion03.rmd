@@ -39,7 +39,7 @@ opts_chunk$set(echo=TRUE,
                comment=NA,
                message=FALSE,
                warning=FALSE,
-               fig.path = paste0("../../MaestriaPoliticasPublicas/images/", "SesionEsp03"),
+               fig.path = paste0("../../MaestriaPoliticasPublicas/images/", "MaesPolPubSesion03"),
                cache.path = "../../MaestriaPoliticasPublicas/cache/",
                cache = FALSE)
 ```
@@ -105,15 +105,15 @@ Entre las diferentes funciones que permiten realizar resúmenes numéricos en <t
 
 Suponga que se desea realizar un resumen numérico de la variable <tt>areavenuni</tt> (Área total vendible por unidad). En este caso podríamos emplear la función <tt>describe()</tt> especificando las variables que se desean calcular.
 
-<button id="Show19" class="btn btn-secondary">Mostrar Ejemplo</button>
-<button id="Hide19" class="btn btn-info">Ocultar Ejemplo</button>
-<main id="botoncito19"> 
+<button id="Show1" class="btn btn-secondary">Mostrar Ejemplo</button>
+<button id="Hide1" class="btn btn-info">Ocultar Ejemplo</button>
+<main id="botoncito1"> 
 <h3 data-toc-skip> Resumen numérico individual </h3> 
 
-<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">psych</span><span class="p">)</span><span class="w">
+<section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="nf">library</span><span class="p">(</span><span class="n">psych</span><span class="p">)</span><span class="w">
 
 </span><span class="c1"># resumen numérico mediante librería psych</span><span class="w">
-</span><span class="n">describe</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">areavenuni</span><span class="p">,</span><span class="w"> </span><span class="n">ranges</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">trim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.1</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">quant</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0.25</span><span class="p">,</span><span class="w"> </span><span class="m">0.75</span><span class="p">),</span><span class="w"> 
+</span><span class="nf">describe</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">areavenuni</span><span class="p">,</span><span class="w"> </span><span class="n">ranges</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">trim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.1</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">quant</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0.25</span><span class="p">,</span><span class="w"> </span><span class="m">0.75</span><span class="p">),</span><span class="w"> 
     </span><span class="n">IQR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
 </span></code></pre></section></section>
 
@@ -137,13 +137,13 @@ También es posible realizar resúmenes numérico por grupos, en donde, se busca
 
 Suponga que se desea realizar un resumen numérico de la variable <tt>areavenuni</tt> (Área total vendible por unidad), discriminando por la variable estrato (estrato socioeconómico de un espacio geográfico). En este caso podríamos emplear la función <tt>describeBy()</tt> especificando las variables que se desean calcular, de la forma.
 
-<button id="Show20" class="btn btn-secondary">Mostrar Ejemplo</button>
-<button id="Hide20" class="btn btn-info">Ocultar Ejemplo</button>
-<main id="botoncito20"> 
+<button id="Show2" class="btn btn-secondary">Mostrar Ejemplo</button>
+<button id="Hide2" class="btn btn-info">Ocultar Ejemplo</button>
+<main id="botoncito2"> 
 <h3 data-toc-skip> Resumen numérico por grupos </h3> 
 
 <section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1"># resumen numérico por grupos mediante librería psych</span><span class="w">
-</span><span class="n">describeBy</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">datos</span><span class="o">$</span><span class="n">areavenuni</span><span class="p">,</span><span class="w"> </span><span class="n">group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">datos</span><span class="o">$</span><span class="n">estrato</span><span class="p">,</span><span class="w"> </span><span class="n">ranges</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">trim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.1</span><span class="p">,</span><span class="w"> 
+</span><span class="nf">describeBy</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">datos</span><span class="o">$</span><span class="n">areavenuni</span><span class="p">,</span><span class="w"> </span><span class="n">group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">datos</span><span class="o">$</span><span class="n">estrato</span><span class="p">,</span><span class="w"> </span><span class="n">ranges</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="n">trim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.1</span><span class="p">,</span><span class="w"> 
     </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">quant</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0.25</span><span class="p">,</span><span class="w"> </span><span class="m">0.75</span><span class="p">),</span><span class="w"> </span><span class="n">IQR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w">
 </span></code></pre></section></section>
 
@@ -201,14 +201,14 @@ Para presentar de forma individual o grupal las características de las variable
 
 Las tablas de frecuencia pueden ser construida en una o dos vías, es decir, las tablas pueden presentar la frecuencia absoluta de una sola variable, o presentar la frecuencia absoluta del cruce entre dos variables.
 
-<button id="Show21" class="btn btn-secondary">Mostrar Ejemplo una variable</button>
-<button id="Hide21" class="btn btn-info">Ocultar Ejemplo una variable</button>
-<main id="botoncito21"> 
+<button id="Show3" class="btn btn-secondary">Mostrar Ejemplo una variable</button>
+<button id="Hide3" class="btn btn-info">Ocultar Ejemplo una variable</button>
+<main id="botoncito3"> 
 <h3 data-toc-skip> Resumen tabular individual </h3> 
 <p>Para ilustrar su empleo, suponga que se desea observar el estado en el cual se encontraron las obras al momento de realizar el censo (<tt>estado$\_$act</tt>). Al ser una sola variable, se emplea la función <tt>table()</tt> de la forma </p>
 
 <section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1"># tabla de frecuencias absolutas una vía</span><span class="w">
-</span><span class="n">Tunavia</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">table</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">estado_act</span><span class="p">)</span><span class="w">
+</span><span class="n">Tunavia</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">table</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">estado_act</span><span class="p">)</span><span class="w">
 </span><span class="n">Tunavia</span><span class="w">
 </span></code></pre></section></section>
 
@@ -230,14 +230,14 @@ Tunavia
 Tunavia <- table(datos$estado_act)
 ```
 
-<button id="Show22" class="btn btn-secondary">Mostrar Ejemplo dos variables</button>
-<button id="Hide22" class="btn btn-info">Ocultar Ejemplo dos variables</button>
-<main id="botoncito22"> 
+<button id="Show4" class="btn btn-secondary">Mostrar Ejemplo dos variables</button>
+<button id="Hide4" class="btn btn-info">Ocultar Ejemplo dos variables</button>
+<main id="botoncito4"> 
 <h3 data-toc-skip> Resumen tabular dos variables </h3> 
 <p>Ahora suponga, que se desea observar el cruce que hay entre el año en que se realizó el censo (<tt>ano$\_$censo</tt>) y el estado actual en el cual se encontraron las obras al momento de realizar el censo (<tt>estado$\_$act</tt>). En éste caso, al ser dos variables, se emplea la función <tt>table()</tt> de la forma.</p>
 
 <section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1"># tabla de frecuencias absolutas doble vía</span><span class="w">
-</span><span class="n">Tdosvias</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">table</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">ano_censo</span><span class="p">,</span><span class="w"> </span><span class="n">datos</span><span class="o">$</span><span class="n">estado_act</span><span class="p">)</span><span class="w">
+</span><span class="n">Tdosvias</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">table</span><span class="p">(</span><span class="n">datos</span><span class="o">$</span><span class="n">ano_censo</span><span class="p">,</span><span class="w"> </span><span class="n">datos</span><span class="o">$</span><span class="n">estado_act</span><span class="p">)</span><span class="w">
 </span><span class="n">Tdosvias</span><span class="w">
 </span></code></pre></section></section>
 
@@ -277,14 +277,14 @@ Una alternativa para presentar la información contenida dentro de las variables
 
 Para la realización de tablas de frecuencias relativas, se emplea la función <tt>prop.table(tabla)</tt> de base de <tt>R</tt>, en donde <tt>tabla</tt> hace referencia a la tabla de frecuencias absolutas creada en la subsección anterior.
 
-<button id="Show23" class="btn btn-secondary">Mostrar Ejemplo una variable</button>
-<button id="Hide23" class="btn btn-info">Ocultar Ejemplo una variable</button>
-<main id="botoncito23"> 
+<button id="Show5" class="btn btn-secondary">Mostrar Ejemplo una variable</button>
+<button id="Hide5" class="btn btn-info">Ocultar Ejemplo una variable</button>
+<main id="botoncito5"> 
 <h3 data-toc-skip> Resumen tabular individual </h3> 
 <p>Para ilustrar su empleo, suponga que se desea observar el valor porcentual para los diferentes estados en el cual se encontraron las obras al momento de realizar el censo (<tt>estado$\_$act</tt>). Al ser una sola variable, la función <tt>prop.table()</tt> se emplea de la siguiente forma</p>
 
 <section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1"># tabla de frecuencias relativas una vía</span><span class="w">
-</span><span class="n">Punavia</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">prop.table</span><span class="p">(</span><span class="n">Tunavia</span><span class="p">)</span><span class="w">
+</span><span class="n">Punavia</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">prop.table</span><span class="p">(</span><span class="n">Tunavia</span><span class="p">)</span><span class="w">
 </span><span class="n">Punavia</span><span class="w">
 </span></code></pre></section></section>
 
@@ -307,14 +307,14 @@ Punavia
 Punavia <- prop.table(Tunavia)
 ```
 
-<button id="Show24" class="btn btn-secondary">Mostrar Ejemplo una variable</button>
-<button id="Hide24" class="btn btn-info">Ocultar Ejemplo una variable</button>
-<main id="botoncito24"> 
+<button id="Show6" class="btn btn-secondary">Mostrar Ejemplo una variable</button>
+<button id="Hide6" class="btn btn-info">Ocultar Ejemplo una variable</button>
+<main id="botoncito6"> 
 <h3 data-toc-skip> Resumen tabular individual </h3> 
 <p> En el mismo hílo, suponga que se desea observar en valores porcentuales, el cruce que hay entre el año en que se realizó el censo (<tt>ano_censo</tt>) y el estado actual en el cual se encontraron las obras al momento de realizar el censo (<tt>estado_act</tt>). En éste caso, al ser dos variables, la función <tt>prop.table()</tt> debe emplearse de la siguiente manera </p>
 
 <section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1"># tabla de frecuencias relativas doble vía</span><span class="w">
-</span><span class="n">Pdosvias</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">prop.table</span><span class="p">(</span><span class="n">Tdosvias</span><span class="p">)</span><span class="w">
+</span><span class="n">Pdosvias</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">prop.table</span><span class="p">(</span><span class="n">Tdosvias</span><span class="p">)</span><span class="w">
 </span><span class="n">Pdosvias</span><span class="w">
 </span></code></pre></section></section>
 
@@ -385,24 +385,33 @@ kable_styling("striped", full_width = F)
  </thead>
 <tbody>
 <tr>
-<td style="text-align:left;"> <a href="http://jiperezga.github.io/MaestriaPoliticasPublicas/SesionEsp02#una-variable-cuantitativa" style="
+<td style="text-align:left;"> <a href="http://jiperezga.github.io/MaestriaPoliticasPublicas/MaesPolPubSesion03#una-variable-cuantitativa" style="
     color: #ffffff;
 "><b><u>Una Cuantitativa</u></b></a></td>
-<td style="text-align:left;">Gráfico de caja y bigotes</td>
-<td style="text-align:left;">Histograma</td>
-<td style="text-align:left;">Densidad</td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/MaesPolPubSesion03#gráfico-de-caja-y-bigotes" style="
+    color: #ffffff;
+">Gráfico de 
+caja y bigotes</a></td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/MaesPolPubSesion03#histograma" style="
+    color: #ffffff;
+">Histograma</a></td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/MaesPolPubSesion03#densidad" style="
+    color: #ffffff;
+">Densidad</a></td>
 </tr>
 <tr>
-<td style="text-align:left;"> <a href="https://jiperezga.github.io/MaestriaPoliticasPublicas/SesionEsp02#dos-variables-cuantitativas" style="
+<td style="text-align:left;"> <a href="https://jiperezga.github.io/MaestriaPoliticasPublicas/MaesPolPubSesion03#dos-variables-cuantitativas" style="
     color: #ffffff;
 "><b><u>Dos Cuantitativas</u></b></a></td>
-<td style="text-align:left;">Diagrama de dispersión</td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/MaesPolPubSesion03#gráfico-de-dispersión" style="
+    color: #ffffff;
+">Diagrama de dispersión</a></td>
 <td style="text-align:left;"></td>
 <td style="text-align:left;">
 </td>
 </tr>
 <tr>
-<td style="text-align:left;"> <a href="https://jiperezga.github.io/MaestriaPoliticasPublicas/SesionEsp02#más-de-dos-variables-cuantitativas" style="
+<td style="text-align:left;"> <a href="https://jiperezga.github.io/MaestriaPoliticasPublicas/MaesPolPubSesion03#más-de-dos-variables-cuantitativas" style="
     color: #ffffff;
 "><b><u>Más de Dos Cuantitativas</u></b></a></td>
 <td style="text-align:left;">Matriz de dispersión</td>
@@ -412,30 +421,41 @@ kable_styling("striped", full_width = F)
 </td>
 </tr>
 <tr>
-<td style="text-align:left;"> <a href="https://jiperezga.github.io/MaestriaPoliticasPublicas/SesionEsp02#una-variable-cualitativa" style="
+<td style="text-align:left;"> <a href="https://jiperezga.github.io/MaestriaPoliticasPublicas/MaesPolPubSesion03#una-variable-cualitativa" style="
     color: #ffffff;
 "><b><u>Una Cualitativa</u></b></a></td>
-<td style="text-align:left;">Gráfico de barras
-</td>
-<td style="text-align:left;">Gráfico de pareto
-</td>
-<td style="text-align:left;">Gráfico de pastel
-</td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/MaesPolPubSesion03#gráfico-de-barras" style="
+    color: #ffffff;
+">Gráfico de barras</a></td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/MaesPolPubSesion03#gráfico-de-pareto" style="
+    color: #ffffff;
+">Gráfico de pareto</a></td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/MaesPolPubSesion03#gráfico-de-pastel" style="
+    color: #ffffff;
+">Gráfico de pastel</a></td>
 </tr>
 <tr>
-<td style="text-align:left;"> <a href="https://jiperezga.github.io/MaestriaPoliticasPublicas/SesionEsp02#dos-variables-cualitativas" style="
+<td style="text-align:left;"> <a href="https://jiperezga.github.io/MaestriaPoliticasPublicas/MaesPolPubSesion03#dos-variables-cualitativas" style="
     color: #ffffff;
 "><b><u>Dos Cualitativas</u></b></a></td>
-<td style="text-align:left;">Gráfico de barras</td>
-<td style="text-align:left;">Gráfico de balón</td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/MaesPolPubSesion03#gráfico-de-barras-1" style="
+    color: #ffffff;
+">Gráfico de barras</a></td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/MaesPolPubSesion03#gráfico-de-balón" style="
+    color: #ffffff;
+">Gráfico de balón</a></td>
 <td style="text-align:left;"></td>
 </tr>
 <tr>
-<td style="text-align:left;"> <a href="https://jiperezga.github.io/MaestriaPoliticasPublicas/SesionEsp02#cruce-entre-variables-cualitativas-y-cuantitativas" style="
+<td style="text-align:left;"> <a href="https://jiperezga.github.io/MaestriaPoliticasPublicas/MaesPolPubSesion03#cruce-entre-variables-cualitativas-y-cuantitativas" style="
     color: #ffffff;
 "><b><u>Cualitativa - Cuantitativa</u></b></a></td>
-<td style="text-align:left;">Gráfico de caja y bigotes</td>
-<td style="text-align:left;">Gráfico de medias</td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/MaesPolPubSesion03#gráfico-de-caja-y-bigotes-1" style="
+    color: #ffffff;
+">Gráfico de caja y bigotes</a></td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EstadisticaI/MaesPolPubSesion03#gráfico-de-medias" style="
+    color: #ffffff;
+">Gráfico de medias</a></td>
 <td style="text-align:left;"></td>
 </tr>
 </tbody>
