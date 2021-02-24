@@ -316,7 +316,7 @@ options(scipen = 10)
 
 Donde éstas pruebas, **requieren de los parámetros de la distribución que se quiere probar**, y para encontrarlos, es posible emplear **métodos de optimización** que nos permitan observar cuales son los parámetros ajustados para un conjunto de datos determinado. Para emplear estos método de optimización es posible usar la función <tt>fitdistr()</tt> de la librería <tt>MASS</tt>. 
 
-Adicionalmente, existen pruebas específicas para probar si los datos se distribuyen o no normalmente
+Adicionalmente, existen pruebas específicas que permiten probar si un conjunto de datos se distribuyen o no normalmente, en donde las pruebas más usadas son:
 
 ```{r echo=FALSE}
 library(kableExtra)
