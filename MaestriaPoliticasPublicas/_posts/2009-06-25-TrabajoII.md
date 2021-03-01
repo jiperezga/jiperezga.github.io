@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "TrabajoII"
+title: "Trabajo II"
 main-class: 'practica'
 permalink: /MaestriaPoliticasPublicas/MaesPolPub:title.html
 tags:

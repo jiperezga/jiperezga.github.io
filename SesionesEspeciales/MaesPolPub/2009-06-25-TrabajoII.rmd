@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "TrabajoII"
+title: "Trabajo II"
 main-class: 'practica'
 permalink: /MaestriaPoliticasPublicas/MaesPolPub:title.html
 tags:
@@ -36,7 +36,7 @@ opts_chunk$set(echo=TRUE,
                comment=NA,
                message=FALSE,
                warning=FALSE,
-               fig.path = paste0("../../MaestriaPoliticasPublicas/images/", "TrabajoII"),
+               fig.path = paste0("../../MaestriaPoliticasPublicas/images/", "Trabajo II"),
                cache.path = "../../MaestriaPoliticasPublicas/cache/",
                cache = FALSE)
 ```
