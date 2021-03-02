@@ -51,19 +51,19 @@ trabajo. No duden en escribirme.
 -   [Acevedo Rueda Carlos
     Mario](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/TII71792830.xlsx){:target="\_blank"}
 -   [Arias Monsalve
-    Natalia](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/TIIrabajo/TII43975152.xlsx){:target="\_blank"}
+    Natalia](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/TII43975152.xlsx){:target="\_blank"}
 -   [Cardona Gonzáles
-    Katerine](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/TIIrabajo/TII1152436746.xlsx){:target="\_blank"}
+    Katerine](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/TII1152436746.xlsx){:target="\_blank"}
 -   [Garcia Orozco
-    Laura](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/TIIrabajo/TII1037624013.xlsx){:target="\_blank"}
+    Laura](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/TII1037624013.xlsx){:target="\_blank"}
 -   [Garcia Ruiz
     Melissa](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/TIIrabajo/TII1017231035.xlsx){:target="\_blank"}
 -   [Munoz Zapata Otoniel De
-    Jesus](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/TIIrabajo/TII15513555.xlsx){:target="\_blank"}
+    Jesus](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/TII15513555.xlsx){:target="\_blank"}
 -   [Ortega Piñeres Julio
-    David](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/TIIrabajo/TII73005834.xlsx){:target="\_blank"}
+    David](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/TII73005834.xlsx){:target="\_blank"}
 -   [Villegas Giraldo José
-    Alexis](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/TIIrabajo/TII1039461255.xlsx){:target="\_blank"}
+    Alexis](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/TII1039461255.xlsx){:target="\_blank"}
 
 <h1>
 Mucha Suerte!
