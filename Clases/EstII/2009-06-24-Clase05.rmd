@@ -1,0 +1,331 @@
+---
+layout: post
+title: "Clase 05"
+main-class: 'clase'
+permalink: /EstadisticaII/EstII:title.html
+tags:
+
+introduction: |
+              Estimación puntual <br>
+              Insesgadez <br>
+              - Estimador insesgado <br>
+              - Estimador asintóticamente insesgado <br>
+              Eficiencia <br>
+              - Eficiencia relativa <br>
+              - Estimador insesgado de varianza mínima <br>
+              - Error cuadrático medio <br>
+              
+              
+header-includes:
+   - \usepackage{amsmath,amssymb,amsthm,amsfonts}
+   - \usepackage[sectionbib]{natbib}
+   - \usepackage[hidelinks]{hyperref}
+output:
+  md_document:
+    variant: markdown_strict+backtick_code_blocks+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash
+    preserve_yaml: TRUE
+always_allow_html: yes   
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding,
+  output_dir = "../../EstadisticaII/_posts/", output_format = "all"  ) })
+bibliography: "../../referencias.bib"
+csl: "../../apa.csl"
+link-citations: yes
+---
+
+```{r knitr_init, echo=FALSE, cache=FALSE}
+library(knitr)
+## Global options
+opts_chunk$set(echo=TRUE,
+               cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE,
+               fig.path = paste0("../../EstadisticaII/images/", "Clase05"),
+               cache.path = "../../EstadisticaII/cache/",
+               cache = FALSE)
+
+```
+
+## Estimación puntual
+Cómo su nombre lo indica, es un único valor que se calcula a partir de una muestra, con el fin de realizar una aproximación al verdadero valor desconocido del parámetro de interés.
+
+Es de anotar, que en muchas situaciones prácticas es posible encontrar varias estimaciones puntuales del mismo parámetro y por ello deben tenerse en cuenta una serie de criterios para seleccionar el parámetro más adecuado.
+
+## Insesgadez
+### Estimador insesgado
+Un estimador `$\hat{\theta}$` es un estimador insesgado del parámetro `$\theta$` si y solo si se cumple que
+
+`\begin{align*}
+  \mathbb{E}(\hat{\theta})=\theta
+\end{align*}`
+
+En otro caso se dice que el estimador `$\hat{\theta}$` es sesgado y su sesgo está dado por
+
+`\begin{align*}
+  \mathbb{B}(\hat{\theta})=\mathbb{E}(\hat{\theta}) - \theta
+\end{align*}`
+
+<button id="Show1" class="btn btn-secondary">Mostrar Ejercicio </button>
+<button id="Hide1" class="btn btn-info">Ocultar Ejercicio </button>
+<main id="botoncito1"> 
+<h3 data-toc-skip> Ejercicio </h3> 
+<p>Sea una muestra aleatoria $X_1, X_2, \ldots, X_n$ con media $\mathbb{E}(X)=\mu$ y varianza desconocida $Var(X) =\sigma^2$, entonces si se define el estimador $\tilde{S}^2$ tal que
+
+$$\begin{align*}
+  \tilde{S}^2=\frac{1}{n} \sum_{i=1}^n (X_i - \bar{X})^2
+\end{align*}$$
+
+Muestre si el estimador $\tilde{S}^2$ es un estimador insesgado del parámetro $\sigma^2$. De no serlo, calcule el valor del sesgo.</p>
+
+<h3 data-toc-skip> Solución </h3> 
+<p> Con el fin de probar si el estimador de interés es insesgado o no, se aplica el concepto de valor esperado al estadístico de interés, tal que
+$$\begin{align*}
+\mathbb{E}(\tilde{S}^2)=\mathbb{E}\left(\frac{1}{n} \sum_{i=1}^n (X_i - \bar{X})^2\right)   
+\end{align*}$$
+
+Entonces, al desarrollar la esperanza matemática, a través de sus propiedades, se tendrá que
+
+$$\begin{align*}
+\mathbb{E}(\tilde{S}^2)&=\frac{1}{n}\mathbb{E}\left[ \sum_{i=1}^n (X_i - 
+\bar{X})^2\right]  \\
+&=\frac{1}{n}\mathbb{E}\left[ \sum_{i=1}^n (X_i^2 - 2X_i\bar{X} + \bar{X}^2)\right]  \\
+&=\frac{1}{n}\mathbb{E}\left[ \sum_{i=1}^n X_i^2 - \sum_{i=1}^n2X_i\bar{X} + \sum_{i=1}^n\bar{X}^2\right]  \\
+&=\frac{1}{n}\mathbb{E}\left[ \sum_{i=1}^n X_i^2 - 2\bar{X}\sum_{i=1}^nX_i + \sum_{i=1}^n\bar{X}^2\right]  \\
+&=\frac{1}{n}\mathbb{E}\left[ \sum_{i=1}^n X_i^2 - 2\bar{X}n\bar{X} + n\bar{X}^2\right]  \\
+&=\frac{1}{n}\mathbb{E}\left[ \sum_{i=1}^n X_i^2 - 2n\bar{X}^2 + n\bar{X}^2\right]  \\
+&=\frac{1}{n}\mathbb{E}\left[ \sum_{i=1}^n X_i^2 - n\bar{X}^2 \right]  \\
+&=\frac{1}{n}\left[\sum_{i=1}^n \mathbb{E}\left(X_i^2\right) - n\mathbb{E}\left(\bar{X}^2 \right)\right] \\
+&=\frac{1}{n}\left[\sum_{i=1}^n (\sigma^2 + \mu^2) - n\left(\frac{\sigma^2}{n} + \mu  \right)\right] \\
+&=\frac{1}{n}\left[n\sigma^2 + n\mu^2 - \sigma^2 - n\mu^2\right] \\
+&=\frac{1}{n}\left[n\sigma^2 - \sigma^2 \right] \\
+&=\frac{(n-1)\sigma^2}{n}
+\end{align*}$$
+
+y como $\frac{(n-1)\sigma^2}{n} \neq \sigma^2$ se concluye que el estimador $\tilde{S}^2$ no es un estimador insesgado de $\sigma^2$ y su sesgo es igual a
+
+$$\begin{align*}
+ \mathbb{B}(\tilde{S}^2)&=\mathbb{E}(\tilde{S}^2) - \sigma^2\\
+&= \frac{(n-1)\sigma^2}{n} - \sigma^2\\
+&= \frac{(n-1)\sigma^2- n\sigma^2}{n} \\
+&= \frac{n\sigma^2-\sigma^2- n\sigma^2}{n} \\
+&= -\frac{\sigma^2}{n} \\
+\end{align*}$$
+</p>
+</main>
+
+### Estimador asintóticamente insesgado
+Si `$\hat{\theta}$` es un estimador sesgado `$\mathbb{E}(\hat{\theta})\neq \theta$`, entonces se dice que el estimador `$\hat{\theta}$` es asintóticamente insesgado si y solo si
+
+`\begin{align*}
+  \lim_{n\to \infty}\mathbb{B}(\hat{\theta})=0
+\end{align*}`
+
+<button id="Show2" class="btn btn-secondary">Mostrar Ejercicio </button>
+<button id="Hide2" class="btn btn-info">Ocultar Ejercicio </button>
+<main id="botoncito2"> 
+<h3 data-toc-skip> Ejercicio </h3> 
+<p>Sea una muestra aleatoria $X_1, X_2, \ldots, X_n$ con media $\mathbb{E}(X)=\mu$ y varianza desconocida $Var(X) =\sigma^2$, entonces si se define el estimador $\tilde{S}^2$ tal que
+
+$$\begin{align*}
+  \tilde{S}^2=\frac{1}{n} \sum_{i=1}^n (X_i - \bar{X})^2
+\end{align*}$$
+
+Muestre si el estimador sesgado $\tilde{S}^2$ es un estimador asintóticamente insesgado del parámetro $\sigma^2$.</p>
+
+<h3 data-toc-skip> Solución </h3> 
+<p> Con el fin de probar si el estimador sesgado $\tilde{S}^2$ es un estimador asintóticamente insesgado, se debe aplicar el límite cuando $n\to infty$ del sesgo del estimado $\mathbb{B}(\tilde{S}^2)$, para observar si este tiende o no $0$, tal que
+$$\begin{align*}
+\lim_{n\to \infty}\mathbb{B}(\tilde{S}^2) &= \lim_{n\to \infty} -\frac{\sigma^2}{n} \\
+\end{align*}$$
+
+En donde se observa que al estar el sesgo dividido por $n$ se tiene que 
+
+$$\begin{align*}
+\lim_{n\to \infty}\mathbb{B}(\tilde{S}^2) &= \lim_{n\to \infty} -\frac{\sigma^2}{n} \\
+&= 0
+\end{align*}$$
+
+concluyendo que el estimador $\mathbb{B}(\tilde{S}^2)$ es un estimador asintóticamente insesgado.</p>
+</main>
+
+## Eficiencia
+### Eficiencia Relativa
+Sea `$\hat{\theta}_1$` y `$\hat{\theta}_2$` dos estimadores insesgados de unparámetro `$\theta$`, obtenidos de una muestra aleatoria del mismo tamaño, entonces
+
+* Se dice que `$\hat{\theta}_1$` es más eficiente que `$\hat{\theta}_2$` si `$Var(\hat{\theta}_1)$` < `$Var(\hat{\theta}_2)$`
+* La eficiencia relativa (EFR) de un estimador respecto a otro puede calcularse mediante la ecuación
+
+`\begin{align*}
+  EFR = \frac{Var(\hat{\theta_1})}{Var(\hat{\theta_2})}
+\end{align*}`
+
+y se interpretará de la siguiente manera
+
+* `$EFR < 1$`, entonces el estimador `$\hat{\theta}_1$` será más eficiente que el estimador `$\hat{\theta}_2$`.
+* `$EFR = 1$`, entonces `$\hat{\theta}_1$` y `$\hat{\theta}_2$` son estimadores igualmente eficientes.
+* `$EFR > 1$`, entonces el estimador `$\hat{\theta}_1$` será menos eficiente que el estimador `$\hat{\theta}_2$`.
+
+<button id="Show3" class="btn btn-secondary">Mostrar Ejercicio </button>
+<button id="Hide3" class="btn btn-info">Ocultar Ejercicio </button>
+<main id="botoncito3"> 
+<h3 data-toc-skip> Ejercicio </h3> 
+<p>Sea una muestra aleatoria $X_1, X_2, \ldots, X_50$ con media desconocida $\mathbb{E}(X)=\mu$ y varianza $Var(X) =\sigma^2$, entonces si se define el estimador $\bar{X}_1$ como
+
+$$\begin{align*}
+  \bar{X}_1=\frac{1}{50} \sum_{i=1}^{50} X_i
+\end{align*}$$
+
+y el estimador $\bar{X}_2$ como
+
+$$\begin{align*}
+  \bar{X}_2=\frac{1}{4} (X_1 + X_7 + X_{10} + X_{50})
+\end{align*}$$
+estimadores para la media desconocida $\mu$, calcule la eficiencia relativa y concluya cuál de los dos estimadores es más eficiente.</p>
+
+<h3 data-toc-skip> Solución </h3> 
+<p> Con el fin de probar cuál de los dos estimadores para la media $\mu$, se decide calcular el coeficiente de eficiencia relativa, basados en la varianza de los dos estimadores, en donde la varianza del estimador $\bar{X}_1$ es igual a
+$$\begin{align*}
+Var(\bar{X}_1)=\frac{\sigma^2}{50}
+\end{align*}$$
+
+mientras que, el estimador $\bar{X}_2$ es igual a 
+$$\begin{align*}
+Var(\bar{X}_2)=\frac{\sigma^2}{4}
+\end{align*}$$
+
+Entonces al calcular la eficiencia relativa de los dos estimadores, tendremos que
+
+$$\begin{align*}
+  EFR &= \frac{Var(\bar{X}_1)}{Var(\bar{X}_2)} \\
+      &= \frac{\frac{\sigma^2}{50}}{\frac{\sigma^2}{4}} \\
+      &= \frac{4\sigma^2}{50\sigma^2} \\
+      &= \frac{4}{50} \\
+      &= 0.08
+\end{align*}$$
+
+En donde se observa al ser $0.08 < 1$ se tendrá que $EFR < 1$ y por tanto se concluirá que el estimador $\bar{X}_1$ será más eficiente que el estimador $\bar{X}_2$.
+</p>
+</main>
+
+### Estimador insesgado de varianza mínima (MVUE)
+Si entre todos los estimadores insesgados de `$\theta$` podemos encontrar uno cuya varianza sea más pequeña que los demás estimadores, entonces, usando como criterio el sesgo y la eficiencia, se habrá conseguido el estimador óptimo de `$\theta$`.
+
+Diremos que `$\hat{\theta}$` es un estimador insesgado y de varianza mínima si `$\mathbb{E}(\hat{\theta})=\theta$` y para cualquier otro estimador `$\mathbb{E}(\hat{\Phi})=\theta$` se verifica que
+
+`\begin{align*}
+  Var(\hat{\theta}) \leq Var(\hat{\Phi})
+\end{align*}`
+
+se dice entonces que `$\hat{\theta}$` es un MVUE de `$\theta$`.
+
+#### Cota de Cramer-Rao
+Si `$\hat{\theta}$` es un estimador insesgado del parámetro `$\theta$`, se verifica en condiciones generales que
+
+`\begin{align*}
+  Var(\hat{\theta}) \geq \frac{1}{I_n(\theta)}
+\end{align*}`
+
+donde `$I_n(\theta)$` se conoce como la matriz de información de Fisher asociada a una muestra aleatoria de tamaño `$n$`, y está dada por
+
+`\begin{align*}
+  I_n(\lambda)&=n\mathbb{E}\left[\left(\frac{\partial Ln\left(f(x;\theta)\right)}{\partial \lambda}\right)^2\right]
+\end{align*}`
+
+Una forma alternativa que brinda el mismo resultado y que en ocasiones puede ser más sencilla de calcular `$I_n(\theta)$` es mediante 
+`\begin{align*}
+  I_n(\theta)&= -n\mathbb{E}\left[\frac{\partial^2 Ln\left(f(x;\theta)\right)}{\partial^2 \theta}\right]
+\end{align*}`
+
+De lo anterior se tendrá que si `$\hat{\theta}$` es un estimador insesgado de mínima varianza de `$\theta$`, entonces
+`\begin{align*}
+  Var(\hat{\theta}) = \frac{1}{I_n(\theta)}
+\end{align*}`
+
+<button id="Show4" class="btn btn-secondary">Mostrar Ejercicio </button>
+<button id="Hide4" class="btn btn-info">Ocultar Ejercicio </button>
+<main id="botoncito4"> 
+<h3 data-toc-skip> Ejercicio </h3> 
+<p> Sea $X_1, X_2, \ldots, X_20$ una muestra aleatoria iid de una distribución Poisson parámetro desconocido $\lambda$, pruebe que el estimador $\tilde{\lambda} = \bar{X}$ es el MVUE del parámetro $\lambda$.</p>
+
+<h3 data-toc-skip> Solución </h3> 
+<p> Con el estimador $\tilde{\lambda}$ es igual a $\bar{X}$ se tendrá que la esperanza matemática del estimador $\tilde{\lambda}$ estará dado por
+
+$$\begin{align*}
+\mathbb{E}(\bar{X}) = \mathbb{E}(\tilde{\lambda}) = \mu
+\end{align*}$$
+
+mientras que el valor de la varianza del estimador $\tilde{\lambda}$ estará dada por
+
+$$\begin{align*}
+Var(\bar{X}) = Var(\tilde{\lambda}) = \frac{\sigma^2}{20}
+\end{align*}$$
+
+En donde, como la muestra aleatoria proviene de una distribución Poisson donde $\mathbb{E}(X_i) = \mu = \lambda$  y $Var(X_i)= \sigma^2 = \lambda$, entonces se tendrá que 
+
+$$\begin{align*}
+\mathbb{E}(\tilde{\lambda}) = \lambda \quad \quad Var(\tilde{\lambda}) = \frac{\lambda}{20}
+\end{align*}$$
+
+Verificado que el estimador $\tilde{\lambda}$ es un estimador insesgado, se procede a comparar la varianza del estimador $\tilde{\lambda}$ con la varianza del estimador MVUE para la distribución Poisson, tal que el valor de la matriz de información de Fisher $I_n(\theta)$ es igual a
+
+$$\begin{align*}
+  I_n(\lambda)&=n\mathbb{E}\left[\left(\frac{\partial Ln\left(f(x;\theta)\right)}{\partial \lambda}\right)^2\right] \\
+             &=20 \mathbb{E}\left[\left(\frac{\partial Ln\left(\frac{e^{-\lambda}\lambda^x}{x!}\right)}{\partial \lambda}\right)^2\right] \\
+             &=20 \mathbb{E}\left[\left(\frac{\partial \left(-\lambda  + xLn(\lambda) - x!\right)}{\partial \lambda}\right)^2\right] \\
+             &=20 \mathbb{E}\left[\left(-1  + \frac{x}{\lambda}\right)^2\right] \\
+             &=20 \mathbb{E}\left[1^2 - 2\frac{x}{\lambda} + \left(\frac{x}{\lambda}\right)^2\right] \\
+             &=20 \left[\mathbb{E}(1) - 2\frac{\mathbb{E}(X)}{\lambda} + \frac{\mathbb{E}(X^2)}{\lambda^2}\right] \\
+             &=20 \left[1 - 2\frac{\mathbb{E}(X)}{\lambda} + \frac{Var(X) + \mathbb{E}(X)^2}{\lambda^2}\right] \\
+             &=20 \left[1 - 2\frac{\lambda}{\lambda} + \frac{\lambda + \lambda^2}{\lambda^2}\right] \\
+             &=20 \left[1 - 2 + \frac{1}{\lambda} + 1\right] \\
+             &= \frac{20}{\lambda}
+\end{align*}$$
+
+Entonces, al reemplazar la matriz de información de Fisher $I_n(\lambda)$ en la fórmula de la Cota de Cramer Rao, se tendrá que el estimador de mínima varianza será aquel que tenga una varianza igual a
+
+$$\begin{align*}
+  Var(\hat{\lambda}) &= \frac{1}{I_n(\lambda)} \\
+                     &= \frac{1}{\frac{20}{\lambda}}\\
+                     &= \frac{\lambda}{20}
+\end{align*}$$
+
+En donde se observa que la varianza del estimador $\tilde{\lambda}$ coincide con el estimador de la varianza mínima $\hat{\lambda}$
+
+$$\begin{align*}
+  Var(\hat{\lambda}) &= Var(\tilde{\lambda}) = \frac{20}{\lambda}
+\end{align*}$$
+
+lo cual quiere decir que el estimador $\tilde{\lambda}$ es el MVUE del parámetro desconocido $\lambda$.
+</p>
+</main>
+
+### Error Cuadrático Medio (ECM)
+Sea `$\hat{\theta}$` un estimador de un parámetro `$\theta$`, entonces el ECM de `$\theta$` estará dado por
+
+`\begin{align*}
+  ECM(\hat{\theta}) &= \mathbb{E}[(\hat{\theta} - \theta)^2]\\
+                    &= Var(\hat{\theta})  + \mathbb{B}(\hat{\theta})^2
+\end{align*}`
+
+en donde, además de tener en cuenta la variabilidad del estimador (Precisión), tiene en cuenta el sesgo que éste posea (Exactitud), lo cual permite al ECM ser una medida razonable de la calidad del estimador puntual independientemente de que este sea o no insesgado.
+
+<button id="Show5" class="btn btn-secondary">Mostrar Ejercicio </button>
+<button id="Hide5" class="btn btn-info">Ocultar Ejercicio </button>
+<main id="botoncito5"> 
+<h3 data-toc-skip> Ejercicio </h3> 
+<p> Sea una muestra aleatoria $X_1, X_2, \ldots, X_n$ con media desconocida $\mathbb{E}(X)=\mu$ y varianza $Var(X) =\sigma^2$, entonces si se define el estimador $\bar{X}_1$ como
+
+$$\begin{align*}
+  \bar{X}_1=\frac{(3X_1  + 2X_{n/2} + 3X_n)}{6}
+\end{align*}$$
+
+Calcule el error cuadrático medio del estimador.</p>
+
+<h3 data-toc-skip> Solución </h3> 
+<p> PENDIENTE! :D
+</p>
+</main>
+
