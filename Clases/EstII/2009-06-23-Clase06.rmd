@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Clase 05"
+title: "Clase 06"
 main-class: 'clase'
 permalink: /EstadisticaII/EstII:title.html
 tags:
@@ -10,6 +10,7 @@ introduction: |
               - Estimador insesgado de varianza mínima <br>
               - Error cuadrático medio <br>
               Consistencia <br>
+              Suficiencia <br>
               
               
 header-includes:
@@ -39,7 +40,7 @@ opts_chunk$set(echo=TRUE,
                comment=NA,
                message=FALSE,
                warning=FALSE,
-               fig.path = paste0("../../EstadisticaII/images/", "Clase05"),
+               fig.path = paste0("../../EstadisticaII/images/", "Clase06"),
                cache.path = "../../EstadisticaII/cache/",
                cache = FALSE)
 
