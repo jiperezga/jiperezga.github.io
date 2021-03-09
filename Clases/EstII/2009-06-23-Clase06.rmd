@@ -9,10 +9,7 @@ introduction: |
               Eficiencia <br>
               - Estimador insesgado de varianza mínima <br>
               - Error cuadrático medio <br>
-              Consistencia <br>
-              Suficiencia <br>
-              
-              
+
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
@@ -68,7 +65,7 @@ Si `$\hat{\theta}$` es un estimador insesgado del parámetro `$\theta$`, se veri
 donde `$I_n(\theta)$` se conoce como la matriz de información de Fisher asociada a una muestra aleatoria de tamaño `$n$`, y está dada por
 
 `\begin{align*}
-  I_n(\lambda)&=n\mathbb{E}\left[\left(\frac{\partial Ln\left(f(x;\theta)\right)}{\partial \lambda}\right)^2\right]
+  I_n(\theta)&=n\mathbb{E}\left[\left(\frac{\partial Ln\left(f(x;\theta)\right)}{\partial \theta}\right)^2\right]
 \end{align*}`
 
 Una forma alternativa que brinda el mismo resultado y que en ocasiones puede ser más sencilla de calcular `$I_n(\theta)$` es mediante 
@@ -166,62 +163,3 @@ Calcule el error cuadrático medio del estimador.</p>
 </p>
 </main>
 
-## Consistencia
-### Estimador Consistente
-Es razonable pensar que **un buen estimador es aquel que mejore** en su estimación a medida que va **aumentando el tamaño de la muestra**. Esto es lo que se conoce como consistencia de un estimador.
-
-Si `$\hat{\theta}$` es un estimador del parámetro `$\theta$`, tal que
-
-1) `$\hat{\theta}$` es un estimador insesgado o asintóticamente insesgado tal que 
-
-`\begin{align*}
-  \lim_{n\to \infty}\mathbb{E}(\hat{\theta}) = \theta \quad \text{ ó }\quad \lim_{n\to \infty}\mathbb{B}(\hat{\theta}) = 0
-\end{align*}`
-
-2) A medida que aumenta el tamaño de muestra, las estimaciones de `$\hat{\theta}$` se aproximan cada vez más al parámetro `$\theta$`, tal que
-
-`\begin{align*}
-  \lim_{n\to \infty}Var(\hat{\theta}) = 0
-\end{align*}`
-
-entonces de cumplirse estas dos condiciones se dice que el estimador `$\hat{\theta}$` del parámetro `$\theta$` es un estimador consistente.
-
-<button id="Show3" class="btn btn-secondary">Mostrar Ejercicio </button>
-<button id="Hide3" class="btn btn-info">Ocultar Ejercicio </button>
-<main id="botoncito3"> 
-<h3 data-toc-skip> Ejercicio </h3> 
-<p> Sea una muestra aleatoria $X_1, X_2, \ldots, X_n$ con media desconocida $\mathbb{E}(X)=\mu$ y varianza $Var(X) =\sigma^2$, entonces si se define el estimador $\bar{X}_1$ como
-
-$$\begin{align*}
-  \bar{X}_1=\frac{(3X_1  + 2X_{n/2} + 3X_n)}{6}
-\end{align*}$$
-
-Muestre si este estimador es consistente para el parámetro $\mu$.</p>
-
-<h3 data-toc-skip> Solución </h3> 
-<p> PENDIENTE! :D
-</p>
-</main>
-
-## Suficiencia
-### Estimador Suficiente
-Se dice que un estimador `$hat{\theta}$`es suficiente para el parámetro `$\theta$`, cuando éste tiene tanta información sobre el parámetro como al propia muestra, es decir, cuando es capaz de recoger o resumir toda la información de la muestra aleatoria sin depender del parámetro que está intentando estimar.
-
-#### Teorema de Factorización Neyman
-Sea `$X_1, X_2, \ldots, X_n$` una muestra aleatoria de tamaño `$n$` de una distribución `$f(X;\theta)$`, entonces un estadístico `$\hat{\theta}$`basado en una muestra aleatoria es suficiente para la estimación de `$\theta$` si y solo si se puede factorizar en dos funciones no negativas.
-`\begin{align*}
-  L(X_1, X_2, \ldots, X_n|\theta) = g(\hat{\theta}, \theta)h(X_1, X_2,\ldots, X_n)
-\end{align*}`
-
-donde `$L(X_1, X_2, \ldots, X_n|\theta)=\prod_{i=1}^{n}f(x_i;\theta)$` es la función de verosimilitud de la muestra aleatoria, `$g(\hat{\theta}, \theta)$` es una función solo de `$\hat{\theta}$` y `$\theta$`, y `$h(X_1, X_2,\ldots, X_n)$` es una función que depende solo de la muestra y no depende del parámetro `$\theta$`.
-
-<button id="Show4" class="btn btn-secondary">Mostrar Ejercicio </button>
-<button id="Hide4" class="btn btn-info">Ocultar Ejercicio </button>
-<main id="botoncito4"> 
-<h3 data-toc-skip> Ejercicio </h3> 
-<p> PENDIENTE! >:c</p>
-
-<h3 data-toc-skip> Solución </h3> 
-<p> PENDIENTE! :D
-</p>
-</main>
