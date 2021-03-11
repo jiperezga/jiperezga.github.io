@@ -8,9 +8,7 @@ tags:
 introduction: |
               Consistencia <br>
               Suficiencia <br>
-              Método de estimación puntual <br>
-              - Método de momentos
-              
+
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
@@ -83,7 +81,7 @@ Muestre si este estimador es consistente para el parámetro $\mu$.</p>
 
 ## Suficiencia
 ### Estimador Suficiente
-Se dice que un estimador `$hat{\theta}$`es suficiente para el parámetro `$\theta$`, cuando éste tiene tanta información sobre el parámetro como al propia muestra, es decir, cuando es capaz de recoger o resumir toda la información de la muestra aleatoria sin depender del parámetro que está intentando estimar.
+Se dice que un estimador `$\hat{\theta}$` es suficiente para el parámetro `$\theta$`, cuando éste tiene tanta información sobre el parámetro como al propia muestra, es decir, cuando es capaz de recoger o resumir toda la información de la muestra aleatoria sin depender del parámetro que está intentando estimar.
 
 #### Teorema de Factorización Neyman
 Sea `$X_1, X_2, \ldots, X_n$` una muestra aleatoria de tamaño `$n$` de una distribución `$f(X;\theta)$`, entonces un estadístico `$\hat{\theta}$`basado en una muestra aleatoria es suficiente para la estimación de `$\theta$` si y solo si se puede factorizar en dos funciones no negativas.
@@ -96,33 +94,6 @@ donde `$L(X_1, X_2, \ldots, X_n|\theta)=\prod_{i=1}^{n}f(x_i;\theta)$` es la fun
 <button id="Show2" class="btn btn-secondary">Mostrar Ejercicio </button>
 <button id="Hide2" class="btn btn-info">Ocultar Ejercicio </button>
 <main id="botoncito2"> 
-<h3 data-toc-skip> Ejercicio </h3> 
-<p> PENDIENTE! >:c</p>
-
-<h3 data-toc-skip> Solución </h3> 
-<p> PENDIENTE! :D
-</p>
-</main>
-
-## Métodos de Estimación Puntual
-### Método de momentos
-Es un procedimiento que se usa para hallar un estimador para uno o más parámetros poblacionales a partir de los momentos muestrales.
-
-Sea `$X_1, X_2, \ldots, X_n$` una muestra aleatoria de una distribución `$X_i;\theta_1, \theta_2, \ldots \theta_k$`, y sea el `$k$`-ésimo momento alrededor del origen dado por 
-`\begin{align*}
-  \mu_k' = \mathbb{E}(X^k)
-\end{align*}`
-
-y sea el `$k$`-ésimo momento muestral dado por
-`\begin{align*}
-  m_k' = \frac{1}{n}\sum_{i=1}^{n} y_i^k
-\end{align*}`
-
-entonces, los estimadores `$(\hat{\theta}_1, \hat{\theta}_2, \ldots \hat{\theta}_k)$` para `$(\theta_1, \theta_2, \ldots \theta_k)$` se obtiene al igualas los correspondientes momentos poblacionales y muestrales para despejar los estimadores deseados.
-
-<button id="Show3" class="btn btn-secondary">Mostrar Ejercicio </button>
-<button id="Hide3" class="btn btn-info">Ocultar Ejercicio </button>
-<main id="botoncito3"> 
 <h3 data-toc-skip> Ejercicio </h3> 
 <p> PENDIENTE! >:c</p>
 
