@@ -153,8 +153,8 @@ la probabilidad de que funcione el componente `$C1$` es de `$0.98$`, la de `$C2$
 </ol>
 26. Existen dos métodos `$A$` y `$B$` para enseñar a los trabajadores cierta habilidad industrial. El porcentaje de fracasos es `$20\%$` para `$A$` y `$10\%$` para `$B$`. Sin embargo, `$B$` cuesta más y por eso se utiliza solamente el `$30\%$` de los casos, y en consecuencia, se utiliza el método `$A$` el resto de las veces. Si se entrena a un trabajador según uno de los dos métodos, pero no logra aprenderlo correctamente. 
 <ol type = "a">
-<li> ¿Cuál es la probabilidad de que haya recibido entrenamiento con el método `$A$`?</li>
-<li> ¿Cuál es la probabilidad de que haya recibido entrenamiento con el método `$B$`?</li>
+<li> ¿Cuál es la probabilidad de que haya recibido entrenamiento con el método $A$?</li>
+<li> ¿Cuál es la probabilidad de que haya recibido entrenamiento con el método $B$?</li>
 </ol>
 27. Suponga que la probabilidad de sobrevivir a una cierta operación de trasplante es de `$0.55$`. Si un paciente sobrevive la operación, la probabilidad que su cuerpo rechace el trasplante en menos de un mes es `$0.20$`. ¿Cuál es la probabilidad de que un paciente sobreviva a estas etapas críticas?
 28. Una señora que visita un supermercado, en ocasiones usa sus tarjetas de crédito `$1$`,`$2$` o `$3$`; otras veces paga con cheque y en otras paga en efectivo. La probabilidad de pagar con estas `$5$` alternativas son, respectivamente, `$0.25$`, `$0.29$`, `$0.23$`, `$0.19$` y `$0.04$`. ¿Cuál es la probabilidad de que en su próxima visita al supermercado,
@@ -172,7 +172,7 @@ la probabilidad de que funcione el componente `$C1$` es de `$0.98$`, la de `$C2$
 </ol>
 31. Un experimento incluye lanzar un par de dados y observar los números de sus caras superiores. 
 <ol type = "a">
-<li> Cuál es la probabilidad de obtener un `$7$` en la suma del resultado de los dos dados. </li>
+<li> Cuál es la probabilidad de obtener un $7$ en la suma del resultado de los dos dados. </li>
 <li> Cuál es la probabilidad de que el número obtenido en los dos dados sea igual?</li>
 </ol>
 32. Una pequeña ciudad dispone de un carro de bomberos y una ambulancia para emergencias. La probabilidad de que el carro de bomberos esté disponible cuando se necesite es `$0.98$` y la probabilidad de que la ambulancia esté disponible cuando se le requiera es `$0.92$`. En el evento de un herido en un incendio, calcule la probabilidad de la ambulancia o el carro de bomberos estén disponibles, suponiendo que operan de forma independiente.    
