@@ -74,14 +74,14 @@ entonces, los estimadores `$(\hat{\theta}_1, \hat{\theta}_2, \ldots \hat{\theta}
 Sea `$X_1, X_2, \ldots, X_n$` una muestra aleatoria iid de una distribución `$f(x; \theta_1, \theta_2, \ldots, \theta_k)$`, con función de verosimilitud dada por
 
 `\begin{align*}
-  L(\theta|x_i) &= L(\theta_1, \theta_2, \ldots, \theta_k| X_1, X_2, ldots, X_k)\\
+  L(\theta|x_i) &= L(\theta_1, \theta_2, \ldots, \theta_k| X_1, X_2, \ldots, X_k)\\
                 &= \prod_{i=1}^{n} f(x_i, \theta_1, \theta_2, \ldots, \theta_k)
 \end{align*}`
 
 Entonces el estimador de máxima verosimilitud de `$\hat{\theta}_{MV}$` para el parámetro `$\theta$`, es el valor que maximiza `$L(\theta| x_i)$`, es decir, 
 
 `\begin{align*}
-  L(\hat{\theta}_{MV}| X_1, X_2, ldots, X_k) = \max_{\theta} L(\theta_1, \theta_2, \ldots, \theta_k| X_1, X_2, ldots, X_k)
+  L(\hat{\theta}_{MV}| X_1, X_2, \ldots, X_k) = \max_{\theta} L(\theta_1, \theta_2, \ldots, \theta_k| X_1, X_2, \ldots, X_k)
 \end{align*}`
 
 #### Observación
