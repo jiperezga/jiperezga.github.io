@@ -54,7 +54,7 @@ Sea `$X_1, X_2, \ldots, X_n$` una muestra aleatoria de una distribución `$X_i;\
 
 y sea el `$k$`-ésimo momento muestral dado por
 `\begin{align*}
-  m_k' = \frac{1}{n}\sum_{i=1}^{n} y_i^k
+  m_k' = \frac{1}{n}\sum_{i=1}^{n} x_i^k
 \end{align*}`
 
 entonces, los estimadores `$(\hat{\theta}_1, \hat{\theta}_2, \ldots \hat{\theta}_k)$` para `$(\theta_1, \theta_2, \ldots \theta_k)$` se obtiene al igualas los correspondientes momentos poblacionales y muestrales para despejar los estimadores deseados.
