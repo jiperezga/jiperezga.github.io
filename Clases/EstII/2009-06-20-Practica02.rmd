@@ -454,6 +454,6 @@ Demuestre que, para un valor `$\beta$` conocido, `$\sum_{i=1}^{n}X_i^\beta$` es 
 `\begin{align*}
  	f(x)= \frac{\alpha x^{\alpha-1}}{\theta^\alpha}; \quad 0\leq x\leq\theta; \quad \alpha >0; \quad \theta>0
 \end{align*}`
-Si `$\theta=3$` demuestre que `$\mathbb{E}(X)=3\alpha/(\alpha+1)$` y encuentre el estimador de `$\alpha$` por el método de los momentos.
+Si `$\theta=3$` demuestre que `$\mathbb{E}(X)=\theta\alpha/(\alpha+1)$` y encuentre el estimador de `$\alpha$` por el método de los momentos.
 
 		
