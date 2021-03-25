@@ -63,7 +63,7 @@ f(x) = p^x(1-p)^{1-x} \text{ para } x=0,1; \quad 0\leq p \leq 1
   </li>
 </ol>
 
-2. Sea `$X_1, X_2, \ldots, X_k$` una muestra aleatoria `$iid$` de una distribución Binomial con parámetros desconocido `$p$` y parámetro `$n$` conocido o desconocido, con función de distribución dada por
+2. Sea `$X_1, X_2, \ldots, X_n$` una muestra aleatoria `$iid$` de una distribución Binomial con parámetros desconocido `$p$` y parámetro `$n$` conocido o desconocido, con función de distribución dada por
 `\begin{align*}
 f(x) = \left(\begin{array}{c}n\\ x\end{array}\right)p^x(1-p)^{n-x} \text{ para } x=0,1,\ldots, n; \quad 0\leq p \leq 1
 \end{align*}`
