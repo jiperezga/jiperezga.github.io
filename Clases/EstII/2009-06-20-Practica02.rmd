@@ -435,7 +435,7 @@ f(x) = \frac{1}{\theta}\alpha x^{\alpha-1}e^{-\frac{x^\alpha}{\theta}} \text{ pa
 Demuestre que si `$\beta$` es conocida, entonces se tendrá que `$\prod_{i=1}^{n} X_i$` es un estadístico suficiente para `$\alpha$`.
 27. Sea `$X_1, X_2, \dots, X_n$` una muestra aleatoria de una función de densidad de probabilidad dada por
 `\begin{align*}
-	f(x;\theta)= e^{-(x-\theta)}; \quad y>\theta
+	f(x;\theta)= e^{-(x-\theta)}; \quad x>\theta
 \end{align*}`
 Demuestre que `$X_{(1)} = min(X_1, X_2, \ldots, X_n)$` es un estadístico suficiente para `$\theta$`.
 28. Sea `$X_1, X_2, \dots, X_n$` una muestra aleatoria de una función de densidad de probabilidad dada por
@@ -453,5 +453,6 @@ Demuestre que, para un valor `$\beta$` conocido, `$\sum_{i=1}^{n}X_i^\beta$` es 
  	f(x)= \frac{\alpha x^{\alpha-1}}{\theta^\alpha}; \quad 0\leq x\leq\theta; \quad \alpha >0; \quad \theta>0
 \end{align*}`
 Si `$\theta=3$` demuestre que `$\mathbb{E}(X)=\theta\alpha/(\alpha+1)$` y encuentre el estimador de `$\alpha$` por el método de los momentos.
+<!-- Preguntar también por segundo momento-->
 
 		
