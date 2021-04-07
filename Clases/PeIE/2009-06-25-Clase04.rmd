@@ -7,7 +7,7 @@ tags:
 rawtags: 
 introduction: |
               Medidas estadísticas: <br>
-              - Medidas de localización
+              - Medidas de localización <br>
               - Medidas de dispersión <br>
 
 header-includes:
