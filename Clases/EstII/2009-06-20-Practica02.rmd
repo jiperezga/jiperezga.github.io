@@ -221,7 +221,7 @@ f(x) = \frac{x}{\theta^2}e^{-\frac{x^2}{2\theta^2}} \text{ para } x>0; \quad \th
   </li>
   <li> Calcule el estimador de máxima verosimilitud para el parámetro $\theta^2$ y pruebe si el estimador encontrado efectivamente maximiza la función. 
   </li>
-  <li> Pruebe si los estimadores encontrado en $a)$ y $c)$ son estimadores insesgados para el parámetro $\theta$.
+  <li> Pruebe si los estimadores encontrado en $a)$ y $d)$ son estimadores insesgados para el parámetro $\theta$.
   </li>
   <li> Calcule la Cota de Cramér-Rao del parámetro $\theta$ y pruebe si los estimadores encontrado en $a)$ y $c)$ alcanzan dicha cota (son un MVUE).
   </li>
