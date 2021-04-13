@@ -443,9 +443,9 @@ Demuestre que `$X_{(1)} = min(X_1, X_2, \ldots, X_n)$` es un estadístico sufici
 	f(x;\theta)= \frac{3x^2}{\theta^3}; \quad 0\leq x\leq \theta;\quad \theta>0
 \end{align*}`
 Demuestre que `$X_{(n)} = max(X_1, X_2, \ldots, X_n)$` es un estadístico suficiente para `$\theta$`.
-29. Sea `$X_1, X_2, \dots, X_n$` una muestra aleatoria `$iid$` de una variable aleatoria continua Weibull tal que `$X\sim Wei(\alpha, k)$`, con función de densidad de probabilidad dada por
+29. Sea `$X_1, X_2, \dots, X_n$` una muestra aleatoria `$iid$` de una variable aleatoria continua Weibull tal que `$X\sim Wei(\alpha, \beta)$`, con función de densidad de probabilidad dada por
 `\begin{align*}
-	f(x)= \frac{1}{\alpha}\beta x^{\beta-1}e^{-\frac{y^\beta}{\alpha}}; \quad x\geq 0;\quad \alpha>0; \quad \beta>0
+	f(x)= \frac{1}{\alpha}\beta x^{\beta-1}e^{-\frac{x^\beta}{\alpha}}; \quad x\geq 0;\quad \alpha>0; \quad \beta>0
 \end{align*}`
 Demuestre que, para un valor `$\beta$` conocido, `$\sum_{i=1}^{n}X_i^\beta$` es suficiente para `$\alpha$`.
 30. Sea `$X_1, X_2, \dots, X_n$` una muestra aleatoria `$iid$` de una variable aleatoria de una familia de distribuciones potencias con parámetros `$\alpha$` y `$\theta$`, con función de densidad de probabilidad dada por
