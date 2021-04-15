@@ -96,7 +96,7 @@ capacitación $\mu_C$ es mayor al promedio de quienes no recibieron capacitació
 </main>
 
 <button id="Show2" class="btn btn-secondary">Mostrar Ejercicio 2</button>
-<button id="Hide" class="btn btn-info">Ocultar Ejercicio 2</button>
+<button id="Hide2" class="btn btn-info">Ocultar Ejercicio 2</button>
 <main id="botoncito2"> 
 <h3 data-toc-skip> Ejercicio </h3> 
 <p>La gobernación de Antioquia, desea realizar un estudio sobre el peso de los niños y las niñas que se encuentran cursando su primaria en los colegios ubicados en las regiones del departamento, y decide contratar a un grupo de investigación la Universidad de Antioquia para llevar a cabo dicho estudio.<br>
