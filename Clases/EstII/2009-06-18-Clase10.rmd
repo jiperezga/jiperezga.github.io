@@ -406,7 +406,7 @@ y por tanto, podremos afirmar con un nivel de confianza del $99\%$ que la propor
 </p>
 </main>
 
-### Intervalos de confianza para una varianza `$\sigma^2$`
+## Intervalos de confianza para una varianza `$\sigma^2$`
 Sea `$X_{1}, X_{2}, \ldots, X_{n}$` una muestra aleatoria normal de tamaño `$n$` con media `$\mathbb{E}(X)=\mu$` y varianza desconocida `$Var(X)=\sigma^2<\infty$`, respectivamente, entonces un intervalo de confianza del `$100(1-\alpha)\%$` para una varianza `$\sigma^2$` estará dado por
 
 ![](../../EstadisticaII/images/Intervalos5.jpg)
