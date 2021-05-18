@@ -61,9 +61,9 @@ matemáticamente `$H_0: \theta \geq \theta_0$` y `$H_0: \theta \leq \theta_0$` e
 ### Hipótesis alternativa
 Es el complemento lógico de la hipótesis nula, y por tanto, ésta estará dado por
 
-* **Bilateral** `$H_0: \theta \neq \theta_0$`
-* **Unilateral izquierda** `$H_0: \theta < \theta_0$`
-* **Unilateral derecho** `$H_0: \theta > \theta_0$`
+* **Bilateral** `$H_1: \theta \neq \theta_0$`
+* **Unilateral izquierda** `$H_1: \theta < \theta_0$`
+* **Unilateral derecho** `$H_1: \theta > \theta_0$`
 
 Ésta hipótesis no puede contener la igualdad, a menos que se quiera una hipótesis alternativa específica.
 
