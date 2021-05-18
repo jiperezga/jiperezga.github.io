@@ -14,6 +14,13 @@ introduction: |
               - Medidas de dispersión <br>
               - Medidas de forma <br>
               - Medidas de asociación <br>
+              Análisis gráfico <br>
+              - Una variable cuantitativa <br>
+              - Dos variables cuatitativas <br>
+              - Una variable cualitativa <br>
+              - Dos variables cualitativas <br>
+              - Una variable cuantitativa y una cualitativa <br>
+              
               
 image: <img src="../../assets/images/logoUdeA.png" alt="Ude" class="sticky">
 header-includes:
@@ -52,9 +59,9 @@ opts_chunk$set(echo=TRUE,
 
 La evaluación socioeconómica de proyecto es una herramienta de planeación que busca **identificar, cuantificar y valorar los costos y beneficios** generados por un proyecto en el bienestar de la sociedad y **determinar el efecto y la rentabilidad** de las inversiones sobre la población afectada por el proyecto, con el fin de decidir mediante juicios objetivos y técnicos la conveniencia de ejecutar dicho proyecto.
 
-@Thomas2008[, p. 51] señala que **para decidir si un proyecto es o no rentable** en términos del ingreso nacional **debe observarse los beneficios y los costos sociales anuales brutos** del proyecto, en donde el primero se mide mediante el aumento que dicho proyecto provoque en el ingreso nacional, mientras que el segundo se mide mediante el ingreso nacional sacrificado por el hecho de haber efectuado este proyecto en lugar de otro, en donde **el objetivo será que la rentabilidad del proyecto sea mayor o igual que obtenido al ejecutar un proyecto alternativo**.
+@Thomas2008[, p. 51] señala que **para decidir si un proyecto es o no rentable** en términos del ingreso nacional **debe observarse los beneficios y los costos sociales anuales brutos** del proyecto, en donde el primero se mide mediante el aumento que dicho proyecto provoque en el ingreso nacional, mientras que el segundo se mide mediante el ingreso nacional sacrificado por el hecho de haber efectuado este proyecto en lugar de otro, en donde **el objetivo será que la rentabilidad del proyecto sea mayor o igual que el obtenido al ejecutar un proyecto alternativo**.
 
-**Es aquí donde el análisis estadístico toma relevancia** dentro de la evaluación de proyectos, puesto que, permite al investigador realizar análisis cualitativos o cuantitativos dentro de la gestión de un proyecto para la toma de decisiones, ya que al emplear herramientas estadísticas éste puede cuantificar el riesgo y la incertidumbre que tiene un proyecto, además de permitirle calcular diferentes probabilidades asociadas a partir de distribuciones de probabilidad.
+**Es aquí donde el análisis estadístico toma relevancia dentro de la evaluación de proyectos**, puesto que, permite al investigador realizar análisis cualitativos o cuantitativos dentro de la gestión de un proyecto para la toma de decisiones, ya que al emplear herramientas estadísticas éste puede cuantificar el riesgo y la incertidumbre que tiene un proyecto, además de permitirle calcular diferentes probabilidades asociadas a partir de distribuciones de probabilidad.
 
 ## Introducción a la Estadística
 
@@ -80,11 +87,14 @@ Un aspecto importante a tener en cuenta al realizar análisis estadísticos, es 
 ### Tipos de datos
 En términos generales, los datos son cualquier pieza de información recolectada del fenómeno que se pretende analizar, y que, dependiendo de las características que posean, deben clasificarse dentro de una determinada categoría.
 
+En términos generales, los datos son cualquier pieza de información recolectada del fenómeno que se pretende analizar, y que, dependiendo de las características que posean, deben clasificarse dentro de una determinada categoría junto a una determinada escala de medición.
+
 * **Cuantitativos**: Son datos que pueden ser medidos o cuantificados. Estos se subdividen en dos categorías:
-  * **Datos cuantitativos discretos**: Son aquellos datos que provienen de procesos que involucran conteos, y por tanto, solo pueden tomar valores enteros. Por ejemplo: __El número de automóviles que transitan por la carretera que conecta dos pueblos; El número de pacientes que llega a la Unidad de Cuidados Intensivos de un Hospital__
-  - **Datos cuantitativos continuos**: Son aquellos datos que provienen de procesos que involucran mediciones, y por tanto, solo pueden tomar cualquier valor real dentro de un intervalo. Por ejemplo: __El tiempo que tarda una ambulancia en recoger un paciente y llevarlo a un hospital; el valor de la mercancía que transita por una zona__
-* **Cualitativos**: Son datos asociados a una cualidad o propiedad, y por tanto, no pueden representarse numéricamente, a pesar de poder caracterizarse alfanuméricamente. Por ejemplo: __Estrato socioeconómico, nivel de aceptación de la población por el planteamiento de una obra pública__
-* **Lógicos**: Son datos asociados a valores de lógica binaria, usualmente denotados como Verdadero y Falso, o Éxito y Fracaso. Por ejemplo: __Zona costera, El proyecto es de interés social__
+  * **Discretos**: Son aquellos datos que provienen de procesos que involucran conteos, y por tanto, solo pueden tomar valores enteros. Por ejemplo: __Edad de una persona, número de estudiantes que perdieron un curso, cantidad de profesores que dictan seminarios__
+  - **Continuos**: Son aquellos datos que provienen de procesos que involucran mediciones, y por tanto, solo pueden tomar cualquier valor real dentro de un intervalo. Por ejemplo: __Temperatura de congelación del agua, Tiempo que dura una clase, Utilidad diaria de un negocio.__
+* **Cualitativos**: Son datos asociados a una cualidad o propiedad, y por tanto, no pueden representarse numéricamente, a pesar de poder caracterizarse alfanúmericamente. 
+  - **Nominal**: Son aquellos factores que establecen etiquetas o categorías a los datos, sin estar sujetos a un orden específico. Por ejemplo: __Partido político, Comuna de residencia, Tipo de animales en una granja__
+  - **Ordinal**: Son aquellos factores que establecen etiquetas o categorías a los datos, junto a una estructura jerárquica. Por ejemplo: __Estrato socioeconómico, Nivel de una enfermedad, Grado de escolaridad__
 
 ## Medidas estadísticas
 Las medidas estadísticas tienen por objetivo resumir la información contenida en un conjunto de datos, en pocos valores numéricos que representan diferentes características. Estas medidas estadísticas nos darán información sobre la situación, dispersión, forma, asociación que posee un conjunto de datos de manera que sea posible captar rápidamente la estructura de los mismos.
@@ -101,8 +111,7 @@ PM25 <- round(10 + 0.01 * datos + rnorm(28)*5, 2)
 zona <- sample(1:5, 28, T)
 ```
 
-<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -4rem; margin-top: -2rem; font-size: 120%;">
-<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto; text-align: center;">
 <tbody>
   <tr>
     <td>`r datos[1]`</td>
@@ -142,12 +151,10 @@ zona <- sample(1:5, 28, T)
   </tr>
 </tbody>
 </table>
-</pre>
 
 adicionalmente se decide medir el material particulado `$2.5$` `$PM_{2.5}$` generado en estos días, obteniendo los siguientes resultados
 
-<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -4rem; margin-top: -2rem; font-size: 120%;">
-<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto; text-align: center;">
 <tbody>
   <tr>
     <td>`r PM25[1]`</td>
@@ -187,11 +194,9 @@ adicionalmente se decide medir el material particulado `$2.5$` `$PM_{2.5}$` gene
   </tr>
 </tbody>
 </table>
-</pre>
 
 y la zona en la cual se realizó la medición 
-<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -4rem; margin-top: -2rem; font-size: 120%;">
-<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto; text-align: center;">
 <tbody>
   <tr>
     <td>`r zona[1]`</td>
@@ -231,7 +236,6 @@ y la zona en la cual se realizó la medición
   </tr>
 </tbody>
 </table>
-</pre>
 
 ### Medidas de tendencia central
 Estas medidas tienen por objetivo buscar valores que muestren el lugar en el cual se encuentra el centro de un conjunto de observaciones. Si se define `$x_1, x_2, \ldots, x_n$` como un conjunto de `$n$` observaciones, entonces 
@@ -244,9 +248,9 @@ Es el promedio numérico de las `$n$` observaciones.
 
 En <tt>Excel</tt>, puede calcularse el valor promedio de un conjunto de observaciones mediante la función `PROMEDIO()`.
 
-<button id="Show2" class="btn btn-secondary">Mostrar Ejercicio</button>
-<button id="Hide2" class="btn btn-info">Ocultar Ejercicio</button>
-<main id="botoncito2"> 
+<button id="Show1" class="btn btn-secondary">Mostrar Ejercicio</button>
+<button id="Hide1" class="btn btn-info">Ocultar Ejercicio</button>
+<main id="botoncito1"> 
 <h3 data-toc-skip> Ejercicio caso de estudio</h3> 
 <p>Calcule el número promedio de automóviles que transitan por la avenida Guayabal sur-norte en un día. </p>
 
@@ -270,9 +274,9 @@ donde `$x_{\left[j\right]}$` representa la `$j$`-ésima observación ordenada.
 
 En <tt>Excel</tt> puede calcularse la mediana de un conjunto de observaciones mediante la función `MEDIANA()`.
 
-<button id="Show3" class="btn btn-secondary">Mostrar Ejercicio</button>
-<button id="Hide3" class="btn btn-info">Ocultar Ejercicio</button>
-<main id="botoncito3"> 
+<button id="Show2" class="btn btn-secondary">Mostrar Ejercicio</button>
+<button id="Hide2" class="btn btn-info">Ocultar Ejercicio</button>
+<main id="botoncito2"> 
 <h3 data-toc-skip> Ejercicio caso de estudio</h3> 
 <p>Calcule la mediana obtenida del número de automóviles que transitan por la avenida Guayabal sur-norte en un día. </p>
 
@@ -291,7 +295,6 @@ Realizando el ordenamiento se tendrá que</p>
 ```{r echo=FALSE}
 datos2 <- sort(datos)
 ```
-<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -4rem; margin-top: -2rem; font-size: 120%;">
 <table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <tbody>
   <tr>
@@ -332,7 +335,6 @@ datos2 <- sort(datos)
   </tr>
 </tbody>
 </table>
-</pre>
 
 <p>donde se observa que las observaciones $14$ y $15$ para el número de vehículos que transitan sur-norte por la avenida Guayabal es $x_{[14]}=`r datos2[14]`$ y $x_{[15]}=`r datos2[15]`$, respectivamente.<br> 
 <br>
@@ -351,16 +353,15 @@ Es el valor que ocurre con mayor frecuencia en un conjunto de datos, es decir, e
 
 En <tt>Excel</tt> puede calcularse la moda de un conjunto de observaciones mediante la función `MODA.UNO()` para calcular el valor que más se repite, o la función `MODA.VARIOS()` para calcular una lista con los valores que más se repiten para el caso bimodal, trimodal o multimodal, guardando la función con la secuencia <tt>Ctrl+Shift+Enter</tt>.
 
-<button id="Show4" class="btn btn-secondary">Mostrar Ejercicio</button>
-<button id="Hide4" class="btn btn-info">Ocultar Ejercicio</button>
-<main id="botoncito4"> 
+<button id="Show3" class="btn btn-secondary">Mostrar Ejercicio</button>
+<button id="Hide3" class="btn btn-info">Ocultar Ejercicio</button>
+<main id="botoncito3"> 
 <h3 data-toc-skip> Ejercicio caso de estudio</h3> 
 <p>Calcule la moda del número de automóviles que transitan por la avenida Guayabal sur-norte en un día. </p>
 
 <h3 data-toc-skip> Solución </h3> 
 <p>Para encontrar el número modal de automóviles, es necesario localizar el número de vehículos que más se repita por día. Con el fin de ilustrar cual es este valor, se presenta nuevamente la tabla ordenada con el número de vehículos que transitaron cada uno de los $28$ días para facilitar su visualización. </p>
 
-<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -4rem; margin-top: -2rem; font-size: 120%;">
 <table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <tbody>
   <tr>
@@ -401,7 +402,6 @@ En <tt>Excel</tt> puede calcularse la moda de un conjunto de observaciones media
   </tr>
 </tbody>
 </table>
-</pre>
 
 <p> De la tabla anterior, se observa que estamos ante una situación trimodal en la cual los valores $`r datos2[5]`$, $`r datos2[14]`$ y $`r datos2[24]`$ son el número de vehículos que más se repiten en para los días registrados, ya que estos se repiten dos veces en el conjunto de observaciones.</p> 
 </main>
@@ -417,23 +417,22 @@ Son los **noventa y nueve valores** `$(j=1,2,\ldots,99)$`, que dividen a un conj
 
 y posteriormente, con éste valor se realiza el cálculo del cuartil de interés
 `\begin{align*}
-  P_j=x_{[\lfloor h_j\rfloor} + \left((h_j - \lfloor h_j\rfloor) \times  (x_{[\lfloor h_j\rfloor + 1]} - x_{\lfloor h_j\rfloor}) \right) \quad \quad j=1,2,\dots,99
+  P_j=x_{[\lfloor h_j\rfloor]} + \left((h_j - \lfloor h_j\rfloor) \times  (x_{[\lfloor h_j\rfloor + 1]} - x_{\lfloor h_j\rfloor}) \right) \quad \quad j=1,2,\dots,99
 \end{align*}`
 
 siendo `$\lfloor h_j\rfloor$` el valor piso de `$h_j$`, **es decir, el entero de `$h$` aproximando siempre hacia abajo**.
 
 En <tt>Excel</tt> puede calcularse el k-ésimo percentil de un conjunto de observaciones mediante la función `PERCENTIL.INC()`.
 
-<button id="Show5" class="btn btn-secondary">Mostrar Ejercicio</button>
-<button id="Hide5" class="btn btn-info">Ocultar Ejercicio</button>
-<main id="botoncito5"> 
+<button id="Show4" class="btn btn-secondary">Mostrar Ejercicio</button>
+<button id="Hide4" class="btn btn-info">Ocultar Ejercicio</button>
+<main id="botoncito4"> 
 <h3 data-toc-skip> Ejercicio caso de estudio</h3> 
 <p>Calcule el percentil $95$ del número de automóviles que transitan por la avenida Guayabal sur-norte en un día. </p>
 
 <h3 data-toc-skip> Solución </h3> 
 <p> Para realizar el cálculo del percentil número $j=95$, es necesario ordenar el número de automóviles que transitan por la avenida Guayabal por día, tal que </p>
 
-<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -4rem; margin-top: -2rem; font-size: 120%;">
 <table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <tbody>
   <tr>
@@ -474,7 +473,6 @@ En <tt>Excel</tt> puede calcularse el k-ésimo percentil de un conjunto de obser
   </tr>
 </tbody>
 </table>
-</pre>
 
 <p>Con los datos ordenados, se realiza el cálculo para la variable de posicionamiento $h_j$, con $j=95$, dado que se posee un total de $28$ observaciones, tal que 
 $$h_{95} = \frac{95(28-1)}{100} + 1 = 26.65$$
@@ -503,9 +501,9 @@ Mide la distancia media **al cuadrado** del conjunto de datos respecto a la medi
 
 En <tt>Excel</tt> puede calcularse la varianza de un conjunto de observaciones mediante la función `VAR.S()`.
 
-<button id="Show6" class="btn btn-secondary">Mostrar Ejercicio</button>
-<button id="Hide6" class="btn btn-info">Ocultar Ejercicio</button>
-<main id="botoncito6"> 
+<button id="Show5" class="btn btn-secondary">Mostrar Ejercicio</button>
+<button id="Hide5" class="btn btn-info">Ocultar Ejercicio</button>
+<main id="botoncito5"> 
 <h3 data-toc-skip> Ejercicio caso de estudio</h3> 
 <p>Calcule la varianza para el número de automóviles que transitan por la avenida Guayabal sur-norte en un día. </p>
 
@@ -527,9 +525,9 @@ Es la raíz cuadrada de la distancia media del conjunto de datos respeto a la me
 
 En <tt>Excel</tt> puede calcularse la desviación estándar de un conjunto de observaciones mediante la función `DESVEST.M()`.
 
-<button id="Show7" class="btn btn-secondary">Mostrar Ejercicio</button>
-<button id="Hide7" class="btn btn-info">Ocultar Ejercicio</button>
-<main id="botoncito7"> 
+<button id="Show6" class="btn btn-secondary">Mostrar Ejercicio</button>
+<button id="Hide6" class="btn btn-info">Ocultar Ejercicio</button>
+<main id="botoncito6"> 
 <h3 data-toc-skip> Ejercicio caso de estudio</h3> 
 <p>Calcule la desviación estándar para el número de automóviles que transitan por la avenida Guayabal sur-norte en un día. </p>
 
@@ -552,9 +550,9 @@ Es la desviación estándar como un porcentaje de la media aritmética de un con
 
 Entre las funciones base de <tt>Excel</tt> no hay ninguna función que calcule el coeficiente de variación de un conjunto de observaciones de forma directa, pero éste es fácil de calcular mediante el empleo de la desviación estándar `$S$` y el valor absoluto de la media `$\bar{X}$`, los cuales pueden calcularse mediante las funciones `DESVEST.M()` y `PROMEDIO()`, respectivamente.
 
-<button id="Show8" class="btn btn-secondary">Mostrar Ejercicio</button>
-<button id="Hide8" class="btn btn-info">Ocultar Ejercicio</button>
-<main id="botoncito8"> 
+<button id="Show7" class="btn btn-secondary">Mostrar Ejercicio</button>
+<button id="Hide7" class="btn btn-info">Ocultar Ejercicio</button>
+<main id="botoncito7"> 
 <h3 data-toc-skip> Ejercicio caso de estudio</h3> 
 <p>Calcule la desviación estándar para el número de automóviles que transitan por la avenida Guayabal sur-norte en un día. </p>
 
@@ -574,11 +572,11 @@ Es la distancia o amplitud que hay entre el percentil `$25$` y percentil `$75$`,
   IQR = P_{75} - P_{25}
 \end{align*}`
 
-Entre las funciones base de <tt>Excel</tt> no hay ninguna función que calcule el rango intercuartílico de un conjunto de observaciones de forma directa, pero éste es fácil de calcular mediante el empleo del percentil `$75$` `$P_{75}$` y percentil `$25$`, `$P_{25}$`, los cuales pueden calcularse mediante la función `PERCENTIL.EXC()`.
+Entre las funciones base de <tt>Excel</tt> no hay ninguna función que calcule el rango intercuartílico de un conjunto de observaciones de forma directa, pero éste es fácil de calcular mediante el empleo del percentil `$75$` `$P_{75}$` y percentil `$25$`, `$P_{25}$`, los cuales pueden calcularse mediante la función `PERCENTIL.INC()`.
 
-<button id="Show9" class="btn btn-secondary">Mostrar Ejercicio</button>
-<button id="Hide9" class="btn btn-info">Ocultar Ejercicio</button>
-<main id="botoncito9"> 
+<button id="Show8" class="btn btn-secondary">Mostrar Ejercicio</button>
+<button id="Hide8" class="btn btn-info">Ocultar Ejercicio</button>
+<main id="botoncito8"> 
 <h3 data-toc-skip> Ejercicio caso de estudio</h3> 
 <p>Calcule el rango intercuartílico para el número de automóviles que transitan por la avenida Guayabal sur-norte en un día. </p>
 
@@ -606,9 +604,9 @@ donde `$b$` es una constante definida como `$b=1/C_{3}$`, con `$C_{3}$` el valor
 
 Entre las funciones base de <tt>Excel</tt> no hay ninguna función que calcule la desviación absoluta mediana de un conjunto de observaciones de forma directa, pero éste es fácil de calcular mediante el empleo de las funciones para la mediana `MEDIANA()` y valor absoluto `ABS()`.
 
-<button id="Show10" class="btn btn-secondary">Mostrar Ejercicio</button>
-<button id="Hide10" class="btn btn-info">Ocultar Ejercicio</button>
-<main id="botoncito10"> 
+<button id="Show9" class="btn btn-secondary">Mostrar Ejercicio</button>
+<button id="Hide9" class="btn btn-info">Ocultar Ejercicio</button>
+<main id="botoncito9"> 
 <h3 data-toc-skip> Ejercicio caso de estudio</h3> 
 <p>Calcule la desviación absoluta mediana del número de automóviles que transitan por la avenida Guayabal sur-norte en un día. </p>
 
@@ -619,7 +617,6 @@ Entre las funciones base de <tt>Excel</tt> no hay ninguna función que calcule l
 datos3 <- sort(abs(datos - median(datos)))
 ```
 
-<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -4rem; margin-top: -2rem; font-size: 120%;">
 <table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <tbody>
   <tr>
@@ -660,7 +657,6 @@ datos3 <- sort(abs(datos - median(datos)))
   </tr>
 </tbody>
 </table>
-</pre>
 
 <p> Seguidamente, se realiza el cálculo de la mediana de los valores obtenidos en la tabla anterior, en donde, dado que se tienen $28$ observaciones, entonces $Me(|X_i-\tilde{X}|)$ para el número de vehículos que transitan por la avenida Guayabal en un día es igual a 
 
@@ -708,9 +704,9 @@ El signo de `$\gamma_1$` indica la dirección de la asimetría.
 
 En <tt>Excel</tt> puede calcularse la mediana de un conjunto de observaciones mediante la función `COEFICIENTE.ASIMETRIA()`.
 
-<button id="Show11" class="btn btn-secondary">Mostrar Ejercicio</button>
-<button id="Hide11" class="btn btn-info">Ocultar Ejercicio</button>
-<main id="botoncito11"> 
+<button id="Show10" class="btn btn-secondary">Mostrar Ejercicio</button>
+<button id="Hide10" class="btn btn-info">Ocultar Ejercicio</button>
+<main id="botoncito10"> 
 <h3 data-toc-skip> Ejercicio caso de estudio</h3> 
 <p>Calcule el coeficiente de asimetría del número de automóviles que transitan por la avenida Guayabal sur-norte en un día. </p>
 
@@ -741,9 +737,9 @@ El signo de `$\gamma_2$` indica el nivel de concentración.
 
 En <tt>Excel</tt> puede calcularse la mediana de un conjunto de observaciones mediante la función `CURTOSIS()`.
 
-<button id="Show12" class="btn btn-secondary">Mostrar Ejercicio</button>
-<button id="Hide12" class="btn btn-info">Ocultar Ejercicio</button>
-<main id="botoncito12"> 
+<button id="Show11" class="btn btn-secondary">Mostrar Ejercicio</button>
+<button id="Hide11" class="btn btn-info">Ocultar Ejercicio</button>
+<main id="botoncito11"> 
 <h3 data-toc-skip> Ejercicio caso de estudio</h3> 
 <p>Calcule el coeficiente de exceso de kurtosis del número de automóviles que transitan por la avenida Guayabal sur-norte en un día. </p>
 
@@ -774,9 +770,9 @@ El signo de `$S_{xy}$` indica el tipo de dependencia lineal que hay entre las va
 
 En <tt>Excel</tt> puede calcularse la covarianza de dos conjunto de observaciones mediante la función `COVARIANZA.M()`.
 
-<button id="Show13" class="btn btn-secondary">Mostrar Ejercicio</button>
-<button id="Hide13" class="btn btn-info">Ocultar Ejercicio</button>
-<main id="botoncito13"> 
+<button id="Show12" class="btn btn-secondary">Mostrar Ejercicio</button>
+<button id="Hide12" class="btn btn-info">Ocultar Ejercicio</button>
+<main id="botoncito12"> 
 <h3 data-toc-skip> Ejercicio caso de estudio</h3> 
 <p>Calcule el covarianza que hay entre el número de automóviles que transitan la avenida Guayabal en un día y el $CO_2$ generado en dichos días, para saber si existe o no dependencia lineal entre estas variables. </p>
 
@@ -816,9 +812,9 @@ Además, se tendrá que si
 
 En <tt>Excel</tt> puede calcularse la correlación de dos conjunto de observaciones mediante la función `COEF.DE.CORREL()`.
 
-<button id="Show14" class="btn btn-secondary">Mostrar Ejercicio</button>
-<button id="Hide14" class="btn btn-info">Ocultar Ejercicio</button>
-<main id="botoncito14"> 
+<button id="Show13" class="btn btn-secondary">Mostrar Ejercicio</button>
+<button id="Hide13" class="btn btn-info">Ocultar Ejercicio</button>
+<main id="botoncito13"> 
 <h3 data-toc-skip> Ejercicio caso de estudio</h3> 
 <p>Calcule la fuerza de la correlación que hay entre el número de automóviles que transitan la avenida Guayabal en un día y el $CO_2$ generado en dichos días, para saber si existe o no dependencia lineal entre estas variables. </p>
 
@@ -831,6 +827,274 @@ $$\begin{align*}
 \end{align*}$$
 
 Del resultado anterior se concluye, que hay existe una correlación positiva moderada entre el número de vehículos que transitan por la avenida Guayabal y el material particulado $2.5$ registrado en un día, es decir que cuando aumenta una variable, también aumenta en menor proporción la otra variable. </p>
+</main>
+
+## Análisis gráfico
+Otro aspecto importante del análisis descriptivo, es el que se realiza mediante análisis gráfico. **El análisis gráfico es una forma de simplificar lo tedioso y complejo de un conjunto de observaciones**, además de ser una forma más accesible de presentación de la información cuando se tienen muchas variables, puesto que permiten mostrar el comportamiento de los datos presentados, y hacer juicios respecto a su tendencia central, variabilidad, formas, patrones, tendencias, etc.
+
+El análisis gráfico, puede ser dividido en  
+
+* Gráficos para variables cuantitativa
+* Gráficos para variables cualitativas
+* Gráficos para cruces entre variables cuantitativas y cualitativas
+
+En la siguiente tabla se hace un resumen de qué gráficos pueden ser apropiados para usar en cada uno de los casos
+
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;"><thead>
+  <tr>
+   <th style="text-align:left;"> Categoría</th>
+   <th style="text-align:left; text-align: center" colspan="3"> Tipo de Gráficos </th>
+  </tr>
+ </thead>
+<tbody>
+<tr>
+<td style="text-align:left;"> <a href="http://jiperezga.github.io/EspecializacionSocioeconomica/EspSocProySesion01.html#una-variable-cuantitativa" style="
+    color: #ffffff;
+"><b><u>Una Cuantitativa</u></b></a></td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EspecializacionSocioeconomica/EspSocProySesion01.html#gráfico-de-caja-y-bigotes" style="color: #ffffff;">Gráfico de caja y bigotes</a></td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EspecializacionSocioeconomica/EspSocProySesion01.html#histograma" style="color: #ffffff;">Histograma</a></td>
+<td style="text-align:center;"></td>
+</tr>
+<tr>
+<td style="text-align:left;"> <a href="https://jiperezga.github.io/EspecializacionSocioeconomica/EspSocProySesion01.html#dos-variables-cuantitativas" style="
+    color: #ffffff;
+"><b><u>Dos Cuantitativas</u></b></a></td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EspecializacionSocioeconomica/EspSocProySesion01.html#diagrama-de-dispersión" style="color: #ffffff;">Diagrama de dispersión</a></td>
+<td style="text-align:center;"></td>
+
+<td style="text-align:center;">
+</td>
+</tr>
+<tr>
+<td style="text-align:left;"> <a href="https://jiperezga.github.io/EspecializacionSocioeconomica/EspSocProySesion01.html#una-variable-cualitativa" style="
+    color: #ffffff;
+"><b><u>Una Cualitativa</u></b></a></td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EspecializacionSocioeconomica/EspSocProySesion01.html#gráfico-de-barras" style="color: #ffffff;">Gráfico de
+barras</a></td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EspecializacionSocioeconomica/EspSocProySesion01.html#gráfico-de-pareto" style="color: #ffffff;">Gráfico de
+pareto</a></td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EspecializacionSocioeconomica/EspSocProySesion01.html#gráfico-de-pastel" style="color: #ffffff;">Gráfico de
+pastel</a></td>
+</tr>
+<tr>
+<td style="text-align:left;"> <a href="https://jiperezga.github.io/EspecializacionSocioeconomica/EspSocProySesion01.html#dos-variables-cualitativas" style="
+    color: #ffffff;
+"><b><u>Dos Cualitativas</u></b></a></td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EspecializacionSocioeconomica/EspSocProySesion01.html#gráfico-de-barras-1" style="color: #ffffff;">Gráfico de barras</a></td>
+<td style="text-align:center;"></td>
+<td style="text-align:center;"></td>
+</tr>
+<tr>
+<td style="text-align:left;"> <a href="https://jiperezga.github.io/EspecializacionSocioeconomica/EspSocProySesion01.html#cualitativa---cuantitativa" style="
+    color: #ffffff;
+"><b><u>Cualitativa - Cuantitativa</u></b></a></td>
+<td style="text-align:center;"><a href="http://jiperezga.github.io/EspecializacionSocioeconomica/EspSocProySesion01.html#gráfico-de-caja-y-bigotes-1" style="color: #ffffff;">Gráfico de caja y bigotes</a></td>
+<td style="text-align:center;"></td>
+<td style="text-align:center;"></td>
+</tr>
+</tbody>
+</table>
+
+### Una variable cuantitativa
+
+#### Gráfico de caja y bigotes
+Este gráfico sirve para presentar de forma visual, datos numéricos a través de sus cuartiles, además de presentar otras **características importantes, tales como el valor de los cuartiles, dispersión, simetría y datos potencialmente atípicos**.
+
+<h4 align="center"> Representación de un Gráfico de Caja y Bigotes </h4>
+![](../../EspecializacionSocioeconomica/images/BoxPlot.jpg)
+
+Este gráfico puede ser realizado en <tt>Excel</tt> en la pestaña Insertar>Gráficos>Insertar Gráficos de Estadística>Cajas y Bigotes. 
+
+<button id="Show14" class="btn btn-secondary">Mostrar gráfico de caja y bigotes</button>
+<button id="Hide14" class="btn btn-info">Ocultar gráfico de caja y bigotes</button>
+<main id="botoncito14"> 
+<h3 data-toc-skip> Ejercicio caso de estudio</h3> 
+<p>Construya un diagrama de caja y bigotes para el número de automóviles que transitan por la avenida Guayabal sur-norte en un día. </p>
+
+<h3 data-toc-skip> Solución </h3> 
+<h4 data-toc-skip> Gráfico de Caja y Bigotes </h4> 
+<p><img src="../../EspecializacionSocioeconomica/images/CajayBigotes.png" alt=""></p>
+
+<h3 data-toc-skip> Interpretación </h3> 
+
+<p> En el diagrama de caja y bigotes se aprecia que la mediana del número de automóviles que transitan por la avenida gauyaban en un día se encuentra alrededor de $1350$ vehículos, en donde el primer y tercer cuartil (percentil $25\%$ y $75\%$ se encuentran cercanos a $1200$ y $1550$ vehículos, respectivamente. No se aprecian observaciones extremas por fuera de los bigotes del gráfico y se observa un comportamiento simétrico, pues se aprecia que la mediana se encuentra relativamente central respecto al primer y tercer cuartil y que la media y la mediana se encuentran muy cercanas.
+</p>
+
+</main>
+
+#### Histograma
+Este gráfico muestra la distribución de frecuencia o densidades del grupo de observaciones, **brinda información sobre el valor más probables, la dispersión, la asimetría y valores extremos**. Adicionalmente, tiene la ventaja de que su interpretación es muy intuitiva y por tanto es de los gráficos más preferidos para resumir información. Este gráfico puede ser realizado en <tt>Excel</tt> en la pestaña Insertar>Gráficos>Insertar Gráficos de Estadística>Histograma. 
+
+<button id="Show15" class="btn btn-secondary">Mostrar histograma</button>
+<button id="Hide15" class="btn btn-info">Ocultar histograma</button>
+<main id="botoncito15"> 
+<h3 data-toc-skip> Ejercicio caso de estudio</h3> 
+<p>Construya un histograma para el número de automóviles que transitan por la avenida Guayabal sur-norte en un día. </p>
+
+<h3 data-toc-skip> Solución </h3> 
+<h4 data-toc-skip> Histograma </h4> 
+<p><img src="../../EspecializacionSocioeconomica/images/Histograma.png" alt=""></p>
+
+<h3 data-toc-skip> Interpretación </h3> 
+
+<p> En la primera figura, se aprecia que en este caso el histograma realiza agrupaciones para el número de vehículos que transitan por la avenida Guayabal en un día, con categorías que posee distancias entre $122$ vehículos, en donde se evidencia que el número de registros que se encuentra entre $1493-1615$ vehículos, poseen la mayor frecuencia con un total de $9$ registros. También se puede observar que la frecuencia de observaciones que se encuentra en las tres primeras categorías es casi igual a la que se encuentra en las tres últimas categorías, con lo cual podría pensarse que el número de vehículos que transitan por la avenida Guayabal posee un comportamiento relativamente simétrico. </p>
+</main>
+
+### Dos variables cuantitativas
+
+#### Diagrama de dispersión
+Este gráfico se emplea para hacer cruces entre dos variables cuantitativas, y **sirve para ver tendencias y relaciones entre dos variables cuantitativas, además de permitir apreciar donde se centra el total de observaciones, y detección de datos atípicos** dados dos atributos cuantitativos. Este gráfico puede ser realizado en <tt>Excel</tt> en la pestaña Insertar>Gráficos>Insertar Gráficos de Dispersión>Dispersión. 
+
+<button id="Show16" class="btn btn-secondary">Mostrar gráfico de dispersión</button>
+<button id="Hide16" class="btn btn-info">Ocultar gráfico de dispersión</button>
+<main id="botoncito16"> 
+<h3 data-toc-skip> Ejercicio caso de estudio</h3> 
+<p>Construya un histograma para el número de automóviles que transitan por la avenida Guayabal sur-norte en un día. </p>
+
+<h3 data-toc-skip> Solución </h3> 
+<h4 data-toc-skip> Gráfico de Dispersión </h4> 
+<p><img src="../../EspecializacionSocioeconomica/images/Dispersion.png" alt=""></p>
+
+<h3 data-toc-skip> Interpretación </h3> 
+
+<p>En el gráfico de dispersión anterior, se aprecia una relación positiva entre el número de vehículos que transitan por la avenida guayaban por día y la cantidad de material particulado $2.5$, pues es posible observar que el conjunto de observaciones tiene una leve tendencia creciente a medida que aumenta una de las variables. Adicionalmente, no se observa gran dispersión entre el conjunto de observaciones, ni se detectan de datos atípicos entre los puntos, debido a que no hay una separación significativa entre éstos.
+</p>
+</main>
+
+
+### Una variable cualitativa
+
+#### Gráfico de barras
+Sirve para resumir una cualitativas mediante barras de frecuencias absolutas o relativas. Éste **permite observar la concentración de observaciones en una o más categorías diferentes**. Este gráfico puede ser realizado en <tt>Excel</tt> en la pestaña Insertar>Gráficos>Insertar Gráficos de Columnas o Barras>Columnas agrupadas. 
+
+Para realizar estas gráficas deben usarse una tabla de frecuencias, la cual puede ser construida en <tt>Excel</tt> mediante la función `FRECUENCIA()`, guardando la función con la secuencia <tt>Ctrl+Shift+Enter</tt>, con la función `CONTAR.SI()` o con una tabla dinámica.
+
+<button id="Show17" class="btn btn-secondary">Mostrar gráfico de barras</button>
+<button id="Hide17" class="btn btn-info">Ocultar gráfico de barras</button>
+<main id="botoncito17"> 
+<h3 data-toc-skip> Ejercicio caso de estudio</h3> 
+<p>Construya un gráfico de barras para la zona en donde fue realizada la medición, del número de automóviles que transitan por la avenida Guayabal sur-norte en un día. </p>
+
+<h3 data-toc-skip> Solución </h3> 
+
+<h4 data-toc-skip> Tabla de Frecuencias </h4> 
+<p><img src="../../EspecializacionSocioeconomica/images/TabladeFrecuencia.png" alt=""></p>
+
+<h4 data-toc-skip> Gráfico de Barras </h4> 
+<p><img src="../../EspecializacionSocioeconomica/images/Barras.png" alt=""></p>
+
+<h3 data-toc-skip> Interpretación </h3> 
+
+<p>En el gráfico de barras, se observa que de los $28$ días en los cuales se realizaron los registros del número de vehículos, la mayoría de los días se realizó el registro en la zona $3$ con un total de $8$ días, seguido de las zonas $4$ y $5$ con un total de $6$ días, la zona $1$ con un total de $5$ días y finalmente la zona $2$ con un total de $3$ días.
+</p>
+</main>
+
+#### Gráfico de pareto
+Este gráfico es similar al gráfico de barras para una sola variable cualitativa, pero con la ventaja de que **presenta las frecuencias absolutas, relativas, y las frecuencias acumuladas absolutas y acumuladas relativas en el mismo gráfico**. Este gráfico puede ser realizado en <tt>Excel</tt> en la pestaña Insertar>Gráficos>Insertar Gráficos de Estadística>Pareto. 
+
+Para realizar estas gráficas deben usarse una tabla de frecuencias, la cual puede ser construida en <tt>Excel</tt> mediante la función `FRECUENCIA()`, guardando la función con la secuencia <tt>Ctrl+Shift+Enter</tt>, con la función `CONTAR.SI()` o con una tabla dinámica.
+
+
+<button id="Show18" class="btn btn-secondary">Mostrar gráfico de Pareto</button>
+<button id="Hide18" class="btn btn-info">Ocultar gráfico de Pareto</button>
+<main id="botoncito18"> 
+<h3 data-toc-skip> Ejercicio caso de estudio</h3> 
+<p>Construya un gráfico Pareto para la zona en donde fue realizada la medición, del número de automóviles que transitan por la avenida Guayabal sur-norte en un día. </p>
+
+<h3 data-toc-skip> Solución </h3> 
+
+<h4 data-toc-skip> Tabla de Frecuencias </h4> 
+<p><img src="../../EspecializacionSocioeconomica/images/TabladeFrecuencia.png" alt=""></p>
+
+<h4 data-toc-skip> Gráfico de Barras </h4> 
+<p><img src="../../EspecializacionSocioeconomica/images/Pareto.png" alt=""></p>
+
+<h3 data-toc-skip> Interpretación </h3> 
+
+<p>El gráfico Pareto anterior agregada diferente información sobre la zona en donde se realizó el registro del número de automóviles que transitan por la avenida Guayabal sur-norte en un día, en donde, en el eje izquierdo se observa el valor de las frecuencias absolutas, mientras que en el eje derecho se observa el valor de las frecuencias relativas. Las barras representan las frecuencias absolutas, mientras que la línea representa las frecuencias relativas.<br>
+<br>
+En dicho gráfico se aprecia que la zona en la cual se realizó la mayor cantidad de registros fue en la zona $3$ con un total de $8$ registros, lo cual equivale al $28.57\%$ del total de los registros, mientras que la menor cantidad de registros se realizó en la zona $2$ con un total de $3$ registros, lo cual equivale al $10.71\%$ del total de los registros.
+</p>
+
+</main>
+
+#### Gráfico de pastel
+Este gráfico también **sirve para representar gráficamente las tablas de frecuencias absolutas y relativas para una variable cualitativa**. Este gráfico puede ser realizado en <tt>Excel</tt> en la pestaña Insertar>Gráficos>Insertar Gráficos Circular o de Anillos>Circular. 
+
+Para realizar estas gráficas deben usarse una tabla de frecuencias, la cual puede ser construida en <tt>Excel</tt> mediante la función `FRECUENCIA()`, guardando la función con la secuencia <tt>Ctrl+Shift+Enter</tt>, con la función `CONTAR.SI()` o con una tabla dinámica.
+
+<button id="Show19" class="btn btn-secondary">Mostrar gráfico de pastel</button>
+<button id="Hide19" class="btn btn-info">Ocultar gráfico de pastel</button>
+<main id="botoncito19"> 
+<h3 data-toc-skip> Ejercicio caso de estudio</h3> 
+<p>Construya un gráfico de Pastel para la zona en donde fue realizada la medición, del número de automóviles que transitan por la avenida Guayabal sur-norte en un día. </p>
+
+<h3 data-toc-skip> Solución </h3> 
+
+<h4 data-toc-skip> Tabla de Frecuencias </h4> 
+<p><img src="../../EspecializacionSocioeconomica/images/TabladeFrecuencia.png" alt=""></p>
+
+<h4 data-toc-skip> Gráfico de Barras </h4> 
+<p><img src="../../EspecializacionSocioeconomica/images/Pastel.png" alt=""></p>
+
+<h3 data-toc-skip> Interpretación </h3> 
+
+<p>En el gráfico anterior, se presenta la proporción de días que se realizó el conteo de vehículos que transitan por la avenida Guayabal sur-norte en un día, en donde el gráfico de pastel representa el $100\%$ de los días registrados, y cada triángulo del gráfico la proporción asociada a cada una de las zonas. En donde, se observa que las proporciones observadas para los registros realizados por zona es respectivamente para las zonas $1$, $2$, $3$, $4$ y $5$ del $18\%$, $11\%$, $29\%$, $21\%$ y $21\%$.
+</p>
+</main>
+
+### Dos variables cualitativas
+
+#### Gráfico de barras
+El gráfico de barras también sirve para resumir dos variable cualitativa mediante barras de frecuencias absolutas o relativas. **La interpretación, será la misma que para una sola variable cualitativa, con la diferencia de que en este caso, se podrán hacer comparaciones por categorías adicionales.** Este gráfico puede ser realizado en <tt>Excel</tt> en la pestaña Insertar>Gráficos>Insertar Gráficos de Columnas o Barras>Columnas agrupadas. 
+
+Para realizar estas gráficas deben usarse una tabla de frecuencias, la cual puede ser construida en <tt>Excel</tt> mediante la función `CONTAR.SI.COJUNTO()` o con una tabla dinámica.
+
+<button id="Show20" class="btn btn-secondary">Mostrar gráfico de barras para dos variables</button>
+<button id="Hide20" class="btn btn-info">Ocultar gráfico de barras para dos variables</button>
+<main id="botoncito20"> 
+<h3 data-toc-skip> Ejercicio caso de estudio</h3> 
+<p>Construya un gráfico de barras para la zona en donde fue realizada la medición, del número de automóviles que transitan por la avenida Guayabal sur-norte en un día y la cantidad de días en que el número de vehículos que transita por la avenida Guayabal es menor a $1300$ o mayor o igual a $1300$. </p>
+
+<h3 data-toc-skip> Solución </h3> 
+
+<h4 data-toc-skip> Tabla de Frecuencias Conjunta </h4> 
+<p><img src="../../EspecializacionSocioeconomica/images/TabladeFrecuenciaConjunta.png" alt=""></p>
+
+<h4 data-toc-skip> Gráfico de Barras </h4> 
+<p><img src="../../EspecializacionSocioeconomica/images/BarrasConjuntas.png" alt=""></p>
+
+<h3 data-toc-skip> Interpretación </h3> 
+
+<p>En el gráfico de barras para el cruce entre la zona donde se realizaron los registros y el número de veces que se registraron menos o al menos $1300$ vehículos, se observa que solo en la zona $3$ se evidencia que el número de  días en los cuales el número de vehículos que transitan por la avenida Guayabal menores a $1300$ es superior a cuando transitan al menos $1300$, lo cual puede significar que la zona $3$ es un cruce con menor transito con los demás, tal vez por estar luego de un puente o debido a que la zona $3$ se seleccionó días de baja afluencia como un domingo o días festivos.
+</p>
+</main>
+
+### Cualitativa - Cuantitativa
+
+#### Gráfico de caja y bigotes
+Este gráfico sirve para presentar de forma visual, datos numéricos **por categorías** a través de sus cuartiles, además de presentar **otras características importantes, tales como la dispersión, simetría y datos potencialmente atípicos**. Este gráfico puede ser realizado en <tt>Excel</tt> en la pestaña Insertar>Gráficos>Insertar Gráficos de Estadística>Cajas y Bigotes.
+
+<button id="Show21" class="btn btn-secondary">Mostrar gráfico de caja y bigotes</button>
+<button id="Hide21" class="btn btn-info">Ocultar gráfico de caja y bigotes</button>
+<main id="botoncito21"> 
+<h3 data-toc-skip> Ejercicio caso de estudio</h3> 
+<p>Construya un gráfico de caja y bigotes para el número de vehículos que transitan por la avenida Guayabal por día y la zona donde fue registrada.</p>
+
+<h3 data-toc-skip> Solución </h3> 
+
+<h4 data-toc-skip> Gráfico de Barras </h4> 
+<p><img src="../../EspecializacionSocioeconomica/images/CajayBigotesConjunta.png" alt=""></p>
+
+<h3 data-toc-skip> Interpretación </h3> 
+
+<p>En el gráfico anterior, se hace una comparación entre el número de vehículos que transitan por la avenida Guayabal en un día y la zona donde se realizó el registro del número de vehículos. En éste se aprecia que de las $5$ zonas, la zona $3$ es la única que tiene una media y una mediana inferior a las demás zonas. <br>
+<br>
+Adicionalmente, se evidencia que de las $5$ zonas, la zona $4$ es la que presenta mayor variabilidad, mientras que las zonas $3$ y $4$ son la que posee datos más alejados respecto al $50\%$ central de los datos.<br>
+<br>
+Finalmente, puede notarse que no se evidencia ningún punto en la parte superior o inferior de los bigotes de las diferentes cajas, lo cual quiere decir, que no se identificaron datos extremos para ninguna de las zonas registradas.
+</p>
+
 </main>
 
 ## Referencias

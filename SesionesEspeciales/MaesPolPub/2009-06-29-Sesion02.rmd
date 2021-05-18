@@ -252,7 +252,7 @@ Son los **tres valores** `$(j=1,2,3)$`, que dividen a un conjunto de datos orden
 
 y posteriormente, con éste valor se realiza el cálculo del cuartil de interés
 `\begin{align*}
-  C_j=x_{[\lfloor h_j\rfloor} + \left((h_j - \lfloor h_j\rfloor) \times  (x_{[\lfloor h_j\rfloor + 1]} - x_{\lfloor h_j\rfloor}) \right)  \quad \quad j=1,2,3
+  C_j=x_{\lfloor h_j\rfloor]} + \left((h_j - \lfloor h_j\rfloor) \times  (x_{[\lfloor h_j\rfloor + 1]} - x_{\lfloor h_j\rfloor}) \right)  \quad \quad j=1,2,3
 \end{align*}`
 
 siendo `$\lfloor h_j\rfloor$` el valor piso de `$h_j$`, **es decir, el entero de `$h$` aproximando siempre hacia abajo**.
@@ -293,7 +293,7 @@ Son los **cuatro valores** `$(j=1,2,3,4)$`, que dividen a un conjunto de datos o
 
 y posteriormente, con éste valor se realiza el cálculo del quintil de interés
 `\begin{align*}
-  Q_j=x_{[\lfloor h_j\rfloor} + \left((h_j - \lfloor h_j\rfloor) \times  (x_{[\lfloor h_j\rfloor + 1]} - x_{\lfloor h_j\rfloor}) \right) \quad \quad j=1,2,3,4
+  Q_j=x_{\lfloor h_j\rfloor]} + \left((h_j - \lfloor h_j\rfloor) \times  (x_{[\lfloor h_j\rfloor + 1]} - x_{\lfloor h_j\rfloor}) \right) \quad \quad j=1,2,3,4
 \end{align*}`
 
 siendo `$\lfloor h_j\rfloor$` el valor piso de `$h_j$`, **es decir, el entero de `$h$` aproximando siempre hacia abajo**.
@@ -334,7 +334,7 @@ Son los **nueve valores** `$(j=1,2,\ldots,9)$`, que dividen a un conjunto de dat
 
 y posteriormente, con éste valor se realiza el cálculo del decil de interés
 `\begin{align*}
-  D_j=x_{[\lfloor h_j\rfloor} + \left((h_j - \lfloor h_j\rfloor) \times  (x_{[\lfloor h_j\rfloor + 1]} - x_{\lfloor h_j\rfloor}) \right) \quad \quad j=1,2,\dots,9
+  D_j=x_{\lfloor h_j\rfloor]} + \left((h_j - \lfloor h_j\rfloor) \times  (x_{[\lfloor h_j\rfloor + 1]} - x_{\lfloor h_j\rfloor}) \right) \quad \quad j=1,2,\dots,9
 \end{align*}`
 
 siendo `$\lfloor h_j\rfloor$` el valor piso de `$h_j$`, **es decir, el entero de `$h$` aproximando siempre hacia abajo**.
@@ -375,7 +375,7 @@ Son los **noventa y nueve valores** `$(j=1,2,\ldots,99)$`, que dividen a un conj
 
 y posteriormente, con éste valor se realiza el cálculo del percentil de interés
 `\begin{align*}
-  P_j=x_{[\lfloor h_j\rfloor} + \left((h_j - \lfloor h_j\rfloor) \times  (x_{[\lfloor h_j\rfloor + 1]} - x_{\lfloor h_j\rfloor}) \right) \quad \quad j=1,2,\dots,99
+  P_j=x_{\lfloor h_j\rfloor]} + \left((h_j - \lfloor h_j\rfloor) \times  (x_{[\lfloor h_j\rfloor + 1]} - x_{\lfloor h_j\rfloor}) \right) \quad \quad j=1,2,\dots,99
 \end{align*}`
 
 siendo `$\lfloor h_j\rfloor$` el valor piso de `$h_j$`, **es decir, el entero de `$h$` aproximando siempre hacia abajo**.
