@@ -249,7 +249,7 @@ es decir, que se tendrá una probabilidad del $60\%$ de que no se superen las ut
 <li> Ahora, como estamos interesados en el valor promedio de un proceso Bernoulli el cual es igual a $p$, se tendrá que 
 $$\begin{align*}
 \mathbb{E}(X) &= p \\
-              &= 0.6
+              &= 0.4
 \end{align*}$$
 
 Por su parte, para calcular la desviación estándar se requiere calcular inicialmente la varianza de la variable aleatoria, la cual está dada por 
@@ -412,7 +412,7 @@ $$\begin{align*}
                 &=`r phyper(q = 9, m = 10, n = 5, k = 9) - phyper(q = 4, m = 10, n = 5, k = 9)`
 \end{align*}$$
 
-En consecuencia, se tendrá una probaribilidad del $`r phyper(q = 9, m = 10, n = 5, k = 9) - phyper(q = 4, m = 10, n = 5, k = 9)*100`\%$, de que la mayoría apruebe realizar el proyecto de inversión.
+En consecuencia, se tendrá una probaribilidad del $`r round(phyper(q = 9, m = 10, n = 5, k = 9) - phyper(q = 4, m = 10, n = 5, k = 9), 4)*100`\%$, de que la mayoría apruebe realizar el proyecto de inversión.
 </li>
 <li> En esta ocasión estamos interesados en calcular el número promedio y  desviación estándar del número miembros que asistieron a la junta de votación y están a favor de realizar el proyecto de inversión, entonces al aplicar la ecuación de la media de la distribución hipergeométrica se tendrá que
 $$\begin{align*}
@@ -508,7 +508,7 @@ $$\begin{align*}
                 &= `r 1 -  pnbinom(q = 3-2, size = 2, prob = 0.2)`
 \end{align*}$$
 
-En consecuencia, se tendrá un $`r 1 -  pnbinom(q = 3-2, size = 2, prob = 0.2)*100`\%$ de probabilidad, de que deban revisarse más de $3$ edificios construidos por la constructora hasta encontrar el segundo que no cumpla los estándares de calidad.
+En consecuencia, se tendrá un $`r round(1 -  pnbinom(q = 3-2, size = 2, prob = 0.2), 4)*100`\%$ de probabilidad, de que deban revisarse más de $3$ edificios construidos por la constructora hasta encontrar el segundo que no cumpla los estándares de calidad.
 </li>
 <li>En esta ocasión estamos interesados en conocer el número promedio y desviación estándar del número de edificios que hay que revisar hasta encontrar el segundo edificio que no cumpla los estándares de calidad. Y para ello podemos emplear la formula de la esperanza matemática, de la distribución Geométrica para realiza el cálculo, tal que
 $$\begin{align*}
@@ -697,7 +697,7 @@ $$\begin{align*}
  & = \frac{1}{12}\int_{0}^\infty e^{\frac{-x}{12}} dx \\
  & = \frac{1}{12} \left[-12e^{\frac{-x}{12}}\right]\Bigg|_{0}^\infty \\
  & = \left[-e^{\frac{-\infty}{12}} + e^{\frac{-0}{12}}\right] \\
- & = -0 + 1 
+ & = -0 + 1 \\
  & = 1
 \end{align*}$$
 Entonces, como la integral da exactamente $1$, se tendrá que la función de densidad está bien definida.
