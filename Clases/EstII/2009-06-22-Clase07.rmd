@@ -132,7 +132,7 @@ Encontrando que al cumplir también la segunda condición que se requiere para q
 Se dice que un estimador `$\hat{\theta}$` es suficiente para el parámetro `$\theta$`, cuando éste tiene tanta información sobre el parámetro como al propia muestra, es decir, cuando es capaz de recoger o resumir toda la información de la muestra aleatoria sin depender del parámetro que está intentando estimar.
 
 #### Teorema de Factorización Neyman
-Sea `$X_1, X_2, \ldots, X_n$` una muestra aleatoria de tamaño `$n$` de una distribución `$f(X;\theta)$`, entonces un estadístico `$\hat{\theta}$`basado en una muestra aleatoria es suficiente para la estimación de `$\theta$` si y solo si se puede factorizar en dos funciones no negativas.
+Sea `$X_1, X_2, \ldots, X_n$` una muestra aleatoria de tamaño `$n$` de una distribución `$f(X;\theta)$`, entonces un estadístico `$\hat{\theta}$` basado en una muestra aleatoria es suficiente para la estimación de `$\theta$` si y solo si se puede factorizar en dos funciones no negativas.
 `\begin{align*}
   L(X_1, X_2, \ldots, X_n|\theta) = g(\hat{\theta}, \theta)h(X_1, X_2,\ldots, X_n)
 \end{align*}`
