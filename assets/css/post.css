@@ -98,7 +98,7 @@ figure{margin:1em 380px}
 /* MathJax */
 
 .MathJax_Display{text-align:center!important; overflow: auto; overflow-y: hidden}
-tt{font-size:130%;}
+tt{font-size:100%;} /* por qué estaba en 130?*/
 
 /* Botoncitos */
 body {padding:auto;}
