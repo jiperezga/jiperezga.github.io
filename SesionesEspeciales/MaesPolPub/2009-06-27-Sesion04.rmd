@@ -515,7 +515,7 @@ library(kableExtra)
 tablita <- cbind(
   "Prueba" = c("Kolmogorov–Smirnov", "Cramér–von Mises", "Anderson–Darling", "Kuiper", "QQPlot"),
   "Librería" = c("truncgof", "truncgof", "truncgof", "truncgof", "car"),
-  "Función" = c("ks.test()", "w2.test()", "ad.test()", "v.test()", "qqPlot"))
+  "Función" = c("ks.test()", "w2.test()", "ad.test()", "v.test()", "qqPlot()"))
 
 kable(tablita, 
   format = "html", booktabs = T) %>%
@@ -586,7 +586,7 @@ library(kableExtra)
 tablita <- cbind(
   "Prueba" = c("Shapiro-Wilk", "Lilliefors", "Shapiro-Francia", "Cramer Von-Mises", "Anderson-Darling", "QQPlot"),
   "Librería" = c("stats", "nortest", "nortest", "nortest", "nortest", "car"),
-  "Función" = c("shapiro.test()", "lillie.test()", "sf.test()", "cvm.test()", "ad.test()", "qqPlot"))
+  "Función" = c("shapiro.test()", "lillie.test()", "sf.test()", "cvm.test()", "ad.test()", "qqPlot()"))
 
 kable(tablita, 
   format = "html", booktabs = T) %>%
