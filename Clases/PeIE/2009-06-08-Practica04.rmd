@@ -84,6 +84,7 @@ Construya un intervalo de confianza del `$95\%$` para el contenido promedio de t
   </li>
   <li> Cual es la probabilidad de que la estatura promedio de todos los estudiantes sea a lo sumo $172$ centímetros, si suponemos que las alturas se distribuyen <i>iid</i> con desviación estándar de $7.3$ centímetros.
   </li>
+</ol>
 8. Dos marcas de refrigeradores, denotadas por `$A$` y `$B$` poseen garantías de `$1$` año. Suponga que en una muestra aleatoria de `$50$` refrigeradores de la marca `$A$`, se observó que `$12$` de ellos fallaron antes de terminar el periodo de garantía, mientras que, una muestra aleatoria independiente de `$60$` refrigeradores de la marca `$B$` también reveló que `$12$` de ellos fallaron durante el período de garantía.
 <ol type ="a">
   <li> Calcule la probabilidad de que la proporción de refrigeradores que fallan durante el periodo de garantía para la marca $A$ sea superior la proporción de refrigeradores de la marca $B$ que fallan durante el periodo de garantía. </li>
