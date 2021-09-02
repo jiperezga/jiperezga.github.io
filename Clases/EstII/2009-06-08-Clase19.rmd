@@ -105,7 +105,7 @@ En donde el criterio de decisión estará dado, la región crítica, la cual est
 
 o el P-valor, el cual estará dado por
 `\begin{align*}
- \text{P-valor} = 2\times min(\mathbb{P}(F_{1,n-2} < F_c), \mathbb{P}(F_{1,n-2} > F_c))
+ \text{P-valor} =  \mathbb{P}(F_{1,n-2} > F_c)
 \end{align*}`
 
 donde si P-valor es menor al nivel de significancia `$\alpha$` se rechaza la hipótesis nula y se concluye que el modelo lineal propuesto es significativo para explicar el comportamiento `$Y$`.
@@ -120,7 +120,7 @@ y representa la proporción de variación total de `$Y$`, explicada por su relac
 
 Dado que `$R^2$` se encuentra entre `$0$` y `$1$`, entonces valores cercanos a cero indican que la relación entre `$X$` y `$Y$` es muy pobre, mientras que, valores cercanos a uno, indican que la recta ajustada se aproxima relativamente bien a los puntos.
 
-**Nota**: Un `$R^2$`alto no garantiza necesariamente que el modelo regresión lineal ajustado sea adecuado para los datos, debido que hay factores que afectan a este valor, como lo es el número de datos usados. 
+**Nota**: Un `$R^2$` alto no garantiza necesariamente que el modelo regresión lineal ajustado sea adecuado para los datos, debido que hay factores que afectan a este valor, como lo es el número de datos usados. 
 
 ## Respuesta media y predicción de nuevas observaciones
 Una importante utilidad del modelo de regresión es que nos permite la estimación de la media de la distribución de `$Y$` para un valor dado de `$X$`, y además nos permite realizar predicciones sobre una nueva variable `$y_0$` correspondiente a un nivel especificado de variables `$x_0$`.
@@ -168,7 +168,7 @@ Pero en este al ser un valor predicho tendremos que estimar la    varianza de la
 Entonces, un intervalo de confianza del `$100(1-\alpha)\%$` para un valor predicho `$y_0$`, se puede construir de la forma
 
 `\begin{align*}
- y_0 \pm t_{\frac{\alpha}{2}, n-2} \sqrt{\hat{sigma}^2_e\left[1+\frac{1}{n}+ \frac{(x_0 - \bar{X})^2}{S_{xx}}\right]}
+ y_0 \pm t_{\frac{\alpha}{2}, n-2} \sqrt{\hat{\sigma}^2_e\left[1+\frac{1}{n}+ \frac{(x_0 - \bar{X})^2}{S_{xx}}\right]}
 \end{align*}`
 
 Es de anotar que si se decide construir un intervalo de confianza para todos los posibles valores de X, se obtendrán las bandas de confianza del `$100(1-\alpha)\%$` para la predicción individual.
