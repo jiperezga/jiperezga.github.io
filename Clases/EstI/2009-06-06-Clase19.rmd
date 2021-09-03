@@ -272,7 +272,7 @@ Para realizar la aproximación de binomial a normal, se debe usar un factor de c
 <button id="Hide4" class="btn btn-info">Ocultar Ejercicio</button>
 <main id="botoncito4"> 
 <h3 data-toc-skip> Ejercicio </h3> 
-<p>Suponga que el ministerio de salud realiza un estudio sobre la probabilidad de que una persona de $40$ años muera antes de la edad de jubilación a los $62$ años, y encuentra que dicha probabilidad es de $15\%$. Si se toma como referencia un grupo de $1500$ personas que posee $40$ años de edad, cuál es la probabilidad de que menos de $225$ muera antes de la edad de jubilación?.</p>
+<p>Suponga que el ministerio de salud realiza un estudio sobre la probabilidad de que una persona de $40$ años muera antes de la edad de jubilación a los $62$ años, y encuentra que dicha probabilidad es de $15\%$. Si se toma como referencia un grupo de $1500$ personas que posee $40$ años de edad, cuál es la probabilidad de que menos de $220$ muera antes de la edad de jubilación?.</p>
  
 <h3 data-toc-skip> Solución </h3> 
 <p>En este caso estamos interesados en calcular cuál es la probabilidad de que menos de $220$ personas mueran antes de los $62$ años, y se toma como grupo de estudio un total de $1500$ personas, sabiendo que la probabilidad de que mueran antes de los $62$ es del $15\%$, es decir, tenemos que $X\sim b(n=1500, p=0.15)$, y deseamos calcular 
