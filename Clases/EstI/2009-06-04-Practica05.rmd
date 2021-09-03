@@ -103,6 +103,8 @@ Calcule el segundo momento central.
 </li>
 <li> ¿Cuál es la probabilidad de que la llegada del próximo taxi tarde al menos $40$ segundos, si ya han pasado $20$ segundos y aún no llega ningún taxi al acopio del metro?
 </li>
+<li> ¿Cuál es la probabilidad de que lleguen al acopio más de $10$ pero no menos de $15$ taxis en un intervalo de $20$ minutos.
+</li>
 </ol>
 8. Demuestre que el `$r$`-ésimo momento alrededor del origen de la distribución gamma es
 `\begin{align*}
