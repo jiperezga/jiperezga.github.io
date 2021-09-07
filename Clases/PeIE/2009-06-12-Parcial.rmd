@@ -5,7 +5,7 @@ main-class: 'presentaciones'
 permalink: /ProbabilidadeInferencia/PeIE:title.html
 tags:
 
-introduction: Parcial I
+introduction: Parcial II
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
