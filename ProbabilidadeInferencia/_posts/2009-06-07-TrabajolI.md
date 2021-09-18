@@ -49,58 +49,46 @@ trabajo. No duden en escribirme.
 
 ## Bases de datos
 
--   [Aguirre Monsalve
-    Alejandra](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1020495555.xlsx){:target="\_blank"}
--   [Arroyave Murillo Juan
-    Diego](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1007368680.xlsx){:target="\_blank"}
+-   [Alvarez Jaramillo
+    Mateo](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1001420406.xlsx){:target="\_blank"}
 -   [Ascanio Estrada Andres
     Leonardo](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1065894729.xlsx){:target="\_blank"}
--   [Caballero Castañeda Sebastian
-    Eduardo](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1010010607.xlsx){:target="\_blank"}
--   [Cuaical Tapie William
-    Daniel](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1007292685.xlsx){:target="\_blank"}
--   [Escorcia Pajaro Valery
-    Estefy](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1002244380.xlsx){:target="\_blank"}
--   [Florez Gallego Maria
-    Paulina](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1000549222.xlsx){:target="\_blank"}
--   [Herrera Giraldo
-    Laura](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1001017464.xlsx){:target="\_blank"}
--   [Hincapie Gomez Leidy
-    Tatiana](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1010122767.xlsx){:target="\_blank"}
+-   [Atehortua Bedoya
+    Natalia](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1000439514.xlsx){:target="\_blank"}
+-   [Bravo Carpio
+    Evelio](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1143393216.xlsx){:target="\_blank"}
+-   [Camelo Carrillo Christiam
+    Jose](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1007665627.xlsx){:target="\_blank"}
+-   [Ceballos Alvarez Miguel
+    Angel](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1001226139.xlsx){:target="\_blank"}
+-   [Duque Daza Andres
+    Felipe](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1152706282.xlsx){:target="\_blank"}
+-   [Garrido Rodriguez Peter
+    Daniel](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1085952515.xlsx){:target="\_blank"}
+-   [Gonzalez Gonzalez
+    Valeria](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1000099730.xlsx){:target="\_blank"}
 -   [Longas Rivas Jhon
     Alexánder](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1193326786.xlsx){:target="\_blank"}
+-   [López Serna
+    Kateryn](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1020453931.xlsx){:target="\_blank"}
+-   [Martinez Gutierrez Cesar
+    Andres](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1063082773.xlsx){:target="\_blank"}
 -   [Mosquera Franco Arthur
     Jose](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1003073445.xlsx){:target="\_blank"}
--   [Niño Valderrama
-    Nicolás](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1017241764.xlsx){:target="\_blank"}
--   [Noreña Cadavid
-    Susana](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1000748392.xlsx){:target="\_blank"}
--   [Pantoja Quiscualtud Alexandra
-    Carolina](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1087425594.xlsx){:target="\_blank"}
--   [Perez Castilla Karen
-    Marcela](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1005605305.xlsx){:target="\_blank"}
--   [Polo Pineda
-    Daniela](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1000085308.xlsx){:target="\_blank"}
--   [Puerta Campo Rosa
-    Alejandra](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1002389631.xlsx){:target="\_blank"}
--   [Puerta Dussan
-    Stefania](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1007286384.xlsx){:target="\_blank"}
--   [Ramirez Lopez
-    Santiago](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1037669252.xlsx){:target="\_blank"}
--   [Reyes Anaya Karol
-    Melissa](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1098757410.xlsx){:target="\_blank"}
 -   [Rico Mejia
     Cristian](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1037654941.xlsx){:target="\_blank"}
--   [Vargas Cely Andrea
-    Juliana](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1010149009.xlsx){:target="\_blank"}
--   [Vasquez Ortiz Carlos
-    Enrique](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1003004985.xlsx){:target="\_blank"}
--   [Velasquez Cañas Maria
-    Alejandra](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1000567192.xlsx){:target="\_blank"}
--   [Velez Osorno
-    Daniel](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1037667652.xlsx){:target="\_blank"}
--   [Zarate Miranda Gabriela
-    Andrea](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1017274210.xlsx){:target="\_blank"}
+-   [Rios Cañas
+    Dahiana](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1001639373.xlsx){:target="\_blank"}
+-   [Rios Muñoz
+    Emanuel](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1017276598.xlsx){:target="\_blank"}
+-   [Rojas Pérez Miguel
+    Ángel](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1000748322.xlsx){:target="\_blank"}
+-   [Simmonds Jaimes
+    Gabriela](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1002579812.xlsx){:target="\_blank"}
+-   [Toro Lopez
+    Mateo](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1001469363.xlsx){:target="\_blank"}
+-   [Yepes Serna Cristian
+    Mateo](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1007417936.xlsx){:target="\_blank"}
 
 <h1>
 Mucha Suerte!
