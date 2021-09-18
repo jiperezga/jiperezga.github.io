@@ -41,7 +41,7 @@ Recuerden que si van a hacer el trabajo en parejas, deben unir las dos
 bases de datos, ya sea en R o sea en Excel.
 
 Quedo atento a cualquier duda o inquietud que les surja durante el
-trabajo. No duden en escribirme.
+trabajo. No duden en escribirme!!!
 
 ## Enunciado trabajo
 

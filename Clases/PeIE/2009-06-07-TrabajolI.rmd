@@ -43,12 +43,12 @@ El trabajo deberá solucionarse y enviar los resultado con los análisis corresp
 
 Recuerden que si van a hacer el trabajo en parejas, deben unir las dos bases de datos, ya sea en R o sea en Excel.
 
-Quedo atento a cualquier duda o inquietud que les surja durante el trabajo. No duden en escribirme.
+Quedo atento a cualquier duda o inquietud que les surja durante el trabajo. No duden en escribirme!!!
 
-## Enunciado trabajo 
+## Enunciado trabajo
 * [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/TrabajoInferencia.pdf){:target="_blank"}
 
-## Bases de datos 
+## Bases de datos
 
 * [Alvarez Jaramillo Mateo](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1001420406.xlsx){:target="_blank"}
 * [Ascanio Estrada Andres Leonardo](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1065894729.xlsx){:target="_blank"}
