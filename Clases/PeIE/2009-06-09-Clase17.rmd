@@ -544,7 +544,7 @@ Sea `$X_{1,1}, X_{1,2}, \ldots, X_{1,n_1}$` y `$X_{2,1}, X_{2,2}, \ldots, X_{2,n
 <main id="botoncito11"> 
 <h3 data-toc-skip> Ejercicio </h3> 
 <p>Se aplican pruebas a $10$ cables conductores soldados a un dispositivo  semiconductor con el fin de determinar su resistencia a la tracción. Las pruebas demostraron que para romper la unión se requiere las libras de fuerza que se listan a continuación. </p>
-<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -4rem; margin-top: -4rem; font-size: 120%;">
+
 <table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
   <tr>
@@ -562,9 +562,9 @@ Sea `$X_{1,1}, X_{1,2}, \ldots, X_{1,n_1}$` y `$X_{2,1}, X_{2,2}, \ldots, X_{2,n
     </tr>
 </thead>
 </table>
-</pre>
+
 <p>Otra conjunto de $8$ cables conductores que forman otro dispositivo, se encapsulan y se prueban para determinar si el encapsulado aumenta la resistencia a la tracción, obteniendo para este caso se requirieron las siguientes libras de fuerza para romper la unión</p>
-<pre style="font-family: 'Open Sans',sans-serif; margin-bottom: -4rem; margin-top: -4rem; font-size: 120%;">
+
 <table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
   <tr>
@@ -580,7 +580,7 @@ Sea `$X_{1,1}, X_{1,2}, \ldots, X_{1,n_1}$` y `$X_{2,1}, X_{2,2}, \ldots, X_{2,n
     </tr>
 </thead>
 </table>
-</pre>
+
 <p>Si se supone que las resistencias a la tracción se distribuyen normalmente, construya un intervalo del $90\%$ para la razón de varianzas entre la variabilidad de los cables sin encapsulado y la variabilidad de los cables con encapsulado. Es posible afirmar que la variabilidad de de los cables con encapsulado es superior a los cables sin encapsulado?
 </p>
 <h3 data-toc-skip> Solución </h3> 
