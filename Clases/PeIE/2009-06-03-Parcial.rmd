@@ -53,7 +53,7 @@ Recuerden interpretar todos los resultados en el contexto del enunciado!!!!
 * [Gonzalez Gonzalez Valeria](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1000099730.pdf){:target="_blank"}
 * [Longas Rivas Jhon Alexánder](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1193326786.pdf){:target="_blank"}
 * [Martinez Gutierrez Cesar Andres](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1063082773.pdf){:target="_blank"}
-* [Rios Cañas Dahiana](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1001639373.pdf){:target="_blank"
+* [Rios Cañas Dahiana](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1001639373.pdf){:target="_blank"}
 * [Rojas Pérez Miguel Ángel](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1000748322.pdf){:target="_blank"}
 * [Toro Lopez Mateo](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1001469363.pdf){:target="_blank"}
 * [Yepes Serna Cristian Mateo](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1007417936.pdf){:target="_blank"}
