@@ -44,7 +44,7 @@ En este sentido, este curso está diseñado para proveer al estudiante con un s�
 
 ## Objetivo general
 
-Que el estudiante adquiera los elementos básicos de la teoría de la probabilidad y sus aplicaciones. Que desarrolle las técnicas de la estadística descriptiva por el medio de manejo de calculadora y el paquete estadístico <tt>R</tt> en el computador. Lo anterior servirá como base para desarrollar posteriormente en la estadística II, la estadística inferencial (estimación, prueba de hipótesis, predicción) y de algunas técnicas usadas en el muestreo estadístico.
+Que el estudiante adquiera los elementos básicos de la teoría de la probabilidad y sus aplicaciones. Que desarrolle las técnicas de la estadística descriptiva por el medio de manejo de calculadora y el paquete estadístico <tt>R</tt> en el computador. Lo anterior servirá como base para desarrollar posteriormente en estadística II, la estadística inferencial (estimación, prueba de hipótesis, predicción) y de algunas técnicas usadas en el muestreo estadístico.
 
 ## Objetivo específico
 * Trabajar la estadística descriptiva por medio de las distribuciones de frecuencias y de gráficos. Utilizar el computador y la calculadora como herramientas adicionales y a la vez saber interpretar los resultados que estos instrumentos arrojan.

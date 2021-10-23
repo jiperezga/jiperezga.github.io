@@ -28,8 +28,7 @@ csl: "../../apa.csl"
 
 
 
-Descripción general del curso
------------------------------
+## Descripción general del curso
 
 La mayoría de los datos disponibles en la amplia gama de áreas del
 conocimiento, entre las cuales se encuentran las ciencias económicas,
@@ -51,19 +50,17 @@ son presentados en la manera más precisa y rigurosa posible. El curso
 contiene numerosos ejemplos de aplicaciones, tanto teóricas como con
 datos reales.
 
-Objetivo general
-----------------
+## Objetivo general
 
 Que el estudiante adquiera los elementos básicos de la teoría de la
 probabilidad y sus aplicaciones. Que desarrolle las técnicas de la
 estadística descriptiva por el medio de manejo de calculadora y el
 paquete estadístico <tt>R</tt> en el computador. Lo anterior servirá
-como base para desarrollar posteriormente en la estadística II, la
+como base para desarrollar posteriormente en estadística II, la
 estadística inferencial (estimación, prueba de hipótesis, predicción) y
 de algunas técnicas usadas en el muestreo estadístico.
 
-Objetivo específico
--------------------
+## Objetivo específico
 
 -   Trabajar la estadística descriptiva por medio de las distribuciones
     de frecuencias y de gráficos. Utilizar el computador y la
@@ -74,8 +71,7 @@ Objetivo específico
 -   Conocer las distribuciones de probabilidades tanto discretas como
     continuas, proporcionando áreas de aplicaciones a cada una de ellas.
 
-Unidades detalladas
--------------------
+## Unidades detalladas
 
 ### Unidad No.1: Estadística Descriptiva
 
@@ -135,8 +131,7 @@ Unidades detalladas
 -   Momentos
 -   Funciones generadoras de momentos
 
-Metodología
------------
+## Metodología
 
 El desarrollo del curso se hará fundamentalmente con base en la
 exposición magistral de los temas que el programa contempla y los
@@ -147,8 +142,7 @@ empleados en la comunidad científica para análisis estadístico, análisis
 predictivo, procesamiento y visualización de gran volumen de
 información, etcétera.
 
-Evaluación del curso
---------------------
+## Evaluación del curso
 
 <table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
@@ -227,8 +221,7 @@ Décimo cuarta semana
 </tbody>
 </table>
 
-Malla curricular Programas
---------------------------
+## Malla curricular Programas
 
 [Administración de
 Empresas](http://www.udea.edu.co/wps/wcm/connect/udea/af91e1c8-2160-4da1-b77c-75a857af84f7/MallaProgramaAdmon.pdf?MOD=AJPERES&CVID=ljvFNrm){:target="\_blank"}
@@ -241,8 +234,7 @@ Versión 8.
 [Economía](http://www.udea.edu.co/wps/wcm/connect/udea/8c28c40c-ebe3-4211-be14-8d49c8b7efd4/Malla+Version+7.0+agosto2015.pdf?MOD=AJPERES&CVID=kZxI1y6){:target="\_blank"}
 Versión 7.
 
-Bibliografía del curso
-----------------------
+## Bibliografía del curso
 
 Canavos, G., Meyer, P., Spiegel, M., y Mendenhall, S. (1988).
 Probabilidad y estadística. McGraw-Hill, Primera edición.
