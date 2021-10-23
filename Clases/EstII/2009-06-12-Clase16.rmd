@@ -45,7 +45,7 @@ opts_chunk$set(echo=TRUE,
 ```
 
 ## Prueba de bondad de ajuste
-Las pruebas de bondad de ajuste **son un contraste de hipótesis para determinar el grado o nivel de ajuste de nuestros datos a una distribución teórica**.
+Las pruebas de bondad de ajuste **son un contraste de hipótesis para determinar el grado o nivel de ajuste de nuestros datos a una distribución teórica**. 
 
 Estas pruebas se basan en la comparación de las frecuencias de ocurrencia observadas en una muestra empírica y las frecuencias esperadas de una distribución teórica. En donde, el objetivo será si existe o no discrepancia entre los valores observados y los valores esperados de la distribución de interés.
 
