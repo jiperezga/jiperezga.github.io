@@ -559,7 +559,7 @@ f(x\leq1.3, y) =& \int_{0}^{1.3} \frac{1}{42}xy^2 \text{ d}x \\
                =& 0.0201y^2
 \end{align*}$$
 
-seguidamente, será necesario calcular $g(x\leq1.3$ mediante la integral
+seguidamente, será necesario calcular $g(x\leq1.3)$ mediante la integral
 
 $$\begin{align*}
 g(x\leq1.3) =& \int_0^{1.3}\frac{1}{2}x \text{ d}x \\
