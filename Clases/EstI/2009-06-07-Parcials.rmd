@@ -38,7 +38,7 @@ opts_chunk$set(echo=TRUE,
                cache = FALSE)
 ```
 # Supletorio
-El Supletorio deberá solucionarse y enviar los resultado (escanear o tomar foto a la hoja resuelta) a más tardar a las 12:00 m, al correo electrónico <a target="_blank" href="mailto:jivan.perez@udea.edu.co"> jivan.perez@udea.edu.co</a>. 
+El Supletorio deberá solucionarse y enviar los resultado (escanear o tomar foto a la hoja resuelta) a más tardar a las 1:00 pm, al correo electrónico <a target="_blank" href="mailto:jivan.perez@udea.edu.co"> jivan.perez@udea.edu.co</a>. 
 
 # Nota
 **Recuerden interpretar todos los resultados** en el contexto del enunciado!!!, no hacerlo les va hacer perder punto!!!! >:c
