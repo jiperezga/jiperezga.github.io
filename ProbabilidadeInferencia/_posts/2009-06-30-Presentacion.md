@@ -271,7 +271,7 @@ Distribuciones muestrales e intervalos de confianza
 Decimosexta semana
 </td>
 <td style="text-align:left;width: 3cm; ">
-Parejas
+Individual
 </td>
 </tr>
 <tr>
@@ -288,7 +288,7 @@ Pruebas de Hipótesis
 Sexta semana
 </td>
 <td style="text-align:left;width: 3cm; ">
-Individual
+Parejas
 </td>
 </tr>
 <tr>
