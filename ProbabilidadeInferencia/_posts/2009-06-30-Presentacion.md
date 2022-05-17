@@ -1,27 +1,25 @@
 ---
-layout: post
-title: "Presentación Curso"
-main-class: 'presentacion'
-permalink: /ProbabilidadeInferencia/PeIE:title.html
-tags:
-
+always_allow_html: yes
+bibliography: ../../referencias.bib
+csl: ../../apa.csl
+header-includes:
+- 
+- 
+- 
 introduction: |
   Presentación del curso de Probabilidad e inferencia estadística. <br/>
   Generalidades a tener en cuenta.
-header-includes:
-   - \usepackage{amsmath,amssymb,amsthm,amsfonts}
-   - \usepackage[sectionbib]{natbib}
-   - \usepackage[hidelinks]{hyperref}
+knit: "(function(inputFile, encoding) { rmarkdown::render(inputFile,
+  encoding = encoding, output\\_dir =
+  “../../ProbabilidadeInferencia/\\_posts/“, output\\_format =”all” ) })"
+layout: post
+main-class: presentacion
 output:
   md_document:
-    variant: markdown_strict+backtick_code_blocks+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash
-    preserve_yaml: TRUE
-always_allow_html: yes   
-knit: (function(inputFile, encoding) {
-  rmarkdown::render(inputFile, encoding = encoding,
-  output_dir = "../../ProbabilidadeInferencia/_posts/", output_format = "all"  ) })
-bibliography: "../../referencias.bib"
-csl: "../../apa.csl"
+    preserve_yaml: true
+    variant: markdown\_strict+backtick\_code\_blocks+autolink\_bare\_uris+ascii\_identifiers+tex\_math\_single\_backslash
+permalink: "/ProbabilidadeInferencia/PeIE:title.html"
+title: Presentación Curso
 ---
 
 
@@ -30,8 +28,7 @@ csl: "../../apa.csl"
 
 
 
-Descripción general del curso
------------------------------
+## Descripción general del curso
 
 Los ingenieros industriales se enfrentan a múltiples problemas en los
 que deben tomar decisiones que pueden llegar a ser trascendentales en
@@ -56,14 +53,12 @@ Financiera, Ingeniería Económica, Administración I, Administración II,
 Evaluación de Proyectos, Emprendimiento y Formulación de Proyectos de
 Investigación.
 
-Unidad de competencia
----------------------
+## Unidad de competencia
 
 Modelar sistemas y procesos haciendo uso de herramientas matemáticas,
 estadísticas y computacionales para la toma de decisiones.
 
-Elementos de competencia
-------------------------
+## Elementos de competencia
 
 -   Obtener información de un proceso a partir de datos representativos
     tomados de él, haciendo uso de herramientas de la estadística
@@ -72,8 +67,7 @@ Elementos de competencia
     proceso de acuerdo con la teoría de la probabilidad y la inferencia
     estadística.
 
-Metodología
------------
+## Metodología
 
 El curso se desarrolla con sesiones teóricas en el aula de clase y
 sesiones prácticas en sala de cómputo. Se busca que algunas clases se
@@ -84,8 +78,7 @@ de la ingeniería industrial en el contexto actual, al analizar una base
 de datos multivariada y usando como herramienta software estadístico
 actualizado.
 
-Temática detallada
-------------------
+## Temática detallada
 
 ### Fundamentos de probabilidad
 
@@ -185,8 +178,7 @@ Temática detallada
     -   Lilliefors
     -   Chi cuadrado de Pearson
 
-Evaluación del curso
---------------------
+## Evaluación del curso
 
 Los instrumentos de evaluación de cada módulo se llevan a cabo, mediante
 exámenes escritos individuales y proyectos elaborados en equipo, los
@@ -236,7 +228,7 @@ Individual
 Trabajo No.1
 </td>
 <td style="text-align:left;">
-15%
+20%
 </td>
 <td style="text-align:left;width: 5cm; ">
 Estadística Descriptiva
@@ -267,10 +259,10 @@ Individual
 </tr>
 <tr>
 <td style="text-align:left;">
-Trabajo No.2
+Examen No.3
 </td>
 <td style="text-align:left;">
-15%
+20%
 </td>
 <td style="text-align:left;width: 5cm; ">
 Distribuciones muestrales e intervalos de confianza
@@ -284,10 +276,10 @@ Parejas
 </tr>
 <tr>
 <td style="text-align:left;">
-Examen No.3
+Trabajo No.2
 </td>
 <td style="text-align:left;">
-20%
+15%
 </td>
 <td style="text-align:left;width: 5cm; ">
 Pruebas de Hipótesis
@@ -304,7 +296,7 @@ Individual
 Seguimiento
 </td>
 <td style="text-align:left;">
-15%
+10%
 </td>
 <td style="text-align:left;width: 5cm; ">
 Seguimiento
@@ -319,36 +311,34 @@ Individual
 </tbody>
 </table>
 
-Malla curricular Programas
---------------------------
+## Malla curricular Programas
 
 [Ingeniería
-Industrial](https://sites.google.com/site/mallasingindustrial/_/rsrc/1467895226507/version-8-estudiantes-2011-1-a-201-1/Malla%20versi%C3%B3n%207%20Ing%20Industrial.png){:target="\_blank"}
+Industrial](https://sites.google.com/site/mallasingindustrial/_/rsrc/1467895226507/version-8-estudiantes-2011-1-a-201-1/Malla%20versi%C3%B3n%207%20Ing%20Industrial.png){:target=“\_blank”}
 Versión 7.
 
 [Ingeniería
-Industrial](https://sites.google.com/site/mallasingindustrial/_/rsrc/1467895226323/version-8-estudiantes-2011-1-a-201/Malla%20versi%C3%B3n%208%20Ing%20Industrial.png){:target="\_blank"}
+Industrial](https://sites.google.com/site/mallasingindustrial/_/rsrc/1467895226323/version-8-estudiantes-2011-1-a-201/Malla%20versi%C3%B3n%208%20Ing%20Industrial.png){:target=“\_blank”}
 Versión 8.
 
 [Ingeniería
-Industrial](https://sites.google.com/site/mallasingindustrial/_/rsrc/1467895228876/home/Malla%20versi%C3%B3n%209%20Ing%20Industrial.png){:target="\_blank"}
+Industrial](https://sites.google.com/site/mallasingindustrial/_/rsrc/1467895228876/home/Malla%20versi%C3%B3n%209%20Ing%20Industrial.png){:target=“\_blank”}
 Versión 9.
 
-Bibliografía del curso
-----------------------
+## Bibliografía del curso
 
 Canavos, G., Meyer, P., Spiegel, M., y Mendenhall, S. (1988).
 Probabilidad y estadística. McGraw-Hill, Primera edición.
-[(Link)](https://gsosa61.files.wordpress.com/2008/03/10-canavos-g-probabilidad-y-estadistica-aplicaciones-y-metodos.pdf){:target="\_blank"}
+[(Link)](https://gsosa61.files.wordpress.com/2008/03/10-canavos-g-probabilidad-y-estadistica-aplicaciones-y-metodos.pdf){:target=“\_blank”}
 
 Devore, J. (2015). Probability and Statistics for Engineering and the
 Sciences. Cengage Learning. Ninth edition.
-[(Descargar)](http://booksdl.org/get.php?md5=98c7c798530f9d7287e36760b999fae3){:target="\_blank"}
+[(Descargar)](http://booksdl.org/get.php?md5=98c7c798530f9d7287e36760b999fae3){:target=“\_blank”}
 
 Wackerly, D., Muñoz, R., y Humbertotr, J. (2010). Estadística matemática
 con aplicaciones. Cengage Learning, Séptima edición.
-[(Link)](https://www.cimat.mx/ciencia_para_jovenes/bachillerato/libros/%5BWackerly,Mendenhall,Scheaffer%5DEstadistica_Matematica_con_Aplicaciones.pdf){:target="\_blank"}
+[(Link)](https://www.cimat.mx/ciencia_para_jovenes/bachillerato/libros/%5BWackerly,Mendenhall,Scheaffer%5DEstadistica_Matematica_con_Aplicaciones.pdf){:target=“\_blank”}
 
 Walpole, R. , Myers, R. , Myers, S. , y Ye, K. (2012). Probabilidad y
 estadística para ingeniería y ciencias. Pearson, Novena edición.
-[(Link)](https://vereniciafunez94hotmail.files.wordpress.com/2014/08/8va-probabilidad-y-estadistica-para-ingenier-walpole_8.pdf){:target="\_blank"}
+[(Link)](https://vereniciafunez94hotmail.files.wordpress.com/2014/08/8va-probabilidad-y-estadistica-para-ingenier-walpole_8.pdf){:target=“\_blank”}
