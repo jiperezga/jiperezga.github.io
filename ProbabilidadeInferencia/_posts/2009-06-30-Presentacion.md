@@ -1,32 +1,28 @@
 ---
-always_allow_html: yes
-bibliography: ../../referencias.bib
-csl: ../../apa.csl
-header-includes:
-- 
-- 
-- 
+layout: post
+title: "Presentación Curso"
+main-class: 'presentacion'
+permalink: /ProbabilidadeInferencia/PeIE:title.html
+tags:
+
 introduction: |
   Presentación del curso de Probabilidad e inferencia estadística. <br/>
   Generalidades a tener en cuenta.
-knit: "(function(inputFile, encoding) { rmarkdown::render(inputFile,
-  encoding = encoding, output\\_dir =
-  “../../ProbabilidadeInferencia/\\_posts/“, output\\_format =”all” ) })"
-layout: post
-main-class: presentacion
+header-includes:
+   - \usepackage{amsmath,amssymb,amsthm,amsfonts}
+   - \usepackage[sectionbib]{natbib}
+   - \usepackage[hidelinks]{hyperref}
 output:
   md_document:
-    preserve_yaml: true
-    variant: markdown\_strict+backtick\_code\_blocks+autolink\_bare\_uris+ascii\_identifiers+tex\_math\_single\_backslash
-permalink: "/ProbabilidadeInferencia/PeIE:title.html"
-title: Presentación Curso
+    variant: markdown_strict+backtick_code_blocks+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash
+    preserve_yaml: TRUE
+always_allow_html: yes   
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding,
+  output_dir = "../../ProbabilidadeInferencia/_posts/", output_format = "all"  ) })
+bibliography: "../../referencias.bib"
+csl: "../../apa.csl"
 ---
-
-
-
-
-
-
 
 ## Descripción general del curso
 
