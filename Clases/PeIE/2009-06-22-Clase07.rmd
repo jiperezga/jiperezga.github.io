@@ -311,7 +311,7 @@ También es posible que se quieran realizar operaciones lógicas entre objetos c
 ```{r echo=FALSE}
 datos2 <- cbind(
   "Operación" = c("Igual que", "Distinto que", "Menor que", "Menor o igual que", "Mayor que", "Mayor o igual que", "Conjunción", "Disyunción", "Negación", "Asignación"),
-  "Operador en R" = c("==", "!=", "<", "<=", ">", ">=", "&", "|", "!", "<-"),
+  "Operador en R" = c("==", "!=", "<", "<=", ">", ">=", "&", "\\|", "!", "<-"),
   "Precedencia" = c(4, 4, 4, 4, 4, 4, 5, 5, 6, 7))
 
 kable(datos2, 
@@ -319,8 +319,10 @@ kable(datos2,
 kable_styling("striped", full_width = F)
 ```
 
+
 ### Funciones matemáticas
 Hay una gran variedad de funciones matemáticas que suelen usarse en la práctica, y es por ello que se listan las funciones aritméticas que suelen emplearse comúnmente por lenguaje de programación. Estos se resumen en la siguiente tabla.
+
 
 ```{r echo=FALSE}
 datos2 <- cbind(
