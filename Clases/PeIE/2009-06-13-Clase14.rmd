@@ -257,7 +257,7 @@ Si `$X\sim b(n,p)$` con `$n$` grande `$(n\geq 100)$` y `$p$` pequeña `$(p\leq 0
 <button id="Hide3" class="btn btn-info">Ocultar Ejercicio</button>
 <main id="botoncito3"> 
 <h3 data-toc-skip> Ejercicio </h3> 
-<p>Suponga que al realizar un estudio sobre un proceso de producción, se encontró que el $3\%$ de los artículos producidos resultaba tener algún tipo de defecto. Si se producen $900$ artículos en un día, cuál es la probabilidad de que $30$ artículos o menos resulten tener algún tipo de defecto. Emplee tanto la distribución binomial como la aproximación a Poisson y comente sobre los resultados obtenidos.</p>
+<p>Suponga que al realizar un estudio sobre un proceso de producción, se encontró que el $3\%$ de los artículos producidos resultaba tener algún tipo de defecto. Si se producen $900$ artículos en un día, cuál es la probabilidad de que $30$ artículos o más resulten tener algún tipo de defecto. Emplee tanto la distribución binomial como la aproximación a Poisson y comente sobre los resultados obtenidos.</p>
 
 <h3 data-toc-skip> Solución </h3> 
 <p>En este caso estamos interesados en calcular una probabilidad binomial de un grupo $n$ de $900$ artículos, de los cuales se busca a que el número de artículos defectuosos $X$, sea de al menos $30$ defectuosos, sabiendo que la probabilidad de producir un artículo defectuoso es del $3\%$. Esto es
