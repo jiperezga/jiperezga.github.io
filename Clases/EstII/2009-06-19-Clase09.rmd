@@ -8,7 +8,6 @@ tags:
 introduction: |
               Estimación por intervalos. <br>
               - Intervalos de confianza para una media. <br>
-              - Error de estimación <br>
               
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
