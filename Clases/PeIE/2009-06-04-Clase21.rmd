@@ -319,9 +319,9 @@ Entre las pruebas de bondad de ajuste más usadas se tiene:
 library(kableExtra)
 
 tablita <- cbind(
-  "Prueba" = c("Kolmogorov–Smirnov", "Cramer–von Mises", "Anderson–Darling", "Kuiper", "QQPlot"),
-  "Librería" = c("truncgof", "truncgof", "truncgof", "truncgof", "car"),
-  "Función" = c("ks.test()", "w2.test()", "ad.test()", "v.test()", "qqPlot()"))
+  "Prueba" = c("Kolmogorov–Smirnov", "Cramer–von Mises", "Anderson–Darling", "QQPlot"),
+  "Librería" = c("stats", "goftest", "goftest", "car"),
+  "Función" = c("ks.test()", "cvm.test()", "ad.test()", "qqPlot()"))
 
 kable(tablita, 
   format = "html", booktabs = T) %>%
@@ -462,24 +462,25 @@ y para ello debemos inicialmente ajustar los parámetros de una distribución We
  (  3.286809) (  2.906706)
 </code></pre></section></section>
 
-<p> Una vez conocidos el valor de los parámetros de la distribución Weibull que ofrecen un mejor ajuste a los datos muestrales, tal que $\alpha = 33.781908$ y $\beta = 724.649562$, se procede al ajuste de la distribución mediante el empleo de la prueba Kuiper, mediante la función <tt>v.test</tt> de la librería <tt>truncgof</tt></p>
+<p> Una vez conocidos el valor de los parámetros de la distribución Weibull que ofrecen un mejor ajuste a los datos muestrales, tal que $\alpha = 33.781908$ y $\beta = 724.649562$, se procede al ajuste de la distribución mediante el empleo de la prueba Cramer-Von Mises, mediante la función <tt>cvm.test</tt> de la librería <tt>goftest</tt></p>
 
 <section class="language-r highlighter-rouge"><section class="highlight"><pre class="highlight"><code><span class="c1">## Se hace el ajuste de los datos a la distribución Weibull</span><span class="w">
-</span><span class="nf">library</span><span class="p">(</span><span class="n">truncgof</span><span class="p">)</span><span class="w">
-</span><span class="nf">v.test</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">datos</span><span class="p">,</span><span class="w"> </span><span class="n">distn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"pweibull"</span><span class="p">,</span><span class="w"> </span><span class="n">fit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">shape</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parametros</span><span class="o">$</span><span class="n">estimate</span><span class="p">[</span><span class="m">1</span><span class="p">],</span><span class="w">
-    </span><span class="n">scale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parametros</span><span class="o">$</span><span class="n">estimate</span><span class="p">[</span><span class="m">2</span><span class="p">]))</span><span class="w">
+</span><span class="nf">library</span><span class="p">(</span><span class="n">goftest</span><span class="p">)</span><span class="w">
+</span><span class="nf">cvm.test</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">datos</span><span class="p">,</span><span class="w"> </span><span class="n">null</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"pweibull"</span><span class="p">,</span><span class="w"> </span><span class="n">shape</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parametros</span><span class="o">$</span><span class="n">estimate</span><span class="p">[</span><span class="m">1</span><span class="p">],</span><span class="w">
+    </span><span class="n">scale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parametros</span><span class="o">$</span><span class="n">estimate</span><span class="p">[</span><span class="m">2</span><span class="p">])</span><span class="w">
 </span></code></pre></section></section>
 
-<section class="highlighter-rouge"><section class="highlight"><pre class="highlight"><code>    Kuiper Test
+<section class="highlighter-rouge"><section class="highlight"><pre class="highlight"><code>	Cramer-von Mises test of goodness-of-fit
+	Null hypothesis: Weibull distribution
+	with parameters shape = 33.781908, scale =
+	724.649562
+	Parameters assumed to be fixed
 
 data:  datos
-V = 1.2006, p-value = 0.24
-alternative hypothesis: NA
-
-treshold = -Inf, simulations: 100
+omega2 = 0.067026, p-value = 0.7718
 </code></pre></section></section>
 
-<p> Donde se observa que la prueba de bondad de ajuste arrojó un P-valor$=0.24$, por lo cual al ser mayor que al nivel de significancia $\alpha=0.05$, se concluirá que no hay evidencia en contra de rechazar la hipótesis nula de que los datos poseen una distribución Weibull con parámetro de forma $\alpha = 33.781908$ y parámetro de escala $\beta = 724.649562$. <br>
+<p> Donde se observa que la prueba de bondad de ajuste arrojó un P-valor$=0.7718$, por lo cual al ser mayor que al nivel de significancia $\alpha=0.05$, se concluirá que no hay evidencia en contra de rechazar la hipótesis nula de que los datos poseen una distribución Weibull con parámetro de forma $\alpha = 33.781908$ y parámetro de escala $\beta = 724.649562$. <br>
 <br>
 Adicionalmente, podemos ver el ajuste que tiene la distribución Weibull de parámetros $\alpha = 33.781908$ y $\beta = 724.649562$, mediante un QQ-plot, tal que </p>
 
@@ -512,8 +513,8 @@ parametros
 
 ```{r echo = FALSE, eval = FALSE}
 ## Se hace el ajuste de los datos a la distribución Weibull
-library(truncgof)
-v.test(x = datos, distn = "pweibull", fit = list(shape = parametros$estimate[1], scale = parametros$estimate[2]))
+library(goftest)
+cvm.test(x = datos, distn = "pweibull", shape = parametros$estimate[1], scale = parametros$estimate[2])
 ```
 
 ```{r echo = FALSE, eval = FALSE}
