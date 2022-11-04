@@ -1,0 +1,61 @@
+---
+layout: post
+title: "Parcial III"
+main-class: 'presentaciones'
+permalink: /EstadisticaII/EstII:title.html
+tags:
+
+introduction: Parcial III
+
+header-includes:
+   - \usepackage{amsmath,amssymb,amsthm,amsfonts}
+   - \usepackage[sectionbib]{natbib}
+   - \usepackage[hidelinks]{hyperref}
+output:
+  md_document:
+    variant: markdown_strict+backtick_code_blocks+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash
+    preserve_yaml: TRUE
+always_allow_html: yes   
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding,
+  output_dir = "../../EstadisticaII/_posts/", output_format = "all"  ) })
+bibliography: "../../referencias.bib"
+csl: "../../apa.csl"
+---
+
+```{r knitr_init, echo=FALSE, cache=FALSE}
+library(knitr)
+## Global options
+opts_chunk$set(echo=TRUE,
+               cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE,
+               fig.path = paste0("../../EstadisticaII/images/", "ParcialIII"),
+               cache.path = "../../EstadisticaII/cache/",
+               cache = FALSE)
+```
+# Parcial
+El parcial deberá solucionarse a mano, y entregar los resultados al finalizar la clase. 
+
+# Nota
+**Recuerden interpretar todos los resultados** en el contexto del enunciado!!!, no hacerlo les va hacer perder punto!!!! >:c
+
+* [Bolaños Arias Fabian Mauricio](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1037654623.pdf){:target="_blank"}
+* [Castillo Tirado Juan David](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1103113911.pdf){:target="_blank"}
+* [Correa Becerra Edys Andres](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1028013907.pdf){:target="_blank"}
+* [Cubillos Álvares Tatiana Alejandra](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1152221303.pdf){:target="_blank"}
+* [Giraldo Arango Raúl Enrique](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P71378345.pdf){:target="_blank"}
+* [Gómez Alarcon Angeli](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1017198951.pdf){:target="_blank"}
+* [Gómez Tobon Juan Pablo](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1152710331.pdf){:target="_blank"}
+* [Morales Possu Carolina](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1112488227.pdf){:target="_blank"}
+* [Munoz Rodríguez Francisco Antonio](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1040327782.pdf){:target="_blank"}
+* [Pisco Bolaños Sergio Esteban](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1023943526.pdf){:target="_blank"}
+* [Rodríguez Henao Felipe](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1037651724.pdf){:target="_blank"}
+* [Serna Palacio Kevin Alexander](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1048020998.pdf){:target="_blank"}
+* [Vergara Ochoa Daniel](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1037642829.pdf){:target="_blank"}
+
+<h1> Mucha Suerte! </h1>
+
