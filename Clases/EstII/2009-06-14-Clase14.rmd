@@ -135,7 +135,7 @@ Para probar si las máquinas funcionan bien, se decide tomar una muestra aleator
 <h3 data-toc-skip> Solución </h3> 
 <p> En este caso estamos interesados en probar la hipótesis de que la cantidad servida por la nueva máquina no es menor a $330_{ml}$ por vaso, empleando un nivel de significancia del $5\%$, y por tanto, tendremos que el juego de hipótesis estará dado por
 $$\begin{align*}
-  H_0:\mu \leq 330\\
+  H_0:\mu \geq 330\\
   H_1:\mu < 330
 \end{align*}$$
 
