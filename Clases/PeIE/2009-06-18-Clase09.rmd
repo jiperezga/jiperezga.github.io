@@ -238,18 +238,19 @@ F(x) = \begin{cases} 0 & x<0 \\
        \end{cases}
 \end{align*}$$
 En donde se aprecia, que para valores menores a $0$, no hay ninguna probabilidad definida, para valores mayores o iguales a $0$ pero menores que $1$ solo está definido $F(0)=p(0)$, para valores mayores o iguales a $1$ pero menores que $2$ está definido $F(1)=p(0)+p(1)$, para valores mayores o iguales a $2$ pero menores que $3$ está definido $F(2)=p(0)+p(1)+p(2)$, y para valores mayores o iguales a $3$ está definido $F(3)=p(0)+p(1)+p(2)+p(3)$.</li>
-<li> Dado que el interés es calcular la probabilidad de que el número de niñas sea mayor a $1$ pero no más de $2$, entonces se tendrá que la probabilidad de interés es la siguiente
+<li> Dado que el interés es calcular la probabilidad de que en una familia de $3$ hijos hayan $2$ o más niñas, entonces se tendrá que la probabilidad de interés es la siguiente
 $$\begin{align*}
-\mathbb{P}(1 < X \leq 2)
+\mathbb{P}(X \geq 2)
 \end{align*}$$
 
-Entonces, siguiendo las reglas anteriormente expuestas, dicha probabilidad puede calcularse mediante
+Entonces, siguiendo las reglas anteriormente expuestas para la probabilidad acumulada, dicha probabilidad puede calcularse mediante
 
 $$\begin{align*}
-\mathbb{P}(X \geq 2) & = 1 - F(2-1) \\
+\mathbb{P}(X \geq 2) & = 1 - \mathbb{P}(X < 2) \\
+                     & = 1 - F(2-1) \\
                      & = 1 - F(1) \\
-                     & = 1 - \frac{4}{8}
-                     & = \frac{4}{8}
+                     & = 1 - \frac{4}{8} \\
+                     & = \frac{1}{2}
 \end{align*}$$
 
 y por tanto, se tendrá que la probabilidad de que en una familia de $3$ hijos, tengan $2$ o más niñas es de $50\%$.
