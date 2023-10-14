@@ -302,7 +302,7 @@ Use un nivel del `$5\%$` de significancia para probar si el gasto promedio deduc
   </tr>
 </tbody>
 </table>
-Use un nivel del `$5\%$` de significancia para probar la hipótesis planteada. Emplee el P-valor en sus conclusión.
+Si es posible asumir que el dinero que se gasta en café es aproximadamente normal para ambas poblaciones, use un nivel del `$5\%$` de significancia para probar la hipótesis planteada previamente. Emplee el P-valor en sus conclusión.
 22. Suponga que nos encontramos en época de elecciones, y que el responsable de la campaña política del candidato `$A$` piensa en el ambiente de las últimas semanas previas a las elecciones. Él piensa que su candidato se encuentra en igual posición que su oponente, el candidato `$B$`, pero han ocurrido algunos reveses en forma reciente. El responsable lleva a cabo una encuesta de percepción electoral a `$1500$` ciudadanos. Si de los `$1500$`, `$737$` indican una preferencia por el candidato `$A$`, ¿existe alguna razón para creer que el candidato `$A$` se encuentra en desventaja con relación al candidato `$B$`?, Use un nivel de significancia del `$5\%$`.
 23. Una bióloga quiere probar la hipótesis de que la envergadura media de cierta clase de insectos es `$12.3_{mm}$` contra la alternativa de que no es de `$12.3_{mm}$`. Suponga que la envergadura de los insectos puede asumirse normal con una desviación estándar conocida e igual a `$0.8_{mm}$`. Si se toma una muestra aleatoria de `$12$` insectos y se decide aceptar la hipótesis nula si y sólo si la media de la muestral cae entre `$12.0_{mm}$` y `$12.6_{mm}$`,
 <ol type ="a">

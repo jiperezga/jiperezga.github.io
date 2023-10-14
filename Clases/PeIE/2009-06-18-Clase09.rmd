@@ -187,7 +187,7 @@ para cualquier `$x$` dentro del rango de `$X$`, `$F(x)$` será la suma acumulada
 * `$\mathbb{P}(a \leq X \leq b) = \mathbb{P}(X\leq b) - \mathbb{P}(X\leq a - 1) = F(b) - F(a - 1)$`
 * `$\mathbb{P}(a < X \leq b) = \mathbb{P}(X\leq b) - \mathbb{P}(X\leq a)  = F(b) - F(a)$`
 * `$\mathbb{P}(a \leq X < b) = \mathbb{P}(X\leq b-1) - \mathbb{P}(X\leq a-1) = F(b - 1) - F(a - 1)$`
-* `$\mathbb{P}(a < X < b) = \mathbb{P}(X\leq b-1) + \mathbb{P}(X\leq a) = F(b - 1) - F(a)$`
+* `$\mathbb{P}(a < X < b) = \mathbb{P}(X\leq b-1) - \mathbb{P}(X\leq a) = F(b - 1) - F(a)$`
 * `$\mathbb{P}(X \geq a) = 1 - \mathbb{P}(X\leq a-1) = 1 - F(a-1)$`
 * `$\mathbb{P}(X > a) = 1 - \mathbb{P}(X\leq a) = 1 - F(a)$`
 * `$\mathbb{P}(X \leq b) = F(b)$`
