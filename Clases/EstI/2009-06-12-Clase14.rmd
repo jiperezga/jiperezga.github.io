@@ -460,7 +460,8 @@ Por tanto como la correlación es igual a cero, se concluye que no existe una de
 </main>
 
 ## Independencia
-Si las variables aleatorias `$X, Y$` son independientes, entonces se debe cumplir que `\begin{align*}
+Si las variables aleatorias `$X, Y$` son independientes, entonces se debe cumplir que 
+`\begin{align*}
 \mathbb{E}(XY) = \mathbb{E}(X)\mathbb{E}(Y)
 \end{align*}`
 
