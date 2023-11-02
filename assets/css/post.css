@@ -133,5 +133,7 @@ img.sticky {
 
 /*Color Mathjax*/
 .mjx-math{color: #FFFFFF}
+/*Barritas corribles Mathjax*/
+.MJXc-display{overflow-x : auto; overflow-y : hidden}
 /*Tamaño formulas Mathjax*/
 .mjx-chtml{font-size: 100%!important;}
