@@ -211,7 +211,7 @@ Sea `$X_{1}, X_{2}, \ldots, X_{n}$` una muestra aleatoria normal de tamaño `$n$
 <h3 data-toc-skip> Solución </h3> 
 <p> En este punto nos mencionan que se tiene interés en calcular un intervalo de confianza para la variabilidad de los costos de construir cualquier parque. En donde al no mencionar si se está interesado en el límite superior o inferior, se tendrá que el intervalo será bilateral, tal que
 
-<img src="../../EspecializacionSocioeconomica/images/Intervalos5a.jpg" alt="" style="max-width: 80%;">
+<img src="../../EstadisticaII/images/Intervalos5a.jpg" alt="" style="max-width: 80%;">
 
 en donde se aprecia que el intervalo bilateral para una varianza posee la estructura
 $$\begin{align*}
