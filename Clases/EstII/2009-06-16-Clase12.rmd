@@ -92,10 +92,10 @@ Sea `$X_{1,1}, X_{1,2}, \ldots, X_{1,n_1}$` y `$X_{2,1}, X_{2,2}, \ldots, X_{2,n
 <p>Si se supone que las resistencias a la tracción se distribuyen normalmente, construya un intervalo del $90\%$ para la razón de varianzas entre la variabilidad de los cables sin encapsulado y la variabilidad de los cables con encapsulado. Es posible afirmar que la variabilidad de de los cables con encapsulado es superior a los cables sin encapsulado?
 </p>
 <h3 data-toc-skip> Solución </h3> 
-<p> En este punto nos mencionan que se tiene interés en calcular un intervalo de confianza para el cociente de las varianzas asociadas a la resistencia a la tracción para cables sin encapsulado y cables con encapsulado. Además nos mencionan que la resistencia a la tracción hasta la ruptura se distribuye normalmente, y por tanto deberemos calcular el siguiente intervalo
+<p> En este punto nos mencionan que se tiene interés en calcular un intervalo de confianza para el cociente de las varianzas asociadas a la resistencia a la tracción para cables sin encapsulado y cables con encapsulado. Además nos mencionan que la resistencia a la tracción hasta la ruptura se distribuye normalmente, y por tanto deberemos calcular el siguiente intervalo <br><br>
 
 <img src="../../EstadisticaII/images/Intervalos6a.jpg" alt="" style="max-width: 80%;">
-
+<br>
 en donde se aprecia que el intervalo bilateral para la razón de varianzas posee la estructura
 $$\begin{align*}
    \frac{S^2_C}{S^2_S}\frac{1}{f_{\alpha/2, n_C-1, n_S-1}} < \frac{\sigma^2_C}{\sigma^2_S} < \frac{S^2_C}{S^2_S}f_{\alpha/2, n_S-1, n_C-1}
@@ -106,33 +106,35 @@ En donde se observa que para realizar el cálculo del intervalo, se requiere de 
 Para realizar el cálculo de las varianzas muestrales, se emplean los datos muestrales y los tamaños de muestra $n_C=8$ y $n_S=10$, tal que al realizar el cálculo obtenemos
 
 $$\begin{align*}
-S^2_C = 1.378146 \quad \text{ y } \quad S^2_S = 3.231254
+S^2_C &= 1.899286 \\
+S^2_S &= 10.441
 \end{align*}$$
 
 Por su parte, al buscar los valores críticos para un nivel de significancia $1-\alpha=0.90$ y tamaños muestrales $n_C=8$ y $n_S=10$ tenemos que
 
 $$\begin{align*}
-f_{\alpha/2 = 0.05, n_C-1 = 7, n_S-1 = 9} = 3.292746\\ 
-f_{\alpha/2 = 0.05, n_S-1 = 9, n_C-1 = 7} = 3.676675
+f_{\alpha/2 = 0.05, n_C-1 = 7, n_S-1 = 9} &= 3.292746\\ 
+f_{\alpha/2 = 0.05, n_S-1 = 9, n_C-1 = 7} &= 3.676675
 \end{align*}$$
 
 Una vez calculados los valores necesarios para calcular el intervalo de confianza, se procede a su cálculo, tal que
 $$\begin{align*}
-   \frac{1.378146}{3.231254}\frac{1}{3.292746} &< \frac{\sigma^2_C}{\sigma^2_S} < \frac{1.378146}{3.231254}3.676675 \\
-   0.1295287 &< \frac{\sigma^2_C}{\sigma^2_S} < 1.56812
+   \frac{1.899286}{10.441}\frac{1}{3.292746} &< \frac{\sigma^2_C}{\sigma^2_S} < \frac{1.899286}{10.441}3.676675 \\
+   0.05524463 &< \frac{\sigma^2_C}{\sigma^2_S} < 0.6688112
 \end{align*}$$
 
-Por tanto, se podrá concluir con un nivel de confianza del $90\%$ que el verdadero valor para el cociente de varianzas entre la variabilidad de los cables sin encapsulado y la variabilidad de los cables con encapsulado, se encontrará entre $0.1295287$ y $1.56812$.<br>
+Por tanto, se podrá concluir con un nivel de confianza del $90\%$ que el verdadero valor para el cociente de varianzas entre la variabilidad de los cables sin encapsulado y la variabilidad de los cables con encapsulado, se encontrará entre $0.05524463$ y $0.6688112$.<br>
 <br>
 Ahora, para verificar si existen o no diferencias significativas entre las varianzas de resistencia a la tracción de los cables encapsulados o sin encapsular, debemos verificar la posición en la que se encuentra el intervalo de confianza para la razón de varianzas $\sigma^2_C/\sigma^2_S$.
+<br><br>
 
 <img src="../../EstadisticaII/images/Intervalos6b.jpg" alt="" style="max-width: 80%;">
-
-En donde se observa que el intervalo calculado contiene el valor de $1$, el cual representa la igualdad entre la varianza de los dos tipos de cable, tal que 
+<br>
+En donde se observa que el intervalo calculado no contiene el valor de $1$, el cual representa la igualdad entre la varianza de los dos tipos de cable, tal que 
 $$\begin{align*}
   \sigma^2_C = \sigma^2_S \quad =>\quad \frac{\sigma^2_C}{\sigma^2_S} = 1
 \end{align*}$$
 
-y por tanto, con un nivel de confianza del $90\%$ no será posible afirmar que la variabilidad de la resistencia a la tracción de los cables encapsulados o sin encapsular sean diferentes, y por tanto, debe asumirse que éstos son iguales.
+y por tanto, con un nivel de confianza del $90\%$ será posible afirmar que la variabilidad de la resistencia a la tracción de los cables encapsulados o sin encapsular sean diferentes, y por tanto, debe asumirse que éstos son iguales.
 </p>
 </main>

@@ -113,10 +113,10 @@ Sea `$X_{1,1}, X_{1,2}, \ldots, X_{1,n_1}$` y `$X_{2,1}, X_{2,2}, \ldots, X_{2,n
 <br>
 Para determinar si el cambio en el proceso de fabricación mejora el rendimiento que sus equipos ofrecen, deciden tomar una muestra de equipos antes y después de la implementación del nuevo proceso de fabricación y se evalúa la velocidad de procesamiento para la ejecución de un programa determinado. Suponga que se encuentra que $120$ de $500$ computadores fabricados con el método actual ofrece un rendimiento superior al promedio, mientras que, $220$ de $700$ computadores fabricados con el nuevo método ofrece un rendimiento superior al promedio.<br>
 <br>
-Basados en la información obtenida, calcule un intervalo de confianza del $99\%$ para la verdadera diferencia entre las proporciones de equipos que ofrecen un rendimiento superior al promedio entre el proceso de fabricación actual y el nuevo. Es posible pensar que el nuevo proceso si mejora el rendimiento promedio de los equipos de cómputo?
+Basados en la información obtenida, calcule un intervalo de confianza del $98\%$ para la verdadera diferencia entre las proporciones de equipos que ofrecen un rendimiento superior al promedio entre el proceso de fabricación actual y el nuevo. Es posible pensar que el nuevo proceso si mejora el rendimiento promedio de los equipos de cómputo?
 </p>
 <h3 data-toc-skip> Solución </h3> 
-<p> En este enunciado estamos interesados en construir un intervalo de confianza del $99\%$ para la diferencia entre la proporción de equipos que son fabricados mediante un proceso de fabricación nuevo y aquellos que son fabricados con un proceso de fabricación actual, en donde, se debe construir un intervalo de confianza bilateral debido a que no nos preguntan por un límite en específico.  <br>
+<p> En este enunciado estamos interesados en construir un intervalo de confianza del $98\%$ para la diferencia entre la proporción de equipos que son fabricados mediante un proceso de fabricación nuevo y aquellos que son fabricados con un proceso de fabricación actual, en donde, se debe construir un intervalo de confianza bilateral debido a que no nos preguntan por un límite en específico.  <br>
 <br>
 Para llevar a cabo el cálculo debemos revisar la información que poseemos. En primer lugar observamos que nos hablan de los tamaños de muestra para cada una de las poblaciones en donde el tamaño de muestra para los equipos fabricados mediante el proceso de fabricación nuevo fue de $n_N= 500$, mientras que, el tamaño de muestra para lo equipos fabricados mediante el proceso de fabricación actual es de $n_A=700$.<br>
 <br>
@@ -140,10 +140,10 @@ Ahora, dado que el intervalo que nos piden es bilateral, y tenemos que los tama�
 
 y por tanto como el intervalo de interés es de la forma, el calculo que debemos hacer tendrá la forma
 $$\begin{align*}
-  (\hat{p}_N-\hat{p}_A) \pm Z_{\alpha}\sqrt{\frac{\hat{p}_N(1-\hat{p}_N)}{n_N}+\frac{\hat{p}_A(1-\hat{p}_A)}{n_A}}
+  (\hat{p}_N-\hat{p}_A) \pm Z_{\frac{\alpha}{2}}\sqrt{\frac{\hat{p}_N(1-\hat{p}_N)}{n_N}+\frac{\hat{p}_A(1-\hat{p}_A)}{n_A}}
 \end{align*}$$
 
-En donde se observa que entre los valores ya calculados para las proporciones muestrales, se requiere del nivel de confianza $1-\alpha=0.99$ y el valor crítico $Z_{\alpha=0.01}=2.326348$. Al reemplazar estos valores en el intervalo de interés obtenemos que 
+En donde se observa que entre los valores ya calculados para las proporciones muestrales, se requiere del nivel de confianza $1-\alpha=0.98$ y el valor crítico $Z_{\frac{\alpha}{2}}=Z_{0.01}=2.326348$. Al reemplazar estos valores en el intervalo de interés obtenemos que 
 $$\begin{align*}
   & (0.3142857-0.24) \pm 2.326348\sqrt{\frac{0.3142857(1-0.3142857)}{700}+\frac{0.24(1-0.24)}{500}} \\
   &0.0742857 \pm 2.326348 (0.02593592) \\
@@ -151,7 +151,7 @@ $$\begin{align*}
   &0.01394972 < p_N - p_A < 0.1346217
 \end{align*}$$
 
-Dado el resultado anterior, se concluye con una confianza del del $99\%$ que la diferencia entre la proporción de equipos que son fabricados mediante un proceso de fabricación nuevo y aquellos que son fabricados con un proceso de fabricación actual se encontrará entre $1.39\%$ y $13.46\%$.<br>
+Dado el resultado anterior, se concluye con una confianza del del $98\%$ que la diferencia entre la proporción de equipos que son fabricados mediante un proceso de fabricación nuevo y aquellos que son fabricados con un proceso de fabricación actual se encontrará entre $1.39\%$ y $13.46\%$.<br>
 <br>
 Ahora, como el intervalo es bilateral, podemos verificar si existen o no diferencias significativas entre la proporción de equipos que son fabricados mediante el nuevo proceso de fabricación y aquellos que son fabricados mediante el proceso actual, y para ello debemos verificar la posición en la que se encuentra el intervalo de confianza para la diferencia entre $p_N - p_A$.
 

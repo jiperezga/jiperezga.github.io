@@ -91,10 +91,10 @@ Si es posible supone que los salarios de los egresados se distribuyen aproximada
 <h3 data-toc-skip> Solución </h3> 
 <p> En este caso estamos interesados en construir un intervalo de confianza para el límite superior de los salarios promedio de los egresados, pero para realizar el cálculo debemos tener en cuenta la información que poseemos.<br>
 <br>
-De la información extraída del enunciado tenemos que la varianza poblacional no es conocida, ya que no la mencionan en el enunciado, tenemos que la población es normal, debido a que mencionan que puede suponerse que los salarios son aproximadamente normales, y los tamaños de muestra son pequeños, debido a que solo tenemos $15$ datos, estas características se ilustra en la siguiente imagen
+De la información extraída del enunciado tenemos que la varianza poblacional no es conocida, ya que no la mencionan en el enunciado, tenemos que la población es normal, debido a que mencionan que puede suponerse que los salarios son aproximadamente normales, y los tamaños de muestra son pequeños, debido a que solo tenemos $15$ datos, estas características se ilustra en la siguiente imagen<br><br>
 
 <img src="../../ProbabilidadeInferencia/images/Intervalos1a.jpg" alt="" style="max-width: 80%;">
-
+<br>
 de lo anterior encontramos que el intervalo de confianza de interés es de la forma
 $$\begin{align*}
   \mu < \bar{X}+t_{\alpha, n-1}\frac{S}{\sqrt{n}}
@@ -123,10 +123,10 @@ Si se decide tomar una muestra aleatoria de $8000$ vasos de gaseosa servidos por
 <h3 data-toc-skip> Solución </h3> 
 <p> En este caso estamos interesados en construir un intervalo de confianza bilateral del $90\% $ para la cantidad promedio de refresco servida por la nueva máquina de bebidas, pero para realizar el cálculo debemos evaluar previamente la información que poseemos.<br>
 <br>
-Del contexto del ejercicio tenemos que la población no es normal, debido a que se menciona que es Weibull, con desviación estándar de $5703.473_{ml}$, por lo cual tendremos que la varianza poblacional es conocida. Adicionalmente, tenemos que el tamaño de muestra de vasos de gaseosa servidos por la máquina es de $8000$ vasos, por lo cual, basados en la información que poseemos tenemos las siguientes características
+Del contexto del ejercicio tenemos que la población no es normal, debido a que se menciona que es Weibull, con desviación estándar de $5703.473_{ml}$, por lo cual tendremos que la varianza poblacional es conocida. Adicionalmente, tenemos que el tamaño de muestra de vasos de gaseosa servidos por la máquina es de $8000$ vasos, por lo cual, basados en la información que poseemos tenemos las siguientes<br><br> características
 
 <img src="../../ProbabilidadeInferencia/images/Intervalos1b.jpg" alt="" style="max-width: 80%;">
-
+<br>
 de lo anterior encontramos que el intervalo de confianza de interés es de la forma
 $$\begin{align*}
   \bar{X}-Z_{\frac{\alpha}{2}}\frac{\sigma}{\sqrt{n}} < \mu < \bar{X}+Z_{\frac{\alpha}{2}}\frac{\sigma}{\sqrt{n}}
@@ -155,10 +155,10 @@ Si se supone que la cantidad de nicotina en los cigarrillos Malboro se distribuy
 <h3 data-toc-skip> Solución </h3> 
 <p> En este ejercicio se está interesado en construir un intervalo de confianza inferior del $85\%$ para la cantidad promedio de nicotina que poseen los cigarrillos Malboro, y para realizar el cálculo debemos evaluar la información que poseemos.<br>
 <br>
-En donde, basados en el contexto del ejercicio nos dicen que la distribución de probabilidad de la cantidad de nicotina de los cigarrillos se distribuye normalmente, con varianza poblacional desconocida. Además, mencionan que en un estudio realizado por un grupo de investigación se toma una muestra aleatoria de tamaño $145$ cigarrillos, a partir de la cual encuentran un contenido promedio de nicotina de $1.02$ miligramos con una desviación estándar de $0.23$ miligramos, y en consecuencia nos encontramos en la siguiente situación
+En donde, basados en el contexto del ejercicio nos dicen que la distribución de probabilidad de la cantidad de nicotina de los cigarrillos se distribuye normalmente, con varianza poblacional desconocida. Además, mencionan que en un estudio realizado por un grupo de investigación se toma una muestra aleatoria de tamaño $145$ cigarrillos, a partir de la cual encuentran un contenido promedio de nicotina de $1.02$ miligramos con una desviación estándar de $0.23$ miligramos, y en consecuencia nos encontramos en la siguiente situación<br><br>
 
 <img src="../../ProbabilidadeInferencia/images/Intervalos1c.jpg" alt="" style="max-width: 80%;">
-
+<br>
 de lo anterior encontramos que el intervalo de confianza de interés es de la forma
 $$\begin{align*}
   \bar{X}-Z_{\alpha}\frac{S}{\sqrt{n}} < \mu
@@ -195,10 +195,10 @@ Si es posible suponer que las poblaciones se distribuyen normalmente con varianz
 <h3 data-toc-skip> Solución </h3> 
 <p> En este ejercicio estamos interesados en construir un intervalo de confianza bilateral para la diferencia entre el promedio de ventas de las personas que asisten a un curso de capacitación, respecto a las personas que no asisten a dicho curso, y para ello debemos revisar la información presentada en el enunciado. <br>
 <br>
-En donde, se observa que nos dan el valor de las medias y desviaciones estándar muestrales para cada uno de los grupos, además nos menciona que las poblaciones se distribuyen normalmente con varianzas poblacionales conocidas e iguales a $28$ millones de pesos$^2$ para quienes se capacitaron y a $20$ millones de pesos$^2$ para quienes no se capacitaron, y por tanto estamos en la situación 
+En donde, se observa que nos dan el valor de las medias y desviaciones estándar muestrales para cada uno de los grupos, además nos menciona que las poblaciones se distribuyen normalmente con varianzas poblacionales conocidas e iguales a $28$ millones de pesos$^2$ para quienes se capacitaron y a $20$ millones de pesos$^2$ para quienes no se capacitaron, y por tanto estamos en la situación <br><br>
 
 <img src="../../ProbabilidadeInferencia/images/Intervalos2a.jpg" alt="" style="max-width: 80%;">
-
+<br>
 y por tanto como el intervalo es bilateral, el calculo que debemos hacer tendrá la forma
 $$\begin{align*}
   (\bar{X}_C-\bar{X}_S) \pm Z_{\frac{\alpha}{2}}\sqrt{\frac{\sigma^2_C}{n_C}+\frac{\sigma^2_S}{n_S}}
@@ -215,10 +215,10 @@ $$\begin{align*}
 Entonces podremos afirmar con un nivel de confianza del $90\%$, de que la diferencia entre el promedio de ventas de las personas que asisten a un curso de capacitación, respecto a las personas que no asisten a dicho curso
 de capacitación, se encuentra entre $1.272353$ y $4.127647$ millones de pesos. <br>
 <br>
-Ahora, para saber si la capacitación mejora o no las ventas hay que tener en cuenta la posición en la que se encuentre el intervalo para la diferencia entre $\mu_C - \mu_S$.
+Ahora, para saber si la capacitación mejora o no las ventas hay que tener en cuenta la posición en la que se encuentre el intervalo para la diferencia entre $\mu_C - \mu_S$.<br><br>
 
 <img src="../../ProbabilidadeInferencia/images/Intervalos2b.jpg" alt="" style="max-width: 80%;">
-
+<br>
 En donde se observa que la totalidad del intervalo se encuentra localizado en la sección que es mayor a $0$, lo cual indica que para todo el intervalo de confianza del $90\%$ el promedio de ventas del grupo que recibió un curso de
 capacitación $\mu_C$ es mayor al promedio de quienes no recibieron capacitación $mu_S$, y por tanto, se podrá concluir que la capacitación si mejora el promedio de ventas y se recomendará a la empresa que envíe a capacitación al resto de empleados.
 </p>
@@ -238,10 +238,10 @@ Si el peso de los niños y niñas puede asumirse como una normal con varianzas i
 <h3 data-toc-skip> Solución </h3> 
 <p> En este enunciado estamos interesados en construir un intervalo de confianza del $90\%$ para la diferencia promedio entre el peso de los niños y las niñas. En donde, el intervalo de confianza será bilateral debido a que no especifican que se debe calcular el límite superior o inferior solamente. Para saber cuál es el intervalo de interés, debemos revisar la información presentada en el enunciado. <br>
 <br>
-En el enunciado se aprecia que nos dan las medias y desviaciones estándar muestrales para cada uno de los grupos, obtenidos a partir de muestras de tamaños $22$ y $28$, respectivamente. Además, se menciona que el peso de los niños y las niñas se distribuye normalmente con varianzas desconocidas pero iguales, y por tanto estaremos en la siguiente situación
+En el enunciado se aprecia que nos dan las medias y desviaciones estándar muestrales para cada uno de los grupos, obtenidos a partir de muestras de tamaños $22$ y $28$, respectivamente. Además, se menciona que el peso de los niños y las niñas se distribuye normalmente con varianzas desconocidas pero iguales, y por tanto estaremos en la siguiente situación<br><br>
 
 <img src="../../ProbabilidadeInferencia/images/Intervalos2c.jpg" alt="" style="max-width: 80%;">
-
+<br>
 y por tanto como el intervalo es bilateral, el calculo que debemos hacer tendrá la forma
 $$\begin{align*}
   (\bar{X}_H-\bar{X}_M) \pm t_{\frac{\alpha}{2}, n_H+n_M-2}S_p\sqrt{\frac{1}{n_H}+\frac{1}{n_M}}
@@ -271,10 +271,10 @@ $$\begin{align*}
 
 Por tanto, con un nivel de confianza del $90\%$ se tendrá que la diferencia entre el peso promedio de los niños y el peso promedio de las niñas se encontrará entre $-0.714064$ y $6.114064$ kilogramos. <br>
 <br>
-Ahora, para saber si existe diferencias significativas entre los pesos promedio de niños y niñas debemos tener en cuenta la posición en la que se encuentre el intervalo para la diferencia entre $\mu_H - \mu_M$.
+Ahora, para saber si existe diferencias significativas entre los pesos promedio de niños y niñas debemos tener en cuenta la posición en la que se encuentre el intervalo para la diferencia entre $\mu_H - \mu_M$.<br><br>
 
 <img src="../../ProbabilidadeInferencia/images/Intervalos2d.jpg" alt="" style="max-width: 80%;">
-
+<br>
 En donde se observa que el intervalo encontrado contiene el valor $0$, el cual simboliza la igualdad entre los pesos promedio de niños y niñas, tal que 
 $$\begin{align*}
   \mu_H = \mu_M \quad =>\quad \mu_H - \mu_M = 0
@@ -297,10 +297,10 @@ Si el grupo de investigación encuentra que los salarios no se distribuyen norma
 <h3 data-toc-skip> Solución </h3> 
 <p> En este enunciado estamos interesados en calcular el límite superior para la diferencia promedio entre el salario de hombres y mujeres que egresaron de la Universidad, la cual está dada por $\mu_H - \mu_M$, empleando para ello un nivel de confianza del $80\%$. Ahora, para identificar el intervalo de interés, debemos revisar la información presentada por el grupo de investigación de la Universidad. <br>
 <br>
-El cual a partir de una muestra de $250$ mujeres y $270$ hombres, encontró unos salarios promedios iguales a $2.3$ y $2.6$, con desviaciones estándar de $0.7$ y $1.2$, respectivamente. Además encuentra que los salarios no se distribuyen normalmente, y al no mencionar cuales son las varianzas poblacionales, se asume que éstas no son conocidas, y por tanto estaremos en la siguiente situación dado que los tamaños muestrales son mayores a $30$.
+El cual a partir de una muestra de $250$ mujeres y $270$ hombres, encontró unos salarios promedios iguales a $2.3$ y $2.6$, con desviaciones estándar de $0.7$ y $1.2$, respectivamente. Además encuentra que los salarios no se distribuyen normalmente, y al no mencionar cuales son las varianzas poblacionales, se asume que éstas no son conocidas, y por tanto estaremos en la siguiente situación dado que los tamaños muestrales son mayores a $30$.<br><br>
 
 <img src="../../ProbabilidadeInferencia/images/Intervalos2e.jpg" alt="" style="max-width: 80%;">
-
+<br>
 y por tanto al ser un intervalo unilateral derecho (límite superior), el calculo que debemos hacer tendrá la forma
 $$\begin{align*}
   \mu_H - \mu_M < (\bar{X}_H-\bar{X}_M) + Z_{\alpha}\sqrt{\frac{S^2_H}{n_H}+\frac{S^2_M}{n_M}}
@@ -332,10 +332,10 @@ Basados en la información anterior, calcule el límite inferior para la diferen
 <h3 data-toc-skip> Solución </h3> 
 <p> En este caso estamos interesados en calcular el límite inferior de un intervalo de confianza del $88\%$ para la diferencia promedio entre el rendimiento de combustible en kilómetros por galón de gasolina que ofrecen dos tipos de motores $B$ y $A$, tal que , $\mu_B - \mu_A$, y para calcular este límite inferior debemos revisar la información que poseemos.<br>
 <br>
-Del enunciado se menciona que los rendimientos de combustible no poseen una distribución normal, pero se menciona que las varianzas poblacionales son conocidas e iguales a $\sigma^2_A=38.44$ y $\sigma^2_B=57.56$ para las maderas $A$ y $B$. En consecuencia, tendremos que el intervalo de interés será el siguiente
+Del enunciado se menciona que los rendimientos de combustible no poseen una distribución normal, pero se menciona que las varianzas poblacionales son conocidas e iguales a $\sigma^2_A=38.44$ y $\sigma^2_B=57.56$ para las maderas $A$ y $B$. En consecuencia, tendremos que el intervalo de interés será el siguiente<br><br>
 
 <img src="../../ProbabilidadeInferencia/images/Intervalos2f.jpg" alt="" style="max-width: 80%;">
-
+<br>
 y como estamos interesados en el límite inferior, el calculo que debemos hacer tendrá la forma
 $$\begin{align*}
   (\bar{X}_B-\bar{X}_A) - Z_{\alpha}\sqrt{\frac{\sigma^2_B}{n_B}+\frac{\sigma^2_A}{n_A}}
@@ -365,10 +365,10 @@ Si se asume que la tensión sobre la unión pegada con la resina experimental en
 <h3 data-toc-skip> Solución </h3> 
 <p> En este enunciado estamos interesados en construir un intervalo de confianza del $92\%$ para la diferencia entre los promedio a la tensión sobre la unión pegada con una resina experimental para dos clases de madera $A$ y $B$. En este caso, el intervalo de confianza que se empleará será bilateral dado que no nos mencionan que se realice el cálculo del límite superior o inferior para la diferencia. Para saber cuál es el intervalo de interés, debemos revisar la información calculada por el grupo de investigación. <br>
 <br>
-De los datos calculados por el grupo de investigación, encontramos que se realizó una selección de $18$ y $12$ uniones para las maderas $A$ y $B$ respectivamente, para las cuales se encontró de forma respectiva unas medias muestrales de $1130_{psi}$ y $1010_{psi}$ junto a unas desviaciones estándar de $420_{psi}$ y $380_{psi}$. Además, se menciona de que las dos poblaciones se distribuyen de forma aproximadamente normal con varianzas diferentes y en consecuencia se tendrá el siguiente caso
+De los datos calculados por el grupo de investigación, encontramos que se realizó una selección de $18$ y $12$ uniones para las maderas $A$ y $B$ respectivamente, para las cuales se encontró de forma respectiva unas medias muestrales de $1130_{psi}$ y $1010_{psi}$ junto a unas desviaciones estándar de $420_{psi}$ y $380_{psi}$. Además, se menciona de que las dos poblaciones se distribuyen de forma aproximadamente normal con varianzas diferentes y en consecuencia se tendrá el siguiente caso<br><br>
 
 <img src="../../ProbabilidadeInferencia/images/Intervalos2g.jpg" alt="" style="max-width: 80%;">
-
+<br>
 y por tanto como el intervalo es bilateral, el calculo que debemos hacer tendrá la forma
 $$\begin{align*}
   (\bar{X}_A-\bar{X}_B) \pm t_{\frac{\alpha}{2}, \nu}\sqrt{\frac{S^2_A}{n_A}+\frac{S^2_B}{n_B}}
@@ -392,18 +392,18 @@ $$\begin{align*}
 
 y por tanto. se tendrá que los grados de libertad asociados a la distribución $t$ serán iguales a $\nu= 26$. Ahora, los valores adicionales que se requieren para realizar el cálculo del intervalo de interés serán los tamaños muestrales  $n_A=12$ y $n_B=18$, las medias muestrales $\bar{X}_A=1130$, y $\bar{X}_B=1010$, las desviaciones estándar muestrales $S_A=420$ y $S_B=380$, el nivel de confianza $1-\alpha=0.92$ y el valor crítico $t_{\frac{\alpha}{2}=0.04, \nu = 26}=1.821863$. Al reemplazar estos valores en el intervalo de interés obtenemos que 
 $$\begin{align*}
-  & (1130-1010) \pm 1.821863\sqrt{\frac{420^2}{12}+\frac{380^2}{18}} \\
-  & 120 \pm 1.821863(150.7389)\\
-  & 120 \pm 274.6256 \\
-  & -154.6256 < \mu_A - \mu_B < 394.6256
+  & (1130-1010) \pm 1.821863\sqrt{\frac{420^2}{18}+\frac{380^2}{12}} \\
+  & 120 \pm 1.821863(147.7611)\\
+  & 120 \pm 269.2004 \\
+  & -149.2004 < \mu_A - \mu_B < 389.2004
 \end{align*}$$
 
-De lo anterior, se concluye que con una confianza del $92\%$, la diferencia promedio entre la tensión promedio de corte entre las maderas $A$ y $B$ se encontrará entre $-154.6256_{psi}$ y $394.6256_{psi}$. <br>
+De lo anterior, se concluye que con una confianza del $92\%$, la diferencia promedio entre la tensión promedio de corte entre las maderas $A$ y $B$ se encontrará entre $-149.2004_{psi}$ y $389.2004_{psi}$. <br>
 <br>
-Ahora, como el intervalo es bilateral, podemos verificar si existen o no diferencias significativas entre la tensión promedio de corte de dos tipos de madera, y para ello debemos verificar la posición en la que se encuentra el intervalo de confianza para la diferencia entre $\mu_A - \mu_B$.
+Ahora, como el intervalo es bilateral, podemos verificar si existen o no diferencias significativas entre la tensión promedio de corte de dos tipos de madera, y para ello debemos verificar la posición en la que se encuentra el intervalo de confianza para la diferencia entre $\mu_A - \mu_B$.<br><br>
 
 <img src="../../ProbabilidadeInferencia/images/Intervalos2h.jpg" alt="" style="max-width: 80%;">
-
+<br>
 En donde se observa que el intervalo calculado contiene el valor de $0$, el cual representa la igualdad entre la tensión promedio de corte de dos tipos de madera, tal que 
 $$\begin{align*}
   \mu_A = \mu_B \quad =>\quad \mu_A - \mu_B = 0
@@ -433,10 +433,10 @@ Basados en la información anterior, construya un intervalo de confianza del $97
 <h3 data-toc-skip> Solución </h3> 
 <p> En este caso estamos interesados en el cálculo de un intervalo de confianza del $97\%$ para la proporción de egresados que poseen un salario superior a $2$ millones de pesos. <br>
 <br>
-En donde, al no mencionar un límite de confianza en particular se deberá realizar el cálculo de un intervalo bilateral, el cual para el caso de una proporción tiene la estructura
+En donde, al no mencionar un límite de confianza en particular se deberá realizar el cálculo de un intervalo bilateral, el cual para el caso de una proporción tiene la estructura<br><br>
 
 <img src="../../ProbabilidadeInferencia/images/Intervalos3a.jpg" alt="" style="max-width: 80%;">
-
+<br>
 mostrando que el intervalo bilateral para el caso de una proporción está dado por
 $$\begin{align*}
   \hat{p} \pm Z_{\frac{\alpha}{2}}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}
@@ -482,10 +482,10 @@ Sea `$X_{1,1}, X_{1,2}, \ldots, X_{1,n_1}$` y `$X_{2,1}, X_{2,2}, \ldots, X_{2,n
 <br>
 Para determinar si el cambio en el proceso de fabricación mejora el rendimiento que sus equipos ofrecen, deciden tomar una muestra de equipos antes y después de la implementación del nuevo proceso de fabricación y se evalúa la velocidad de procesamiento para la ejecución de un programa determinado. Suponga que se encuentra que $120$ de $500$ computadores fabricados con el método actual ofrece un rendimiento superior al promedio, mientras que, $220$ de $700$ computadores fabricados con el nuevo método ofrece un rendimiento superior al promedio.<br>
 <br>
-Basados en la información obtenida, calcule un intervalo de confianza del $99\%$ para la verdadera diferencia entre las proporciones de equipos que ofrecen un rendimiento superior al promedio entre el proceso de fabricación actual y el nuevo. Es posible pensar que el nuevo proceso si mejora el rendimiento promedio de los equipos de cómputo?
+Basados en la información obtenida, calcule un intervalo de confianza del $98\%$ para la verdadera diferencia entre las proporciones de equipos que ofrecen un rendimiento superior al promedio entre el proceso de fabricación actual y el nuevo. Es posible pensar que el nuevo proceso si mejora el rendimiento promedio de los equipos de cómputo?
 </p>
 <h3 data-toc-skip> Solución </h3> 
-<p> En este enunciado estamos interesados en construir un intervalo de confianza del $99\%$ para la diferencia entre la proporción de equipos que son fabricados mediante un proceso de fabricación nuevo y aquellos que son fabricados con un proceso de fabricación actual, en donde, se debe construir un intervalo de confianza bilateral debido a que no nos preguntan por un límite en específico.  <br>
+<p> En este enunciado estamos interesados en construir un intervalo de confianza del $98\%$ para la diferencia entre la proporción de equipos que son fabricados mediante un proceso de fabricación nuevo y aquellos que son fabricados con un proceso de fabricación actual, en donde, se debe construir un intervalo de confianza bilateral debido a que no nos preguntan por un límite en específico.  <br>
 <br>
 Para llevar a cabo el cálculo debemos revisar la información que poseemos. En primer lugar observamos que nos hablan de los tamaños de muestra para cada una de las poblaciones en donde el tamaño de muestra para los equipos fabricados mediante el proceso de fabricación nuevo fue de $n_N= 500$, mientras que, el tamaño de muestra para lo equipos fabricados mediante el proceso de fabricación actual es de $n_A=700$.<br>
 <br>
@@ -503,16 +503,16 @@ $$\begin{align*}
           &= \frac{120}{500} \\
           &= 0.24
 \end{align*}$$
-Ahora, dado que el intervalo que nos piden es bilateral, y tenemos que los tamaños muestrales para cada población son suficientemente grandes, tenfremos que el intervalo de interés es de la forma
+Ahora, dado que el intervalo que nos piden es bilateral, y tenemos que los tamaños muestrales para cada población son suficientemente grandes, tenfremos que el intervalo de interés es de la forma<br><br>
 
 <img src="../../ProbabilidadeInferencia/images/Intervalos4a.jpg" alt="" style="max-width: 80%;">
-
+<br>
 y por tanto como el intervalo de interés es de la forma, el calculo que debemos hacer tendrá la forma
 $$\begin{align*}
   (\hat{p}_N-\hat{p}_A) \pm Z_{\alpha}\sqrt{\frac{\hat{p}_N(1-\hat{p}_N)}{n_N}+\frac{\hat{p}_A(1-\hat{p}_A)}{n_A}}
 \end{align*}$$
 
-En donde se observa que entre los valores ya calculados para las proporciones muestrales, se requiere del nivel de confianza $1-\alpha=0.99$ y el valor crítico $Z_{\alpha=0.01}=2.326348$. Al reemplazar estos valores en el intervalo de interés obtenemos que 
+En donde se observa que entre los valores ya calculados para las proporciones muestrales, se requiere del nivel de confianza $1-\alpha=0.98$ y el valor crítico $Z_{\frac{\alpha}{2}}=Z_{0.01}=2.326348$. Al reemplazar estos valores en el intervalo de interés obtenemos que 
 $$\begin{align*}
   & (0.3142857-0.24) \pm 2.326348\sqrt{\frac{0.3142857(1-0.3142857)}{700}+\frac{0.24(1-0.24)}{500}} \\
   &0.0742857 \pm 2.326348 (0.02593592) \\
@@ -520,12 +520,12 @@ $$\begin{align*}
   &0.01394972 < p_N - p_A < 0.1346217
 \end{align*}$$
 
-Dado el resultado anterior, se concluye con una confianza del del $99\%$ que la diferencia entre la proporción de equipos que son fabricados mediante un proceso de fabricación nuevo y aquellos que son fabricados con un proceso de fabricación actual se encontrará entre $1.39\%$ y $13.46\%$.<br>
+Dado el resultado anterior, se concluye con una confianza del del $98\%$ que la diferencia entre la proporción de equipos que son fabricados mediante un proceso de fabricación nuevo y aquellos que son fabricados con un proceso de fabricación actual se encontrará entre $1.39\%$ y $13.46\%$.<br>
 <br>
-Ahora, como el intervalo es bilateral, podemos verificar si existen o no diferencias significativas entre la proporción de equipos que son fabricados mediante el nuevo proceso de fabricación y aquellos que son fabricados mediante el proceso actual, y para ello debemos verificar la posición en la que se encuentra el intervalo de confianza para la diferencia entre $p_N - p_A$.
+Ahora, como el intervalo es bilateral, podemos verificar si existen o no diferencias significativas entre la proporción de equipos que son fabricados mediante el nuevo proceso de fabricación y aquellos que son fabricados mediante el proceso actual, y para ello debemos verificar la posición en la que se encuentra el intervalo de confianza para la diferencia entre $p_N - p_A$.<br><br>
 
 <img src="../../ProbabilidadeInferencia/images/Intervalos4b.jpg" alt="" style="max-width: 80%;">
-
+<br>
 En donde se observa que el intervalo calculado se encuentra sobre el valor de $0$, el cual representa la igualdad entre las dos proporciones, tal que 
 $$\begin{align*}
   p_N = p_A \quad =>\quad p_N - p_A = 0
@@ -578,10 +578,10 @@ Sea `$X_{1}, X_{2}, \ldots, X_{n}$` una muestra aleatoria normal de tamaño `$n$
 <p>Si es posible supone que el costo de construir cualquier parque se distribuyen aproximadamente normal, calcule un intervalo de confianza para la variabilidad de los costos de construir cualquier parque, empleando un nivel de confianza del $95\%$</p>
 
 <h3 data-toc-skip> Solución </h3> 
-<p> En este punto nos mencionan que se tiene interés en calcular un intervalo de confianza para la variabilidad de los costos de construir cualquier parque. En donde al no mencionar si se está interesado en el límite superior o inferior, se tendrá que el intervalo será bilateral, tal que
+<p> En este punto nos mencionan que se tiene interés en calcular un intervalo de confianza para la variabilidad de los costos de construir cualquier parque. En donde al no mencionar si se está interesado en el límite superior o inferior, se tendrá que el intervalo será bilateral, tal que<br><br>
 
 <img src="../../ProbabilidadeInferencia/images/Intervalos5a.jpg" alt="" style="max-width: 80%;">
-
+<br>
 en donde se aprecia que el intervalo bilateral para una varianza posee la estructura
 $$\begin{align*}
    \frac{(n-1)S^2}{\chi^2_{\frac{\alpha}{2}, n-1}}< \sigma^2 <\frac{(n-1)S^2}{\chi^2_{1 -\frac{\alpha}{2}, n-1}}
@@ -657,10 +657,10 @@ Sea `$X_{1,1}, X_{1,2}, \ldots, X_{1,n_1}$` y `$X_{2,1}, X_{2,2}, \ldots, X_{2,n
 <p>Si se supone que las resistencias a la tracción se distribuyen normalmente, construya un intervalo del $90\%$ para la razón de varianzas entre la variabilidad de los cables sin encapsulado y la variabilidad de los cables con encapsulado. Es posible afirmar que la variabilidad de de los cables con encapsulado es superior a los cables sin encapsulado?
 </p>
 <h3 data-toc-skip> Solución </h3> 
-<p> En este punto nos mencionan que se tiene interés en calcular un intervalo de confianza para el cociente de las varianzas asociadas a la resistencia a la tracción para cables sin encapsulado y cables con encapsulado. Además nos mencionan que la resistencia a la tracción hasta la ruptura se distribuye normalmente, y por tanto deberemos calcular el siguiente intervalo
+<p> En este punto nos mencionan que se tiene interés en calcular un intervalo de confianza para el cociente de las varianzas asociadas a la resistencia a la tracción para cables sin encapsulado y cables con encapsulado. Además nos mencionan que la resistencia a la tracción hasta la ruptura se distribuye normalmente, y por tanto deberemos calcular el siguiente intervalo<br><br>
 
 <img src="../../ProbabilidadeInferencia/images/Intervalos6a.jpg" alt="" style="max-width: 80%;">
-
+<br>
 en donde se aprecia que el intervalo bilateral para la razón de varianzas posee la estructura
 $$\begin{align*}
    \frac{S^2_C}{S^2_S}\frac{1}{f_{\alpha/2, n_C-1, n_S-1}} < \frac{\sigma^2_C}{\sigma^2_S} < \frac{S^2_C}{S^2_S}f_{\alpha/2, n_S-1, n_C-1}
@@ -671,7 +671,8 @@ En donde se observa que para realizar el cálculo del intervalo, se requiere de 
 Para realizar el cálculo de las varianzas muestrales, se emplean los datos muestrales y los tamaños de muestra $n_C=8$ y $n_S=10$, tal que al realizar el cálculo obtenemos
 
 $$\begin{align*}
-S^2_C = 1.378146 \quad \text{ y } \quad S^2_S = 3.231254
+S^2_C &= 1.899286 \\
+S^2_S &= 10.441
 \end{align*}$$
 
 Por su parte, al buscar los valores críticos para un nivel de significancia $1-\alpha=0.90$ y tamaños muestrales $n_C=8$ y $n_S=10$ tenemos que
@@ -683,16 +684,16 @@ f_{\alpha/2 = 0.05, n_S-1 = 9, n_C-1 = 7} = 3.676675
 
 Una vez calculados los valores necesarios para calcular el intervalo de confianza, se procede a su cálculo, tal que
 $$\begin{align*}
-   \frac{1.378146}{3.231254}\frac{1}{3.292746} &< \frac{\sigma^2_C}{\sigma^2_S} < \frac{1.378146}{3.231254}3.676675 \\
-   0.1295287 &< \frac{\sigma^2_C}{\sigma^2_S} < 1.56812
+   \frac{1.899286}{10.441}\frac{1}{3.292746} &< \frac{\sigma^2_C}{\sigma^2_S} < \frac{1.899286}{10.441}3.676675 \\
+   0.05524463 &< \frac{\sigma^2_C}{\sigma^2_S} < 0.6688112
 \end{align*}$$
 
-Por tanto, se podrá concluir con un nivel de confianza del $90\%$ que el verdadero valor para el cociente de varianzas entre la variabilidad de los cables sin encapsulado y la variabilidad de los cables con encapsulado, se encontrará entre $0.1295287$ y $1.56812$.<br>
+Por tanto, se podrá concluir con un nivel de confianza del $90\%$ que el verdadero valor para el cociente de varianzas entre la variabilidad de los cables sin encapsulado y la variabilidad de los cables con encapsulado, se encontrará entre $0.05524463$ y $0.6688112$.<br>
 <br>
-Ahora, para verificar si existen o no diferencias significativas entre las varianzas de resistencia a la tracción de los cables encapsulados o sin encapsular, debemos verificar la posición en la que se encuentra el intervalo de confianza para la razón de varianzas $\sigma^2_C/\sigma^2_S$.
+Ahora, para verificar si existen o no diferencias significativas entre las varianzas de resistencia a la tracción de los cables encapsulados o sin encapsular, debemos verificar la posición en la que se encuentra el intervalo de confianza para la razón de varianzas $\sigma^2_C/\sigma^2_S$. <br><br>
 
 <img src="../../ProbabilidadeInferencia/images/Intervalos6b.jpg" alt="" style="max-width: 80%;">
-
+<br>
 En donde se observa que el intervalo calculado contiene el valor de $1$, el cual representa la igualdad entre la varianza de los dos tipos de cable, tal que 
 $$\begin{align*}
   \sigma^2_C = \sigma^2_S \quad =>\quad \frac{\sigma^2_C}{\sigma^2_S} = 1
