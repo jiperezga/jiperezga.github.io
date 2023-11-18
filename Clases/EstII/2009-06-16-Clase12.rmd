@@ -135,6 +135,6 @@ $$\begin{align*}
   \sigma^2_C = \sigma^2_S \quad =>\quad \frac{\sigma^2_C}{\sigma^2_S} = 1
 \end{align*}$$
 
-y por tanto, con un nivel de confianza del $90\%$ será posible afirmar que la variabilidad de la resistencia a la tracción de los cables encapsulados o sin encapsular sean diferentes, y por tanto, debe asumirse que éstos son iguales.
+y por tanto, con un nivel de confianza del $90\%$ será posible afirmar que la variabilidad de la resistencia a la tracción de los cables encapsulados o sin encapsular son diferentes, y por tanto, debe asumirse que NO son iguales.
 </p>
 </main>

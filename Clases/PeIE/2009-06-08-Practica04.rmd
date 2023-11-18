@@ -261,11 +261,11 @@ en Aceite</td>
     <td style="text-align:center;"></td>
     <td style="text-align:center;"></td>
     <td style="text-align:center;"></td>
-    <td style="text-align:center;">0.67</td>
-    <td style="text-align:center;"></td>
+    <td style="text-align:center;">1.22</td>
+    <td style="text-align:center;">1.35</td>
 </tr>
 <tr>
-    <td style="text-align:center;">0.60</td>
+    <td style="text-align:center;">1.02</td>
     <td style="text-align:center;">0.66</td>
     <td style="text-align:center;"></td>
     <td style="text-align:center;"></td>
@@ -282,9 +282,9 @@ Suponga que las marcas de atún incluidas en el estudio representan una muestra 
   </li>
   <li> Calcule la probabilidad de que la variabilidad del precio del atún blanco empacado en agua, sea mayor a la variabilidad del precio del atún claro empacado en agua.
   </li>
-  <li> Calcule un intervalo de confianza del $92\%$ para el precio promedio de atún claro empacado en aceite. Interprete el intervalo. Específicamente, ¿a qué se refiere el "$95\%$"?
+  <li> Calcule un intervalo de confianza del $92\%$ para el precio promedio de atún claro empacado en aceite. Interprete el intervalo. Específicamente, ¿a qué se refiere el "$92\%$"?
   </li>
-  <li> Calcule un intervalo de confianza de $90\%$ para la diferencia en el precio medio de atún claro empacado en agua y atún claro empacado en aceite.
+  <li> Calcule un intervalo de confianza de $99\%$ para la diferencia en el precio medio de atún claro empacado en agua y atún claro empacado en aceite.
   </li>
 </ol>
 19. Un experimentador desea comprobar la variabilidad de mediciones obtenidas al usar equipo diseñado para medir el volumen de una fuente de audio. Tres mediciones independientes registradas por este equipo para la misma fuente de sonido fueron `$4.1$`, `$5.2$` y `$10.2$`. Calcule la probabilidad de que la variabilidad del volumen de una fuente de audio sea cuando mucho `$12.53$`. Suponga normalidad.
