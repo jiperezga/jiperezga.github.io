@@ -1,0 +1,67 @@
+---
+layout: post
+title: "Parcial III"
+main-class: 'presentaciones'
+permalink: /ProbabilidadeInferencia/PeIE:title.html
+tags:
+
+introduction: Parcial III
+header-includes:
+   - \usepackage{amsmath,amssymb,amsthm,amsfonts}
+   - \usepackage[sectionbib]{natbib}
+   - \usepackage[hidelinks]{hyperref}
+output:
+  md_document:
+    variant: markdown_strict+backtick_code_blocks+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash
+    preserve_yaml: TRUE
+always_allow_html: yes   
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding,
+  output_dir = "../../ProbabilidadeInferencia/_posts/", output_format = "all"  ) })
+bibliography: "../../referencias.bib"
+csl: "../../apa.csl"
+---
+
+```{r knitr_init, echo=FALSE, cache=FALSE}
+library(knitr)
+## Global options
+opts_chunk$set(echo=TRUE,
+               cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE,
+               fig.path = paste0("../../ProbabilidadeInferencia/images/", "Parcial II"),
+               cache.path = "../../ProbabilidadeInferencia/cache/",
+               cache = FALSE)
+
+```
+
+# Parcial
+El parcial deberá solucionarse a mano apoyandose en R para las pruebas de normalidad y demás cálculos que consideren necesarios, y entregar los resultados al finalizar la clase. 
+
+# Nota
+Recuerden interpretar todos los resultados en el contexto del enunciado!!!, y realizar los procedimientos necesarios para los cálculos. **no hacerlo les va hacer perder punto!!!!** >:c
+
+* [Alvarez Sayas Jorge Antonio](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1067282445.pdf){:target="_blank"}
+* [Daza Muriel Bleiner Stiven](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1001945591.pdf){:target="_blank"}
+* [Duque Henao Sebastian](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1011510104.pdf){:target="_blank"}
+* [Fernandez Chaverra Angel Javier](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1000206530.pdf){:target="_blank"}
+* [Gil Tejada Estefania](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1000556567.pdf){:target="_blank"}
+* [Hernandez Ballestero Marelvis](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1063718105.pdf){:target="_blank"}
+* [Hernandez Ballestero Sebastian](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1063718104.pdf){:target="_blank"}
+* [Herrera Zapata Stefanny Paola](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1007109668.pdf){:target="_blank"}
+* [López Loaiza Manuel Alejandro](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1036686967.pdf){:target="_blank"}
+* [Monsalve Urrego Valentina](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1000759535.pdf){:target="_blank"}
+* [Pena Sanchez Laura Valentina](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1097490614.pdf){:target="_blank"}
+* [Perez Castano Sebastian](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1013457380.pdf){:target="_blank"}
+* [Puerta Jaramillo Kevin Andres](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1001470627.pdf){:target="_blank"}
+* [Tabares Rodriguez Kevin Andres](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1007330441.pdf){:target="_blank"}
+* [Velez De La Hoz Alexandra Daniela](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1129526888.pdf){:target="_blank"}
+
+
+<h1> Mucha Suerte! </h1>
+
+
+
