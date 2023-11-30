@@ -47,7 +47,7 @@ El Trabajo deberá solucionarse a mano, y enviar los resultado (Word, escaner o 
 ## Enunciado Trabajo
 * [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/Trabajo.pdf){:target="_blank"}
 
-
+## Bases de datos
 * [Alvarez Sayas Jorge Antonio](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/1067282445.pdf){:target="_blank"}
 * [Daza Muriel Bleiner Stiven](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/1001945591.pdf){:target="_blank"}
 * [Duque Henao Sebastian](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/1011510104.pdf){:target="_blank"}
