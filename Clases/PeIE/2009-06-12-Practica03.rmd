@@ -81,7 +81,7 @@ kable_styling("striped", full_width = F)
 </ol>
 4. Suponga que el tiempo medido en unidades de `$100$` horas, en las cuales, se usa una licuadora en un hogar durante un año, es una variable aleatoria continua `$X$` con función de densidad de probabilidad dada por:
 `\begin{align*}
-	p(x) =\begin{cases}x & 0< x < 1 \\ 2-x & 1\leq x < 2 \\ 0 & \text{En otro caso}\end{cases} 
+	f(x) =\begin{cases}x & 0< x < 1 \\ 2-x & 1\leq x < 2 \\ 0 & \text{En otro caso}\end{cases} 
 \end{align*}`
 <ol type ="a">
 <li> Pruebe si efectivamente es una función de densidad de probabilidad bien definida, de no serlo, multiplique la función por una constante $k$ que hace a $p(x)$ estar bien definida. </li>
