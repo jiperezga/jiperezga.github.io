@@ -12,7 +12,9 @@ introduction: |
               - Función de distribución acumulada <br>
               - Esperanza matemática <br>
               - Propiedades de esperanza matemática <br>
-              - Varianza
+              - Varianza <br>
+              - Propiedades de varianza <br>
+              
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
    - \usepackage[sectionbib]{natbib}
@@ -450,3 +452,10 @@ Es decir, se tendrá que el número promedio de niñas que tiene una familia que
 </li>
 </ol>
 </main>
+
+### Propiedades de la varianza
+Sea `$a$` y `$b$` números reales (constantes) y `$X$` una variable aleatorias, entonces se tiene que
+
+1. `$Var(a)=0$`
+2. `$Var(aX)=a^2Var(X)$`
+3. `$Var(a+bX) = b^2Var(X)$`
