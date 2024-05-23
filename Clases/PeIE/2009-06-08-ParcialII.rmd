@@ -1,0 +1,64 @@
+---
+layout: post
+title: "Parcial III"
+main-class: 'practica'
+permalink: /ProbabilidadeInferencia/PeIE:title.html
+tags:
+
+introduction: Parcial III
+header-includes:
+   - \usepackage{amsmath,amssymb,amsthm,amsfonts}
+   - \usepackage[sectionbib]{natbib}
+   - \usepackage[hidelinks]{hyperref}
+output:
+  md_document:
+    variant: markdown_strict+backtick_code_blocks+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash
+    preserve_yaml: TRUE
+always_allow_html: yes   
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding,
+  output_dir = "../../ProbabilidadeInferencia/_posts/", output_format = "all"  ) })
+bibliography: "../../referencias.bib"
+csl: "../../apa.csl"
+---
+
+```{r knitr_init, echo=FALSE, cache=FALSE}
+library(knitr)
+## Global options
+opts_chunk$set(echo=TRUE,
+               cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE,
+               fig.path = paste0("../../ProbabilidadeInferencia/images/", "Parcial III"),
+               cache.path = "../../ProbabilidadeInferencia/cache/",
+               cache = FALSE)
+
+```
+
+# Parcial
+El parcial deberá solucionarse a mano, y enviar los resultado (escanear o tomar foto a la hoja resuelta) a más tardar a las 8:30 am, al correo electrónico <a target="_blank" href="mailto:jivan.perez@udea.edu.co"> jivan.perez@udea.edu.co</a>. 
+
+# Nota
+Recuerden interpretar todos los resultados en el contexto del enunciado!!!, **no hacerlo les va hacer perder punto!!!!** >:c
+
+# Enunciados
+
+* [Cortes Sanchez Sebastian](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1222454358.pdf){:target="_blank"}
+* [Cortina Prieto Valeria](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1007987474.pdf){:target="_blank"}
+* [Galvis Carballo Angela Camila](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1025641130.pdf){:target="_blank"}
+* [Hincapié López Daniel Felipe](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1001095936.pdf){:target="_blank"}
+* [Meza Causado Elias](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1017230790.pdf){:target="_blank"}
+* [Morato Merchan Cristian Camilo](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1000005584.pdf){:target="_blank"}
+* [Quintero Pineda Carolina](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1038404303.pdf){:target="_blank"}
+* [Rosas Mendoza Daniel](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1036339232.pdf){:target="_blank"}
+* [Tejada Vasquez Angie Saray](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1000195100.pdf){:target="_blank"}
+* [Torres Castaneda Laura](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1017262338.pdf){:target="_blank"}
+
+
+<h1> Mucha Suerte! </h1>
+
+
+
