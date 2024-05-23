@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Parcial III"
-main-class: 'practica'
+main-class: 'presentaciones'
 permalink: /ProbabilidadeInferencia/PeIE:title.html
 tags:
 
