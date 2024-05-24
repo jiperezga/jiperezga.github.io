@@ -9,6 +9,11 @@ introduction: |
               Análisis de Regresión <br>
               - Prueba de hipótesis <br>
               - Intervalos de confianza <br>
+              Supuestos Regresión Lineal Simple <br>
+              - Linealidad <br>
+              - Normalidad <br>
+              - Homocedasticidad <br>
+              - Independencia 
 
 header-includes:
    - \usepackage{amsmath,amssymb,amsthm,amsfonts}
@@ -93,3 +98,35 @@ para el caso de `$\beta_1$`, el intervalo de confianza está dado por
 **Nota**
 
 Si el Intervalo de Confianza de `$\beta_1$` no contiene el cero, se puede afirmar que la variable `$Y$` está relacionada linealmente con la variable independiente `$X$`. En caso contrario, no existe relación lineal entre `$X$` y `$Y$`, es decir, la variable `$X$` no es adecuada para predecir el comportamiento de `$Y$`.
+
+## Revisión de supuestos del modelo
+Existe un serie de supuestos que debían se corroborados para asegurar que el modelo de regresión lineal esté correctamente desarrollado. Entre los cuales tenemos:
+
+### Linealidad
+Uno de los primeros supuestos que se debe probar es que haya una relación lineal entre la variable dependiente y las independientes, y para ello se debe examinar la relación entre los términos de error (residuales) y los valores ajustados, en donde:
+1. Se verifica que la media de los residuales tenga media 0, y se distribuya de forma aleatoria a lo largo de la línea horizontal.
+2. No debe exhibirse en el diagrama de dispersión una tendencia clara o forma sistemática.
+3. La dispersión de los residuos debe ser aproximadamente constante a lo largo de los valores ajustados
+
+Para probar en \texttt{R} el supuesto de linealidad, es posible calcularle la relación entre los residuales y los valores ajustados mediante la función \texttt{plot(modelo,1)}.
+
+Una forma alternativa sería generando el gráfico entre la variable dependiente e independiente con la función \texttt{plot(x,y)}, o usando la prueba RESET de Ramsey que permite validar si un modelo lineal tiene la forma funcional correcta o si se han omitido términos no lineales o interacciones entre las variables. Esta prueba puede realizarse en \texttt{R} mediante la función \texttt{resettest(modelo)} de la librería \texttt{lmtest}. 
+
+### Normalidad
+El segundo supuesto que se debe considerar es que los términos de error (residuales) de la regresión se distribuyan normalmente, debido a que si éstos se distribuyen normalmente, se tendrá que la variable respuesta $Y$ también se distribuya normalmente, habilitando que las ecuaciones del cálculo de los estimadores sean correctas. 
+
+Para probar la normalidad del los residuales es cuestión de usar alguna de las pruebas de normalidad vistas en pruebas de bondad de ajuste, tales como la Shapiro-Wilk, Anderson Darling, Cramer-Von Mises <a href="https://jiperezga.github.io/EstadisticaII/EstIIClase16.html#prueba-de-bondad-de-ajuste" target="\_blank">(Ver Clase 16)</a>, o de forma gráfica mediante la construcción de un QQ-Plot que puede generarse con la función \texttt{plot(modelo, 2)}.
+
+### Homocedasticidad
+El tercer supuesto busca probar que la variabilidad de los residuales estudentizados sea constante a lo largo de las observaciones, es decir, que no vaya aumentando (disminuyendo) a medida que aumentan (disminuyen) los valores ajustados.
+
+Para probar este supuesto, es posible plantearse un gráfico de diagrama de dispersión de los residuos estudentizados frente a los valores ajustados usando la función \texttt{plot(modelo, 3)}.
+
+Otra alternativa es mediante el uso de la prueba Breusch-Pagan, la cual busca probarla hipótesis de que los términos de error son homocedásticos, contra la alternativa, de que los términos de error son heterocedásticos. Esta prueba puede realizarse en \texttt{R} con la función \texttt{bptest(modelo)} de la librería \texttt{lmtest}.
+
+### Independencia 
+Finalmente, el cuarto supuesto del modelo de regresión lineal lo que busca es verificar si los residuales están incorrelacionadas, y por tanto, se tendrá que la covarianza de los términos de error será igual a $0$.
+
+Para para probar este supuesto, es posible plantear una gráfica entre los residuos contra el orden de las observaciones, para verificar que si los residuos están distribuidos de manera aleatoria sin mostrar ningún patrón o tendencia sistemática a lo largo del orden de las observaciones, lo cual indicaría que el supuesto de independencia se cumple. Lo anterior puede realizarse en \texttt{R} mediante la función \texttt{plot(residuales(modelo), type = "o")}.
+
+Alternativamente, se suele utilizar la prueba Durbin-Watson, la cual verifica la hipótesis de que hay independencia para los términos deerror contra la alternativa de que hay dependencia. Para realizar esta prueba en \texttt{R} se puede utilizar la prueba Durbin-Watson con la función \texttt{dwtest(modelo) de la librería \texttt{lmtest}.
