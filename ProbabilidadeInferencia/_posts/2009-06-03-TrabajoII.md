@@ -49,21 +49,21 @@ cuando me envíen el trabajo hacen la aclaración sobre cuál trabajaron :D
 
 ## Cortes Sanchez Sebastian
 
--   [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1214748239.pdf){:target=“\_blank”}
+-   [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1222454358.pdf){:target=“\_blank”}
 -   [Base de
-    Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/B1214748239.xlsx){:target=“\_blank”}
+    Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/B1222454358.xlsx){:target=“\_blank”}
 
 ## Cortina Prieto Valeria
 
--   [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1023623327.pdf){:target=“\_blank”}
+-   [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1007987474.pdf){:target=“\_blank”}
 -   [Base de
-    Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/B1023623327.xlsx){:target=“\_blank”}
+    Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/B1007987474.xlsx){:target=“\_blank”}
 
 ## Galvis Carballo Angela Camila
 
--   [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1001362881.pdf){:target=“\_blank”}
+-   [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1025641130.pdf){:target=“\_blank”}
 -   [Base de
-    Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/B1001362881.xlsx){:target=“\_blank”}
+    Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/B1025641130.xlsx){:target=“\_blank”}
 
 ## Hincapié López Daniel Felipe
 
