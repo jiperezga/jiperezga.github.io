@@ -103,7 +103,7 @@ cuando me envíen el trabajo hacen la aclaración sobre cuál trabajaron :D
 
 ## Torres Castaneda Laura
 
--   [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1017262338%20.pdf){:target=“\_blank”}
+-   [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1017262338.pdf){:target=“\_blank”}
 -   [Base de
     Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/B1017262338.xlsx){:target=“\_blank”}
 
