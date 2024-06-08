@@ -85,8 +85,7 @@ El Trabajo deberá solucionarse a mano, y enviar los resultado (Word, escaner o 
 * [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/B1000195100.xlsx){:target="_blank"}
 
 ## Torres Castaneda Laura
-* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1017262338
-.pdf){:target="_blank"}
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/T1017262338.pdf){:target="_blank"}
 * [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Trabajo/B1017262338.xlsx){:target="_blank"}
 
 <h1> Mucha Suerte! </h1>
