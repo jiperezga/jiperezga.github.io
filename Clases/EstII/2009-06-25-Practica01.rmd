@@ -261,7 +261,7 @@ Basados en esta información y bajo el supuesto de normalidad
 <ol type ="a">
   <li> Calcule la probabilidad de que la varianza de las lecturas de emisión de ruido de camiones, sea mayor a $2_{dB^2}$. Interprete sus resultados.
   </li>
-  <li> Calcule la probabilidad de que la diferencia entre la media real y muestral sea como máximo de $0.4_{dB}$.
+  <li> Calcule la probabilidad de que la diferencia absoluta entre la media real y muestral sea como máximo de $0.4_{dB}$.
   </li>
 </ol>
 21. Suponga que el número de entregas que realiza un camión de Servientrega en una hora posee una distribución de probabilidad dada por
