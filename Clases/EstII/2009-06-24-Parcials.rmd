@@ -1,0 +1,55 @@
+---
+layout: post
+title: "Supletorio I"
+main-class: 'presentaciones'
+permalink: /EstadisticaII/EstII:title.html
+tags:
+
+introduction: Supletorio I
+
+header-includes:
+   - \usepackage{amsmath,amssymb,amsthm,amsfonts}
+   - \usepackage[sectionbib]{natbib}
+   - \usepackage[hidelinks]{hyperref}
+output:
+  md_document:
+    variant: markdown_strict+backtick_code_blocks+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash
+    preserve_yaml: TRUE
+always_allow_html: yes   
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding,
+  output_dir = "../../EstadisticaII/_posts/", output_format = "all"  ) })
+bibliography: "../../referencias.bib"
+csl: "../../apa.csl"
+---
+
+```{r knitr_init, echo=FALSE, cache=FALSE}
+library(knitr)
+## Global options
+opts_chunk$set(echo=TRUE,
+               cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE,
+               fig.path = paste0("../../EstadisticaII/images/", "ParcialI"),
+               cache.path = "../../EstadisticaII/cache/",
+               cache = FALSE)
+```
+
+# Parcial
+La solución, paso a paso e interpretaciones deben realizarse a mano, y entregar el parcial al final de la clase >:(. 
+
+# Nota
+Pueden apoyarse para el cálculo de probabilidades o integrales en \texttt{R} u otra herramienta, pero los procedimientos tales como **TRANSFORMACIONES** y **PLANTEAMIENTO DE PROBABILIDADES**, **INTERPRETACIONES** deben realizarse **PASO A PASO** y a mano >:(
+
+* [Britto Zapata Nicolas](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/Ps1035305565.pdf){:target="_blank"}
+* [Correa Romero David](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/Ps1000557127.pdf){:target="_blank"}
+* [Jaramillo Galvis Jhon](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/Ps1004347892.pdf){:target="_blank"}
+* [López Hernández Cruz Helena](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/Ps1036623859.pdf){:target="_blank"}
+* [Viana Alvarez Evelin Steffy](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/Ps1002146503.pdf){:target="_blank"}
+
+
+<h1> Mucha Suerte! :D </h1>
+
