@@ -44,11 +44,11 @@ La solución, paso a paso e interpretaciones deben realizarse a mano, y entregar
 # Nota
 Pueden apoyarse para el cálculo de probabilidades o integrales en \texttt{R} u otra herramienta, pero los procedimientos tales como **TRANSFORMACIONES** y **PLANTEAMIENTO DE PROBABILIDADES**, **INTERPRETACIONES** deben realizarse **PASO A PASO** y a mano >:(
 
-* [Britto Zapata Nicolas](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Supletorio/Ps1035305565.pdf){:target="_blank"}
-* [Correa Romero David](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Supletorio/Ps1000557127.pdf){:target="_blank"}
-* [Jaramillo Galvis Jhon](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Supletorio/Ps1004347892.pdf){:target="_blank"}
-* [López Hernández Cruz Helena](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Supletorio/Ps1036623859.pdf){:target="_blank"}
-* [Viana Alvarez Evelin Steffy](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Supletorio/Ps1002146503.pdf){:target="_blank"}
+* [Britto Zapata Nicolas](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Supletorio/Ps10353055651.pdf){:target="_blank"}
+* [Correa Romero David](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Supletorio/Ps10005571271.pdf){:target="_blank"}
+* [Jaramillo Galvis Jhon](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Supletorio/Ps10043478921.pdf){:target="_blank"}
+* [López Hernández Cruz Helena](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Supletorio/Ps10366238591.pdf){:target="_blank"}
+* [Viana Alvarez Evelin Steffy](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Supletorio/Ps10021465031.pdf){:target="_blank"}
 
 
 <h1> Mucha Suerte! :D </h1>
