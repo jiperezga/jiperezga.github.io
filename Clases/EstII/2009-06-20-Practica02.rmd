@@ -63,16 +63,16 @@ f(x) = p^x(1-p)^{1-x} \text{ para } x=0,1; \quad 0\leq p \leq 1
   </li>
 </ol>
 
-2. Sea `$X_1, X_2, \ldots, X_n$` una muestra aleatoria `$iid$` de una distribución Binomial con parámetros desconocido `$p$` y parámetro `$m$` conocido o desconocido, con función de distribución dada por
+2. Sea `$X_1, X_2, \ldots, X_n$` una muestra aleatoria `$iid$` de una distribución Binomial con parámetros desconocido `$p$` y parámetro `$n$` conocido o desconocido, con función de distribución dada por
 `\begin{align*}
-f(x) = \left(\begin{array}{c}m\\ x\end{array}\right)p^x(1-p)^{m-x} \text{ para } x=0,1,\ldots, m; \quad 0\leq p \leq 1
+f(x) = \left(\begin{array}{c}n\\ x\end{array}\right)p^x(1-p)^{n-x} \text{ para } x=0,1,\ldots, n; \quad 0\leq p \leq 1
 \end{align*}`
 <ol type ="a">
-  <li> Calcule el estimador para el parámetro $p$ por el método de los momentos, si se supone que $m$ es conocida.
+  <li> Calcule el estimador para el parámetro $p$ por el método de los momentos, si se supone que $n$ es conocida.
   </li>
-  <li> Calcule el estimador para los parámetros $m$ y $p$ por el método de los momentos.
+  <li> Calcule el estimador para los parámetros $n$ y $p$ por el método de los momentos.
   </li>
-  <li> Calcule el estimador de máxima verosimilitud para el parámetro $p$, si se supone $m$ conocida y pruebe si el estimador encontrado efectivamente maximiza la función. 
+  <li> Calcule el estimador de máxima verosimilitud para el parámetro $p$, si se supone $n$ conocida y pruebe si el estimador encontrado efectivamente maximiza la función. 
   </li>
   <li> Pruebe si los estimadores encontrado en $a)$ y $c)$ son estimadores insesgado del parámetro $p$.
   </li>
@@ -331,7 +331,7 @@ f(x) = \frac{1}{\theta}\alpha x^{\alpha-1}e^{-\frac{x^\alpha}{\theta}} \text{ pa
   </li>
 </ol>
 
-18. Sea `$X_1, X_2, \dots, X_n$` una muestra aleatoria `$iid$` de una variable aleatoria discreta Binomial tal que `$X\sim Bin(m,p)$` y suponga los estimadores
+18. Sea `$X_1, X_2, \dots, X_n$` una muestra aleatoria `$iid$` de una variable aleatoria discreta Binomial tal que `$X\sim Bin(n,p)$` y suponga los estimadores
 `\begin{align*}
   \hat{p}_1&=\frac{X}{n}; \\    
   \hat{p}_2&=\frac{X+\sqrt{n/2}}{n+\sqrt{n}}; \\
