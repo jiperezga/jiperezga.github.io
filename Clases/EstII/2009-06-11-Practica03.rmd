@@ -191,7 +191,7 @@ Mediante el empleo de un nivel de significancia del `$8\%$` pruebe si es razonab
   <tr>
     <td>15</td>
     <td>12</td>
-    <td>28</td>
+    <td>26</td>
     <td>13</td>
     <td>12</td>
     <td>15</td>
