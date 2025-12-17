@@ -1,0 +1,211 @@
+---
+layout: post
+title: "Parcial III"
+main-class: 'presentaciones'
+permalink: /EstadisticaII/EstII:title.html
+tags:
+
+introduction: Parcial III
+
+header-includes:
+   - \usepackage{amsmath,amssymb,amsthm,amsfonts}
+   - \usepackage[sectionbib]{natbib}
+   - \usepackage[hidelinks]{hyperref}
+output:
+  md_document:
+    variant: markdown_strict+backtick_code_blocks+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash
+    preserve_yaml: TRUE
+always_allow_html: yes   
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding,
+  output_dir = "../../EstadisticaII/_posts/", output_format = "all"  ) })
+bibliography: "../../referencias.bib"
+csl: "../../apa.csl"
+---
+
+```{r knitr_init, echo=FALSE, cache=FALSE}
+library(knitr)
+## Global options
+opts_chunk$set(echo=TRUE,
+               cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE,
+               fig.path = paste0("../../EstadisticaII/images/", "ParcialIII"),
+               cache.path = "../../EstadisticaII/cache/",
+               cache = FALSE)
+```
+# Parcial III
+El parcial pueden solucionarlo a mano o en Word, y enviar al final de la clase al correo jivan.perez@udea.edu.co, el desarrollo de los puntos y los códigos generados para tal objetivo. D:<
+
+Quedo atento a cualquier duda o inquietud que les surja durante el trabajo. No duden en preguntar, pero no pretendan que les haga el punto >:|
+
+# Nota
+**Lea atentamente el parcial**. Recuerden interpretar todos los resultados en el contexto del enunciado!!!, **no hacerlo les va hacer perder punto!!!!** >:c
+
+# Bases y enunciados
+## Bedoya Vargas Julian Alirio
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1039474881.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1039474881.csv){:target="_blank"}
+
+## Betancur Gonzalez Juliana
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1000087276.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1000087276.csv){:target="_blank"}
+
+## Betancur Vasquez Maria Jose
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1040571395.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1040571395.csv){:target="_blank"}
+
+## Cano Lopez Santiago
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1033178806.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1033178806.csv){:target="_blank"}
+
+## Cardenas Ospina Danna Camila
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1021804097.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1021804097.csv){:target="_blank"}
+
+## Carmona Chica Nicole Natalia
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1127792900.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1127792900.csv){:target="_blank"}
+
+## Coral Gonzalez Mateo
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1000834203.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1000834203.csv){:target="_blank"}
+
+## Donoso Gomez Daniel
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1000203818.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1000203818.csv){:target="_blank"}
+
+## Figueroa Cano Laura Katerinne
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1017243426.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1017243426.csv){:target="_blank"}
+
+## Gómez Tobon Juan Pablo
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1152710331.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1152710331.csv){:target="_blank"}
+
+## Hernandez Reyes Nicolas
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1119150667.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1119150667.csv){:target="_blank"}
+
+## Jaramillo Marin Andres Felipe
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1000290534.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1000290534.csv){:target="_blank"}
+
+## Loaiza Castaño Silbana Alexandra
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P43876694.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B43876694.csv){:target="_blank"}
+
+## Marin Jaramillo John Arturo
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1017129376.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1017129376.csv){:target="_blank"}
+
+## Marin Valencia Josias Jesib
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1041324085.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1041324085.csv){:target="_blank"}
+
+## Marmol Romero Santiago
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1002997047.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1002997047.csv){:target="_blank"}
+
+## Martinez Ortiz Laura Katherine
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1070384075.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1070384075.csv){:target="_blank"}
+
+## Martinez Sosa Andrea Catalina
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1017159829.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1017159829.csv){:target="_blank"}
+
+## Montoya Pabon Valentina
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1020222282.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1020222282.csv){:target="_blank"}
+
+## Murillo Galeano Mateo
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1193117781.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1193117781.csv){:target="_blank"}
+
+## Murillo Madrigal Odalis Paola
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1017265065.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1017265065.csv){:target="_blank"}
+
+## Ocampo Rios Cristian Camilo
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1111478203.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1111478203.csv){:target="_blank"}
+
+## Ortega Mora Valentina
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1003158302.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1003158302.csv){:target="_blank"}
+
+## Ospina Agudelo Juliana
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1007346941.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1007346941.csv){:target="_blank"}
+
+## Portilla Benavides Karen Vanessa
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1086774044.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1086774044.csv){:target="_blank"}
+
+## Ramos Cañola Maria Fernanda
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1000086439.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1000086439.csv){:target="_blank"}
+
+## Rivera Quiroz Natalia
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1001415262.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1001415262.csv){:target="_blank"}
+
+## Rivillas Ochoa Paula Andrea
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1001416490.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1001416490.csv){:target="_blank"}
+
+## Rodriguez Herrera Isabella
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1025642615.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1025642615.csv){:target="_blank"}
+
+## Roldán Muñoz Luisa Fernanda
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1128387647.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1128387647.csv){:target="_blank"}
+
+## Sáenz Salcedo Carol Liliana
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1049640543.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1049640543.csv){:target="_blank"}
+
+## Sanchez Higuita Jose Miguel
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1001390366.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1001390366.csv){:target="_blank"}
+
+## Soto Uribe Sara Sofia
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1036449422.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1036449422.csv){:target="_blank"}
+
+## Taborda Diaz Juliana
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1059695226.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1059695226.csv){:target="_blank"}
+
+## Vallejo Fernandez John Santiago
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1004926160.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1004926160.csv){:target="_blank"}
+
+## Vargas Alvarez Maria Paulina
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1000753109.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1000753109.csv){:target="_blank"}
+
+## Vargas Moreno Oreilys Ayari
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P3296612.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B3296612.csv){:target="_blank"}
+
+## Vásquez López Juan Felipe
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1128444892.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1128444892.csv){:target="_blank"}
+
+## Zapata Cuartas Sergio Stiven
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1000564488.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1000564488.csv){:target="_blank"}
+
+## Zapata Quintero Manuela
+* [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1017923447.pdf){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1017923447.csv){:target="_blank"}
+
+
+<h1> Mucha Suerte! </h1>
+
