@@ -1,0 +1,2311 @@
+id,edad_años,genero,altura_cm,peso_kg,IMC,presion_sistolica,presion_diastolica,colesterol,glucosa,fumador,consume_alcohol,actividad_fisica,enfermedad_cardiovascular
+63273,56.3,Mujer,156,74,30.41,105,69,Normal,Normal,No,No,No,No
+19306,63.5,Mujer,157,55,22.31,120,80,Normal,Normal,No,Sí,Sí,Sí
+94246,52,Mujer,170,69,23.88,130,80,Normal,Normal,No,Sí,Sí,Sí
+22780,49.6,Mujer,169,73,25.56,130,80,Normal,Normal,No,No,Sí,Sí
+83636,44.5,Mujer,158,68,27.24,120,70,Normal,Normal,No,No,Sí,No
+24087,43.9,Mujer,156,56,23.01,120,80,Por encima de lo normal,Normal,No,No,Sí,No
+28990,59.6,Mujer,158,85,34.05,139,79,Por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+73110,48.4,Hombre,169,69,24.16,120,80,Normal,Normal,No,No,Sí,No
+7667,52.2,Mujer,162,72,27.43,140,90,Normal,Normal,No,No,Sí,No
+65420,51.4,Mujer,162,56,21.34,120,80,Normal,Normal,No,No,Sí,No
+48930,59.9,Mujer,168,85,30.12,130,90,Normal,Normal,No,No,No,Sí
+10686,52.4,Hombre,165,63,23.14,120,80,Normal,Normal,No,No,Sí,Sí
+27782,57.4,Mujer,160,68,26.56,120,70,Normal,Normal,No,No,Sí,Sí
+55838,63.3,Mujer,147,63,29.15,160,90,Normal,Normal,No,No,Sí,Sí
+31825,60.4,Mujer,164,89,33.09,120,80,Por encima de lo normal,Normal,No,No,Sí,Sí
+71302,57.7,Mujer,168,74,26.22,120,80,Normal,Normal,No,No,No,Sí
+26591,58,Mujer,160,58,22.66,120,80,Normal,Normal,No,No,Sí,No
+77410,54.1,Mujer,167,89,31.91,120,80,Normal,Normal,No,No,No,Sí
+6620,55.8,Mujer,153,94,40.16,140,90,Normal,Normal,No,No,Sí,Sí
+58588,60.6,Mujer,168,69,24.45,120,80,Normal,Muy por encima de lo normal,No,No,Sí,No
+64959,55.4,Mujer,158,80,32.05,130,70,Normal,Normal,No,No,Sí,Sí
+62818,60.4,Mujer,167,76,27.25,110,70,Normal,Normal,No,No,Sí,Sí
+18129,43.3,Hombre,169,91,31.86,120,80,Normal,Normal,Sí,Sí,No,No
+2029,62,Mujer,159,58,22.94,130,80,Normal,Normal,No,No,Sí,No
+36571,52.1,Mujer,166,93,33.75,120,80,Normal,Normal,No,No,Sí,No
+50605,45.6,Mujer,148,48,21.91,110,70,Normal,Normal,No,No,Sí,Sí
+38729,50,Hombre,180,74,22.84,110,80,Normal,Normal,No,No,Sí,No
+76090,63.9,Hombre,173,94,31.41,150,90,Por encima de lo normal,Por encima de lo normal,No,Sí,Sí,Sí
+78714,55.9,Mujer,158,50,20.03,100,80,Normal,Normal,No,No,Sí,No
+16361,50.1,Mujer,173,82,27.4,120,80,Normal,Normal,No,No,Sí,No
+41831,52.1,Hombre,160,60,23.44,160,90,Normal,Normal,No,No,Sí,Sí
+61858,39.3,Hombre,166,53,19.23,120,80,Normal,Muy por encima de lo normal,No,No,Sí,No
+11465,44.4,Mujer,165,57,20.94,120,80,Normal,Normal,No,No,Sí,Sí
+37229,63.8,Mujer,162,81,30.86,120,80,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+80345,60.1,Mujer,160,58,22.66,100,60,Por encima de lo normal,Normal,No,No,Sí,No
+83810,63.8,Hombre,173,78,26.06,110,70,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+62273,57.8,Mujer,158,90,36.05,160,90,Normal,Normal,No,No,Sí,Sí
+43517,58.3,Mujer,164,80,29.74,120,80,Normal,Normal,No,No,Sí,Sí
+2120,59.6,Mujer,155,60,24.97,120,80,Normal,Normal,No,No,Sí,No
+63428,42.1,Mujer,163,52,19.57,90,60,Normal,Normal,Sí,No,Sí,No
+22516,47.4,Mujer,167,82,29.4,140,1000,Normal,Normal,Sí,No,Sí,Sí
+70168,62.6,Hombre,170,69,23.88,160,80,Normal,Normal,No,No,Sí,Sí
+12518,63.6,Mujer,160,64,25,120,80,Normal,Normal,No,No,Sí,No
+29290,58.3,Mujer,169,85,29.76,140,90,Muy por encima de lo normal,Normal,No,No,No,Sí
+93832,61.5,Mujer,162,62,23.62,130,70,Normal,Normal,No,No,Sí,No
+34401,52.3,Hombre,168,77,27.28,120,80,Normal,Normal,Sí,Sí,Sí,No
+33796,60.8,Mujer,160,76,29.69,140,90,Normal,Normal,No,No,No,Sí
+72420,49.8,Mujer,157,44,17.85,120,80,Normal,Normal,No,No,Sí,Sí
+57633,54.4,Mujer,157,72,29.21,120,80,Normal,Normal,No,No,Sí,No
+51257,46,Mujer,172,52,17.58,130,75,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+33886,52.2,Mujer,162,65,24.77,120,80,Normal,Normal,No,No,Sí,No
+25159,51.9,Mujer,160,85,33.2,130,90,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+89503,60,Mujer,156,83,34.11,140,90,Muy por encima de lo normal,Normal,No,No,Sí,No
+98951,46.5,Hombre,165,60,22.04,140,90,Normal,Normal,No,No,No,Sí
+86608,62.2,Hombre,170,93,32.18,150,90,Normal,Normal,No,No,Sí,Sí
+33899,39.5,Mujer,165,63,23.14,120,70,Normal,Normal,No,No,Sí,Sí
+35703,42,Hombre,163,65,24.46,120,80,Normal,Normal,No,No,Sí,No
+37091,49.4,Mujer,162,95,36.2,150,90,Muy por encima de lo normal,Normal,No,Sí,No,Sí
+13708,48,Mujer,160,80,31.25,120,80,Normal,Normal,No,No,Sí,No
+47517,46.1,Mujer,168,77,27.28,130,90,Normal,Normal,No,No,Sí,No
+67782,50,Mujer,150,61,27.11,120,80,Normal,Normal,No,No,Sí,No
+71971,47.9,Hombre,169,74,25.91,120,80,Normal,Normal,No,No,Sí,Sí
+2844,61.2,Mujer,163,92,34.63,120,80,Muy por encima de lo normal,Normal,No,No,Sí,No
+23924,40,Hombre,175,82,26.78,120,80,Normal,Normal,Sí,No,Sí,No
+38088,53.4,Mujer,158,88,35.25,110,80,Normal,Normal,No,No,Sí,Sí
+47782,60,Mujer,158,62,24.84,120,80,Normal,Normal,No,No,Sí,Sí
+13647,46.2,Mujer,153,73,31.18,120,80,Normal,Normal,No,No,Sí,No
+3837,55.2,Hombre,169,80,28.01,130,90,Normal,Normal,No,No,No,Sí
+6184,49.5,Mujer,150,64,28.44,120,80,Por encima de lo normal,Normal,Sí,No,Sí,No
+60816,60,Mujer,164,77,28.63,130,90,Normal,Normal,Sí,No,Sí,No
+94354,56.1,Hombre,178,86,27.14,120,80,Normal,Normal,Sí,No,Sí,No
+41537,42,Hombre,170,65,22.49,140,90,Por encima de lo normal,Normal,No,No,Sí,No
+19614,41.8,Hombre,170,75,25.95,120,80,Normal,Normal,No,No,Sí,No
+56598,59.6,Hombre,170,88,30.45,150,90,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+37930,43.2,Mujer,162,79,30.1,130,90,Muy por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+20612,57.5,Mujer,168,73,25.86,135,80,Por encima de lo normal,Normal,No,No,Sí,Sí
+3954,59.4,Mujer,167,85,30.48,180,100,Normal,Normal,No,No,Sí,Sí
+76816,55.8,Mujer,165,70,25.71,135,90,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+10536,50.3,Hombre,176,95,30.67,110,80,Muy por encima de lo normal,Normal,No,Sí,Sí,Sí
+32506,55.4,Mujer,151,60,26.31,120,70,Normal,Normal,No,No,Sí,No
+28955,54.2,Hombre,164,71,26.4,120,80,Normal,Por encima de lo normal,Sí,Sí,Sí,Sí
+52029,57.9,Mujer,160,69,26.95,120,70,Por encima de lo normal,Normal,No,No,Sí,No
+31163,55.8,Hombre,170,110,38.06,120,70,Normal,Normal,No,Sí,Sí,Sí
+54085,53.5,Hombre,165,63,23.14,120,80,Normal,Normal,No,No,No,Sí
+13811,57.4,Mujer,152,63,27.27,130,90,Por encima de lo normal,Normal,No,No,No,No
+76702,43.5,Mujer,167,67,24.02,130,90,Muy por encima de lo normal,Normal,No,No,Sí,No
+66791,49.7,Mujer,171,83,28.38,120,80,Normal,Normal,No,No,Sí,No
+99261,49.8,Mujer,160,72,28.12,140,90,Normal,Normal,No,No,No,Sí
+96360,42.1,Mujer,165,63,23.14,100,70,Por encima de lo normal,Por encima de lo normal,No,No,Sí,No
+17088,41.3,Mujer,160,68,26.56,140,90,Por encima de lo normal,Normal,No,No,Sí,Sí
+42286,56.5,Mujer,164,66,24.54,120,80,Normal,Normal,No,No,Sí,No
+57512,52.5,Hombre,169,71,24.86,150,90,Normal,Normal,No,No,Sí,Sí
+14090,57.3,Mujer,163,72,27.1,130,80,Por encima de lo normal,Normal,No,No,Sí,No
+2892,63.7,Mujer,155,79,32.88,120,80,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+97113,48.3,Hombre,168,79,27.99,160,100,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+15433,39.9,Mujer,162,72,27.43,120,80,Por encima de lo normal,Normal,No,No,Sí,No
+15689,63.6,Mujer,161,74,28.55,120,60,Normal,Normal,No,No,Sí,No
+94144,49.2,Mujer,157,55,22.31,130,80,Normal,Normal,No,No,Sí,Sí
+92108,55.5,Hombre,189,72,20.16,130,80,Normal,Normal,Sí,Sí,Sí,Sí
+27405,51.8,Mujer,171,82,28.04,150,90,Normal,Normal,No,No,No,Sí
+54465,62.1,Mujer,160,63,24.61,120,80,Normal,Normal,No,No,Sí,Sí
+67083,51.6,Mujer,155,58,24.14,110,80,Normal,Normal,No,No,Sí,No
+72262,50,Mujer,170,70,24.22,140,80,Normal,Normal,No,No,Sí,No
+55674,55.6,Hombre,170,78,26.99,140,1000,Normal,Normal,No,No,Sí,Sí
+81249,55.7,Hombre,171,82,28.04,120,80,Normal,Normal,No,No,Sí,No
+6673,45.6,Mujer,164,75,27.89,140,90,Normal,Normal,No,No,Sí,Sí
+91461,55.9,Hombre,173,85,28.4,220,1110,Normal,Normal,Sí,No,Sí,Sí
+37260,62.1,Hombre,174,74,24.44,140,90,Normal,Normal,No,No,No,No
+10166,49.6,Mujer,178,85,26.83,140,90,Por encima de lo normal,Normal,No,No,No,Sí
+75197,54.3,Mujer,158,90,36.05,140,90,Muy por encima de lo normal,Normal,No,No,No,No
+9098,41.3,Mujer,168,66,23.38,120,80,Normal,Normal,No,No,Sí,No
+12371,60.4,Hombre,178,65,20.52,120,80,Normal,Normal,No,No,No,No
+62460,58.2,Hombre,169,75,26.26,120,80,Normal,Normal,No,No,Sí,Sí
+53901,39.5,Mujer,164,67,24.91,120,80,Normal,Normal,No,No,No,No
+6128,51.9,Mujer,164,75,27.89,120,60,Normal,Normal,No,No,Sí,No
+26607,60,Hombre,172,67,22.65,110,80,Normal,Normal,No,No,Sí,No
+25150,61.8,Hombre,178,123,38.82,147,108,Muy por encima de lo normal,Muy por encima de lo normal,No,Sí,Sí,Sí
+63204,59.8,Hombre,170,90,31.14,110,70,Normal,Normal,No,No,Sí,No
+74892,60.1,Mujer,163,63,23.71,110,70,Normal,Normal,No,No,Sí,No
+70970,63.9,Mujer,159,75,29.67,110,70,Normal,Normal,No,No,Sí,No
+63452,47.3,Mujer,166,86,31.21,110,70,Normal,Normal,No,No,Sí,No
+99667,59.7,Mujer,169,73,25.56,120,80,Normal,Normal,No,No,Sí,No
+30961,57.8,Mujer,159,73,28.88,120,80,Normal,Normal,No,No,Sí,Sí
+73807,46.2,Mujer,163,85,31.99,120,80,Normal,Normal,No,No,Sí,No
+88396,64.1,Mujer,165,67,24.61,120,80,Normal,Normal,No,No,No,Sí
+69952,59.6,Mujer,160,78,30.47,120,80,Normal,Normal,No,No,Sí,Sí
+70445,40.2,Mujer,165,63,23.14,120,80,Normal,Normal,No,No,Sí,No
+62287,57.4,Mujer,160,79,30.86,115,70,Normal,Normal,No,No,Sí,No
+90257,58,Mujer,167,70,25.1,120,70,Normal,Normal,No,No,Sí,No
+37035,51.3,Hombre,176,105,33.9,130,80,Normal,Normal,Sí,No,Sí,Sí
+17538,50.1,Hombre,171,78,26.67,170,80,Por encima de lo normal,Normal,No,No,Sí,Sí
+62852,52,Mujer,173,81,27.06,130,90,Normal,Normal,No,No,Sí,No
+49036,56.3,Hombre,173,83,27.73,120,69,Normal,Por encima de lo normal,No,No,Sí,No
+24059,53.2,Mujer,162,75,28.58,140,80,Normal,Normal,No,No,Sí,Sí
+76360,45.5,Mujer,162,69,26.29,130,90,Normal,Normal,No,No,Sí,Sí
+19821,44.4,Mujer,164,76,28.26,100,60,Normal,Por encima de lo normal,No,No,Sí,Sí
+19965,58,Mujer,156,71,29.17,140,90,Normal,Muy por encima de lo normal,No,No,Sí,Sí
+73699,58.6,Mujer,167,77,27.61,110,80,Normal,Normal,No,No,Sí,No
+18191,40.2,Hombre,170,75,25.95,120,80,Normal,Normal,No,No,Sí,No
+85182,39.9,Mujer,146,50,23.46,120,80,Normal,Normal,No,No,Sí,No
+79656,61.5,Mujer,156,55,22.6,180,100,Por encima de lo normal,Normal,No,No,No,Sí
+43031,56.1,Mujer,158,76,30.44,137,86,Normal,Normal,No,No,Sí,Sí
+73760,48,Mujer,168,86,30.47,110,60,Normal,Normal,No,No,No,No
+35672,54.8,Hombre,162,76,28.96,160,100,Normal,Normal,Sí,No,No,Sí
+88391,57.6,Mujer,151,53,23.24,100,70,Normal,Normal,No,No,Sí,No
+78905,61.2,Mujer,148,55,25.11,100,160,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+68806,60.6,Mujer,168,75,26.57,150,90,Normal,Normal,No,No,Sí,Sí
+26269,52.2,Hombre,176,84,27.12,140,95,Normal,Normal,No,No,Sí,Sí
+8335,58,Hombre,175,80,26.12,120,80,Normal,Normal,No,No,Sí,Sí
+85285,57.7,Mujer,164,63,23.42,110,70,Normal,Normal,No,No,No,Sí
+26114,47.4,Hombre,150,97,43.11,150,90,Por encima de lo normal,Por encima de lo normal,No,No,No,Sí
+92187,56.6,Mujer,165,65,23.88,150,100,Normal,Normal,No,No,Sí,Sí
+40976,50.4,Mujer,157,49,19.88,110,70,Normal,Normal,No,No,No,No
+10832,59.5,Mujer,158,100,40.06,130,90,Normal,Normal,No,No,Sí,Sí
+50134,54.2,Mujer,162,62,23.62,120,80,Normal,Normal,No,No,Sí,Sí
+8708,59.5,Hombre,164,68,25.28,120,80,Normal,Normal,No,No,Sí,No
+96564,53.4,Mujer,160,84,32.81,100,80,Normal,Normal,No,No,No,No
+96039,63.6,Mujer,171,65,22.23,140,80,Normal,Normal,No,No,No,Sí
+65193,57.8,Hombre,168,94,33.3,130,80,Normal,Normal,Sí,No,Sí,Sí
+27349,55.7,Mujer,162,78,29.72,120,80,Por encima de lo normal,Normal,No,No,No,Sí
+70544,46.2,Mujer,180,72,22.22,120,80,Normal,Normal,No,No,No,No
+49104,61.6,Mujer,154,54,22.77,130,90,Normal,Normal,No,No,Sí,Sí
+82647,60.6,Mujer,147,54,24.99,130,70,Normal,Normal,No,No,No,No
+52865,54.4,Mujer,160,65,25.39,120,80,Normal,Normal,No,No,Sí,Sí
+4411,64,Hombre,175,90,29.39,140,80,Por encima de lo normal,Muy por encima de lo normal,No,Sí,Sí,Sí
+34248,55.8,Mujer,164,78,29,120,80,Normal,Normal,No,No,Sí,Sí
+82962,40.3,Hombre,167,65,23.31,120,80,Normal,Normal,No,No,Sí,No
+5456,47.6,Mujer,164,69,25.65,130,80,Normal,Normal,No,No,Sí,No
+71010,41.6,Hombre,178,75,23.67,120,75,Normal,Normal,Sí,No,Sí,No
+22696,46,Hombre,168,100,35.43,150,80,Normal,Normal,Sí,Sí,Sí,No
+42794,56.4,Mujer,167,69,24.74,120,80,Normal,Normal,No,No,Sí,No
+4,47.8,Mujer,156,56,23.01,100,60,Normal,Normal,No,No,No,No
+88799,47.6,Mujer,157,87,35.3,130,80,Normal,Normal,No,No,Sí,Sí
+47274,51.7,Mujer,175,70,22.86,120,80,Normal,Normal,No,No,No,No
+28294,61.9,Hombre,180,83,25.62,120,80,Normal,Normal,No,No,Sí,Sí
+30308,59.8,Mujer,175,83,27.1,130,80,Normal,Muy por encima de lo normal,No,No,Sí,Sí
+62009,63.9,Mujer,175,80,26.12,130,70,Normal,Normal,No,No,Sí,Sí
+75006,41.5,Hombre,173,72,24.06,120,80,Normal,Normal,No,No,Sí,No
+22295,58.1,Mujer,168,69,24.45,120,80,Normal,Normal,No,No,Sí,No
+29715,55.8,Mujer,171,68,23.26,120,80,Normal,Normal,No,No,No,No
+63492,53.7,Hombre,178,86,27.14,140,90,Por encima de lo normal,Normal,Sí,No,Sí,Sí
+98910,40,Mujer,152,103,44.58,130,70,Normal,Normal,No,No,No,Sí
+51712,55.5,Mujer,161,67,25.85,150,90,Normal,Normal,No,No,Sí,No
+49450,59.9,Mujer,154,67,28.25,140,90,Normal,Por encima de lo normal,No,No,Sí,No
+26044,56,Hombre,162,85,32.39,90,70,Normal,Normal,Sí,No,Sí,No
+10410,49.8,Mujer,158,62,24.84,110,70,Normal,Normal,No,No,Sí,No
+67130,51.7,Hombre,160,60,23.44,120,80,Normal,Normal,No,No,Sí,Sí
+68928,54,Mujer,162,60,22.86,120,80,Normal,Normal,No,No,Sí,No
+12198,57.5,Mujer,156,63,25.89,140,80,Por encima de lo normal,Por encima de lo normal,No,No,No,Sí
+84189,57.5,Mujer,156,111,45.61,150,100,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+47300,50,Mujer,170,75,25.95,120,80,Normal,Normal,No,No,Sí,No
+3229,60.4,Mujer,170,67,23.18,130,80,Por encima de lo normal,Normal,No,No,No,No
+83321,59.6,Mujer,163,67,25.22,110,80,Normal,Normal,No,No,Sí,No
+73453,53.2,Mujer,161,59,22.76,120,75,Normal,Normal,No,No,Sí,No
+38951,58.1,Hombre,163,80,30.11,130,70,Muy por encima de lo normal,Normal,Sí,No,Sí,Sí
+78093,49.5,Mujer,154,86,36.26,110,70,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+47495,53.5,Mujer,166,70,25.4,130,80,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+39976,44.2,Hombre,171,70,23.94,110,80,Normal,Normal,No,No,Sí,No
+79185,64.1,Mujer,167,66,23.67,140,90,Normal,Normal,No,No,Sí,Sí
+70734,61.8,Hombre,168,56,19.84,140,90,Normal,Por encima de lo normal,No,No,Sí,Sí
+2325,64.4,Mujer,156,89,36.57,150,100,Normal,Muy por encima de lo normal,No,No,Sí,Sí
+78953,49.9,Hombre,171,87,29.75,111,76,Por encima de lo normal,Normal,Sí,No,Sí,No
+14620,54.3,Mujer,165,75,27.55,120,80,Normal,Normal,No,No,Sí,No
+81493,59.4,Mujer,156,53,21.78,120,80,Normal,Normal,No,No,Sí,No
+48156,54,Mujer,169,62,21.71,120,80,Normal,Normal,No,No,No,No
+32019,49.4,Mujer,165,65,23.88,110,80,Normal,Normal,No,No,No,No
+11473,64,Hombre,169,65,22.76,110,90,Por encima de lo normal,Normal,No,No,No,No
+95057,50,Hombre,176,74,23.89,120,80,Normal,Normal,No,No,Sí,No
+37285,64.1,Mujer,152,50,21.64,110,80,Normal,Normal,No,No,Sí,Sí
+9284,42,Hombre,160,75,29.3,100,70,Por encima de lo normal,Normal,No,No,Sí,No
+94348,52.4,Mujer,164,64,23.8,130,90,Por encima de lo normal,Normal,No,No,Sí,No
+58882,58.4,Mujer,154,95,40.06,120,80,Normal,Normal,No,No,No,Sí
+36989,60.4,Hombre,171,85,29.07,150,90,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+74398,39.5,Mujer,151,60,26.31,111,63,Normal,Normal,No,No,Sí,No
+49382,51.9,Hombre,169,72,25.21,120,80,Normal,Normal,No,No,Sí,No
+64075,46,Mujer,145,75,35.67,120,80,Normal,Normal,No,No,Sí,Sí
+59422,54.3,Mujer,174,82,27.08,110,60,Normal,Normal,No,No,No,Sí
+29711,55.4,Mujer,163,73,27.48,160,100,Normal,Normal,No,No,Sí,Sí
+10631,63.7,Mujer,158,79,31.65,120,80,Normal,Normal,No,No,Sí,Sí
+99100,53.8,Mujer,164,78,29,150,90,Normal,Normal,No,No,Sí,Sí
+17273,51.4,Hombre,177,62,19.79,120,90,Normal,Normal,No,No,Sí,Sí
+78618,57.9,Hombre,172,106,35.83,120,80,Normal,Normal,No,No,No,Sí
+27152,47.6,Hombre,165,62,22.77,120,80,Normal,Normal,No,No,No,Sí
+46344,55.9,Hombre,168,85,30.12,120,80,Normal,Normal,Sí,Sí,No,No
+43540,53.8,Mujer,168,70,24.8,140,80,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+75891,50,Hombre,170,84,29.07,120,80,Normal,Normal,Sí,No,Sí,No
+6918,64.2,Hombre,160,59,23.05,120,80,Normal,Normal,No,No,No,Sí
+51401,55.6,Mujer,165,63,23.14,150,100,Normal,Normal,No,No,Sí,Sí
+14249,55.9,Mujer,166,65,23.59,130,80,Normal,Normal,No,No,No,No
+88141,61.4,Hombre,165,70,25.71,120,70,Muy por encima de lo normal,Normal,No,Sí,Sí,No
+76907,42,Hombre,167,78,27.97,130,70,Normal,Normal,No,Sí,No,No
+74034,46,Hombre,178,91,28.72,140,80,Normal,Normal,No,No,No,No
+97499,46.3,Mujer,171,60,20.52,120,70,Normal,Normal,No,No,Sí,No
+44819,57.4,Mujer,174,85,28.08,110,80,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+34739,52.1,Hombre,158,50,20.03,110,70,Normal,Normal,No,No,Sí,No
+86022,56.8,Mujer,152,64,27.7,120,80,Normal,Normal,No,No,Sí,No
+50079,54,Mujer,164,79,29.37,150,80,Normal,Por encima de lo normal,No,No,Sí,Sí
+84641,59.6,Hombre,172,83,28.06,140,90,Normal,Normal,No,No,Sí,Sí
+80638,64.1,Mujer,156,50,20.55,100,60,Normal,Normal,No,No,Sí,No
+2850,63.9,Mujer,159,106.5,42.13,130,80,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+19997,63.8,Mujer,162,70,26.67,130,89,Por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+84505,58,Mujer,161,64,24.69,110,70,Muy por encima de lo normal,Normal,Sí,No,No,Sí
+81601,40.1,Mujer,170,80,27.68,110,70,Normal,Normal,No,No,Sí,No
+398,58.2,Mujer,149,56,25.22,140,90,Normal,Normal,No,No,Sí,Sí
+70811,54.3,Mujer,157,58,23.53,120,80,Normal,Normal,No,No,Sí,No
+65249,54.2,Mujer,170,76,26.3,120,90,Normal,Normal,No,No,Sí,No
+34833,40.5,Mujer,168,65,23.03,110,70,Normal,Muy por encima de lo normal,No,No,Sí,No
+14496,64.4,Mujer,153,70,29.9,120,70,Normal,Normal,No,No,Sí,No
+35154,49.5,Hombre,167,79,28.33,120,80,Por encima de lo normal,Normal,Sí,No,Sí,No
+92967,48.3,Hombre,173,100,33.41,120,80,Muy por encima de lo normal,Normal,No,No,No,No
+73616,47.7,Hombre,176,77,24.86,128,80,Normal,Normal,Sí,Sí,Sí,No
+96255,51.5,Hombre,170,84,29.07,120,70,Normal,Normal,Sí,No,Sí,Sí
+61639,49.9,Hombre,171,63,21.55,120,79,Normal,Normal,No,No,Sí,No
+82034,50.1,Mujer,163,55,20.7,130,90,Por encima de lo normal,Normal,No,No,Sí,Sí
+13497,58.4,Hombre,158,58,23.23,110,70,Normal,Normal,No,No,Sí,No
+81027,63.5,Hombre,160,103,40.23,130,90,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+98495,61.8,Hombre,180,84,25.93,150,100,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+86486,40.3,Mujer,168,64,22.68,110,70,Normal,Normal,No,No,No,No
+71975,51.7,Hombre,183,108,32.25,130,90,Normal,Normal,No,No,Sí,No
+9344,57.7,Hombre,161,57,21.99,160,90,Por encima de lo normal,Normal,Sí,No,Sí,No
+22582,49.5,Mujer,168,68,24.09,150,90,Normal,Normal,No,No,Sí,Sí
+96117,50.6,Mujer,170,68,23.53,120,80,Normal,Normal,No,No,No,No
+11176,58.1,Mujer,165,95,34.89,130,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+83477,54.2,Hombre,164,83,30.86,160,80,Normal,Normal,Sí,No,No,Sí
+77550,59.9,Mujer,154,52,21.93,120,80,Normal,Normal,No,No,Sí,No
+347,63.7,Mujer,156,93,38.21,120,80,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+26296,62,Mujer,163,73,27.48,140,90,Normal,Por encima de lo normal,No,No,Sí,Sí
+285,48,Hombre,156,60,24.65,110,70,Normal,Normal,Sí,No,Sí,No
+129,57.7,Mujer,158,53,21.23,110,70,Normal,Normal,No,No,Sí,No
+38888,60.2,Mujer,160,59,23.05,120,80,Normal,Normal,No,No,No,No
+56291,58.6,Hombre,177,81,25.85,140,90,Normal,Normal,No,No,Sí,Sí
+2014,57.9,Hombre,169,85,29.76,180,100,Normal,Normal,Sí,Sí,No,No
+45211,52.1,Mujer,146,44,20.64,120,80,Normal,Normal,No,No,No,No
+22675,43.6,Mujer,162,65,24.77,110,70,Normal,Normal,No,No,Sí,No
+4469,62.5,Hombre,175,82,26.78,125,80,Normal,Por encima de lo normal,No,No,Sí,Sí
+75592,50.3,Hombre,166,69,25.04,130,90,Normal,Normal,No,No,No,Sí
+47901,55.7,Mujer,158,69,27.64,90,60,Normal,Normal,No,No,Sí,No
+7947,47.7,Hombre,161,92,35.49,110,70,Normal,Normal,Sí,No,Sí,Sí
+17944,47.9,Hombre,172,97,32.79,160,80,Normal,Normal,Sí,Sí,No,Sí
+20800,58,Mujer,165,70,25.71,130,80,Normal,Normal,No,No,No,Sí
+86207,64.5,Mujer,170,80,27.68,170,110,Por encima de lo normal,Normal,No,No,Sí,Sí
+46894,49.8,Mujer,159,73,28.88,140,80,Normal,Normal,No,No,Sí,Sí
+45915,40.5,Hombre,161,79,30.48,120,80,Normal,Normal,No,No,No,No
+28155,62,Mujer,153,66,28.19,120,80,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+65157,51.8,Hombre,170,70,24.22,120,80,Normal,Normal,No,No,Sí,No
+93670,50.1,Hombre,172,75,25.35,120,80,Normal,Normal,No,No,Sí,No
+340,40.2,Hombre,172,73,24.68,120,80,Normal,Normal,Sí,No,No,No
+45024,40.8,Mujer,170,70,24.22,120,80,Normal,Normal,No,No,Sí,No
+56338,49.9,Hombre,178,85,26.83,120,80,Por encima de lo normal,Normal,No,No,Sí,Sí
+74053,55.9,Mujer,161,61,23.53,110,70,Normal,Muy por encima de lo normal,No,No,Sí,Sí
+26204,64.2,Hombre,163,80,30.11,180,90,Muy por encima de lo normal,Muy por encima de lo normal,Sí,No,Sí,Sí
+32075,56.1,Mujer,165,96,35.26,150,90,Muy por encima de lo normal,Normal,No,No,No,Sí
+50484,55.6,Hombre,160,80,31.25,120,80,Normal,Normal,No,No,Sí,Sí
+26772,50,Hombre,178,50,15.78,110,60,Normal,Normal,Sí,No,Sí,Sí
+7513,49.2,Mujer,168,68,24.09,140,80,Normal,Normal,No,No,Sí,Sí
+60331,51.3,Hombre,183,78,23.29,110,80,Normal,Normal,No,No,Sí,No
+53543,63.7,Mujer,160,71,27.73,130,80,Normal,Normal,No,No,Sí,No
+21077,45.7,Mujer,158,64,25.64,110,70,Normal,Normal,No,No,Sí,No
+9931,51.6,Hombre,169,66,23.11,110,70,Normal,Normal,No,No,Sí,No
+45239,48,Mujer,165,65,23.88,110,80,Normal,Normal,No,No,Sí,No
+46577,42.1,Mujer,156,55,22.6,110,80,Normal,Normal,No,No,Sí,Sí
+21211,52.5,Hombre,168,72,25.51,120,80,Normal,Normal,No,No,No,No
+90618,55.8,Hombre,168,78,27.64,120,80,Normal,Normal,Sí,No,Sí,No
+39440,58,Mujer,152,53,22.94,110,70,Por encima de lo normal,Normal,No,No,No,Sí
+8288,56,Mujer,165,87,31.96,170,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+86492,56.7,Mujer,164,80,29.74,110,80,Normal,Normal,No,No,Sí,No
+37114,56.7,Mujer,164,71,26.4,140,90,Normal,Normal,No,No,Sí,Sí
+80031,61.5,Mujer,165,66,24.24,120,80,Normal,Por encima de lo normal,No,No,Sí,No
+96010,52.1,Mujer,170,80,27.68,120,70,Normal,Normal,No,No,No,Sí
+40032,40.1,Mujer,157,55,22.31,120,80,Normal,Normal,No,No,No,No
+58442,58.1,Mujer,167,80,28.69,150,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,No,Sí
+62711,49.8,Hombre,158,80,32.05,140,60,Normal,Normal,No,No,Sí,Sí
+857,64.3,Hombre,165,79,29.02,140,90,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+46428,63.6,Mujer,167,56,20.08,140,90,Normal,Normal,No,No,Sí,Sí
+37116,63.4,Hombre,160,48,18.75,140,90,Por encima de lo normal,Normal,Sí,Sí,Sí,No
+3103,64.2,Mujer,164,82,30.49,140,90,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+47431,45.8,Hombre,173,89,29.74,120,80,Normal,Normal,No,No,Sí,Sí
+80926,40.6,Hombre,175,65,21.22,110,70,Normal,Normal,No,No,Sí,No
+99208,54.2,Hombre,169,69,24.16,120,80,Normal,Normal,No,No,Sí,No
+44416,63.7,Hombre,178,102,32.19,130,90,Normal,Normal,No,No,No,Sí
+94968,55.7,Mujer,153,65,27.77,140,90,Normal,Normal,No,No,Sí,No
+4464,59.8,Mujer,156,58,23.83,150,100,Normal,Normal,No,No,Sí,Sí
+65297,58.1,Hombre,176,49,15.82,110,70,Normal,Normal,No,No,Sí,No
+14167,45.9,Mujer,157,69,27.99,110,80,Normal,Normal,No,No,Sí,No
+9579,49.7,Mujer,162,60,22.86,120,80,Normal,Normal,No,No,Sí,No
+30911,49.9,Hombre,178,95,29.98,130,90,Normal,Normal,No,No,Sí,Sí
+53640,57.8,Mujer,166,87,31.57,180,120,Normal,Normal,No,No,No,Sí
+31807,60.6,Mujer,168,66,23.38,120,80,Normal,Normal,No,No,Sí,Sí
+80852,45.7,Mujer,164,81,30.12,120,80,Normal,Normal,No,No,Sí,No
+31407,54.2,Mujer,175,70,22.86,110,70,Normal,Normal,No,No,Sí,Sí
+28232,59.3,Mujer,170,78,26.99,140,90,Normal,Normal,No,No,Sí,Sí
+64469,39.5,Hombre,168,72,25.51,120,80,Normal,Normal,No,No,No,No
+59805,51.6,Mujer,167,78,27.97,130,80,Normal,Normal,No,No,Sí,Sí
+18866,45.8,Hombre,165,73,26.81,100,80,Normal,Por encima de lo normal,No,No,Sí,No
+81184,41.4,Hombre,172,75,25.35,120,80,Normal,Por encima de lo normal,No,No,Sí,No
+36976,47.8,Mujer,165,80,29.38,130,70,Normal,Normal,No,No,No,Sí
+85049,52.3,Hombre,169,70,24.51,130,90,Normal,Normal,No,No,Sí,Sí
+25959,47.3,Hombre,169,75,26.26,90,70,Normal,Normal,No,No,Sí,No
+10312,49.8,Mujer,163,59,22.21,120,80,Normal,Normal,No,No,Sí,Sí
+50392,47.9,Mujer,170,69,23.88,120,80,Normal,Normal,No,No,Sí,No
+73148,58.3,Mujer,170,77,26.64,140,90,Normal,Normal,No,No,Sí,Sí
+66029,48,Mujer,168,67,23.74,110,70,Normal,Normal,No,No,Sí,No
+98582,47.9,Hombre,165,80,29.38,120,80,Por encima de lo normal,Normal,No,No,No,No
+85988,42.2,Hombre,165,77,28.28,120,70,Normal,Normal,Sí,No,Sí,No
+15492,51.6,Mujer,162,75,28.58,130,80,Normal,Normal,No,No,Sí,Sí
+61455,57.9,Mujer,158,60,24.03,130,90,Por encima de lo normal,Por encima de lo normal,No,No,No,Sí
+96057,63.9,Hombre,167,91,32.63,140,90,Muy por encima de lo normal,Normal,Sí,No,Sí,Sí
+13039,53.9,Mujer,165,65,23.88,120,80,Normal,Normal,No,No,Sí,No
+3428,54.4,Hombre,156,64,26.3,110,70,Normal,Normal,No,No,Sí,No
+85178,43.4,Mujer,173,73,24.39,130,80,Normal,Normal,No,No,Sí,Sí
+86314,55.7,Mujer,162,103,39.25,160,1000,Por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+68342,60.5,Mujer,160,79,30.86,120,80,Normal,Normal,No,No,Sí,No
+65679,56,Mujer,165,67,24.61,120,80,Normal,Normal,No,No,Sí,Sí
+74708,56,Mujer,159,66,26.11,120,70,Normal,Normal,No,No,No,No
+59562,55.7,Mujer,175,55,17.96,140,80,Por encima de lo normal,Normal,No,No,Sí,Sí
+98049,49.6,Mujer,157,70,28.4,120,90,Por encima de lo normal,Normal,No,Sí,No,Sí
+94133,64.5,Mujer,151,48,21.05,120,85,Normal,Normal,No,No,Sí,No
+39986,62.6,Hombre,175,69,22.53,140,90,Normal,Normal,No,No,No,Sí
+41900,41.8,Hombre,160,70,27.34,160,100,Normal,Normal,No,No,No,Sí
+40539,55.5,Mujer,165,60,22.04,110,70,Por encima de lo normal,Normal,No,No,Sí,No
+94128,40,Hombre,183,60,17.92,110,80,Normal,Normal,No,No,Sí,No
+72502,57.4,Hombre,166,88,31.93,160,80,Por encima de lo normal,Normal,No,Sí,Sí,Sí
+58843,53.5,Hombre,170,60,20.76,110,70,Normal,Normal,No,No,Sí,No
+83513,50.1,Mujer,186,80,23.12,100,60,Normal,Normal,No,No,Sí,Sí
+68951,43.4,Mujer,158,61,24.44,120,70,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,No
+81418,58.2,Hombre,165,66,24.24,130,80,Normal,Normal,Sí,Sí,Sí,No
+10245,48.4,Mujer,160,82,32.03,120,80,Normal,Normal,No,No,Sí,No
+50768,63.8,Mujer,164,60,22.31,120,60,Normal,Normal,No,No,No,Sí
+95183,60.4,Mujer,171,63,21.55,130,90,Normal,Normal,No,No,Sí,No
+41026,39.9,Mujer,164,62,23.05,120,80,Normal,Normal,No,No,Sí,No
+72063,50,Hombre,179,67,20.91,120,80,Por encima de lo normal,Normal,No,No,Sí,No
+22967,41.6,Hombre,156,60,24.65,110,70,Normal,Normal,No,No,Sí,No
+74007,51.9,Mujer,163,68,25.59,110,70,Normal,Normal,No,No,Sí,No
+71046,51.9,Mujer,165,67,24.61,120,80,Normal,Normal,No,No,Sí,No
+79124,51.7,Mujer,151,69,30.26,110,70,Normal,Normal,No,No,Sí,No
+3432,40,Hombre,174,76,25.1,110,70,Normal,Normal,Sí,No,Sí,No
+47960,58.5,Hombre,158,62,24.84,120,80,Normal,Normal,No,No,Sí,No
+93175,55.7,Mujer,167,74,26.53,120,80,Normal,Normal,No,No,No,Sí
+77489,45.8,Hombre,165,60,22.04,130,90,Normal,Normal,Sí,No,Sí,No
+91788,58,Mujer,165,95,34.89,130,90,Muy por encima de lo normal,Muy por encima de lo normal,No,No,No,Sí
+73151,57.6,Mujer,168,100,35.43,145,82,Normal,Normal,No,No,No,No
+3918,59.3,Mujer,146,66,30.96,160,70,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+2962,51.9,Mujer,159,66,26.11,110,80,Normal,Normal,No,No,No,No
+6758,39.9,Mujer,162,52,19.81,110,70,Normal,Normal,No,No,No,No
+27107,60.3,Mujer,160,90,35.16,120,80,Normal,Normal,No,No,Sí,Sí
+11886,59.9,Hombre,164,76,28.26,120,80,Normal,Normal,No,No,Sí,Sí
+72852,42,Hombre,178,81,25.56,120,70,Normal,Normal,No,Sí,Sí,No
+88695,48.3,Hombre,166,54,19.6,150,90,Normal,Normal,Sí,No,Sí,No
+13326,60.1,Mujer,157,62,25.15,140,80,Por encima de lo normal,Normal,No,No,Sí,Sí
+73145,51.9,Mujer,165,66,24.24,110,70,Normal,Normal,No,No,Sí,No
+13955,41.3,Hombre,178,82,25.88,110,80,Normal,Normal,No,No,Sí,No
+57655,55.5,Hombre,158,76,30.44,140,90,Normal,Normal,No,No,Sí,Sí
+19444,50.3,Hombre,171,92,31.46,145,85,Por encima de lo normal,Normal,No,No,No,No
+9367,51.4,Mujer,163,87,32.74,110,70,Normal,Normal,No,No,Sí,No
+50053,41.8,Mujer,165,104,38.2,120,90,Normal,Normal,No,No,Sí,No
+30978,39.7,Hombre,170,73,25.26,110,70,Normal,Normal,No,No,Sí,No
+83882,47.4,Mujer,160,66,25.78,120,70,Por encima de lo normal,Normal,No,No,Sí,Sí
+35409,54.2,Mujer,161,64,24.69,110,70,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+80034,51.6,Mujer,165,74,27.18,120,60,Normal,Normal,No,No,No,No
+38127,55.8,Mujer,148,47,21.46,140,90,Normal,Muy por encima de lo normal,No,No,Sí,No
+55284,63.6,Mujer,158,69,27.64,120,80,Normal,Normal,No,No,Sí,Sí
+10957,56.5,Mujer,157,79,32.05,110,70,Normal,Normal,No,No,Sí,Sí
+52266,59.8,Mujer,164,57,21.19,130,80,Normal,Normal,No,No,Sí,Sí
+13933,53.5,Hombre,168,59,20.9,140,90,Normal,Normal,No,No,Sí,Sí
+58233,61.7,Hombre,169,84,29.41,130,80,Muy por encima de lo normal,Muy por encima de lo normal,Sí,Sí,No,Sí
+28235,39.5,Hombre,175,73,23.84,100,80,Normal,Normal,No,No,Sí,No
+55310,48.5,Mujer,169,72,25.21,160,90,Normal,Normal,No,No,No,Sí
+49386,60,Mujer,154,60,25.3,125,80,Normal,Normal,No,No,Sí,Sí
+71039,57.6,Hombre,168,95,33.66,140,90,Normal,Normal,No,Sí,Sí,Sí
+18984,40.7,Mujer,170,83,28.72,140,90,Normal,Normal,No,No,No,Sí
+28428,43.6,Mujer,170,60,20.76,120,70,Normal,Normal,No,No,Sí,No
+5774,56,Hombre,167,68,24.38,120,80,Normal,Normal,No,Sí,No,Sí
+62712,52.4,Mujer,175,80,26.12,130,90,Por encima de lo normal,Normal,No,No,Sí,Sí
+71013,44.1,Mujer,162,91,34.67,120,80,Normal,Normal,No,No,Sí,No
+99147,52,Mujer,156,60,24.65,130,90,Por encima de lo normal,Normal,No,No,Sí,Sí
+80453,52.1,Mujer,158,80,32.05,150,90,Por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+36671,60.2,Hombre,167,78,27.97,110,80,Normal,Normal,No,No,Sí,No
+20797,54.1,Mujer,154,68,28.67,120,80,Normal,Normal,No,No,Sí,No
+64339,50.3,Mujer,153,81,34.6,110,70,Por encima de lo normal,Normal,No,No,Sí,No
+72018,64.2,Mujer,160,60,23.44,120,80,Por encima de lo normal,Normal,No,Sí,No,Sí
+58552,63.7,Mujer,164,69,25.65,140,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,No,Sí
+77629,47.9,Mujer,165,60,22.04,130,80,Normal,Normal,No,No,Sí,No
+20467,50.8,Mujer,177,80,25.54,130,70,Por encima de lo normal,Normal,No,No,Sí,No
+39991,50.2,Mujer,170,70,24.22,150,70,Normal,Normal,No,No,Sí,Sí
+12725,59.6,Hombre,164,56,20.82,110,80,Muy por encima de lo normal,Normal,No,No,Sí,No
+10313,55.5,Mujer,157,50,20.28,120,80,Normal,Normal,No,No,Sí,No
+19712,50.3,Hombre,170,75,25.95,120,80,Por encima de lo normal,Por encima de lo normal,No,Sí,Sí,No
+60639,50.1,Hombre,165,58,21.3,110,70,Normal,Normal,No,No,Sí,No
+55049,63.6,Hombre,160,72,28.12,140,90,Muy por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+93443,45.5,Mujer,167,89,31.91,150,100,Normal,Normal,No,No,Sí,Sí
+34740,42.3,Hombre,153,65,27.77,120,80,Normal,Normal,No,No,Sí,No
+89424,59.6,Mujer,156,66,27.12,130,80,Normal,Normal,No,No,Sí,Sí
+25730,41.7,Mujer,165,114,41.87,120,80,Normal,Normal,No,No,Sí,No
+13837,57.9,Mujer,160,100,39.06,140,90,Normal,Normal,No,No,Sí,Sí
+66282,59.5,Hombre,158,75,30.04,120,80,Normal,Normal,No,No,Sí,No
+38468,41.6,Hombre,173,94,31.41,140,90,Por encima de lo normal,Normal,No,No,Sí,Sí
+8682,62.7,Mujer,163,65,24.46,130,70,Normal,Normal,No,No,Sí,Sí
+46891,60,Mujer,160,65,25.39,120,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,No
+82019,62,Mujer,174,65,21.47,120,80,Normal,Normal,No,No,Sí,Sí
+93114,48,Mujer,161,71,27.39,120,80,Normal,Normal,No,No,Sí,Sí
+49518,42.2,Hombre,169,81,28.36,140,1000,Normal,Normal,No,No,No,Sí
+85288,54.7,Mujer,168,76,26.93,120,80,Normal,Normal,No,No,Sí,No
+87657,50,Hombre,185,78,22.79,150,100,Normal,Normal,No,No,Sí,Sí
+29377,62.2,Mujer,168,80,28.34,120,80,Normal,Normal,No,No,Sí,Sí
+99884,53.2,Hombre,175,80,26.12,120,80,Normal,Normal,No,No,Sí,Sí
+35629,57.7,Mujer,167,55,19.72,120,70,Normal,Normal,No,No,Sí,Sí
+58116,64.7,Hombre,174,74,24.44,140,90,Normal,Normal,No,No,Sí,Sí
+32718,51.5,Mujer,155,75,31.22,130,80,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+76013,56.7,Mujer,166,88,31.93,120,80,Por encima de lo normal,Normal,No,No,Sí,No
+93633,49.2,Hombre,161,78,30.09,120,70,Por encima de lo normal,Normal,No,No,Sí,Sí
+28651,56.1,Mujer,155,77,32.05,140,90,Normal,Normal,No,No,Sí,Sí
+71881,54.5,Hombre,170,75,25.95,120,80,Normal,Normal,No,No,Sí,No
+75675,60.2,Mujer,159,60,23.73,120,80,Normal,Normal,No,No,Sí,No
+78275,47.9,Hombre,172,70,23.66,120,70,Normal,Normal,No,No,Sí,Sí
+93819,55.7,Hombre,172,80,27.04,130,90,Normal,Normal,No,No,Sí,Sí
+73544,53.7,Mujer,158,75,30.04,110,80,Normal,Normal,No,No,Sí,Sí
+64201,53.9,Mujer,163,63,23.71,120,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,No,Sí
+23788,40.2,Mujer,167,62,22.23,110,70,Normal,Normal,No,No,Sí,No
+139,60,Mujer,170,72,24.91,120,80,Normal,Normal,No,No,No,Sí
+83186,50.5,Mujer,158,59,23.63,90,70,Normal,Normal,No,No,Sí,No
+14101,40.1,Hombre,170,87,30.1,100,70,Normal,Normal,No,Sí,Sí,No
+45867,54.3,Hombre,174,77,25.43,130,90,Por encima de lo normal,Normal,No,No,No,No
+47366,46.3,Mujer,159,75,29.67,130,80,Normal,Normal,No,No,Sí,Sí
+14780,42,Mujer,168,65,23.03,120,70,Normal,Normal,No,No,Sí,No
+80846,45.3,Hombre,172,69,23.32,120,80,Normal,Normal,No,No,Sí,No
+3013,54.2,Mujer,175,85,27.76,130,80,Normal,Normal,No,No,Sí,Sí
+95477,50.2,Hombre,167,68,24.38,120,80,Normal,Normal,No,No,No,No
+2054,62,Mujer,168,66,23.38,140,90,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+21354,50.5,Mujer,161,83,32.02,120,80,Por encima de lo normal,Normal,No,No,No,No
+60703,63.8,Hombre,171,89,30.44,120,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,No,Sí
+96636,50.6,Mujer,160,57,22.27,110,80,Normal,Normal,No,No,Sí,No
+50677,53.6,Mujer,168,65,23.03,120,80,Normal,Normal,No,No,Sí,No
+85346,49.6,Hombre,170,69,23.88,140,70,Normal,Normal,No,No,Sí,Sí
+24349,59.8,Hombre,170,74,25.61,120,80,Normal,Normal,Sí,No,No,Sí
+10723,64.2,Mujer,161,80,30.86,130,81,Por encima de lo normal,Normal,No,No,Sí,Sí
+49541,46.1,Mujer,166,78,28.31,120,80,Normal,Normal,No,No,Sí,No
+14203,60.5,Mujer,160,78,30.47,140,80,Muy por encima de lo normal,Normal,No,No,No,Sí
+82151,50.4,Hombre,179,119,37.14,130,90,Normal,Normal,No,No,Sí,Sí
+37299,56.1,Hombre,175,85,27.76,120,80,Normal,Normal,No,No,Sí,No
+76835,57.8,Mujer,167,62,22.23,140,80,Muy por encima de lo normal,Normal,No,Sí,Sí,Sí
+53058,56.4,Hombre,157,66,26.78,110,70,Normal,Normal,No,No,Sí,No
+15734,54.2,Mujer,165,71,26.08,120,80,Normal,Normal,No,No,No,No
+49511,47.6,Mujer,168,63,22.32,120,80,Normal,Normal,No,No,Sí,No
+79427,50,Mujer,165,60,22.04,110,70,Normal,Normal,No,No,Sí,No
+98159,61.8,Mujer,152,60,25.97,120,80,Normal,Normal,No,No,Sí,No
+74808,59.9,Hombre,163,75,28.23,110,70,Por encima de lo normal,Normal,Sí,No,Sí,Sí
+81624,50.1,Hombre,181,91,27.78,119,74,Por encima de lo normal,Normal,No,No,Sí,No
+38156,49.5,Hombre,180,90,27.78,180,100,Por encima de lo normal,Por encima de lo normal,No,Sí,Sí,Sí
+30323,61.8,Hombre,165,72,26.45,130,80,Normal,Normal,Sí,No,Sí,No
+9603,53.6,Hombre,160,60,23.44,120,80,Normal,Normal,No,No,Sí,No
+47829,56.1,Hombre,165,65,23.88,120,80,Normal,Normal,No,No,Sí,Sí
+85648,41.7,Mujer,164,70,26.03,120,80,Normal,Normal,No,No,Sí,No
+59839,52.2,Mujer,160,63,24.61,140,90,Normal,Normal,No,No,No,Sí
+40270,53.4,Mujer,165,73,26.81,120,80,Normal,Normal,No,No,Sí,Sí
+43401,61.4,Hombre,171,71,24.28,120,80,Normal,Muy por encima de lo normal,No,No,Sí,Sí
+54749,59.3,Hombre,167,91,32.63,120,80,Normal,Normal,No,No,Sí,Sí
+69486,64.4,Hombre,165,68,24.98,120,80,Normal,Normal,Sí,No,Sí,No
+27478,51.6,Mujer,170,48,16.61,120,80,Normal,Normal,No,No,Sí,No
+18188,63.6,Mujer,158,70,28.04,150,1000,Normal,Normal,No,No,Sí,Sí
+3331,56,Mujer,156,109,44.79,120,80,Normal,Normal,No,No,Sí,No
+16553,51.4,Mujer,161,75,28.93,120,80,Normal,Normal,No,No,Sí,No
+70324,39.8,Mujer,170,80,27.68,140,90,Por encima de lo normal,Normal,No,No,Sí,Sí
+62439,47.5,Mujer,163,76,28.6,80,120,Por encima de lo normal,Normal,No,No,Sí,Sí
+138,49.6,Hombre,183,95,28.37,125,80,Normal,Muy por encima de lo normal,Sí,No,Sí,No
+55096,48.5,Mujer,157,60,24.34,120,80,Normal,Normal,No,No,Sí,No
+66925,50,Mujer,158,58,23.23,110,70,Por encima de lo normal,Normal,No,No,Sí,No
+28158,56,Hombre,167,57,20.44,110,70,Normal,Normal,Sí,No,Sí,No
+55601,61.9,Mujer,150,68,30.22,120,80,Por encima de lo normal,Normal,No,No,Sí,Sí
+45643,47.7,Mujer,160,59,23.05,120,80,Por encima de lo normal,Normal,No,No,No,No
+59474,56.7,Mujer,160,85,33.2,120,80,Normal,Normal,No,No,Sí,Sí
+79940,64.4,Mujer,154,58,24.46,150,80,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+20861,64.3,Mujer,163,64,24.09,120,70,Normal,Muy por encima de lo normal,No,No,Sí,Sí
+15996,59.9,Mujer,165,65,23.88,120,79,Normal,Normal,No,No,No,No
+78537,59.8,Mujer,159,69,27.29,150,90,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+68077,44,Hombre,176,85,27.44,120,80,Normal,Por encima de lo normal,Sí,No,No,No
+18198,43.4,Mujer,167,82,29.4,140,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+86369,60,Hombre,160,88,34.37,120,80,Normal,Normal,Sí,Sí,Sí,Sí
+51239,48.2,Mujer,155,75,31.22,130,85,Normal,Normal,No,No,Sí,No
+34931,54.3,Hombre,180,99,30.56,160,1000,Normal,Normal,No,No,Sí,Sí
+67699,42,Mujer,156,60,24.65,110,70,Normal,Normal,No,No,Sí,No
+46872,48.1,Mujer,160,56,21.87,125,60,Normal,Normal,No,No,No,No
+80388,61.9,Mujer,174,121,39.97,140,90,Normal,Normal,No,No,Sí,Sí
+50554,50.6,Mujer,163,66,24.84,120,80,Normal,Normal,No,No,Sí,Sí
+19158,57.9,Hombre,175,75,24.49,120,80,Normal,Normal,No,No,No,Sí
+29830,55.7,Mujer,168,92,32.6,110,80,Por encima de lo normal,Por encima de lo normal,No,No,No,Sí
+44870,62.1,Mujer,160,85,33.2,120,80,Normal,Normal,No,No,Sí,Sí
+47321,60.1,Mujer,158,70,28.04,130,90,Por encima de lo normal,Normal,No,No,Sí,No
+61695,63.6,Mujer,152,61,26.4,110,70,Por encima de lo normal,Normal,No,No,Sí,No
+47249,53.3,Hombre,162,56,21.34,120,80,Normal,Normal,No,No,Sí,Sí
+83171,58.1,Mujer,154,85,35.84,100,60,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,No
+89349,63.9,Mujer,159,58.5,23.14,200,80,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+95361,46.2,Mujer,171,76,25.99,120,80,Normal,Normal,No,No,Sí,No
+48251,54.1,Hombre,175,100,32.65,150,80,Normal,Normal,No,No,Sí,Sí
+85537,49.9,Mujer,160,56,21.87,100,80,Normal,Normal,No,No,Sí,No
+79342,58.2,Mujer,165,65,23.88,120,90,Normal,Normal,No,No,Sí,Sí
+52513,56.7,Hombre,169,70,24.51,140,80,Normal,Normal,No,No,Sí,Sí
+98818,53.4,Hombre,176,72,23.24,120,80,Normal,Normal,No,No,Sí,No
+92381,57.5,Mujer,162,86,32.77,120,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,No
+30261,55.7,Mujer,165,86,31.59,120,80,Por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+57377,63.9,Mujer,156,70,28.76,140,80,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+68742,59.9,Mujer,155,48,19.98,110,80,Normal,Normal,No,No,Sí,No
+10672,62.5,Hombre,162,74,28.2,110,80,Por encima de lo normal,Normal,No,No,Sí,No
+74917,63.9,Mujer,157,58,23.53,130,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,No,Sí
+51945,58.4,Mujer,158,80,32.05,105,65,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,No
+99569,49.9,Mujer,159,79,31.25,110,70,Normal,Normal,No,No,Sí,No
+18955,46.2,Hombre,168,70,24.8,150,90,Normal,Normal,No,No,No,Sí
+71199,60,Hombre,163,67,25.22,120,80,Normal,Normal,Sí,No,Sí,Sí
+30837,50.5,Mujer,161,70,27.01,120,80,Normal,Normal,No,No,Sí,No
+19379,42.3,Mujer,160,62,24.22,110,70,Normal,Normal,No,No,Sí,No
+13224,57.4,Mujer,160,72,28.12,130,80,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+83402,41.9,Mujer,169,65,22.76,110,70,Normal,Normal,No,No,Sí,No
+80390,45.6,Mujer,158,56,22.43,120,80,Normal,Normal,No,Sí,Sí,No
+37489,49.8,Mujer,156,78,32.05,120,80,Por encima de lo normal,Normal,No,No,Sí,No
+25250,62.4,Hombre,167,70,25.1,150,100,Normal,Normal,No,No,Sí,No
+38553,60.7,Hombre,180,85,26.23,120,80,Normal,Normal,Sí,No,No,No
+7075,55.4,Hombre,159,70,27.69,120,80,Normal,Normal,No,No,Sí,No
+9233,57.4,Hombre,175,83,27.1,120,80,Normal,Normal,No,No,Sí,No
+47948,49.8,Mujer,160,74,28.91,120,80,Normal,Normal,No,No,Sí,Sí
+23182,57.7,Mujer,155,71,29.55,120,80,Normal,Normal,No,No,Sí,No
+38655,58.2,Mujer,149,41,18.47,110,80,Normal,Normal,No,No,No,No
+82638,54.3,Hombre,168,60,21.26,120,80,Normal,Normal,No,No,Sí,No
+67719,52.2,Mujer,164,82,30.49,130,80,Normal,Normal,No,No,Sí,No
+54274,60.6,Mujer,157,70,28.4,120,80,Normal,Normal,No,No,Sí,No
+81937,41.9,Hombre,174,96,31.71,150,90,Normal,Por encima de lo normal,No,Sí,Sí,Sí
+90655,60.2,Hombre,172,80,27.04,130,80,Normal,Normal,Sí,Sí,Sí,Sí
+36504,62.8,Mujer,154,78,32.89,110,70,Normal,Normal,No,No,Sí,Sí
+30880,57.9,Mujer,160,60,23.44,120,80,Normal,Normal,No,No,Sí,No
+26294,48.1,Mujer,151,67,29.38,100,60,Normal,Por encima de lo normal,No,No,Sí,No
+30849,54.1,Mujer,168,74,26.22,100,70,Normal,Normal,No,No,No,No
+50434,48,Mujer,158,68,27.24,120,80,Normal,Normal,No,No,Sí,No
+133,59.8,Hombre,170,100,34.6,120,80,Normal,Normal,No,No,No,Sí
+14015,61.9,Hombre,167,73,26.18,130,90,Muy por encima de lo normal,Normal,No,No,Sí,No
+98341,64.6,Hombre,168,76,26.93,150,80,Por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+68239,55.2,Hombre,183,107,31.95,120,80,Por encima de lo normal,Muy por encima de lo normal,Sí,Sí,Sí,No
+96764,48.2,Mujer,158,62,24.84,120,80,Normal,Normal,No,No,Sí,Sí
+11294,57.9,Mujer,156,61,25.07,120,80,Normal,Normal,No,No,No,No
+33584,48.1,Mujer,160,60,23.44,150,100,Normal,Normal,No,No,Sí,Sí
+61809,48,Hombre,164,70,26.03,110,70,Por encima de lo normal,Muy por encima de lo normal,No,No,No,No
+39536,44.5,Mujer,165,63,23.14,120,80,Normal,Normal,No,No,Sí,No
+50689,45.6,Mujer,162,76,28.96,90,70,Normal,Normal,No,No,No,Sí
+89603,52.8,Mujer,178,82,25.88,120,80,Normal,Normal,No,No,Sí,No
+91690,53.1,Mujer,163,63,23.71,120,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,No,Sí
+28050,58.1,Mujer,153,68,29.05,120,80,Normal,Normal,No,No,Sí,No
+26793,51.8,Mujer,165,98,36,120,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+89156,63.8,Hombre,175,84,27.43,120,80,Normal,Por encima de lo normal,No,No,Sí,Sí
+16908,60.6,Hombre,170,65,22.49,120,80,Normal,Normal,No,No,Sí,No
+10483,54.1,Mujer,170,75,25.95,120,80,Normal,Normal,No,No,Sí,Sí
+54295,57.8,Hombre,172,80,27.04,120,80,Normal,Normal,No,No,Sí,No
+58669,59.6,Hombre,161,90,34.72,130,80,Normal,Normal,No,No,Sí,Sí
+57784,53.6,Hombre,151,70,30.7,130,90,Muy por encima de lo normal,Normal,Sí,No,Sí,No
+68088,56.3,Mujer,156,88,36.16,120,80,Normal,Normal,No,No,No,No
+1576,50.1,Mujer,165,80,29.38,120,80,Normal,Normal,No,No,Sí,No
+28426,49.8,Mujer,158,104,41.66,120,80,Por encima de lo normal,Normal,No,No,Sí,Sí
+54689,47.6,Hombre,177,63,20.11,140,90,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+17239,51.5,Mujer,157,112,45.44,140,80,Normal,Normal,No,No,Sí,Sí
+41815,59.2,Hombre,170,67,23.18,130,80,Muy por encima de lo normal,Normal,No,No,No,Sí
+63921,57.9,Mujer,152,67,29,130,80,Normal,Normal,No,No,Sí,No
+74658,58.2,Hombre,167,63,22.59,130,90,Normal,Normal,No,No,Sí,Sí
+69598,57.6,Hombre,162,87,33.15,120,80,Normal,Normal,Sí,No,Sí,No
+63030,53.8,Mujer,168,71,25.16,120,80,Por encima de lo normal,Normal,No,Sí,Sí,No
+47135,61.6,Mujer,168,72,25.51,120,80,Normal,Normal,No,No,No,No
+16559,61.7,Mujer,153,65,27.77,130,80,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+99472,63.2,Mujer,161,96,37.04,130,80,Normal,Normal,No,No,Sí,Sí
+29828,54,Hombre,175,76,24.82,120,80,Normal,Normal,No,No,Sí,No
+65376,41.5,Hombre,168,82,29.05,110,70,Normal,Normal,No,No,No,No
+17057,49.9,Mujer,163,72,27.1,130,80,Normal,Normal,No,No,Sí,Sí
+18511,53.2,Mujer,162,70,26.67,140,100,Normal,Normal,No,No,Sí,No
+15216,45.9,Hombre,166,80,29.03,120,80,Normal,Normal,No,No,No,Sí
+15650,64.1,Mujer,154,56,23.61,150,80,Normal,Normal,No,No,No,Sí
+50207,64.3,Mujer,147,61,28.23,170,120,Normal,Normal,No,No,Sí,Sí
+7977,50.4,Mujer,160,65,25.39,120,80,Normal,Normal,No,No,Sí,No
+43274,59.5,Mujer,164,112,41.64,180,100,Normal,Normal,No,No,Sí,Sí
+65464,64.4,Hombre,162,69,26.29,120,80,Normal,Muy por encima de lo normal,No,No,Sí,Sí
+30600,48,Mujer,165,63,23.14,130,80,Normal,Normal,No,No,Sí,Sí
+24634,52.1,Hombre,170,71,24.57,120,80,Normal,Normal,No,No,Sí,No
+19904,53.9,Hombre,165,59,21.67,140,90,Por encima de lo normal,Normal,No,Sí,Sí,Sí
+80561,53.5,Mujer,169,88,30.81,120,80,Normal,Normal,No,No,Sí,Sí
+93327,55.4,Mujer,158,62,24.84,120,80,Normal,Normal,No,No,Sí,No
+2206,47.4,Hombre,165,70,25.71,160,90,Normal,Normal,No,No,Sí,Sí
+10208,53.7,Mujer,147,44,20.36,140,90,Normal,Normal,No,Sí,Sí,No
+87601,39.7,Mujer,162,75,28.58,140,90,Normal,Normal,No,No,Sí,Sí
+29203,52,Mujer,159,67,26.5,140,90,Por encima de lo normal,Normal,No,No,Sí,Sí
+14899,51.9,Mujer,170,70,24.22,130,80,Normal,Normal,No,No,No,No
+44734,40.1,Mujer,165,65,23.88,120,80,Normal,Normal,No,No,Sí,No
+51802,53.3,Hombre,171,79,27.02,120,80,Normal,Normal,Sí,Sí,No,No
+97844,54.3,Hombre,163,87,32.74,120,80,Normal,Normal,No,No,No,Sí
+17554,52.3,Hombre,158,56,22.43,130,90,Normal,Normal,No,No,No,Sí
+34134,56.5,Mujer,172,78,26.37,160,80,Normal,Muy por encima de lo normal,No,No,Sí,Sí
+97749,53.8,Mujer,159,68,26.9,130,80,Por encima de lo normal,Normal,No,No,Sí,Sí
+3054,47.6,Hombre,172,74,25.01,120,80,Normal,Normal,No,No,No,No
+27875,56.3,Mujer,165,60,22.04,120,80,Normal,Normal,No,No,Sí,No
+48935,48.3,Hombre,176,86,27.76,125,80,Normal,Normal,No,No,Sí,No
+54696,56.2,Mujer,150,74,32.89,120,80,Normal,Normal,No,No,Sí,No
+69509,51.6,Mujer,170,60,20.76,110,70,Normal,Normal,No,No,Sí,No
+90164,50.6,Mujer,150,53,23.56,90,70,Normal,Normal,No,No,No,No
+80933,50.7,Mujer,178,85,26.83,120,80,Normal,Normal,No,No,No,No
+15375,44,Mujer,168,57,20.2,90,60,Normal,Normal,No,No,Sí,No
+68448,60.2,Hombre,170,55,19.03,140,80,Normal,Normal,No,No,Sí,No
+41513,52,Mujer,165,95,34.89,110,70,Normal,Normal,No,No,Sí,No
+65885,64,Mujer,158,85,34.05,140,90,Normal,Muy por encima de lo normal,No,No,Sí,No
+77246,58.3,Mujer,157,98,39.76,180,120,Normal,Normal,No,No,Sí,Sí
+58692,52.5,Hombre,167,65,23.31,120,80,Normal,Normal,No,No,Sí,No
+25209,46.2,Hombre,172,90,30.42,130,89,Normal,Normal,No,No,Sí,No
+49134,60.1,Mujer,165,72,26.45,170,100,Por encima de lo normal,Normal,No,No,No,Sí
+58908,58,Mujer,151,64,28.07,120,80,Por encima de lo normal,Por encima de lo normal,No,No,Sí,No
+66951,56.2,Hombre,170,83,28.72,135,90,Normal,Normal,No,No,Sí,Sí
+59750,49.5,Mujer,165,93,34.16,150,1000,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+5495,54.6,Mujer,174,78,25.76,140,90,Normal,Normal,No,No,Sí,No
+4111,45.5,Mujer,161,73,28.16,100,70,Normal,Normal,No,No,Sí,No
+9572,40.4,Mujer,164,58,21.56,110,70,Normal,Normal,No,No,No,No
+48675,53.4,Mujer,150,62,27.56,150,90,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+47793,57.9,Hombre,170,102,35.29,150,90,Normal,Normal,No,No,Sí,Sí
+65668,56.3,Mujer,163,59,22.21,120,80,Por encima de lo normal,Normal,No,No,No,Sí
+43684,58.2,Mujer,159,75,29.67,120,80,Muy por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+4508,64.3,Mujer,155,89.5,37.25,150,80,Por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+70809,39.9,Mujer,170,65,22.49,120,80,Normal,Normal,No,No,No,No
+80205,48.6,Hombre,175,73,23.84,110,70,Normal,Normal,No,No,Sí,No
+56874,49.6,Mujer,169,66,23.11,120,80,Normal,Normal,No,No,Sí,Sí
+76854,57.9,Hombre,170,87,30.1,150,90,Por encima de lo normal,Por encima de lo normal,Sí,Sí,Sí,Sí
+58886,63.7,Mujer,160,62,24.22,120,80,Normal,Normal,No,No,Sí,No
+48951,47.9,Hombre,157,44,17.85,120,80,Normal,Normal,No,No,No,No
+1141,64.7,Mujer,156,98,40.27,130,90,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+91616,53.7,Mujer,163,63,23.71,120,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,No,Sí
+43089,49.7,Hombre,172,74,25.01,120,80,Normal,Normal,Sí,Sí,Sí,No
+52680,40.2,Mujer,158,50,20.03,110,70,Normal,Normal,No,No,Sí,No
+87576,53.6,Mujer,154,68,28.67,130,90,Normal,Normal,No,No,Sí,No
+21235,53.8,Hombre,177,83,26.49,150,90,Normal,Normal,No,No,Sí,Sí
+66968,61.5,Mujer,165,82,30.12,160,100,Normal,Normal,No,No,Sí,Sí
+61637,63.5,Mujer,167,71,25.46,120,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+88581,56.1,Mujer,175,82,26.78,120,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,No,Sí
+42483,49.3,Hombre,165,70,25.71,120,80,Normal,Normal,No,No,Sí,Sí
+17931,43.7,Hombre,170,73,25.26,120,80,Normal,Normal,No,No,Sí,No
+43027,49.5,Mujer,167,69,24.74,120,70,Normal,Normal,No,Sí,Sí,Sí
+57789,57.5,Mujer,146,70,32.84,160,100,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+36238,57.6,Mujer,167,65,23.31,140,100,Normal,Normal,No,No,Sí,Sí
+49944,57.9,Hombre,178,86,27.14,130,85,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+3141,46,Hombre,170,64,22.15,110,80,Normal,Normal,No,No,Sí,No
+35288,51.6,Mujer,165,65,23.88,120,80,Normal,Normal,No,No,Sí,No
+72521,43.6,Hombre,174,80,26.42,130,100,Normal,Normal,Sí,No,Sí,Sí
+1742,55.5,Mujer,156,83,34.11,120,80,Normal,Normal,No,No,No,Sí
+32269,44,Mujer,162,66,25.15,140,90,Normal,Normal,No,No,Sí,Sí
+41283,58.1,Mujer,164,62,23.05,120,80,Normal,Normal,No,No,Sí,Sí
+97938,53.2,Hombre,173,94,31.41,140,90,Normal,Normal,No,No,Sí,Sí
+66258,39.8,Mujer,170,81,28.03,130,80,Normal,Normal,No,No,Sí,No
+38212,57.5,Mujer,160,75,29.3,120,70,Normal,Normal,No,No,No,No
+44685,55.6,Hombre,169,69,24.16,150,100,Normal,Normal,Sí,Sí,Sí,Sí
+21247,43.5,Mujer,167,72,25.82,90,60,Normal,Por encima de lo normal,No,No,Sí,Sí
+87094,60.2,Mujer,170,67,23.18,140,90,Por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+98799,63.7,Mujer,156,56,23.01,130,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+72087,64.3,Hombre,174,72,23.78,180,100,Muy por encima de lo normal,Normal,No,No,No,Sí
+85737,53.2,Hombre,182,74,22.34,150,90,Normal,Normal,Sí,No,Sí,No
+59070,63.7,Mujer,154,51,21.5,120,80,Por encima de lo normal,Normal,No,No,Sí,No
+6234,47.8,Mujer,165,65,23.88,120,80,Normal,Normal,No,No,No,Sí
+33507,55.6,Hombre,172,89,30.08,120,80,Normal,Por encima de lo normal,No,No,Sí,Sí
+53516,53.6,Mujer,149,50,22.52,110,70,Normal,Normal,No,No,Sí,No
+25097,44.3,Hombre,166,76,27.58,130,90,Normal,Normal,No,No,Sí,Sí
+6733,60.1,Mujer,162,60,22.86,130,80,Normal,Normal,No,No,Sí,Sí
+80108,55.8,Hombre,163,77,28.98,160,1000,Normal,Normal,No,No,Sí,Sí
+45108,60.7,Mujer,156,76,31.23,160,90,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+22491,58.1,Hombre,180,82,25.31,120,70,Normal,Normal,No,No,Sí,No
+36709,41.6,Mujer,151,69,30.26,110,70,Normal,Por encima de lo normal,No,No,Sí,No
+80230,47.3,Mujer,165,75,27.55,120,90,Normal,Normal,No,Sí,No,No
+3344,39.9,Mujer,161,96,37.04,160,89,Normal,Normal,No,No,No,No
+48345,43.5,Mujer,165,104,38.2,130,70,Muy por encima de lo normal,Normal,Sí,Sí,Sí,Sí
+4044,39.8,Hombre,167,68,24.38,120,80,Normal,Normal,No,No,Sí,No
+43870,64.2,Mujer,153,66,28.19,120,80,Por encima de lo normal,Normal,No,No,Sí,No
+53946,52,Mujer,150,59,26.22,110,80,Normal,Normal,No,No,Sí,No
+62670,47.5,Mujer,165,64,23.51,120,80,Normal,Normal,No,No,Sí,No
+36611,58.6,Mujer,149,64,28.83,120,80,Normal,Por encima de lo normal,No,No,Sí,No
+24369,44.7,Hombre,171,84,28.73,140,90,Por encima de lo normal,Normal,No,No,Sí,Sí
+69761,49.9,Mujer,164,67,24.91,90,60,Normal,Normal,No,No,Sí,No
+72275,51.7,Mujer,160,89,34.77,120,80,Normal,Normal,No,No,Sí,No
+45634,63.8,Mujer,156,77,31.64,170,90,Normal,Normal,No,No,Sí,Sí
+20452,64,Mujer,167,69,24.74,130,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+96021,48.6,Hombre,167,68,24.38,120,80,Normal,Normal,No,No,No,Sí
+74520,56.2,Mujer,168,69,24.45,120,80,Normal,Normal,No,Sí,Sí,Sí
+95375,57.9,Mujer,165,65,23.88,120,80,Normal,Normal,No,No,Sí,No
+43795,45.5,Mujer,168,70,24.8,120,80,Normal,Normal,No,No,Sí,No
+53197,47.3,Mujer,160,59,23.05,120,80,Normal,Normal,No,No,No,No
+86385,45.4,Mujer,160,66,25.78,110,70,Normal,Normal,No,No,Sí,Sí
+93727,44.3,Hombre,172,88,29.75,120,80,Por encima de lo normal,Por encima de lo normal,Sí,No,Sí,Sí
+20699,57.5,Hombre,185,85,24.84,130,80,Normal,Normal,No,No,Sí,No
+56085,55.3,Hombre,160,51,19.92,120,90,Muy por encima de lo normal,Normal,No,No,Sí,No
+60673,49.6,Hombre,170,90,31.14,150,100,Por encima de lo normal,Normal,No,Sí,Sí,Sí
+12785,56.2,Hombre,165,65,23.88,120,80,Normal,Normal,No,No,Sí,No
+79657,46,Mujer,181,91,27.78,130,80,Normal,Normal,No,No,Sí,Sí
+31471,55.7,Mujer,169,69,24.16,120,80,Normal,Normal,No,No,Sí,No
+57174,64.1,Mujer,171,70,23.94,125,80,Normal,Normal,No,No,Sí,Sí
+64292,64.2,Hombre,164,67,24.91,120,70,Normal,Normal,No,No,No,No
+49413,42.5,Hombre,174,165,54.5,120,90,Normal,Por encima de lo normal,No,Sí,Sí,No
+89770,42.1,Mujer,167,69,24.74,150,85,Normal,Normal,No,No,Sí,Sí
+90282,40.3,Hombre,176,79,25.5,140,90,Normal,Normal,No,No,Sí,Sí
+38290,51.9,Mujer,152,67,29,120,80,Normal,Normal,No,No,No,Sí
+89334,40.6,Mujer,161,57,21.99,110,80,Normal,Normal,No,No,Sí,Sí
+60643,60.6,Hombre,176,64,20.66,140,90,Muy por encima de lo normal,Normal,No,No,No,Sí
+28391,49.3,Mujer,157,69,27.99,100,64,Normal,Normal,No,No,Sí,No
+95347,41.5,Mujer,162,85,32.39,120,80,Normal,Normal,No,No,No,Sí
+32397,60,Hombre,177,83,26.49,90,60,Normal,Normal,No,No,No,Sí
+67844,39.5,Mujer,160,53,20.7,100,60,Normal,Normal,No,No,Sí,No
+63135,55.7,Mujer,158,73,29.24,130,80,Normal,Normal,No,No,Sí,No
+67400,50.5,Hombre,170,75,25.95,120,80,Normal,Normal,No,No,Sí,No
+93796,53.9,Hombre,170,71,24.57,140,80,Normal,Normal,Sí,No,Sí,Sí
+36513,41.6,Mujer,167,70,25.1,140,80,Normal,Normal,No,No,Sí,No
+88757,52.5,Mujer,152,80,34.63,140,90,Normal,Normal,No,No,Sí,Sí
+49995,41.9,Mujer,158,95,38.05,130,90,Normal,Normal,No,No,Sí,Sí
+44939,59.5,Mujer,155,64,26.64,140,90,Por encima de lo normal,Normal,No,No,Sí,Sí
+49060,63.7,Mujer,168,75,26.57,120,80,Normal,Normal,No,No,Sí,No
+69593,47.8,Mujer,155,50,20.81,110,70,Normal,Normal,No,No,Sí,No
+2946,60.7,Mujer,167,102,36.57,134,84,Por encima de lo normal,Normal,No,No,Sí,No
+29275,55.6,Hombre,174,84,27.74,150,90,Normal,Normal,No,No,No,Sí
+39022,54,Mujer,163,61,22.96,130,75,Normal,Normal,No,No,Sí,No
+67479,57.4,Mujer,154,66,27.83,110,80,Normal,Normal,No,No,Sí,No
+70076,49.9,Mujer,167,77,27.61,110,70,Normal,Normal,No,No,Sí,No
+43370,41.8,Mujer,140,74,37.76,110,70,Normal,Normal,No,No,Sí,No
+8345,59.2,Mujer,147,70,32.39,140,100,Por encima de lo normal,Normal,No,No,Sí,Sí
+43847,52.2,Hombre,166,90,32.66,120,80,Normal,Normal,No,No,Sí,Sí
+61398,41.4,Mujer,166,70,25.4,110,80,Normal,Normal,No,No,Sí,Sí
+23469,55.4,Mujer,159,64,25.32,120,70,Normal,Normal,No,No,No,No
+20772,48.2,Mujer,160,68,26.56,140,90,Normal,Normal,No,No,Sí,Sí
+22126,55.6,Mujer,159,68,26.9,120,80,Normal,Normal,No,No,Sí,No
+67521,61.4,Hombre,172,79,26.7,130,90,Por encima de lo normal,Normal,Sí,Sí,Sí,Sí
+13363,64,Mujer,149,68,30.63,160,100,Normal,Normal,No,No,No,Sí
+12929,48,Hombre,170,83,28.72,120,80,Normal,Normal,No,No,Sí,No
+92982,49.8,Mujer,155,61,25.39,150,90,Normal,Normal,No,No,Sí,No
+6152,57.6,Mujer,154,75,31.62,120,80,Normal,Normal,No,No,No,No
+25673,51.8,Mujer,153,70,29.9,110,80,Normal,Normal,No,No,Sí,No
+4554,59.3,Hombre,168,77,27.28,130,90,Normal,Normal,No,No,Sí,Sí
+2581,57.7,Mujer,169,68,23.81,120,80,Normal,Normal,No,No,Sí,No
+5260,50,Mujer,158,56,22.43,100,70,Normal,Normal,No,No,No,No
+34550,41.4,Hombre,180,90,27.78,120,80,Normal,Normal,No,No,Sí,No
+68582,53.8,Mujer,160,62,24.22,120,80,Normal,Normal,No,No,Sí,No
+51769,56.1,Mujer,160,72,28.12,125,80,Por encima de lo normal,Normal,No,No,Sí,Sí
+32702,56,Hombre,178,84,26.51,95,100,Normal,Normal,No,Sí,No,Sí
+68524,40,Mujer,163,96,36.13,160,1000,Normal,Normal,No,No,Sí,Sí
+81489,56,Mujer,165,63,23.14,120,80,Normal,Normal,No,No,No,No
+78381,45.6,Hombre,169,78,27.31,140,90,Normal,Normal,No,No,Sí,Sí
+83442,54.3,Hombre,188,69,19.52,110,70,Normal,Normal,No,No,Sí,Sí
+14035,63.7,Mujer,165,56,20.57,110,80,Por encima de lo normal,Normal,No,No,Sí,No
+24605,59.6,Mujer,164,92,34.21,130,90,Por encima de lo normal,Normal,No,No,Sí,No
+45698,52.3,Hombre,164,73,27.14,120,80,Por encima de lo normal,Normal,Sí,Sí,Sí,No
+1172,58.3,Mujer,173,88,29.4,150,90,Por encima de lo normal,Normal,No,No,Sí,Sí
+15197,61.3,Hombre,165,81,29.75,140,90,Muy por encima de lo normal,Muy por encima de lo normal,Sí,Sí,Sí,No
+51933,55.1,Hombre,165,65,23.88,120,80,Normal,Normal,No,No,Sí,No
+32585,44.1,Hombre,180,103,31.79,141,90,Normal,Por encima de lo normal,No,No,Sí,Sí
+60675,61.5,Hombre,172,123,41.58,130,90,Normal,Normal,No,No,Sí,Sí
+31431,55.6,Hombre,165,65,23.88,160,100,Normal,Normal,No,No,Sí,No
+3890,59.5,Hombre,174,88,29.07,130,90,Por encima de lo normal,Por encima de lo normal,No,No,Sí,No
+69184,53.7,Mujer,168,69,24.45,120,80,Normal,Normal,No,No,Sí,Sí
+28042,54.5,Mujer,162,53,20.2,120,80,Normal,Normal,No,No,Sí,No
+33785,60.3,Hombre,168,59,20.9,160,100,Por encima de lo normal,Normal,No,No,Sí,Sí
+95778,46.4,Mujer,144,92,44.37,90,60,Normal,Normal,No,No,Sí,No
+87566,41.9,Hombre,176,58,18.72,110,70,Normal,Normal,No,No,Sí,No
+28627,39.5,Mujer,159,58,22.94,100,70,Normal,Normal,No,No,Sí,No
+79662,46.1,Hombre,177,86,27.45,120,90,Por encima de lo normal,Normal,No,No,Sí,Sí
+23093,50.7,Hombre,164,66,24.54,120,80,Normal,Normal,No,No,No,No
+59147,56.1,Mujer,164,64,23.8,140,90,Por encima de lo normal,Por encima de lo normal,No,No,No,Sí
+11379,49.8,Hombre,186,85,24.57,130,90,Normal,Normal,No,No,No,Sí
+13558,53.9,Hombre,165,102,37.47,150,100,Normal,Normal,No,No,No,Sí
+73346,50.1,Hombre,160,65,25.39,140,90,Normal,Normal,No,No,Sí,Sí
+60323,63.4,Mujer,168,69,24.45,120,80,Por encima de lo normal,Normal,No,No,No,No
+95996,60.6,Hombre,173,93,31.07,130,90,Normal,Muy por encima de lo normal,No,No,No,No
+69947,53.9,Mujer,170,72,24.91,120,80,Normal,Normal,No,No,Sí,Sí
+53922,57.7,Mujer,165,65,23.88,110,70,Normal,Normal,No,No,Sí,Sí
+61986,54.4,Hombre,173,82,27.4,150,90,Normal,Normal,No,No,Sí,Sí
+65832,41.3,Hombre,176,96,30.99,130,90,Normal,Normal,Sí,Sí,Sí,No
+56550,46.7,Mujer,158,85,34.05,140,90,Normal,Normal,No,No,Sí,Sí
+31891,57.6,Mujer,158,74,29.64,140,90,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+32417,47.4,Mujer,172,70,23.66,120,80,Normal,Normal,No,No,Sí,No
+16764,58.5,Mujer,162,66,25.15,130,90,Normal,Normal,No,Sí,Sí,Sí
+69937,59.7,Hombre,164,89,33.09,110,90,Normal,Normal,No,Sí,No,Sí
+38006,40.2,Hombre,168,58,20.55,160,90,Normal,Normal,Sí,No,Sí,Sí
+192,59.8,Hombre,169,58,20.31,110,80,Normal,Normal,No,No,Sí,Sí
+94875,55.7,Mujer,159,65,25.71,130,90,Normal,Normal,No,No,Sí,Sí
+86713,63.9,Mujer,165,78,28.65,120,65,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+75095,51.7,Hombre,176,92,29.7,140,90,Por encima de lo normal,Normal,No,No,No,Sí
+15814,47.6,Mujer,161,69,26.62,120,80,Normal,Normal,No,Sí,Sí,No
+17546,55.7,Mujer,154,76,32.05,140,80,Normal,Normal,No,No,Sí,Sí
+1247,57.7,Hombre,152,49,21.21,130,80,Normal,Normal,No,No,Sí,No
+61799,41.2,Mujer,160,88,34.37,120,80,Normal,Normal,No,No,Sí,No
+63121,62.1,Mujer,158,64,25.64,120,80,Normal,Normal,No,No,Sí,No
+42034,64,Mujer,158,65,26.04,115,75,Normal,Normal,No,No,No,No
+30894,52.2,Hombre,207,78,18.2,100,70,Normal,Normal,No,Sí,Sí,No
+76300,63.6,Hombre,169,88,30.81,150,90,Por encima de lo normal,Normal,No,No,Sí,Sí
+81718,57.8,Mujer,159,70,27.69,140,80,Normal,Normal,No,No,Sí,No
+87179,57.9,Mujer,175,80,26.12,120,80,Normal,Normal,No,No,Sí,No
+88331,62,Mujer,148,69,31.5,130,80,Por encima de lo normal,Normal,No,No,No,Sí
+97243,52.3,Hombre,169,67,23.46,130,90,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+33698,61.2,Mujer,165,76,27.92,120,80,Por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+51036,62.1,Mujer,152,52,22.51,120,70,Muy por encima de lo normal,Muy por encima de lo normal,Sí,No,Sí,Sí
+7135,49.4,Mujer,160,67,26.17,110,70,Normal,Normal,No,No,No,Sí
+5081,62.2,Mujer,164,63,23.42,130,90,Normal,Normal,No,No,Sí,No
+60568,61.9,Mujer,152,85,36.79,130,70,Por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+25662,46.2,Hombre,176,95,30.67,130,90,Normal,Normal,No,No,Sí,Sí
+33613,55.6,Mujer,158,96,38.46,140,90,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+18195,61.8,Hombre,174,74,24.44,140,90,Normal,Normal,No,No,No,Sí
+58675,39.2,Mujer,163,73,27.48,110,80,Normal,Normal,No,No,No,No
+3367,42.2,Mujer,149,70,31.53,130,80,Normal,Normal,No,No,Sí,No
+62866,53.5,Hombre,174,92,30.39,150,100,Normal,Normal,No,No,Sí,No
+49216,56.5,Mujer,156,70,28.76,110,70,Normal,Normal,No,No,No,Sí
+35297,57.9,Hombre,160,69,26.95,120,80,Normal,Normal,No,No,Sí,No
+39012,39.6,Mujer,150,55,24.44,110,70,Normal,Normal,No,No,Sí,No
+55977,63.6,Hombre,162,77,29.34,130,80,Normal,Por encima de lo normal,No,No,Sí,Sí
+20281,53.9,Mujer,171,78,26.67,120,70,Normal,Normal,No,No,No,No
+19612,43.8,Mujer,168,98,34.72,120,80,Normal,Normal,No,No,Sí,Sí
+27138,55.8,Mujer,150,60,26.67,120,80,Normal,Normal,No,No,Sí,No
+57191,59.7,Mujer,158,105,42.06,130,80,Normal,Normal,No,No,No,No
+18044,57.7,Mujer,156,76,31.23,130,85,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+78134,51.2,Hombre,169,71,24.86,130,80,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+39939,58.2,Mujer,160,60,23.44,120,80,Normal,Normal,No,No,No,Sí
+54997,49.9,Hombre,175,76,24.82,120,80,Normal,Normal,No,No,Sí,No
+62122,57.6,Mujer,165,65,23.88,120,70,Normal,Normal,No,No,Sí,No
+82664,52.4,Hombre,170,69,23.88,130,90,Por encima de lo normal,Por encima de lo normal,No,No,No,Sí
+80441,56.1,Mujer,166,68,24.68,120,80,Normal,Normal,No,No,Sí,No
+10152,56.3,Mujer,157,55,22.31,90,60,Por encima de lo normal,Normal,No,No,Sí,No
+17277,41.7,Hombre,176,85,27.44,140,80,Normal,Normal,No,No,Sí,Sí
+92176,41.3,Mujer,170,48,16.61,100,60,Por encima de lo normal,Por encima de lo normal,No,No,Sí,No
+55805,55.9,Mujer,164,83,30.86,130,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+62677,46.3,Hombre,149,51,22.97,110,70,Normal,Normal,Sí,No,Sí,No
+90851,57.7,Mujer,172,93,31.44,140,90,Normal,Normal,No,No,Sí,Sí
+58713,55.1,Hombre,174,74,24.44,120,70,Normal,Normal,No,No,No,No
+73175,54.2,Mujer,157,90,36.51,150,89,Normal,Normal,No,No,No,Sí
+16632,58.3,Mujer,175,82,26.78,130,80,Normal,Normal,No,No,Sí,Sí
+14349,50.3,Mujer,159,54,21.36,110,70,Por encima de lo normal,Normal,No,No,Sí,No
+27998,60,Mujer,159,65,25.71,100,70,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,No
+93850,55.8,Mujer,153,64,27.34,120,70,Normal,Normal,No,No,Sí,No
+89704,44,Hombre,171,98,33.51,160,100,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+56176,43.8,Mujer,170,70,24.22,120,80,Normal,Normal,No,No,Sí,No
+29149,46.6,Mujer,163,79,29.73,110,70,Normal,Normal,No,No,Sí,No
+44763,63.9,Mujer,168,73,25.86,120,80,Normal,Normal,No,No,No,Sí
+29257,54.2,Hombre,161,65,25.08,180,1000,Normal,Normal,No,Sí,No,Sí
+8070,51.9,Mujer,168,76,26.93,120,80,Normal,Normal,No,No,No,Sí
+48649,56.2,Hombre,163,79,29.73,120,80,Por encima de lo normal,Normal,Sí,No,Sí,Sí
+49588,42,Mujer,169,69,24.16,140,90,Por encima de lo normal,Normal,No,No,No,Sí
+3703,62.2,Mujer,157,55,22.31,190,100,Por encima de lo normal,Normal,No,No,Sí,Sí
+23976,40,Mujer,163,84,31.62,120,80,Normal,Normal,No,No,Sí,No
+15851,56.3,Hombre,166,75,27.22,180,120,Normal,Normal,No,No,Sí,No
+78305,50.4,Mujer,158,66,26.44,150,80,Por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+25550,52,Mujer,166,48,17.42,120,80,Normal,Normal,No,No,No,Sí
+70913,55.5,Hombre,171,89,30.44,130,90,Por encima de lo normal,Normal,No,No,Sí,Sí
+7578,60.2,Mujer,179,70,21.85,110,70,Normal,Normal,No,No,Sí,No
+76851,49.7,Mujer,160,89.9,35.12,120,80,Normal,Normal,No,No,Sí,No
+64922,62.1,Mujer,165,85,31.22,180,100,Normal,Por encima de lo normal,No,No,Sí,No
+78703,49.8,Mujer,152,52,22.51,140,90,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+18434,52.4,Hombre,167,61,21.87,120,80,Normal,Normal,No,No,No,No
+42426,57.6,Mujer,156,90,36.98,160,100,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+96434,62.1,Hombre,169,70,24.51,140,90,Por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+58500,53.9,Mujer,174,58,19.16,100,60,Normal,Normal,No,No,Sí,No
+23898,64,Mujer,146,80,37.53,150,100,Normal,Normal,No,No,Sí,Sí
+49839,58.6,Mujer,159,64,25.32,140,90,Normal,Normal,No,No,Sí,Sí
+96428,62.7,Hombre,171,70,23.94,120,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,No,No
+29111,58.4,Mujer,157,68,27.59,120,80,Normal,Normal,No,No,No,Sí
+20671,53.5,Hombre,168,68,24.09,150,90,Normal,Normal,No,No,Sí,Sí
+99185,41.2,Mujer,168,54,19.13,120,80,Por encima de lo normal,Por encima de lo normal,No,No,Sí,No
+50030,40.4,Hombre,173,82,27.4,120,80,Normal,Normal,Sí,No,No,No
+508,63.7,Hombre,170,84,29.07,120,70,Normal,Normal,No,No,Sí,No
+36900,55.7,Mujer,160,55,21.48,160,1100,Por encima de lo normal,Normal,No,No,Sí,Sí
+38955,58.1,Mujer,162,82,31.25,105,65,Por encima de lo normal,Normal,No,No,No,No
+98003,60.2,Mujer,161,71,27.39,120,80,Por encima de lo normal,Normal,No,No,Sí,No
+7794,49.5,Mujer,150,65,28.89,120,80,Normal,Normal,No,No,No,No
+9966,50,Mujer,164,74,27.51,160,70,Por encima de lo normal,Normal,No,No,No,Sí
+90640,40,Hombre,170,70,24.22,120,80,Normal,Normal,No,No,Sí,No
+75707,52,Mujer,158,85,34.05,130,90,Normal,Normal,No,No,Sí,Sí
+94486,52.2,Mujer,165,65,23.88,120,80,Normal,Normal,No,No,Sí,Sí
+90742,49.9,Mujer,166,71,25.77,120,80,Normal,Normal,No,No,Sí,No
+8680,51.9,Mujer,159,59,23.34,120,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,No,Sí
+75247,48.1,Hombre,160,60,23.44,130,80,Normal,Normal,No,No,No,Sí
+40994,39.5,Hombre,173,105,35.08,120,80,Por encima de lo normal,Normal,No,No,Sí,No
+99931,55.8,Mujer,164,90,33.46,130,80,Normal,Normal,No,No,Sí,Sí
+32176,64.1,Mujer,158,67,26.84,160,80,Normal,Normal,No,No,No,Sí
+11091,41.2,Hombre,175,75,24.49,120,90,Normal,Normal,No,No,No,No
+17315,62,Hombre,168,88,31.18,120,80,Normal,Normal,No,No,Sí,No
+93565,46.2,Mujer,165,102,37.47,150,110,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+54956,54.2,Hombre,177,70,22.34,140,90,Por encima de lo normal,Por encima de lo normal,Sí,No,No,Sí
+66068,56,Mujer,175,78,25.47,120,80,Muy por encima de lo normal,Normal,No,No,Sí,No
+14603,39.5,Mujer,171,74,25.31,150,97,Normal,Normal,No,No,No,Sí
+53878,51.9,Mujer,162,69,26.29,125,80,Normal,Muy por encima de lo normal,No,No,Sí,No
+18333,43.8,Mujer,161,63,24.3,100,60,Normal,Normal,No,No,Sí,No
+61355,61.6,Mujer,154,94,39.64,140,90,Por encima de lo normal,Por encima de lo normal,No,No,No,Sí
+98288,56,Hombre,170,69,23.88,150,100,Normal,Normal,No,No,Sí,Sí
+8624,47.6,Hombre,171,83,28.38,120,80,Por encima de lo normal,Normal,No,No,Sí,Sí
+77927,55.8,Mujer,168,62,21.97,120,80,Normal,Normal,No,No,Sí,No
+90219,57.8,Hombre,170,74,25.61,175,100,Por encima de lo normal,Normal,No,No,Sí,Sí
+64978,40.2,Mujer,160,60,23.44,120,80,Normal,Normal,No,No,Sí,No
+36535,55.4,Hombre,167,65,23.31,130,90,Normal,Normal,No,No,Sí,Sí
+70039,51.2,Mujer,167,63,22.59,120,90,Muy por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+14661,45.8,Mujer,165,65,23.88,140,100,Normal,Normal,Sí,No,Sí,Sí
+79174,40,Hombre,169,81,28.36,160,100,Normal,Normal,No,No,Sí,Sí
+74205,54.5,Hombre,169,65,22.76,120,80,Normal,Normal,No,No,Sí,No
+15592,58.3,Mujer,155,69,28.72,110,70,Normal,Por encima de lo normal,No,No,Sí,No
+66804,50.7,Hombre,175,84,27.43,150,100,Por encima de lo normal,Normal,No,No,No,Sí
+54656,57.6,Hombre,172,100,33.8,130,810,Por encima de lo normal,Por encima de lo normal,Sí,Sí,Sí,Sí
+56282,57.5,Mujer,156,60,24.65,100,80,Normal,Por encima de lo normal,No,No,Sí,No
+88296,49.8,Mujer,169,65,22.76,120,80,Normal,Normal,No,No,Sí,No
+3032,60.1,Hombre,182,88,26.57,130,90,Por encima de lo normal,Normal,Sí,No,Sí,Sí
+24290,41.9,Mujer,159,64,25.32,120,80,Normal,Normal,No,No,Sí,No
+47669,59.9,Mujer,169,77,26.96,120,80,Normal,Normal,No,No,Sí,Sí
+50087,50,Hombre,171,92,31.46,140,90,Normal,Normal,No,No,Sí,Sí
+63892,62.3,Hombre,160,58,22.66,130,70,Normal,Muy por encima de lo normal,No,No,Sí,Sí
+47122,52.4,Hombre,178,80,25.25,120,80,Normal,Normal,No,No,Sí,No
+88128,64.2,Mujer,167,65,23.31,130,80,Normal,Normal,No,No,Sí,Sí
+82156,57.9,Hombre,160,60,23.44,120,80,Normal,Normal,No,No,No,No
+91966,60.7,Mujer,164,92,34.21,90,70,Normal,Normal,No,No,Sí,Sí
+13238,60.4,Mujer,171,75,25.65,120,80,Normal,Normal,No,No,Sí,No
+54847,64.4,Mujer,164,110,40.9,130,80,Por encima de lo normal,Por encima de lo normal,No,No,Sí,No
+10843,40.1,Hombre,70,72,146.94,120,8,Normal,Normal,No,No,Sí,No
+68058,59.6,Mujer,155,64,26.64,115,75,Por encima de lo normal,Por encima de lo normal,No,No,Sí,No
+68952,55.6,Mujer,148,50,22.83,135,80,Normal,Normal,No,No,Sí,Sí
+45083,56.1,Hombre,172,95,32.11,135,96,Normal,Normal,No,No,Sí,No
+12061,57.6,Hombre,165,84,30.85,140,80,Normal,Normal,No,No,Sí,Sí
+68655,46,Mujer,168,60,21.26,120,60,Normal,Normal,No,No,Sí,No
+47797,45.6,Hombre,171,70,23.94,140,60,Muy por encima de lo normal,Muy por encima de lo normal,Sí,No,Sí,No
+12887,47.4,Hombre,167,91,32.63,120,80,Por encima de lo normal,Normal,Sí,Sí,Sí,Sí
+82791,40.2,Mujer,153,66,28.19,100,80,Normal,Normal,No,No,No,No
+46614,47.9,Hombre,152,65,28.13,130,90,Normal,Normal,No,No,Sí,No
+92536,41.6,Mujer,168,77,27.28,130,80,Normal,Normal,Sí,No,Sí,No
+2459,61.8,Mujer,157,97,39.35,120,80,Normal,Normal,No,No,Sí,Sí
+73746,55.8,Mujer,165,80,29.38,140,1000,Normal,Normal,No,No,Sí,Sí
+36424,40.1,Mujer,164,56,20.82,110,70,Normal,Normal,No,No,Sí,No
+25942,60.1,Mujer,155,56,23.31,120,90,Normal,Normal,No,No,Sí,No
+7253,59.8,Mujer,165,70,25.71,130,80,Normal,Normal,No,No,Sí,Sí
+75317,55.6,Mujer,168,100,35.43,140,70,Normal,Normal,No,No,Sí,Sí
+48647,48.3,Mujer,164,73.2,27.22,130,90,Por encima de lo normal,Normal,No,No,Sí,Sí
+26434,54.1,Mujer,156,61,25.07,110,70,Normal,Normal,No,No,Sí,No
+60391,42.5,Hombre,166,76,27.58,120,70,Normal,Normal,Sí,No,Sí,No
+60927,44.4,Mujer,162,80,30.48,120,80,Normal,Normal,No,No,Sí,Sí
+65646,55.4,Hombre,166,86,31.21,150,90,Normal,Normal,No,No,No,Sí
+54445,58.4,Mujer,168,57,20.2,140,90,Normal,Normal,No,No,No,Sí
+43038,42.3,Hombre,170,80,27.68,120,90,Normal,Normal,No,No,Sí,No
+19983,57.4,Mujer,159,74,29.27,150,80,Normal,Normal,No,No,Sí,No
+84985,57.9,Mujer,155,71,29.55,130,90,Normal,Normal,No,Sí,No,No
+66881,45.4,Mujer,159,88,34.81,110,80,Normal,Normal,No,No,Sí,No
+1604,58.2,Hombre,171,100,34.2,120,80,Normal,Normal,No,No,Sí,Sí
+24145,54.4,Hombre,165,65,23.88,110,70,Normal,Normal,No,No,Sí,No
+51338,49.4,Hombre,171,113,38.64,180,1000,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+70259,55.2,Mujer,172,77,26.03,120,80,Normal,Normal,No,No,Sí,Sí
+49224,56,Mujer,160,95,37.11,120,80,Normal,Normal,No,No,Sí,Sí
+65702,55.8,Mujer,156,55,22.6,120,80,Normal,Normal,No,No,Sí,No
+51027,40.1,Mujer,165,66,24.24,140,90,Normal,Normal,No,No,Sí,Sí
+56870,58.1,Mujer,166,69,25.04,120,80,Normal,Normal,No,No,Sí,No
+82757,54.4,Hombre,170,94,32.53,120,80,Muy por encima de lo normal,Normal,No,No,Sí,No
+81643,64.9,Hombre,175,75,24.49,120,80,Normal,Normal,No,No,Sí,Sí
+17222,58.1,Mujer,167,72,25.82,120,80,Normal,Normal,No,No,Sí,No
+28005,49.2,Mujer,160,90,35.16,130,80,Normal,Normal,No,No,Sí,No
+82183,48.1,Mujer,165,65,23.88,120,80,Normal,Normal,No,Sí,Sí,Sí
+29264,63.8,Mujer,157,53,21.5,120,80,Normal,Normal,No,No,Sí,Sí
+60495,52,Hombre,168,66,23.38,120,80,Normal,Normal,No,No,Sí,No
+90133,52.2,Mujer,158,56,22.43,120,80,Normal,Normal,No,No,Sí,Sí
+9124,45.7,Mujer,156,98,40.27,120,80,Normal,Normal,No,No,No,No
+70078,49.9,Hombre,160,64,25,140,90,Normal,Normal,No,No,Sí,Sí
+55879,58,Hombre,179,81,25.28,120,80,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+9678,56,Mujer,150,58,25.78,90,60,Normal,Normal,No,No,Sí,No
+59818,64,Hombre,178,80,25.25,140,80,Normal,Normal,No,No,Sí,Sí
+35291,54.2,Mujer,160,60,23.44,135,90,Por encima de lo normal,Normal,No,No,Sí,No
+23572,52.4,Hombre,171,91,31.12,150,1000,Normal,Normal,Sí,No,No,Sí
+2828,60,Mujer,160,62,24.22,120,80,Normal,Normal,No,No,Sí,No
+58764,57.9,Mujer,161,91,35.11,100,80,Por encima de lo normal,Normal,No,No,Sí,No
+66250,59.6,Hombre,174,86,28.41,120,80,Normal,Normal,No,No,No,Sí
+60831,55.9,Mujer,168,74,26.22,120,80,Normal,Normal,No,No,Sí,Sí
+84491,56.3,Mujer,160,70,27.34,120,80,Normal,Normal,No,No,Sí,No
+10896,54.6,Mujer,165,68,24.98,160,80,Normal,Normal,No,No,Sí,Sí
+23130,53.8,Mujer,165,65,23.88,120,80,Normal,Normal,No,No,No,No
+91172,43.9,Mujer,157,46,18.66,120,80,Normal,Normal,No,No,Sí,No
+71532,53.4,Mujer,152,90,38.95,140,90,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+2577,57.6,Mujer,162,60,22.86,120,80,Normal,Por encima de lo normal,No,No,Sí,No
+69975,55.8,Mujer,171,80,27.36,110,70,Por encima de lo normal,Normal,No,No,Sí,No
+25002,63.6,Mujer,162,68,25.91,140,90,Normal,Normal,No,No,Sí,No
+19847,53.4,Mujer,165,67,24.61,110,80,Normal,Normal,No,No,Sí,Sí
+93879,56.2,Mujer,168,70,24.8,120,70,Normal,Normal,No,No,Sí,No
+71341,61.9,Mujer,166,89,32.3,140,90,Normal,Muy por encima de lo normal,No,No,Sí,Sí
+24813,51.9,Mujer,165,60,22.04,120,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,No,No
+2115,64.7,Mujer,157,78,31.64,110,80,Normal,Normal,Sí,Sí,Sí,Sí
+21421,46.4,Hombre,177,89,28.41,120,80,Por encima de lo normal,Normal,No,No,No,Sí
+86174,64,Mujer,173,110,36.75,170,80,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+81767,64.2,Hombre,170,109.5,37.89,130,80,Normal,Normal,No,No,Sí,Sí
+9825,61.8,Hombre,173,80,26.73,140,90,Muy por encima de lo normal,Por encima de lo normal,Sí,Sí,Sí,Sí
+45549,51.7,Hombre,164,62,23.05,90,60,Normal,Normal,No,No,Sí,No
+13158,52.2,Hombre,163,61,22.96,120,70,Normal,Normal,No,No,No,No
+62003,55.7,Mujer,155,110,45.79,135,69,Muy por encima de lo normal,Muy por encima de lo normal,No,No,No,No
+96491,64.2,Mujer,153,74,31.61,110,80,Por encima de lo normal,Muy por encima de lo normal,No,No,Sí,No
+18983,47.7,Mujer,157,54,21.91,110,70,Normal,Normal,No,No,No,No
+61353,60.7,Mujer,170,84,29.07,110,70,Por encima de lo normal,Normal,No,No,No,No
+86067,55.7,Mujer,166,99,35.93,120,80,Muy por encima de lo normal,Normal,No,No,Sí,No
+92484,61.8,Hombre,168,70,24.8,140,90,Normal,Por encima de lo normal,No,No,Sí,Sí
+99212,50.5,Mujer,178,89,28.09,120,80,Por encima de lo normal,Normal,No,No,Sí,No
+78398,56.1,Mujer,164,65,24.17,120,80,Normal,Normal,No,No,Sí,No
+48870,47.6,Hombre,170,80,27.68,120,80,Normal,Normal,No,No,Sí,No
+36519,49.1,Mujer,165,76,27.92,120,80,Por encima de lo normal,Normal,No,No,Sí,Sí
+19035,42.2,Mujer,168,90,31.89,140,90,Normal,Normal,No,No,Sí,Sí
+60693,45.7,Mujer,164,63,23.42,140,70,Por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+54720,58.4,Mujer,159,53,20.96,110,70,Normal,Normal,No,No,Sí,No
+41593,51.4,Hombre,166,80,29.03,120,80,Normal,Normal,Sí,Sí,Sí,No
+50447,59.6,Mujer,156,77,31.64,140,90,Normal,Normal,No,No,Sí,Sí
+51635,61.2,Hombre,168,70,24.8,120,70,Normal,Normal,No,No,Sí,Sí
+98652,53.7,Mujer,168,68,24.09,120,80,Normal,Normal,No,No,Sí,Sí
+52678,53.8,Mujer,156,94,38.63,150,90,Por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+46315,59.8,Mujer,155,75,31.22,130,90,Normal,Normal,No,No,Sí,Sí
+37657,39.5,Hombre,170,75,25.95,120,80,Normal,Normal,No,No,No,No
+79443,51.6,Hombre,178,73,23.04,120,80,Normal,Normal,No,No,Sí,No
+4413,57.7,Hombre,176,100,32.28,130,90,Por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+63726,51.6,Mujer,156,72,29.59,120,80,Normal,Por encima de lo normal,No,No,Sí,No
+62124,58,Mujer,178,78,24.62,80,60,Normal,Normal,No,No,No,No
+68862,54.1,Hombre,173,75,25.06,140,100,Normal,Muy por encima de lo normal,No,No,Sí,Sí
+41935,49.7,Mujer,165,60,22.04,110,70,Normal,Normal,No,No,Sí,No
+73075,64.5,Hombre,164,76,28.26,120,80,Normal,Normal,No,No,Sí,No
+73067,43.7,Mujer,165,54,19.83,120,80,Normal,Normal,No,No,No,No
+87570,47.7,Mujer,156,58,23.83,140,90,Normal,Normal,No,No,Sí,Sí
+38097,63.8,Mujer,163,62,23.34,140,80,Normal,Normal,No,No,Sí,Sí
+41924,52.3,Hombre,184,83,24.52,130,90,Normal,Normal,No,No,Sí,Sí
+35388,48.7,Mujer,172,70,23.66,150,90,Por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+48168,57.8,Hombre,172,78,26.37,130,80,Normal,Normal,No,No,No,Sí
+65165,46.5,Mujer,167,73,26.18,100,70,Normal,Normal,No,No,No,No
+43933,50.6,Mujer,168,72,25.51,120,80,Normal,Muy por encima de lo normal,No,No,Sí,No
+21658,53.8,Mujer,159,60,23.73,120,80,Por encima de lo normal,Muy por encima de lo normal,No,No,Sí,No
+41190,53.8,Hombre,169,70,24.51,110,89,Normal,Normal,No,No,No,No
+38763,60.3,Mujer,157,65,26.37,100,70,Normal,Normal,No,No,Sí,No
+35464,56.1,Mujer,153,80,34.17,120,80,Normal,Normal,No,No,Sí,No
+13110,60.2,Mujer,158,90,36.05,120,90,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+60153,63.6,Mujer,154,60,25.3,130,90,Normal,Normal,No,No,Sí,Sí
+97096,62.6,Hombre,163,72,27.1,100,60,Por encima de lo normal,Normal,No,Sí,Sí,No
+46305,57.6,Mujer,155,56,23.31,100,80,Normal,Normal,No,No,Sí,No
+54357,57.5,Mujer,162,60,22.86,120,80,Normal,Normal,No,No,No,Sí
+25715,57.9,Hombre,176,86,27.76,110,70,Normal,Normal,Sí,No,Sí,No
+54032,42,Hombre,170,75,25.95,150,100,Normal,Normal,No,No,Sí,Sí
+49046,58,Mujer,168,76,26.93,120,80,Por encima de lo normal,Normal,No,No,Sí,Sí
+73379,59.8,Mujer,158,67,26.84,130,80,Muy por encima de lo normal,Muy por encima de lo normal,Sí,No,Sí,No
+47091,62.1,Mujer,152,50,21.64,160,100,Normal,Normal,No,No,Sí,Sí
+60904,58.6,Hombre,162,66,25.15,145,95,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,No
+48493,59.9,Mujer,165,68,24.98,170,1000,Normal,Normal,No,No,No,Sí
+12556,51.9,Hombre,174,80,26.42,120,80,Normal,Normal,No,No,Sí,Sí
+60721,53.1,Mujer,159,76,30.06,120,80,Normal,Normal,No,No,Sí,Sí
+80423,47.6,Mujer,158,86,34.45,160,90,Normal,Normal,No,No,No,Sí
+72177,49.5,Hombre,173,71,23.72,120,80,Muy por encima de lo normal,Normal,Sí,No,Sí,Sí
+74280,50.1,Mujer,164,68,25.28,140,90,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+88811,50.1,Mujer,168,70,24.8,130,80,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+49875,53.8,Mujer,166,79,28.67,125,70,Normal,Muy por encima de lo normal,No,No,Sí,No
+6328,57.8,Mujer,157,52,21.1,120,80,Por encima de lo normal,Por encima de lo normal,No,No,No,Sí
+49197,64.4,Mujer,168,63,22.32,150,90,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+28760,64.6,Hombre,169,65,22.76,140,80,Normal,Normal,No,No,Sí,Sí
+37693,57.8,Hombre,172,84,28.39,130,80,Normal,Normal,No,No,No,Sí
+80038,57.4,Hombre,178,74,23.36,120,80,Normal,Normal,Sí,No,Sí,Sí
+10602,53.4,Mujer,170,107,37.02,120,70,Normal,Normal,No,No,Sí,No
+34017,45.2,Hombre,167,71,25.46,140,90,Normal,Normal,Sí,Sí,Sí,Sí
+61708,46,Hombre,168,65,23.03,110,80,Normal,Normal,No,No,Sí,No
+84359,45.4,Mujer,155,52,21.64,120,80,Normal,Normal,No,No,Sí,No
+33561,57.7,Hombre,172,92,31.1,120,80,Normal,Normal,No,No,No,Sí
+44420,60,Hombre,172,93,31.44,130,80,Normal,Normal,No,No,Sí,No
+88062,51.6,Mujer,154,73,30.78,130,90,Por encima de lo normal,Por encima de lo normal,No,No,Sí,No
+41912,48,Hombre,165,65,23.88,120,80,Normal,Normal,No,No,Sí,No
+25573,43.6,Mujer,161,59,22.76,110,70,Normal,Normal,Sí,No,Sí,No
+77350,49.9,Mujer,165,54,19.83,110,70,Por encima de lo normal,Normal,No,No,Sí,No
+81356,42,Mujer,167,65,23.31,120,70,Normal,Normal,No,No,Sí,No
+73380,53.5,Hombre,170,69,23.88,120,80,Normal,Normal,No,No,Sí,No
+40613,49.8,Mujer,165,65,23.88,120,80,Normal,Normal,No,No,Sí,No
+42032,55.6,Mujer,168,68,24.09,120,80,Normal,Normal,No,No,Sí,Sí
+83413,61.8,Mujer,169,77,26.96,140,90,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+30035,47.2,Mujer,153,87,37.17,180,110,Normal,Por encima de lo normal,No,No,Sí,Sí
+79301,58,Mujer,153,60,25.63,150,90,Normal,Normal,No,No,Sí,Sí
+58390,39.5,Mujer,162,130,49.54,130,80,Normal,Normal,No,No,Sí,No
+32760,53.6,Mujer,157,57,23.12,120,80,Normal,Normal,No,No,Sí,No
+34268,51.5,Hombre,168,92,32.6,135,90,Normal,Muy por encima de lo normal,No,No,Sí,No
+83103,56,Hombre,172,78,26.37,120,80,Muy por encima de lo normal,Normal,No,No,Sí,No
+87168,55.7,Mujer,161,68,26.23,120,80,Muy por encima de lo normal,Normal,No,No,No,No
+24075,64.4,Hombre,170,73,25.26,120,80,Normal,Normal,No,No,Sí,No
+87608,58.2,Mujer,165,95,34.89,130,80,Normal,Normal,No,No,Sí,Sí
+11749,55.7,Hombre,170,79,27.34,150,90,Normal,Normal,No,No,No,Sí
+38393,63.6,Mujer,151,55,24.12,130,80,Normal,Normal,No,No,Sí,No
+66596,48.1,Mujer,160,84,32.81,130,100,Por encima de lo normal,Normal,No,No,No,Sí
+52006,46.3,Hombre,173,74,24.73,130,80,Por encima de lo normal,Normal,No,No,Sí,Sí
+29471,56.1,Mujer,158,115,46.07,160,90,Por encima de lo normal,Normal,No,No,Sí,Sí
+99491,52.1,Mujer,164,76,28.26,150,90,Por encima de lo normal,Por encima de lo normal,No,No,No,Sí
+51062,40,Hombre,164,75,27.89,120,80,Normal,Normal,No,No,Sí,No
+28198,50.6,Hombre,176,80,25.83,120,80,Normal,Normal,No,No,Sí,No
+5066,53.8,Mujer,156,66,27.12,120,80,Normal,Normal,No,No,Sí,No
+73933,41.9,Mujer,173,65,21.72,100,60,Normal,Normal,No,No,Sí,No
+53981,53.8,Mujer,164,78,29,120,90,Normal,Normal,No,No,Sí,Sí
+99116,53.4,Mujer,159,68,26.9,130,90,Normal,Normal,No,No,No,Sí
+10423,56.5,Mujer,161,94,36.26,130,79,Normal,Por encima de lo normal,No,No,No,Sí
+49563,46.1,Mujer,154,50,21.08,110,70,Normal,Normal,No,No,Sí,No
+28376,41.8,Mujer,156,112,46.02,120,80,Normal,Normal,No,No,Sí,No
+53935,51.5,Hombre,174,99,32.7,150,90,Normal,Normal,No,No,Sí,Sí
+75199,53.7,Mujer,157,69,27.99,140,90,Normal,Por encima de lo normal,No,No,Sí,Sí
+42919,52.3,Mujer,168,89,31.53,120,80,Normal,Normal,No,No,Sí,No
+68278,61.2,Mujer,155,78,32.47,120,80,Por encima de lo normal,Muy por encima de lo normal,No,No,Sí,No
+19630,51.6,Mujer,169,85,29.76,125,80,Normal,Normal,No,No,Sí,No
+29699,63.9,Hombre,167,80,28.69,140,90,Normal,Normal,No,No,No,No
+23049,45.8,Hombre,166,77,27.94,110,70,Normal,Normal,Sí,No,Sí,No
+14938,53.7,Mujer,164,59,21.94,100,60,Normal,Normal,No,No,No,No
+97853,55.1,Mujer,162,89,33.91,140,100,Normal,Normal,No,No,Sí,Sí
+77996,55.2,Mujer,171,82,28.04,120,80,Normal,Normal,No,No,Sí,No
+82565,45.9,Mujer,159,64,25.32,120,80,Normal,Normal,No,No,Sí,No
+86815,60.3,Mujer,168,70,24.8,120,80,Normal,Normal,No,No,Sí,No
+56443,40.3,Mujer,159,61,24.13,110,90,Normal,Normal,No,No,Sí,No
+73504,49.9,Mujer,166,72,26.13,120,80,Normal,Normal,No,No,No,No
+80319,52.6,Mujer,160,98,38.28,110,70,Normal,Normal,No,No,No,No
+52948,60.4,Mujer,169,74,25.91,120,80,Normal,Normal,No,No,Sí,No
+63224,59.4,Hombre,168,62,21.97,120,80,Normal,Normal,Sí,No,Sí,No
+43034,53.4,Hombre,165,63,23.14,170,90,Por encima de lo normal,Normal,Sí,Sí,No,Sí
+10870,59.2,Mujer,170,70,24.22,120,80,Normal,Normal,No,No,Sí,No
+71569,58.2,Mujer,161,56,21.6,110,70,Normal,Normal,No,Sí,No,Sí
+11446,59.8,Mujer,167,70,25.1,140,90,Normal,Normal,No,No,Sí,Sí
+29961,64.1,Hombre,158,76,30.44,120,80,Normal,Normal,No,No,Sí,Sí
+72867,43.9,Hombre,180,79,24.38,120,80,Normal,Normal,No,No,Sí,No
+35246,47.8,Mujer,160,120,46.87,180,100,Normal,Muy por encima de lo normal,No,No,Sí,No
+85547,55.2,Mujer,160,92,35.94,165,100,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+45365,59.7,Mujer,168,70,24.8,130,90,Normal,Normal,No,No,Sí,Sí
+55633,61.4,Mujer,157,68,27.59,120,80,Normal,Normal,No,No,Sí,Sí
+31720,58.3,Mujer,154,79,33.31,120,80,Por encima de lo normal,Normal,No,No,Sí,No
+37624,61.6,Mujer,155,50,20.81,150,100,Normal,Normal,No,No,No,No
+42498,39.4,Mujer,163,64,24.09,120,80,Por encima de lo normal,Normal,No,No,Sí,No
+51211,60.6,Mujer,153,58,24.78,140,90,Normal,Normal,No,No,Sí,Sí
+86842,63.7,Mujer,172,62,20.96,120,80,Normal,Normal,No,No,Sí,Sí
+91473,45.9,Mujer,157,62,25.15,90,70,Normal,Normal,No,No,Sí,No
+66733,63.8,Mujer,168,68,24.09,130,80,Por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+24377,45.7,Mujer,159,61,24.13,140,80,Muy por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+17591,41.8,Mujer,158,54,21.63,120,60,Normal,Normal,No,No,Sí,No
+80379,48,Hombre,171,95,32.49,110,70,Normal,Normal,No,No,Sí,Sí
+42391,60.1,Mujer,159,105,41.53,130,80,Por encima de lo normal,Normal,No,No,No,No
+61425,57.5,Hombre,162,80,30.48,120,80,Normal,Normal,No,No,Sí,Sí
+61486,41.2,Hombre,170,64,22.15,110,70,Por encima de lo normal,Normal,Sí,Sí,Sí,Sí
+63278,60,Hombre,174,70,23.12,120,80,Normal,Normal,No,No,Sí,No
+90997,49.6,Mujer,160,72,28.12,120,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,No
+60476,48,Mujer,160,71,27.73,110,70,Normal,Normal,No,No,Sí,Sí
+96073,44.1,Mujer,155,57,23.73,90,70,Normal,Normal,No,No,Sí,No
+34889,55.9,Mujer,159,82,32.44,110,70,Normal,Normal,No,No,Sí,No
+83109,53.7,Mujer,162,61,23.24,120,80,Normal,Normal,No,No,No,No
+42605,39.3,Hombre,181,76,23.2,110,60,Normal,Normal,Sí,No,Sí,No
+24930,42.2,Mujer,161,95,36.65,105,70,Normal,Normal,No,Sí,Sí,No
+84073,64.6,Mujer,165,69,25.34,130,80,Normal,Normal,No,No,Sí,Sí
+10738,47.4,Mujer,157,76,30.83,130,90,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+70980,39.9,Hombre,166,73,26.49,120,80,Normal,Normal,Sí,Sí,Sí,No
+43842,29.7,Mujer,159,59,23.34,120,80,Normal,Normal,No,No,Sí,No
+3254,43.6,Mujer,172,63,21.3,120,80,Normal,Normal,No,No,Sí,No
+87154,59.7,Mujer,163,81,30.49,130,80,Por encima de lo normal,Normal,No,No,No,Sí
+53025,60,Mujer,159,58,22.94,100,70,Muy por encima de lo normal,Normal,No,No,Sí,No
+61008,54.4,Mujer,167,133,47.69,126,77,Por encima de lo normal,Por encima de lo normal,No,No,Sí,No
+61368,55.6,Hombre,170,85,29.41,130,90,Normal,Normal,No,No,Sí,Sí
+97405,50.2,Mujer,165,85,31.22,140,90,Normal,Normal,No,No,Sí,Sí
+71303,51.7,Hombre,170,85,29.41,130,80,Normal,Normal,No,No,Sí,Sí
+51393,47.8,Mujer,165,65,23.88,140,90,Normal,Normal,No,No,Sí,Sí
+1850,52,Mujer,162,64,24.39,120,80,Normal,Normal,No,No,Sí,Sí
+9168,42.4,Hombre,182,103,31.1,140,90,Normal,Normal,No,No,Sí,Sí
+27190,60.4,Mujer,165,70,25.71,130,90,Normal,Normal,No,No,Sí,Sí
+990,60,Mujer,165,70,25.71,120,80,Normal,Normal,No,No,Sí,No
+89407,60.2,Mujer,160,66,25.78,120,80,Normal,Normal,No,No,Sí,No
+56596,53.9,Hombre,168,83,29.41,130,80,Normal,Normal,No,No,Sí,No
+25008,63.5,Mujer,156,90,36.98,130,90,Normal,Normal,No,No,Sí,Sí
+38614,58,Hombre,165,63,23.14,120,80,Normal,Normal,No,No,Sí,Sí
+62072,62.1,Hombre,168,90,31.89,120,80,Normal,Normal,Sí,Sí,Sí,Sí
+68549,62.3,Hombre,182,82,24.76,140,90,Normal,Normal,Sí,No,Sí,Sí
+22680,54.7,Mujer,165,75,27.55,120,80,Normal,Normal,No,No,Sí,No
+10214,50.3,Hombre,166,64,23.23,120,70,Normal,Normal,No,No,Sí,Sí
+30912,44.5,Hombre,164,64,23.8,140,90,Por encima de lo normal,Normal,No,No,Sí,No
+67236,61.9,Hombre,167,67,24.02,120,80,Normal,Normal,No,No,No,Sí
+4917,54.2,Mujer,162,58,22.1,140,90,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+63693,51.7,Mujer,168,98,34.72,160,90,Normal,Normal,No,No,Sí,Sí
+15311,49.5,Mujer,160,60,23.44,120,80,Normal,Normal,No,No,Sí,No
+25961,59.8,Hombre,179,79,24.66,120,80,Normal,Normal,No,No,No,No
+53760,55.4,Mujer,164,61,22.68,120,80,Normal,Normal,No,No,No,No
+19754,60.1,Hombre,160,63,24.61,120,80,Normal,Normal,No,No,Sí,Sí
+82255,41.5,Mujer,155,90,37.46,120,80,Normal,Normal,No,No,Sí,No
+16602,52.6,Mujer,169,69,24.16,120,80,Normal,Normal,No,No,No,No
+26134,60.6,Hombre,172,100,33.8,160,100,Normal,Normal,No,Sí,Sí,Sí
+31350,64.5,Hombre,167,74,26.53,140,90,Normal,Normal,No,No,Sí,Sí
+57707,45.6,Hombre,170,71,24.57,140,90,Normal,Normal,No,No,Sí,No
+65921,61.9,Hombre,179,92,28.71,100,70,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,No
+15611,50.4,Mujer,156,58,23.83,120,80,Normal,Normal,No,No,Sí,No
+18815,41.4,Mujer,162,81,30.86,120,80,Normal,Normal,No,No,Sí,Sí
+19928,49.5,Mujer,154,53,22.35,110,70,Normal,Normal,No,No,Sí,No
+96128,53.9,Mujer,164,78,29,110,70,Normal,Normal,No,No,No,Sí
+64163,44.4,Hombre,154,62,26.14,180,100,Muy por encima de lo normal,Normal,No,Sí,Sí,No
+26488,53.9,Hombre,174,87,28.74,155,106,Normal,Muy por encima de lo normal,Sí,No,No,Sí
+39364,63.8,Mujer,167,84,30.12,120,80,Normal,Normal,No,No,Sí,Sí
+58925,54.9,Hombre,168,78,27.64,140,90,Normal,Normal,No,No,Sí,Sí
+3399,62,Hombre,138,52,27.31,140,100,Normal,Normal,No,No,Sí,Sí
+45537,55.6,Mujer,166,69,25.04,120,80,Normal,Normal,No,No,Sí,No
+31375,61.7,Mujer,156,106,43.56,160,100,Normal,Por encima de lo normal,No,No,Sí,Sí
+4456,45.5,Mujer,154,82,34.58,120,80,Normal,Normal,No,No,Sí,Sí
+51484,54.2,Mujer,158,84,33.65,130,80,Normal,Normal,No,No,Sí,Sí
+60489,43.3,Mujer,154,58,24.46,150,90,Normal,Normal,No,No,Sí,Sí
+11676,63.8,Mujer,165,84,30.85,160,100,Por encima de lo normal,Normal,No,No,Sí,Sí
+25448,55.9,Mujer,168,85,30.12,150,100,Normal,Por encima de lo normal,No,No,Sí,Sí
+30374,64.2,Mujer,170,78,26.99,120,80,Normal,Normal,No,No,Sí,Sí
+68277,62,Mujer,169,49,17.16,100,60,Normal,Normal,No,No,No,No
+80809,60.2,Hombre,164,59,21.94,110,70,Normal,Normal,Sí,No,Sí,No
+27102,55.7,Hombre,168,70,24.8,150,1000,Normal,Normal,No,No,Sí,Sí
+14253,50.2,Mujer,168,70,24.8,160,80,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+22990,51.8,Mujer,169,65,22.76,140,90,Normal,Normal,No,No,No,Sí
+99276,39.9,Hombre,169,78,27.31,120,80,Normal,Normal,No,No,Sí,No
+56164,63.6,Mujer,154,91,38.37,140,90,Normal,Normal,No,No,Sí,Sí
+53582,39.8,Mujer,150,51,22.67,120,80,Normal,Normal,No,No,Sí,No
+53005,55.8,Mujer,167,69,24.74,120,80,Normal,Normal,No,No,Sí,No
+58663,60.3,Mujer,158,73,29.24,130,89,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+83519,45.7,Mujer,153,76,32.47,110,70,Normal,Normal,No,No,Sí,No
+28240,42.6,Hombre,172,69,23.32,120,80,Normal,Normal,No,No,Sí,No
+1810,61.8,Hombre,178,99,31.25,150,90,Normal,Normal,No,No,No,Sí
+43516,47.7,Mujer,172,52,17.58,120,70,Normal,Normal,No,No,Sí,No
+30810,50.3,Mujer,159,60,23.73,90,60,Normal,Normal,No,No,No,No
+41697,40.4,Mujer,162,72,27.43,110,70,Normal,Normal,No,No,No,No
+54136,56,Mujer,174,61,20.15,120,80,Normal,Normal,No,No,Sí,Sí
+79273,54.1,Mujer,164,68,25.28,130,80,Normal,Normal,No,No,Sí,Sí
+5318,43.5,Hombre,169,78,27.31,140,100,Normal,Normal,Sí,No,Sí,Sí
+26515,44.4,Hombre,175,74,24.16,140,90,Normal,Normal,Sí,No,Sí,Sí
+61038,54.4,Mujer,160,82,32.03,110,70,Normal,Normal,No,No,Sí,Sí
+29669,59.6,Hombre,178,92,29.04,125,84,Normal,Normal,No,No,No,No
+94425,54,Mujer,160,77,30.08,130,90,Muy por encima de lo normal,Normal,No,No,Sí,No
+75018,54.3,Mujer,166,82,29.76,128,82,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+89974,52.1,Mujer,153,76,32.47,130,80,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+69318,58.1,Mujer,162,95,36.2,150,90,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+77739,52.1,Mujer,150,52,23.11,90,60,Normal,Normal,No,No,Sí,No
+70960,49.8,Mujer,158,63,25.24,140,70,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+21736,41.8,Hombre,164,56,20.82,110,70,Normal,Normal,Sí,No,Sí,No
+31597,52,Mujer,170,67,23.18,120,70,Normal,Normal,No,No,Sí,No
+52543,46.1,Mujer,165,57,20.94,120,80,Normal,Normal,No,No,No,Sí
+1881,51.7,Mujer,163,59,22.21,120,80,Normal,Normal,No,No,No,No
+10229,45.5,Hombre,164,80,29.74,110,60,Normal,Normal,No,No,Sí,No
+99081,53.9,Mujer,168,91,32.24,125,80,Normal,Normal,No,No,Sí,No
+36499,53.9,Hombre,165,81,29.75,140,90,Por encima de lo normal,Normal,No,No,Sí,Sí
+47280,58.1,Mujer,170,85,29.41,120,80,Por encima de lo normal,Normal,No,Sí,No,Sí
+7107,49.7,Hombre,168,65,23.03,140,90,Por encima de lo normal,Normal,Sí,Sí,Sí,Sí
+4145,53.4,Mujer,159,65,25.71,120,80,Normal,Normal,No,No,No,Sí
+54680,54.2,Mujer,159,96,37.97,150,80,Normal,Normal,No,No,Sí,Sí
+36075,61.7,Mujer,159,83,32.83,100,80,Normal,Normal,No,No,Sí,Sí
+95538,56,Hombre,179,79,24.66,110,70,Normal,Normal,No,No,Sí,No
+70185,51.9,Mujer,168,72,25.51,110,80,Normal,Normal,No,No,Sí,No
+43335,54.4,Hombre,173,69,23.05,90,60,Normal,Normal,No,No,Sí,No
+40811,50,Hombre,178,97,30.61,120,80,Normal,Normal,No,No,Sí,No
+44653,45.5,Hombre,168,78,27.64,110,70,Normal,Normal,Sí,No,Sí,No
+37592,52.2,Mujer,169,75,26.26,120,80,Normal,Normal,No,No,Sí,No
+63067,47.6,Mujer,160,62,24.22,120,80,Normal,Normal,No,Sí,No,No
+85172,51.8,Mujer,161,64,24.69,170,100,Por encima de lo normal,Normal,No,No,Sí,Sí
+26233,52.1,Hombre,190,89,24.65,120,80,Normal,Normal,No,No,No,No
+70795,40,Mujer,169,64,22.41,120,80,Normal,Normal,No,No,Sí,No
+79745,50.1,Mujer,159,91,36,150,90,Por encima de lo normal,Normal,No,No,Sí,Sí
+64288,43.5,Mujer,169,69,24.16,130,90,Normal,Por encima de lo normal,No,No,Sí,No
+46648,46.2,Mujer,165,65,23.88,120,80,Normal,Normal,No,No,Sí,Sí
+37399,43.6,Mujer,170,72,24.91,140,90,Normal,Normal,No,No,Sí,Sí
+63066,64.2,Mujer,151,62,27.19,120,80,Normal,Normal,No,No,Sí,No
+59504,61.5,Hombre,178,100,31.56,135,90,Normal,Normal,No,No,Sí,Sí
+55840,43.3,Mujer,164,77,28.63,130,80,Normal,Normal,No,No,Sí,No
+42439,49.4,Mujer,175,72,23.51,110,70,Normal,Normal,No,No,Sí,No
+71260,44.2,Mujer,165,65,23.88,110,70,Normal,Normal,No,No,No,Sí
+12864,40.1,Mujer,151,70.5,30.92,110,80,Normal,Normal,No,No,Sí,No
+83992,54,Mujer,169,70,24.51,120,70,Normal,Normal,No,No,Sí,No
+4293,54.2,Mujer,160,58,22.66,100,70,Normal,Normal,No,No,Sí,No
+65546,51.7,Mujer,161,100,38.58,130,90,Por encima de lo normal,Normal,Sí,No,No,Sí
+37231,48,Hombre,173,98,32.74,140,80,Normal,Normal,No,No,Sí,Sí
+4910,54.1,Mujer,175,74,24.16,120,85,Normal,Normal,No,No,No,No
+83551,43.8,Mujer,165,67,24.61,120,80,Normal,Por encima de lo normal,No,No,No,No
+15729,63.7,Mujer,170,69,23.88,130,90,Normal,Normal,No,No,Sí,Sí
+16711,44.5,Hombre,175,80,26.12,123,72,Normal,Normal,Sí,Sí,Sí,No
+95647,60.4,Mujer,150,123,54.67,140,90,Normal,Normal,No,No,Sí,Sí
+67929,56,Mujer,170,70,24.22,120,80,Normal,Normal,No,No,Sí,No
+38429,55.6,Mujer,150,94,41.78,160,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+56779,40,Mujer,168,66,23.38,150,80,Normal,Normal,No,No,Sí,Sí
+54018,54.6,Hombre,156,64,26.3,130,90,Por encima de lo normal,Normal,No,No,Sí,No
+7723,39.7,Mujer,165,65,23.88,120,80,Normal,Normal,No,No,No,No
+46358,43.3,Mujer,151,43,18.86,100,60,Normal,Normal,No,No,Sí,No
+16,51.5,Hombre,173,60,20.05,120,80,Normal,Normal,No,No,Sí,No
+82719,63.7,Mujer,162,58,22.1,120,80,Normal,Normal,No,No,Sí,Sí
+10025,61.5,Hombre,173,76,25.39,150,100,Normal,Normal,No,No,Sí,Sí
+91508,59.5,Mujer,155,64.5,26.85,140,90,Normal,Normal,No,No,No,Sí
+915,64,Mujer,165,70,25.71,150,90,Normal,Por encima de lo normal,No,No,No,Sí
+15993,55.8,Mujer,171,84,28.73,120,80,Normal,Normal,No,No,Sí,No
+91498,60.3,Mujer,172,57,19.27,120,80,Normal,Normal,No,No,Sí,No
+68966,56.3,Mujer,158,84,33.65,120,80,Normal,Normal,No,No,No,No
+16668,56.3,Mujer,157,74,30.02,160,100,Por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+28066,47.8,Mujer,156,79,32.46,140,100,Normal,Normal,No,No,Sí,Sí
+85003,55.1,Mujer,152,66,28.57,185,100,Muy por encima de lo normal,Normal,No,No,Sí,No
+84280,39.7,Mujer,172,57,19.27,110,60,Normal,Normal,No,No,Sí,No
+22919,46.4,Hombre,169,65,22.76,120,80,Normal,Normal,No,No,No,No
+92672,40.8,Hombre,178,77,24.3,150,80,Por encima de lo normal,Por encima de lo normal,No,No,Sí,No
+90270,53.4,Mujer,157,62,25.15,90,60,Normal,Normal,No,No,Sí,No
+92629,59.3,Hombre,161,57,21.99,90,60,Normal,Normal,Sí,No,Sí,No
+62352,39.8,Mujer,156,76,31.23,130,90,Por encima de lo normal,Normal,No,No,No,Sí
+69390,50.2,Hombre,180,104,32.1,180,100,Muy por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+76517,64.7,Mujer,152,78,33.76,140,90,Normal,Normal,No,No,Sí,Sí
+60416,59.3,Mujer,165,71,26.08,110,80,Normal,Normal,No,No,Sí,No
+92215,40.1,Mujer,156,54,22.19,110,70,Normal,Normal,No,No,No,No
+24666,59.6,Mujer,159,69,27.29,120,80,Normal,Normal,No,No,No,No
+83023,41.7,Mujer,167,63,22.59,120,80,Normal,Normal,No,No,Sí,No
+29221,59.6,Hombre,170,90,31.14,130,90,Normal,Normal,Sí,No,Sí,No
+64767,54,Mujer,160,97,37.89,150,97,Normal,Normal,No,Sí,Sí,No
+26953,47.6,Mujer,161,62.4,24.07,100,70,Normal,Normal,No,No,Sí,No
+80773,56.6,Mujer,163,66,24.84,150,90,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+38743,40.4,Hombre,176,65,20.98,110,70,Por encima de lo normal,Normal,Sí,Sí,Sí,No
+77341,58.2,Mujer,185,75,21.91,120,80,Normal,Normal,No,Sí,Sí,No
+72891,43.4,Hombre,176,71,22.92,140,100,Normal,Normal,Sí,No,No,Sí
+88,52.4,Hombre,170,69,23.88,130,80,Normal,Normal,No,No,Sí,No
+93914,58.7,Hombre,160,47,18.36,110,70,Normal,Normal,No,No,No,Sí
+92494,50.5,Mujer,152,58,25.1,110,80,Por encima de lo normal,Normal,No,No,No,Sí
+17141,51.7,Mujer,157,72,29.21,130,80,Normal,Normal,No,No,No,No
+69032,45.7,Hombre,178,80,25.25,140,80,Normal,Normal,No,No,Sí,Sí
+21614,61.2,Hombre,172,88,29.75,140,80,Normal,Por encima de lo normal,Sí,No,Sí,No
+13106,48,Hombre,167,73,26.18,100,70,Normal,Normal,No,No,Sí,No
+48724,59.7,Hombre,170,83,28.72,150,90,Por encima de lo normal,Normal,No,No,Sí,Sí
+76465,59.5,Hombre,173,46,15.37,80,60,Normal,Normal,No,No,No,No
+93761,41.6,Hombre,170,60,20.76,120,80,Normal,Normal,No,No,No,No
+13709,51.4,Mujer,160,58,22.66,120,80,Normal,Normal,No,No,Sí,No
+30363,54.3,Hombre,170,70,24.22,110,70,Normal,Normal,No,No,No,No
+75636,48.5,Mujer,169,72,25.21,120,80,Normal,Normal,No,No,Sí,Sí
+91891,59.8,Hombre,168,62,21.97,160,100,Por encima de lo normal,Normal,No,No,No,Sí
+21929,52.4,Mujer,168,86,30.47,110,70,Normal,Normal,No,No,Sí,No
+76607,55.8,Mujer,158,74,29.64,160,90,Por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+8838,55.8,Hombre,170,82,28.37,140,80,Normal,Por encima de lo normal,No,No,Sí,No
+43481,50.2,Mujer,165,72,26.45,150,100,Normal,Normal,No,No,Sí,Sí
+26112,48.3,Mujer,150,69,30.67,110,80,Por encima de lo normal,Normal,No,No,Sí,No
+98004,54.3,Mujer,165,60,22.04,120,100,Normal,Normal,No,No,No,Sí
+57967,48.1,Hombre,173,97,32.41,130,90,Normal,Normal,No,No,No,Sí
+95616,56,Mujer,152,84,36.36,160,90,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+68817,54.2,Hombre,170,90,31.14,150,100,Por encima de lo normal,Normal,No,No,Sí,Sí
+6570,62.5,Mujer,165,78,28.65,130,80,Por encima de lo normal,Normal,No,No,Sí,No
+31749,49.4,Mujer,159,83,32.83,130,80,Por encima de lo normal,Normal,No,No,Sí,Sí
+73638,57.7,Mujer,165,70,25.71,140,90,Normal,Normal,No,No,No,Sí
+43106,46.1,Mujer,168,67,23.74,130,80,Por encima de lo normal,Normal,No,No,No,Sí
+10225,63.8,Mujer,162,65,24.77,110,70,Normal,Normal,No,No,Sí,Sí
+83464,61.8,Mujer,154,97,40.9,160,100,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+7270,53.7,Mujer,157,56,22.72,110,80,Normal,Normal,No,No,Sí,No
+4467,53.6,Hombre,173,96,32.08,160,100,Muy por encima de lo normal,Normal,No,No,Sí,No
+40087,51.8,Hombre,168,70,24.8,120,80,Normal,Normal,No,No,Sí,Sí
+22139,54.1,Hombre,176,79,25.5,110,80,Normal,Normal,No,No,Sí,No
+89803,62.1,Mujer,149,80,36.03,180,100,Normal,Normal,No,No,No,Sí
+68828,54.3,Mujer,165,67,24.61,110,70,Normal,Normal,No,No,Sí,No
+6021,56.2,Hombre,166,73,26.49,140,90,Normal,Normal,No,No,Sí,Sí
+84300,50.5,Mujer,155,81,33.71,110,80,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+97684,52.5,Mujer,165,83,30.49,160,100,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+27157,52,Mujer,164,76,28.26,130,80,Normal,Normal,No,No,Sí,No
+67402,57.5,Mujer,156,85,34.93,110,70,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,No
+17993,60.5,Mujer,162,63,24.01,120,80,Normal,Normal,No,No,Sí,Sí
+51177,57.9,Mujer,158,80,32.05,110,70,Normal,Normal,No,No,Sí,No
+41582,42.1,Hombre,173,56,18.71,110,70,Normal,Normal,No,No,Sí,No
+83241,51.2,Mujer,170,82,28.37,130,80,Por encima de lo normal,Normal,No,No,Sí,No
+83662,53.9,Mujer,156,58,23.83,90,60,Normal,Normal,No,No,Sí,No
+95074,52.5,Mujer,169,85,29.76,170,90,Por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+16502,60.1,Hombre,168,60,21.26,110,70,Por encima de lo normal,Muy por encima de lo normal,No,No,No,Sí
+40319,63.4,Hombre,164,62,23.05,120,80,Normal,Normal,No,No,No,Sí
+33147,57.8,Hombre,180,100,30.86,120,80,Normal,Normal,No,No,Sí,No
+66879,50.1,Mujer,162,80,30.48,180,90,Normal,Normal,No,No,Sí,Sí
+95404,62,Mujer,160,51,19.92,150,90,Por encima de lo normal,Normal,No,No,No,No
+86692,62.5,Hombre,170,82,28.37,120,80,Normal,Normal,No,No,No,No
+13299,50.1,Mujer,160,60,23.44,100,60,Por encima de lo normal,Por encima de lo normal,No,No,Sí,No
+60771,56.8,Mujer,178,75,23.67,110,60,Normal,Normal,No,No,Sí,No
+88312,49.4,Hombre,170,69,23.88,130,90,Normal,Normal,No,No,No,Sí
+61031,40,Mujer,165,85,31.22,120,70,Normal,Normal,No,No,Sí,Sí
+19422,42.1,Mujer,171,65,22.23,110,70,Normal,Normal,No,No,Sí,No
+2139,63.2,Mujer,164,102,37.92,150,90,Por encima de lo normal,Normal,No,No,Sí,Sí
+20581,53.5,Hombre,167,53,19,120,80,Normal,Normal,No,No,Sí,No
+60551,57.8,Hombre,172,96,32.45,130,80,Por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+7422,47.5,Mujer,165,68,24.98,120,70,Normal,Por encima de lo normal,No,No,Sí,No
+60880,53.7,Mujer,158,60,24.03,110,70,Normal,Normal,No,No,Sí,No
+40897,55.3,Mujer,152,61,26.4,100,80,Normal,Normal,No,No,Sí,No
+3932,56.1,Mujer,162,70,26.67,120,80,Normal,Normal,No,No,No,Sí
+33675,40.1,Hombre,166,65,23.59,120,80,Normal,Normal,No,No,Sí,No
+32073,47.9,Mujer,157,54,21.91,110,70,Normal,Normal,No,No,Sí,No
+21995,61.6,Mujer,160,90,35.16,130,80,Normal,Normal,No,No,No,No
+50951,53.9,Mujer,153,71,30.33,140,90,Normal,Normal,No,No,Sí,Sí
+35651,51.8,Mujer,165,60,22.04,110,70,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+48769,64.1,Mujer,154,74,31.2,140,80,Normal,Normal,No,No,Sí,Sí
+77764,40,Mujer,153,60,25.63,110,80,Normal,Normal,No,No,Sí,No
+87689,59.6,Mujer,156,83,34.11,140,90,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+39958,59.7,Hombre,178,120,37.87,175,80,Normal,Normal,No,No,Sí,No
+94070,52.2,Mujer,160,58,22.66,120,80,Normal,Normal,No,No,Sí,No
+72819,60.4,Mujer,168,63,22.32,120,90,Muy por encima de lo normal,Muy por encima de lo normal,No,No,No,No
+10111,53.5,Hombre,167,73,26.18,130,90,Normal,Normal,No,No,Sí,No
+14347,50.5,Mujer,155,69,28.72,110,70,Normal,Normal,No,No,Sí,No
+13237,49.9,Mujer,165,63,23.14,100,60,Normal,Normal,No,No,Sí,No
+11181,51.4,Mujer,165,63,23.14,110,90,Normal,Normal,No,No,Sí,No
+92243,46.1,Mujer,160,60,23.44,120,80,Normal,Normal,No,No,No,No
+92286,51.4,Mujer,178,98,30.93,130,80,Muy por encima de lo normal,Por encima de lo normal,No,No,No,Sí
+46123,53.3,Hombre,164,85,31.6,130,90,Normal,Normal,No,No,Sí,No
+71243,62.1,Mujer,148,77,35.15,160,90,Por encima de lo normal,Normal,No,No,Sí,Sí
+51547,50,Mujer,164,93,34.58,140,90,Normal,Normal,No,No,Sí,Sí
+8564,60,Mujer,176,78,25.18,120,80,Normal,Normal,No,No,No,Sí
+44275,61.3,Mujer,158,95,38.05,120,70,Normal,Normal,No,No,Sí,No
+79321,60.2,Mujer,160,65,25.39,140,90,Normal,Normal,No,No,Sí,Sí
+94361,60.6,Mujer,163,56,21.08,120,80,Normal,Normal,No,No,Sí,No
+57758,63.6,Mujer,150,76,33.78,130,90,Normal,Normal,No,No,Sí,Sí
+52886,63.8,Mujer,160,76,29.69,160,90,Normal,Normal,No,No,Sí,Sí
+49879,60.3,Mujer,156,88,36.16,125,80,Por encima de lo normal,Normal,No,No,Sí,No
+33385,62.3,Mujer,162,106,40.39,120,80,Normal,Normal,No,No,Sí,Sí
+34639,50.1,Mujer,177,74,23.62,130,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,No,No
+6871,39.7,Mujer,158,59,23.63,120,80,Normal,Normal,No,No,Sí,No
+75411,48,Mujer,164,72,26.77,150,80,Normal,Normal,No,No,Sí,Sí
+73595,59.7,Hombre,173,59,19.71,120,70,Normal,Normal,No,No,Sí,No
+75503,53.6,Mujer,155,72,29.97,120,80,Normal,Normal,No,No,Sí,No
+32860,55.8,Mujer,163,86,32.37,160,120,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+58033,63.5,Mujer,154,38,16.02,90,70,Normal,Por encima de lo normal,No,No,Sí,No
+20060,58.1,Mujer,168,89,31.53,120,80,Por encima de lo normal,Normal,No,No,Sí,No
+60498,47.6,Mujer,163,65,24.46,150,90,Normal,Normal,No,No,Sí,Sí
+85650,56.1,Hombre,178,77,24.3,150,80,Normal,Normal,No,Sí,Sí,Sí
+55373,47.8,Mujer,170,75,25.95,150,90,Normal,Normal,No,No,Sí,Sí
+74349,47.4,Mujer,160,57,22.27,120,80,Normal,Normal,No,No,Sí,No
+74608,63.9,Hombre,169,99,34.66,170,90,Normal,Normal,No,No,Sí,Sí
+73200,61.9,Hombre,172,82,27.72,158,90,Normal,Normal,No,No,Sí,Sí
+61388,44,Mujer,165,63,23.14,110,70,Normal,Normal,No,No,Sí,No
+54350,40,Mujer,175,57,18.61,140,80,Normal,Normal,No,No,No,Sí
+82008,63.4,Hombre,151,62,27.19,150,1000,Normal,Normal,No,No,Sí,Sí
+43140,56,Mujer,158,57,22.83,120,80,Normal,Normal,No,No,Sí,Sí
+67810,47.8,Mujer,150,59,26.22,140,90,Por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+79668,54.1,Mujer,168,78,27.64,130,70,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+22361,48.5,Hombre,185,95,27.76,120,80,Normal,Normal,No,No,Sí,No
+7750,41.7,Mujer,156,65,26.71,120,80,Normal,Normal,No,No,Sí,No
+58473,51.8,Mujer,155,65,27.06,120,80,Normal,Por encima de lo normal,No,No,Sí,Sí
+30059,63.7,Hombre,187,85,24.31,130,1000,Normal,Normal,No,No,Sí,Sí
+18693,45.9,Mujer,152,91,39.39,110,70,Normal,Normal,No,No,Sí,No
+9520,48.3,Mujer,168,71,25.16,120,80,Normal,Normal,No,No,Sí,No
+73855,60.8,Mujer,160,79,30.86,110,70,Normal,Muy por encima de lo normal,No,No,No,Sí
+34296,54,Hombre,171,104,35.57,120,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,No,Sí
+1945,62,Mujer,170,70,24.22,120,80,Normal,Normal,No,No,Sí,Sí
+76585,61.8,Mujer,154,63,26.56,120,80,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+38314,57.6,Hombre,174,87,28.74,200,110,Muy por encima de lo normal,Normal,No,Sí,Sí,Sí
+46669,60.1,Mujer,165,63,23.14,130,80,Normal,Normal,No,No,Sí,No
+57294,62.7,Mujer,165,80,29.38,110,80,Normal,Muy por encima de lo normal,No,No,Sí,No
+67869,41.9,Mujer,162,68,25.91,120,80,Normal,Normal,No,No,Sí,No
+13757,52.2,Hombre,167,76,27.25,140,80,Normal,Normal,No,No,Sí,Sí
+66098,63.7,Mujer,155,63,26.22,110,70,Normal,Normal,No,No,No,Sí
+26948,49.3,Hombre,171,73,24.96,110,70,Normal,Normal,No,No,Sí,No
+92050,55.6,Mujer,169,67,23.46,140,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+50745,55.9,Mujer,163,63,23.71,120,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,No,No
+88670,39.7,Hombre,164,65,24.17,130,90,Normal,Normal,No,No,No,Sí
+46169,49.6,Mujer,154,54,22.77,100,60,Por encima de lo normal,Normal,No,No,Sí,No
+79976,40.8,Mujer,160,60,23.44,140,80,Normal,Normal,No,No,No,Sí
+70136,41.4,Mujer,169,74,25.91,120,70,Normal,Normal,No,No,Sí,No
+26457,50.4,Mujer,165,68,24.98,120,80,Normal,Por encima de lo normal,No,No,Sí,No
+28908,58,Mujer,159,62,24.52,120,80,Normal,Normal,No,No,Sí,No
+9073,55.5,Mujer,158,76,30.44,160,90,Normal,Normal,No,No,Sí,Sí
+85396,40.2,Hombre,180,130,40.12,170,100,Normal,Normal,No,No,Sí,Sí
+14802,52.1,Mujer,170,71,24.57,120,80,Normal,Normal,No,No,No,No
+83501,53.9,Hombre,160,78,30.47,120,80,Normal,Normal,No,No,Sí,No
+55055,40,Mujer,172,74,25.01,120,80,Normal,Por encima de lo normal,No,No,Sí,No
+68401,53.3,Hombre,174,79,26.09,120,80,Normal,Normal,No,No,Sí,No
+89217,60.4,Mujer,167,85,30.48,120,70,Normal,Normal,No,No,Sí,Sí
+69426,49.5,Hombre,176,109,35.19,120,80,Por encima de lo normal,Normal,No,No,Sí,Sí
+19430,56,Mujer,162,58,22.1,110,70,Normal,Normal,No,No,Sí,Sí
+10710,59.6,Mujer,165,90,33.06,15,90,Normal,Normal,No,No,Sí,Sí
+73826,59.9,Hombre,173,77,25.73,110,80,Normal,Normal,Sí,No,Sí,No
+11824,55.7,Hombre,176,68,21.95,120,80,Normal,Normal,No,No,Sí,No
+45989,63.7,Hombre,174,106,35.01,150,90,Normal,Normal,No,No,Sí,Sí
+55151,58.3,Mujer,158,89,35.65,140,90,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+67703,47.8,Mujer,167,72,25.82,150,90,Normal,Normal,No,No,Sí,Sí
+54946,41.9,Mujer,152,93,40.25,135,80,Normal,Normal,No,No,Sí,Sí
+82423,54.1,Mujer,165,63,23.14,120,80,Normal,Normal,No,No,Sí,Sí
+36392,51.5,Mujer,151,68,29.82,120,80,Normal,Normal,No,No,Sí,Sí
+67532,53.9,Mujer,168,70,24.8,130,90,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+9875,61.5,Hombre,165,67,24.61,120,70,Normal,Normal,No,No,Sí,No
+54676,59.7,Hombre,168,70,24.8,130,80,Normal,Normal,No,No,Sí,No
+3045,45.5,Hombre,169,64,22.41,120,80,Normal,Normal,No,No,No,No
+98467,62.1,Hombre,155,68,28.3,120,80,Normal,Normal,No,No,Sí,No
+24899,50.2,Hombre,172,75,25.35,120,80,Normal,Normal,No,No,Sí,No
+13085,54.3,Mujer,170,63,21.8,120,90,Normal,Normal,No,No,Sí,No
+5898,41.9,Hombre,160,78,30.47,160,90,Normal,Normal,Sí,Sí,Sí,Sí
+95031,55.4,Mujer,172,70,23.66,120,80,Normal,Normal,No,No,Sí,No
+46497,61.5,Hombre,165,88,32.32,140,80,Por encima de lo normal,Normal,No,No,No,No
+93789,62.1,Hombre,165,68,24.98,130,90,Normal,Normal,No,No,Sí,Sí
+34022,61.4,Mujer,164,70,26.03,110,70,Normal,Normal,No,No,Sí,Sí
+97176,55.5,Mujer,155,63,26.22,120,80,Normal,Normal,No,No,Sí,No
+81708,52.1,Mujer,164,84,31.23,130,80,Normal,Normal,No,No,Sí,Sí
+55375,60.5,Mujer,165,57,20.94,120,80,Normal,Normal,No,No,Sí,No
+1581,57.6,Mujer,165,75,27.55,100,70,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+71472,52,Mujer,160,60,23.44,130,90,Muy por encima de lo normal,Normal,No,No,Sí,No
+10893,62.2,Mujer,160,76,29.69,120,80,Normal,Normal,No,No,Sí,Sí
+31593,54.6,Mujer,163,90,33.87,140,90,Normal,Normal,No,No,No,Sí
+64306,57.4,Mujer,158,82,32.85,120,80,Normal,Normal,No,No,Sí,Sí
+39779,53.6,Mujer,157,50,20.28,120,80,Normal,Normal,No,No,Sí,No
+20236,59.5,Hombre,168,66,23.38,120,80,Normal,Normal,No,No,No,No
+89875,51.6,Mujer,163,77,28.98,100,60,Por encima de lo normal,Normal,No,No,Sí,Sí
+41081,51.4,Mujer,160,56,21.87,130,80,Por encima de lo normal,Por encima de lo normal,No,No,No,No
+10408,45.3,Hombre,175,74,24.16,110,60,Normal,Normal,No,No,Sí,No
+11142,63.6,Mujer,158,75,30.04,150,100,Muy por encima de lo normal,Muy por encima de lo normal,No,No,No,Sí
+44583,48.3,Hombre,160,57,22.27,120,80,Normal,Normal,No,Sí,Sí,No
+31356,62.1,Hombre,166,72,26.13,100,60,Normal,Normal,No,No,No,No
+15763,53.5,Mujer,159,62,24.52,120,60,Normal,Normal,No,No,Sí,Sí
+12773,43.7,Mujer,170,74,25.61,140,70,Normal,Normal,No,No,Sí,Sí
+12358,62,Mujer,165,85,31.22,140,90,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+64934,57.6,Hombre,171,98,33.51,110,90,Normal,Normal,Sí,No,Sí,Sí
+54565,55.8,Mujer,160,58,22.66,120,80,Normal,Normal,No,No,Sí,No
+90169,60,Mujer,165,75,27.55,140,90,Normal,Normal,No,No,Sí,No
+45849,57.8,Hombre,170,70,24.22,150,90,Normal,Normal,No,Sí,Sí,Sí
+54328,61.2,Mujer,155,56,23.31,140,80,Normal,Normal,No,No,Sí,Sí
+7043,49.9,Hombre,169,68,23.81,110,70,Normal,Normal,No,No,Sí,Sí
+67630,47.2,Mujer,158,63,25.24,150,90,Normal,Normal,No,No,Sí,Sí
+58120,64.8,Hombre,168,69,24.45,120,80,Normal,Normal,No,No,Sí,No
+97157,48.1,Mujer,170,74,25.61,140,100,Por encima de lo normal,Normal,No,No,Sí,Sí
+97339,50,Mujer,165,70,25.71,120,80,Normal,Normal,No,No,Sí,Sí
+2464,60.5,Hombre,165,85,31.22,120,80,Normal,Normal,No,No,Sí,Sí
+16183,53.9,Hombre,180,76,23.46,120,80,Normal,Normal,No,No,Sí,No
+90551,46.5,Mujer,158,59,23.63,100,70,Normal,Normal,No,No,Sí,No
+75547,40.1,Mujer,165,65,23.88,120,80,Normal,Normal,No,No,No,No
+37551,56.1,Mujer,163,63,23.71,120,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,No,Sí
+20694,58.3,Mujer,163,61,22.96,130,90,Normal,Normal,No,No,Sí,Sí
+72639,57.4,Hombre,156,56,23.01,130,80,Muy por encima de lo normal,Normal,No,No,No,Sí
+16343,56.3,Mujer,173,79,26.4,120,80,Por encima de lo normal,Normal,No,No,Sí,No
+95872,44.4,Hombre,170,90,31.14,130,90,Normal,Normal,No,No,Sí,Sí
+40965,58.5,Mujer,167,60,21.51,120,79,Normal,Normal,No,No,No,Sí
+48461,47.8,Hombre,165,60,22.04,14,90,Normal,Normal,Sí,Sí,Sí,Sí
+78484,57.3,Hombre,170,70,24.22,200,100,Normal,Normal,Sí,Sí,Sí,Sí
+29999,50.1,Hombre,152,70,30.3,120,80,Normal,Normal,No,No,Sí,No
+28098,59.8,Mujer,158,80,32.05,130,80,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+55441,63.7,Hombre,172,90,30.42,160,90,Normal,Normal,No,No,No,Sí
+43664,60.2,Mujer,156,77,31.64,120,80,Muy por encima de lo normal,Normal,No,No,Sí,No
+83667,41.9,Hombre,176,78,25.18,120,80,Normal,Normal,No,No,Sí,No
+3558,40,Mujer,154,56,23.61,110,70,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,No
+77287,42.1,Hombre,166,65,23.59,110,80,Normal,Normal,No,No,Sí,No
+43258,52,Mujer,153,56,23.92,90,60,Normal,Normal,No,No,Sí,No
+2640,56.4,Hombre,165,80,29.38,120,70,Por encima de lo normal,Normal,No,No,No,Sí
+34336,60,Hombre,170,70,24.22,120,80,Normal,Normal,No,No,Sí,No
+83214,45.8,Mujer,154,59,24.88,130,80,Normal,Normal,No,No,Sí,No
+2874,52.5,Hombre,165,69,25.34,150,100,Normal,Normal,No,No,Sí,Sí
+35398,45.7,Hombre,171,97,33.17,120,80,Normal,Por encima de lo normal,Sí,No,Sí,No
+95305,64,Hombre,179,79,24.66,120,80,Normal,Normal,No,No,Sí,Sí
+75923,57.8,Mujer,153,47,20.08,110,80,Normal,Normal,No,No,No,Sí
+47987,39.6,Mujer,149,47,21.17,120,80,Normal,Normal,No,No,Sí,No
+57457,47.8,Hombre,185,87,25.42,170,90,Normal,Normal,No,No,No,Sí
+64780,41.8,Hombre,171,60,20.52,120,80,Normal,Normal,Sí,No,Sí,No
+49235,53.6,Mujer,164,65,24.17,110,70,Normal,Normal,No,No,Sí,No
+25087,59.8,Mujer,159,98,38.76,150,80,Por encima de lo normal,Normal,No,No,Sí,Sí
+66613,59.8,Mujer,165,65,23.88,160,90,Normal,Normal,No,No,No,Sí
+40254,59.3,Mujer,162,103,39.25,140,90,Normal,Por encima de lo normal,No,No,Sí,Sí
+97867,61.3,Hombre,174,62,20.48,120,70,Normal,Normal,No,No,Sí,No
+53238,50,Hombre,184,95,28.06,120,80,Normal,Normal,No,No,Sí,No
+55196,56.6,Mujer,176,72,23.24,120,80,Normal,Normal,No,No,Sí,Sí
+23033,46.1,Hombre,175,73,23.84,120,80,Normal,Normal,No,No,No,No
+91603,47.5,Hombre,168,82,29.05,130,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+13394,61.6,Hombre,170,76,26.3,160,90,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+32215,55.7,Mujer,165,95,34.89,150,90,Normal,Normal,No,No,No,No
+86951,58.2,Mujer,154,74,31.2,120,80,Normal,Normal,No,No,No,No
+13937,39.4,Hombre,165,62,22.77,110,80,Normal,Normal,No,No,Sí,No
+20514,56.7,Mujer,169,70,24.51,120,80,Normal,Normal,No,No,Sí,No
+52462,43.8,Mujer,156,80,32.87,110,70,Normal,Normal,No,Sí,Sí,No
+22333,52.6,Mujer,168,59,20.9,140,80,Normal,Normal,No,No,Sí,Sí
+68677,64.2,Mujer,160,90,35.16,160,100,Por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+7037,43.5,Mujer,156,59,24.24,110,70,Normal,Normal,No,No,Sí,No
+81728,63.4,Mujer,176,53,17.11,120,80,Normal,Normal,No,No,Sí,Sí
+60459,47.9,Mujer,154,90,37.95,130,90,Muy por encima de lo normal,Muy por encima de lo normal,No,No,No,Sí
+64682,54.4,Hombre,162,71,27.05,130,80,Normal,Normal,No,No,Sí,Sí
+58946,60.1,Mujer,165,86,31.59,150,90,Normal,Normal,No,No,No,Sí
+56139,63.3,Mujer,152,74,32.03,160,100,Por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+60844,43.8,Hombre,168,82,29.05,120,80,Normal,Normal,No,No,Sí,No
+53595,57.9,Mujer,166,65,23.59,120,80,Normal,Normal,No,No,Sí,No
+25898,51.5,Mujer,169,68,23.81,120,80,Normal,Normal,No,No,Sí,No
+63144,63.9,Mujer,174,70,23.12,120,80,Por encima de lo normal,Normal,No,No,No,No
+27210,51.9,Mujer,165,78,28.65,110,80,Normal,Normal,No,No,No,No
+28273,58,Hombre,170,70,24.22,120,80,Normal,Normal,No,Sí,Sí,No
+41849,47.3,Mujer,168,74,26.22,120,80,Normal,Normal,No,No,Sí,No
+65111,52.2,Hombre,174,95,31.38,120,80,Normal,Normal,Sí,No,Sí,Sí
+62685,52.8,Mujer,165,65,23.88,120,80,Normal,Normal,No,No,Sí,Sí
+42831,51.7,Hombre,168,81,28.7,120,80,Normal,Normal,No,No,No,No
+12032,40.1,Mujer,160,60,23.44,120,80,Normal,Normal,No,No,Sí,No
+8275,54,Hombre,169,70,24.51,120,80,Normal,Normal,No,No,Sí,Sí
+26855,64.1,Hombre,170,71,24.57,120,70,Por encima de lo normal,Normal,No,No,Sí,Sí
+81039,49.5,Mujer,156,80,32.87,130,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+95426,40.2,Mujer,164,85,31.6,140,90,Normal,Normal,No,No,Sí,Sí
+25906,55.7,Mujer,157,62,25.15,110,70,Normal,Normal,No,No,Sí,No
+90954,54.4,Mujer,163,66,24.84,120,80,Normal,Normal,No,No,No,No
+77824,40.2,Mujer,165,60,22.04,110,70,Normal,Normal,No,No,Sí,No
+11404,58,Mujer,166,67,24.31,120,80,Normal,Normal,No,No,Sí,No
+3132,56.1,Mujer,172,89,30.08,130,80,Normal,Normal,No,No,Sí,Sí
+77244,59.6,Mujer,163,48,18.07,110,70,Normal,Normal,No,No,Sí,Sí
+25973,64.1,Mujer,162,80,30.48,160,80,Normal,Normal,No,No,Sí,Sí
+68427,59.6,Hombre,165,85,31.22,150,90,Normal,Normal,No,No,Sí,Sí
+67665,55.5,Hombre,178,82,25.88,120,80,Normal,Normal,No,No,Sí,No
+29876,51.6,Hombre,168,87,30.82,12,70,Normal,Normal,No,No,Sí,Sí
+18982,44,Mujer,175,68,22.2,120,80,Normal,Normal,No,No,Sí,Sí
+86568,51.3,Mujer,171,73,24.96,135,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+35152,45.6,Mujer,156,72,29.59,110,70,Normal,Normal,No,No,Sí,No
+41484,58,Mujer,152,44,19.04,140,80,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+1852,50.5,Hombre,165,68,24.98,110,70,Normal,Normal,Sí,Sí,Sí,No
+69881,45.8,Mujer,163,75,28.23,140,90,Normal,Normal,No,No,Sí,No
+95079,55.6,Mujer,160,80,31.25,100,70,Normal,Normal,No,No,No,No
+5899,60.3,Hombre,174,89,29.4,110,70,Normal,Normal,No,No,Sí,No
+2871,51.5,Mujer,156,106,43.56,130,90,Normal,Normal,No,No,Sí,No
+47583,53.9,Hombre,170,80,27.68,171,70,Normal,Normal,No,No,No,No
+80278,57.7,Mujer,162,56,21.34,100,60,Por encima de lo normal,Normal,No,No,Sí,No
+84795,42.3,Mujer,166,66,23.95,120,80,Por encima de lo normal,Por encima de lo normal,No,No,Sí,No
+2765,52.2,Mujer,160,88,34.37,160,90,Normal,Por encima de lo normal,No,No,Sí,No
+99618,60.3,Mujer,163,66,24.84,120,80,Normal,Normal,No,No,No,No
+6940,64.3,Hombre,160,65,25.39,120,80,Normal,Normal,No,No,No,Sí
+93236,56.1,Mujer,169,66,23.11,160,90,Normal,Normal,No,No,Sí,Sí
+30941,51.7,Mujer,162,81,30.86,130,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,No,Sí
+22902,58.3,Hombre,177,85,27.13,120,80,Por encima de lo normal,Por encima de lo normal,No,Sí,No,No
+20614,52.2,Mujer,154,80,33.73,160,90,Normal,Normal,No,No,Sí,Sí
+19150,52.3,Mujer,165,68,24.98,120,80,Normal,Normal,No,No,Sí,No
+79252,54.3,Mujer,164,88,32.72,120,80,Normal,Normal,No,No,Sí,No
+44592,60.6,Mujer,165,73,26.81,95,170,Normal,Muy por encima de lo normal,No,No,Sí,Sí
+59125,44.4,Mujer,168,80,28.34,120,80,Normal,Normal,No,No,Sí,No
+59918,42.8,Hombre,165,60,22.04,120,80,Normal,Normal,No,No,No,No
+72150,42.3,Hombre,165,61,22.41,120,80,Normal,Normal,No,Sí,Sí,Sí
+29805,46.1,Mujer,167,68,24.38,120,60,Por encima de lo normal,Por encima de lo normal,No,No,Sí,No
+11759,55.7,Hombre,165,58,21.3,120,70,Normal,Normal,No,No,Sí,Sí
+92264,59.8,Hombre,164,69,25.65,150,100,Normal,Normal,No,No,Sí,Sí
+58516,54.1,Hombre,165,63,23.14,120,80,Normal,Normal,Sí,No,Sí,No
+56855,51.8,Mujer,167,79,28.33,130,90,Por encima de lo normal,Normal,No,No,Sí,No
+973,53.9,Mujer,161,91,35.11,120,80,Normal,Normal,No,No,No,Sí
+39199,64,Mujer,164,86,31.98,130,80,Normal,Normal,No,No,Sí,Sí
+6858,48.1,Hombre,166,70,25.4,120,80,Normal,Normal,No,Sí,Sí,Sí
+4675,58,Mujer,158,82,32.85,140,80,Normal,Normal,No,No,Sí,Sí
+3639,53.6,Mujer,160,70,27.34,169,99,Muy por encima de lo normal,Normal,No,No,Sí,No
+5715,53.9,Mujer,153,73,31.18,120,80,Normal,Normal,No,No,Sí,Sí
+25702,47.7,Mujer,155,51,21.23,140,100,Por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+57646,55.6,Mujer,162,50,19.05,309,0,Normal,Normal,No,No,Sí,No
+73105,62.7,Mujer,169,78,27.31,130,80,Por encima de lo normal,Normal,No,No,Sí,Sí
+90823,53.9,Mujer,155,50,20.81,110,75,Normal,Normal,No,No,Sí,No
+86163,61.5,Mujer,153,77,32.89,130,80,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+89097,47.7,Hombre,171,82,28.04,160,90,Normal,Normal,No,No,No,Sí
+5569,58.4,Mujer,158,71,28.44,120,80,Normal,Normal,No,No,Sí,No
+12245,58,Mujer,163,64,24.09,110,70,Normal,Normal,No,No,Sí,No
+9391,43.4,Mujer,166,63,22.86,120,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,No,Sí
+42549,57.9,Hombre,164,82,30.49,160,80,Normal,Normal,No,No,No,Sí
+58113,40.8,Mujer,165,66,24.24,120,80,Normal,Normal,No,No,Sí,No
+46093,41.6,Mujer,161,63,24.3,90,60,Por encima de lo normal,Normal,No,No,Sí,No
+83049,62.4,Hombre,160,60,23.44,120,80,Normal,Normal,Sí,No,No,No
+56395,51.6,Hombre,156,54,22.19,150,90,Normal,Normal,No,No,No,No
+95931,55.6,Mujer,156,56,23.01,110,60,Normal,Normal,No,No,Sí,No
+65256,40.3,Mujer,161,77,29.71,110,70,Normal,Normal,No,No,Sí,No
+18459,52.8,Hombre,154,50,21.08,120,80,Normal,Muy por encima de lo normal,No,No,Sí,No
+97987,56,Hombre,163,65,24.46,110,70,Normal,Por encima de lo normal,No,No,Sí,No
+44351,63.8,Hombre,178,80,25.25,130,80,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+47493,64.4,Hombre,165,80,29.38,140,90,Por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+46780,60.3,Mujer,156,75,30.82,120,80,Normal,Normal,No,Sí,Sí,No
+79710,58.2,Mujer,158,62,24.84,120,80,Normal,Normal,No,No,Sí,Sí
+99954,55.7,Mujer,156,67,27.53,140,80,Por encima de lo normal,Normal,No,No,No,No
+6413,64.2,Hombre,174,70,23.12,120,80,Normal,Normal,No,No,Sí,Sí
+54225,44.6,Hombre,170,80,27.68,140,90,Normal,Normal,No,No,Sí,Sí
+18332,61.3,Mujer,153,78,33.32,150,90,Por encima de lo normal,Por encima de lo normal,No,No,Sí,No
+42190,49.5,Mujer,165,60,22.04,110,70,Normal,Normal,No,No,Sí,No
+2288,45.8,Hombre,170,72,24.91,120,80,Normal,Normal,No,No,Sí,No
+29094,59.8,Mujer,152,79,34.19,90,60,Normal,Normal,No,No,No,No
+5868,52.5,Hombre,176,109,35.19,190,100,Normal,Normal,No,No,Sí,Sí
+97847,57.7,Mujer,162,68,25.91,120,80,Normal,Normal,No,No,Sí,No
+16022,58.3,Mujer,163,60,22.58,120,80,Normal,Normal,No,No,No,Sí
+14860,43.6,Mujer,162,75,28.58,120,80,Normal,Normal,No,No,No,No
+33629,59.6,Mujer,156,62,25.48,100,70,Por encima de lo normal,Normal,Sí,No,No,No
+82788,60.2,Hombre,156,56,23.01,120,80,Normal,Normal,No,No,Sí,Sí
+15141,51.6,Mujer,148,62,28.31,120,80,Normal,Normal,No,No,No,Sí
+28527,48.3,Hombre,176,72,23.24,120,80,Por encima de lo normal,Por encima de lo normal,No,No,Sí,No
+33175,48.5,Hombre,163,74,27.85,120,80,Normal,Normal,No,No,Sí,No
+29098,59.6,Mujer,160,75,29.3,110,70,Normal,Normal,No,No,Sí,No
+62166,51.6,Mujer,167,94,33.71,150,100,Por encima de lo normal,Normal,No,No,Sí,Sí
+3657,54,Mujer,162,100,38.1,120,80,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+16225,41.7,Mujer,159,60,23.73,100,60,Normal,Normal,No,No,Sí,No
+622,57.4,Hombre,180,84,25.93,180,90,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+7661,46,Mujer,165,70,25.71,110,90,Normal,Normal,No,No,Sí,No
+53250,39.6,Mujer,169,71,24.86,110,80,Normal,Normal,No,No,No,No
+74195,50.5,Mujer,162,75,28.58,130,90,Normal,Normal,No,No,Sí,Sí
+96913,53.8,Mujer,169,62,21.71,120,80,Normal,Normal,No,No,Sí,Sí
+6559,40.7,Hombre,172,75,25.35,120,90,Por encima de lo normal,Por encima de lo normal,No,No,No,No
+23126,42,Mujer,178,75,23.67,140,90,Normal,Normal,No,No,Sí,Sí
+52096,53.6,Mujer,154,77,32.47,120,80,Normal,Normal,No,No,Sí,Sí
+95261,52.1,Hombre,174,72,23.78,120,80,Normal,Normal,No,No,Sí,No
+90521,44,Mujer,165,63,23.14,110,70,Normal,Normal,No,No,Sí,No
+34798,56.2,Mujer,164,66,24.54,120,80,Normal,Normal,No,No,No,No
+72268,60,Mujer,153,74,31.61,140,100,Por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+23107,49.4,Hombre,165,67,24.61,140,90,Normal,Normal,Sí,No,Sí,Sí
+9214,50.7,Mujer,168,75,26.57,110,60,Normal,Normal,No,No,Sí,No
+49454,60.1,Hombre,175,86,28.08,140,90,Muy por encima de lo normal,Normal,Sí,Sí,No,No
+51459,55.5,Hombre,169,69,24.16,120,70,Por encima de lo normal,Normal,Sí,No,Sí,No
+64311,59.6,Hombre,173,70,23.39,120,70,Normal,Normal,No,No,Sí,No
+60699,63.7,Mujer,157,55,22.31,110,70,Normal,Normal,No,No,Sí,No
+81508,41.5,Mujer,169,72,25.21,120,80,Normal,Normal,No,No,Sí,No
+14462,45.8,Mujer,155,100,41.62,136,1022,Muy por encima de lo normal,Muy por encima de lo normal,No,Sí,Sí,Sí
+26819,56.1,Mujer,163,69,25.97,130,90,Normal,Normal,No,No,No,No
+19596,62.5,Hombre,168,70,24.8,140,90,Normal,Normal,No,No,Sí,No
+84844,53.5,Mujer,151,67,29.38,130,70,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+40642,39.8,Mujer,155,50,20.81,110,70,Normal,Normal,No,No,Sí,No
+25549,42.1,Mujer,165,66,24.24,110,70,Normal,Normal,No,No,Sí,No
+29298,57.5,Mujer,157,80,32.46,120,80,Por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+49451,40.3,Hombre,160,64,25,120,70,Normal,Normal,No,No,Sí,No
+94772,54.2,Mujer,157,58,23.53,140,100,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+55139,51.2,Hombre,150,50,22.22,120,80,Normal,Normal,No,No,Sí,Sí
+72654,60.1,Mujer,169,63,22.06,110,70,Normal,Normal,No,No,Sí,No
+46287,59.6,Mujer,162,85,32.39,170,95,Por encima de lo normal,Normal,No,No,No,No
+15704,39.6,Hombre,174,67,22.13,110,80,Normal,Normal,No,No,Sí,No
+49154,55.3,Hombre,175,75,24.49,140,80,Normal,Normal,No,No,Sí,Sí
+41256,46.3,Mujer,172,80,27.04,100,60,Normal,Normal,No,No,Sí,No
+52877,53.6,Mujer,159,62,24.52,130,90,Normal,Normal,No,No,Sí,Sí
+56193,57.6,Hombre,173,70,23.39,120,80,Normal,Normal,No,No,Sí,No
+93326,45.9,Hombre,168,52,18.42,120,80,Normal,Normal,Sí,No,Sí,No
+19597,48.7,Hombre,168,74,26.22,140,100,Por encima de lo normal,Normal,No,Sí,Sí,Sí
+69954,57.6,Mujer,155,77,32.05,160,80,Por encima de lo normal,Normal,No,No,Sí,Sí
+84579,51.6,Mujer,165,78,28.65,110,80,Normal,Normal,No,No,No,No
+68665,58,Hombre,168,77,27.28,110,70,Normal,Normal,No,No,Sí,No
+43545,61.5,Mujer,153,70,29.9,140,90,Normal,Normal,No,No,Sí,Sí
+80403,41.8,Mujer,164,60,22.31,140,90,Normal,Por encima de lo normal,No,No,Sí,Sí
+87751,59.5,Hombre,170,77,26.64,120,80,Normal,Normal,Sí,No,Sí,Sí
+33017,55.7,Hombre,165,79,29.02,120,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+64638,51.7,Hombre,168,65,23.03,120,80,Normal,Normal,No,No,Sí,No
+54375,56.6,Mujer,167,68,24.38,110,70,Normal,Normal,No,No,Sí,No
+74569,57.9,Mujer,144,51,24.59,172,102,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+41813,61.8,Mujer,168,66,23.38,120,70,Normal,Normal,No,No,Sí,No
+53208,52.3,Mujer,165,62,22.77,120,80,Normal,Normal,No,No,No,No
+13337,42,Mujer,170,75,25.95,110,60,Normal,Normal,No,No,No,No
+86630,52.3,Mujer,157,79,32.05,130,90,Normal,Normal,No,No,Sí,No
+86231,51.5,Mujer,158,123,49.27,150,1000,Por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+36962,63.6,Hombre,175,68,22.2,140,90,Normal,Normal,No,No,Sí,Sí
+53733,49.9,Hombre,159,60,23.73,100,70,Normal,Normal,Sí,Sí,Sí,No
+33828,49.7,Hombre,167,72,25.82,130,90,Normal,Normal,No,No,Sí,Sí
+7225,47.8,Mujer,162,78,29.72,120,80,Normal,Normal,No,No,Sí,No
+3057,60.1,Hombre,169,75,26.26,14,80,Por encima de lo normal,Normal,No,No,Sí,Sí
+71558,59.9,Mujer,149,64,28.83,110,59,Muy por encima de lo normal,Muy por encima de lo normal,No,No,No,Sí
+91785,60.2,Mujer,163,109,41.03,130,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+94157,56.4,Mujer,155,61,25.39,130,90,Muy por encima de lo normal,Por encima de lo normal,No,No,No,Sí
+43796,39.9,Hombre,169,68,23.81,110,70,Normal,Normal,Sí,Sí,Sí,No
+13895,56.1,Hombre,169,63,22.06,120,80,Normal,Normal,No,No,Sí,No
+5483,42,Mujer,167,68,24.38,140,100,Por encima de lo normal,Normal,No,No,Sí,Sí
+93943,58.7,Mujer,170,72,24.91,120,80,Normal,Normal,No,No,Sí,Sí
+92474,42.1,Hombre,170,86,29.76,120,80,Normal,Por encima de lo normal,No,Sí,Sí,Sí
+32569,58.8,Mujer,165,65,23.88,120,90,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,No
+79740,55.7,Mujer,160,55,21.48,150,90,Normal,Normal,No,No,Sí,Sí
+17579,59.9,Mujer,172,88,29.75,120,80,Normal,Normal,No,No,Sí,Sí
+86923,56.5,Mujer,156,70,28.76,170,80,Normal,Normal,No,No,Sí,Sí
+7724,56.6,Mujer,169,70,24.51,130,80,Normal,Normal,No,No,Sí,No
+69056,57.9,Mujer,156,64,26.3,110,70,Muy por encima de lo normal,Muy por encima de lo normal,No,No,No,Sí
+2324,57.9,Hombre,178,90,28.41,120,80,Por encima de lo normal,Normal,No,No,Sí,Sí
+44701,62.4,Mujer,163,115,43.28,20,170,Normal,Normal,No,No,Sí,Sí
+63279,59.4,Mujer,164,102,37.92,160,90,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+90375,63.9,Mujer,152,75,32.46,140,90,Por encima de lo normal,Normal,No,No,Sí,Sí
+99726,56.2,Mujer,166,65,23.59,110,60,Por encima de lo normal,Normal,No,No,Sí,No
+51011,47.9,Mujer,153,90,38.45,140,100,Normal,Normal,No,No,Sí,Sí
+47561,50.4,Hombre,168,73,25.86,130,80,Normal,Normal,Sí,Sí,Sí,No
+92107,60.8,Mujer,156,52,21.37,130,80,Por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+7839,63.4,Hombre,174,68,22.46,120,80,Normal,Normal,Sí,No,No,No
+69039,58.1,Mujer,175,70,22.86,120,80,Normal,Normal,No,No,No,No
+1314,41.2,Hombre,175,76,24.82,120,80,Normal,Normal,No,No,Sí,No
+75562,58,Mujer,160,71,27.73,140,80,Normal,Normal,No,No,Sí,Sí
+37940,53.4,Hombre,168,85,30.12,160,100,Normal,Normal,Sí,No,Sí,No
+32657,48.1,Mujer,159,48,18.99,100,80,Normal,Normal,No,No,No,Sí
+22751,42.3,Mujer,155,77,32.05,90,60,Normal,Normal,No,No,Sí,No
+26814,51.6,Mujer,171,80,27.36,120,80,Normal,Normal,No,No,Sí,No
+66253,45.6,Mujer,172,110,37.18,130,100,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+86730,54.2,Mujer,158,69,27.64,143,99,Normal,Normal,No,No,Sí,Sí
+64366,49.9,Mujer,150,84,37.33,120,80,Normal,Normal,No,No,Sí,Sí
+92686,53.7,Mujer,157,84,34.08,120,80,Normal,Normal,No,No,Sí,Sí
+72733,47.9,Mujer,169,81,28.36,120,80,Normal,Normal,No,No,Sí,No
+34366,49.9,Hombre,170,75,25.95,130,90,Normal,Normal,No,No,No,Sí
+9027,55.6,Mujer,160,73,28.52,120,70,Normal,Muy por encima de lo normal,No,No,Sí,No
+26670,62.7,Mujer,162,61,23.24,120,80,Normal,Normal,No,No,Sí,No
+15424,55.8,Hombre,158,61,24.44,120,60,Normal,Normal,No,No,No,Sí
+84987,49.6,Mujer,168,79,27.99,150,90,Normal,Normal,No,No,Sí,Sí
+62402,41.3,Mujer,160,61,23.83,110,70,Normal,Normal,No,No,No,No
+94121,49.9,Mujer,158,62,24.84,95,60,Por encima de lo normal,Normal,No,No,Sí,No
+11952,51.8,Mujer,154,50,21.08,110,70,Normal,Normal,No,No,No,No
+37733,40.2,Mujer,158,69,27.64,120,80,Normal,Normal,No,No,Sí,Sí
+95552,55.8,Hombre,172,89,30.08,130,90,Por encima de lo normal,Normal,No,No,Sí,No
+44447,52.3,Mujer,172,88,29.75,130,90,Normal,Normal,No,No,Sí,Sí
+2627,49.6,Hombre,168,74,26.22,120,80,Normal,Normal,No,No,No,No
+48948,58.1,Mujer,153,69,29.48,150,100,Por encima de lo normal,Por encima de lo normal,No,No,No,No
+57860,52.2,Mujer,165,67,24.61,120,70,Normal,Normal,No,No,No,No
+48538,63.7,Hombre,170,72,24.91,120,80,Normal,Normal,No,No,Sí,Sí
+96193,57.9,Mujer,151,79,34.65,200,110,Muy por encima de lo normal,Por encima de lo normal,No,No,No,Sí
+43660,57.8,Mujer,158,80,32.05,120,80,Normal,Normal,No,No,Sí,Sí
+23110,43.6,Hombre,176,78,25.18,110,70,Normal,Normal,No,No,Sí,No
+49723,55.3,Mujer,154,61,25.72,100,60,Normal,Normal,No,No,Sí,No
+34866,50,Mujer,160,85,33.2,130,90,Normal,Normal,No,No,Sí,Sí
+74700,40.1,Hombre,167,85,30.48,120,80,Por encima de lo normal,Normal,No,No,Sí,No
+22540,46.1,Mujer,158,72,28.84,130,90,Normal,Normal,No,No,Sí,Sí
+11924,39.6,Mujer,168,77,27.28,110,80,Normal,Normal,No,No,Sí,No
+95504,63.8,Hombre,162,65,24.77,150,90,Por encima de lo normal,Por encima de lo normal,Sí,No,Sí,Sí
+34173,53.8,Hombre,179,75,23.41,120,70,Normal,Normal,No,Sí,Sí,No
+62211,58.5,Mujer,165,80,29.38,140,90,Normal,Por encima de lo normal,No,No,Sí,Sí
+53542,57.9,Mujer,167,81,29.04,120,80,Normal,Normal,No,No,Sí,No
+84690,44.2,Hombre,170,70,24.22,120,70,Normal,Normal,No,No,No,No
+13064,44.4,Mujer,164,55,20.45,120,80,Normal,Normal,No,No,Sí,Sí
+157,60,Hombre,160,57,22.27,170,110,Normal,Normal,No,No,Sí,Sí
+41452,60.3,Mujer,160,50,19.53,120,80,Normal,Normal,No,No,No,No
+6521,46,Mujer,145,57,27.11,140,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+29167,47.8,Mujer,158,70,28.04,120,80,Normal,Normal,No,No,Sí,No
+32988,58.2,Mujer,169,68,23.81,120,79,Por encima de lo normal,Normal,No,No,Sí,Sí
+46908,46.2,Mujer,163,57,21.45,140,90,Por encima de lo normal,Normal,No,No,Sí,Sí
+54394,55.9,Hombre,169,72,25.21,130,90,Normal,Normal,No,No,Sí,Sí
+45169,55.5,Hombre,170,115,39.79,140,100,Muy por encima de lo normal,Normal,Sí,Sí,Sí,Sí
+58361,57.7,Mujer,165,65,23.88,140,90,Normal,Normal,No,No,Sí,No
+92635,54,Hombre,177,71,22.66,120,80,Normal,Normal,No,No,Sí,No
+83979,55.5,Mujer,170,85,29.41,140,80,Por encima de lo normal,Normal,No,No,No,Sí
+74487,58,Hombre,178,95,29.98,120,80,Normal,Normal,No,No,Sí,No
+566,39.7,Mujer,163,82,30.86,110,70,Normal,Normal,No,No,Sí,No
+92284,51.4,Mujer,165,69,25.34,100,70,Normal,Normal,No,No,Sí,No
+65168,61.6,Mujer,168,75,26.57,120,80,Normal,Normal,No,No,Sí,No
+90649,39.8,Hombre,170,84,29.07,140,90,Por encima de lo normal,Normal,Sí,No,Sí,Sí
+71115,50.2,Mujer,162,64,24.39,120,80,Normal,Normal,No,No,Sí,No
+71809,61.5,Hombre,158,67,26.84,140,90,Normal,Normal,No,No,Sí,Sí
+26942,45.7,Mujer,164,131,48.71,150,90,Muy por encima de lo normal,Normal,No,No,Sí,No
+78400,45.9,Mujer,163,112,42.15,170,90,Normal,Normal,No,No,No,Sí
+89125,52.2,Mujer,164,68,25.28,120,80,Normal,Normal,No,No,Sí,No
+39244,53.5,Hombre,178,95,29.98,140,90,Normal,Normal,Sí,No,No,No
+27389,51,Mujer,165,54,19.83,120,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,No
+43447,48.5,Mujer,166,75,27.22,110,80,Normal,Normal,No,No,Sí,No
+48984,44.5,Mujer,152,53,22.94,140,90,Normal,Normal,No,No,No,Sí
+63588,63.8,Mujer,175,61,19.92,130,80,Normal,Normal,No,No,No,No
+3866,47.5,Hombre,163,65,24.46,120,80,Normal,Normal,No,No,No,No
+21395,43.4,Mujer,155,90,37.46,129,77,Por encima de lo normal,Normal,No,Sí,Sí,No
+86349,56.5,Mujer,161,68,26.23,150,90,Normal,Normal,No,No,Sí,Sí
+72128,57.8,Hombre,165,76,27.92,140,100,Normal,Normal,Sí,No,Sí,No
+76714,53.5,Mujer,166,85,30.85,120,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+61225,56,Hombre,182,95,28.68,130,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,No
+15027,64.1,Hombre,162,80,30.48,130,90,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+96130,50.1,Hombre,171,79,27.02,130,90,Normal,Normal,No,No,No,Sí
+55269,61.9,Mujer,155,83,34.55,110,70,Normal,Normal,No,No,Sí,No
+23368,58.2,Mujer,167,58,20.8,120,80,Normal,Normal,No,No,Sí,No
+22490,52.2,Mujer,167,57,20.44,110,80,Normal,Normal,No,No,Sí,Sí
+378,64,Mujer,169,68,23.81,120,80,Normal,Normal,No,No,No,Sí
+84884,59.8,Mujer,167,75,26.89,120,80,Normal,Normal,No,No,Sí,No
+9140,56.1,Mujer,170,64,22.15,120,80,Normal,Normal,No,No,Sí,Sí
+12004,50,Mujer,168,72,25.51,120,80,Normal,Muy por encima de lo normal,Sí,Sí,Sí,No
+8197,61.8,Mujer,158,93,37.25,120,80,Muy por encima de lo normal,Por encima de lo normal,No,No,Sí,No
+56939,49.7,Mujer,175,68,22.2,120,80,Normal,Normal,No,No,Sí,Sí
+93039,57.8,Mujer,165,65,23.88,120,80,Normal,Normal,No,No,Sí,No
+63555,39.9,Mujer,165,73,26.81,110,70,Normal,Normal,No,No,Sí,No
+41508,56.2,Hombre,175,76,24.82,140,90,Normal,Por encima de lo normal,No,No,Sí,Sí
+4860,42.3,Mujer,176,74,23.89,120,80,Normal,Normal,No,No,Sí,No
+69,53.9,Mujer,152,79,34.19,130,90,Normal,Normal,No,No,Sí,Sí
+92683,43.7,Mujer,162,80,30.48,120,80,Normal,Normal,No,No,Sí,No
+83581,63.3,Hombre,172,80,27.04,160,100,Por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+74303,41.7,Mujer,158,85,34.05,110,90,Normal,Normal,No,No,No,No
+87474,64,Mujer,160,105,41.02,150,90,Muy por encima de lo normal,Muy por encima de lo normal,No,Sí,Sí,Sí
+39508,41.8,Mujer,180,65,20.06,110,70,Normal,Normal,No,No,No,No
+21039,52.3,Mujer,160,58,22.66,120,80,Normal,Normal,No,No,Sí,No
+96779,46.3,Mujer,171,75,25.65,120,80,Normal,Normal,No,No,Sí,Sí
+24696,63.9,Mujer,162,69,26.29,140,90,Muy por encima de lo normal,Normal,No,No,Sí,No
+38440,59.8,Hombre,165,66,24.24,110,70,Normal,Normal,Sí,No,Sí,Sí
+44966,53.7,Hombre,180,82,25.31,140,80,Normal,Normal,No,No,Sí,Sí
+6452,56.1,Hombre,158,56,22.43,150,80,Normal,Normal,No,No,No,Sí
+84871,54.1,Hombre,184,103,30.42,140,80,Por encima de lo normal,Por encima de lo normal,Sí,No,Sí,No
+24173,43.7,Mujer,165,70,25.71,100,80,Normal,Normal,No,No,Sí,No
+18525,59.7,Hombre,160,73,28.52,120,80,Por encima de lo normal,Por encima de lo normal,Sí,No,Sí,No
+48150,59.5,Mujer,171,82,28.04,120,80,Normal,Normal,No,No,Sí,No
+28809,57.7,Mujer,175,114,37.22,150,1000,Por encima de lo normal,Por encima de lo normal,No,No,No,No
+68244,56.2,Mujer,154,74,31.2,160,80,Normal,Normal,No,No,Sí,No
+50297,55.8,Mujer,170,64,22.15,120,80,Normal,Normal,No,No,No,No
+64413,52.6,Mujer,166,70,25.4,130,80,Normal,Normal,No,No,Sí,No
+73021,54.5,Mujer,157,63,25.56,100,70,Normal,Normal,No,No,Sí,No
+95720,49.9,Mujer,155,50,20.81,100,80,Normal,Normal,No,No,Sí,Sí
+56202,63.9,Hombre,168,64,22.68,120,80,Muy por encima de lo normal,Normal,Sí,No,No,No
+90639,59.6,Mujer,158,86,34.45,130,80,Normal,Muy por encima de lo normal,No,No,Sí,Sí
+3442,43.8,Mujer,168,74,26.22,150,120,Normal,Normal,No,No,Sí,Sí
+77119,40.3,Mujer,167,69,24.74,120,80,Por encima de lo normal,Normal,No,No,No,Sí
+58870,43.6,Mujer,170,80,27.68,140,80,Normal,Normal,No,No,Sí,Sí
+42075,48,Mujer,174,67,22.13,100,70,Normal,Normal,No,No,Sí,No
+36134,47.8,Hombre,183,103,30.76,140,90,Normal,Normal,Sí,No,No,Sí
+30187,58.4,Hombre,168,70,24.8,160,100,Normal,Normal,No,No,Sí,Sí
+27334,61.8,Mujer,163,67,25.22,150,100,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+85143,49.9,Mujer,165,70,25.71,120,80,Normal,Normal,No,No,Sí,No
+64045,57.8,Mujer,162,67,25.53,150,100,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+43097,53.5,Mujer,155,76,31.63,130,80,Muy por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+93532,53.9,Mujer,158,52,20.83,120,80,Normal,Normal,No,No,No,Sí
+41840,58.6,Mujer,163,76,28.6,120,80,Normal,Normal,No,No,Sí,No
+95593,57.6,Mujer,158,89,35.65,140,80,Normal,Normal,No,No,Sí,Sí
+64063,62.1,Mujer,163,115,43.28,160,90,Normal,Normal,No,Sí,Sí,No
+1994,44.4,Hombre,170,70,24.22,120,80,Normal,Normal,No,No,Sí,No
+49259,63.5,Mujer,158,80,32.05,140,80,Por encima de lo normal,Normal,No,No,No,Sí
+53127,39.8,Mujer,165,67,24.61,160,1000,Normal,Normal,No,No,Sí,No
+70638,60.5,Hombre,175,116,37.88,120,70,Por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+65767,42,Mujer,170,61,21.11,110,70,Normal,Normal,No,No,Sí,No
+3195,62,Hombre,160,56,21.87,120,90,Normal,Normal,No,No,No,Sí
+14687,44,Mujer,155,55,22.89,120,80,Normal,Normal,No,No,Sí,No
+44007,54.4,Mujer,161,71,27.39,130,90,Por encima de lo normal,Normal,No,No,Sí,Sí
+57303,56.4,Hombre,160,79,30.86,140,80,Normal,Normal,No,No,Sí,Sí
+10006,42.4,Hombre,168,78,27.64,120,80,Normal,Normal,Sí,No,Sí,No
+30057,57.6,Mujer,156,99,40.68,156,99,Normal,Normal,No,No,Sí,Sí
+6459,56.1,Mujer,161,71,27.39,130,80,Normal,Normal,No,No,Sí,No
+7884,57.9,Hombre,170,80,27.68,130,90,Normal,Normal,No,No,Sí,No
+16504,58.2,Hombre,167,58,20.8,120,80,Normal,Normal,No,No,Sí,No
+18176,47.4,Mujer,158,72,28.84,140,90,Normal,Normal,No,No,No,Sí
+7784,59.5,Mujer,153,65,27.77,100,60,Normal,Normal,No,No,Sí,No
+67291,53.6,Mujer,158,49,19.63,150,90,Por encima de lo normal,Por encima de lo normal,No,No,Sí,No
+65582,52.6,Hombre,168,58,20.55,120,80,Normal,Normal,Sí,Sí,Sí,No
+83133,51.8,Mujer,178,85,26.83,120,80,Normal,Normal,No,No,No,No
+65180,46,Mujer,163,60,22.58,110,60,Normal,Normal,No,No,No,No
+2975,54,Mujer,162,73,27.82,120,80,Normal,Normal,No,No,No,No
+77079,53.9,Mujer,159,70,27.69,120,80,Normal,Normal,No,No,Sí,No
+83083,59.4,Hombre,173,83,27.73,140,80,Por encima de lo normal,Normal,No,No,Sí,Sí
+39825,55.7,Mujer,155,68,28.3,160,100,Normal,Normal,No,No,No,Sí
+73858,51.4,Hombre,164,76,28.26,130,90,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+93724,43.9,Hombre,173,90,30.07,120,80,Por encima de lo normal,Por encima de lo normal,Sí,No,Sí,Sí
+95665,51.9,Mujer,157,58,23.53,160,110,Normal,Normal,No,No,Sí,Sí
+93389,57.8,Hombre,167,79,28.33,120,80,Normal,Normal,No,No,Sí,No
+69684,49.8,Mujer,172,58,19.61,110,70,Normal,Normal,No,No,Sí,No
+16886,58.5,Hombre,163,63,23.71,140,80,Normal,Normal,Sí,No,Sí,Sí
+59279,53.6,Mujer,160,76,29.69,90,60,Normal,Normal,No,No,Sí,No
+81939,64,Mujer,154,80,33.73,140,90,Muy por encima de lo normal,Muy por encima de lo normal,No,No,No,Sí
+15980,52.6,Mujer,162,57,21.72,120,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+91139,59.5,Mujer,157,82,33.27,140,90,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,No
+79725,48.3,Hombre,170,76,26.3,120,80,Normal,Normal,No,No,Sí,No
+92498,58.3,Mujer,176,83,26.79,130,80,Normal,Normal,No,No,Sí,Sí
+94825,53.9,Mujer,150,62,27.56,110,70,Normal,Normal,No,No,Sí,No
+12234,58,Mujer,164,87,32.35,130,80,Normal,Normal,No,No,No,No
+86570,62,Hombre,168,90,31.89,140,90,Muy por encima de lo normal,Muy por encima de lo normal,No,Sí,Sí,Sí
+59580,49.5,Hombre,173,71,23.72,120,80,Normal,Normal,Sí,Sí,Sí,No
+98491,41.6,Mujer,165,82,30.12,160,100,Normal,Normal,No,No,Sí,Sí
+328,47.4,Hombre,180,90,27.78,130,80,Normal,Normal,Sí,No,Sí,Sí
+32423,45.9,Mujer,161,87,33.56,120,80,Normal,Normal,No,No,Sí,No
+26056,63.8,Hombre,175,72,23.51,120,80,Normal,Normal,No,No,Sí,Sí
+96798,63.6,Mujer,165,87,31.96,120,80,Normal,Normal,No,No,Sí,Sí
+12996,50.1,Mujer,169,98,34.31,132,90,Normal,Normal,No,No,Sí,Sí
+36224,55.5,Hombre,170,69,23.88,110,80,Normal,Normal,No,No,Sí,No
+73882,45.7,Mujer,172,82,27.72,120,80,Normal,Normal,No,No,No,No
+31913,50.3,Mujer,169,79,27.66,130,80,Normal,Normal,No,No,Sí,Sí
+32104,58,Hombre,176,90,29.05,130,90,Normal,Por encima de lo normal,Sí,Sí,Sí,No
+7140,60,Mujer,153,85,36.31,120,70,Normal,Normal,No,No,Sí,Sí
+53605,58,Hombre,168,58,20.55,100,60,Normal,Normal,No,No,Sí,No
+17153,57.5,Hombre,182,90,27.17,150,90,Normal,Normal,Sí,No,Sí,Sí
+63587,60.7,Mujer,162,61,23.24,120,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,No,No
+4279,51.3,Mujer,154,64,26.99,130,80,Normal,Normal,No,No,Sí,Sí
+63226,58.1,Mujer,160,70,27.34,120,80,Normal,Normal,Sí,No,Sí,Sí
+90785,48.3,Mujer,170,69,23.88,120,90,Normal,Normal,No,No,No,No
+71760,43.4,Hombre,163,56,21.08,110,70,Normal,Normal,Sí,Sí,Sí,No
+38566,51.5,Mujer,159,90,35.6,120,80,Normal,Normal,No,No,No,Sí
+33414,64,Mujer,167,76,27.25,140,90,Normal,Normal,No,No,Sí,Sí
+62433,59.4,Mujer,160,80,31.25,160,100,Normal,Normal,No,No,Sí,Sí
+11330,59.5,Hombre,169,126,44.12,140,80,Normal,Normal,No,Sí,Sí,Sí
+28173,39.9,Mujer,163,63,23.71,120,80,Normal,Normal,No,No,Sí,No
+97986,57.5,Hombre,170,68,23.53,120,70,Normal,Normal,No,No,Sí,Sí
+8201,52.1,Hombre,160,75,29.3,160,90,Por encima de lo normal,Por encima de lo normal,Sí,No,Sí,Sí
+59537,57.6,Mujer,156,68,27.94,120,80,Por encima de lo normal,Normal,No,No,No,Sí
+3514,52,Mujer,152,72,31.16,120,70,Normal,Normal,No,No,Sí,No
+51800,52,Mujer,170,70,24.22,120,80,Normal,Normal,No,No,Sí,No
+42176,43.9,Mujer,167,90,32.27,130,90,Normal,Normal,No,No,Sí,Sí
+76239,55.8,Mujer,156,89,36.57,120,80,Normal,Normal,No,No,Sí,No
+87864,55.8,Hombre,160,61,23.83,120,80,Muy por encima de lo normal,Normal,No,No,Sí,No
+91166,57.9,Mujer,168,75,26.57,130,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+37,53.5,Mujer,156,59,24.24,130,90,Normal,Normal,No,No,Sí,No
+20159,52,Hombre,166,82,29.76,120,80,Normal,Normal,No,No,Sí,No
+80129,56,Mujer,170,72,24.91,120,80,Por encima de lo normal,Normal,No,No,No,Sí
+916,64,Mujer,170,92,31.83,120,80,Normal,Por encima de lo normal,No,No,Sí,Sí
+27550,49.9,Mujer,169,67,23.46,120,80,Normal,Normal,No,No,No,No
+42430,57.7,Mujer,167,92,32.99,120,80,Normal,Normal,No,No,No,Sí
+73283,59.9,Mujer,157,79,32.05,110,80,Muy por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+48994,50.5,Mujer,158,62,24.84,150,90,Por encima de lo normal,Normal,No,No,Sí,Sí
+13021,61.9,Hombre,162,56,21.34,120,80,Normal,Normal,No,No,Sí,No
+35281,56.1,Mujer,153,82,35.03,130,90,Normal,Normal,No,No,Sí,Sí
+96993,52.4,Hombre,174,86,28.41,120,80,Normal,Normal,No,No,Sí,No
+8006,54,Mujer,167,59,21.16,110,70,Normal,Normal,No,No,Sí,Sí
+78462,64,Hombre,179,88,27.46,150,90,Normal,Normal,No,No,No,No
+96070,56.3,Hombre,166,56,20.32,120,70,Normal,Normal,No,No,Sí,No
+22789,63.7,Hombre,165,60,22.04,120,80,Normal,Normal,No,No,Sí,Sí
+85019,40.1,Hombre,168,70,24.8,120,80,Normal,Normal,No,No,Sí,Sí
+18595,55.3,Mujer,157,73,29.62,130,80,Normal,Normal,No,No,Sí,No
+1409,48.2,Mujer,162,72,27.43,120,80,Normal,Normal,No,No,Sí,No
+29166,56,Mujer,167,103,36.93,150,90,Normal,Normal,No,No,No,Sí
+77433,53.3,Mujer,164,72,26.77,120,80,Normal,Normal,No,No,Sí,No
+48161,59.7,Mujer,159,73,28.88,150,100,Normal,Normal,No,No,No,Sí
+73093,55.6,Mujer,163,85,31.99,120,80,Por encima de lo normal,Normal,No,No,Sí,Sí
+61151,52.1,Mujer,151,71,31.14,140,90,Normal,Normal,No,No,No,No
+24065,63.3,Mujer,163,72,27.1,160,90,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+78337,48.4,Mujer,158,85,34.05,150,90,Normal,Normal,No,No,No,Sí
+62770,48.1,Mujer,170,100,34.6,170,90,Normal,Normal,No,No,Sí,Sí
+39455,43.4,Mujer,163,103,38.77,140,90,Normal,Normal,No,No,Sí,Sí
+48934,48.5,Hombre,173,92,30.74,130,80,Normal,Normal,Sí,No,Sí,Sí
+79628,54.1,Mujer,159,80,31.64,150,100,Normal,Normal,No,No,Sí,Sí
+70439,59.6,Hombre,174,83,27.41,180,90,Normal,Normal,No,No,No,Sí
+84034,45.7,Mujer,157,54,21.91,110,70,Normal,Normal,No,No,Sí,No
+63104,54.9,Mujer,154,52,21.93,120,70,Normal,Normal,No,No,Sí,No
+43756,55.8,Hombre,178,99,31.25,140,100,Normal,Normal,Sí,No,Sí,No
+33329,61.9,Hombre,173,71,23.72,120,80,Normal,Normal,Sí,No,Sí,No
+45813,40.1,Mujer,152,50,21.64,120,80,Normal,Normal,No,No,Sí,No
+41847,45.5,Mujer,164,70,26.03,140,90,Normal,Normal,No,No,Sí,Sí
+35097,46.4,Mujer,162,56,21.34,100,70,Normal,Normal,No,No,Sí,No
+50626,63.4,Hombre,173,70,23.39,120,80,Normal,Normal,No,No,No,Sí
+86082,49.9,Hombre,160,65,25.39,130,90,Normal,Normal,Sí,Sí,Sí,Sí
+94391,41.4,Hombre,170,78,26.99,120,80,Normal,Normal,No,No,Sí,No
+67538,64,Hombre,172,76,25.69,130,80,Por encima de lo normal,Normal,No,No,Sí,No
+23290,62,Hombre,165,60,22.04,120,80,Normal,Normal,No,No,Sí,Sí
+29136,50.5,Hombre,163,89,33.5,160,90,Por encima de lo normal,Normal,Sí,Sí,Sí,Sí
+25161,62.1,Hombre,165,67,24.61,165,67,Normal,Normal,No,No,Sí,Sí
+59791,39.7,Mujer,161,75,28.93,140,80,Normal,Normal,No,No,Sí,Sí
+16181,52.3,Mujer,158,62,24.84,140,90,Muy por encima de lo normal,Muy por encima de lo normal,No,No,No,No
+1623,64,Mujer,165,73,26.81,120,80,Normal,Normal,No,No,Sí,No
+32998,61.7,Hombre,170,89,30.8,110,70,Normal,Normal,No,No,Sí,No
+5384,64.3,Mujer,145,54,25.68,160,100,Normal,Normal,No,No,Sí,Sí
+98622,49.7,Hombre,173,88,29.4,150,90,Normal,Normal,No,No,Sí,Sí
+37084,53.5,Mujer,174,78,25.76,130,90,Normal,Normal,Sí,No,Sí,Sí
+19141,57.6,Mujer,169,81,28.36,120,80,Normal,Normal,No,No,Sí,Sí
+59526,39.3,Mujer,161,76,29.32,130,80,Normal,Por encima de lo normal,No,No,Sí,Sí
+34966,47.9,Hombre,174,79,26.09,120,70,Normal,Normal,No,No,Sí,No
+3939,53.6,Mujer,154,83,35,140,90,Por encima de lo normal,Por encima de lo normal,No,No,Sí,No
+67329,53.5,Mujer,153,51,21.79,120,80,Normal,Normal,No,No,Sí,Sí
+2818,51.6,Hombre,168,78,27.64,140,80,Muy por encima de lo normal,Muy por encima de lo normal,Sí,No,Sí,Sí
+36425,42.2,Mujer,159,64,25.32,140,90,Por encima de lo normal,Normal,No,No,Sí,Sí
+27922,53.9,Mujer,158,57,22.83,120,80,Normal,Normal,No,No,Sí,No
+7041,40.3,Mujer,162,90,34.29,130,80,Normal,Por encima de lo normal,No,No,Sí,Sí
+88872,61.8,Mujer,162,80,30.48,120,80,Por encima de lo normal,Normal,No,No,Sí,Sí
+36023,52.5,Mujer,163,97,36.51,150,80,Por encima de lo normal,Normal,No,No,Sí,Sí
+29196,48.5,Mujer,173,99,33.08,140,90,Normal,Normal,No,No,Sí,Sí
+88599,42.2,Hombre,168,71,25.16,120,80,Por encima de lo normal,Normal,No,No,Sí,Sí
+82275,54.4,Mujer,173,84,28.07,120,80,Normal,Normal,No,No,No,No
+22827,45.3,Mujer,158,80,32.05,120,80,Normal,Normal,No,No,Sí,Sí
+94163,42.2,Mujer,173,72,24.06,110,70,Normal,Normal,No,No,Sí,No
+34579,46.2,Hombre,167,95,34.06,120,90,Normal,Normal,No,No,Sí,No
+86641,48.8,Mujer,160,64,25,120,80,Normal,Normal,No,No,No,No
+94523,53.6,Mujer,164,64,23.8,120,80,Normal,Normal,No,No,No,No
+65440,40.5,Hombre,169,74,25.91,100,70,Normal,Normal,No,No,Sí,No
+61980,42,Hombre,172,88,29.75,120,80,Normal,Normal,No,No,Sí,No
+38208,50.1,Mujer,159,66,26.11,120,80,Normal,Normal,No,No,Sí,No
+34083,59.9,Hombre,171,79,27.02,120,80,Normal,Normal,No,No,Sí,Sí
+30426,55.5,Mujer,160,76,29.69,150,90,Normal,Normal,No,No,Sí,Sí
+87753,48,Mujer,170,79,27.34,140,100,Por encima de lo normal,Normal,No,Sí,Sí,Sí
+88981,63.9,Hombre,155,66,27.47,140,90,Normal,Normal,Sí,Sí,No,No
+74009,48.2,Mujer,152,71,30.73,120,80,Normal,Normal,No,No,No,No
+18449,56.4,Hombre,165,81,29.75,120,70,Normal,Normal,No,No,Sí,No
+26428,53.8,Mujer,153,56,23.92,120,80,Normal,Normal,No,Sí,Sí,No
+41992,63.9,Mujer,160,75,29.3,140,90,Normal,Normal,No,No,Sí,Sí
+11460,56,Hombre,168,69,24.45,140,90,Normal,Normal,No,No,Sí,Sí
+45661,52.5,Mujer,160,74,28.91,130,90,Normal,Normal,No,No,Sí,No
+81904,49.4,Mujer,169,86,30.11,110,70,Normal,Normal,No,Sí,No,No
+93692,59.9,Mujer,160,73,28.52,140,90,Normal,Normal,No,No,Sí,Sí
+67496,59.5,Mujer,158,63,25.24,120,80,Normal,Normal,No,No,Sí,Sí
+73136,54,Mujer,172,82,27.72,160,90,Por encima de lo normal,Normal,No,No,Sí,No
+67407,48.2,Mujer,165,76,27.92,140,90,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,No
+44602,50.1,Mujer,153,60,25.63,110,70,Normal,Muy por encima de lo normal,No,Sí,Sí,No
+70245,46.1,Mujer,162,89,33.91,120,80,Normal,Normal,No,No,Sí,No
+84441,50,Hombre,185,89,26,171,90,Normal,Normal,No,No,Sí,Sí
+60085,55.7,Hombre,168,92,32.6,110,70,Por encima de lo normal,Normal,Sí,Sí,Sí,No
+99484,64.1,Mujer,151,82,35.96,130,98,Muy por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+14276,49.9,Mujer,167,75,26.89,120,80,Normal,Normal,No,No,No,Sí
+44038,45.7,Mujer,150,55,24.44,120,70,Por encima de lo normal,Por encima de lo normal,No,No,No,Sí
+43017,40.1,Mujer,152,70,30.3,120,75,Normal,Normal,No,No,Sí,No
+76144,39.9,Hombre,174,73,24.11,150,100,Por encima de lo normal,Normal,Sí,No,No,No
+73045,56.2,Hombre,175,76,24.82,120,80,Normal,Normal,No,No,Sí,No
+42354,58.6,Mujer,156,54,22.19,120,70,Normal,Normal,No,No,Sí,No
+78837,51.9,Mujer,158,56,22.43,120,80,Normal,Normal,No,No,Sí,No
+22792,59.6,Hombre,170,77,26.64,130,90,Por encima de lo normal,Normal,No,No,Sí,Sí
+77813,56.3,Mujer,165,64,23.51,120,80,Normal,Normal,No,No,Sí,No
+87669,43.4,Mujer,168,65,23.03,120,80,Normal,Normal,No,No,Sí,No
+52661,63.4,Hombre,170,84,29.07,110,70,Muy por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+30156,50.3,Mujer,165,70,25.71,130,80,Normal,Muy por encima de lo normal,No,No,Sí,No
+5842,60.1,Mujer,158,102,40.86,120,80,Por encima de lo normal,Normal,No,No,Sí,Sí
+55925,55.9,Mujer,165,100,36.73,140,70,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+65820,53.6,Mujer,162,63,24.01,140,90,Muy por encima de lo normal,Normal,No,Sí,Sí,Sí
+99142,43.8,Mujer,175,75,24.49,140,100,Normal,Normal,No,No,No,Sí
+13570,58,Mujer,159,108,42.72,155,87,Muy por encima de lo normal,Muy por encima de lo normal,No,Sí,Sí,Sí
+66180,44.6,Mujer,165,70,25.71,120,80,Normal,Normal,No,No,Sí,Sí
+87848,55.6,Mujer,167,78,27.97,110,70,Normal,Normal,No,No,Sí,No
+12410,63.6,Mujer,168,68,24.09,130,80,Normal,Normal,No,No,Sí,No
+16059,49.9,Hombre,172,89,30.08,120,80,Normal,Normal,Sí,No,Sí,No
+46661,51.6,Mujer,168,68,24.09,120,80,Normal,Normal,No,No,Sí,No
+14555,56.2,Mujer,170,75,25.95,150,90,Por encima de lo normal,Normal,No,No,Sí,Sí
+48896,60.4,Mujer,168,97,34.37,150,90,Normal,Normal,No,No,Sí,Sí
+48088,50.3,Hombre,165,72,26.45,130,90,Muy por encima de lo normal,Muy por encima de lo normal,No,No,No,No
+74240,52.4,Mujer,152,68,29.43,110,80,Normal,Normal,No,No,Sí,Sí
+90168,41.7,Mujer,159,75,29.67,110,70,Normal,Normal,No,No,Sí,No
+98550,59.9,Hombre,170,74,25.61,120,80,Muy por encima de lo normal,Muy por encima de lo normal,Sí,No,Sí,No
+86431,39.7,Hombre,174,93,30.72,140,90,Normal,Normal,Sí,No,Sí,Sí
+23359,51.8,Hombre,182,78,23.55,110,70,Normal,Normal,No,No,Sí,No
+60092,44.4,Hombre,167,65,23.31,120,80,Normal,Normal,No,No,No,Sí
+15106,63.3,Mujer,165,60,22.04,120,80,Normal,Normal,No,No,Sí,Sí
+90745,57.6,Mujer,150,96,42.67,120,85,Normal,Por encima de lo normal,No,No,No,Sí
+72553,49.5,Mujer,169,73,25.56,120,80,Normal,Normal,No,No,No,No
+79057,63.8,Hombre,168,86,30.47,120,80,Normal,Normal,No,No,Sí,Sí
+30859,50.1,Mujer,159,63,24.92,120,70,Normal,Normal,No,No,Sí,No
+35828,44,Mujer,164,54,20.08,90,60,Normal,Normal,No,No,Sí,No
+67615,48.4,Hombre,168,72,25.51,110,60,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+33244,51.9,Hombre,165,80,29.38,120,80,Normal,Normal,No,No,Sí,Sí
+56905,53.7,Mujer,161,76,29.32,152,90,Por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+39713,53.9,Mujer,154,54,22.77,110,70,Normal,Normal,No,No,Sí,No
+82349,49.5,Mujer,158,85,34.05,130,90,Normal,Normal,No,No,Sí,No
+78235,53.5,Mujer,170,65,22.49,160,100,Por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+70114,60,Mujer,174,69,22.79,120,80,Normal,Normal,No,No,Sí,No
+36408,48.4,Mujer,164,96,35.69,120,80,Normal,Normal,No,No,Sí,Sí
+22981,62.4,Hombre,186,72,20.81,110,70,Normal,Por encima de lo normal,No,No,Sí,Sí
+88070,55.4,Mujer,165,99,36.36,160,100,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+82331,49.7,Mujer,165,80,29.38,120,80,Normal,Normal,No,No,Sí,Sí
+60393,64.1,Mujer,156,68,27.94,140,90,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+35949,46.1,Mujer,162,62,23.62,120,70,Normal,Normal,No,No,Sí,Sí
+19721,53.7,Hombre,171,82,28.04,120,80,Normal,Normal,Sí,No,Sí,No
+42537,60.5,Hombre,170,80,27.68,130,70,Normal,Normal,No,No,No,Sí
+85587,51.8,Mujer,154,61,25.72,95,60,Normal,Normal,No,No,Sí,No
+90058,52,Hombre,176,91,29.38,125,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,No
+82346,51.9,Mujer,160,60,23.44,100,70,Normal,Normal,No,No,Sí,No
+53928,59.9,Mujer,160,65,25.39,120,80,Normal,Normal,No,No,Sí,Sí
+23840,49.9,Hombre,175,65,21.22,120,80,Normal,Normal,No,No,Sí,No
+59739,64,Mujer,154,55,23.19,140,1000,Normal,Normal,No,No,No,Sí
+93717,40,Mujer,163,63,23.71,120,80,Normal,Por encima de lo normal,No,No,No,No
+15164,56.2,Mujer,156,60,24.65,140,80,Muy por encima de lo normal,Normal,No,Sí,Sí,Sí
+99443,56.3,Mujer,165,67,24.61,150,90,Muy por encima de lo normal,Normal,No,No,Sí,No
+4473,60.4,Hombre,176,103,33.25,130,70,Muy por encima de lo normal,Por encima de lo normal,No,No,No,Sí
+35781,55.6,Hombre,172,105,35.49,120,80,Normal,Normal,No,No,Sí,Sí
+26930,53.5,Mujer,154,68,28.67,120,80,Normal,Normal,No,No,Sí,Sí
+56019,42.1,Hombre,161,59,22.76,120,70,Normal,Normal,Sí,No,Sí,No
+7592,51.9,Mujer,158,74,29.64,150,100,Por encima de lo normal,Normal,No,No,Sí,Sí
+59044,42.1,Mujer,162,50,19.05,110,70,Normal,Normal,No,No,Sí,No
+86752,39.5,Mujer,160,60,23.44,100,70,Normal,Normal,No,No,Sí,No
+59736,43.1,Mujer,162,62,23.62,110,60,Normal,Normal,No,No,Sí,No
+83538,64.1,Hombre,167,78,27.97,130,80,Por encima de lo normal,Normal,No,No,Sí,No
+98972,48.3,Hombre,179,84,26.22,120,70,Normal,Normal,No,No,Sí,Sí
+25417,52.1,Mujer,152,70,30.3,120,80,Normal,Normal,No,No,Sí,No
+29367,52.2,Mujer,157,51,20.69,100,70,Normal,Normal,No,No,Sí,No
+80510,55.9,Hombre,160,64,25,120,80,Muy por encima de lo normal,Normal,No,No,No,No
+40787,49.9,Mujer,168,61,21.61,100,75,Por encima de lo normal,Normal,No,No,Sí,No
+67681,63.2,Mujer,170,96,33.22,150,90,Normal,Normal,No,No,Sí,Sí
+61947,55.9,Mujer,164,63,23.42,120,80,Normal,Normal,No,No,Sí,No
+22390,45.4,Hombre,172,90,30.42,120,80,Normal,Por encima de lo normal,Sí,No,Sí,No
+97777,52.1,Mujer,166,78,28.31,110,70,Por encima de lo normal,Normal,No,No,Sí,Sí
+94994,54.1,Hombre,166,57,20.69,110,70,Normal,Normal,No,No,Sí,No
+466,41.7,Hombre,169,86,30.11,120,80,Normal,Normal,No,No,No,No
+12438,58.4,Mujer,168,94,33.3,110,80,Normal,Normal,No,No,Sí,No
+50807,61.9,Mujer,168,62,21.97,140,90,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+47538,57.9,Mujer,151,105,46.05,130,90,Normal,Normal,No,No,Sí,No
+18366,41.4,Mujer,156,72,29.59,115,75,Normal,Normal,No,Sí,No,No
+6591,62,Hombre,161,55,21.22,120,80,Normal,Normal,No,No,Sí,No
+58727,53.5,Hombre,160,60,23.44,120,80,Normal,Normal,No,No,Sí,No
+10879,53.8,Mujer,164,84,31.23,140,80,Por encima de lo normal,Normal,No,No,No,Sí
+46058,59.5,Mujer,164,81,30.12,130,80,Muy por encima de lo normal,Normal,No,No,Sí,No
+44762,43.8,Mujer,158,54,21.63,110,80,Normal,Normal,No,No,Sí,No
+55400,60.6,Hombre,161,62,23.92,110,70,Normal,Normal,No,No,Sí,No
+23444,42.2,Mujer,165,54,19.83,140,90,Normal,Normal,No,No,Sí,Sí
+17925,43.8,Hombre,168,75,26.57,120,80,Normal,Normal,No,No,Sí,No
+55061,51.3,Mujer,164,67,24.91,140,80,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+65116,49.6,Hombre,173,71,23.72,120,80,Por encima de lo normal,Normal,Sí,No,Sí,No
+23654,39.6,Hombre,171,97,33.17,165,120,Normal,Normal,No,No,No,Sí
+43984,44.3,Mujer,164,60,22.31,100,60,Por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+81951,58.2,Hombre,168,82,29.05,110,80,Normal,Normal,No,No,Sí,No
+60900,56.3,Mujer,162,72,27.43,160,90,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+38271,57.3,Mujer,158,93,37.25,130,80,Muy por encima de lo normal,Normal,No,No,No,Sí
+69190,57.8,Mujer,166,95,34.48,130,90,Normal,Normal,No,No,Sí,Sí
+95965,48.1,Mujer,159,82,32.44,100,60,Normal,Normal,No,No,Sí,Sí
+51889,55.6,Mujer,165,80,29.38,120,80,Normal,Normal,No,No,Sí,No
+26935,52.6,Mujer,168,90,31.89,120,90,Normal,Normal,No,No,Sí,Sí
+78711,51.6,Hombre,178,135,42.61,170,100,Muy por encima de lo normal,Muy por encima de lo normal,Sí,No,Sí,Sí
+90114,57.6,Hombre,165,51,18.73,120,70,Normal,Normal,No,No,Sí,No
+16617,58.4,Hombre,157,54,21.91,150,90,Normal,Muy por encima de lo normal,No,No,Sí,Sí
+56388,60,Mujer,155,75,31.22,140,100,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+34516,41.5,Mujer,170,68,23.53,120,80,Normal,Normal,No,No,Sí,Sí
+47656,54.3,Hombre,170,69,23.88,160,70,Por encima de lo normal,Muy por encima de lo normal,No,No,No,Sí
+92171,48.2,Mujer,163,90,33.87,130,80,Normal,Normal,No,No,Sí,Sí
+43458,54,Mujer,162,78,29.72,130,79,Normal,Normal,No,No,No,No
+88737,59.6,Mujer,153,53,22.64,150,90,Normal,Normal,No,No,No,Sí
+33112,57.6,Mujer,160,54,21.09,120,70,Normal,Normal,No,No,No,No
+92578,63.4,Hombre,172,75,25.35,140,90,Normal,Normal,No,No,Sí,No
+5198,63.7,Mujer,150,67,29.78,160,90,Normal,Normal,No,No,Sí,Sí
+59894,59.6,Hombre,172,77,26.03,115,71,Normal,Normal,No,No,Sí,No
+71515,62.1,Mujer,160,90,35.16,140,90,Por encima de lo normal,Muy por encima de lo normal,No,No,Sí,No
+27465,44.2,Hombre,168,62,21.97,110,80,Normal,Normal,No,No,Sí,No
+90132,55.8,Mujer,163,65,24.46,110,70,Normal,Normal,No,No,No,Sí
+52021,39.8,Mujer,168,95,33.66,120,80,Normal,Normal,No,No,No,No
+58366,49.8,Hombre,172,74,25.01,110,80,Normal,Normal,No,No,Sí,No
+74497,63.5,Mujer,157,79,32.05,160,90,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+86637,59.3,Mujer,167,95,34.06,140,90,Normal,Normal,No,No,Sí,Sí
+32226,43.3,Hombre,165,90,33.06,150,90,Normal,Normal,Sí,No,Sí,No
+22469,52.3,Mujer,160,50,19.53,110,70,Normal,Normal,No,No,Sí,No
+37905,62,Mujer,161,62,23.92,150,90,Normal,Normal,No,No,Sí,Sí
+94288,51.3,Hombre,174,63,20.81,120,90,Normal,Normal,No,No,No,No
+62473,56.1,Hombre,168,84,29.76,130,90,Normal,Normal,Sí,No,Sí,Sí
+75621,52,Mujer,172,70,23.66,120,90,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+40347,51.8,Hombre,174,84,27.74,150,90,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+98114,55.3,Mujer,165,74,27.18,125,80,Normal,Normal,No,No,Sí,No
+35962,56.8,Mujer,167,84,30.12,120,80,Normal,Muy por encima de lo normal,No,No,No,No
+66105,49.8,Mujer,158,58,23.23,110,70,Normal,Normal,No,No,Sí,No
+37476,53.5,Mujer,173,48,16.04,110,70,Normal,Normal,No,No,Sí,No
+93583,55.6,Hombre,171,80,27.36,120,80,Normal,Normal,No,No,No,No
+45387,54.1,Mujer,163,62,23.34,130,90,Normal,Normal,No,No,Sí,Sí
+92915,56.2,Hombre,170,94,32.53,120,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+81192,58.8,Mujer,170,90,31.14,150,100,Normal,Por encima de lo normal,No,No,Sí,Sí
+79805,49.3,Mujer,169,70,24.51,150,90,Normal,Normal,No,No,Sí,No
+50899,57.7,Hombre,172,71,24,120,80,Normal,Normal,No,No,Sí,No
+39013,61.2,Hombre,170,75,25.95,130,90,Muy por encima de lo normal,Muy por encima de lo normal,Sí,Sí,Sí,Sí
+46503,60,Mujer,165,65,23.88,130,80,Normal,Normal,No,No,Sí,Sí
+78414,61.4,Hombre,170,70,24.22,120,80,Normal,Normal,No,No,Sí,Sí
+21441,59.9,Mujer,157,77,31.24,120,80,Normal,Normal,No,No,Sí,Sí
+28377,43.4,Hombre,169,80,28.01,120,80,Normal,Normal,No,No,Sí,No
+94756,46.4,Hombre,175,83,27.1,120,80,Normal,Normal,Sí,No,Sí,Sí
+5676,60.2,Mujer,168,74,26.22,120,80,Normal,Normal,No,No,Sí,No
+51117,57.8,Mujer,160,100,39.06,120,80,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+77775,60,Mujer,165,74,27.18,120,80,Normal,Normal,No,No,Sí,Sí
+59322,61.7,Mujer,152,80,34.63,150,90,Normal,Normal,No,No,Sí,Sí
+70194,60.1,Mujer,155,67,27.89,130,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+19280,61.9,Hombre,168,71,25.16,140,70,Normal,Normal,No,No,Sí,No
+11578,62.2,Hombre,173,65,21.72,120,80,Normal,Normal,No,No,Sí,No
+84978,61.4,Hombre,165,67,24.61,120,80,Por encima de lo normal,Normal,No,No,Sí,Sí
+33010,55.7,Hombre,192,71,19.26,130,90,Normal,Muy por encima de lo normal,Sí,Sí,No,No
+50112,43.3,Mujer,155,113,47.03,110,59,Por encima de lo normal,Por encima de lo normal,No,No,Sí,No
+39195,58.4,Hombre,160,65,25.39,130,90,Normal,Normal,Sí,No,No,Sí
+12492,60.3,Hombre,185,84,24.54,150,100,Normal,Normal,No,No,Sí,No
+30143,50.5,Mujer,154,64,26.99,140,90,Normal,Por encima de lo normal,No,No,No,Sí
+9178,39.7,Mujer,165,60,22.04,120,80,Normal,Normal,No,No,Sí,No
+86949,53.6,Hombre,164,73,27.14,120,80,Por encima de lo normal,Normal,Sí,No,Sí,Sí
+19024,53.8,Hombre,165,63,23.14,120,80,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+66970,46.4,Mujer,169,73,25.56,145,90,Por encima de lo normal,Normal,No,No,Sí,Sí
+73039,51.8,Mujer,168,68,24.09,120,80,Normal,Normal,No,No,Sí,Sí
+3282,59.6,Hombre,169,81,28.36,140,90,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+16354,49.4,Mujer,154,72,30.36,160,100,Normal,Normal,No,No,Sí,Sí
+42619,43.7,Hombre,171,102,34.88,120,80,Normal,Normal,No,No,Sí,Sí
+30715,45.9,Hombre,175,90,29.39,120,90,Normal,Normal,Sí,No,Sí,Sí
+36443,44,Mujer,165,70,25.71,130,90,Normal,Normal,No,No,Sí,Sí
+18179,49.8,Mujer,156,63,25.89,127,68,Por encima de lo normal,Normal,No,Sí,Sí,No
+70340,50.2,Mujer,155,84,34.96,140,90,Normal,Normal,No,No,No,Sí
+85205,63.7,Mujer,161,93,35.88,140,80,Normal,Normal,No,No,Sí,No
+87865,52.6,Mujer,165,65,23.88,120,80,Normal,Normal,No,No,Sí,No
+79290,46.1,Hombre,166,68,24.68,140,80,Normal,Normal,No,No,Sí,Sí
+23603,41.6,Mujer,160,52,20.31,110,70,Normal,Normal,No,No,Sí,No
+13151,49.7,Hombre,182,76,22.94,120,80,Normal,Normal,No,No,Sí,Sí
+18083,62.1,Mujer,160,101,39.45,120,70,Normal,Normal,No,No,Sí,Sí
+3685,57.9,Mujer,152,61,26.4,140,90,Muy por encima de lo normal,Muy por encima de lo normal,No,No,Sí,Sí
+84815,53.7,Mujer,160,62,24.22,120,80,Normal,Normal,No,No,Sí,Sí
+15130,49.9,Hombre,180,104,32.1,130,80,Normal,Muy por encima de lo normal,Sí,No,No,Sí
+21829,53.9,Mujer,166,85,30.85,150,100,Normal,Normal,Sí,No,No,Sí
+98006,56.1,Hombre,163,95,35.76,140,90,Por encima de lo normal,Normal,No,No,Sí,Sí
+14323,59.9,Mujer,152,58,25.1,120,80,Normal,Normal,No,No,Sí,Sí
+2307,56.4,Hombre,160,55,21.48,180,1000,Normal,Normal,No,No,Sí,Sí
+43028,64.1,Mujer,161,84,32.41,140,90,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+4660,56.5,Mujer,160,84,32.81,150,70,Normal,Por encima de lo normal,No,No,Sí,Sí
+40822,59.8,Mujer,159,68,26.9,120,80,Normal,Normal,No,No,Sí,No
+91320,60.1,Mujer,156,56,23.01,120,80,Normal,Normal,No,No,Sí,No
+72377,60.5,Hombre,166,79,28.67,140,80,Muy por encima de lo normal,Muy por encima de lo normal,Sí,Sí,Sí,No
+21827,45.3,Hombre,170,56,19.38,110,80,Normal,Normal,No,No,Sí,No
+20434,43.5,Mujer,172,73,24.68,130,100,Normal,Normal,No,No,Sí,No
+60521,60,Hombre,174,77,25.43,160,60,Normal,Normal,No,No,Sí,Sí
+26397,50.1,Mujer,165,98,36,120,80,Normal,Normal,No,No,Sí,Sí
+76674,49.9,Mujer,169,62,21.71,120,80,Normal,Normal,No,No,Sí,No
+70027,49.8,Mujer,164,74,27.51,130,80,Normal,Normal,No,No,Sí,No
+53433,54,Hombre,154,67,28.25,140,80,Normal,Normal,No,No,Sí,No
+89207,41.9,Hombre,180,108,33.33,110,70,Normal,Normal,No,No,Sí,No
+41454,44.1,Mujer,156,45,18.49,150,80,Por encima de lo normal,Normal,No,No,Sí,Sí
+24536,56.5,Hombre,160,90,35.16,130,90,Por encima de lo normal,Normal,Sí,No,No,Sí
+58443,63.2,Hombre,185,74,21.62,120,80,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+94378,55,Hombre,163,64,24.09,125,85,Por encima de lo normal,Normal,No,No,Sí,No
+25306,47.9,Hombre,160,62,24.22,120,80,Normal,Normal,No,No,Sí,No
+20336,51.9,Mujer,157,98,39.76,170,1177,Normal,Normal,Sí,Sí,Sí,No
+83615,44,Mujer,159,78,30.85,120,80,Por encima de lo normal,Normal,No,No,Sí,No
+6903,53.8,Hombre,171,89,30.44,120,80,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+38765,56.3,Hombre,178,82,25.88,120,80,Normal,Normal,Sí,No,Sí,No
+3863,50.5,Mujer,167,79,28.33,140,90,Normal,Normal,No,No,No,Sí
+56871,45.6,Mujer,158,56,22.43,110,60,Normal,Normal,No,No,Sí,No
+8183,54.2,Mujer,163,70,26.35,110,70,Normal,Normal,No,No,Sí,No
+75093,48.1,Hombre,165,62,22.77,130,90,Normal,Normal,No,No,Sí,No
+10020,39.7,Mujer,156,54,22.19,120,80,Normal,Normal,No,No,No,No
+5546,41.9,Hombre,165,70,25.71,120,80,Normal,Normal,No,No,No,No
+27356,59.5,Mujer,168,68,24.09,120,80,Normal,Normal,No,No,Sí,Sí
+74366,51.6,Hombre,168,80,28.34,120,80,Normal,Normal,No,No,Sí,Sí
+30744,63.3,Mujer,158,98,39.26,130,90,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+57643,49.4,Mujer,160,89,34.77,130,90,Muy por encima de lo normal,Normal,No,No,Sí,No
+70000,57.9,Hombre,176,75,24.21,140,90,Normal,Por encima de lo normal,No,No,Sí,Sí
+98448,51.5,Mujer,164,82,30.49,140,75,Normal,Normal,No,No,Sí,Sí
+70473,59.8,Hombre,157,64,25.96,120,80,Por encima de lo normal,Normal,No,No,Sí,No
+79250,48.5,Hombre,171,83,28.38,120,80,Normal,Normal,No,No,Sí,Sí
+18031,61.6,Mujer,158,70,28.04,150,93,Normal,Normal,No,No,Sí,Sí
+93367,64,Hombre,164,75,27.89,120,80,Normal,Normal,No,No,Sí,No
+33047,55.9,Mujer,144,45,21.7,120,70,Por encima de lo normal,Normal,No,No,Sí,Sí
+31576,45.8,Hombre,163,67,25.22,110,80,Normal,Normal,No,No,No,Sí
+49464,61.4,Mujer,158,99,39.66,125,85,Normal,Por encima de lo normal,No,No,Sí,Sí
+33307,64.5,Hombre,188,81,22.92,120,70,Normal,Normal,No,No,Sí,No
+98225,48.6,Hombre,170,109,37.72,130,70,Normal,Normal,No,No,Sí,Sí
+76744,54.1,Mujer,164,119,44.24,150,77,Por encima de lo normal,Por encima de lo normal,No,Sí,Sí,No
+21100,49.5,Mujer,158,53,21.23,100,70,Normal,Normal,No,No,Sí,No
+99706,52.3,Mujer,164,70,26.03,140,90,Normal,Normal,No,No,Sí,Sí
+93177,48.3,Mujer,167,70,25.1,110,70,Por encima de lo normal,Por encima de lo normal,No,No,Sí,No
+27490,64.4,Hombre,174,78,25.76,120,80,Muy por encima de lo normal,Muy por encima de lo normal,Sí,No,Sí,No
+13921,50.1,Mujer,170,70,24.22,120,70,Normal,Normal,No,No,No,No
+38582,55.8,Hombre,181,95,29,100,70,Normal,Normal,No,No,Sí,No
+55502,60.2,Mujer,160,80,31.25,150,90,Normal,Normal,No,No,Sí,Sí
+78925,59.9,Hombre,171,73,24.96,120,80,Normal,Normal,No,No,Sí,No
+25582,50.4,Mujer,162,60,22.86,120,80,Normal,Por encima de lo normal,Sí,Sí,Sí,No
+166,53.4,Hombre,174,77,25.43,120,80,Normal,Normal,Sí,No,Sí,Sí
+72595,63.7,Mujer,164,77,28.63,130,80,Muy por encima de lo normal,Normal,No,No,Sí,Sí
+31247,56.2,Mujer,156,88,36.16,120,80,Por encima de lo normal,Muy por encima de lo normal,No,No,Sí,No
+79130,59.5,Mujer,161,71,27.39,145,90,Por encima de lo normal,Normal,No,No,Sí,Sí
+75290,50.7,Mujer,159,58,22.94,120,80,Normal,Normal,No,No,Sí,No
+78123,41.3,Mujer,168,114,40.39,170,100,Normal,Normal,No,No,Sí,Sí
+16759,62.2,Mujer,170,82,28.37,140,90,Normal,Normal,Sí,Sí,Sí,Sí
+89486,49.4,Mujer,164,77,28.63,150,90,Muy por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+62193,41.5,Mujer,166,96,34.84,150,100,Por encima de lo normal,Por encima de lo normal,No,No,Sí,Sí
+10596,52.4,Mujer,154,54,22.77,120,80,Normal,Normal,No,No,Sí,Sí
+72519,63.8,Mujer,171,80,27.36,140,80,Normal,Normal,No,No,No,Sí
+6415,47.7,Hombre,172,86,29.07,130,80,Normal,Normal,No,No,Sí,No
+25404,57.6,Hombre,160,62,24.22,130,80,Normal,Normal,No,No,Sí,Sí
+41206,59.3,Mujer,160,78,30.47,160,90,Muy por encima de lo normal,Normal,No,No,Sí,No
+22693,56.4,Mujer,176,85,27.44,130,80,Normal,Normal,No,No,Sí,No
+21886,43.6,Hombre,165,58,21.3,120,80,Normal,Normal,Sí,No,Sí,No
+71491,43.8,Mujer,158,66,26.44,160,90,Normal,Normal,No,No,No,Sí
+31296,50.2,Mujer,168,68,24.09,120,80,Normal,Normal,No,No,Sí,No
+6430,54.3,Mujer,170,59,20.42,140,80,Por encima de lo normal,Normal,No,No,Sí,Sí
+73959,49.8,Mujer,162,51,19.43,100,60,Normal,Normal,No,No,Sí,No
+29272,59.9,Mujer,177,84,26.81,120,80,Normal,Normal,No,No,Sí,Sí

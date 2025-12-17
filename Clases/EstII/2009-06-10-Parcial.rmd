@@ -168,7 +168,7 @@ Quedo atento a cualquier duda o inquietud que les surja durante el trabajo. No d
 
 ## Sáenz Salcedo Carol Liliana
 * [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1049640543.pdf){:target="_blank"}
-* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1049640543.csv)
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1049640543.csv){:target="_blank"}
 
 ## Sanchez Higuita Jose Miguel
 * [Enunciado](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/P1001390366.pdf){:target="_blank"}
