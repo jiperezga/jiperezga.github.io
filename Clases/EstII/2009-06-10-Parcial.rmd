@@ -127,7 +127,11 @@ Quedo atento a cualquier duda o inquietud que les surja durante el parcial. No d
 * [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Parcial/B1128444892.csv){:target="_blank"}
 
 ## Pruebita
-* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/refs/heads/master/Dataset/Pruebita.csv){:download="Pruebita.csv"}
-* [Base de Datos2](https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Pruebita.csv){:target="_blank"}
+* [Base de Datos](https://github.com/jiperezga/jiperezga.github.io/raw/refs/heads/master/Dataset/Pruebita.csv)
+* <a href="https://github.com/jiperezga/jiperezga.github.io/raw/master/Dataset/Pruebita.csv" 
+   target="_blank" 
+   download="Pruebita.csv">
+  Base de Datos2
+</a>
 <h1> Mucha Suerte! </h1>
 
