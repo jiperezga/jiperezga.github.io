@@ -10,8 +10,13 @@ introduction: |
               - Análisis de varianza <br>
               - Coeficiente de determinación <br>
               Análisis de Regresión Lineal Múltiple <br>
-              - Respuesta media <br>
-              - Predicción de nuevas observaciones<br>
+              - Análisis de varianza <br>
+              - Coeficiente de determinación <br>
+              Respuesta media y predicción de nuevas observaciones <br>
+              - Respuesta media en regresión lineal simple <br>
+              - Predicción de nuevas observaciones en regresión lineal simple<br>
+              - Respuesta media en regresión lineal múltiple <br>
+              - Predicción de nuevas observaciones en regresión lineal múltiple<br>
 
               
 header-includes:
@@ -212,7 +217,7 @@ en donde si `$F_c \in RC$`, o de forma equivalente, si el P-valor es menor al ni
 * Note que la tabla ANOVA del caso simple corresponde al caso particular en que `$k=1$`.
 * En <tt>R</tt>, esta prueba corresponde al <tt>F-statistic</tt> y su respectivo P-valor reportados en la última línea de la salida de la función <tt>summary()</tt>, mientras que la tabla ANOVA puede obtenerse mediante la función <tt>anova(modelo)</tt>.
 
-#### Coeficiente de determinación ajustado
+### Coeficiente de determinación ajustado
 En el modelo de regresión lineal múltiple, el coeficiente de determinación `$R^2 = \frac{SCR}{SCT}$` presenta el inconveniente de que **siempre aumenta al agregar variables al modelo**, sean éstas relevantes o no, por lo cual no resulta adecuado para comparar modelos con diferente número de variables explicativas.
 
 Por tal razón, se prefiere el **coeficiente de determinación ajustado**, el cual está dado por
@@ -305,6 +310,8 @@ Además, para un nivel de confianza del `$100(1-\alpha)\%$` un intervalo de conf
 
 **Note que** en el caso particular en que `$k=1$`, se puede probar que `$\mathbf{x}_0^\top(\mathbf{X}^\top\mathbf{X})^{-1}\mathbf{x}_0 = \frac{1}{n} + \frac{(x_0-\bar{X})^2}{S_{xx}}$`, y por tanto la expresión anterior se reduce al intervalo de confianza de la respuesta media del modelo de regresión lineal simple.
 
+En <tt>R</tt>, el intervalo de confianza para la respuesta media se obtienen de la misma forma que en el caso simple, mediante la función <tt>predict()</tt>, especificando en el argumento <tt>newdata</tt> un <tt>data.frame</tt> con el valor de cada una de las variables explicativas del modelo, por ejemplo, <tt>predict(modelo, newdata = data.frame(x1 = 42, x2 = 4), interval = "confidence")</tt>.
+
 ### Predicción de nuevas observaciones en regresión lineal múltiple
 De forma análoga al caso simple, si se desea predecir una nueva observación `$y_0$` en el punto `$\mathbf{x}_0$`, la estimación puntual coincide con la de la respuesta media, tal que
 `\begin{align*}
@@ -329,7 +336,7 @@ Entonces, un intervalo de predicción del `$100(1-\alpha)\%$` para una nueva obs
  \hat{y}_0 \pm t_{\frac{\alpha}{2}, n-k-1} \sqrt{\hat{\sigma}^2_e\left[1 + \mathbf{x}_0^\top(\mathbf{X}^\top\mathbf{X})^{-1}\mathbf{x}_0\right]}
 \end{align*}`
 
-En <tt>R</tt>, tanto el intervalo de confianza para la respuesta media como el intervalo de predicción se obtienen de la misma forma que en el caso simple, mediante la función <tt>predict()</tt>, especificando en el argumento <tt>newdata</tt> un <tt>data.frame</tt> con el valor de cada una de las variables explicativas del modelo, por ejemplo, <tt>predict(modelo, newdata = data.frame(x1 = 42, x2 = 4), interval = "confidence")</tt> o <tt>interval = "prediction"</tt> según el caso.
+En <tt>R</tt>, el intervalo de predicción se obtienen de forma similar que en el caso simple, mediante la función <tt>predict()</tt>, especificando en el argumento <tt>newdata</tt> un <tt>data.frame</tt> con el valor de cada una de las variables explicativas del modelo, por ejemplo, <tt>predict(modelo, newdata = data.frame(x1 = 42, x2 = 4), interval = "prediction")</tt>.
 
 **Nota**
 
