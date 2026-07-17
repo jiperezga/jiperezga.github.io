@@ -1,0 +1,118 @@
+---
+layout: post
+title: "Parcial IV"
+main-class: 'presentaciones'
+permalink: /EstadisticaII/EstII:title.html
+tags:
+
+introduction: Parcial IV
+
+header-includes:
+   - \usepackage{amsmath,amssymb,amsthm,amsfonts}
+   - \usepackage[sectionbib]{natbib}
+   - \usepackage[hidelinks]{hyperref}
+output:
+  md_document:
+    variant: markdown_strict+backtick_code_blocks+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash
+    preserve_yaml: TRUE
+always_allow_html: yes   
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding,
+  output_dir = "../../EstadisticaII/_posts/", output_format = "all"  ) })
+bibliography: "../../referencias.bib"
+csl: "../../apa.csl"
+---
+
+```{r knitr_init, echo=FALSE, cache=FALSE}
+library(knitr)
+## Global options
+opts_chunk$set(echo=TRUE,
+               cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE,
+               fig.path = paste0("../../EstadisticaII/images/", "ParcialIV"),
+               cache.path = "../../EstadisticaII/cache/",
+               cache = FALSE)
+```
+
+# Parcial IV
+La solución, paso a paso e interpretaciones deben realizarse en word u otro editor de texto, y enviar el parcial al correo \texttt{jivan.perez@udea.edu.co} a más tardar el día domingo 19 de Julio a las 11:59 PM.
+
+Quedo atento a cualquier duda o inquietud que les surja durante el Parcial. No duden en preguntar, pero no pretendan que les haga el punto o les diga "así está bien" >:|
+
+# Nota
+**Lea atentamente el parcial**. Recuerden interpretar todos los resultados en el contexto del enunciado!!!, **no hacerlo les va hacer perder punto!!!!** >:c
+
+# Bases y enunciados
+## Bedoya Vargas Julian Alirio
+* [Enunciado](https://jiperezga.github.io/Dataset/Parcial/P1039474881.pdf)
+* [Base de Datos](https://jiperezga.github.io/Dataset/Parcial/B1039474881.csv)
+
+## Blanco Yarce Juan David
+* [Enunciado](https://jiperezga.github.io/Dataset/Parcial/P1044500706.pdf)
+* [Base de Datos](https://jiperezga.github.io/Dataset/Parcial/B1044500706.csv)
+
+## Cardona Tabares Yeison
+* [Enunciado](https://jiperezga.github.io/Dataset/Parcial/P1040051828.pdf)
+* [Base de Datos](https://jiperezga.github.io/Dataset/Parcial/B1040051828.csv)
+
+## Duque Orrego Valentina
+* [Enunciado](https://jiperezga.github.io/Dataset/Parcial/P1044100047.pdf)
+* [Base de Datos](https://jiperezga.github.io/Dataset/Parcial/B1044100047.csv)
+
+## Garcia Escobar Cristian Andres
+* [Enunciado](https://jiperezga.github.io/Dataset/Parcial/P1038823759.pdf)
+* [Base de Datos](https://jiperezga.github.io/Dataset/Parcial/B1038823759.csv)
+
+## Gonzalez Munevar Laura Sofia
+* [Enunciado](https://jiperezga.github.io/Dataset/Parcial/P1052838196.pdf)
+* [Base de Datos](https://jiperezga.github.io/Dataset/Parcial/B1052838196.csv)
+
+## Jimenez Ramirez Luis Fernando
+* [Enunciado](https://jiperezga.github.io/Dataset/Parcial/P1003066798.pdf)
+* [Base de Datos](https://jiperezga.github.io/Dataset/Parcial/B1003066798.csv)
+
+## Marin Jaramillo John Arturo
+* [Enunciado](https://jiperezga.github.io/Dataset/Parcial/P1017129376.pdf)
+* [Base de Datos](https://jiperezga.github.io/Dataset/Parcial/B1017129376.csv)
+
+## Montoya Pabon Valentina
+* [Enunciado](https://jiperezga.github.io/Dataset/Parcial/P1020222282.pdf)
+* [Base de Datos](https://jiperezga.github.io/Dataset/Parcial/B1020222282.csv)
+
+## Ospina Agudelo Juliana
+* [Enunciado](https://jiperezga.github.io/Dataset/Parcial/P1007346941.pdf)
+* [Base de Datos](https://jiperezga.github.io/Dataset/Parcial/B1007346941.csv)
+
+## Portilla Benavides Karen Vanessa
+* [Enunciado](https://jiperezga.github.io/Dataset/Parcial/P1086774044.pdf)
+* [Base de Datos](https://jiperezga.github.io/Dataset/Parcial/B1086774044.csv)
+
+## Quirama Pino David Camilo
+* [Enunciado](https://jiperezga.github.io/Dataset/Parcial/P1214744036.pdf)
+* [Base de Datos](https://jiperezga.github.io/Dataset/Parcial/B1214744036.csv)
+
+## Rivillas Ochoa Paula Andrea
+* [Enunciado](https://jiperezga.github.io/Dataset/Parcial/P1001416490.pdf)
+* [Base de Datos](https://jiperezga.github.io/Dataset/Parcial/B1001416490.csv)
+
+## Rodriguez Herrera Isabella
+* [Enunciado](https://jiperezga.github.io/Dataset/Parcial/P1025642615.pdf)
+* [Base de Datos](https://jiperezga.github.io/Dataset/Parcial/B1025642615.csv)
+
+## Sandoval Ramirez Joel Alejandro
+* [Enunciado](https://jiperezga.github.io/Dataset/Parcial/P1014661670.pdf)
+* [Base de Datos](https://jiperezga.github.io/Dataset/Parcial/B1014661670.csv)
+
+## Vargas Moreno Oreilys Ayari
+* [Enunciado](https://jiperezga.github.io/Dataset/Parcial/P3296612.pdf)
+* [Base de Datos](https://jiperezga.github.io/Dataset/Parcial/B3296612.csv)
+
+## Vasco Agudelo Juan Pablo
+* [Enunciado](https://jiperezga.github.io/Dataset/Parcial/P1037662204.pdf)
+* [Base de Datos](https://jiperezga.github.io/Dataset/Parcial/B1037662204.csv)
+
+<h1> Mucha Suerte! </h1>
