@@ -59,7 +59,6 @@ Pueden apoyarse para el cálculo de probabilidades o integrales en \texttt{R} u 
 * [Navarro Rincon Juan Diego](https://jiperezga.github.io/Dataset/Parcial/P1091654386.pdf)
 * [Rendon Jimenez Estefania](https://jiperezga.github.io/Dataset/Parcial/P1000637650.pdf)
 * [Sierra Orrego Ana Maria](https://jiperezga.github.io/Dataset/Parcial/P1020111092.pdf)
-* [Vargas Acevedo Maria Leonor](https://jiperezga.github.io/Dataset/Parcial/P1007142409.pdf)
 * [Velasquez Madrid Sofia](https://jiperezga.github.io/Dataset/Parcial/P1020223499.pdf)
 
 
