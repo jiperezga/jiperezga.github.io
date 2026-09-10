@@ -1,0 +1,68 @@
+---
+layout: post
+title: "Parcial I"
+main-class: 'presentaciones'
+permalink: /EstadisticaII/EstII:title.html
+tags:
+
+introduction: Parcial I
+
+header-includes:
+   - \usepackage{amsmath,amssymb,amsthm,amsfonts}
+   - \usepackage[sectionbib]{natbib}
+   - \usepackage[hidelinks]{hyperref}
+output:
+  md_document:
+    variant: markdown_strict+backtick_code_blocks+autolink_bare_uris+ascii_identifiers+tex_math_single_backslash
+    preserve_yaml: TRUE
+always_allow_html: yes   
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding,
+  output_dir = "../../EstadisticaII/_posts/", output_format = "all"  ) })
+bibliography: "../../referencias.bib"
+csl: "../../apa.csl"
+---
+
+```{r knitr_init, echo=FALSE, cache=FALSE}
+library(knitr)
+## Global options
+opts_chunk$set(echo=TRUE,
+               cache=TRUE,
+               prompt=FALSE,
+               tidy=TRUE,
+               comment=NA,
+               message=FALSE,
+               warning=FALSE,
+               fig.path = paste0("../../EstadisticaII/images/", "ParcialI"),
+               cache.path = "../../EstadisticaII/cache/",
+               cache = FALSE)
+```
+
+# Parcial
+La solución, paso a paso e interpretaciones deben realizarse a mano, y entregar el parcial al final de la clase >:(. 
+
+# Nota
+Pueden apoyarse para el cálculo de probabilidades o integrales en \texttt{R} u otra herramienta, pero los procedimientos tales como **TRANSFORMACIONES**, **PLANTEAMIENTO DE PROBABILIDADES** e **INTERPRETACIONES** deben realizarse **PASO A PASO** y a mano >:(
+
+* [Caicedo Puenguenan Yuliana Katerine](https://jiperezga.github.io/Dataset/Parcial/P1088589967.pdf)
+* [Canchila Sanchez Jhan Carlos](https://jiperezga.github.io/Dataset/Parcial/P1017264364.pdf)
+* [Cano Lopez Santiago](https://jiperezga.github.io/Dataset/Parcial/P1033178806.pdf)
+* [Dagua Taquinas Harold Matias](https://jiperezga.github.io/Dataset/Parcial/P1061498700.pdf)
+* [Gomez Agudelo Valeria](https://jiperezga.github.io/Dataset/Parcial/P1001456933.pdf)
+* [Gonzalez Lopez Sebastian](https://jiperezga.github.io/Dataset/Parcial/P1023630911.pdf)
+* [Grajales Lezcano Jeferson](https://jiperezga.github.io/Dataset/Parcial/P1001144033.pdf)
+* [Guerra Espana Maria Catalina](https://jiperezga.github.io/Dataset/Parcial/P1067590241.pdf)
+* [Hincapie Mira Ana Maria](https://jiperezga.github.io/Dataset/Parcial/P1000193802.pdf)
+* [Lopez Madrid Jacobo](https://jiperezga.github.io/Dataset/Parcial/P1020112258.pdf)
+* [Mesa Torres Juan Pablo](https://jiperezga.github.io/Dataset/Parcial/P1042763210.pdf)
+* [Morales Rendon Juan Camilo](https://jiperezga.github.io/Dataset/Parcial/P1040571717.pdf)
+* [Navarro Rincon Juan Diego](https://jiperezga.github.io/Dataset/Parcial/P1091654386.pdf)
+* [Rendon Jimenez Estefania](https://jiperezga.github.io/Dataset/Parcial/P1000637650.pdf)
+* [Sierra Orrego Ana Maria](https://jiperezga.github.io/Dataset/Parcial/P1020111092.pdf)
+* [Vargas Acevedo Maria Leonor](https://jiperezga.github.io/Dataset/Parcial/P1007142409.pdf)
+* [Velasquez Madrid Sofia](https://jiperezga.github.io/Dataset/Parcial/P1020223499.pdf)
+
+
+
+<h1> Mucha Suerte! :D </h1>
+
