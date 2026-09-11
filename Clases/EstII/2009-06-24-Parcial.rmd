@@ -44,6 +44,7 @@ La solución, paso a paso e interpretaciones deben realizarse a mano, y entregar
 # Nota
 Pueden apoyarse para el cálculo de probabilidades o integrales en \texttt{R} u otra herramienta, pero los procedimientos tales como **TRANSFORMACIONES**, **PLANTEAMIENTO DE PROBABILIDADES** e **INTERPRETACIONES** deben realizarse **PASO A PASO** y a mano >:(
 
+## WV
 * [Agudelo Alzate Maria Camila](https://jiperezga.github.io/Dataset/Parcial/P1017923515.pdf)
 * [Aisales Gonzalez Jonh Wimer Alexis](https://jiperezga.github.io/Dataset/Parcial/P1036253973.pdf)
 * [Bedoya Ramirez Kevin Mateo](https://jiperezga.github.io/Dataset/Parcial/P1038868438.pdf)
@@ -69,6 +70,8 @@ Pueden apoyarse para el cálculo de probabilidades o integrales en \texttt{R} u 
 * [Urshela Palacios Justin Javier](https://jiperezga.github.io/Dataset/Parcial/P1077710125.pdf)
 * [Velez Grajales Valentina](https://jiperezga.github.io/Dataset/Parcial/P1041351115.pdf)
 * [Zapata Perez Manuela](https://jiperezga.github.io/Dataset/Parcial/P1034918715.pdf)
+
+## MJ
 * [Astaiza Agredo Sebastian](https://jiperezga.github.io/Dataset/Parcial/P1059235003.pdf)
 * [Caicedo Puenguenan Yuliana Katerine](https://jiperezga.github.io/Dataset/Parcial/P1088589967.pdf)
 * [Pulgarin Gonzalez Mateo](https://jiperezga.github.io/Dataset/Parcial/P1036448181.pdf)
